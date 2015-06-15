@@ -1,4 +1,4 @@
-image: drone-sphinx
+image: cadair/sunpy
 
 script:
   - make html

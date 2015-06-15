@@ -10,6 +10,7 @@ iceberg
    self
    getting_started/index
    software/index
+   gpu/index
    troubleshooting
    cluster_specs
 

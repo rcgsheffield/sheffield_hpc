@@ -4,6 +4,11 @@ Troubleshooting
 ===============
 In this section, we'll discuss some tips for solving problems with iceberg. It is suggested that you work through some of the ideas here before contacting the service desk for assistance.
 
+I'm a new user and my password is not recognised
+------------------------------------------------
+When you get a username on the system, the first thing you need to do is to `syncronise your passwords
+<https://www.shef.ac.uk/cics/password>`_ which will set your password to be the same as your network password.
+
 Exceeding your disk space quota
 -------------------------------
 Each user of the system has a fixed amount of disk space available in their home directory. If you exceed this quota, various problems can emerge such as an inability to launch applications and run jobs.
@@ -18,6 +23,8 @@ To see if you have exceeded your disk space quota, run the quota command:
         50G     0   50G   0% /data/foo11b
 
 In the above, you can see that the quota was set to 5.1 gigabytes and all of this is in use. Any jobs submitted by this user will likely result in an Eqw status. The recommended action is for the user to delete enough files to allow normal work to continue.
+
+Sometimes, it is not possible to log-in to the system because of a full quota, in which case you need to contact iceberg-admins@lists.shef.ac.uk and ask to the unfrozen.
 
 Windows-style line endings
 --------------------------
@@ -52,4 +59,15 @@ the most likely cause is that you forgot the -X switch when you logged into iceb
 instead of ::
 
         ssh -X username@iceberg.sheffield.ac.uk
+
+Insufficent memory in an interactive session
+--------------------------------------------
+By default, an interactive session provides you with 2 Gigabytes of RAM (sometimes called real memory) and 6 Gigabytes of Virtual Memory. You can request more than this when running your ``qsh`` or ``qrsh`` command ::
+
+        qsh -l mem=64G   -l rmem=8G
+
+This asks for 64 Gigabytes of Virtual Memory and 8 Gigabytes of RAM (real memory). Note that you should
+
+* not specify more than 768 Gigabytes of virtual memory (mem) .
+* not specify more than 256 GB of RAM (real memory) (rmem)
 

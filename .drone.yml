@@ -3,7 +3,7 @@ image: drone-sphinx
 script:
   - make html
   - make latexpdf
-  - echo "Done"
+  - echo "Done!"
 
 deploy:
   bash:

@@ -22,7 +22,7 @@ To make the latest version of Ansys available, run the following module command
 
 Alternatively, you can make a specific version available with one of the following commands
 
-.. code-block:: none
+TODO
 
 To launch Ansys, TODO
 

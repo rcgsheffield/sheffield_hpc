@@ -59,25 +59,25 @@ By default, graphical output from batch jobs is sent to a file called :code:`Rpl
 Installing additional packages
 ------------------------------
 
-As you will not have permissions to install packages to the default folder, additional R packages can be installed to your home folder :code:`~/`. To create the appropriate folder, install your first package in R in interactive mode. Load an interactive R session as described above, and install a package with:
-::
+As you will not have permissions to install packages to the default folder, additional R packages can be installed to your home folder :code:`~/`. To create the appropriate folder, install your first package in R in interactive mode. Load an interactive R session as described above, and install a package with ::
+
         install.packages()
         
 You will be prompted to create a personal package library. Choose yes. The package will download and install from a CRAN mirror (you may be asked to select a nearby mirror, which you can do simply by entering the number of your preferred mirror).
 
-Once the chosen package has been installed, additional packages can be installed either in the same way, or by creating a .R script. An example script might look like:
-::
+Once the chosen package has been installed, additional packages can be installed either in the same way, or by creating a .R script. An example script might look like ::
+
         install.packages("dplyr")
         install.packages("devtools")
         
-Call this using :code:`source()`. For example if your script is called :code:`packages.R` and is stored in your home folder, source this from an interactive R session with:
-::
+Call this using :code:`source()`. For example if your script is called :code:`packages.R` and is stored in your home folder, source this from an interactive R session with ::
+
         source("~/packages.R")
         
 These additional packages will be installed without prompting to your personal package library.
 
-To check your packages are up to date, and update them if necessary, run the following line from an R interactive session:
-::
+To check your packages are up to date, and update them if necessary, run the following line from an R interactive session ::
+
         update.packages(lib.loc = "~/R/x86_64-unknown-linux-gnu-library/3.2/")
 
 The folder name after :code:`~/R/` will likely change, but this can be completed with tab autocompletion from the R session. Ensure :code:`lib.loc` folder is specified, or R will attempt to update the wrong library.

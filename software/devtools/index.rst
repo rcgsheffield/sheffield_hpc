@@ -1,7 +1,7 @@
 .. _compilers:
 
-Compilers
-=========
+Development Tools
+=================
 
 .. toctree::
     :maxdepth: 1

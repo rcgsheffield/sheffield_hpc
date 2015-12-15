@@ -166,6 +166,87 @@ compiled in this repository.
 The build scripts for these packages can be found in this
 `GitHub <https://github.com/rcgsheffield/conda-packages>`_ repository.
 
+Running a Jupyter Notebook server on Iceberg
+--------------------------------------------
+
+`Jupyter <http://jupyter.org/>`_ allows you to bring together runnable blocks
+of code, output from that code (e.g. plots, tables), documenting text, images
+and other media in a **Notebook** interface, which is displayed in your browser
+(the *client*).  
+This client executes the blocks of code by sending them off to a **Notebook
+server**, which in turn asks a **kernel** program that understands the language
+they are written in to execute them.  
+Much of Jupyter is written in Python but there are kernels for `many other
+languages
+<https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages>`_.
+
+There are too many features and benefits of Jupyter to list them here; the main
+ones for the end user are that you can iteratively explore data, running and
+re-running cells as you learn more about the problem domain, and along the way,
+build an attractive document where code, explanatory text, equations and plots 
+collectively form a research narrative.  For a brief overview of the Jupyter
+system, see `this video <https://www.youtube.com/watch?v=Rc4JQWowG5I>`_.
+
+To **run a Jupyter Notebook server on Iceberg then connect to it from your own machine**, 
+log into a worker node from the head node using ``qrsh`` 
+then load the ``conda`` module with ``module load apps/python/conda``.  
+Make a note of the name of the worker node you log in to. 
+
+Next, create (if necessary) then activate a conda environment in which you have
+installed the ``jupyter`` conda package (and possibly other packages) e.g.::
+
+    $ conda create -n jupyterplayground python=3.5 jupyter
+    $ . activate jupyterplayground
+
+You probably want to make sure that your connection to your Notebook server 
+is **encrypted** and that you can restrict who can connect to it (**authentication**).
+Enable (TLS) encryption and authentication by going through the following steps in the 
+`Jupyter documentation <http://jupyter-notebook.readthedocs.org/en/latest/public_server.html>`_:
+
+- *Securing a notebook server*
+- *Preparing a hashed password*
+- *Adding hashed password to your notebook configuration file*
+- *Using SSL for encrypted communication*
+- *Running a public notebook server*
+
+Next, start the Jupyter Notebook server on the worker node::
+
+    $ jupyter notebook --ip='*' --no-browser
+  
+make a note of the port (e.g. ``8888``) that the Notebook server is *listening* on, 
+then leave this terminal running.
+ 
+We now need to try connecting to this Notebook server from a web browser. 
+We cannot connect to the Notebook server directly as we cannot talk directly to
+Iceberg nodes over the University network.  As a workaround, you can set up a 
+**SSH tunnel** to route all communications from your machine to the worker node
+*via the head node*, which we can communicate with from the university network.
+On Linux or OS X, you can set up this SSH tunnel to the worker node by running
+the following on your own machine::
+
+    $ ssh -L 9999:<<worker_node>>:<<port_name>> iceberg.shef.ac.uk
+    
+where ``<<worker_node>>`` is the name of the Iceberg worker node that we started
+the Notebook server on.  Again, leave this terinal open.  If you are using
+Windows, then you can use the free `PuTTy
+<http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ program to
+do the same job (you need to *forward* a *Source Port* (e.g. ``9999``) to a
+*Destination* (e.g. ``node068:8888``, i.e. ``<<worker_node>>:<<port_name>>``).  
+See `this guide <http://howto.ccs.neu.edu/howto/windows/ssh-port-tunneling-with-putty/>`_ 
+for info on how to set up SSH tunnels using PuTTy).
+
+You should now be able to communicate with the Notebook server by pointing your
+web browser at https://localhost:9999.
+
+This workflow is obviously a little convoluted; in future it may be streamlined (e.g. by 
+using `JupyterHub <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`_ 
+to allow end-users to start up new Notebook servers from their web browsers. 
+
+Note that all Notebooks created using a Notebook server running on Iceberg will
+be saved on Iceberg and the Notebook has access to Iceberg's filesystems but
+not those on your machine.
+
+
 Installation Notes
 ------------------
 These are primarily for administrators of the system.

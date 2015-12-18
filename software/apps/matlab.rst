@@ -4,11 +4,14 @@ MATLAB
 .. sidebar:: MATLAB
 
    :Versions:  2013a , 2013b , 2014a, 2015a
-   :Support Level: FULL
    :Dependancies: None
+   :Support Level: FULL
    :URL: http://uk.mathworks.com/products/matlab
    :Local URL:  http://www.shef.ac.uk/wrgrid/software/matlab
    :Documentation: http://uk.mathworks.com/help/matlab
+   :Categories:    
+    .. tag:: MATLAB
+        :tag: mathematics development
 
 Scientific Computing and Visualisation
 

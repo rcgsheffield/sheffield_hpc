@@ -6,6 +6,9 @@ Mathematica
    :Dependancies: None
    :URL: http://www.wolfram.com/mathematica/
    :Version: 10.2
+   :Categories:    
+    .. tag:: Mathematica
+        :tag: mathematics development
 
 Mathematica is a technical computing environment and programming language with strong symbolic and numerical abilities.
 

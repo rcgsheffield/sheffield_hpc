@@ -6,6 +6,9 @@ CASTEP
    :Latest Version:  8.0
    :URL: http://www.castep.org/
    :location: /usr/local/packages6/apps/intel/15/castep/8.0
+   :Categories:    
+    .. tag:: CASTEP
+        :tag: chemistry
 
 Licensing
 ---------

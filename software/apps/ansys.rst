@@ -12,6 +12,9 @@ Ansys
                   For Fluent :  GCC 4.6.1 or above 
    :URL: http://www.ansys.com/en_uk
    :Local URL: http://www.shef.ac.uk/cics/research/software/fluent
+   :Categories:    
+    .. tag:: Ansys
+        :tag: engineering
 
 ANSYS suite of programs can be used to numerically simulate a large variety of structural and fluid dynamics problems found in many engineering, physics, medical, aeronotics and automative industry applications
 

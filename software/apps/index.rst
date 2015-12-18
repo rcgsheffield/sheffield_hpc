@@ -9,3 +9,17 @@ Applications
     
     ./*
 
+.. taglist::
+    :tags: mathematics
+
+.. taglist::
+    :tags: development
+
+.. taglist::
+    :tags: chemistry
+
+.. taglist::
+    :tags: bioinformatics
+
+.. taglist::
+    :tags: engineering

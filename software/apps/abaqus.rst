@@ -4,10 +4,12 @@ Abaqus
 .. sidebar:: Abaqus
 
    :Versions:  6.13,6.12 and 6.11
-   :Support Level: FULL
    :Dependancies: Intel Compiler
    :URL: http://www.3ds.com/products-services/simulia/products/abaqus/
    :Local URL:  https://www.shef.ac.uk/wrgrid/software/abaqus
+   :Categories:    
+    .. tag:: Abaqus
+        :tag: engineering
 
 Abaqus is a software suite for Finite Element Analysis (FEA) developed by Dassault Systèmes.
 

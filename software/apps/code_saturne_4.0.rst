@@ -7,7 +7,6 @@ Code Saturne 4.0
 .. sidebar:: Code Saturne
 
    :Version: 4.0
-   :Support Level: Bronze
    :URL: http://code-saturne.org/cms/
    :Documentation: http://code-saturne.org/cms/documentation
    :Location: /usr/local/packages6/apps/gcc/4.4.7/code_saturne/4.0
@@ -53,7 +52,7 @@ This version of Code Saturne was built with the following:-
 * :ref:`CGNS` 3.2.1
 * :ref:`med` 3.0.8
 * OpenMPI 1.8.3
-* :ref:`hdf5` 1.8.14
+* :ref:`hdf5` 1.8.14 built using gcc
 
 .. code-block:: none
 

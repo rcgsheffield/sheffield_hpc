@@ -39,7 +39,7 @@ Usage -- Parallel
 -----------------
 
 There are multiple versions of parallel HDF5 installed with different openmpi
-and compiler versions. 
+and compiler versions.
 
 Two versions of HDF were built using gcc version 4.4.7 and OpenMPI version
 1.8.3.  Version 4.4.7 of gcc is the default compiler on the system so no module
@@ -54,6 +54,9 @@ One version was built with the PGI compiler version 15.7 and openmpi version
 
     module load libs/hdf5/pgi/1.8.15-patch1
 
+The above module also loads the relevant modules for OpenMPI and PGI Compiler.
+To see which modules have been loaded, use the command ``module list``
+
 Finally, another version was built with GCC 4.4.7 and openmpi 1.10.1, this
 version is also linked against ZLIB and SZIP.::
 
@@ -63,6 +66,17 @@ version is also linked against ZLIB and SZIP.::
 Installation notes
 ------------------
 This section is primarily for administrators of the system.
+
+**Version 1.8.15-patch1 built using PGI Compiler**
+
+Here are the build details for the module `libs/hdf5/pgi/1.8.15-patch1`
+
+Compiled using PGI 15.7 and OpenMPI 1.8.8
+
+* `install_pgi_hdf5_1.8.15-patch1.sh   <https://github.com/rcgsheffield/blob/master/software/install_scripts/libs/pgi/hdf5/install_pgi_hdf5_1.8.15-patch1.sh>`_ Install script
+* `Modulefile <https://github.com/cgsheffield/iceberg_software/blob/master/software/modulefiles/libs/pgi/hdf5/1.8.15-patch1>`_ located on the system at ``/usr/local/modulefiles/libs/hdf5/pgi/1.8.15-patch1``
+
+**gcc versions**
 
 This package is built from the source code distribution from the HDF Group website.
 

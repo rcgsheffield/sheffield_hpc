@@ -171,9 +171,21 @@ Command                Description
 
 Frequently Asked SGE Questions
 ------------------------------
+**How many jobs can I submit at any one time**
+
+You can submit up to 2000 jobs to the cluster, and the scheduler will allow up to 200 of your jobs to run simultaneously (we occasionally alter this value depending on the load on the cluster).
+
+**How do I ensure that my jobs run on Ivybridge processors**
+
+Add the following line to your submission script ::
+
+    #$ -l arch=intel-e5-2650v2
+
+This specifies nodes that have the Ivybridge `E5-2650 CPU <http://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz>`_
+
 **How do you ensure that a job starts after a specified time?**
 
-Add the following line in your submission script ::
+Add the following line to your submission script ::
 
     #$ -a time
 

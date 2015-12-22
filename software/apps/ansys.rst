@@ -1,3 +1,6 @@
+.. index::
+    single: Ansys
+
 .. _ansys:
 
 Ansys

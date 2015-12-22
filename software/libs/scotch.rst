@@ -1,3 +1,6 @@
+.. index::
+    single: SCOTCH
+
 .. _scotch:
 
 SCOTCH

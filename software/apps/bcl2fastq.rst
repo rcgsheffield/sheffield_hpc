@@ -1,3 +1,6 @@
+.. index::
+    single: bcl2fastq
+
 bcl2fastq
 =========
 

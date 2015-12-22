@@ -1,3 +1,6 @@
+.. index::
+    single: PCRE
+
 .. _pcre:
 
 pcre

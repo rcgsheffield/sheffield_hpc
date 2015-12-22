@@ -1,3 +1,6 @@
+.. index::
+    single: NAG Fortran (Serial)
+
 .. _`NAG Fortran Library (serial)`:
 
 NAG Fortran Library (Serial)

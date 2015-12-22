@@ -1,3 +1,6 @@
+.. index::
+    single: ICU
+
 icu - International Components for Unicode
 ==========================================
 

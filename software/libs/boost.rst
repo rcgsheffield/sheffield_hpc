@@ -1,3 +1,6 @@
+.. index::
+    single: BOOST
+
 .. _boost:
 
 Boost C++ Library

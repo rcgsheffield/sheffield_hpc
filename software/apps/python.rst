@@ -1,3 +1,6 @@
+.. index::
+    single: Python
+
 .. _python-conda:
 
 Python

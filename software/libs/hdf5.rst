@@ -1,3 +1,6 @@
+.. index::
+    single: HDF5
+
 .. _hdf5:
 
 HDF5

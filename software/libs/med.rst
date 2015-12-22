@@ -1,3 +1,7 @@
+.. index::
+    single: MED
+
+
 .. _MED:
 
 MED

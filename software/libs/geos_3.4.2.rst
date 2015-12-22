@@ -1,3 +1,6 @@
+.. index::
+    single: geos
+
 .. _geos:
 
 geos

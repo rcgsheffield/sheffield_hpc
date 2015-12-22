@@ -1,3 +1,5 @@
+.. index::
+    single: OpenFOAM
 
 OpenFOAM
 ========

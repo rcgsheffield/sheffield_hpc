@@ -1,3 +1,5 @@
+.. index::
+    single: VCFTools
 
 VCFtools
 ========

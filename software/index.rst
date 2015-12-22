@@ -26,3 +26,7 @@ There are many versions of applications, libraries and compilers installed on th
 * :ref:`Libraries`
 * :ref:`mpi` Parallel Programming
 
+Software Index
+--------------
+
+There is a full A-Z index of all software `here <../genindex.html>`_.

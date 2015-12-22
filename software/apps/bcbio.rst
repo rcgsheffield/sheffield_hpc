@@ -1,3 +1,6 @@
+.. index::
+    single: bcbio
+
 bcbio
 =====
 .. sidebar:: bcbio

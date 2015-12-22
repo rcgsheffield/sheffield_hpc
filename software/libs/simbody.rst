@@ -1,3 +1,6 @@
+.. index::
+    single: SimBody
+
 .. _simbody:
 
 SimBody

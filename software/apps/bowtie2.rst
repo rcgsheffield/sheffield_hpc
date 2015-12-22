@@ -1,3 +1,6 @@
+.. index::
+    single: Bowtie
+
 .. _bowtie2:
 
 Bowtie2

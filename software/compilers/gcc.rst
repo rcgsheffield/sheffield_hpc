@@ -1,3 +1,6 @@
+.. index::
+    single: GCC
+
 .. _gcc:
 
 GNU Compiler Collection (gcc)

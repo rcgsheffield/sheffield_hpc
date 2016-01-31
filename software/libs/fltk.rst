@@ -28,9 +28,14 @@ This section is primarily for administrators of the system.
 
   module load compilers/gcc/5.2
   mkdir -p /usr/local/packages6/libs/gcc/5.2/fltk/1.3.3
-  tar -xvzf ./fltk-1.3.3-source.tar.gz
-  cd fltk-1.3.3-source
-  ./configure --prefix=/usr/local/packages6/libs/gcc/5.2/fltk/1.3.3 --enabled-shared
+  #tar -xvzf ./fltk-1.3.3-source.tar.gz
+  cd fltk-1.3.3
+
+  #Fixes error relating to undefined _ZN18Fl_XFont_On_Demand5valueEv
+  #Source https://groups.google.com/forum/#!topic/fltkgeneral/GT6i2KGCb3A
+  sed -i 's/class Fl_XFont_On_Demand/class FL_EXPORT Fl_XFont_On_Demand/' FL/x.H
+
+  ./configure --prefix=/usr/local/packages6/libs/gcc/5.2/fltk/1.3.3 --enable-shared --enable-xft
   make
   make install
 

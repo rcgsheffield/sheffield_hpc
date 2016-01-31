@@ -53,6 +53,9 @@ Ensuring that :code:`my_code.R` and :code:`my_job.sge` are both in your current 
 
 Replace :code:`my_job.sge` with the name of your submission script.
 
+Parallel (One node) Batch usage
+-------------------------------
+
 Graphical output
 ----------------
 By default, graphical output from batch jobs is sent to a file called :code:`Rplots.pdf`

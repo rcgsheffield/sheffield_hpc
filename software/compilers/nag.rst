@@ -1,3 +1,6 @@
+.. index::
+    single: NAG Fortran Compiler
+
 NAG Fortran Compiler
 ====================
 

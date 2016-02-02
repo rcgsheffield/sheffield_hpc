@@ -1,4 +1,7 @@
-.. _`cuda`:
+.. index::
+    single: CUDA
+
+.. _cuda:
 
 CUDA
 ====

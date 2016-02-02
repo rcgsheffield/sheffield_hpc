@@ -1,3 +1,6 @@
+.. index::
+    single: FFTW
+
 .. _fftw:
 
 fftw

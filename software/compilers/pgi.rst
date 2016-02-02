@@ -1,3 +1,6 @@
+.. index::
+    single: PGI Compilers
+
 PGI Compilers
 =============
 The PGI Compiler suite offers C,C++ and Fortran Compilers. For full details of the features of this compiler suite, see PGI's website at http://www.pgroup.com/products/pgiworkstation.htm

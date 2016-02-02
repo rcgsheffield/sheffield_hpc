@@ -1,3 +1,6 @@
+.. index::
+    single: FLTK
+
 .. _fltk:
 
 FLTK

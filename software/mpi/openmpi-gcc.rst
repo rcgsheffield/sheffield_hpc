@@ -1,3 +1,6 @@
+.. index::
+    single: OpenMPI (gcc)
+
 OpenMPI (gcc version)
 =====================
 

@@ -1,3 +1,6 @@
+.. index::
+    single: Intel Compilers
+
 .. _`Intel Compilers`:
 
 Intel Compilers

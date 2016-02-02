@@ -1,3 +1,6 @@
+.. index::
+    single: OpenMPI (PGI)
+
 OpenMPI (PGI version)
 =====================
 

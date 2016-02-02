@@ -1,3 +1,6 @@
+.. index::
+    single: JAGS
+
 .. _jags:
 
 JAGS

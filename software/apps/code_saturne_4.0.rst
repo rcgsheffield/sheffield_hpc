@@ -1,3 +1,6 @@
+.. index::
+    single: Code Saturne
+
 Code Saturne 4.0
 ================
 

@@ -1,3 +1,6 @@
+.. index::
+    single: NetCDF (PGI)
+
 .. _netcdf_pgi:
 
 NetCDF (PGI build)

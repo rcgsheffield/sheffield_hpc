@@ -1,3 +1,6 @@
+.. index::
+    single: Integrative Genomics Viewer (IGV)
+
 Integrative Genomics Viewer (IGV)
 =================================
 

@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## CASTEP 16.1 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global code-saturneversion
+
+        puts stderr "	Adds `CASTEP-$codesaturneversion' to your PATH environment"
+}
+
+set version 16.1
+module load libs/intel/15/openmpi/1.8.8
+
+set casteppath /usr/local/packages6/apps/intel/15/castep 
+prepend-path PATH $casteppath/$version
+setenv TMPDIR /scratch/

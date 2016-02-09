@@ -3,9 +3,8 @@ CASTEP
 
 .. sidebar:: CASTEP
 
-   :Latest Version:  8.0
+   :Latest Version:  16.1
    :URL: http://www.castep.org/
-   :location: /usr/local/packages6/apps/intel/15/castep/8.0
 
 Licensing
 ---------
@@ -13,8 +12,9 @@ Only licensed users of CASTEP are entitled to use it and license details are ava
 
 Interactive Usage
 -----------------
-The serial version of CASTEP should be used for interactive usage. After connecting to iceberg (see :ref:`ssh`),  start an interactive session with the ``qrsh`` or ``qsh`` command. Make the serial version of CASTEP available using the command ::
+The serial version of CASTEP should be used for interactive usage. After connecting to iceberg (see :ref:`ssh`),  start an interactive session with the ``qrsh`` or ``qsh`` command. Make the serial version of CASTEP available using the one of the commands ::
 
+    module load apps/intel/15/castep/16.1-serial
     module load apps/intel/15/castep/8.0-serial
 
 The CASTEP executable is called ``castep-serial`` so if you execute ::
@@ -70,8 +70,9 @@ or list all of the input parameters ::
 
 Batch Submission - Parallel
 ---------------------------
-The parallel version of CASTEP is called ``castep.mpi``. To make the parallel environment available, use the module command ::
+The parallel version of CASTEP is called ``castep.mpi``. To make the parallel environment available, use one of the following module commands ::
 
+    module load apps/intel/15/castep/16.1-parallel
     module load apps/intel/15/castep/8.0-parallel
 
 As an example of a parallel submission, we will calculate the bandstructure of graphite following the tutorial at http://www.castep.org/Tutorials/BandStructureAndDOS
@@ -91,7 +92,7 @@ Create a file called ``submit.sge`` that contains the following ::
   #$ -pe openmpi-ib 4    # Run the calculation on 4 CPU cores
   #$ -l rmem=4G          # Request 4 Gigabytes of real memory per core
   #$ -l mem=4G           # Request 4 Gigabytes of virtual memory per core
-  module load apps/intel/15/castep/8.0-parallel
+  module load apps/intel/15/castep/16.1-parallel
 
   mpirun castep.mpi graphite
 
@@ -106,6 +107,44 @@ After the calculation has completed, get an overview of the calculation by looki
 Installation Notes
 ------------------
 These are primarily for system administrators.
+
+**CASTEP Version 16.1**
+
+The jump in version numbers from 8 to 16.1 is a result of CASTEP's change of version numbering. There are no versions 9-15.
+
+Serial (1 CPU core) and Parallel versions of CASTEP were compiled. Both versions were compiled with version 15.0.3 of the Intel Compiler Suite and the Intel MKL versions of BLAS and FFT were used. The parallel version made use of OpenMPI 1.8.8
+
+The Serial version was compiled and installed with ::
+
+  module load compilers/intel/15.0.3
+  install_dir=/usr/local/packages6/apps/intel/15/castep/16.1
+  mkdir -p $install_dir
+
+  tar -xzf ./CASTEP-16.1.tar.gz
+  cd CASTEP-16.1
+
+  #Compile Serial version
+  make INSTALL_DIR=$install_dir  FFT=mkl MATHLIBS=mkl10
+  make INSTALL_DIR=$install_dir  FFT=mkl MATHLIBS=mkl10 install install-tools
+
+The directory ``CASTEP-16.1`` was then deleted and the parallel version was installed with ::
+
+  #!/bin/bash
+  module load libs/intel/15/openmpi/1.8.8
+  #The above command also loads Intel Compilers 15.0.3
+  #It also places the MKL in LD_LIBRARY_PATH
+
+  install_dir=/usr/local/packages6/apps/intel/15/castep/16.1
+
+  tar -xzf ./CASTEP-16.1.tar.gz
+  cd CASTEP-16.1
+
+  #Workaround for bug described at http://www.cmth.ph.ic.ac.uk/computing/software/castep.html
+  sed 's/-static-intel/-shared-intel/' obj/platforms/linux_x86_64_ifort15.mk -i
+
+  #Compile parallel version
+  make COMMS_ARCH=mpi  FFT=mkl MATHLIBS=mkl10
+  mv ./obj/linux_x86_64_ifort15/castep.mpi $install_dir
 
 **CASTEP Version 8**
 
@@ -140,11 +179,48 @@ The directory ``CASTEP-8.0`` was then deleted and the parallel version was insta
   make COMMS_ARCH=mpi  FFT=mkl MATHLIBS=mkl10
   mv ./obj/linux_x86_64_ifort15/castep.mpi $install_dir
 
+Modulefiles
+-----------
+* `CASTEP 16.1-serial <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/intel/15/castep/16.1-serial>`_
+* `CASTEP 16.1-parallel <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/intel/15/castep/16.1-parallel>`_
+* `CASTEP 8.0-serial <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/intel/15/castep/8.0-serial>`_
+* `CASTEP 8.0-parallel <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/intel/15/castep/16.1-parallel>`_
+
 Testing
 -------
+**Version 16.1 Serial**
+
+The following script was submitted via ``qsub`` from inside the build directory::
+
+  #!/bin/bash
+  #$ -l mem=10G
+  #$ -l rmem=10G
+  module load compilers/intel/15.0.3
+
+  cd CASTEP-16.1/Test
+  ../bin/testcode.py -q  --total-processors=1 -e /home/fe1mpc/CASTEP/CASTEP-16.1/obj/linux_x86_64_ifort15/castep.serial -c simple -v -v -v
+
+All but one of the tests passed. It seems that the failed test is one that fails for everyone for this version since there is a missing input file. The output from the test run is on the system at `/usr/local/packages6/apps/intel/15/castep/16.1/CASTEP_SERIAL_tests_09022016.txt`
+
+**Version 16.1 Parallel**
+
+The following script was submitted via ``qsub`` from inside the build directory ::
+
+  #!/bin/bash
+  #$ -pe openmpi-ib 4
+  #$ -l mem=10G
+  #$ -l rmem=10G
+  module load libs/intel/15/openmpi/1.8.8
+
+  cd CASTEP-16.1/Test
+  ../bin/testcode.py -q  --total-processors=4 --processors=4 -e /home/fe1mpc/CASTEP/CASTEP-16.1/obj/linux_x86_64_ifort15/castep.mpi -c simple -v -v -v
+
+All but one of the tests passed. It seems that the failed test is one that fails for everyone for this version since there is a missing input file. The output from the test run is on the system at `/usr/local/packages6/apps/intel/15/castep/16.1/CASTEP_Parallel_tests_09022016.txt`
+
+**Version 8 Parallel**
 The following script was submitted via ``qsub`` ::
 
-    #!/bin/bash
+   #!/bin/bash
    #$ -pe openmpi-ib 4
    module load libs/intel/15/openmpi/1.8.8
 

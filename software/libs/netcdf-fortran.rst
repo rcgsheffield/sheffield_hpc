@@ -1,4 +1,4 @@
-.. _netcdf_pgi:
+.. _netcdf_fortran:
 
 NetCDF (fortran)
 ================

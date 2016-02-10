@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## NetCDF library module file
+##
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "Adds environment variables to allow access to gcc FORTRAN version of NetCDF 4.4.3"
+}
+
+module load mpi/gcc/openmpi/1.10.1
+module load libs/gcc/4.4.7/openmpi/1.10.1/hdf5/1.8.16
+
+set version 4.4.3
+
+module-whatis   "Adds environment variables to allow access to the gcc FORTRAN version of NetCDF 4.4.3"
+
+set NETCDF_DIR  /usr/local/packages6/libs/gcc/4.4.7/openmpi/1.10.1/netcdf-fortran/$version
+
+prepend-path           PATH                $NETCDF_DIR/bin
+prepend-path           LD_LIBRARY_PATH     $NETCDF_DIR/lib
+prepend-path           LIBRARY_PATH        $NETCDF_DIR/lib
+prepend-path           LD_RUN_PATH         $NETCDF_DIR/lib
+prepend-path           CPLUS_INCLUDE_FILE  $NETCDF_DIR/include
+prepend-path           CPATH               $NETCDF_DIR/include

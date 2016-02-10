@@ -34,8 +34,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Iceberg Documentation'
-copyright = u'2015, CICS Sheffield'
-author = u'CICS Sheffield'
+copyright = u'2016, The University of Sheffield'
+author = u'The University of Sheffield'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

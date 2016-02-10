@@ -13,6 +13,7 @@ body {
 
 .container {
     background-color: #fff;
+    margin-bottom: 3em;
 }
 
 div.sidebar {
@@ -37,6 +38,32 @@ cite {
 .note {
     background-color: #333132;
     border-color: #333132;
+}
+
+/* Footer */
+.footer {
+    bottom: 0;
+    height: 3em;
+    padding-top: 0.8em;
+    position: fixed;
+    width: 100%;
+    border: 0 none;
+    background-color: white;
+}
+
+.left-footer {
+    float: left;
+}
+
+.centre-footer {
+    float: none;
+    width:17%;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.right-footer {
+    float: right;
 }
 
 /* Top Nav */

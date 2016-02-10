@@ -13,4 +13,33 @@
 {%- endblock %}
 
 {%- block footer %}
+<footer class="footer">
+  <div class="container">
+   {%- if show_copyright %}
+    <div class="left-footer">
+       {%- if hasdoc('copyright') %}
+         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">{{ copyright }}</a>{% endtrans %}
+       {%- else %}
+         {% trans copyright=copyright|e %}&copy; {{ copyright }}{% endtrans %}
+       {%- endif %}
+       <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    </div>
+   {%- endif %}
+   {% if READTHEDOCS %}
+    <div class="right-footer">
+      Hosted on <a href="https://readthedocs.org/">Read the Docs</a>
+    </div>
+   {% endif %}
+   {%- if last_updated %}
+    <div class="left-footer">
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+    </div>
+   {%- endif %}
+   {%- if show_sphinx %}
+    <div class="centre-footer">
+      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}{% endtrans %}
+    </div>
+   {%- endif %}
+  </div>
+</footer>
 {%- endblock %}

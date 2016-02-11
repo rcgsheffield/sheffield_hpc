@@ -10,7 +10,7 @@ This is htop, an interactive process viewer for Unix systems.
 
 Interactive Usage
 -----------------
-After connecting to Iceberg (see :ref:`ssh`),  start an interactive session with the `qrsh or ``qsh` command.
+After connecting to Iceberg (see :ref:`ssh`),  start an interactive session with the `qrsh` or `qsh` command.
 
 The latest version of htop (currently 2.0) is made available with the command ::
 

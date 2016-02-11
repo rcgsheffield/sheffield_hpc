@@ -1,0 +1,19 @@
+#%Module1.0#####################################################################
+##
+## htop 2.0 modulefile
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        puts stderr "Makes htop 2.0 available"
+}
+
+set version 2.0
+set HTOP_DIR /usr/local/packages6/apps/gcc/4.4.7/htop/$version/bin/
+
+module-whatis   "Makes htop 2.0 available"
+
+prepend-path PATH $HTOP_DIR

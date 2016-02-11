@@ -115,7 +115,7 @@ runansys command
 RUNANSYS COMMAND SUBMITS ANSYS JOBS TO THE SUN GRID ENGINE 
    
 Usage:  runansys ansys_inp_file [-time hh:mm:ss][-mem=nn] [-rmem=nn] 
-[-parallel n] [-project proj_name] [-mail email_address] [other qsub parameters]
+[-parallel n] [-project proj_name] [-mail email_address] [-fastdata] [other qsub parameters]
       
 Where; 
    ansys_inp_file  is a file containing a series of Ansys commands.
@@ -129,7 +129,7 @@ Where;
     -gpu          use GPU.  Note for GPU users: -mem= must be greater than 18G.
     -project project_name : The job will use a project's allocation.
     -mail your_email_address  : Job progress report is emailed to you.
-
+    -fastdata     use /fastdata/$USER/$JOB_ID as the working directory
  
 As well as time and memory, any other valid qsub parameter can be specified.Particularly users of UPF functions will need to specify -v ANS_USER_PATH=the_working_directory
   

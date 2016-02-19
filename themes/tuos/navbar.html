@@ -41,9 +41,6 @@
               <li><a href="{{ pathto(*link[1:]) }}">{{ link[0] }}</a></li>
             {%- endfor %}
             </ul>            
-            <ul class="nav navbar-nav navbar-right">
-              <li> <a href="http://rcg.group.shef.ac.uk/iceberg/IcebergDocumentation.pdf"><img src="{{ pathto('_static/' + 'img/pdf_icon.png', 1) }}"> </a></li>
-            </ul>
           {% endif %}
           {% block navbarsearch %}
             {% include "navbarsearchbox.html" %}

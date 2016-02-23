@@ -37,13 +37,32 @@ Now, the compiler ::
 
     javac 1.8.0_71
 
+Virtual Memory
+--------------
+By default, Java requests a lot of virtual memory on startup. This is usually a given fraction of the physical memory on a node, which can be quite a lot on Iceberg. This then exceeds a user's virtual memory limit set by the scheduler and causes a job to fail.
+
+To fix this, we have created a wrapper script to Java that uses the `-Xmx1G` switch to force Java to only request one Gigabyte of memory for its heap size. If this is insufficient, you are free to allocate as much memory as you require but be sure to request enough from the scheduler as well. You'll typically need to request more virtual memory from the scheduler than you specify in the Java `-Xmx` switch.
+
+For example, consider the following submission script. Note that it was necessary to request 9 Gigabytes of memory from the scheduler even though we only allocated 5 Gigabytes heap size in Java. The requirement for 9 gigabytes was determined empirically  ::
+
+  #!/bin/bash
+  #Request 9 gigabytes of real memory from the scheduler (mem)
+  #and 9 gigabytes of virtual memory from the scheduler (mem)
+  #$ -l mem=9G -l rmem=9G
+
+  # load the Java module
+  module load apps/java/1.8u71
+
+  #Run java program allocating 5 Gigabytes
+  java -Xmx5G HelloWorld
+
 Installation notes
 ------------------
 These are primarily for administrators of the system.
 
 Unzip and copy the install directory to `/usr/local/packages6/apps/binapps/java/jdk1.8.0_71/`
 
-By default, Java requests lots of virtual memory on startup (usually a given fraction of the physical memory on a node, which can be quite a lot on Iceberg) which then exceeds a users virtual memory limit set by the scheduler. Requesting more virtual memory for the job will let Java start, but uses up resources unnecessarily and can result in long queue times. We use a wrapper around the java install that sets Java's Xmx parameter to a reasonable value.
+To fix the virtual memory issue described above, we use a wrapper around the java install that sets Java's Xmx parameter to a reasonable value.
 
 Create the file `/usr/local/packages6/apps/binapps/java/jdk1.8.0_71/shef/java` with contents ::
 

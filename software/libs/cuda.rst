@@ -21,6 +21,8 @@ Alternatively, you can load a specific version with one of the following ::
 
 Compiling the sample programs
 -----------------------------
+You do not need to be using a GPU-enabled node to compile the sample programs but you do need a GPU to run them.
+
 In a `qrsh` session ::
 
  #Load modules
@@ -28,6 +30,7 @@ In a `qrsh` session ::
  module load compilers/gcc/4.9.2
 
  #Copy CUDA samples to a local directory
+ #It will create a directory called NVIDIA_CUDA-7.5_Samples/
  mkdir cuda_samples
  cd cuda_samples
  cp -r $CUDA_SDK .
@@ -36,17 +39,7 @@ In a `qrsh` session ::
  cd NVIDIA_CUDA-7.5_Samples/
  make
 
-A basic test is to run deviceQuery. The CUDA 7.5.18 install is currently broken. We need to update the NVIDIA device drivers to fix this ::
-
-  NVIDIA_CUDA-7.5_Samples/bin/x86_64/linux/release/deviceQuery
-
-  NVIDIA_CUDA-7.5_Samples/bin/x86_64/linux/release/deviceQuery Starting...
-
-   CUDA Device Query (Runtime API) version (CUDART static linking)
-
-  cudaGetDeviceCount returned 35
-  -> CUDA driver version is insufficient for CUDA runtime version
-  Result = FAIL
+A basic test is to run one of the resulting binaries, **deviceQuery**.
 
 Documentation
 -------------
@@ -69,6 +62,8 @@ Installation notes
 These are primarily for system administrators
 
 **CUDA 7.5.18**
+
+The device drivers were updated separately by one of the sysadmins.
 
 A binary install was performed using a .run file ::
 

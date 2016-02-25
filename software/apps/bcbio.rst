@@ -88,6 +88,15 @@ A further upgrade was performed on 13th January 2016. STAR had to be run directl
 
   bcbio_nextgen.py upgrade --data --genomes GRCh37 --aligners bwa
 
+Another upgrade was performed on 25th February 2016 ::
+
+    module load apps/gcc/5.2/bcbio/0.9.6a
+    bcbio_nextgen.py upgrade -u stable --data --genomes mm10 --aligners star --aligners bwa
+
+As is usually the case for us, this stalled on the final STAR command. The exact call to STAR was found in `/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/star/Log.out` and run manually in a 16 core OpenMP script::
+
+    STAR   --runMode genomeGenerate   --runThreadN 16   --genomeDir /usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/star   --genomeFastaFiles /usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/seq/mm10.fa      --genomeSAindexNbases 14   --genomeChrBinNbits 14
+
 **Development version**
 
 The development version was installed using gcc 5.2, R 3.2.1 and Anaconda Python 2.3.

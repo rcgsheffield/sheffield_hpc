@@ -28,7 +28,7 @@ The rgeos interface in R
 ------------------------
 rgeos is a CRAN package that provides an R interface to geos. It is not installed in R by default so you need to install a version in your home directory.
 
-After connecting to iceberg (see :ref:`ssh`), start an interactive sesssion with the :code:`qrsh` or :code:`qsh` command. Run the following module commands ::
+After connecting to iceberg (see :ref:`ssh`), start an interactive session with the :code:`qrsh` or :code:`qsh` command. Run the following module commands ::
 
     module load apps/R/3.2.0
     module load compilers/gcc/4.8.2

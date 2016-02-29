@@ -46,6 +46,7 @@ Icu version 42 was originally installed as a system RPM. This install moved icu 
 Testing
 -------
 **Version 55**
+
 `make check`
 
 Last few lines of output were
@@ -66,7 +67,8 @@ Last few lines of output were
     rm -rf test-local.xml
 
 **Version 42**
-:code:`make check`
+
+`make check`
 
 Last few lines of output were
 

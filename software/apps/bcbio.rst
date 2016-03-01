@@ -88,7 +88,7 @@ A further upgrade was performed on 13th January 2016. STAR had to be run directl
 
   bcbio_nextgen.py upgrade --data --genomes GRCh37 --aligners bwa
 
-Another upgrade was performed on 25th February 2016 ::
+Another upgrade was performed on **25th February 2016** ::
 
     module load apps/gcc/5.2/bcbio/0.9.6a
     bcbio_nextgen.py upgrade -u stable --data --genomes mm10 --aligners star --aligners bwa
@@ -96,6 +96,15 @@ Another upgrade was performed on 25th February 2016 ::
 As is usually the case for us, this stalled on the final STAR command. The exact call to STAR was found in `/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/star/Log.out` and run manually in a 16 core OpenMP script::
 
     STAR   --runMode genomeGenerate   --runThreadN 16   --genomeDir /usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/star   --genomeFastaFiles /usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/seq/mm10.fa      --genomeSAindexNbases 14   --genomeChrBinNbits 14
+
+This failed (see https://github.com/rcgsheffield/iceberg_software/issues/272). The fix was to add the line ::
+
+  index mm10 /usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/seq/mm10.fa
+
+to the file ::
+
+  usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/galaxy/tool-data/sam_fa_indices.loc
+
 
 **Development version**
 

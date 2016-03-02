@@ -46,11 +46,16 @@ The anaconda environments can be loaded through provided module files::
 
     module load apps/python/anaconda2-2.4.0
     module load apps/python/anaconda3-2.4.0
+    module load apps/python/anaconda3-2.5.0
 
 Where ``anaconda2`` represents Python 2 installations and ``anaconda3``
 represents Python 3 installations.
 These commands will also load the ``apps/python/conda`` module and then
 activate the anaconda environment specified.
+
+.. note::
+   Anaconda 2.5.0 is compiled with Intel MKL libraries which should result in
+   higher numerical performance.
 
 
 Using conda Environments

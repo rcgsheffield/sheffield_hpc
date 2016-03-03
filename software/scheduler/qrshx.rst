@@ -9,7 +9,7 @@ Request an interactive session that provides the default amount of memory resour
     qrshx
     gedit
 
-Request an interactive session that provides 10 Gigagbytes of memory and launch the latest version of MATLAB ::
+Request an interactive session that provides 10 Gigabytes of memory and launch the latest version of MATLAB ::
 
     qrshx -l mem=10G -l rmem=10G
     module load apps/matlab

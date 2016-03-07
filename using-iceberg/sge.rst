@@ -3,7 +3,7 @@
 Iceberg's Queue System
 ======================
 
-To manage use of the iceberg cluster, there is a queue system
+To manage use of the Iceberg cluster, there is a queue system
 (`SoGE <https://arc.liv.ac.uk/trac/SGE>`_, a derivative of the Sun Grid Engine).
 
 The queue system works by a user requesting some task, either a script or an
@@ -13,7 +13,7 @@ tasks from the queue based on a set of rules and priorities.
 
 .. _sge-interactive:
 
-Using iceberg Interactively
+Using Iceberg Interactively
 ---------------------------
 
 If you wish to use the cluster for interactive use, such as running applications
@@ -182,6 +182,13 @@ Add the following line to your submission script ::
     #$ -l arch=intel-e5-2650v2
 
 This specifies nodes that have the Ivybridge `E5-2650 CPU <http://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz>`_
+
+**How do I specify multiple email addresses for job notifications?**
+
+Specify each additional email with it's own `-M` option ::
+
+  #$ -M foo@example.com
+  #$ -M bar@example.com
 
 **How do you ensure that a job starts after a specified time?**
 

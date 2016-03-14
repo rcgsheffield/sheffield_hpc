@@ -105,6 +105,36 @@ to the file ::
 
   usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/galaxy/tool-data/sam_fa_indices.loc
 
+Update: **14th March 2016**
+
+`Another issue <https://github.com/rcgsheffield/iceberg_software/issues/274>`_ required us to modify `/usr/local/packages6/apps/gcc/5.2/bcbio/0.9.6a/genomes/Mmusculus/mm10/seq/mm10-resources.yaml` so that it read ::
+
+  version: 16
+
+  aliases:
+    snpeff: GRCm38.82
+    ensembl: mus_musculus_vep_83_GRCm38
+
+  variation:
+    dbsnp: ../variation/mm10-dbSNP-2013-09-12.vcf.gz
+    lcr: ../coverage/problem_regions/repeats/LCR.bed.gz
+
+  rnaseq:
+    transcripts: ../rnaseq/ref-transcripts.gtf
+    transcripts_mask: ../rnaseq/ref-transcripts-mask.gtf
+    transcriptome_index:
+      tophat: ../rnaseq/tophat/mm10_transcriptome.ver
+    dexseq: ../rnaseq/ref-transcripts.dexseq.gff3
+    refflat: ../rnaseq/ref-transcripts.refFlat
+    rRNA_fa: ../rnaseq/rRNA.fa
+
+  srnaseq:
+      srna-transcripts: ../srnaseq/srna-transcripts.gtf
+      mirbase-hairpin: ../srnaseq/hairpin.fa
+      mirbase-mature: ../srnaseq/hairpin.fa
+      mirdeep2-fasta: ../srnaseq/Rfam_for_miRDeep.fa
+
+
 
 **Development version**
 

@@ -60,7 +60,7 @@ Its contents are ::
 
 
   set version 1.129
-  set PICARDHOME /usr/local/packages6/apps/binapps/picard/$version
+  set PICARD_DIR /usr/local/packages6/apps/binapps/picard/$version
 
   module-whatis   "Makes Picard 1.129 available"
 

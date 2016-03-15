@@ -25,5 +25,5 @@ Sysadmin notes
 --------------
 qrshx is a Sheffield-developed modification to the standard set of scheduler commands. It is at `/usr/local/bin/qrshx` and contains the following ::
 
-    #!/bin/sh
-    qrsh -v DISPLAY -pty y $* bash
+  #!/bin/sh
+  exec qrsh -v DISPLAY -pty y "$@" bash

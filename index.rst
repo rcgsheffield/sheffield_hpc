@@ -1,18 +1,17 @@
 .. _ib-docs:
 
-Iceberg
-=======
+Sheffield HPC
+=============
 
 .. image:: images/iceberg.png
    :width: 40%
    :align: right
    :alt: A picture showing some of the Iceberg hardware.
 
-Welcome to the **Iceberg** user manual. Iceberg is the University of Sheffield's
-central High Perfomance Computing (:term:`HPC`) resource. Its mission is to meet
-the intensive computing requirements of research projects at Sheffield University.
 
-This manual aims to provide you all the information you need to use iceberg.
+This is the manual for all the High Performance Computing (HPC) services
+provided at the University of Sheffield. There are two main clusters, iceberg
+and ShARC, documentation for both can be found in this manual.
 
 **Using the Iceberg Service**
 
@@ -39,8 +38,8 @@ Take a look at the `Research Computing <https://www.shef.ac.uk/cics/research>`_ 
    :hidden:
 
    self
-   using-iceberg/index
-   software/index
+   iceberg/index
+   sharc/index
    gpu/index
    troubleshooting
    cluster_specs

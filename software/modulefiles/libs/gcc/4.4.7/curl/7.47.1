@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## curl 7.47.1 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        puts stderr "Makes the curl 7.47.1 library available"
+}
+
+set CURL_DIR /usr/local/packages6/libs/gcc/4.4.7/curl/7.47.1/
+
+module-whatis   "Makes the curl 7.47.1 library available"
+
+prepend-path PATH $CURL_DIR/bin
+prepend-path LD_LIBRARY_PATH $CURL_DIR/lib
+prepend-path CPLUS_INCLUDE_PATH $CURL_DIR/include
+prepend-path LIBRARY_PATH $CURL_DIR/lib
+prepend-path MANPATH $CURL_DIR/share/man/

@@ -126,6 +126,18 @@ Installation Notes
 ------------------
 These notes are primarily for administrators of the system.
 
+**Version 3.2.4**
+
+* `What's new in R version 3.2.4 <https://cran.r-project.org/bin/windows/base/NEWS.R-3.2.4.html>`_
+
+This was a scripted install. It was compiled from source with gcc 4.4.7 and with `--enable-R-shlib` enabled. You will need a large memory `qrshx` session in order to successfully run the build script. I used `qrshx -l rmem=8G -l mem=8G`
+
+This build made use of new versions of :ref:`xzutils` and :ref:`curl`
+
+* `install_R_3.2.4.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/install_R_3.2.4.sh>`_ Downloads, compiles, tests and installs R 3.2.4 and the ``Rmath`` library.
+* `R 3.2.4 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.2.4>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.4``
+* Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.2.4/install_logs`
+
 **Version 3.2.3**
 
 * `What's new in R version 3.2.3 <https://cran.r-project.org/bin/windows/base/NEWS.R-3.2.3.html>`_

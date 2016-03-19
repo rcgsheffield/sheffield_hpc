@@ -1,0 +1,22 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+#load pre-requisite modules
+module load apps/gcc/4.4.7/xzutils/5.2.2
+module load libs/gcc/4.4.7/curl/7.47.1
+
+
+proc ModulesHelp { } {
+      global helpmsg
+      puts stderr "\t$helpmsg\n"
+}
+
+set version 3.2.4
+
+set R_DIR /usr/local/packages6/R
+
+prepend-path PATH $R_DIR/$version/bin
+prepend-path LD_LIBRARY_PATH $R_DIR/$version/lib64/R/lib/

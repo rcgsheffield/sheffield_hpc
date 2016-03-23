@@ -12,6 +12,12 @@ I'm a new user and my password is not recognised
 When you get a username on the system, the first thing you need to do is to `syncronise your passwords
 <https://www.shef.ac.uk/cics/password>`_ which will set your password to be the same as your network password.
 
+Strange things are happening with my terminal
+---------------------------------------------
+Symptoms include many of the commands not working and just `bash-4.1$` being displayed instead of your username at the bash prompt.
+
+This may be because you've deleted your `.bashrc` and `.bash_profile` files - these are 'hidden' files which live in your home directory and are used to correctly set up your environment.  If you hit this problem you can run the command `resetenv` which will restore the default files.
+
 I can no longer log onto iceberg
 --------------------------------
 If you are confident that you have no password or remote-access-client related issues but you still can not log onto iceberg you may be having problems due to exceeding your iceberg filestore quota.

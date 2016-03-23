@@ -82,7 +82,7 @@ To check your packages are up to date, and update them if necessary, run the fol
 
         update.packages(lib.loc = "~/R/x86_64-unknown-linux-gnu-library/3.2/")
 
-The folder name after :code:`~/R/` will likely change, but this can be completed with tab autocompletion from the R session. Ensure :code:`lib.loc` folder is specified, or R will attempt to update the wrong library.
+The folder name after :code:`~/R/` will likely change, but this can be completed with tab autocompletion from the R session. Ensure `lib.loc` folder is specified, or R will attempt to update the wrong library.
 
 R Packages that require external libraries
 ------------------------------------------

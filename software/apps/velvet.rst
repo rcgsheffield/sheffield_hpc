@@ -21,6 +21,24 @@ This makes two programs available:-
 * `velvetg` - de Bruijn graph construction, error removal and repeat resolution
 * `velveth` - simple hashing program
 
+Example submission script
+-------------------------
+If the command you want to run is `velvetg /fastdata/foo1bar/velvet/assembly_31 -exp_cov auto -cov_cutoff auto`, here is an example submission script that requests 60Gig memory ::
+
+  #!/bin/bash
+  #$ -l mem=60G
+  #$ -l rmem=60G
+
+  module load apps/gcc/4.4.7/velvet/1.2.10
+
+  velvetg /fastdata/foo1bar/velvet/assembly_31 -exp_cov auto -cov_cutoff auto
+
+Put the above into a text file called `submit_velvet.sh` and submit it to the queue with the command `qsub submit_velvet.sh`
+
+Velvet Performance
+------------------
+Velvet has got multicore capabilities but these have not been compiled in our version. This is because there is evidence that the performance is better running in serial than in parallel. See `<http://www.ehu.eus/ehusfera/hpc/2012/06/20/benchmarking-genetic-assemblers-abyss-vs-velvet/>`_ for details.
+
 Installation notes
 ------------------
 Velvet was compiled with gcc 4.4.7 ::

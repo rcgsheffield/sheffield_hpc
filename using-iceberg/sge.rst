@@ -10,40 +10,31 @@ The queue system works by a user requesting some task, either a script or an
 interactive session, be run on the cluster and then the scheduler will take
 tasks from the queue based on a set of rules and priorities.
 
-
 .. _sge-interactive:
 
 Using Iceberg Interactively
 ---------------------------
 
 If you wish to use the cluster for interactive use, such as running applications
-such as MATLAB or Ansys, or compiling software, you will need to requeuest that
+such as MATLAB or Ansys, or compiling software, you will need to request that
 the scheduler gives you an interactive session. For an introduction to this see
 :ref:`getting-started`.
 
-There are two commands which give you an interactive shell::
+There are three commands which give you an interactive shell:
 
-    [te1st@iceberg-login2 ~]$ qsh
-
-and::
-
-    [te1st@iceberg-login2 ~]$ qrsh
-
-``qsh`` will open a separate xterm terminal and supports running graphical
-applications. qrsh gives a shell running on a worker node inside the currently
-open terminal, it does not support graphical applications because it has no
-X server forwarding configured.
+* :ref:`qrsh` - Requests an interactive session on a worker node. No support for graphical applications.
+* :ref:`qrshx` - Requests an interactive session on a worker node. Supports graphical applications. Superior to :ref:`qsh`.
+* :ref:`qsh` - Requests an interactive session on a worker node. Supports graphical applications.
 
 You can configure the resources available to the interactive session by
 specifying them as command line options to the qsh or qrsh commands.
-For example to run a ``qsh`` session with access to 16 GB of virtual RAM::
+For example to run a ``qrshx`` session with access to 16 GB of virtual RAM ::
 
-
-    [te1st@iceberg-login2 ~]$ qsh -l mem=16G
+    [te1st@iceberg-login2 ~]$ qrshx -l mem=16G
 
 or a session with access to 8 cores::
 
-    [te1st@iceberg-login2 ~]$ qsh -pe openmp 8
+    [te1st@iceberg-login2 ~]$ qrshx -pe openmp 8
 
 A table of :ref:`sge-interactive-options` is given below, any of these can be
 combined together to request more resources.
@@ -168,6 +159,10 @@ Command                Description
                        format MMDDhhmm. e.g. -a 01011130 will schedule the job
                        to begin no sooner than 11:30 on 1st January.
 ====================== ========================================================
+
+All scheduler commands
+----------------------
+All available scheduler commands are listed in the :ref:`scheduler` section.
 
 Frequently Asked SGE Questions
 ------------------------------

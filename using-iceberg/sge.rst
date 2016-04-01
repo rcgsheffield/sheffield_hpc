@@ -175,13 +175,19 @@ Frequently Asked SGE Questions
 
 You can submit up to 2000 jobs to the cluster, and the scheduler will allow up to 200 of your jobs to run simultaneously (we occasionally alter this value depending on the load on the cluster).
 
-**How do I ensure that my jobs run on Ivybridge processors**
+**How do I specify the processor type on Iceberg?**
 
 Add the following line to your submission script ::
 
     #$ -l arch=intel-e5-2650v2
 
-This specifies nodes that have the Ivybridge `E5-2650 CPU <http://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz>`_
+This specifies nodes that have the Ivybridge `E5-2650 CPU <http://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz>`_.
+All such nodes on Iceberg have 16 cores.
+
+To only target the older, 12 core nodes that contain `X5650 CPUs <http://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-12M-Cache-2_66-GHz-6_40-GTs-Intel-QPI>`_ add the following line to your submission script ::
+
+    #$ -l arch=intel-x5650
+
 
 **How do I specify multiple email addresses for job notifications?**
 

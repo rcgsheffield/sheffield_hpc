@@ -1,3 +1,5 @@
+.. _qsub:
+
 qsub
 ====
 `qsub` is a scheduler command that submits a batch job to the system.

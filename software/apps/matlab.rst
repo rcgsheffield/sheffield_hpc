@@ -56,6 +56,21 @@ Some notes about this example:
 * We are running the script :code:`hello.m` but we drop the `.m` in the call to MATLAB. That is, we do :code:`-r 'hello'` rather than :code:`-r hello.m`.
 * All of the :code:`module` commands introduced in the Interactive usage section will also work in batch mode. This allows you to select a specific version of MATLAB if you wish.
 
+Easy Way of Running MATLAB Jobs on the Batch Queue
+--------------------------------------------------
+
+Firstly prepare a MATLAB script that contains all the commands for running a MATLAB task.  Let us assume that this 
+script is called `mymatlabwork.m`.
+Next select the version of MATLAB you wish to use by using the module load command, for example;
+
+   module load apps/matlab/2015a 
+
+Now submit a job that runs this MATLAB script as a batch job.  :code:`runmatlab  mymatlabwork.m` . That is all to it ! 
+
+runmatlab command can take a number of parameters to refine the control of your MATLAB batch job, such as the maximum time and memory needs. 
+To get a full listing of these parameters simply type  :code:`runmatlab` on iceberg command line. 
+ 
+
 Parallel MATLAB on iceberg
 --------------------------
 
@@ -109,4 +124,24 @@ These notes are primarily for system administrators.
 
 Requires the floating license server licserv4.shef.ac.uk to serve the licenses
 for the version of MATLAB to be installed ( or higher versions ) .
-An install script and associated files are downloadable from Mathworks site along with all the required toolbox specific installation files.
+An install script named `installer_input.txt` and associated files are downloadable from Mathworks site along with all the required toolbox specific installation files. 
+
+The following steps are performed to install MATLAB on iceberg.
+
+#. If necessary, update the floating license keys on `licserv4.shef.ac.uk` to ensure that the licenses are served for the versions to install.
+#. Log onto Mathworks site to download the MATLAB installer package for Linux64bit ( For R2016a this was called `matlab_R2016a_glnxa64.zip` )
+#. Unzip the installer package in a temporary directory: `unzip matlab_R2016a_glnxa64.zip`  ( This will create a few items including files named `install` and `installer_input.txt` )
+#. Run the installer: `./install` 
+#. Select install choice of `loginto Mathworks Account`
+#. Select `download only`.
+#. Select the offered default `download path` ( this will be in your home area $HOME/Downloads/MathWorks/....) Note: This is the default download location that is later used by the silent installer.  Another option is to move all downloaded files to the same directory where install script resides. 
+
+#. Finally run the installer using our customized installer_input.txt script as input.( :code:`./install -inputFile installer_input.txt`  )
+
+Installation should finish with exit status 0 if all has worked.
+
+Note: A template installer_input file for 2016a is available at /usr/local/packages6/matlab directory named 
+`2016a_installer_input.txt`. This will need minor edits to install the next versions in the same way. 
+
+
+

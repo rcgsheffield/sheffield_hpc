@@ -1,3 +1,5 @@
+.. _qsh:
+
 qsh
 ===
 `qsh` is a scheduler command that requests an interactive X-windows session on a worker node. The resulting terminal is not user-friendly and we recommend that you use our :ref:`qrshx` command instead.

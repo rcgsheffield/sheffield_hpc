@@ -1,3 +1,5 @@
+.. _qrsh:
+
 qrsh
 ====
 `qrsh` is a scheduler command that requests an interactive session on a worker node. The resulting session will **not** support graphical applications. You will usually run this command from the head node.

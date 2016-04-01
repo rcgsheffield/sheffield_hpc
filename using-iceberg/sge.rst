@@ -10,40 +10,31 @@ The queue system works by a user requesting some task, either a script or an
 interactive session, be run on the cluster and then the scheduler will take
 tasks from the queue based on a set of rules and priorities.
 
-
 .. _sge-interactive:
 
 Using Iceberg Interactively
 ---------------------------
 
 If you wish to use the cluster for interactive use, such as running applications
-such as MATLAB or Ansys, or compiling software, you will need to requeuest that
+such as MATLAB or Ansys, or compiling software, you will need to request that
 the scheduler gives you an interactive session. For an introduction to this see
 :ref:`getting-started`.
 
-There are two commands which give you an interactive shell::
+There are three commands which give you an interactive shell:
 
-    [te1st@iceberg-login2 ~]$ qsh
-
-and::
-
-    [te1st@iceberg-login2 ~]$ qrsh
-
-``qsh`` will open a separate xterm terminal and supports running graphical
-applications. qrsh gives a shell running on a worker node inside the currently
-open terminal, it does not support graphical applications because it has no
-X server forwarding configured.
+* :ref:`qrsh` - Requests an interactive session on a worker node. No support for graphical applications.
+* :ref:`qrshx` - Requests an interactive session on a worker node. Supports graphical applications. Superior to :ref:`qsh`.
+* :ref:`qsh` - Requests an interactive session on a worker node. Supports graphical applications.
 
 You can configure the resources available to the interactive session by
 specifying them as command line options to the qsh or qrsh commands.
-For example to run a ``qsh`` session with access to 16 GB of virtual RAM::
+For example to run a ``qrshx`` session with access to 16 GB of virtual RAM ::
 
-
-    [te1st@iceberg-login2 ~]$ qsh -l mem=16G
+    [te1st@iceberg-login2 ~]$ qrshx -l mem=16G
 
 or a session with access to 8 cores::
 
-    [te1st@iceberg-login2 ~]$ qsh -pe openmp 8
+    [te1st@iceberg-login2 ~]$ qrshx -pe openmp 8
 
 A table of :ref:`sge-interactive-options` is given below, any of these can be
 combined together to request more resources.
@@ -169,19 +160,29 @@ Command                Description
                        to begin no sooner than 11:30 on 1st January.
 ====================== ========================================================
 
+All scheduler commands
+----------------------
+All available scheduler commands are listed in the :ref:`scheduler` section.
+
 Frequently Asked SGE Questions
 ------------------------------
 **How many jobs can I submit at any one time**
 
 You can submit up to 2000 jobs to the cluster, and the scheduler will allow up to 200 of your jobs to run simultaneously (we occasionally alter this value depending on the load on the cluster).
 
-**How do I ensure that my jobs run on Ivybridge processors**
+**How do I specify the processor type on Iceberg?**
 
 Add the following line to your submission script ::
 
     #$ -l arch=intel-e5-2650v2
 
-This specifies nodes that have the Ivybridge `E5-2650 CPU <http://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz>`_
+This specifies nodes that have the Ivybridge `E5-2650 CPU <http://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz>`_.
+All such nodes on Iceberg have 16 cores.
+
+To only target the older, 12 core nodes that contain `X5650 CPUs <http://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-12M-Cache-2_66-GHz-6_40-GTs-Intel-QPI>`_ add the following line to your submission script ::
+
+    #$ -l arch=intel-x5650
+
 
 **How do I specify multiple email addresses for job notifications?**
 

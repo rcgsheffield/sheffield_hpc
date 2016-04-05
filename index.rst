@@ -1,4 +1,4 @@
-.. _ib-docs:
+.. _hpc-home:
 
 Sheffield HPC
 =============
@@ -10,24 +10,42 @@ Sheffield HPC
 
 
 This is the manual for all the High Performance Computing (HPC) services
-provided at the University of Sheffield. There are two main clusters, iceberg
-and ShARC, documentation for both can be found in this manual.
+provided at the University of Sheffield.
 
-**Using the Iceberg Service**
+High Performance Computing at Sheffield
+---------------------------------------
 
-* :ref:`getting-started` - If you are new to HPC and Iceberg, we suggest you start here.
-* :ref:`software` - Details about the software installed on Iceberg and how to use it.
-* :ref:`sge-queue` - Details about submitting interactive and batch jobs.
-* :ref:`troubleshooting` - Start here if you have a problem using the system.
+The Research Computing Group manages two High Performance Computing (HPC)
+systems at Sheffield, the **iceberg** cluster and the new **ShARC** cluster.
+These systems are going to both be available for the next few years, however,
+eventually iceberg will be retired. For all the information on the two clusters
+see:
+
+:ref:`iceberg`
+
+:ref:`sharc`
+
+Both the clusters are designed to be similar enough to one another so that if
+you are familiar with one you will be able to use both. It will be possible to
+access data stored in some data stores from both clusters. Both clusters will
+not have the same applications and libraries installed on them, however, any
+missing software can be requested. For more information on the software
+available on the two clusters see the links below:
+
+:ref:`iceberg-software`
+
+:ref:`sharc-software`
 
 
-**About the Iceberg Service**
+Getting Started with Sheffield HPC
+----------------------------------
 
-* :ref:`cluster-specs` - Information about Iceberg's hardware.
-* :ref:`filestore` - Information about the amount of disk space you get on Iceberg and the different types of filesystem available.
-* :ref:`The GPU Computing section <GPUIntro>` - GPU computing on Iceberg.
+TODO SOME STUFF HERE
 
-**Research Computing Team**
+
+
+Research Computing Team
+-----------------------
 
 The research computing team are the team responsible for the iceberg service, as well as all other aspects of research computing.
 If you require support with iceberg, training or software for your workstations, the research computing team would be happy to help.

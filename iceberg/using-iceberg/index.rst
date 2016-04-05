@@ -7,7 +7,7 @@ session, if you don't know how to do this you should start with
 
 Once you have connected to iceberg in interactive mode you can run jobs which
 take less than **8 hours** and which are graphical or require user interaction.
-For more information on what applications you can run read :ref:`software`.
+For more information on what applications you can run read :ref:`iceberg-software`.
 
 If you require more memory or more processes when running interactive jobs you
 will need to tell the cluster management software (the scheduler) what you need.

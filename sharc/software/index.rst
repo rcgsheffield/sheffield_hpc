@@ -1,9 +1,9 @@
-.. _iceberg-software:
+.. _sharc-software:
 
-Software on iceberg
-===================
+Software on ShARC
+=================
 
-These pages list the software available on iceberg. If you notice an error or
+These pages list the software available on ShARC. If you notice an error or
 an omission, or wish to request new software please email
 the research computing team at `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
 
@@ -12,12 +12,10 @@ the research computing team at `research-it@sheffield.ac.uk <research-it@sheffie
     :maxdepth: 1
     :glob:
 
-    modules
     apps/index
     libs/index
-    compilers/index
-    scheduler/index
-    mpi/index
+    development/index
+    parallel/index
 
 There are many versions of applications, libraries and compilers installed on the iceberg cluster. In order to avoid conflict between these software items we employ a system called modules. Having logged onto a worker nodes, users are advised to select the software (and the version of the software) they intend to use by utilising the module command.
 

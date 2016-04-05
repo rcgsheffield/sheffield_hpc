@@ -59,7 +59,7 @@ Take a look at the `Research Computing <https://www.shef.ac.uk/cics/research>`_ 
    hpc/index
    iceberg/index
    sharc/index
-   gpu/index
+   parallel/index
    troubleshooting
    cluster_specs
    glossary

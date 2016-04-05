@@ -16,7 +16,6 @@ the research computing team at `research-it@sheffield.ac.uk <research-it@sheffie
     apps/index
     libs/index
     compilers/index
-    scheduler/index
     mpi/index
 
 There are many versions of applications, libraries and compilers installed on the iceberg cluster. In order to avoid conflict between these software items we employ a system called modules. Having logged onto a worker nodes, users are advised to select the software (and the version of the software) they intend to use by utilising the module command.

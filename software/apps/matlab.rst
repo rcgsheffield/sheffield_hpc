@@ -71,6 +71,39 @@ runmatlab command can take a number of parameters to refine the control of your 
 To get a full listing of these parameters simply type  :code:`runmatlab` on iceberg command line. 
  
 
+MATLAB Compiler and running free-standing compiled MATLAB programs
+------------------------------------------------------------------
+
+The MATLAB compiler **mcc** is installed on iceberg that can be used to generate free standing executables.
+Such executables can then be run on other computers that does not have MATLAB installed. 
+We strongly recommend you use R2016a or later versions to take advantage of this feature. 
+
+To compile a MATLAB function or script for example called myscript.m  the following steps are required.
+::
+
+    module load apps/matlab/2016a   ---- Load the matlab 2016a module
+    mcc -m myscript.m               ---- Compile your program to generate the executable myscript and 
+                                         also generate a shell script named run_myscript.sh 
+    ./run_myscript.sh $MCRROOT      ---- Finally run your program
+
+If myscript.m is a MATLAB function that require inputs these can be suplied on the command line. 
+For example if the first line of myscript.m reads-
+::
+
+         function out = myscript ( a , b , c )  
+         then to run it with 1.0 , 2.0 , 3.0 as its parameters 
+         you will need to type   ./run_myscript.sh $MCRROOT 1.0 2.0  3.0 
+
+
+After a successful compilation and running you can transfer your executable and the runscript to another computer.
+That computer does not have to have MATLAB installed or licensed on it but it will have to have the MATLAB runtime system
+installed. This can be done by either downloading the MATLAB runtime environment from Mathworks web site or by copying the installer file
+from iceberg itself which resides in **/usr/local/packages6/matlab/R2016a/toolbox/compiler/deploy/glnxa64/MCRInstaller.zip**
+
+This file can be unzipped in a temporary area and run the setup script that unzipping yields to install the MATLAB runtime environment.
+Finally the environment variable $MCRROOT can be set to the directory containing the runtime environment.  
+ 
+
 Parallel MATLAB on iceberg
 --------------------------
 

@@ -18,3 +18,4 @@ set BIN_DIR /usr/local/packages6/libs/gcc/5.2/cfitsio/3.380
 module-whatis   "Makes the CFITSIO 3.380 library available"
 
 prepend-path LD_LIBRARY_PATH $BIN_DIR/lib
+prepend-path CFITSIO_INCLUDE_PATH $BIN_DIR/include

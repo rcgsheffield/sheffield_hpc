@@ -19,6 +19,9 @@ To make this library available, run the following module command ::
 
         module load libs/gcc/5.2/cfitsio
 
+The modulefile creates a variable ``$CFITSIO_INCLUDE_PATH`` which is the path
+to the include directory.
+
 Installation notes
 ------------------
 This section is primarily for administrators of the system. CFITSIO 3.380 was compiled with gcc 5.2.

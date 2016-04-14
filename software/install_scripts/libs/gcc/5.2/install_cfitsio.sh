@@ -9,15 +9,16 @@
 
 
 ############################# Module Loads ###################################
+module load compilers/gcc/5.2
 
 ############################## Variable Setup ################################
-name=<name>
-version=<version>
-prefix=/usr/local/packages6/<type>/<compiler>/<compiler_version>/$name/$version
+name=cfitsio
+version=3.380
+prefix=/usr/local/packages6/libs/gcc/5.2/$name/$version
 build_dir=/scratch/$USER/$name
 
-filename=$name-$version.tar.gz
-baseurl=<URL>
+filename=cfitsio_latest.tar.gz
+baseurl=http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 
 # Set this to 'sudo' if you want to create the install dir using sudo.
 sudo=''
@@ -40,7 +41,7 @@ cd $build_dir
 if [ ! -d $prefix ]
 then
    $sudo mkdir -p $prefix
-   $sudo chown $USER:app-admins $prefix
+   $sudo chown $USER:cs $prefix
 fi 
 
 # Download the source
@@ -57,3 +58,9 @@ fi
 ##############################################################################
 # Installation (Write the install script here)
 ##############################################################################
+tar -xvf $filename
+cd cfitsio
+
+./configure --prefix=$prefix
+make -j 8
+make install

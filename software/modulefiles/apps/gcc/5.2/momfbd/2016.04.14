@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## MOMFBD modulefile
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+module load compilers/gcc/5.2
+module load libs/gcc/5.2/cfitsio
+module load libs/gcc/5.2/fftw
+
+
+proc ModulesHelp { } {
+        puts stderr "Makes MOMFBD available"
+}
+
+set BIN_DIR /usr/local/packages6/apps/gcc/5.2/MOMFBD
+
+module-whatis   "Makes MOMFBD (2016-04-14) available"
+
+prepend-path PATH $BIN_DIR/bin

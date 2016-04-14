@@ -9,15 +9,15 @@
 
 
 ############################# Module Loads ###################################
+module load apps/gcc/5.2/git
+module load libs/gcc/5.2/cfitsio
+module load libs/gcc/5.2/fftw
 
 ############################## Variable Setup ################################
-name=<name>
-version=<version>
-prefix=/usr/local/packages6/<type>/<compiler>/<compiler_version>/$name/$version
+name=MOMFBD
+version=2016.04.14
+prefix=/usr/local/packages6/apps/gcc/5.2/$name/$version
 build_dir=/scratch/$USER/$name
-
-filename=$name-$version.tar.gz
-baseurl=<URL>
 
 # Set this to 'sudo' if you want to create the install dir using sudo.
 sudo=''
@@ -44,12 +44,13 @@ then
 fi 
 
 # Download the source
-if [ -e $filename ]                                               
+if [ -d momfbd ]
 then                                                                            
-  echo "Install tarball exists. Download not required."                         
-else                                                                            
-  echo "Downloading source" 
-  wget $baseurl/$filename
+    cd momfbd
+    git pull origin master
+else
+    git clone git://dubshen.astro.su.se/noort/momfbd
+    cd momfbd
 fi
 
 ##############################################################################
@@ -57,3 +58,16 @@ fi
 ##############################################################################
 # Installation (Write the install script here)
 ##############################################################################
+aclocal
+autoconf
+./configure --prefix=$prefix --with-cfitsio=/usr/local/packages6/libs/gcc/5.2/cfitsio/3.380
+make -j 8
+
+# Install has hard coded directories, so we will have to re-make the install here
+mkdir $prefix/bin
+cp slave/momfbd_slave $prefix/bin
+cp master/manager $prefix/bin
+cp jsub/jsub $prefix/bin
+cp jstat/jstat $prefix/bin
+cp jdel/jdel $prefix/bin
+cp sdel/sdel $prefix/bin

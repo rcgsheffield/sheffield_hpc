@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+##
+## cfitsio 3.380 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+module load compilers/gcc/5.2
+
+proc ModulesHelp { } {
+        puts stderr "Makes the FFTW 3.3.4 library available"
+}
+
+set BIN_DIR /usr/local/packages6/libs/gcc/5.2/cfitsio/3.380
+
+module-whatis   "Makes the CFITSIO 3.380 library available"
+
+prepend-path LD_LIBRARY_PATH $BIN_DIR/lib
+prepend-path CFITSIO_INCLUDE_PATH $BIN_DIR/include

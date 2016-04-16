@@ -1,7 +1,7 @@
 .. _blast:
 
-ncbi-blast
-==========
+BLAST
+=====
 
 .. sidebar:: ncbi-blast
 

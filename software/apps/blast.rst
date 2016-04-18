@@ -30,9 +30,10 @@ You can now run commands directly. e.g. ::
 
 Databases
 ---------
-The following database has been installed following a user request
+The following databases have been installed following a user request
 
 * **nr.*tar.gz** Non-redundant protein sequences from GenPept, Swissprot, PIR, PDF, PDB, and NCBI RefSeq
+* **nt.*tar.gz** Partially non-redundant nucleotide sequences from all traditional divisions of GenBank, EMBL, and DDBJ excluding GSS,STS, PAT, EST, HTG, and WGS.
 
 A full list of databases available on the NCBI FTP site is at ftp://ftp.ncbi.nlm.nih.gov/blast/documents/blastdb.html
 
@@ -55,10 +56,17 @@ This was an install from binaries ::
 
   #Install the nr database
   cd /usr/local/packages6/apps/binapps/ncbi-blast/ncbi-blast-2.3.0+/db
-  for num in `seq 1 48`;
+  for num in `seq 0 48`;
   do
   paddednum=`printf "%02d" $num`
   `wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nr.$paddednum.tar.gz`
+  done
+
+  #Install the nt database
+  for num in `seq 0 36`;
+  do
+  paddednum=`printf "%02d" $num`
+  `wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.$paddednum.tar.gz`
   done
 
   for f in *.tar.gz; do tar -xvzf $f; done
@@ -91,4 +99,4 @@ The contents of the module file is ::
   module-whatis   "Makes BLAST 2.3.0 available"
 
   prepend-path PATH $BLAST_DIR/bin
-  prepend-path BLASTDB $BLAST_DIR/bin
+  prepend-path BLASTDB $BLAST_DIR/db

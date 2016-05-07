@@ -29,7 +29,7 @@ In order to avoid interference from other users' files it is **vitally important
 
     mkdir /fastdata/yourusername
 
-By default the directory you create will have world-read access - if you want to restrict read access to just your account then run
+By default the directory you create will have world-read access - if you want to restrict read access to just your account then run ::
 
     chmod 700 /fastdata/yourusername
 

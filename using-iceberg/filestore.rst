@@ -29,6 +29,12 @@ In order to avoid interference from other users' files it is **vitally important
 
     mkdir /fastdata/yourusername
 
+By default the directory you create will have world-read access - if you want to restrict read access to just your account then run
+
+    chmod 700 /fastdata/yourusername
+
+after creating the directory
+
 The fastdata area provides **260 Terabytes** of storage in total and takes advantage of the internal infiniband network for fast access to data.
 
 Although ``/fastdata`` is available on all the worker nodes, only by accessing from the Intel-based nodes ensures that you can benefit from these speed improvements.

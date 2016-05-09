@@ -36,7 +36,7 @@ Installation Notes
 ------------------
 These notes are primarily for administrators of the system.
 
-**Version 3.1.2**
+**Version 3.1.2 without extensions**
 
 * Download from https://www.knime.org/downloads/overview
 * Unzip to `/usr/local/extras/knime`
@@ -53,3 +53,10 @@ contains ::
   }
 
   prepend-path PATH /usr/local/extras/knime
+
+  **version 3.1.2 with extensions**
+
+  ::
+
+       wget https://download.knime.org/analytics-platform/linux/knime-full_3.1.2.linux.gtk.x86_64.tar.gz
+       tar -xvzf knime-full_3.1.2.linux.gtk.x86_64.tar.gz

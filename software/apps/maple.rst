@@ -12,7 +12,7 @@ Scientific Computing and Visualisation
 
 Interactive Usage
 -----------------
-After connecting to iceberg (see :ref:`ssh`),  start an interactive session with the :code:`qsh` command.
+After connecting to iceberg (see :ref:`ssh`),  start an interactive session with the :ref:`qrshx` command.
 
 The latest version of Maple (currently 2015) is made available with the command
 

@@ -55,10 +55,11 @@ Full list of options:
 * `-workflow.variable=name,value,type`  define or overwrite workflow variable'name' with value 'value' (possibly enclosed by quotes). The'type' must be one of "String", "int" or "double".
 
 The following return codes are defined:
+
 * 0 upon successful execution
 * 2 if parameters are wrong or missing
 * 3 when an error occurs during loading a workflow
-*  4 if an error during execution occurred
+* 4 if an error during execution occurred
 
 Installation Notes
 ------------------

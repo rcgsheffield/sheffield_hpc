@@ -19,6 +19,7 @@ The latest version of R can be loaded with ::
 
 Alternatively, you can load a specific version of R using one of the following ::
 
+        module load apps/R/3.3.0
         module load apps/R/3.2.4
         module load apps/R/3.2.3
         module load apps/R/3.2.2
@@ -40,7 +41,7 @@ First, you need to write a batch submission file. We assume you'll call this :co
   #$ -S /bin/bash
   #$ -cwd                      # Run job from current directory
 
-  module load apps/R/3.2.4     # Recommended to load a specific version of R
+  module load apps/R/3.3.0     # Recommended to load a specific version of R
 
   R CMD BATCH my_code.R my_code.R.o$JOB_ID
 
@@ -80,7 +81,7 @@ These additional packages will be installed without prompting to your personal p
 
 To check your packages are up to date, and update them if necessary, run the following line from an R interactive session ::
 
-        update.packages(lib.loc = "~/R/x86_64-unknown-linux-gnu-library/3.2/")
+        update.packages(lib.loc = "~/R/x86_64-unknown-linux-gnu-library/3.3/")
 
 The folder name after :code:`~/R/` will likely change, but this can be completed with tab autocompletion from the R session. Ensure `lib.loc` folder is specified, or R will attempt to update the wrong library.
 
@@ -115,7 +116,7 @@ This makes use of R's ``qbeta`` function. You can compile and run this on a work
 
 Start a session on a worker node with ``qrsh`` or ``qsh`` and load the R module ::
 
-    module load apps/R/3.2.2
+    module load apps/R/3.3.0
 
 Assuming the program is called ``test_rmath.c``, compile with ::
 
@@ -126,6 +127,18 @@ For full details about the functions made available by the Rmath library, see se
 Installation Notes
 ------------------
 These notes are primarily for administrators of the system.
+
+**version 3.3.0**
+
+* `What's new in R version 3.3.0 <https://stat.ethz.ch/pipermail/r-announce/2016/000602.html>`_
+
+This was a scripted install. It was compiled from source with gcc 4.4.7 and with `--enable-R-shlib` enabled. You will need a large memory `qrshx` session in order to successfully run the build script. I used `qrshx -l rmem=8G -l mem=8G`
+
+This build required several external modules including :ref:`xzutils`, :ref:`curl`, :ref:`bzip2` and :ref:`zlib`
+
+* `install_R_3.3.0.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/install_R_3.3.0.sh>`_ Downloads, compiles, tests and installs R 3.3.0 and the ``Rmath`` library.
+* `R 3.3.0 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.3.0>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.3.0``
+* Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.3.0/install_logs`
 
 **Version 3.2.4**
 

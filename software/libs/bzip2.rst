@@ -38,7 +38,11 @@ It was built with gcc 4.4.7 ::
     mkdir -p /usr/local/packages6/libs/gcc/4.4.7/bzip2/1.0.6
     tar -xvzf ./bzip2-1.0.6.tar.gz
     cd bzip2-1.0.6
+
+    make -f Makefile-libbz2_so
+    make
     make install PREFIX=/usr/local/packages6/libs/gcc/4.4.7/bzip2/1.0.6
+    mv *.so* /usr/local/packages6/libs/gcc/4.4.7/bzip2/1.0.6/lib/
 
 testing
 -------

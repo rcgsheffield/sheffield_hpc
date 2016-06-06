@@ -13,6 +13,8 @@ All users have a home directory in the location ``/home/username``. The filestor
 
 **Backup policy:** ``/home`` has backup snapshots taken every 4 hours and we keep the 10 most recent. ``/home`` also has daily snapshots taken each night, and we keep 28 days worth, mirrored onto a separate storage system.
 
+The filesystem is NFS.
+
 Data directory
 --------------
 Every user has access to a much larger data-storage area provided at the location ``/data/username``.
@@ -20,6 +22,8 @@ Every user has access to a much larger data-storage area provided at the locatio
 The quota for this area is **100 GB** per user.
 
 **Backup policy:** ``/data`` has snapshots taken every 4 hours and we keep the 10 most recent. ``/data`` also has daily snapshots taken each night, and we keep 7 days worth, but this is not mirrored.
+
+The filesystem is NFS.
 
 Fastdata directory
 ------------------
@@ -33,7 +37,15 @@ By default the directory you create will have world-read access - if you want to
 
     chmod 700 /fastdata/yourusername
 
-after creating the directory
+after creating the directory. A more sophisticated sharing scheme would have private and public directories ::
+
+    mkdir /fastdata/yourusername
+    mkdir /fastdata/yourusername/public
+    mkdir /fastdata/yourusername/private
+
+    chmod 755 /fastdata/yourusername
+    chmod 755 /fastdata/yourusername/public
+    chmod 700 /fastdata/yourusername/private
 
 The fastdata area provides **260 Terabytes** of storage in total and takes advantage of the internal infiniband network for fast access to data.
 
@@ -44,6 +56,12 @@ Although ``/fastdata`` is available on all the worker nodes, only by accessing f
 You can use the ``lfs``  command to find out which files under /fastdata are older than a certain number of days and hence approaching the time of deletion. For example, to find files 50 or more days old ::
 
     lfs find -ctime +50 /fastdata/yourusername
+
+``/fastdata`` uses the `Lustre <https://en.wikipedia.org/wiki/Lustre_(file_system)>`_ filesystem. This does not support POSIX locking which can cause issues for some applications.
+
+The shared directory
+--------------------
+If you have purchased extra filestore from CiCS, it will be mounted on Iceberg in a subdirectory of ``/shared``. This is an NFS filesystem and uses Windows-style ACLS.
 
 Determining your current filestore allocation
 ---------------------------------------------
@@ -68,6 +86,8 @@ These methods provide much faster access to data than the network attached stora
 If you decide to use the ``/scratch`` area we recommend that under ``/scratch`` you create a directory with the same name as your username and work under that directory to avoid the possibility of clashing with other users.
 
 Anything under the ``/scratch`` is deleted periodically when the worker-node is idle, whereas files on the ``/fastdata`` area will be deleted only when they are 3 months old.
+
+``\scratch`` uses the ext4 filesystem.
 
 Recovering snapshots
 --------------------

@@ -145,6 +145,11 @@ Command                Description
 
 -l mem=xxG             Specify the maximum amount (xx) of memory to be used.
 
+-l hostname=           Target a node by name. No recommended for normal use.
+
+-l arch=               Target a processor architecture. Options on Iceberg include
+                       `intel-e5-2650v2` and `intel-x5650`
+
 -N                     Job name, used to name output files and in the queue list.
 
 -j                     Join the error and normal output into one file rather

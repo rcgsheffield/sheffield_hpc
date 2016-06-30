@@ -5,44 +5,41 @@ JAGS
 
 .. sidebar:: JAGS
 
-   :Latest version: 4.8.2
-   :Dependancies: compilers/gcc/4.8.2
+   :Latest version: 4.2
    :URL: http://mcmc-jags.sourceforge.net/
 
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS.  JAGS was written with three aims in mind:
 
 * To have a cross-platform engine for the BUGS language
 * To be extensible, allowing users to write their own functions, distributions and samplers.
-* To be a plaftorm for experimentation with ideas in Bayesian modelling
+* To be a platform for experimentation with ideas in Bayesian modeling
 
 Interactive Usage
 -----------------
-After connecting to iceberg (see :ref:`ssh`),  start an interactive sesssion with the :code:`qsh` or :code:`qrsh` command. To make JAGS available in this session, run one of the following module command
+After connecting to Iceberg (see :ref:`ssh`),  start an interactive session with the :ref:`qrshx` or :ref:`qrsh` command. To make JAGS available in this session, run one of the following module commands ::
 
-.. code-block:: none
-
-      module load apps/gcc/4.8.3/JAGS/3.1
+      module load apps/gcc/4.8.2/JAGS/4.2
       module load apps/gcc/4.8.2/JAGS/3.4
+      module load apps/gcc/4.8.2/JAGS/3.1
 
 You can now run the ``jags`` command ::
 
-        jags
-
-        Welcome to JAGS 3.4.0 on Fri Jun 12 13:13:31 2015
-        JAGS is free software and comes with ABSOLUTELY NO WARRANTY
-        Loading module: basemod: ok
-        Loading module: bugs: ok
-        .
+    jags
+    Welcome to JAGS 4.2.0 on Thu Jun 30 09:21:17 2016
+    JAGS is free software and comes with ABSOLUTELY NO WARRANTY
+    Loading module: basemod: ok
+    Loading module: bugs: ok
+    .
 
 The rjags and runjags interfaces in R
 -------------------------------------
 `rjags <https://cran.r-project.org/web/packages/rjags/index.html>`_ and `runjags <https://cran.r-project.org/web/packages/runjags/index.html>`_ are CRAN packages that provide an R interface to jags. They are not installed in R by default.
 
-After connecting to iceberg (see :ref:`ssh`), start an interactive sesssion with the :code:`qrsh` command. Run the following module commands ::
+After connecting to iceberg (see :ref:`ssh`), start an interactive session with the :ref:`qrshx` command. Run the following module commands ::
 
         module load compilers/gcc/4.8.2
-        module load apps/gcc/4.8.2/JAGS/3.4
-        module load apps/R/3.2
+        module load apps/gcc/4.8.2/JAGS/4.2
+        module load apps/R/3.3.0
 
 Launch R by typing ``R`` and pressing return. Within R, execute the following commands ::
 
@@ -72,11 +69,17 @@ the most likely cause is that you forget to load the necessary modules before st
 
 Installation notes
 -------------------
-* Version 3.4
+Version 4.2
 
-JAGS 3.4 was built with gcc 4.8.2
+JAGS 4.2 was built with gcc 4.8.2
 
-.. code-block:: none
+* Install script on github - https://github.com/mikecroucher/HPC_Installers/blob/master/apps/jags/4.2.0/sheffield/iceberg/install_jags4.2.0.sh
+* Module file on github - https://github.com/mikecroucher/HPC_Installers/blob/master/apps/jags/4.2.0/sheffield/iceberg/4.2
+
+
+Version 3.4
+
+JAGS 3.4 was built with gcc 4.8.2 ::
 
     module load compilers/gcc/4.8.2
     tar -xvzf ./JAGS-3.4.0.tar.gz
@@ -86,11 +89,9 @@ JAGS 3.4 was built with gcc 4.8.2
     make
     make install
 
-* Version 3.1
+Version 3.1
 
-JAGS 3.1 was built with gcc 4.8.2
-
-.. code-block:: none
+JAGS 3.1 was built with gcc 4.8.2 ::
 
     module load compilers/gcc/4.8.2
     tar -xvzf ./JAGS-3.1.0.tar.gz

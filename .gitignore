@@ -1,4 +1,5 @@
 _build/**
+html/
 .doctrees
 get_docs.py
 *.*~

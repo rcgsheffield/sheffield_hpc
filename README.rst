@@ -38,6 +38,10 @@ Install the following module ::
 To build the HTML documentation run::
 
     make html
+	
+Or if you don't have make then build with sphinx directly 
+
+	sphinx-build . ./html
 
 If you want to build the PDF documentation you will need:
 

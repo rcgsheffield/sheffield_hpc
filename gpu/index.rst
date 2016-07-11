@@ -21,3 +21,4 @@ The `GPUComputing@Sheffield website
     nvidia_compiler
     PGI_compiler
     gpu_software
+    Theano

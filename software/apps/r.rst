@@ -19,6 +19,7 @@ The latest version of R can be loaded with ::
 
 Alternatively, you can load a specific version of R using one of the following ::
 
+        module load apps/R/3.3.1
         module load apps/R/3.3.0
         module load apps/R/3.2.4
         module load apps/R/3.2.3
@@ -127,6 +128,18 @@ For full details about the functions made available by the Rmath library, see se
 Installation Notes
 ------------------
 These notes are primarily for administrators of the system.
+
+**version 3.3.1**
+
+* `What's new in R version 3.3.1 <https://stat.ethz.ch/pipermail/r-announce/2016/000604.html>`_
+
+This was a scripted install. It was compiled from source with gcc 4.4.7 and with `--enable-R-shlib` enabled. It was run in batch mode.
+
+This build required several external modules including :ref:`xzutils`, :ref:`curl`, :ref:`bzip2` and :ref:`zlib`
+
+* `install_R_3.3.1.sh <https://raw.githubusercontent.com/mikecroucher/HPC_Installers/master/apps/R/3.3.1/sheffield/iceberg/install_R_3.3.1.sh>`_ Downloads, compiles, tests and installs R 3.3.1 and the ``Rmath`` library.
+* `R 3.3.1 Modulefile <hhttps://raw.githubusercontent.com/mikecroucher/HPC_Installers/master/apps/R/3.3.1/sheffield/iceberg/3.3.1>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.3.1``
+* Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.3.1/install_logs`
 
 **version 3.3.0**
 

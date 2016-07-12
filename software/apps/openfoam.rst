@@ -15,9 +15,14 @@ OpenFOAM is free, open source software for computational fluid dynamics (CFD).
 Usage
 -----
 
-OpenFoam can be activated using the module file::
+The lastest version of OpenFoam can be activated using the module file::
 
-    module load apps/gcc/5.2/openfoam/3.0.0
+    module load apps/gcc/5.2/openfoam
+
+Alternatively, you can load a specific version of OpenFOAM::
+
+	module load apps/gcc/5.2/openfoam/2.4.0
+	module load apps/gcc/5.2/openfoam/3.0.0
 
 This has the same effect as sourcing the openfoam bashrc file, so that should
 not be needed.

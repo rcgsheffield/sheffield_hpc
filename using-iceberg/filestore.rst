@@ -59,6 +59,8 @@ You can use the ``lfs``  command to find out which files under /fastdata are old
 
 ``/fastdata`` uses the `Lustre <https://en.wikipedia.org/wiki/Lustre_(file_system)>`_ filesystem. This does not support POSIX locking which can cause issues for some applications.
 
+**fastdata** is optimised for large file operations and does not handle lots of small files very well. An example of how slow it can be for large numbers of small files is detailed at http://www.walkingrandomly.com/?p=6167
+
 The shared directory
 --------------------
 If you have purchased extra filestore from CiCS, it will be mounted on Iceberg in a subdirectory of ``/shared``. This is an NFS filesystem and uses Windows-style ACLS.
@@ -76,8 +78,7 @@ As soon as the quota is exceeded your account becomes frozen. In order to avoid 
 
 Efficiency considerations - The /scratch areas
 ----------------------------------------------
-
-For jobs requiring a lot of Input and Output (I/O), it may sometimes be necessary to store copies of the data on the actual compute node on which your job is running. For this, you can create temporary areas of storage under the directory ``/scratch``. **The** ``/scratch`` **area is local to each worker node** and is not visible to the other worker nodes or to the head-nodes. Therefore any data created by jobs should be transfered to either your ``/data`` or ``/home`` area before the job finishes if you wish to keep them.
+For jobs requiring a lot of Input and Output (I/O), it may sometimes be necessary to store copies of the data on the actual compute node on which your job is running. For this, you can create temporary areas of storage under the directory ``/scratch``. **The** ``/scratch`` **area is local to each worker node** and is not visible to the other worker nodes or to the head-nodes. Therefore any data created by jobs should be transferred to either your ``/data`` or ``/home`` area before the job finishes if you wish to keep them.
 
 The next best I/O performance that requires the minimum amount of work is achieved by keeping your data in the ``/fastdata`` area and running your jobs on the new intel nodes by specifying ``-l arch=intel`` in your job submission script.
 

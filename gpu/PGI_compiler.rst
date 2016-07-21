@@ -2,7 +2,7 @@
 
 Compiling on the GPU using the PGI Compiler
 ===========================================
-The PGI Compilers are a set of commercial Fortran,C and C++ compilers from the Portland Group. To make use of them, first start an :ref:`interactive GPU session <GPUInteractive>` and run one of the following module commands, depending on which version of the compilers you wish to use ::
+The PGI Compilers are a set of commercial Fortran,C and C++ compilers from the Portland Group. To make use of them, first start an :ref:`interactive GPU session <GPUJobs>` and run one of the following module commands, depending on which version of the compilers you wish to use ::
 
         module load compilers/pgi/13.1
         module load compilers/pgi/14.4

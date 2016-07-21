@@ -1,14 +1,17 @@
-.. _GPUInteractive:
+.. _GPUJobs:
 
 .. toctree::
     :maxdepth: 1
     :glob:
 
-Interactive use of the GPUs
-===========================
-Once you are included in the GPU project group you may start using the GPU enabled nodes interactively by typing ::
+Submitting GPU jobs
+===================
 
-        qsh -l gpu=1 -P gpu
+Interactive use of the GPUs
+---------------------------
+You can access GPU enabled nodes interactively by typing ::
+
+        qsh -l gpu=1 
 
 the ``gpu=`` parameter determines how many GPUs you are requesting. Currently, the maximum number of GPUs allowed per job is set to 4, i.e. you cannot exceed ``gpu=4``. Most jobs will only make use of one GPU.
 
@@ -23,3 +26,15 @@ Interactive sessions provide you with 2 Gigabytes of CPU RAM by default which is
         -l gpu_arch=nvidia-k40m -l mem=13G
 
 The above will give you 1Gb more CPU RAM than GPU RAM for each of the respective GPU architectures. 
+
+Submitting batch GPU jobs
+-------------------------
+
+To run batch jobs on gpu nodes, edit your jobfile to include a request for gpus, e.g. for a single GPU ::
+
+	#$ -l gpu=1
+
+You can also use the the ``gpu_arch`` discussed aboved to target a specific gpu model ::
+
+	#$ -l gpu_arch=nvidia-m2070
+

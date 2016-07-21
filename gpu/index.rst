@@ -16,8 +16,7 @@ The `GPUComputing@Sheffield website
 
     GPUCommunity
     GPUHardware
-    GPUAccess
-    gpu_interactive
+    gpu_jobs
     nvidia_compiler
     PGI_compiler
     gpu_software

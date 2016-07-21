@@ -1,6 +1,6 @@
 Compiling on the GPU using the NVIDIA Compiler
 ==============================================
-To compile GPU code using the NVIDA compiler, nvcc, first start an :ref:`interactive GPU session <GPUInteractive>`. Next, you need to set up the compiler environment via one of the following module statements ::
+To compile GPU code using the NVIDA compiler, nvcc, first start an :ref:`interactive GPU session <GPUjobs>`. Next, you need to set up the compiler environment via one of the following module statements ::
 
         module load libs/cuda/3.2.16
         module load libs/cuda/4.0.17

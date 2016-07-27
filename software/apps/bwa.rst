@@ -10,7 +10,7 @@ BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent se
 
 Interactive Usage
 -----------------
-After connecting to Iceberg (see :ref:`ssh`),  start an interactive session with the :code:`qsh` command.
+After connecting to Iceberg (see :ref:`ssh`),  start an interactive session with the :ref:`qrshx` command.
 
 The latest version of bwa (currently 0.7.12) is made available with the command
 
@@ -21,6 +21,7 @@ The latest version of bwa (currently 0.7.12) is made available with the command
 Alternatively, you can load a specific version with ::
 
         module load apps/gcc/5.2/bwa/0.7.12
+        module load apps/gcc/5.2/bwa/0.7.5a
 
 This command makes the bwa binary available to your session.
 
@@ -32,7 +33,9 @@ Once you have made bwa available to the system using the `module` command above,
 
 Installation notes
 ------------------
-bwa was installed using gcc 5.2 ::
+**bwa 0.7.12**
+
+bwa 0.7.12 was installed using gcc 5.2 ::
 
     module load compilers/gcc/5.2
 
@@ -51,12 +54,47 @@ bwa was installed using gcc 5.2 ::
     cd ..
     mv bwa-0.7.12 /usr/local/packages6/apps/gcc/5.2/bwa/0.7.12/
 
+**bwa 0.7.5a**
+
+bwa 0.7.5a was installed using gcc 5.2 ::
+
+  module load compilers/gcc/5.2
+
+  #build
+  module load compilers/gcc/5.2
+  tar -xvjf bwa-0.7.5a.tar.bz2
+  cd bwa-0.7.5a
+  make
+
+  #Sort out manfile
+  mkdir -p share/man/man1
+  mv bwa.1 ./share/man/man1/
+
+  #Install
+  mkdir -p /usr/local/packages6/apps/gcc/5.2/bwa/
+  cd ..
+  mv bwa-0.7.5a /usr/local/packages6/apps/gcc/5.2/bwa/
 
 Testing
 -------
 No test suite was found.
 
-Modulefile
-----------
+Module files
+------------
+The default version is controlled by the `.version` file at `/usr/local/modulefiles/apps/gcc/5.2/bwa/.version` ::
+
+  #%Module1.0#####################################################################
+  ##
+  ## version file for bwa
+  ##
+  set ModulesVersion  "0.7.12"
+
+*Version 0.7.12*
+
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/bwa/0.7.12`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/5.2/bwa/0.7.12>`_.
+* On github: `0.7.12 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/5.2/bwa/0.7.12>`_.
+
+*Version 0.7.5a*
+
+* The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/bwa/0.7.5a`
+* On github: `0.7.5a <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/5.2/bwa/0.7.5a>`_.

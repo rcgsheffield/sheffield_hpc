@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## bwa 0.7.5a modulefile
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+module load compilers/gcc/5.2
+
+
+proc ModulesHelp { } {
+        puts stderr "Makes bwa 0.7.5a available"
+}
+
+set BWA_DIR /usr/local/packages6/apps/gcc/5.2/bwa/bwa-0.7.5a/
+
+module-whatis   "Makes bwa 0.7.5a available"
+
+prepend-path PATH $BWA_DIR
+prepend-path MANPATH $BWA_DIR/share/man

@@ -19,9 +19,8 @@ Create a conda environment to load relevant modules on your local user account
 		conda create -n theano python=3.5 anaconda3-2.5.0 
 		source activate theano
 		
-Upgrade pip and install the other Python module dependencies which are required
+Install the other Python module dependencies which are required using pip (alternatively these could be installed with conda if you prefer)
 
-		pip install --upgrade pip
 		pip install theano
 		pip install nose
 		pip install nose-parameterized

@@ -63,7 +63,9 @@ You can use the ``lfs``  command to find out which files under /fastdata are old
 
 The shared directory
 --------------------
-If you have purchased extra filestore from CiCS, it will be mounted on Iceberg in a subdirectory of ``/shared``. This is an NFS filesystem and uses Windows-style ACLS.
+If you have purchased extra filestore from CiCS, it will be mounted on Iceberg in a subdirectory of ``/shared``. This is an NFS filesystem and uses Windows-style ACLS. This area is controlled by the automounter. A shared area you have access to will not appear here until you try to access it, for example by cd'ing into the appropriate directory: ``cd /shared/example``
+
+Directory names under ``/shared`` that you should use match the name of the shared area CiCS will have sent you and the name you see under ``\\uosfstore.shef.ac.uk\shared\``
 
 Determining your current filestore allocation
 ---------------------------------------------

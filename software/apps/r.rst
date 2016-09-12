@@ -125,6 +125,10 @@ Assuming the program is called ``test_rmath.c``, compile with ::
 
 For full details about the functions made available by the Rmath library, see section 6.7 of the document `Writing R extensions <https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Numerical-analysis-subroutines>`_
 
+Accelerated version of R
+------------------------
+There is an experimental, accelerated version of R installed on Iceberg that makes use of the :ref:`Intel Compilers` and the Intel MKL. See :ref:`Intel R` for details.
+
 Installation Notes
 ------------------
 These notes are primarily for administrators of the system.

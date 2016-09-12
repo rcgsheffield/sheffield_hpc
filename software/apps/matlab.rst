@@ -5,7 +5,7 @@ MATLAB
 
 .. sidebar:: MATLAB
 
-   :Versions:  2013a , 2013b , 2014a, 2015a
+   :Versions:  2013a , 2013b , 2014a, 2015a, 2016a
    :Support Level: FULL
    :Dependancies: None
    :URL: http://uk.mathworks.com/products/matlab
@@ -18,7 +18,7 @@ Interactive Usage
 -----------------
 After connecting to iceberg (see :ref:`ssh`),  start an interactive session with the :code:`qsh` command.
 
-The latest version of MATLAB (currently 2015a) is made available with the command
+The latest version of MATLAB (currently 2016a) is made available with the command
 
 .. code-block:: none
 
@@ -32,6 +32,7 @@ Alternatively, you can load a specific version with one of of the following comm
        module load apps/matlab/2013b
        module load apps/matlab/2014a
        module load apps/matlab/2015a
+       module load apps/matlab/2016a
 
 You can then run MATLAB by entering :code:`matlab`
 
@@ -65,7 +66,7 @@ Firstly prepare a MATLAB script that contains all the commands for running a MAT
 script is called `mymatlabwork.m`.
 Next select the version of MATLAB you wish to use by using the module load command, for example;
 
-   module load apps/matlab/2015a 
+   module load apps/matlab/2016a 
 
 Now submit a job that runs this MATLAB script as a batch job.  :code:`runmatlab  mymatlabwork.m` . That is all to it ! 
 
@@ -150,7 +151,7 @@ unless they exceed 36 hours of run time.
 
 Training
 --------
-* Here is a link to CICS' Introduction to MATLAB course - `http://rcg.group.shef.ac.uk/courses/matlab/ <http://rcg.group.shef.ac.uk/courses/matlab/>`_
+* CiCS run an `Introduction to Matlab course`<http://rcg.group.shef.ac.uk/courses/matlab/>`_
 * In November 2015, CiCS hosted a Parallel Computing in MATLAB Masterclass. The materials are available at `http://rcg.group.shef.ac.uk/courses/mathworks-parallelmatlab/ <http://rcg.group.shef.ac.uk/courses/mathworks-parallelmatlab/>`_
 
 Installation notes

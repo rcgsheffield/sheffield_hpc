@@ -46,15 +46,19 @@ A more comprehensive guide to accessing iceberg and transfering files is located
 Windows
 ```````
 
-Download and install `mobaxterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_.
+Download and install the *Installer edition* of `mobaxterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_.
 
-Running MobaXterm should display the following screen:
+After starting MobaXterm you should see something like this:
 
 .. image:: /images/mobaxterm-welcome.png
    :width: 50%
    :align: center
 
-Once you have this screen you can jump to :ref:`ssh`.
+Click *Start local terminal* and if you see something like the the following then please continue to the :ref:`ssh` section.
+
+.. image:: /images/mobaxterm-terminal.png
+   :width: 50%
+   :align: center
 
 
 Mac OS/X and Linux

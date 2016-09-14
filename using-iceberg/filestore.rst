@@ -61,11 +61,20 @@ You can use the ``lfs``  command to find out which files under /fastdata are old
 
 **fastdata** is optimised for large file operations and does not handle lots of small files very well. An example of how slow it can be for large numbers of small files is detailed at http://www.walkingrandomly.com/?p=6167
 
-The shared directory
+Shared directories
 --------------------
-If you have purchased extra filestore from CiCS, it will be mounted on Iceberg in a subdirectory of ``/shared``. This is an NFS filesystem and uses Windows-style ACLS. This area is controlled by the automounter. A shared area you have access to will not appear here until you try to access it, for example by cd'ing into the appropriate directory: ``cd /shared/example``
 
-Directory names under ``/shared`` that you should use match the name of the shared area CiCS will have sent you and the name you see under ``\\uosfstore.shef.ac.uk\shared\``
+When you purchase an extra filestore from CiCS you should be informed of its name.  Once you know this you can access it 
+
+* as a Windows-style (SMB) file share on machines other than Iceberg ``\\uosfstore.shef.ac.uk\shared\``
+* as a subdirectory of ``/shared`` on Iceberg.  
+  
+Note that this subdirectory will be mounted *on demand* on Iceberg: it will not be visible if you simply list the contents of the ``/shared`` directory but will be accessible if you ``cd`` (change directory) into it e.g. ``cd /shared/my_group_file_share1``
+
+Behind the scenes, the file server that provides this shared storage manages permissions using Windows-style `ACLs <https://en.wikipedia.org/wiki/Access_control_list>`_ (which can be set by users via *Group Management* web interface).  However, the filesystem is mounted on a Linux cluster using NFSv4 so the file server therefore requires a means for mapping Windows-style permissions to Linux ones.  An effect of this is that the Linux `mode bits <https://en.wikipedia.org/wiki/Modes_(Unix)>`_ are not always to be believed: the output of ``ls -l somefile.sh`` may indicate that a file is readable/writable/executable when the ACLs are what really provide access control.  Most applications have robust ways of checking for properties such as executability but some applications can cause problems when accessing files/directories on ``/shared`` by naievely checking permissions just using Linux mode bits:
+
+* `which`: a directory under ``/shared`` may be on your path and you may be able to run a contained executable without prefixing it with a absolute/relative directory but `which` may fail to find that executable.
+* Perl: scripts that check for executability of files on ``/shared`` using `-x` may fail unless Perl is explicitly told to test for file permissions in a more thorough way (see the mention of ``use filetest 'access'`` `here <http://perldoc.perl.org/functions/-X.html>`_).
 
 Determining your current filestore allocation
 ---------------------------------------------

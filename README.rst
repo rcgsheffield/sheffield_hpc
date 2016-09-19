@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/rcgsheffield/iceberg_software.svg?branch=master
+    :target: https://travis-ci.org/rcgsheffield/iceberg_software
+
 Iceberg Documentation
 =====================
 

@@ -135,8 +135,8 @@ Parallel MATLAB on iceberg
 Currently we recommend the 2015a version of MATLAB for parallel work.
 
 The default cluster configuration named **local** provides parallel working environment by 
-using the CPUs of the worker-node that is running the current MATLAB session.
-Each iceberg worker-node can run multiple users' jobs simultaneously. 
+using the CPUs of the worker node that is running the current MATLAB session.
+Each iceberg worker node can run multiple users' jobs simultaneously. 
 Therefore depending on who else is using that node at the time, 
 parallel MATLAB jobs can create contentions between jobs and slow them considerably. 
 It is therefore advisable to start parallel MATLAB jobs that will use the **local** profile from a parallel SGE job.
@@ -155,7 +155,7 @@ Run MATLAB in that session and select 5 workers:
     matlab
     parpool ('local' , 5 )
 
-The above example will use 5 MATLAB workers on a single iceberg-node to run a parallel task.
+The above example will use 5 MATLAB workers on a single iceberg node to run a parallel task.
 
 To take advantage of the multiple iceberg nodes, you will need to make use of a parallel cluster profile named :code:`sge`.
 This can be done by issuing a locally provided MATLAB command named :code:`iceberg` that imports the
@@ -180,7 +180,7 @@ Training
 --------
 
 * CiCS run an `Introduction to Matlab course <http://rcg.group.shef.ac.uk/courses/matlab/>`_
-* In November 2015, CiCS hosted a Parallel Computing in MATLAB Masterclass. The materials are available at `http://rcg.group.shef.ac.uk/courses/mathworks-parallelmatlab/ <http://rcg.group.shef.ac.uk/courses/mathworks-parallelmatlab/>`_
+* In November 2015, CiCS hosted a *Parallel Computing in MATLAB Masterclass*. The materials are available at `http://rcg.group.shef.ac.uk/courses/mathworks-parallelmatlab/ <http://rcg.group.shef.ac.uk/courses/mathworks-parallelmatlab/>`_
 
 
 Installation notes
@@ -200,9 +200,8 @@ The following steps are performed to install MATLAB on iceberg.
 #. Run the installer: :code:`./install` 
 #. Select install choice of *Log in to Mathworks Account*
 #. Select *Download only*.
-#. Select the offered default *download path* ( this will be in your home area :code:`$HOME/Downloads/MathWorks/...` ) Note: This is the default download location that is later used by the silent installer.  Another option is to move all downloaded files to the same directory where install script resides. 
-
-#. Finally run the installer using our customized ``installer_input.txt`` script as input.( :code:`./install -inputFile installer_input.txt`  )
+#. Select the offered default *Download path* ( this will be in your home area :code:`$HOME/Downloads/MathWorks/...` ) Note: This is the default download location that is later used by the silent installer.  Another option is to move all downloaded files to the same directory where install script resides. 
+#. Finally run the installer using our customized ``installer_input.txt`` script as input ( :code:`./install -inputFile installer_input.txt` ).
 
 Installation should finish with exit status :code:`0` if all has worked.
 

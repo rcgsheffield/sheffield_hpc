@@ -13,11 +13,5 @@ The `GPUComputing@Sheffield website
 .. toctree::
     :hidden:
     :glob:
-
-    GPUCommunity
-    GPUHardware
-    GPUAccess
-    gpu_interactive
-    nvidia_compiler
-    PGI_compiler
-    gpu_software
+    
+    *

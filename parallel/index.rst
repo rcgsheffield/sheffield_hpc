@@ -12,10 +12,10 @@ If you need advice on how to parallelise your workflow, please contact the `Rese
 .. toctree::
    :maxdepth: 1
    :hidden:
-   
+
    self
    JobArray
-   OpenMP
+   SMP
    MPI
    Hybrid
    gpu/index

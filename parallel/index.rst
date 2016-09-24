@@ -10,13 +10,12 @@ This section explains how to use the most common parallelisation technologies on
 If you need advice on how to parallelise your workflow, please contact the `Research Software Engineering Group <http://rse.shef.ac.uk/contact/>`_
 
 .. toctree::
-    :hidden:
-    :maxdepth: 1
-    :glob:
-
-    self
-    JobArray
-    OpenMP
-    MPI
-    Hybrid
-    gpu/index
+   :maxdepth: 1
+   :hidden:
+   
+   self
+   JobArray
+   OpenMP
+   MPI
+   Hybrid
+   gpu/index

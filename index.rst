@@ -1,4 +1,4 @@
-.. _hpc-home:
+_hpc-home:
 
 Sheffield HPC
 =============
@@ -16,7 +16,7 @@ High Performance Computing at Sheffield
 ---------------------------------------
 
 The Research Computing Group manages two High Performance Computing (HPC)
-systems at Sheffield, the **iceberg** cluster and the new **ShARC** cluster.
+systems at Sheffield, the **Iceberg** cluster and the new **ShARC** cluster.
 These systems are going to both be available for the next few years, however,
 eventually iceberg will be retired. For all the information on the two clusters
 see:

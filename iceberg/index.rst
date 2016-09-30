@@ -1,6 +1,6 @@
 .. _iceberg:
 
-iceberg
+Iceberg
 =======
 
 .. toctree::

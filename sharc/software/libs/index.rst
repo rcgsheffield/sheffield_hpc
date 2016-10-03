@@ -1,2 +1,4 @@
-Libraries
-=========
+.. _sharc-libs:
+
+Libraries on Sharc
+==================

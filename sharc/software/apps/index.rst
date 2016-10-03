@@ -1,2 +1,4 @@
-Applications
-============
+.. _sharc-apps:
+
+Applications on Sharc
+=====================

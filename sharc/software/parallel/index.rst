@@ -1,2 +1,4 @@
-Parallel Libraries
-==================
+.. _sharc-parallel:
+
+Parallel Systems
+================

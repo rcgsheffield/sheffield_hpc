@@ -21,9 +21,8 @@ These systems are going to both be available for the next few years, however,
 eventually Iceberg will be retired. For all the information on the two clusters
 see:
 
-:ref:`iceberg`
-
-:ref:`sharc`
+* :ref:`iceberg` - Sheffield's current HPC service
+* :ref:`sharc` - Sheffield's new HPC Service (Not yet ready for users)
 
 Both the clusters are designed to be similar enough to one another so that if
 you are familiar with one you will be able to use both.

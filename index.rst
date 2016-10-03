@@ -1,4 +1,4 @@
-_hpc-home:
+.. _hpc-home:
 
 Sheffield HPC
 =============
@@ -8,24 +8,13 @@ Sheffield HPC
    :align: right
    :alt: A picture showing some of the Iceberg hardware.
 
-
-This is the manual for all the High Performance Computing (HPC) services
-provided at the University of Sheffield.
-
 High Performance Computing at Sheffield
 ---------------------------------------
 
-The Research Computing Group manages two High Performance Computing (HPC)
-systems at Sheffield, the **Iceberg** cluster and the new **ShARC** cluster.
-These systems are going to both be available for the next few years, however,
-eventually Iceberg will be retired. For all the information on the two clusters
-see:
+The current High Performance Computing (HPC) system at Sheffield, is the :ref:`iceberg` cluster.
 
-* :ref:`iceberg` - Sheffield's current HPC service
-* :ref:`sharc` - Sheffield's new HPC Service (Not yet ready for users)
-
-Both the clusters are designed to be similar enough to one another so that if
-you are familiar with one you will be able to use both.
+A new system, ShARC (Sheffield Advanced Research Computer), is currently under development.
+It is not yet ready for use.
 
 Research Computing Team
 -----------------------

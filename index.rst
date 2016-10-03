@@ -1,15 +1,12 @@
 .. _hpc-home:
 
-Sheffield HPC
-=============
+High Performance Computing at Sheffield
+=======================================
 
 .. image:: images/iceberg.png
    :width: 40%
    :align: right
    :alt: A picture showing some of the Iceberg hardware.
-
-High Performance Computing at Sheffield
----------------------------------------
 
 The current High Performance Computing (HPC) system at Sheffield, is the :ref:`iceberg` cluster.
 

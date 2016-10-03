@@ -37,5 +37,4 @@ Take a look at the `Research Software Engineering <http://rse.shef.ac.uk/>`_ web
    sharc/index
    parallel/index
    troubleshooting
-   cluster_specs
    glossary

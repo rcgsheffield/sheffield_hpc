@@ -7,3 +7,4 @@ Iceberg
    software/index
    accessing/index
    filestore
+   cluster_specs

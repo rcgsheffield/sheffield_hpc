@@ -26,15 +26,7 @@ see:
 :ref:`sharc`
 
 Both the clusters are designed to be similar enough to one another so that if
-you are familiar with one you will be able to use both. It will be possible to
-access data stored in some data stores from both clusters. Both clusters will
-not have the same applications and libraries installed on them, however, any
-missing software can be requested. For more information on the software
-available on the two clusters see the links below:
-
-:ref:`iceberg-software`
-
-:ref:`sharc-software`
+you are familiar with one you will be able to use both.
 
 Research Computing Team
 -----------------------

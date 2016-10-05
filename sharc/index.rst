@@ -7,5 +7,4 @@ The University of Sheffield's new HPC service, ShARC, is currently under develop
 Please use our current system, Iceberg, for now.
 
 .. toctree::
-   self
    software/index

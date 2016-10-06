@@ -33,7 +33,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Iceberg Documentation'
+project = u'Sheffield HPC Documentation'
 copyright = u'2016, The University of Sheffield'
 author = u'The University of Sheffield'
 
@@ -76,10 +76,10 @@ html_theme_options = {'navbar_sidebarrel':False,
                       'navbar_pagenav': False,
                       'source_link_position': False,
                       'bootswatch_theme': 'flatly',
-                      'navbar_site_name': "iceberg Documentation",
+                      'navbar_site_name': "Sheffield HPC Documentation",
                       'navbar_title': ' ',
                       'navbar_links': [("RCG Home", "http://www.shef.ac.uk/cics/research", True),
-                                       ("Iceberg Home", "index"),
+                                       ("Documentation Home", "index"),
                                        ("GitHub", "https://github.com/rcgsheffield/iceberg_software", True),
                                        ],
                       'globaltoc_depth': 1}
@@ -93,7 +93,7 @@ html_sidebars = {'**': ['softwaretoc.html']}
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'iceberg Documentation'
+html_title = 'Sheffield HPC Documentation'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -105,13 +105,13 @@ html_logo = 'themes/tuos/static/img/crest-l.gif'
 # html_static_path = ['./_static']
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'icebergdoc'
+htmlhelp_basename = 'hpcdoc'
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'iceberg', u'iceberg Documentation',
+    (master_doc, 'iceberg', u'Sheffield HPC Documentation',
      [author], 1)
 ]

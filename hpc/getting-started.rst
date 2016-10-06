@@ -124,4 +124,4 @@ which will pop up another terminal window, which supports graphical applications
 What Next?
 ``````````
 
-Now you have connected to iceberg, you can look at how to submit jobs with :ref:`sge-queue` or look at :ref:`software`.
+Now you have connected to iceberg, you can look at how to submit jobs with :ref:`sge-queue` or look at :ref:`iceberg-software`.

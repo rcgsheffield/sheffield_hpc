@@ -13,11 +13,5 @@ The `GPUComputing@Sheffield website
 .. toctree::
     :hidden:
     :glob:
-
-    GPUCommunity
-    GPUHardware
-    gpu_jobs
-    nvidia_compiler
-    PGI_compiler
-    gpu_software
-    Theano
+    
+    *

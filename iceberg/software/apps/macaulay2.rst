@@ -1,7 +1,7 @@
 .. _macaulay2:
 
 Macaulay2
-=======
+=========
 
 .. sidebar:: Macaulay2
 

@@ -14,24 +14,44 @@ The GNU Compiler Collection (gcc) is a widely used, free collection of compilers
 
 It is possible to switch to other versions of the gcc compiler suite using modules. After connecting to iceberg (see :ref:`ssh`),  start an interactive sesssion with the :code:`qrsh` or `qsh` command. Choose the version of the compiler you wish to use using one of the following commands ::
 
+    module load compilers/gcc/6.2
+    module load compilers/gcc/5.4
+    module load compilers/gcc/5.3
     module load compilers/gcc/5.2
     module load compilers/gcc/4.9.2
     module load compilers/gcc/4.8.2
     module load compilers/gcc/4.5.3
 
+Alternatively load the most recent available version using ::
+
+    module load compilers/gcc
+
 Confirm that you've loaded the version of gcc you wanted using ``gcc -v``.
 
 Documentation
 -------------
-man pages are available on the system. Once you have loaded the required version of `gcc`, type ::
+man pages are available on the system. Once you have loaded the required version of gcc, type ::
 
     man gcc
 
+* `What's new in the gcc version 6 series? <https://gcc.gnu.org/gcc-6/changes.html>`_
 * `What's new in the gcc version 5 series? <https://gcc.gnu.org/gcc-5/changes.html>`_
 
 Installation Notes
 ------------------
 These notes are primarily for system administrators
+
+* gcc version 6.2 was installed using :
+
+  * `install_gcc_6.2.sh <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/6.2/sheffield/iceberg/install_gcc_6.2.sh>`_
+  * `gcc 6.2 modulefile <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/6.2/sheffield/iceberg/6.2>`_ located on the system at ``/usr/local/modulefiles/compilers/gcc/6.2``
+
+* gcc version 5.4 was installed using :
+
+  * `install_gcc_5.4.sh <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/5.4/sheffield/iceberg/install_gcc_5.4.sh>`_
+  * `gcc 5.4 modulefile <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/5.4/sheffield/iceberg/5.4>`_ located on the system at ``/usr/local/modulefiles/compilers/gcc/5.4``
+
+* Installation notes for version 5.3 are not available.
 
 * gcc version 5.2 was installed using :
 

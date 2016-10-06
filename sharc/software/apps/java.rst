@@ -40,23 +40,9 @@ Now, the compiler ::
 
 Virtual Memory
 --------------
-Those who have used Java on iceberg will be aware that 
-By default, Java requests a lot of virtual memory on startup. This is usually a given fraction of the physical memory on a node, which can be quite a lot on Iceberg. This then exceeds a user's virtual memory limit set by the scheduler and causes a job to fail.
+Those who have used Java on iceberg will be aware that Java's default settings regarding memory usage were changed to prevent it from requesting lots of *virtual memory* at startup (which often exceeded the user's virtual memory limit set by the scheduler, causing his/her job to fail).
 
-To fix this, we have created a wrapper script to Java that uses the `-Xmx1G` switch to force Java to only request one Gigabyte of memory for its heap size. If this is insufficient, you are free to allocate as much memory as you require but be sure to request enough from the scheduler as well. You'll typically need to request more virtual memory from the scheduler than you specify in the Java `-Xmx` switch.
-
-For example, consider the following submission script. Note that it was necessary to request 9 Gigabytes of memory from the scheduler even though we only allocated 5 Gigabytes heap size in Java. The requirement for 9 gigabytes was determined empirically  ::
-
-  #!/bin/bash
-  #Request 9 gigabytes of real memory from the scheduler (mem)
-  #and 9 gigabytes of virtual memory from the scheduler (mem)
-  #$ -l mem=9G -l rmem=9G
-
-  # load the Java module
-  module load apps/java/1.8u71
-
-  #Run java program allocating 5 Gigabytes
-  java -Xmx5G HelloWorld
+On ShARC, Java's memory usage settings do not need to be changed from their defaults as ShARC's scheduler only monitors and manages *real memory* and not virtual memory, and Java's initial real memory requirements are more modest.
 
 Installation notes
 ------------------

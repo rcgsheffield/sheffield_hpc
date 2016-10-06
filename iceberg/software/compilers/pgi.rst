@@ -1,6 +1,6 @@
 PGI Compilers
 =============
-The PGI Compiler suite offers C,C++ and Fortran Compilers. For full details of the features of this compiler suite, see PGI's website at http://www.pgroup.com/products/pgiworkstation.htm
+The PGI Compiler suite offers C,C++ and Fortran Compilers. For full details of the features of this compiler suite, see `PGI's website <http://www.pgroup.com/products/pgiworkstation.htm>`_.
 
 Making the PGI Compilers available
 ----------------------------------
@@ -111,7 +111,7 @@ Unlike gcc, the PGI Compilers do not recognise the environment variable LIBRARY_
 
 Where VER is the version number in question: 15.7, 15.10 etc
 
-At the time of writing (August 2015), this is documented on PGI's website at https://www.pgroup.com/support/link.htm#lib_path_ldflags
+At the time of writing (August 2015), this is `documented on PGI's website <https://www.pgroup.com/support/link.htm#lib_path_ldflags>`_.
 
 Modulefile
 ----------

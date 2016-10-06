@@ -35,7 +35,7 @@ The following databases have been installed following a user request
 * **nr.*tar.gz** Non-redundant protein sequences from GenPept, Swissprot, PIR, PDF, PDB, and NCBI RefSeq
 * **nt.*tar.gz** Partially non-redundant nucleotide sequences from all traditional divisions of GenBank, EMBL, and DDBJ excluding GSS,STS, PAT, EST, HTG, and WGS.
 
-A full list of databases available on the NCBI FTP site is at ftp://ftp.ncbi.nlm.nih.gov/blast/documents/blastdb.html
+A full list of databases available on the NCBI FTP site is at https://ftp.ncbi.nlm.nih.gov/blast/documents/blastdb.html
 
 If you need any of these installing, please make a request on our github issues log.
 

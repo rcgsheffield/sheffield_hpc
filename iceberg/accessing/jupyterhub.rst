@@ -47,7 +47,7 @@ have Jupyter available. To learn more about installing custom Python
 environments with conda see :ref:`python-conda`.
 
 To learn how to use the Jupyter Notebook see the `official documentation
-<http://jupyter-notebook.readthedocs.org/en/latest/examples/Notebook/rstversions/Notebook%20Basics.html#the-notebook-dashboard>`_.
+<http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html>`_.
 
 Using the Notebook Terminal
 ###########################

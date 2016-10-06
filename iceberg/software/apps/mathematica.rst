@@ -198,5 +198,5 @@ Install the University network ``mathpass`` file at ``/usr/local/packages6/apps/
 
 Modulefiles
 -----------
-* The `10.3.1 module file  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/binapps/mathematica/10.3.1>`_.
-* The `10.2 module file  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/binapps/mathematica/10.2>`_.
+* The `10.3.1 module file  <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/binapps/mathematica/10.3.1>`_.
+* The `10.2 module file  <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/binapps/mathematica/10.2>`_.

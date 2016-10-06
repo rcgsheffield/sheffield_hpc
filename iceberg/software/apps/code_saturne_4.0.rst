@@ -112,9 +112,9 @@ Post Install Steps
 ------------------
 To make Code Saturne aware of the SGE system:
 
-* Created ``/usr/local/packages6/apps/gcc/4.4.7/code_saturne/4.0/etc/code_saturne.cfg``: See `code_saturne.cfg 4.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/apps/assets/code_saturne/4.0/code_saturne.cfg>`_
+* Created ``/usr/local/packages6/apps/gcc/4.4.7/code_saturne/4.0/etc/code_saturne.cfg``: See `code_saturne.cfg 4.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/apps/assets/code_saturne/4.0/code_saturne.cfg>`_
 
-* Modified ``/usr/local/packages6/apps/gcc/4.4.7/code_saturne/4.0/share/code_saturne/batch/batch.SGE``. See: `batch.SGE 4.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/apps/assets/code_saturne/4.0/batch.SGE>`_
+* Modified ``/usr/local/packages6/apps/gcc/4.4.7/code_saturne/4.0/share/code_saturne/batch/batch.SGE``. See: `batch.SGE 4.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/apps/assets/code_saturne/4.0/batch.SGE>`_
 
 Testing
 -------

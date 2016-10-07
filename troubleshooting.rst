@@ -66,6 +66,7 @@ Virtual memory limit specified should always be greater than equal to the real m
 
 If a job exceeds its virtual memory resource it gets terminated. However if a job exceeds its real memory resource it does not get terminated but an email message is sent to the user asking him to specify a larger rmem= parameter the next time, so that the job can run more efficiently.
 
+.. _real-vs-virt-mem:
 
 What is rmem ( real_memory) and mem ( virtual_memory)
 -----------------------------------------------------

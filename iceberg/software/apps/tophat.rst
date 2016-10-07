@@ -28,7 +28,7 @@ Tophat 2.1.0 was installed using gcc 4.8.2. Installs were attempted using gcc 5.
 
 This install has dependencies on the following
 
-* :ref:`gcc` 4.8.2
+* :ref:`gcc_iceberg` 4.8.2
 * :ref:`boost` 1.58
 * :ref:`bowtie2` (not needed at install time but is needed at runtime)
 

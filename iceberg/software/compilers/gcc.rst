@@ -1,4 +1,4 @@
-.. _gcc:
+.. _gcc_iceberg:
 
 GNU Compiler Collection (gcc)
 =============================

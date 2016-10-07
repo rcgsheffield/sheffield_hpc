@@ -1,4 +1,4 @@
-.. _Java:
+.. _Java_sharc:
 
 Java
 ====

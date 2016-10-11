@@ -1,7 +1,7 @@
 .. _applications:
 
-Applications
-============
+Applications on Iceberg
+=======================
 
 .. toctree::
     :maxdepth: 1

@@ -32,7 +32,7 @@ This starts imagej with 512Mb of Java heap space. To request more, you need to r
     java -Xmx1G -Dplugins.dir=$IMAGEJ_DIR/plugins/ -jar $IMAGEJ_DIR/ij.jar
 
 You will need to ensure that you've requested enough virtual memory from the scheduler to support the above request.
-For more details, please refer to the Virtual Memory section of our :ref:`Java` documentation.
+For more details, please refer to the Virtual Memory section of our :ref:`Java-iceberg` documentation.
 
 Documentation
 -------------

@@ -29,6 +29,6 @@ This section is primarily for administrators of the system.
 
 Compiled using PGI 15.7, OpenMPI 1.8.8 and HDF5 1.8.15-patch1
 
-* `install_pgi_netcdf_4.3.3.1.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/libs/pgi/netcdf/install_pgi_netcdf_4.3.3.1.sh>`_ Install script
+* `install_pgi_netcdf_4.3.3.1.sh  <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/libs/pgi/netcdf/install_pgi_netcdf_4.3.3.1.sh>`_ Install script
 * Install logs are on the system at ``/usr/local/packages6/libs/pgi/netcdf/4.3.3.1/install_logs``
 * `Modulefile <https://github.com/mikecroucher/iceberg_software/blob/master/software/modulefiles/libs/pgi/netcdf/4.3.3.1>`_ located on the system at ``ls /usr/local/modulefiles/libs/pgi/netcdf/4.3.3.1``

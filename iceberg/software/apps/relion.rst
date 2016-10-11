@@ -25,7 +25,7 @@ These are primarily for system administrators.
 Install instructions: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Download_%26_install
 
 * RELION was installed using the gcc 4.4.7 compiler and Openmpi 1.8.8
-* `install_relion.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/4.4.7/relion/1.4/install_relion.sh>`_
+* `install_relion.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/4.4.7/relion/1.4/install_relion.sh>`_
 * Note - the environment variable RELION_QSUB_TEMPLATE points to an SGE qsub template, which needs customizing to work with our environment
 
 Modulefile

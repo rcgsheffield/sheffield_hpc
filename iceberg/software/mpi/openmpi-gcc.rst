@@ -33,19 +33,19 @@ These are primarily for administrators of the system.
 
 Compiled using gcc 4.4.7.
 
-* `install_openMPI_1.10.1.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/mpi/gcc/openmpi/install_gcc_openMPI_1.10.1.sh>`_ Downloads, compiles and installs OpenMPI 1.10.0 using the system gcc.
-* `Modulefile 1.10.1 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/mpi/gcc/openmpi/1.10.1>`_ located on the system at ``/usr/local/modulefiles/mpi/gcc/openmpi/1.10.1``
+* `install_openMPI_1.10.1.sh  <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/mpi/gcc/openmpi/install_gcc_openMPI_1.10.1.sh>`_ Downloads, compiles and installs OpenMPI 1.10.0 using the system gcc.
+* `Modulefile 1.10.1 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/mpi/gcc/openmpi/1.10.1>`_ located on the system at ``/usr/local/modulefiles/mpi/gcc/openmpi/1.10.1``
 
 **Version 1.10.0**
 
 Compiled using gcc 4.4.7.
 
-* `install_openMPI_1.10.0.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/mpi/gcc/openmpi/install_gcc_openMPI_1.10.0.sh>`_ Downloads, compiles and installs OpenMPI 1.10.0 using the system gcc.
-* `Modulefile 1.10 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/mpi/gcc/openmpi/1.10.0>`_ located on the system at ``/usr/local/modulefiles/mpi/gcc/openmpi/1.10.0``
+* `install_openMPI_1.10.0.sh  <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/mpi/gcc/openmpi/install_gcc_openMPI_1.10.0.sh>`_ Downloads, compiles and installs OpenMPI 1.10.0 using the system gcc.
+* `Modulefile 1.10 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/mpi/gcc/openmpi/1.10.0>`_ located on the system at ``/usr/local/modulefiles/mpi/gcc/openmpi/1.10.0``
 
 **Version 1.8.8**
 
 Compiled using gcc 4.4.7.
 
-* `install_openMPI.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/mpi/gcc/openmpi/install_gcc_openMPI_1.8.8.sh>`_ Downloads, compiles and installs OpenMPI 1.8.8 using the system gcc.
-* `Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/mpi/gcc/openmpi/1.8.8>`_ located on the system at ``/usr/local/modulefiles/mpi/gcc/openmpi/1.8.8``
+* `install_openMPI.sh  <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/mpi/gcc/openmpi/install_gcc_openMPI_1.8.8.sh>`_ Downloads, compiles and installs OpenMPI 1.8.8 using the system gcc.
+* `Modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/mpi/gcc/openmpi/1.8.8>`_ located on the system at ``/usr/local/modulefiles/mpi/gcc/openmpi/1.8.8``

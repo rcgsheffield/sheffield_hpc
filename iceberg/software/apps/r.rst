@@ -142,7 +142,7 @@ This was a scripted install. It was compiled from source with gcc 4.4.7 and with
 This build required several external modules including :ref:`xzutils`, :ref:`curl`, :ref:`bzip2` and :ref:`zlib`
 
 * `install_R_3.3.1.sh <https://raw.githubusercontent.com/mikecroucher/HPC_Installers/master/apps/R/3.3.1/sheffield/iceberg/install_R_3.3.1.sh>`_ Downloads, compiles, tests and installs R 3.3.1 and the ``Rmath`` library.
-* `R 3.3.1 Modulefile <hhttps://raw.githubusercontent.com/mikecroucher/HPC_Installers/master/apps/R/3.3.1/sheffield/iceberg/3.3.1>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.3.1``
+* `R 3.3.1 Modulefile <https://raw.githubusercontent.com/mikecroucher/HPC_Installers/master/apps/R/3.3.1/sheffield/iceberg/3.3.1>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.3.1``
 * Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.3.1/install_logs`
 
 **version 3.3.0**
@@ -153,30 +153,30 @@ This was a scripted install. It was compiled from source with gcc 4.4.7 and with
 
 This build required several external modules including :ref:`xzutils`, :ref:`curl`, :ref:`bzip2` and :ref:`zlib`
 
-* `install_R_3.3.0.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/install_R_3.3.0.sh>`_ Downloads, compiles, tests and installs R 3.3.0 and the ``Rmath`` library.
-* `R 3.3.0 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.3.0>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.3.0``
+* `install_R_3.3.0.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/R/install_R_3.3.0.sh>`_ Downloads, compiles, tests and installs R 3.3.0 and the ``Rmath`` library.
+* `R 3.3.0 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/R/3.3.0>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.3.0``
 * Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.3.0/install_logs`
 
 **Version 3.2.4**
 
-* `What's new in R version 3.2.4 <https://cran.r-project.org/bin/windows/base/NEWS.R-3.2.4.html>`_
+* `What's new in R version 3.2.4 <https://cran.r-project.org/bin/windows/base/old/3.2.4/NEWS.R-3.2.4.html>`_
 
 This was a scripted install. It was compiled from source with gcc 4.4.7 and with `--enable-R-shlib` enabled. You will need a large memory `qrshx` session in order to successfully run the build script. I used `qrshx -l rmem=8G -l mem=8G`
 
 This build made use of new versions of :ref:`xzutils` and :ref:`curl`
 
-* `install_R_3.2.4.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/install_R_3.2.4.sh>`_ Downloads, compiles, tests and installs R 3.2.4 and the ``Rmath`` library.
-* `R 3.2.4 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.2.4>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.4``
+* `install_R_3.2.4.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/R/install_R_3.2.4.sh>`_ Downloads, compiles, tests and installs R 3.2.4 and the ``Rmath`` library.
+* `R 3.2.4 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/R/3.2.4>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.4``
 * Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.2.4/install_logs`
 
 **Version 3.2.3**
 
-* `What's new in R version 3.2.3 <https://cran.r-project.org/bin/windows/base/NEWS.R-3.2.3.html>`_
+* `What's new in R version 3.2.3 <https://cran.r-project.org/bin/windows/base/old/3.2.3/NEWS.R-3.2.3.html>`_
 
 This was a scripted install. It was compiled from source with gcc 4.4.7 and with ``--enable-R-shlib`` enabled. You will need a large memory ``qrsh`` session in order to successfully run the build script. I used ``qrsh -l rmem=8G -l mem=16G``
 
-* `install_R_3.2.3.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/install_R_3.2.3.sh>`_ Downloads, compiles, tests and installs R 3.2.3 and the ``Rmath`` library.
-* `R 3.2.3 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.2.3>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.3``
+* `install_R_3.2.3.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/R/install_R_3.2.3.sh>`_ Downloads, compiles, tests and installs R 3.2.3 and the ``Rmath`` library.
+* `R 3.2.3 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/R/3.2.3>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.3``
 * Install log-files, including the output of the `make check` tests are available on the system at `/usr/local/packages6/R/3.2.3/install_logs`
 
 **Version 3.2.2**
@@ -185,16 +185,16 @@ This was a scripted install. It was compiled from source with gcc 4.4.7 and with
 
 This was a scripted install. It was compiled from source with gcc 4.4.7 and with ``--enable-R-shlib`` enabled. You will need a large memory ``qrsh`` session in order to successfully run the build script. I used ``qrsh -l rmem=8G -l mem=16G``
 
-* `install_R_3.2.2.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/install_R_3.2.2.sh>`_ Downloads, compiles and installs R 3.2.2 and the ``Rmath`` library.
-* `R 3.2.2 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.2.2>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.2``
+* `install_R_3.2.2.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/R/install_R_3.2.2.sh>`_ Downloads, compiles and installs R 3.2.2 and the ``Rmath`` library.
+* `R 3.2.2 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/R/3.2.2>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.2``
 * Install log-files were manually copied to ``/usr/local/packages6/R/3.2.2/install_logs`` on the system. This step should be included in the next version of the install script.
 
 **Version 3.2.1**
 
 This was a manual install. It was compiled from source with gcc 4.4.7 and with ``--enable-R-shlib`` enabled.
 
-* `Install notes <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/R/R-3.2.1.md>`_
-* `R 3.2.1 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/R/3.2.1>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.1``
+* `Install notes <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/R/R-3.2.1.md>`_
+* `R 3.2.1 Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/R/3.2.1>`_ located on the system at ``/usr/local/modulefiles/apps/R/3.2.1``
 
 **Older versions**
 

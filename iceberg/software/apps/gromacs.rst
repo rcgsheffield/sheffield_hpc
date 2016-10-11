@@ -34,4 +34,4 @@ Compilation Choices:
 * -DGMX_BUILD_OWN_FFTW=ON
 
 The script used to build gromacs can be found `here
-<https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gromacs/install_gromacs_5.1.sh>`_.
+<https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gromacs/install_gromacs_5.1.sh>`_.

@@ -4,7 +4,7 @@ relion
 .. sidebar:: relion
 
    :Versions:  1.4
-   :URL: http://relion.readthedocs.org/en/latest/
+   :URL: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page
 
 RELION is a software package that performs an empirical Bayesian approach to (cryo-EM) structure de-termination by single-particle analysis. Note that RELION is distributed under a GPL license. 
 
@@ -25,7 +25,7 @@ These are primarily for system administrators.
 Install instructions: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Download_%26_install
 
 * RELION was installed using the gcc 4.4.7 compiler and Openmpi 1.8.8
-* `install_relion.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/4.4.7/relion/1.4/install_relion.sh>`_
+* `install_relion.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/4.4.7/relion/1.4/install_relion.sh>`_
 * Note - the environment variable RELION_QSUB_TEMPLATE points to an SGE qsub template, which needs customizing to work with our environment
 
 Modulefile

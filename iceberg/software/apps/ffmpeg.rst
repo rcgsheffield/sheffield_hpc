@@ -62,4 +62,4 @@ All tests passed.
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/ffmpeg/2.8.3`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/5.2/ffmpeg/2.8.3>`_.
+* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/ffmpeg/2.8.3>`_.

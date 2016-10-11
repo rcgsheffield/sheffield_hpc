@@ -31,7 +31,7 @@ These are primarily for administrators of the system.
 
 Compiled using PGI 15.7.
 
-* `install_openMPI.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/mpi/pgi/openmpi/install_pgi_openMPI_1.8.8.sh>`_ Downloads, compiles and installs OpenMPI 1.8.8 using v15.7 of the PGI Compiler.
-* `Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/mpi/pgi/openmpi/1.8.8>`_ located on the system at ``/usr/local/modulefiles/mpi/pgi/openmpi/1.8.8``
+* `install_openMPI.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/mpi/pgi/openmpi/install_pgi_openMPI_1.8.8.sh>`_ Downloads, compiles and installs OpenMPI 1.8.8 using v15.7 of the PGI Compiler.
+* `Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/mpi/pgi/openmpi/1.8.8>`_ located on the system at ``/usr/local/modulefiles/mpi/pgi/openmpi/1.8.8``
 
 Installation notes for older versions are not available.

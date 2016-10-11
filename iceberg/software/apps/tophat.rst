@@ -63,9 +63,9 @@ Testing
 -------
 A test script was executed based on the documentation `on the tophat website <https://ccb.jhu.edu/software/tophat/tutorial.shtml>`_ (retrieved 29th October 2015). It only proves that the code can run without error, not that the result is correct.
 
-* `tophat_test.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/tophat/tests/tophat_test.sh>`_
+* `tophat_test.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/tophat/tests/tophat_test.sh>`_
 
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/4.8.2/tophat/2.1.0`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/4.8.2/tophat/2.1.0>`_.
+* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/4.8.2/tophat/2.1.0>`_.

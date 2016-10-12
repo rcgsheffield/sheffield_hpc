@@ -2,7 +2,7 @@
 
 GNU Compiler Collection (gcc)
 =============================
-The GNU Compiler Collection (gcc) is a widely used, free collection of compilers including C (gcc), C++ (g++) and Fortran (gfortran). The defaut version of gcc on the system is 4.4.7 ::
+The GNU Compiler Collection (gcc) is a widely used, free collection of compilers including C (gcc), C++ (g++) and Fortran (gfortran). The defaut version of gcc on the system is 4.8.5 ::
 
     $ gcc -v
 

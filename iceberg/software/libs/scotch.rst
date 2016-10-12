@@ -21,6 +21,6 @@ To make this library available, run the following module command ::
 
 Installation notes
 ------------------
-This section is primarily for administrators of the system. SCOTCH 6.0.4 was compiled with gcc 5.2 using the bash file `install_scotch.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/libs/gcc/5.2/install_scotch.sh>`_
+This section is primarily for administrators of the system. SCOTCH 6.0.4 was compiled with gcc 5.2 using the bash file `install_scotch.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/libs/gcc/5.2/install_scotch.sh>`_
 
 

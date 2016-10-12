@@ -24,5 +24,5 @@ Installation notes
 ------------------
 Version 2.5 of git was installed using gcc 5.2 using the following install script and module file:
 
-* `install_git_2.5.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/git/install_git_2.5.sh>`_
-* `git 2.5 modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/git/2.5>`_ located on the system at ``/usr/local/modulefiles/compilers/git/2.5``
+* `install_git_2.5.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/git/install_git_5.2.s://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/git/install_git_2.5.sh>`_
+* `git 2.5 modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/git/2.5>`_ located on the system at ``/usr/local/modulefiles/compilers/git/2.5``

@@ -39,7 +39,7 @@ Installation notes
 ------------------
 povray 3.7.0 was installed using gcc 5.2 using the following script 
 
-* `install_povray-3.7.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/5.2/povray/3.7/install_povray-3.7.sh>`_
+* `install_povray-3.7.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/5.2/povray/0.37/install_povray-3.7.sh>`_
 
 Testing
 -------
@@ -52,4 +52,4 @@ All tests passed.
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/povray/3.7`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/povray/3.7>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/povray/3.7>`_.

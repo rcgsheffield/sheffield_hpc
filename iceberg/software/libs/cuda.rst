@@ -79,4 +79,4 @@ No install notes are available
 Module Files
 ------------
 * The module file is on the system at ``/usr/local/modulefiles/libs/cuda/7.5.18``
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/libs/binlibs/cuda/7.5.18>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/7.5.18>`_.

@@ -181,10 +181,10 @@ The directory ``CASTEP-8.0`` was then deleted and the parallel version was insta
 
 Modulefiles
 -----------
-* `CASTEP 16.1-serial <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/intel/15/castep/16.1-serial>`_
-* `CASTEP 16.1-parallel <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/intel/15/castep/16.1-parallel>`_
-* `CASTEP 8.0-serial <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/intel/15/castep/8.0-serial>`_
-* `CASTEP 8.0-parallel <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/intel/15/castep/16.1-parallel>`_
+* `CASTEP 16.1-serial <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/intel/15/castep/16.1-serial>`_
+* `CASTEP 16.1-parallel <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/intel/15/castep/16.1-parallel>`_
+* `CASTEP 8.0-serial <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/intel/15/castep/8.0-serial>`_
+* `CASTEP 8.0-parallel <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/intel/15/castep/16.1-parallel>`_
 
 Testing
 -------

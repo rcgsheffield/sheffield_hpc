@@ -63,7 +63,7 @@ Remember that memory is allocated on a per-slot basis. You should ensure that yo
 
 Installation notes
 ------------------
-Various issues were encountered while attempting to install bless. See https://github.com/rcgsheffield/iceberg_software/issues/143 for details.
+Various issues were encountered while attempting to install bless. See https://github.com/rcgsheffield/sheffield_hpc/issues/143 for details.
 It was necessary to install gcc 4.9.2 in order to build bless. No other compiler worked!
 
 Here are the install steps ::
@@ -108,4 +108,4 @@ No test suite was found.
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/4.9.2/bless/1.02`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/4.9.2/bless/1.02>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/4.9.2/bless/1.02>`_.

@@ -66,8 +66,8 @@ This section is primarily for administrators of the system.
 
 **Version 1.8.16 built using GCC Compiler, with seperate ZLIB and SZIP**
 
-* `install_hdf5.sh   <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/libs/gcc/4.4.7/hdf5/install_hdf5.sh>`_ Install script
-* `1.8.16   <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/libs/gcc/hdf5/1.8.16>`_
+* `install_hdf5.sh   <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/libs/gcc/4.4.7/hdf5/install_hdf5.sh>`_ Install script
+* `1.8.16   <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/gcc/hdf5/1.8.16>`_
 
 **Version 1.8.15-patch1 built using PGI Compiler**
 
@@ -75,8 +75,8 @@ Here are the build details for the module `libs/hdf5/pgi/1.8.15-patch1`
 
 Compiled using PGI 15.7 and OpenMPI 1.8.8
 
-* `install_pgi_hdf5_1.8.15-patch1.sh   <https://github.com/rcgsheffield/blob/master/iceberg/software/install_scripts/libs/pgi/hdf5/install_pgi_hdf5_1.8.15-patch1.sh>`_ Install script
-* `Modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/libs/pgi/hdf5/1.8.15-patch1>`_ located on the system at ``/usr/local/modulefiles/libs/hdf5/pgi/1.8.15-patch1``
+* `install_pgi_hdf5_1.8.15-patch1.sh   <https://github.com/rcgsheffield/blob/master/software/install_scripts/libs/pgi/hdf5/install_pgi_hdf5_1.8.15-patch1.sh>`_ Install script
+* `Modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/pgi/hdf5/1.8.15-patch1>`_ located on the system at ``/usr/local/modulefiles/libs/hdf5/pgi/1.8.15-patch1``
 
 **gcc versions**
 

@@ -125,4 +125,4 @@ Module Files
 **fll6i25dcl**
 
 * The module file is on the system at ``/usr/local/modulefiles/libs/intel/15/NAG/fll6i25dcl``
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/libs/intel/15/NAG/fll6i25dcl>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/intel/15/NAG/fll6i25dcl>`_.

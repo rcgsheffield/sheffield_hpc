@@ -31,4 +31,4 @@ As root::
   $ source activate /usr/local/packages6/apps/binapps/conda/phyluce
   $ conda install -c https://conda.binstar.org/faircloth-lab phyluce
 
-This installs Phyluce as a conda environment in the /usr/local/packages6/apps/binapps/conda/phyluce folder, which is then loaded by the module file `phyluce/1.5.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/binapps/phyluce/1.5.0>`_, which is a modification of the anaconda module files.
+This installs Phyluce as a conda environment in the /usr/local/packages6/apps/binapps/conda/phyluce folder, which is then loaded by the module file `phyluce/1.5.0 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/binapps/phyluce/1.5.0>`_, which is a modification of the anaconda module files.

@@ -23,7 +23,7 @@ Installation notes
 These are primarily for system administrators.
 
 * ctffind was installed using the gcc 4.4.7 compiler
-* `install_ctffind.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/4.4.7/ctffind/3.140609/install_ctffind.sh>`_
+* `install_ctffind.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/4.4.7/ctffind/3.140609/install_ctffind.sh>`_
 
 
 Modulefile

@@ -63,7 +63,7 @@ The following notes are primarily for system administrators.
   * The license file is at ``/usr/local/packages6/compilers/intel/license.lic``
   * The environment variable ``INTEL_LICENSE_FILE`` is set by the environment module and points to the license file location
   * Download the files ``l_ccompxe_2015.3.187.tgz`` (C/C++) and ``l_fcompxe_2015.3.187.tgz`` (Fortran) from Intel Portal.
-  * Put the above .tgz files in the same directory as `install_intel15.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/compilers/intel/2015.3/install_intel15.sh>`_ and `silent_master.cfg <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/compilers/intel/2015.3/silent_master.cfg>`_
+  * Put the above .tgz files in the same directory as `install_intel15.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/compilers/intel/2015.3/install_intel15.sh>`_ and `silent_master.cfg <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/compilers/intel/2015.3/silent_master.cfg>`_
   * Run ``install_intel15.sh``
   * To find what was required in the module file, I did ::
 
@@ -72,7 +72,7 @@ The following notes are primarily for system administrators.
      env > after_intel.env
      diff base.env after_intel.env
 
-  * The `module file <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/compilers/intel/15.0.3>`_ is on iceberg at ``/usr/local/modulefiles/compilers/intel/15.0.3``
+  * The `module file <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/compilers/intel/15.0.3>`_ is on iceberg at ``/usr/local/modulefiles/compilers/intel/15.0.3``
 
 version 14 and below
 ~~~~~~~~~~~~~~~~~~~~

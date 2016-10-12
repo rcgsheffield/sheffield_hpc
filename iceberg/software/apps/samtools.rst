@@ -84,4 +84,4 @@ The full log is on the system at `/usr/local/packages6/apps/gcc/5.2/samtools/1.2
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/samtools/1.2`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/samtools/1.2>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/samtools/1.2>`_.

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# iceberg Software documentation build configuration file, created by
+# sheffield_hpc documentation build configuration file, created by
 # sphinx-quickstart on Tue Mar 31 11:40:21 2015.
 #
 
@@ -80,7 +80,7 @@ html_theme_options = {'navbar_sidebarrel':False,
                       'navbar_title': ' ',
                       'navbar_links': [("RCG Home", "http://www.shef.ac.uk/cics/research", True),
                                        ("Documentation Home", "index"),
-                                       ("GitHub", "https://github.com/rcgsheffield/iceberg_software", True),
+                                       ("GitHub", "https://github.com/rcgsheffield/sheffield_hpc", True),
                                        ],
                       'globaltoc_depth': 1}
 

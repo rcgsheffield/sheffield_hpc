@@ -23,14 +23,14 @@ Installation notes
 These are primarily for system administrators.
 
 * gemini was installed using the gcc 4.4.7 compiler
-* `install_gemini.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/4.4.7/gemini/0.18/install_gemini.sh>`_
+* `install_gemini.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/4.4.7/gemini/0.18/install_gemini.sh>`_
 
 
 Testing
 -------
 The test script used was
 
-* `test_gemini.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/test_scripts/apps/gcc/4.4.7/gemini/0.18/test_gemini.sh>`_
+* `test_gemini.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/test_scripts/apps/gcc/4.4.7/gemini/0.18/test_gemini.sh>`_
 
 The full output from the test run is on the system at `/usr/local/packages6/apps/gcc/4.4.7/gemini/0.18/test_results/`
 

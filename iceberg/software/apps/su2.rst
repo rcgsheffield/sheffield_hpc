@@ -24,4 +24,4 @@ Installation notes
 ------------------
 
 Su2 was compiled using the
-`install_su2.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/4.4.7/su2/install_su2.sh>`_ script. SU2 also has it's own version of CGNS which was compiled with the script `install_cgns.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/4.4.7/su2/install_cgns.sh>`_. The module file is `4.1.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/4.4.7/su2/4.1.0>`_.
+`install_su2.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/4.4.7/su2/install_su2.sh>`_ script. SU2 also has it's own version of CGNS which was compiled with the script `install_cgns.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/4.4.7/su2/install_cgns.sh>`_. The module file is `4.1.0 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/4.4.7/su2/4.1.0>`_.

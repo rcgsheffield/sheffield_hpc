@@ -40,7 +40,7 @@ Links to documentation can be found at http://imagej.nih.gov/ij/download.html
 
 Installation notes
 ------------------
-Install version 1.49 using the `install_imagej.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/imagej/1.50g/install_imagej.sh>`_ script
+Install version 1.49 using the `install_imagej.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/imagej/1.50g/install_imagej.sh>`_ script
 
 Run the GUI and update to the latest version by clicking on `Help > Update ImageJ`
 
@@ -51,7 +51,7 @@ Modify the `imagej` script so that it reads ::
     java -Xmx512m -jar -Dplugins.dir=/usr/local/packages6/apps/binapps/imagej/1.50g/plugins/ /usr/local/packages6/apps/binapps/imagej/1.50g/ij.jar
 
 ImageJ's 3D plugin requires Java 3D which needs to be included in the JRE used by imagej.
-I attempted a module-controlled version of Java3D but the plugin refused to recognise it. See https://github.com/rcgsheffield/iceberg_software/issues/279 for details.
+I attempted a module-controlled version of Java3D but the plugin refused to recognise it. See https://github.com/rcgsheffield/sheffield_hpc/issues/279 for details.
 
 The plug-in will install Java3D within the JRE for you if you launch it and click **Plugins>3D>3D Viewer**
 

@@ -140,13 +140,8 @@ Update: **14th March 2016**
 
 The development version was installed using gcc 5.2, R 3.2.1 and Anaconda Python 2.3.
 
-<<<<<<< HEAD
-* `install_bcbio_devel.sge <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/install_scripts/apps/gcc/5.2/bcbio/install_bcbio_devel.sge>`_ This is a SGE submit script. The long running time of the installer made it better-suited to being run as a batch job.
-* `bcbio-devel modulefile <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/bcbio/devel>`_ located on the system at ``/usr/local/modulefiles/apps/gcc/5.2/bcbio/devel``
-=======
 * `install_bcbio_devel.sge <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/5.2/bcbio/install_bcbio_devel.sge>`_ This is a SGE submit script. The long running time of the installer made it better-suited to being run as a batch job.
 * `bcbio-devel modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/bcbio/devel>`_ located on the system at ``/usr/local/modulefiles/apps/gcc/5.2/bcbio/devel``
->>>>>>> cc7322ae58c6a87358562c7894287d20d8fbefa3
 
 The first install attempt failed with the error ::
 
@@ -180,11 +175,7 @@ The GATK .jar file was obtained from https://www.broadinstitute.org/gatk/downloa
 Module files
 ------------
 
-<<<<<<< HEAD
-* `0.9.6a <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/bcbio/0.9.6a>`_
-=======
 * `0.9.6a <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/bcbio/0.9.6a>`_
->>>>>>> cc7322ae58c6a87358562c7894287d20d8fbefa3
 
 Testing
 -------

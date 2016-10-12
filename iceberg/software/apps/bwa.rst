@@ -97,8 +97,4 @@ The default version is controlled by the `.version` file at `/usr/local/modulefi
 *Version 0.7.5a*
 
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/bwa/0.7.5a`
-<<<<<<< HEAD
-* On github: `0.7.5a <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/bwa/0.7.5a>`_.
-=======
 * On github: `0.7.5a <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/bwa/0.7.5a>`_.
->>>>>>> cc7322ae58c6a87358562c7894287d20d8fbefa3

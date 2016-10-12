@@ -276,8 +276,4 @@ For information, here is the relevant part of the Configure log that describes h
 Module File
 -----------
 
-<<<<<<< HEAD
-The module file is `octave_4.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/iceberg/software/modulefiles/apps/gcc/5.2/octave/4.0>`_
-=======
 The module file is `octave_4.0 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/octave/4.0>`_
->>>>>>> cc7322ae58c6a87358562c7894287d20d8fbefa3

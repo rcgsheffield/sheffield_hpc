@@ -17,7 +17,7 @@ You can load a specific version using ::
    module load mpi/openmpi/2.0.1/gcc-6.2
    module load mpi/openmpi/1.10.4/gcc-6.2
 
-See `here <https://mail-archive.com/announce@lists.open-mpi.org/msg00085.html>`_ for a brief guide to the new features in OpenMPI 2.x and `here <https://raw.githubusercontent.com/open-mpi/ompi/v2.x/NEWS>`_ for a detailed view of the changes between OpenMPI versions.
+See `here <https://mail-archive.com/announce@lists.open-mpi.org/msg00085.html>`__ for a brief guide to the new features in OpenMPI 2.x and `here <https://raw.githubusercontent.com/open-mpi/ompi/v2.x/NEWS>`__ for a detailed view of the changes between OpenMPI versions.
 
 Examples
 --------

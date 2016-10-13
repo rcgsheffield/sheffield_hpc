@@ -27,9 +27,9 @@ This module makes the following programs available (by adding their containing d
 AdmixTools also comes with several examples.  The example inputs and outputs can be found in ``$ADMIXTOOLSDIR/examples``, whilst the example data the inputs reference are contained in ``$ADMIXTOOLSDIR/data``  
 
 Installation Notes
------------------
+------------------
 
-**Version 4.1**-
+**Version 4.1**
 
 `This script <https://github.com/mikecroucher/HPC_Installers/blob/master/apps/AdmixTools/4.1/sheffield/iceberg/install_admixtools_4.1.sh>`_  ::
 

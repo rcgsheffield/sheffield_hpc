@@ -4,7 +4,7 @@ ctffind
 .. sidebar:: ctffind
 
    :Versions:  3.140609
-   :URL: http://ctffind.readthedocs.org/en/latest/
+   :URL: http://grigoriefflab.janelia.org/ctf
 
 CTFFIND3 and CTFTILT are two programs for finding CTFs of electron micrographs.  The program CTFFIND3 is an updated version of the program CTFFIND2, which was developed in 1998 by Nikolaus Grigorieff at the MRC Laboratory of Molecular Biology in Cambridge, UK with financial support from the MRC. This software is licensed under the terms of the Janelia Research Campus Software Copyright 1.1.
 
@@ -23,7 +23,7 @@ Installation notes
 These are primarily for system administrators.
 
 * ctffind was installed using the gcc 4.4.7 compiler
-* `install_ctffind.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/4.4.7/ctffind/3.140609/install_ctffind.sh>`_
+* `install_ctffind.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/4.4.7/ctffind/3.140609/install_ctffind.sh>`_
 
 
 Modulefile

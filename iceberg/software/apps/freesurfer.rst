@@ -42,7 +42,7 @@ The following were tried ::
 
 Installation notes
 ------------------
-These are primarily for administrators of the system. The github issue for the original install request is at https://github.com/rcgsheffield/iceberg_software/issues/164
+These are primarily for administrators of the system. The github issue for the original install request is at https://github.com/rcgsheffield/sheffield_hpc/issues/164
 
 Freesurfer was installed as follows ::
 

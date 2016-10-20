@@ -40,4 +40,4 @@ No test suite was found.
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/4.4.7/htop/2.0`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/4.4.7/htop/2.0>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/4.4.7/htop/2.0>`_.

@@ -20,15 +20,29 @@ However you may see warnings when trying to install Perl software that this vers
 
     module load apps/gcc/4.4.7/perl/5.24.0
 
-You can then confirm that you are using this newer version with ::
+Several Perl modules have been upgraded/installed for this instance of Perl:
+
+* CPAN, the original Perl package management tool, was upgraded to 2.14
+* BioPerl 1.007000 (aka v1.7.0) was installed.  `BioPerl <http://bioperl.org/>`_ is a collection of Perl modules that facilitate the development of Perl scripts for bioinformatics applications. It has played `an integral role in the Human Genome Project <https://www.foo.be/docs/tpj/issues/vol1_2/tpj0102-0001.html>`_.  BioPerl has pre-requisites of ``inc::latest`` (0.500) and ``Module::Build`` (0.4220).
+* ``Term::ReadKey`` (2.37) and ``Term::Readline::Gnu`` (1.34) were installed; these make interactive use of CPAN more pleasant.
+* ``local::lib`` was installed, which allows users to install additional Perl modules in their home directories.  MORE INFO NEEDED (see `Installing Perl modules`_).
+* ``App::cpanminus`` (1.7042) was installed, which provides the ``cpanm`` program.  This is considered by some to be a superior package management tool over ``cpan``.
+
+You can confirm that you are using this newer version of Perl (and have access to BioPerl) using ::
 
     $ perl --version
 
     Summary of my perl5 (revision 5 version 24 subversion 0) configuration:
+
+    $ perl -MBio::Root::Version -le 'print $Bio::Root::Version::VERSION'
+
+    1.007000
     ...
 
+
 Installing Perl modules
------------------------
+----------------------- 
+Perl 5.24.0 (see `Usage`_).
 
 TODO
 
@@ -47,22 +61,11 @@ PROVIDE EXAMPLE
 Installation instructions
 -------------------------
 
-Install perlbrew ::
+**Version 5.24.0**
 
-    export PERLBREW_ROOT=/usr/local/packages6/apps/gcc/4.4.7/perlbrew/0.76/
-    mkdir -p ${PERLBREW_ROOT}
-    wget https://install.perlbrew.pl -O install.perlbrew.pl
-    chmod +x install.perlbrew.pl
-    bash ./install.perlbrew.pl
+`This script <https://github.com/mikecroucher/HPC_Installers/blob/master/apps/perl/5.24.0/sheffield/iceberg/install_perl_5.24.0.sh>`__:
 
-Install and activate a newer particular version of Perl ::
+#. Downloads, unpacks, builds (using the system GCC (4.4.7)), tests then installs Perl (in ``/usr/local/packages6/apps/gcc/4.4.7/perl/5.24.0/``)
+#. Installs `this modulefile <https://github.com/mikecroucher/HPC_Installers/blob/master/apps/perl/5.24.0/sheffield/iceberg/perl_5.24.0_modulefile>`_ as ``/usr/local/modulefiles/apps/gcc/4.4.7/perl/5.24.0``
 
-    source ${PERLBREW_ROOT}/etc/bashrc
-    perlbrew install 5.24.0
-
-
-Create modulefile ``/usr/local/modulefiles/apps/gcc/4.4.7/perlbrew/0.76`` using ::
-
-    perlbrew use 5.x.x
-    perlbrew install-cpanm
-    env | grep -i perl
+`PerlBrew <https://perlbrew.pl/>`_ *could* have been used to install and manage multiple versions of Perl but it offers relatively few advantages over Environment Modules and the latter are already used system-wide for package management.

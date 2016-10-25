@@ -54,17 +54,13 @@ Modulefile is on the system at ``/usr/local/modulefiles/libs/gcc/5.2/fftw/3.3.4`
 
   ## Module file logging
   source /usr/local/etc/module_logging.tcl
-  ##
-
-  module load compilers/gcc/5.2
 
   proc ModulesHelp { } {
           puts stderr "Makes the FFTW 3.3.4 library available"
   }
+  module-whatis   "Makes the FFTW 3.3.4 library available"
 
   set FFTW_DIR /usr/local/packages6/libs/gcc/5.2/fftw/3.3.4
-
-  module-whatis   "Makes the FFTW 3.3.4 library available"
 
   prepend-path LD_LIBRARY_PATH $FFTW_DIR/lib
   prepend-path CPLUS_INCLUDE_PATH $FFTW_DIR/include

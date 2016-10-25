@@ -62,7 +62,7 @@ Modulefile is on the system at ``/usr/local/modulefiles/libs/gcc/5.2/fftw/3.3.4`
 
   set FFTW_DIR /usr/local/packages6/libs/gcc/5.2/fftw/3.3.4
 
-  prepend-path CPATH $FFTW_DIR/include
+  prepend-path CPLUS_INCLUDE_PATH $FFTW_DIR/include
   prepend-path LD_LIBRARY_PATH $FFTW_DIR/lib
   prepend-path LIBRARY_PATH $FFTW_DIR/lib
   prepend-path MANPATH $FFTW_DIR/share/man

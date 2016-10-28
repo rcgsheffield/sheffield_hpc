@@ -3,36 +3,77 @@ Samtools
 
 .. sidebar:: Samtools
 
-   :Versions:  1.2
+   :Versions:  1.3.1 1.2
    :URL: http://samtools.sourceforge.net/
 
-SAM (Sequence Alignment/Map) format is a generic format for storing large nucleotide sequence alignments
+SAM (Sequence Alignment/Map) format is a generic format for storing large nucleotide sequence alignments.
 
 Interactive Usage
 -----------------
 After connecting to Iceberg (see :ref:`ssh`),  start an interactive session with the :code:`qsh` command.
 
-The latest version of Samtools (currently 1.2) is made available with the command
+Next, load a specific version of Samtools with one of the following::
 
-.. code-block:: none
+    module load apps/gcc/6.2/samtools/1.3.1
+    module load apps/gcc/5.2/samtools/1.2
 
-        module load apps/gcc/5.2/samtools
-
-Alternatively, you can load a specific version with ::
-
-        module load apps/gcc/5.2/samtools/1.2
-
-This command makes the samtools binary directory available to your session.
+This command makes the Samtools binary directory available to your session.
 
 Documentation
 -------------
-Once you have made samtools available to the system using the `module` command above, you can read the man pages by typing ::
+Once you have made Samtools available to the system using the ``module`` command above, you can read the man pages by typing ::
 
     man samtools
 
 Installation notes
 ------------------
-Samtools was installed using gcc 5.2 ::
+
+This section is primarily for system administrators.
+
+**Version 1.3.1**
+
+`This install script <https://github.com/rcgsheffield/sheffield_hpc/blob/master/iceberg/software/install_scripts/apps/samtools/install_samtools_1.3.1.sh>`_:
+
+#. Built Samtools plus the bundled **HTSlib**, **HTSlib utilities** such as ``bgzip`` plus various useful plugins.  Compiled using `GCC <gcc_iceberg>`_ 6.2.
+#. Ran all tests using ``make tests``; a summary of the results is shown below; for full results see ``/usr/local/packages6/apps/gcc/6.2/samtools/1.3.1/tests.log`` ::
+
+        Number of tests:
+            total            .. 423
+            passed           .. 403
+            failed           .. 0
+            expected failure .. 20
+            unexpected pass  .. 0
+
+        test/merge/test_bam_translate test/merge/test_bam_translate.tmp
+        test/merge/test_rtrans_build
+        test/merge/test_trans_tbl_init
+        cd test/mpileup && ./regression.sh mpileup.reg
+
+        === Testing mpileup.reg regressions ===
+
+
+        Expected   passes:   124
+        Unexpected passes:   0
+        Expected   failures: 0
+        Unexpected failures: 0
+        => PASS
+        cd test/mpileup && ./regression.sh depth.reg
+
+        === Testing depth.reg regressions ===
+
+        Expected   passes:   14
+        Unexpected passes:   0
+        Expected   failures: 0
+        Unexpected failures: 0
+        => PASS
+
+#. Installed Samtools to ``/usr/local/packages6/apps/gcc/6.2/samtools/1.3.1``
+
+Next, `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/iceberg/software/modulefiles/apps/gcc/6.2/samtools/1.3.1>`__ was installed as ``/usr/local/modulefiles/apps/gcc/6.2/samtools/1.3.1``
+
+**Version 1.2**
+
+Installed using `gcc 5.2 <gcc_iceberg>`_ ::
 
     module load compilers/gcc/5.2
 
@@ -48,8 +89,6 @@ Samtools was installed using gcc 5.2 ::
     mv ./tabix /usr/local/packages6/apps/gcc/5.2/samtools/1.2/bin/
     mv ./bgzip /usr/local/packages6/apps/gcc/5.2/samtools/1.2/bin/
 
-Testing
--------
 The test suite was run with ::
 
     make test 2>&1 | tee make_tests.log
@@ -81,7 +120,4 @@ The summary of the test output was ::
 
 The full log is on the system at `/usr/local/packages6/apps/gcc/5.2/samtools/1.2/make_tests.log`
 
-Modulefile
-----------
-* The module file is on the system at `/usr/local/modulefiles/apps/gcc/5.2/samtools/1.2`
-* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/samtools/1.2>`_.
+`This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/samtools/1.2>`__ was installed as ``/usr/local/modulefiles/apps/gcc/5.2/samtools/1.2``

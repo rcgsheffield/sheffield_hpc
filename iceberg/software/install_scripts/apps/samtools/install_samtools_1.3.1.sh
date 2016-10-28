@@ -9,9 +9,9 @@ compiler=gcc
 compiler_vers=6.2
 
 build_dir="/scratch/${USER}/samtools/${samtools_vers}/"
-prefix="/usr/local/packages6/libs/${compiler}/${compiler_vers}/samtools/${samtools_vers}/"
+prefix="/usr/local/packages6/apps/${compiler}/${compiler_vers}/samtools/${samtools_vers}/"
 
-modulefile="/usr/local/modulefiles/libs/${compiler}/${compiler_vers}/samtools/${samtools_vers}"
+modulefile="/usr/local/modulefiles/apps/${compiler}/${compiler_vers}/samtools/${samtools_vers}"
 
 # Signal handling for failure
 handle_error () {

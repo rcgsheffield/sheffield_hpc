@@ -29,6 +29,15 @@ To check which version of CUDA you are using ::
     Built on Sun_Sep__4_22:14:01_CDT_2016
     Cuda compilation tools, release 8.0, V8.0.44
 
+**Important** To compile CUDA programs you also need a compatible version of the `GCC compiler suite <gcc_iceberg>`_.  As of version 8.0.44, CUDA is compatible with GCC versions:
+
+* greater than or equal to 4.7.0 (to allow for the use of c++11 features) and 
+* less than 5.0.0
+
+It is therefore recommended that you load the most recent 4.x version of GCC when building CUDA programs on Iceberg: ::
+
+    module load compilers/gcc/4.9.2
+
 Compiling the sample programs
 -----------------------------
 You do not need to be using a GPU-enabled node to compile the sample programs but you do need a GPU to run them.
@@ -75,6 +84,7 @@ These are primarily for system administrators
 
 #. The NVIDIA device driver was updated from v352.93 to v367.44, which also updated the OpenGL libraries.  This was all done by the ``/etc/init.d/uos-nvidia`` script at boot time on all GPU-equipped nodes.
 #. The CUDA toolkit binaries and samples were installed using ::
+
     mkdir -m 2775 -p /usr/local/packages6/libs/binlibs/CUDA/8.0.44
     chown ${USER}:app-admins /usr/local/packages6/libs/binlibs/CUDA/8.0.44
     cd /usr/local/media/cuda/
@@ -82,19 +92,21 @@ These are primarily for system administrators
     ./cuda_8.0.44_linux.run --toolkit --toolkitpath=/usr/local/packages6/libs/binlibs/CUDA/8.0.44/cuda \
                             --samples --samplespath=/usr/local/packages6/libs/binlibs/CUDA/8.0.44/samples \
                             --no-opengl-libs -silent
-#. `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/8.0.44>`_ was installed as ``/usr/local/modulefiles/libs/cuda/8.0.44``
+
+#. `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/8.0.44>`__ was installed as ``/usr/local/modulefiles/libs/cuda/8.0.44``
 
 **CUDA 7.5.18**
 
 #. The device drivers were updated separately by one of the sysadmins.
 #. A binary install was performed using a ``.run`` file ::
 
-  mkdir -p /usr/local/packages6/libs/binlibs/CUDA/7.5.18/
-  chmod +x ./cuda_7.5.18_linux.run
-  ./cuda_7.5.18_linux.run --toolkit --toolkitpath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/cuda \
-                          --samples --samplespath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/samples \
-                          --no-opengl-libs  -silent
-#. `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/7.5.18>`_ was installed as ``/usr/local/modulefiles/libs/cuda/7.5.18``
+    mkdir -p /usr/local/packages6/libs/binlibs/CUDA/7.5.18/
+    chmod +x ./cuda_7.5.18_linux.run
+    ./cuda_7.5.18_linux.run --toolkit --toolkitpath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/cuda \
+                            --samples --samplespath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/samples \
+                            --no-opengl-libs  -silent
+
+#. `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/7.5.18>`__ was installed as ``/usr/local/modulefiles/libs/cuda/7.5.18``
 
 **Previous versions**
 

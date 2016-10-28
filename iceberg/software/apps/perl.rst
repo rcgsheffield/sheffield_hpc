@@ -12,13 +12,13 @@ Usage
 -----
 The default version of Perl on the system is 5.10.1; no ``module`` command is required to use it ::
 
-    $ perl --version
+        $ perl --version
 
-    This is perl, v5.10.1 (*) built for x86_64-linux-thread-multi
+        This is perl, v5.10.1 (*) built for x86_64-linux-thread-multi
 
 However you may see warnings when trying to install Perl software that this version (or the ``cran`` package manage tool that comes with it) is too old; in this case you can activate a more recent version using ::
 
-    module load apps/gcc/4.4.7/perl/5.24.0
+        module load apps/gcc/4.4.7/perl/5.24.0
 
 Several Perl modules have been upgraded/installed for this instance of Perl:
 
@@ -30,33 +30,32 @@ Several Perl modules have been upgraded/installed for this instance of Perl:
 
 You can confirm that you are using this newer version of Perl (and have access to BioPerl) using ::
 
-    $ perl --version
+        $ perl --version
 
-    Summary of my perl5 (revision 5 version 24 subversion 0) configuration:
+        Summary of my perl5 (revision 5 version 24 subversion 0) configuration:
 
-    $ perl -MBio::Root::Version -le 'print $Bio::Root::Version::VERSION'
+        $ perl -MBio::Root::Version -le 'print $Bio::Root::Version::VERSION'
 
-    1.007000
-    ...
+        1.007000
+        ...
+
+**Performance**:  5.24.0 `can be significantly faster <https://www.nu42.com/2015/12/go-faster-stripes-for-perl-programs.html>`_ than earlier versions of Perl 5 for arithemetic operations.
 
 
 Installing Perl modules
 ----------------------- 
-Perl 5.24.0 (see `Usage`_).
 
-TODO
+If using a version of Perl activated using ``module load`` then you can subsequently easily install Perl modules in your home directory (within what's called a Perl *local::lib*).  Run the following ::
 
-BEST TO USE PERLBREW
+        eval $(perlvers="$(perl -e 'print $^V')"; perl -I$HOME/.perl$perlvers/lib/perl5 -Mlocal::lib=$HOME/.perl$perlvers)
 
-CPANM TO INSTALL IN HOME DIR
+The next time you try to use ``cpanm`` to install a package it should install it into the (hidden) directory ``.perl5.x.y`` within your home directory.  For example, the following installs the ``Bio::Tradis`` Perl module into ``~/.perl5.24.0/`` ::
 
-    module load apps/gcc/4.4.7/perl/5.24.0
-    cpanm -L ~/perl-5.24.0 --self-contained Some::Module
-    export PERL5LIB="${HOME}/perl-5.24.0:${PERL5LIB}"
+        module load apps/gcc/4.4.7/perl/5.24.0
+        eval $(perlvers="$(perl -e 'print $^V')"; perl -I$HOME/.perl$perlvers/lib/perl5 -Mlocal::lib=$HOME/.perl$perlvers)
+        cpanm Bio::Tradis
 
-INSTALLING WITH CPANM OFTEN TAKES SOME TIME
-
-PROVIDE EXAMPLE
+If you always want to have your Perl *local::lib* available then you may want to add the ``eval ...`` line above to your ``~/.bashrc`` file.
 
 Installation instructions
 -------------------------

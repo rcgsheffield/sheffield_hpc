@@ -32,56 +32,43 @@ This section is primarily for system administrators.
 
 **Version 1.3.1**
 
-Building for installation using the HTSlib bundled within this Samtools release
-tarball, also building the various HTSlib utilities such as ``bgzip`` and
-enabling useful plugins, is done as follows ::
+`This install script <https://github.com/rcgsheffield/sheffield_hpc/blob/master/iceberg/software/install_scripts/apps/samtools/install_samtools_1.3.1.sh>`_:
 
-    SAMTOOLS_ROOT=/usr/local/packages6/apps/gcc/6.2/samtools/1.3.1/
-    mkdir -m 2775 -p $SAMTOOLS_ROOT
-    chown ${USER}:app-admins $SAMTOOLS_ROOT
+#. Built Samtools plus the bundled **HTSlib**, **HTSlib utilities** such as ``bgzip`` plus various useful plugins.  Compiled using `GCC <gcc_iceberg>`_ 6.2.
+#. Ran all tests using ``make tests``; a summary of the results is shown below; for full results see ``/usr/local/packages6/apps/gcc/6.2/samtools/1.3.1/tests.log`` ::
 
-    wget https://github.com/samtools/samtools/releases/download/1.3.1/samtools-1.3.1.tar.bz2
-    tar -jxf samtools-1.3.1.tar.bz2
-    cd samtools-1.3.1
-    module load compilers/gcc/6.2
-    ./configure --enable-plugins --enable-libcurl --prefix=$SAMTOOLS_ROOT
-    make all all-htslib
-    make tests 2>&1 | tee $SAMTOOLS_ROOT/tests.log
-    make install install-htslib
+        Number of tests:
+            total            .. 423
+            passed           .. 403
+            failed           .. 0
+            expected failure .. 20
+            unexpected pass  .. 0
 
-modulefile ::
+        test/merge/test_bam_translate test/merge/test_bam_translate.tmp
+        test/merge/test_rtrans_build
+        test/merge/test_trans_tbl_init
+        cd test/mpileup && ./regression.sh mpileup.reg
 
-
-Number of tests:
-    total            .. 423
-    passed           .. 403
-    failed           .. 0
-    expected failure .. 20
-    unexpected pass  .. 0
-
-test/merge/test_bam_translate test/merge/test_bam_translate.tmp
-test/merge/test_rtrans_build
-test/merge/test_trans_tbl_init
-cd test/mpileup && ./regression.sh mpileup.reg
-
-=== Testing mpileup.reg regressions ===
+        === Testing mpileup.reg regressions ===
 
 
-Expected   passes:   124
-Unexpected passes:   0
-Expected   failures: 0
-Unexpected failures: 0
-=> PASS
-cd test/mpileup && ./regression.sh depth.reg
+        Expected   passes:   124
+        Unexpected passes:   0
+        Expected   failures: 0
+        Unexpected failures: 0
+        => PASS
+        cd test/mpileup && ./regression.sh depth.reg
 
-=== Testing depth.reg regressions ===
+        === Testing depth.reg regressions ===
 
-Expected   passes:   14
-Unexpected passes:   0
-Expected   failures: 0
-Unexpected failures: 0
-=> PASS
+        Expected   passes:   14
+        Unexpected passes:   0
+        Expected   failures: 0
+        Unexpected failures: 0
+        => PASS
 
+#. Installed Samtools to ``/usr/local/packages6/apps/gcc/6.2/samtools/1.3.1``
+#. Installed `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/iceberg/software/modulefiles/apps/gcc/6.2/samtools/1.3.1>`__ as ``/usr/local/modulefiles/apps/gcc/6.2/samtools/1.3.1``
 
 **Version 1.2**
 
@@ -132,4 +119,4 @@ The summary of the test output was ::
 
 The full log is on the system at `/usr/local/packages6/apps/gcc/5.2/samtools/1.2/make_tests.log`
 
-`This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/samtools/1.2>`_ was installed as ``/usr/local/modulefiles/apps/gcc/5.2/samtools/1.2``
+`This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/samtools/1.2>`__ was installed as ``/usr/local/modulefiles/apps/gcc/5.2/samtools/1.2``

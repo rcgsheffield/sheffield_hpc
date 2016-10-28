@@ -2,7 +2,8 @@
 
 CUDA
 ====
-CUDA, which stands for Compute Unified Device Architecture, is a parallel computing platform and application programming interface (API) model created by NVIDIA. It allows software developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing – an approach known as GPGPU
+CUDA, which stands for Compute Unified Device Architecture, is a parallel computing platform and application programming interface (API) model created by NVIDIA. 
+It allows software developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing - an approach known as *General Purpose GPU* (GPGPU).
 
 Usage
 -----
@@ -14,6 +15,7 @@ The latest version CUDA is loaded with the command ::
 
 Alternatively, you can load a specific version with one of the following ::
 
+    module load libs/cuda/8.0.44
     module load libs/cuda/7.5.18
     module load libs/cuda/6.5.14
     module load libs/cuda/4.0.17
@@ -25,19 +27,19 @@ You do not need to be using a GPU-enabled node to compile the sample programs bu
 
 In a `qrsh` session ::
 
- #Load modules
- module load libs/cuda/7.5.18
- module load compilers/gcc/4.9.2
-
- #Copy CUDA samples to a local directory
- #It will create a directory called NVIDIA_CUDA-7.5_Samples/
- mkdir cuda_samples
- cd cuda_samples
- cp -r $CUDA_SDK .
-
- #Compile (This will take a while)
- cd NVIDIA_CUDA-7.5_Samples/
- make
+    # Load modules
+    module load libs/cuda/7.5.18
+    module load compilers/gcc/4.9.2
+    
+    # Copy CUDA samples to a local directory
+    # It will create a directory called NVIDIA_CUDA-7.5_Samples/
+    mkdir cuda_samples
+    cd cuda_samples
+    cp -r $CUDA_SDK .
+    
+    # Compile (This will take a while)
+    cd NVIDIA_CUDA-7.5_Samples/
+    make
 
 A basic test is to run one of the resulting binaries, **deviceQuery**.
 
@@ -50,33 +52,42 @@ Determining the NVIDIA Driver version
 -------------------------------------
 Run the command ::
 
-  cat /proc/driver/nvidia/version
+    cat /proc/driver/nvidia/version
 
 Example output is ::
 
-  NVRM version: NVIDIA UNIX x86_64 Kernel Module  340.32  Tue Aug  5 20:58:26 PDT 2014
-  GCC version:  gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC
+    NVRM version: NVIDIA UNIX x86_64 Kernel Module  367.44  Wed Aug 17 22:24:07 PDT 2016
+    GCC version:  gcc version 4.4.7 20120313 (Red Hat 4.4.7-17) (GCC) 
 
 Installation notes
 ------------------
 These are primarily for system administrators
 
+**CUDA 8.0.44**
+
+#. The NVIDIA device driver was updated from v352.93 to v367.44, which also updated the OpenGL libraries.  This was all done by the ``/etc/init.d/uos-nvidia`` script at boot time on all GPU-equipped nodes.
+#. The CUDA toolkit binaries and samples were installed using ::
+    mkdir -m 2775 -p /usr/local/packages6/libs/binlibs/CUDA/8.0.44
+    chown ${USER}:app-admins /usr/local/packages6/libs/binlibs/CUDA/8.0.44
+    cd /usr/local/media/cuda/
+    chmod +x cuda_8.0.44_linux-run
+    ./cuda_8.0.44_linux.run --toolkit --toolkitpath=/usr/local/packages6/libs/binlibs/CUDA/8.0.44/cuda \
+                            --samples --samplespath=/usr/local/packages6/libs/binlibs/CUDA/8.0.44/samples \
+                            --no-opengl-libs -silent
+#. `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/8.0.44>`_ was installed as ``/usr/local/modulefiles/libs/cuda/8.0.44``
+
 **CUDA 7.5.18**
 
-The device drivers were updated separately by one of the sysadmins.
-
-A binary install was performed using a .run file ::
+#. The device drivers were updated separately by one of the sysadmins.
+#. A binary install was performed using a ``.run`` file ::
 
   mkdir -p /usr/local/packages6/libs/binlibs/CUDA/7.5.18/
-
   chmod +x ./cuda_7.5.18_linux.run
-  ./cuda_7.5.18_linux.run --toolkit --toolkitpath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/cuda --samples --samplespath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/samples --no-opengl-libs  -silent
+  ./cuda_7.5.18_linux.run --toolkit --toolkitpath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/cuda \
+                          --samples --samplespath=/usr/local/packages6/libs/binlibs/CUDA/7.5.18/samples \
+                          --no-opengl-libs  -silent
+#. `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/7.5.18>`_ was installed as ``/usr/local/modulefiles/libs/cuda/7.5.18``
 
-**Previous version**
+**Previous versions**
 
-No install notes are available
-
-Module Files
-------------
-* The module file is on the system at ``/usr/local/modulefiles/libs/cuda/7.5.18``
-* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/binlibs/cuda/7.5.18>`_.
+No install notes are available.

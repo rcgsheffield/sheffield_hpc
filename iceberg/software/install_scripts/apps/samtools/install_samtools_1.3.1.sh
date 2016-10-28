@@ -8,10 +8,10 @@ samtools_tarball_url="https://github.com/samtools/samtools/releases/download/${s
 compiler=gcc
 compiler_vers=6.2
 
+build_dir="/scratch/${USER}/samtools/${samtools_vers}/"
 prefix="/usr/local/packages6/libs/${compiler}/${compiler_vers}/samtools/${samtools_vers}/"
 
-modulefile_src="samtools_1.3.1_modulefile"
-modulefile_dest="/usr/local/modulefiles/libs/${compiler}/${compiler_vers}/samtools/${samtools_vers}"
+modulefile="/usr/local/modulefiles/libs/${compiler}/${compiler_vers}/samtools/${samtools_vers}"
 
 # Signal handling for failure
 handle_error () {
@@ -28,6 +28,10 @@ handle_error () {
 }
 trap handle_error ERR
 
+# Create and switch to directory for compiling in
+[[ -d $build_dir ]] || mkdir -p $build_dir
+cd $build_dir
+
 # Download and unpack tarball
 [[ -f $samtools_tarball ]] || wget $samtools_tarball_url
 if ! [[ -f .samtools_tarball_unpacked ]]; then
@@ -36,7 +40,7 @@ if ! [[ -f .samtools_tarball_unpacked ]]; then
 fi
 
 # Create install and modulefile dirs
-for d in $prefix $(dirname $modulefile_dest); do
+for d in $prefix $(dirname $modulefile); do
     mkdir -m 2775 -p $d
 done
 
@@ -48,15 +52,14 @@ module load compilers/${compiler}/${compiler_vers}
 pushd samtools-${samtools_vers}
 ./configure --enable-plugins --enable-libcurl --prefix=$prefix
 make all all-htslib
-make tests 2>&1 | tee $prefix/tests.log
+make test 2>&1 | tee $prefix/tests.log
 make install install-htslib
 popd
 
-# Install modulefile
-cp -b modulefile_src modulefile_dest
-
 # Set permissions and ownership
-for d in $prefix $(dirname $modulefile_dest); do
+for d in $prefix $(dirname $modulefile); do
     chmod -R g+w $d
     chown -R ${USER}:app-admins $d
 done
+
+echo "Next: install modulefile for Samtools as $modulefile"

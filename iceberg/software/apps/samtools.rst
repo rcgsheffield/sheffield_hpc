@@ -68,7 +68,8 @@ This section is primarily for system administrators.
         => PASS
 
 #. Installed Samtools to ``/usr/local/packages6/apps/gcc/6.2/samtools/1.3.1``
-#. Installed `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/iceberg/software/modulefiles/apps/gcc/6.2/samtools/1.3.1>`__ as ``/usr/local/modulefiles/apps/gcc/6.2/samtools/1.3.1``
+
+Next, `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/iceberg/software/modulefiles/apps/gcc/6.2/samtools/1.3.1>`__ was installed as ``/usr/local/modulefiles/apps/gcc/6.2/samtools/1.3.1``
 
 **Version 1.2**
 

@@ -21,6 +21,14 @@ Alternatively, you can load a specific version with one of the following ::
     module load libs/cuda/4.0.17
     module load libs/cuda/3.2.16
 
+To check which version of CUDA you are using ::
+
+    $ nvcc --version
+    nvcc: NVIDIA (R) Cuda compiler driver
+    Copyright (c) 2005-2016 NVIDIA Corporation
+    Built on Sun_Sep__4_22:14:01_CDT_2016
+    Cuda compilation tools, release 8.0, V8.0.44
+
 Compiling the sample programs
 -----------------------------
 You do not need to be using a GPU-enabled node to compile the sample programs but you do need a GPU to run them.
@@ -37,7 +45,7 @@ In a `qrsh` session ::
     cd cuda_samples
     cp -r $CUDA_SDK .
     
-    # Compile (This will take a while)
+    # Compile (this will take a while)
     cd NVIDIA_CUDA-7.5_Samples/
     make
 

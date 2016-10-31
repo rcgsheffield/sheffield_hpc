@@ -75,29 +75,8 @@ Point to this license file using the environment variable ``$NAG_KUSARI_FILE`` (
 
 Module File
 -----------
-Module file location is ``/usr/local/modulefiles/dev/NAG/6.0`` ::
 
-        #%Module1.0#####################################################################
-        ##
-        ## NAG Fortran Compiler module file
-        ##
-
-        ## Module file logging
-        source /usr/local/etc/module_logging.tcl
-
-        proc ModulesHelp { } {
-                global nagvers
-                puts stderr "Makes the NAG Fortran Compiler vnagvers available"
-        }
-
-        set nagvers 6.0
-        set nagroot /usr/local/packages/dev/NAG/$nagvers
-
-        module-whatis   "Makes the NAG Fortran Compiler v$nagvers available"
-
-        prepend-path PATH $nagroot/bin
-        prepend-path MANPATH $nagroot/man
-        setenv NAG_KUSARI_FILE /usr/local/packages/dev/NAG/license.lic
+Install `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/NAG/6.0>`__ as ``/usr/local/modulefiles/dev/NAG/6.0``
 
 Testing
 -------

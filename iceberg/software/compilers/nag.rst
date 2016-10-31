@@ -61,38 +61,16 @@ Accept the license and answer the questions as follows ::
 
 Licensing
 ---------
-Add the license key to /usr/local/packages5/nag/license.lic
+Add the license key to ``/usr/local/packages5/nag/license.lic``
 
 The license key needs to be updated annually before 31st July.
 
-Point to this license file using the environment variable $NAG_KUSARI_FILE
-
-This is done in the environment module
+Point to this license file using the environment variable ``$NAG_KUSARI_FILE`` (this is done in the environment module).
 
 Module File
 -----------
-Module file location is ``/usr/local/modulefiles/compilers/NAG/6.0`` ::
 
-  #%Module1.0#####################################################################
-  ##
-  ## NAG Fortran Compiler 6.0 module file
-  ##
-
-  ## Module file logging
-  source /usr/local/etc/module_logging.tcl
-  ##
-
-  proc ModulesHelp { } {
-          puts stderr "Makes the NAG Fortran Compiler v6.0 available"
-  }
-
-  module-whatis   "Makes the NAG Fortran Compiler v6.0 available"
-
-  set NAGFOR_DIR /usr/local/packages6/compilers/NAG/6.0
-
-  prepend-path PATH $NAGFOR_DIR
-  prepend-path MANPATH $NAGFOR_DIR/man
-  setenv NAG_KUSARI_FILE /usr/local/packages5/nag/license.lic
+Install `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/iceberg/software/modulefiles/compilers/NAG/6.0>`__ as ``/usr/local/modulefiles/compilers/NAG/6.0``
 
 Testing
 -------

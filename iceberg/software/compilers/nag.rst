@@ -93,3 +93,12 @@ Module file location is ``/usr/local/modulefiles/compilers/NAG/6.0`` ::
   prepend-path PATH $NAGFOR_DIR
   prepend-path MANPATH $NAGFOR_DIR/man
   setenv NAG_KUSARI_FILE /usr/local/packages5/nag/license.lic
+
+Testing
+-------
+
+Test the installation by compiling and building a sample Fortran 90 program ::
+
+        module load compilers/NAG/6.0
+        nagfor -o /tmp/f90_util /usr/local/packages6/compilers/NAG/6.0/lib/NAG_Fortran/f90_util.f90
+        /tmp/f90_util

@@ -1,0 +1,32 @@
+#%Module1.0#####################################################################
+#
+# Intel Integrated Performance Primitives (IPP) 2017.0 module file
+# 
+################################################################################
+
+## Module file logging
+#source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "   Makes the `Intel Integrated Performance Primitives (IPP) $version' available for use"
+}
+
+module-whatis   "Makes the `Intel Integrated Performance Primitives (IPP)' available for use"
+
+# module variables
+#
+set     version      2017.0
+set     ipproot     /usr/local/packages/dev/intel-ps-xe-ce/$version/binary/
+
+# Variables determined using
+# env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary/compilers_and_libraries_2017.0.098/linux/ipp/bin/ippvars.sh intel64" | sed -e "s#/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary#\$ipproot#g" -e 's/[{}]//g'
+prepend-path MIC_LD_LIBRARY_PATH $ipproot/compilers_and_libraries_2017.0.098/linux/ipp/lib/mic;
+prepend-path LIBRARY_PATH $ipproot/compilers_and_libraries_2017.0.098/linux/ipp/lib/intel64;
+setenv IPPROOT $ipproot/compilers_and_libraries_2017.0.098/linux/ipp;
+prepend-path CPATH $ipproot/compilers_and_libraries_2017.0.098/linux/ipp/include;
+prepend-path LD_LIBRARY_PATH $ipproot/compilers_and_libraries_2017.0.098/linux/ipp/lib/intel64;
+
+# License file (points at license server)
+setenv INTEL_LICENSE_FILE /usr/local/packages/dev/intel-ps-xe-ce/license.lic

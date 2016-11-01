@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## openmpi module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+    global openmpiversion
+
+    puts stderr "   Adds `openmpi-$openmpiversion' to your PATH environment variable and necessary libraries"
+}
+
+set openmpiversion   1.10.4
+set compiler         gcc
+set compilerversion  6.2
+set openmpiroot      /usr/local/packages/mpi/openmpi/$openmpiversion/$compiler-$compilerversion
+
+module-whatis   "loads the necessary `openmpi-$openmpiversion' library paths"
+
+#setenv OMPI_MCA_btl_tcp_if_include eth0
+#setenv OMPI_MCA_btl tcp,self
+
+module load dev/$compiler/$compilerversion
+
+setenv MPI_HOME $openmpiroot
+
+prepend-path PATH $openmpiroot/bin/
+prepend-path LD_LIBRARY_PATH $openmpiroot/lib/
+prepend-path MANPATH $openmpiroot/share/man/
+

@@ -9,17 +9,18 @@
 ##
 
 proc ModulesHelp { } {
-        global version
+        global $compilerversion
 
-        puts stderr "   Makes `Intel C++ and Fortran compilers plus debugger version $version' available for use"
+        puts stderr "   Makes `Intel C++ and Fortran compilers plus debugger version $compilerversion' available for use"
 }
 
 module-whatis   "Makes Intel C++ and Fortran compilers (ifort and icc) and debugger available"
 
 conflict dev/intel-compilers
 
-set     version 17.0.0
-set     intelroot    /usr/local/packages/dev/intel-ps-xe-ce/$version/binary
+set     compilerversion 17.0.0
+set     parallelstudioversion 2017.0
+set     intelroot    /usr/local/packages/dev/intel-ps-xe-ce/$parallelstudioversion/binary
  
 # load java  ( needed with debugging etc. ) 
 module load apps/java
@@ -79,23 +80,23 @@ prepend-path NLSPATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/lib
 prepend-path NLSPATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/intel64/locale/%l_%t/%N;
 
 # Debugger variables determined using
-# env2 -from bash -to modulecmd "/usr/local/packages/dev/intel/2017/binary/debugger_2017/bin/debuggervars.sh intel64" | sed -e "s#/usr/local/packages/dev/intel/2017/binary#\$intelroot#g" -e 's/[{}]//g'
+# env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary/debugger_2017/bin/debuggervars.sh intel64" | sed -e "s#/usr/local/packages/dev/intel-pe-xe-ce/2017.0/binary#\$intelroot#g" -e 's/[{}]//g'
 #
-setenv GDB_CROSS {/usr/local/packages/dev/intel/2017/binary/debugger_2017/gdb/intel64_mic/bin/gdb-mic};
-setenv INTEL_PYTHONHOME {/usr/local/packages/dev/intel/2017/binary/debugger_2017/python/intel64/};
-prepend-path PATH {/usr/local/packages/dev/intel/2017/binary/debugger_2017/gdb/intel64_mic/bin};
-prepend-path LD_LIBRARY_PATH {/usr/local/packages/dev/intel/2017/binary/debugger_2017/libipt/intel64/lib};
-prepend-path LD_LIBRARY_PATH {/usr/local/packages/dev/intel/2017/binary/debugger_2017/iga/lib};
-prepend-path MANPATH {/usr/local/packages/dev/intel/2017/binary/documentation_2017/en/debugger//gdb-igfx/man/};
-prepend-path MANPATH {/usr/local/packages/dev/intel/2017/binary/documentation_2017/en/debugger//gdb-mic/man/};
-prepend-path MANPATH {/usr/local/packages/dev/intel/2017/binary/documentation_2017/en/debugger//gdb-ia/man/};
-setenv MPM_LAUNCHER {/usr/local/packages/dev/intel/2017/binary/debugger_2017/mpm/mic/bin/start_mpm.sh};
-append-path INFOPATH {/usr/local/packages/dev/intel/2017/binary/documentation_2017/en/debugger//gdb-ia/info/};
-append-path INFOPATH {/usr/local/packages/dev/intel/2017/binary/documentation_2017/en/debugger//gdb-mic/info/};
-append-path INFOPATH {/usr/local/packages/dev/intel/2017/binary/documentation_2017/en/debugger//gdb-igfx/info/};
-setenv GDBSERVER_MIC {/usr/local/packages/dev/intel/2017/binary/debugger_2017/gdb/targets/mic/bin/gdbserver};
-prepend-path NLSPATH {/usr/local/packages/dev/intel/2017/binary/debugger_2017/gdb/intel64/share/locale/%l_%t/%N};
-prepend-path NLSPATH {/usr/local/packages/dev/intel/2017/binary/debugger_2017/gdb/intel64_mic/share/locale/%l_%t/%N};
+setenv       GDB_CROSS        $intelroot/debugger_2017/gdb/intel64_mic/bin/gdb-mic;
+setenv       INTEL_PYTHONHOME $intelroot/debugger_2017/python/intel64/;
+prepend-path PATH             $intelroot/debugger_2017/gdb/intel64_mic/bin;
+prepend-path LD_LIBRARY_PATH  $intelroot/debugger_2017/libipt/intel64/lib;
+prepend-path LD_LIBRARY_PATH  $intelroot/debugger_2017/iga/lib;
+prepend-path MANPATH          $intelroot/documentation_2017/en/debugger//gdb-igfx/man/;
+prepend-path MANPATH          $intelroot/documentation_2017/en/debugger//gdb-mic/man/;
+prepend-path MANPATH          $intelroot/documentation_2017/en/debugger//gdb-ia/man/;
+setenv       MPM_LAUNCHER     $intelroot/debugger_2017/mpm/mic/bin/start_mpm.sh;
+append-path  INFOPATH         $intelroot/documentation_2017/en/debugger//gdb-ia/info/;
+append-path  INFOPATH         $intelroot/documentation_2017/en/debugger//gdb-mic/info/;
+append-path  INFOPATH         $intelroot/documentation_2017/en/debugger//gdb-igfx/info/;
+setenv       GDBSERVER_MIC    $intelroot/debugger_2017/gdb/targets/mic/bin/gdbserver;
+prepend-path NLSPATH          $intelroot/debugger_2017/gdb/intel64/share/locale/%l_%t/%N;
+prepend-path NLSPATH          $intelroot/debugger_2017/gdb/intel64_mic/share/locale/%l_%t/%N;
 
 # Shorthand variables for compilers
 

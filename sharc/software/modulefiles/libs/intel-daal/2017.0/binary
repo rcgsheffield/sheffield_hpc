@@ -13,7 +13,7 @@ proc ModulesHelp { } {
         puts stderr "   Makes the `Intel Data Analytics Accelleration Library (DAAL) $version' available for use"
 }
 
-module-whatis   "Makes the `Intel Data Analytics Accelleration Library (DAAL) $version' available for use"
+module-whatis   "Makes the `Intel Data Analytics Accelleration Library (DAAL)' available for use"
 
 # module variables
 #

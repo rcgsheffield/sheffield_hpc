@@ -13,7 +13,7 @@ proc ModulesHelp { } {
         puts stderr "   Makes the `Intel Math Kernel Library (MLK) $version' available for use"
 }
 
-module-whatis   "Makes the `Intel Math Kernel Library (MLK) $version' available for use"
+module-whatis   "Makes the `Intel Math Kernel Library (MLK) available for use"
 
 # module variables
 #

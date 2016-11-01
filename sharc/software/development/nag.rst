@@ -8,6 +8,7 @@ Making the NAG Compiler available
 
 After connecting to ShARC (see :ref:`ssh`),  start an interactive sesssion with the :code:`qsh` or :code:`qrsh` command. To make the NAG Fortran Compiler available, run the following module command ::
 
+        module load dev/NAG/6.1
         module load dev/NAG/6.0
 
 Compilation examples
@@ -32,9 +33,31 @@ Installation Notes
 
 The following notes are primarily for system sysadmins
 
+**Licensing**
+
+Add the license key(s) to ``/usr/local/packages/dev/NAG/license.lic``.
+
+The license key needs to be updated annually before 31st July.
+
+The NAG compiler environment modules (see below) set the environment variable ``$NAG_KUSARI_FILE`` to the path to this file.
+
+**Version 6.1**
+
+#. Perform an unattended install using `install_NAG_compiler_6.1.sh
+   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/NAG/install_NAG_compiler_6.1.sh>`__.
+   The software will be installed into ``/usr/local/packages/dev/NAG/6.1``.
+#. Install `this modulefile
+   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/NAG/6.1>`__
+   as ``/usr/local/modulefiles/dev/NAG/6.1``
+#. Test the installation by compiling and building a sample Fortran 90 program ::
+
+        module load dev/NAG/6.1
+        nagfor -o /tmp/f90_util /usr/local/packages/dev/NAG/6.1/lib/NAG_Fortran/f90_util.f90
+        /tmp/f90_util
+
 **Version 6.0**
 
-Run the following ::
+First, run the following ::
 
         nag_vers=6.0
         media_dir="/usr/local/media/NAG/$nag_vers"
@@ -52,7 +75,7 @@ Run the following ::
         tar -zxf $media_dir/$tarball
         pushd NAG_Fortran-amd64/
 
-Run the interactive install script ::
+Next, run the interactive install script ::
 
         ./INSTALL.sh
 
@@ -65,21 +88,7 @@ Accept the license and answer the questions as follows:
 * **Install module man pages to which directory?** ``/usr/local/packages/dev/NAG/6.0/man/man3``
 * **Suffix for module man pages [3]?** *leave as default*
 
-Licensing
----------
-Add the license key to ``/usr/local/packages/dev/NAG/license.lic``
-
-The license key needs to be updated annually before 31st July.
-
-Point to this license file using the environment variable ``$NAG_KUSARI_FILE`` (this is done in the environment module).
-
-Module File
------------
-
 Install `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/NAG/6.0>`__ as ``/usr/local/modulefiles/dev/NAG/6.0``
-
-Testing
--------
 
 Test the installation by compiling and building a sample Fortran 90 program ::
 

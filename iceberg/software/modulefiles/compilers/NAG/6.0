@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## NAG Fortran Compiler 6.0 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+      puts stderr "Makes the NAG Fortran Compiler v6.0 available"
+}
+
+module-whatis   "Makes the NAG Fortran Compiler v6.0 available"
+
+set NAGFOR_DIR /usr/local/packages6/compilers/NAG/6.0
+
+prepend-path PATH $NAGFOR_DIR
+prepend-path MANPATH $NAGFOR_DIR/man
+setenv NAG_KUSARI_FILE /usr/local/packages5/nag/license.lic
+

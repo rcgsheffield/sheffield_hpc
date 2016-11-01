@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+## cuda 8.0.44 module file
+##
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "	Adds `Nvidia Cuda-$version' to your PATH environment variable and necessary libraries"
+}
+
+set     version 8.0.44
+
+module-whatis   "loads the necessary `cuda-$version' library paths"
+
+set CUDA_DIR /usr/local/packages6/libs/binlibs/CUDA/8.0.44/cuda/
+set CUDA_SDK_DIR /usr/local/packages6/libs/binlibs/CUDA/8.0.44/samples/NVIDIA_CUDA-8.0_Samples/
+
+setenv           CUDA_DIR       $CUDA_DIR
+setenv           CUDA_HOME      $CUDA_DIR
+setenv		 CUDA_SDK	$CUDA_SDK_DIR
+
+prepend-path PATH $CUDA_DIR/bin/
+prepend-path LD_LIBRARY_PATH $CUDA_DIR/lib/
+prepend-path LD_LIBRARY_PATH $CUDA_DIR/lib64/

@@ -29,6 +29,6 @@ Installation notes
 ------------------
 
 VCFtools was compiled using the
-`install_vcftools.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/5.2/vcftools/install_vcftools.sh>`_ script, the module
+`install_vcftools.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/5.2/vcftools/install_vcftools.sh>`_ script, the module
 file is
-`0.1.14 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/5.2/vcftools/0.1.14>`_.
+`0.1.14 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/5.2/vcftools/0.1.14>`_.

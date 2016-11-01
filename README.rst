@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/rcgsheffield/iceberg_software.svg?branch=master
-    :target: https://travis-ci.org/rcgsheffield/iceberg_software
+.. image:: https://travis-ci.org/rcgsheffield/sheffield_hpc.svg?branch=master
+    :target: https://travis-ci.org/rcgsheffield/sheffield_hpc
 
 Iceberg Documentation
 =====================

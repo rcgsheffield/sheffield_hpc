@@ -25,5 +25,5 @@ to the include directory.
 Installation notes
 ------------------
 This section is primarily for administrators of the system. CFITSIO 3.380 was compiled with gcc 5.2.
-The compilation used this `script <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/libs/gcc/>`_ and it is loaded with this `modulefile
+The compilation used this `script <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/libs/gcc/>`_ and it is loaded with this `modulefile
 <https://github.com/mikecroucher/iceberg_software/blob/master/software/modulefiles/libs/gcc/5.2/cfitsio/3.380>`_ .

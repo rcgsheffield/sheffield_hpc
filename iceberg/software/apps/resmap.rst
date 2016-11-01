@@ -4,7 +4,7 @@ ResMap
 .. sidebar:: ResMap
 
    :Versions: 1.1.4
-   :URL: http://resmap.readthedocs.org/en/latest/
+   :URL: http://resmap.sourceforge.net/
 
 ResMap (Resolution Map) is a software package for computing the local resolution of 3D density maps studied in structural biology, primarily electron cryo-microscopy.
 

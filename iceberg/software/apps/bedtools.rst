@@ -32,7 +32,7 @@ After that any of the bedtools commands can be run from the prompt.
 
 Installation notes
 ------------------
-bedtools was installed using gcc 5.2 with the script `install_bedtools.sh <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/5.2/bedtools/install_bedtools.sh>`_
+bedtools was installed using gcc 5.2 with the script `install_bedtools.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/5.2/bedtools/install_bedtools.sh>`_
 
 
 Testing

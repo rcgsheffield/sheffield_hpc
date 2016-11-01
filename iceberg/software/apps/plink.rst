@@ -3,7 +3,7 @@ Plink
 
 .. sidebar:: Plink
 
-   :Versions:  1.9 beta 3
+   :Versions:  1.90 beta 3.42
    :Support Level: Bronze
    :Dependancies: None
    :URL: https://www.cog-genomics.org/plink2
@@ -20,26 +20,32 @@ The latest version of Plink is made available with the command
 
         module load apps/binapps/plink
 
-Alternatively, you can load a specific version with ::
+Alternatively, you can load a specific version.  To access the latest version (build date 20 Sep 2016) ::
 
-       module load apps/binapps/plink/1.9
+       module load apps/binapps/plink/1.90b3.42
 
-You can now execute the ``plink`` command on the command line.
+An older build of Plink 1.9 (15 Jul 2015) is also available :: 
+
+       module load apps/binapps/plink/1.90b3v
+
+After making a version of Plink available you can then run it using ``plink`` on the command line.
 
 Installation notes
 ------------------
 These are primarily for administrators of the system.
 
-The binary version of Plink was installed ::
+Both versions of Plink were installed like so ::
+
+  $ver=1.90b3.42  # or 1.90b3v
 
   mkdir plink_build
   cd plink_build
   unzip plink_linux_x86_64.zip
   rm plink_linux_x86_64.zip
-  mkdir -p /usr/local/packages6/apps/binapps/plink/1.9
-  mv * /usr/local/packages6/apps/binapps/plink/1.9
+  mkdir -p /usr/local/packages6/apps/binapps/plink/$ver
+  mv * /usr/local/packages6/apps/binapps/plink/$ver
 
-The module file is at ``/usr/local/modulefiles/apps/binapps/plink/1.9`` ::
+The modulefiles are at ``/usr/local/modulefiles/apps/binapps/plink/$ver`` ::
 
   #%Module10.2####################################################################
   #
@@ -55,7 +61,7 @@ The module file is at ``/usr/local/modulefiles/apps/binapps/plink/1.9`` ::
   }
 
   # Plink version (not in the user's environment)
-  set     ver     1.9
+  set     ver     1.90b3.42  # or 1.90b3v
 
   module-whatis   "sets the necessary Plink $ver paths"
 

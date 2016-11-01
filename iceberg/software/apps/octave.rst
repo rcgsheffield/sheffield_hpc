@@ -80,7 +80,7 @@ Octave was installed using gcc 5.2 and the following libraries:
 * :ref:`fltk` 1.3.3
 * :ref:`fftw` 3.3.4
 
-* Octave was installed using a SGE batch job. The install script is on `github <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/gcc/5.2/octave/install_octave.sh>`_
+* Octave was installed using a SGE batch job. The install script is on `github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/gcc/5.2/octave/install_octave.sh>`_
 * The make log is on the system at `/usr/local/packages6/apps/gcc/5.2/octave/4.0/make_octave4.0.0.log`
 * The configure log is on the system at `/usr/local/packages6/apps/gcc/5.2/octave/4.0/configure_octave4.0.0.log`
 
@@ -276,4 +276,4 @@ For information, here is the relevant part of the Configure log that describes h
 Module File
 -----------
 
-The module file is `octave_4.0 <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/5.2/octave/4.0>`_
+The module file is `octave_4.0 <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/5.2/octave/4.0>`_

@@ -1,4 +1,4 @@
-.. _Java:
+.. _Java-iceberg:
 
 Java
 ====
@@ -41,7 +41,7 @@ Now, the compiler ::
 
 Virtual Memory
 --------------
-By default, Java requests a lot of virtual memory on startup. This is usually a given fraction of the physical memory on a node, which can be quite a lot on Iceberg. This then exceeds a user's virtual memory limit set by the scheduler and causes a job to fail.
+By default, Java requests a lot of *virtual memory* on startup. This is usually a given fraction of the *physical memory* on a node, which can be quite a lot on Iceberg. This then exceeds a user's virtual memory limit set by the scheduler and causes a job to fail.  See :ref:`real-vs-virt-mem` for explanations of the difference between virtual and real/physical memory.
 
 To fix this, we have created a wrapper script to Java that uses the `-Xmx1G` switch to force Java to only request one Gigabyte of memory for its heap size. If this is insufficient, you are free to allocate as much memory as you require but be sure to request enough from the scheduler as well. You'll typically need to request more virtual memory from the scheduler than you specify in the Java `-Xmx` switch.
 

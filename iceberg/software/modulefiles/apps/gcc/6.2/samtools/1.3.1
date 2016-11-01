@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## samtools module file
+##
+
+## Module file logging
+#source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+    global samtoolsversion
+    puts stderr "   Activate v$samtoolsversion of samtools"
+}
+
+set     samtoolsversion 1.3.1
+
+module-whatis   "Activate v$samtoolsversion of samtools"
+
+set packageroot /usr/local/packages6
+set samtoolsroot $packageroot/apps/gcc/6.2/samtools/$samtoolsversion
+
+prepend-path MANPATH $samtoolsroot/share/man/
+prepend-path PATH $samtoolsroot/bin/

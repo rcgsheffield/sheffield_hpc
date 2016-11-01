@@ -24,11 +24,11 @@ This command makes the tophat binary available to your session.
 
 Installation notes
 ------------------
-Tophat 2.1.0 was installed using gcc 4.8.2. Installs were attempted using gcc 5.2 and gcc 4.4.7 but both failed (see `this issue on github <https://github.com/rcgsheffield/iceberg_software/issues/153>`_ )
+Tophat 2.1.0 was installed using gcc 4.8.2. Installs were attempted using gcc 5.2 and gcc 4.4.7 but both failed (see `this issue on github <https://github.com/rcgsheffield/sheffield_hpc/issues/153>`_ )
 
 This install has dependencies on the following
 
-* :ref:`gcc` 4.8.2
+* :ref:`gcc_iceberg` 4.8.2
 * :ref:`boost` 1.58
 * :ref:`bowtie2` (not needed at install time but is needed at runtime)
 
@@ -63,9 +63,9 @@ Testing
 -------
 A test script was executed based on the documentation `on the tophat website <https://ccb.jhu.edu/software/tophat/tutorial.shtml>`_ (retrieved 29th October 2015). It only proves that the code can run without error, not that the result is correct.
 
-* `tophat_test.sh  <https://github.com/rcgsheffield/iceberg_software/blob/master/software/install_scripts/apps/tophat/tests/tophat_test.sh>`_
+* `tophat_test.sh  <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/install_scripts/apps/tophat/tests/tophat_test.sh>`_
 
 Modulefile
 ----------
 * The module file is on the system at `/usr/local/modulefiles/apps/gcc/4.8.2/tophat/2.1.0`
-* The module file is `on github <https://github.com/rcgsheffield/iceberg_software/blob/master/software/modulefiles/apps/gcc/4.8.2/tophat/2.1.0>`_.
+* The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/apps/gcc/4.8.2/tophat/2.1.0>`_.

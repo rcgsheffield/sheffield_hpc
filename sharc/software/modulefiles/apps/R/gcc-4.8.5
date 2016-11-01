@@ -1,0 +1,17 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+      global helpmsg
+      puts stderr "\t$helpmsg\n"
+}
+
+set version 3.3.2
+
+set R_DIR /usr/local/packages/apps/R/$version/gcc-4.8.5
+
+prepend-path PATH $R_DIR/bin
+prepend-path LD_LIBRARY_PATH $R_DIR/lib64/R/lib/

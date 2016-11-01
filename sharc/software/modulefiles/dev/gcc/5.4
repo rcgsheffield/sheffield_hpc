@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+## gcc 5.4
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+set     app gcc
+set     version 5.4.0
+module-whatis   "loads the necessary `$app-$version' library paths"
+
+set BASEPATH /usr/local/packages/dev/$app/$version
+
+setenv GCCDIR $BASEPATH
+
+prepend-path PATH 		$BASEPATH/bin
+prepend-path LD_LIBRARY_PATH	$BASEPATH/lib:$BASEPATH/lib64
+prepend-path MANPATH		$BASEPATH/man
+
+prepend-path --delim " " CPPFLAGS " -I$BASEPATH/include"
+prepend-path --delim " " CFLAGS   " -I$BASEPATH/include"
+prepend-path --delim " " LDFLAGS  " -L$BASEPATH/lib -L$BASEPATH/lib64"
+
+setenv  CC      gcc
+setenv  CXX     g++
+setenv  F77     gfortran
+setenv  F90     gfortran
+setenv  F95     gfortran
+setenv  FC      gfortran

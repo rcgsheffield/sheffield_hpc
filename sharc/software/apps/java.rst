@@ -50,7 +50,9 @@ These are primarily for administrators of the system.
 
 **Java 1.8.0_102**
 
-1. Download *Java SE Development Kit 8u102* `from Oracle <http://www.oracle.com/technetwork/java/javase/downloads>`_.  Select the tarball (:code:`jdk-8u102-linux-x64.tar.gz`) for Linux and the *x64* CPU architecture family.
-2. Save this file to :code:`/usr/local/media/java/1.8.0_102/`.
-3. Install Java using the `install_java_1.8.0_102.sh <https://github.com/mikecroucher/HPC_Installers/apps/java/jdk1.8.0_102/sheffield/sharc/install_java_1.8.0_102.sh>`_ script. 
-4. Install `this modulefile <https://github.com/mikecroucher/HPC_Installers/apps/java/jdk1.8.0_102/sheffield/sharc/binary>`_ as :code:`/usr/local/modulefiles/apps/java/jdk1.8.0_102/binary`
+#. Download *Java SE Development Kit 8u102* `from Oracle <http://www.oracle.com/technetwork/java/javase/downloads>`_.  Select the tarball (``jdk-8u102-linux-x64.tar.gz``) for Linux and the *x64* CPU architecture family.
+#. Save this file to ``/usr/local/media/java/1.8.0_102/``.
+#. Install Java using `this script <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/apps/java/jdk1.8.0_102/binary/install.sh>`__. 
+#. Install `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/apps/java/jdk1.8.0_102/binary>`__ as ``/usr/local/modulefiles/apps/java/jdk1.8.0_102/binary``
+	
+	

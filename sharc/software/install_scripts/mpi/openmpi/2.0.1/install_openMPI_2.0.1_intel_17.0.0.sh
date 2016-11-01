@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install OpenMPI 2.0.1 built with Intel 2017 compilers on the ShARC cluster
+# Install OpenMPI 2.0.1 built with Intel 17.0.0 compilers on the ShARC cluster
 
 ##############################################################################
 # Error handling
@@ -31,9 +31,10 @@ module load dev/intel-compilers/17.0.0
 
 short_version=2.0
 version=${short_version}.1
-build_dir="/scratch/${USER}/openmpi_${version}"
-prefix="/usr/local/packages/mpi/openmpi/${version}/intel-2017"
-modulefile="/usr/local/modulefiles/mpi/openmpi/${version}/intel-2017"
+compiler=intel-17.0.0
+build_dir="${TMPDIR-/tmp}/${USER}/openmpi_${version}"
+prefix="/usr/local/packages/mpi/openmpi/${version}/${compiler}"
+modulefile="/usr/local/modulefiles/mpi/openmpi/${version}/${compiler}"
 filename="openmpi-${version}.tar.gz"
 baseurl="http://www.open-mpi.org/software/ompi/v${short_version}/downloads/"
 workers=16  # for building in parallel

@@ -1,4 +1,4 @@
-.. _`Intel Compilers`:
+.. _sharc-intel-compilers:
 
 Intel Compilers
 ===============
@@ -8,7 +8,7 @@ Intel Compilers help create C, C++ and Fortran applications that can take full a
 Parallel Studio Composer Edition 2017 versions
 ----------------------------------------------
 
-These versions of the Intel compilers were installed as part of :ref:`Intel Parallel Studio sharc_intel_parallel_studio` but can be used with or without the other Parallel Studio components.
+These versions of the Intel compilers were installed as part of :ref:`Intel Parallel Studio <sharc-intel-parallel-studio>` but can be used with or without the other Parallel Studio components.
 
 After connecting to the ShARC cluster (see :ref:`ssh`),  start an interactive session with the :code:`qsh` or :code:`qrsh` command then run ::
 
@@ -50,7 +50,7 @@ The following links are to Intel's website:
 Licensing and availability
 --------------------------
 
-See the information on :ref:`Parallel Studio licensing sharc_intel_parallel_studio`.
+See the information on :ref:`Parallel Studio licensing <sharc-intel-parallel-studio>`.
 
 Related Software on the system
 ------------------------------
@@ -64,6 +64,6 @@ The following notes are primarily for system administrators.
 
 **Intel Compilers 2017**
 
-Installed as part of :ref:`Parallel Studio Composer Edition 2017`.
+Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
 
 `This modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/intel-compilers/17.0.0>`__ was installed as ``/usr/local/modulefiles/dev/intel-compilers/17.0.0``.

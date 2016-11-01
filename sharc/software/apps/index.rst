@@ -8,4 +8,3 @@ Applications on Sharc
     :glob:
     
     ./*
-

@@ -18,7 +18,7 @@ The latest version of R can be loaded with ::
 
 Alternatively, you can load a specific version of R using one of the following ::
 
-        apps/R/3.3.2/gcc-4.8.5
+        module load apps/R/3.3.2/gcc-4.8.5
 
 R can then be run with ::
 

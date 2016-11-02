@@ -43,8 +43,8 @@ The NAG compiler environment modules (see below) set the environment variable ``
 
 **Version 6.1**
 
-#. Perform an unattended install using `install_NAG_compiler_6.1.sh
-   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/NAG/install_NAG_compiler_6.1.sh>`__.
+#. Perform an unattended install using `this script 
+   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/NAG/6.1/install.sh>`__.
    The software will be installed into ``/usr/local/packages/dev/NAG/6.1``.
 #. Install `this modulefile
    <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/NAG/6.1>`__

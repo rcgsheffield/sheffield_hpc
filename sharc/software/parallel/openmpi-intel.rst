@@ -56,6 +56,6 @@ These are primarily for administrators of the system.
 **Version 2.0.1**
 
 #. Ensure :ref:`Intel compilers 17.0.0 <sharc-intel-compilers>` are installed and licensed.
-#. Download, compile and install OpenMPI 2.0.1 using the `install_openMPI_2.0.1_intel-17.0.0.sh <https://github.com/rcgsheffield/sheffield_hpc/blob/master/sharc/software/install_scripts/mpi/openmpi/2.0.1/install_openMPI_2.0.1_intel_17.0.0.sh>`_ script.
+#. Download, compile and install OpenMPI 2.0.1 using `this script <https://github.com/rcgsheffield/sheffield_hpc/blob/master/sharc/software/install_scripts/mpi/openmpi/2.0.1/intel-17.0.0/install.sh>`__.
 #. Install `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/blob/master/sharc/software/modulefiles/mpi/openmpi/2.0.1/intel-17.0.0>`__ as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/intel-17.0.0``
 #. Test by running some <Examples>_.

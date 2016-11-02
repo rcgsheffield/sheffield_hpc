@@ -43,8 +43,8 @@ The following notes are primarily for system administrators.
    only readable by the ``app-admins`` group.
 #. Ensure details of the Intel license server are in the file
    ``/usr/local/packages/dev/intel-pe-xe-ce/license.lic``
-#. Run `install_intel-ps-xe-ce_2017.0.sh
-   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/intel-ps-xe-ce/2017.0/install_intel-ps-xe-ce_2017.0.sh>`__.
+#. Run `this script
+   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/intel-ps-xe-ce/2017.0/install.sh>`__.
    This installs Parallel Studio into
    ``/usr/local/packages/dev/intel-pe-xe-ce/2017.0/binary/``.  Products are
    activated using the aforementioned license file during the installation

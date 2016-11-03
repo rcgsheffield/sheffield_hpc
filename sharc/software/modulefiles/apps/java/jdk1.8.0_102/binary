@@ -1,0 +1,22 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+
+proc ModulesHelp { } {
+    global helpmsg
+    puts stderr "\t$helpmsg\n"
+}
+
+
+set version 1.8
+
+set javahome /usr/local/packages/apps/java/jdk1.8.0_102/binary
+
+module-whatis "Sets JAVA to version $version"
+set helpmsg "Changes the default version of Java to Version $version"
+setenv JAVA_HOME $javahome
+prepend-path PATH $javahome/bin
+prepend-path MANPATH $javahome/man

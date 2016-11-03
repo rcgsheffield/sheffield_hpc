@@ -36,10 +36,10 @@ These notes are primarily for system administrators
 
 * gcc version 6.2 was installed using :
 
-* `install_gcc_6.2.sh <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/6.2/sheffield/sharc/install_gcc_6.2.sh>`_
-* `gcc 6.2 modulefile <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/6.2/sheffield/sharc/6.2>`_ located on the system at ``/usr/local/modulefiles/dev/gcc/6.2``
+* `this script <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/gcc/6.2/install.sh>`__
+* `gcc 6.2 modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/gcc/6.2>`__ saved as `/usr/local/modulefiles/dev/gcc/6.2``
 
 * gcc version 5.4 was installed using :
 
-* `install_gcc_5.4.sh <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/5.4/sheffield/sharc/install_gcc_5.4.sh>`_
-* `gcc 5.4 modulefile <https://github.com/mikecroucher/HPC_Installers/compilers/gcc/5.4/sheffield/sharc/5.4>`_ located on the system at ``/usr/local/modulefiles/dev/gcc/5.4``
+* `this script <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/gcc/5.4/install.sh>`__
+* `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/gcc/5.4>`__, saved as ``/usr/local/modulefiles/dev/gcc/5.4``

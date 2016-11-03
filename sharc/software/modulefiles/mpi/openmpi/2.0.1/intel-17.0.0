@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## OpenMPI (+ Intel compilers) module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+    global openmpiversion
+    global compiler
+
+    puts stderr "   Adds `openmpi-$openmpiversion' (+ Intel compilers) to your PATH environment variable and necessary libraries"
+}
+
+set openmpiversion   2.0.1
+set compilerversion  17.0.0
+set openmpiroot      /usr/local/packages/mpi/openmpi/$openmpiversion/intel-$compilerversion
+
+module-whatis   "Adds `openmpi-$openmpiversion' (+ Intel compilers) to your PATH environment variable and necessary libraries"
+
+#setenv OMPI_MCA_btl_tcp_if_include eth0
+#setenv OMPI_MCA_btl tcp,self
+
+module load dev/intel-compilers/$compilerversion
+
+setenv MPI_HOME $openmpiroot
+
+prepend-path PATH $openmpiroot/bin/
+prepend-path LD_LIBRARY_PATH $openmpiroot/lib/
+prepend-path MANPATH $openmpiroot/share/man/
+

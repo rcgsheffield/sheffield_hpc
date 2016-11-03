@@ -18,7 +18,7 @@ The latest version of R can be loaded with ::
 
 Alternatively, you can load a specific version of R using one of the following ::
 
-        apps/R/3.3.2/gcc-4.8.5
+        module load apps/R/3.3.2/gcc-4.8.5
 
 R can then be run with ::
 
@@ -26,23 +26,23 @@ R can then be run with ::
 
 Serial (one CPU) Batch usage
 ----------------------------
-Here, we assume that you wish to run the program `my_code.R` on the system. With batch usage it is recommended to load a specific version of R, for example `module load apps/R/3.3.2`, to ensure the expected output is achieved.
+Here, we assume that you wish to run the program `my_code.r` on the system. With batch usage it is recommended to load a specific version of R, for example `module load apps/R/3.3.2`, to ensure the expected output is achieved.
 
 First, you need to write a batch submission file. We assume you'll call this `my_job.sge` ::
 
   #!/bin/bash
-  #$ -S /bin/bash
-  #$ -cwd                      # Run job from current directory
+  #$ -cwd                                # Run job from current directory
+  #$ -l rmem=4G                          # Request 4 gigabytes of memory
 
   module load apps/R/3.3.2/gcc-4.8.5     # Recommended to load a specific version of R
 
-  R CMD BATCH my_code.R my_code.R.o$JOB_ID
+  R CMD BATCH my_code.r my_code.r.o$JOB_ID
 
-Note that R must be called with both the `CMD` and `BATCH` options which tell it to run an R program, in this case `my_code.R`. If you do not do this, R will attempt to open an interactive prompt.
+Note that R must be called with both the `CMD` and `BATCH` options which tell it to run an R program, in this case `my_code.r`. If you do not do this, R will attempt to open an interactive prompt.
 
-The final argument, `my_code.R.o$JOBID`, tells R to send output to a file with this name. Since `$JOBID` will always be unique, this ensures that all of your output files are unique. Without this argument R sends all output to a file called `my_code.Rout`.
+The final argument, `my_code.r.o$JOBID`, tells R to send output to a file with this name. Since `$JOBID` will always be unique, this ensures that all of your output files are unique. Without this argument R sends all output to a file called `my_code.Rout`.
 
-Ensuring that `my_code.R` and `my_job.sge` are both in your current working directory, submit your job to the batch system ::
+Ensuring that `my_code.r` and `my_job.sge` are both in your current working directory, submit your job to the batch system ::
 
 	qsub my_job.sge
 

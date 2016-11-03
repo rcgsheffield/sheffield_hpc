@@ -101,6 +101,7 @@ Unlike gcc, the PGI Compilers do not recognise the environment variable LIBRARY_
 
   # get the value of the environment variable LIBRARY_PATH
   variable LIBRARY_PATH is environment(LD_LIBRARY_PATH);
+  variable inc_path is environment(CPATH);
 
   # split this value at colons, separate by -L, prepend 1st one by -L
   variable library_path is
@@ -108,6 +109,7 @@ Unlike gcc, the PGI Compilers do not recognise the environment variable LIBRARY_
 
   # add the -L arguments to the link line
   append LDLIBARGS=$library_path;
+  append SITEINC=$inc_path;
 
 Where VER is the version number in question: 15.7, 15.10 etc
 

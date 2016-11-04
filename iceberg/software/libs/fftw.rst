@@ -17,7 +17,7 @@ To make this library available, run one of the following module commands: ::
         module load libs/gcc/4.9.2/fftw/3.3.5
         module load libs/gcc/5.2/fftw/3.3.4
 
-If you are using :ref:`cuda` then you will want to use version 3.3.5 as the build of version 3.3.4 is dependent on GCC 5.2, a version of GCC not supported by CUDA at this time.
+If you are using :ref:`cuda` then you will want to use version 3.3.5 as the build of version 3.3.4 is dependent on GCC 5.2, a version of GCC not supported by CUDA at this time. 
 
 Installation notes
 ------------------
@@ -26,7 +26,8 @@ This section is primarily for administrators of the system.
 **version 3.3.5**
 
 This was compiled with GCC 4.9.2 (for compatibility with CUDA, which doesn't support GCC >= 5.0.0).  
-Threading (inc. OpenMP) and shared-library support were enabled and build-time.
+Threading (inc. OpenMP) and shared-library support were enabled at build-time.  
+Vectorisation support was not explicitly enabled to allow the library to be used on nodes that do not support AVX/AVX2.
 
 First, download, configure, build, test and install using :download:`this script </iceberg/software/install_scripts/libs/gcc/4.9.2/fftw/3.3.5/install.sh>`.
 

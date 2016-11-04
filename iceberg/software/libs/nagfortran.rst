@@ -29,9 +29,27 @@ which links to a version of the NAG library that's linked against the high perfo
 
 Which is linked against a reference version of BLAS and LAPACK. If you are in any doubt as to which to choose, we suggest that you use ``-lnag_mkl``
 
+
+
+**NAG for PGI Fortran**
+
+Use the following command to make Mark 24 of the serial (1 CPU core) version of the NAG Fortran Library for PGI compilers available ::
+
+    module load libs/pgi/15/NAG/fll6a24dpl
+
+Once you have ensured that you have loaded the module for the :ref:`PGI Compilers` you can compile your NAG program using ::
+
+    pgf90 your_code.f90 -lnag_mkl -I$NAGINC -o your_code.exe
+
+which links to a version of the NAG library that's linked against the high performance Intel MKL (which provides high-performance versions of the BLAS and LAPACK libraries). Alternatively, you can compile using ::
+
+    pgf90 your_code.f90 -lnag_nag -I$NAGINC -o your_code.exe
+
+Which is linked against a reference version of BLAS and LAPACK. If you are in any doubt as to which to choose, we suggest that you use ``-lnag_mkl``
+
 Running NAG's example programs
 ------------------------------
-Most of NAG's routines come with example programs that show how to use them. When you use the ``module`` command to load a version of the NAG library, the script ``nag_example`` becomes available. Providing this script wth the name of the NAG routine you are interested in will copy, compile and run the example program for that routine into your current working directory.
+Most of NAG's routines come with example programs that show how to use them. When you use the ``module`` command to load a version of the NAG library, the script ``nag_example`` for that version becomes available. Providing this script with the name of the NAG routine you are interested in will copy, compile and run the example program for that routine into your current working directory.
 
 For example, here is an example output for the NAG routine ``a00aaf`` which identifies the version of the NAG library you are using. If you try this yourself, the output you get will vary according to which version of the NAG library you are using ::
 
@@ -92,7 +110,8 @@ The key numerical and statistical capabilities of the Fortran Library are shown 
 Documentation
 -------------
 
-* `The NAG Fortran Library Manual <http://www.nag.co.uk/numeric/fl/fldocumentation.asp>`_ (Link to NAG's webbsite)
+* `The NAG Fortran MK25 Library Manual <http://www.nag.co.uk/numeric/fl/fldocumentation.asp>`_ (Link to NAG's webbsite)
+* `The NAG Fortran MK24 Library Manual <http://www.nag.co.uk/numeric/fl/nagdoc_fl24/html/frontmatter/manconts.html>`_ ( Link to NAG's website)
 
 Installation notes
 ------------------
@@ -126,3 +145,10 @@ Module Files
 
 * The module file is on the system at ``/usr/local/modulefiles/libs/intel/15/NAG/fll6i25dcl``
 * The module file is `on github <https://github.com/rcgsheffield/sheffield_hpc/blob/master/software/modulefiles/libs/intel/15/NAG/fll6i25dcl>`_.
+
+**fll6a24dpl**
+
+* The module file is on the system at ``/usr/local/modulefiles/libs/pgi/15/NAG/fll6a24dpl``
+
+
+

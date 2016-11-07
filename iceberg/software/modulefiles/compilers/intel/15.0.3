@@ -16,9 +16,7 @@ proc ModulesHelp { } {
 
 module-whatis   "Makes Intel Compiler (ifort and icc) and debuger (idb) available"
 
-conflict compilers/intel/14.0
-conflict compilers/intel/12.1.15
-conflict compilers/intel/11.0
+conflict compilers/intel
 
 # module variables
 #
@@ -38,14 +36,14 @@ prepend-path LIBRARY_PATH $intelroot/compiler/lib/intel64:$intelroot/ipp/../comp
 setenv  MIC_LD_LIBRARY_PATH $intelroot/compiler/lib/mic:$intelroot/mpirt/lib/mic:$intelroot/compiler/lib/mic:$intelroot/mkl/lib/mic:$intelroot/tbb/lib/mic
 prepend-path LD_LIBRARY_PATH $intelroot/compiler/lib/intel64:$intelroot/mpirt/lib/intel64:$intelroot/ipp/../compiler/lib/intel64:$intelroot/ipp/lib/intel64:$intelroot/ipp/tools/intel64/perfsys:$intelroot/compiler/lib/intel64:$intelroot/mkl/lib/intel64:$intelroot/tbb/lib/intel64/gcc4.4:$intelroot/debugger/libipt/intel64/lib
 setenv MIC_LIBRARY_PATH $intelroot/compiler/lib/mic:$intelroot/mpirt/lib/mic:$intelroot/tbb/lib/mic
-setenv CPATH $intelroot/ipp/include:$intelroot/mkl/include:$intelroot/tbb/include
+prepend-path CPATH $intelroot/ipp/include:$intelroot/mkl/include:$intelroot/tbb/include
 setenv NLSPATH $intelroot/compiler/lib/intel64/locale/%l_%t/%N:$intelroot/ipp/lib/intel64/locale/%l_%t/%N:$intelroot/mkl/lib/intel64/locale/%l_%t/%N:$intelroot/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:$intelroot/debugger/gdb/intel64/share/locale/%l_%t/%N
 prepend-path PATH $intelroot/bin/intel64:$intelroot/debugger/gdb/intel64_mic/bin
 
 setenv GDB_CROSS $intelroot/debugger/gdb/intel64_mic/bin/gdb-mic
 setenv MPM_LAUNCHER $intelroot/debugger/mpm/bin/start_mpm.sh
 setenv INTEL_PYTHONHOME $intelroot/debugger/python/intel64/
-setenv INFOPATH $intelroot/debugger/gdb/intel64/share/info/:$intelroot/debugger/gdb/intel64_mic/share/info/
+prepend-path INFOPATH $intelroot/debugger/gdb/intel64/share/info/:$intelroot/debugger/gdb/intel64_mic/share/info/
 setenv TBBROOT   $intelroot/tbb
 
 set     cc              icc

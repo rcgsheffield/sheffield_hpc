@@ -40,43 +40,41 @@ Next, :download:`this modulefile </iceberg/software/modulefiles/libs/gcc/4.9.2/f
 * Compiled with (and has a runtime dependency on) GCC 5.2
 * Installed using: ::
 
-  module load compilers/gcc/5.2
-  mkdir -p /usr/local/packages6/libs/gcc/5.2/fltk/1.3.3
-  #tar -xvzf ./fltk-1.3.3-source.tar.gz
-  cd fltk-1.3.3
+        module load compilers/gcc/5.2
+        mkdir -p /usr/local/packages6/libs/gcc/5.2/fltk/1.3.3
+        #tar -xvzf ./fltk-1.3.3-source.tar.gz
+        cd fltk-1.3.3
 
-  #Fixes error relating to undefined _ZN18Fl_XFont_On_Demand5valueEv
-  #Source https://groups.google.com/forum/#!topic/fltkgeneral/GT6i2KGCb3A
-  sed -i 's/class Fl_XFont_On_Demand/class FL_EXPORT Fl_XFont_On_Demand/' FL/x.H
+        #Fixes error relating to undefined _ZN18Fl_XFont_On_Demand5valueEv
+        #Source https://groups.google.com/forum/#!topic/fltkgeneral/GT6i2KGCb3A
+        sed -i 's/class Fl_XFont_On_Demand/class FL_EXPORT Fl_XFont_On_Demand/' FL/x.H
 
-  ./configure --prefix=/usr/local/packages6/libs/gcc/5.2/fltk/1.3.3 --enable-shared --enable-xft
-  make
-  make install
+        ./configure --prefix=/usr/local/packages6/libs/gcc/5.2/fltk/1.3.3 --enable-shared --enable-xft
+        make
+        make install
 
-Modulefile at ``/usr/local/modulefiles/libs/gcc/5.2/fltk/1.3.3``
+Modulefile at ``/usr/local/modulefiles/libs/gcc/5.2/fltk/1.3.3``: ::
 
-.. code-block:: none
+        #%Module1.0#####################################################################
+        ##
+        ## fltk 1.3.3 module file
+        ##
 
-  #%Module1.0#####################################################################
-  ##
-  ## fltk 1.3.3 module file
-  ##
+        ## Module file logging
+        source /usr/local/etc/module_logging.tcl
+        ##
 
-  ## Module file logging
-  source /usr/local/etc/module_logging.tcl
-  ##
+        module load compilers/gcc/5.2
 
-  module load compilers/gcc/5.2
+        proc ModulesHelp { } {
+                puts stderr "Makes the FLTK 1.3.3 library available"
+        }
 
-  proc ModulesHelp { } {
-          puts stderr "Makes the FLTK 1.3.3 library available"
-  }
+        set FLTK_DIR /usr/local/packages6/libs/gcc/5.2/fltk/1.3.3
 
-  set FLTK_DIR /usr/local/packages6/libs/gcc/5.2/fltk/1.3.3
+        module-whatis   "Makes the FLTK 1.3.3 library available"
 
-  module-whatis   "Makes the FLTK 1.3.3 library available"
-
-  prepend-path LD_LIBRARY_PATH $FLTK_DIR/lib
-  prepend-path CPLUS_INCLUDE_PATH $FLTK_DIR/include
-  prepend-path LIBRARY_PATH $FLTK_DIR/lib
-  prepend-path PATH $FLTK_DIR/bin
+        prepend-path LD_LIBRARY_PATH $FLTK_DIR/lib
+        prepend-path CPLUS_INCLUDE_PATH $FLTK_DIR/include
+        prepend-path LIBRARY_PATH $FLTK_DIR/lib
+        prepend-path PATH $FLTK_DIR/bin

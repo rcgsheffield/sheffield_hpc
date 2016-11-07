@@ -6,7 +6,8 @@ The NAG Fortran Compiler is robust, highly tested, and valued by developers all 
 Making the NAG Compiler available
 ---------------------------------
 
-After connecting to ShARC (see :ref:`ssh`),  start an interactive sesssion with the :code:`qsh` or :code:`qrsh` command. To make the NAG Fortran Compiler available, run the following module command ::
+After connecting to ShARC (see :ref:`ssh`),  start an interactive sesssion with the :code:`qsh` or :code:`qrsh` command. 
+To make a version of the NAG Fortran Compiler available, run one of following ``module`` commands: ::
 
         module load dev/NAG/6.1
         module load dev/NAG/6.0
@@ -19,7 +20,7 @@ To compile the Fortran hello world example into an executable called ``hello`` u
 
 Detailed Documentation
 ----------------------
-Once you've run the NAG Compiler module command, ``man`` documentation is available ::
+Once you've run one of the NAG Compiler module command, ``man`` documentation is available: ::
 
         man nagfor
 
@@ -27,11 +28,12 @@ Online documentation:
 
 * `PDF version of the NAG Fortran Compiler Manual <http://www.nag.co.uk/nagware/np/r60_doc/np60_manual.pdf>`_
 * `NAG Fortran Compiler Documentation Index (NAG's Website) <http://www.nag.co.uk/nagware/np.asp>`_
+* Differences between different versions can be found in the `Release Notes <https://www.nag.co.uk/nag-compiler>`_.
 
 Installation Notes
 ------------------
 
-The following notes are primarily for system sysadmins
+The following notes are primarily for system administrators:
 
 **Licensing**
 
@@ -43,12 +45,8 @@ The NAG compiler environment modules (see below) set the environment variable ``
 
 **Version 6.1**
 
-#. Perform an unattended install using `this script 
-   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/install_scripts/dev/NAG/6.1/install.sh>`__.
-   The software will be installed into ``/usr/local/packages/dev/NAG/6.1``.
-#. Install `this modulefile
-   <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/NAG/6.1>`__
-   as ``/usr/local/modulefiles/dev/NAG/6.1``
+#. Perform an unattended install using :download:`this script </sharc/software/install_scripts/dev/NAG/6.1/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/6.1``.
+#. Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/6.1>` as ``/usr/local/modulefiles/dev/NAG/6.1``
 #. Test the installation by compiling and building a sample Fortran 90 program ::
 
         module load dev/NAG/6.1
@@ -88,9 +86,9 @@ Accept the license and answer the questions as follows:
 * **Install module man pages to which directory?** ``/usr/local/packages/dev/NAG/6.0/man/man3``
 * **Suffix for module man pages [3]?** *leave as default*
 
-Install `this modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/dev/NAG/6.0>`__ as ``/usr/local/modulefiles/dev/NAG/6.0``
+Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/6.0>` as ``/usr/local/modulefiles/dev/NAG/6.0``
 
-Test the installation by compiling and building a sample Fortran 90 program ::
+Finally, test the installation by compiling and building a sample Fortran 90 program ::
 
         module load dev/NAG/6.0
         nagfor -o /tmp/f90_util /usr/local/packages/dev/NAG/6.0/lib/NAG_Fortran/f90_util.f90

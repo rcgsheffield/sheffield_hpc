@@ -12,9 +12,15 @@ wxWidgets
 
 Usage
 -----
-.. code-block:: none
+
+Activate wxWidgets using: ::
 
         module load libs/gcc/4.9.2/wxWidgets/3.1.0
+
+You can then check that wxWidgets is available using: ::
+
+        $ wx-config --version
+        3.1.0
 
 Installation notes
 ------------------

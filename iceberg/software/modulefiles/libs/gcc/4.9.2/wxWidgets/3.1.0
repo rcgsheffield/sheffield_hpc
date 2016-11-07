@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## wxWidgets 3.1.0 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+
+set wxvers 3.1.0
+
+proc ModulesHelp { } {
+    global wxvers 
+    puts stderr "Adds wxWidgets $wxvers to your environment"
+}
+module-whatis "Adds wxWidgets $wxvers to your environment"
+
+set wxvers /usr/local/packages6/libs/gcc/4.9.2/wxWidgets/$wxvers
+
+prepend-path    PATH             $wxvers/bin
+prepend-path    LD_LIBRARY_PATH  $wxvers/lib
+prepend-path    LIBRARY_PATH     $wxvers/lib
+prepend-path    CPATH            $wxvers/include/wx-3.1
+prepend-path    CPATH            $wxvers/lib/wx/include/gtk2-unicode-3.1/
+prepend-path    MANPATH          $wxvers/share/man
+setenv          TMPDIR           /scratch/

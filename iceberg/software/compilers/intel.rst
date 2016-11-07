@@ -1,4 +1,4 @@
-.. _`Intel Compilers`:
+.. _iceberg_intel_compilers:
 
 Intel Compilers
 ===============

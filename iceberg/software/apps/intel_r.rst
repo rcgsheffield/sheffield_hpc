@@ -9,7 +9,7 @@ R (Intel Build)
    :URL: http://www.r-project.org/
    :Documentation: http://www.r-project.org/
 
-R is a statistical computing language. This version of R is built using the :ref:`Intel Compilers` and the Intel Math Kernel Library. This combination can result in significantly faster runtimes in certain circumstances.
+R is a statistical computing language. This version of R is built using the :ref:`Intel compilers <iceberg_intel_compilers>` and the Intel Math Kernel Library. This combination can result in significantly faster runtimes in certain circumstances.
 
 Most R extensions are written and tested for the gcc suite of compilers so it is recommended that you perform testing before switching to this version of R.
 

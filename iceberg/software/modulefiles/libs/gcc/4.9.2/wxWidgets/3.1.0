@@ -14,12 +14,12 @@ proc ModulesHelp { } {
 }
 module-whatis "Adds wxWidgets $wxvers to your environment"
 
-set wxvers /usr/local/packages6/libs/gcc/4.9.2/wxWidgets/$wxvers
+set wxroot /usr/local/packages6/libs/gcc/4.9.2/wxWidgets/$wxvers
 
-prepend-path    PATH             $wxvers/bin
-prepend-path    LD_LIBRARY_PATH  $wxvers/lib
-prepend-path    LIBRARY_PATH     $wxvers/lib
-prepend-path    CPATH            $wxvers/include/wx-3.1
-prepend-path    CPATH            $wxvers/lib/wx/include/gtk2-unicode-3.1/
-prepend-path    MANPATH          $wxvers/share/man
+prepend-path    PATH             $wxroot/bin
+prepend-path    LD_LIBRARY_PATH  $wxroot/lib
+prepend-path    LIBRARY_PATH     $wxroot/lib
+prepend-path    CPATH            $wxroot/include/wx-3.1
+prepend-path    CPATH            $wxroot/lib/wx/include/gtk2-unicode-3.1/
+prepend-path    MANPATH          $wxroot/share/man
 setenv          TMPDIR           /scratch/

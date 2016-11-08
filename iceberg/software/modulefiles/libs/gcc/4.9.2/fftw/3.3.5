@@ -1,0 +1,25 @@
+#%Module1.0#####################################################################
+##
+## fftw 3.3.5 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+
+set fftwvers 3.3.5
+set compiler gcc
+set compilervers 4.9.2
+
+proc ModulesHelp { } {
+        global fftwvers
+        puts stderr "Makes the FFTW $fftwvers library available"
+}
+module-whatis   "Makes the FFTW $fftwvers library available"
+
+set FFTW_DIR /usr/local/packages6/libs/$compiler/$compilervers/fftw/$fftwvers
+
+prepend-path CPATH $FFTW_DIR/include
+prepend-path LD_LIBRARY_PATH $FFTW_DIR/lib
+prepend-path LIBRARY_PATH $FFTW_DIR/lib
+prepend-path MANPATH $FFTW_DIR/share/man
+prepend-path PATH $FFTW_DIR/bin

@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+#
+# Intel Math Kernel Library (MKL) 2015.3.187 module file
+# 
+################################################################################
+
+# Module file logging
+source /usr/local/etc/module_logging.tcl
+
+set     mklvers      11.2.3
+
+proc ModulesHelp { } {
+        global mklvers
+
+        puts stderr "   Makes the `Intel Math Kernel Library (MLK) $mklvers' available for use"
+}
+
+module-whatis   "Makes the Intel Math Kernel Library (MLK) mklvers available for use"
+
+set     intelpsroot   /usr/local/packages6/compilers/intel/2015/composer_xe_2015.3.187/
+
+# Environment variables determined using
+# $ env2 -from bash -to modulecmd "/usr/local/packages6/compilers/intel/2015/composer_xe_2015.3.187/mkl/bin/mklvars.sh intel64" | sed -e "s#/usr/local/packages6/compilers/intel/2015/composer_xe_2015.3.187#\$intelpsroot#g" -e 's/[{}]//g'
+#
+append-path MIC_LD_LIBRARY_PATH $intelpsroot/compiler/lib/mic;
+append-path MIC_LD_LIBRARY_PATH $intelpsroot/mkl/lib/mic;
+append-path CPATH $intelpsroot/mkl/include;
+prepend-path LD_LIBRARY_PATH $intelpsroot/mkl/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compiler/lib/intel64;
+prepend-path MANPATH $intelpsroot/man/en_US;
+append-path LIBRARY_PATH $intelpsroot/compiler/lib/intel64;
+append-path LIBRARY_PATH $intelpsroot/mkl/lib/intel64;
+append-path NLSPATH $intelpsroot/mkl/lib/intel64/locale/%l_%t/%N;

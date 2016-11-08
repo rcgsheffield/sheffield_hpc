@@ -19,7 +19,7 @@ Use the following command to make Mark 25 of the serial (1 CPU core) version of 
 
     module load libs/intel/15/NAG/fll6i25dcl
 
-Once you have ensured that you have loaded the module for the :ref:`Intel Compilers` you can compile your NAG program using ::
+Once you have ensured that you have loaded the module for the :ref:`Intel compilers <iceberg_intel_compilers>` you can compile your NAG program using ::
 
     ifort your_code.f90 -lnag_mkl -o your_code.exe
 

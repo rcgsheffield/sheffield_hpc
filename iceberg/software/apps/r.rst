@@ -127,7 +127,7 @@ For full details about the functions made available by the Rmath library, see se
 
 Accelerated version of R
 ------------------------
-There is an experimental, accelerated version of R installed on Iceberg that makes use of the :ref:`Intel Compilers` and the Intel MKL. See :ref:`Intel R` for details.
+There is an experimental, accelerated version of R installed on Iceberg that makes use of the :ref:`Intel compilers <iceberg_intel_compilers>` and the Intel MKL. See :ref:`Intel R` for details.
 
 Installation Notes
 ------------------

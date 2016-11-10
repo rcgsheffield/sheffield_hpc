@@ -1,0 +1,29 @@
+#%Module1.0#####################################################################
+##
+## cuDNN 5.0 module file for CUDA 8.0
+##
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "	Adds `Nvidia cuDNN-$version for CUDA 8.0' to your PATH environment variable and necessary libraries"
+}
+
+set     version 5.0
+
+module-whatis   "loads the necessary `cuDNN-$version for CUDA 8.0' library paths"
+
+module load libs/cuda/8.0.44
+
+set CUDNN_DIR /usr/local/packages6/libs/binlibs/cudnn/cuda8.0/cudnn5.0/cuda
+
+prepend-path C_INCLUDE_PATH $CUDNN_DIR/include/
+prepend-path CPLUS_INCLUDE_PATH $CUDNN_DIR/include/
+prepend-path LD_LIBRARY_PATH $CUDNN_DIR/lib64/
+prepend-path CPATH $CUDNN_DIR/include/
+prepend-path LIBRARY_PATH $CUDNN_DIR/lib64/

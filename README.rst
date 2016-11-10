@@ -34,9 +34,9 @@ Install the following:-
 
 * `Anaconda Python <https://store.continuum.io/cshop/anaconda>`_.
 
-Install the following module ::
+Install the following modules ::
 
-     pip install sphinx_bootstrap_theme
+     pip install sphinx sphinx_bootstrap_theme
 
 To build the HTML documentation run::
 
@@ -61,13 +61,12 @@ On first run, MikTeX will prompt you to install various extra LaTeX packages.
 Building the documentation on a local Linux machine
 ###################################################
 
-Have
 
-* Python 2
-* sphinx
-* sphinx_bootstrap_theme
+Install the following Python modules ::
 
-installed, then run ::
+     pip install sphinx sphinx_bootstrap_theme
+
+Then run ::
 
      make html
 

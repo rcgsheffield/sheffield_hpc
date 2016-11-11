@@ -16,9 +16,9 @@ The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated library
 Usage
 -----
 
-Currently only cuDNN 5.0 is supported for CUDA versions 8.0.x and 7.5.x. An appropriate CUDA module is loaded automatically so there's no need for a separate CUDA module load call.
+Currently cuDNN 5.0 is available for CUDA versions 8.0.x and 7.5.x. An appropriate **CUDA module is loaded automatically** so there's no need for a separate CUDA module load call.
 
-Load the appropriate version with the following commands ::
+Load the appropriate cuDNN version with one of the following commands: ::
 
     module load libs/binlibs/cudnn/cuda8.0/cudnn5.0
     module load libs/binlibs/cudnn/cuda7.5/cudnn5.0    

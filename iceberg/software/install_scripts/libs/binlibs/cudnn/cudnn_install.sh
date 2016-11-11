@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#Assume the .tar.gz file is in current working directory
+#The script installs cuDNN 5.0 for CUDA 7.5 and CUDA 8.0 in to the correct iceberg directory
+#We assume that the .tgz fils are in current working directory
 
 #Install cuDNN 5.0 for CUDA 7.5
 install_dir=/usr/local/packages6/libs/binlibs/cudnn/cuda7.5/cudnn5.0

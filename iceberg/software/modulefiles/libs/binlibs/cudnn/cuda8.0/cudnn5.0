@@ -11,7 +11,7 @@ source /usr/local/etc/module_logging.tcl
 proc ModulesHelp { } {
         global version
 
-        puts stderr "	Adds `Nvidia cuDNN-$version for CUDA 8.0' to your PATH environment variable and necessary libraries"
+        puts stderr "	Adds `Nvidia cuDNN-$version for CUDA 8.0' to your PATH environment variable and necessary libraries and also loads CUDA 8.0"
 }
 
 set     version 5.0

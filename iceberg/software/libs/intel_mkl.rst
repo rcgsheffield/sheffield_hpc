@@ -1,17 +1,28 @@
-.. _sharc-intel-mkl:
+.. _iceberg_intel_mkl:
 
 Intel Math Kernel Library
 =========================
 
-Intel's Math Kernel Library (MKL) provides highly optimized, threaded and vectorized functions to maximize performance on each processor family. It Utilises de-facto standard C and Fortran APIs for compatibility with BLAS, LAPACK and FFTW functions from other math libraries.
+Intel's Math Kernel Library (MKL) provides highly optimized, threaded and
+vectorized functions to maximize performance on each processor family. It
+Utilises de-facto standard C and Fortran APIs for compatibility with BLAS,
+LAPACK and FFTW functions from other math libraries.
 
-Parallel Studio Composer Edition version
-----------------------------------------
+Interactive usage
+-----------------
 
-MKL can be used with and without :ref:`other Parallel Studio packages <sharc-intel-parallel-studio>`.
-To access it: ::
+The MKL was installed along with the :ref:`Intel compilers
+<iceberg_intel_compilers>` as part of Intel Parallel Studio.  The MKL can be
+used with or without other Parallel Studio packages (such as the Intel
+compilers).  
 
-    module load libs/intel-mkl/2017.0/binary
+To activate just the MKL, use one of : ::
+
+    module load libs/binlibs/intel-mkl/2017.0
+
+    module load libs/binlibs/intel-mkl/11.2.3
+
+Note that 2017.0 is newer than 11.2.3.
 
 Sample C and Fortran programs demonstrating matrix multiplication 
 are available for **version 2017.0** in the directory ``$MKL_SAMPLES``: ::
@@ -26,8 +37,8 @@ run ``make`` to compile: ::
 
         $ qrsh 
         $ cp -r $MKL_SAMPLES/ ~/mkl_samples
-        $ module load dev/intel-compilers/17.0.0 
-        $ module load libs/intel-mkl/2017.0/binary
+        $ module load libs/binlibs/intel-mkl/2017.0
+        $ module load libs/binlibs/intel-mkl/2017.0
         $ cd ~/mkl_samples/mkl_fortran_samples/matrix_multiplication
         $ make
 
@@ -70,11 +81,6 @@ using ``qsh``, load MKL, then run: ::
 
         $ firefox $MKL_SAMPLES/mkl_fortran_samples/matrix_multiplication/tutorial/en/index.htm
 
-Licensing and availability
---------------------------
-
-See the information on :ref:`Parallel Studio licensing <sharc-intel-parallel-studio>`.
-
 Installation Notes
 ------------------
 
@@ -82,6 +88,18 @@ The following notes are primarily for system administrators.
 
 **Intel MKL 2017.0**
 
-Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
+Installed as part of :ref:`Parallel Studio Composer Edition 2017
+<iceberg_intel_parallel_studio>`.
 
-`This modulefile <https://github.com/rcgsheffield/sheffield_hpc/tree/master/sharc/software/modulefiles/libs/intel-mkl/2017.0>`__ was installed as ``/usr/local/modulefiles/libs/intel-mkl/2017.0/binary``.
+:download:`This modulefile
+</iceberg/software/modulefiles/libs/binlibs/intel-mkl/2017.0>` was installed as
+``/usr/local/modulefiles/libs/binlibs/intel-mkl/2017.0``.
+
+**Intel MKL 11.2.3**
+
+Installed as part of :ref:`Intel Parallel Studio Composer Edition 2015 Update 3
+<iceberg_intel_compilers>`.
+
+:download:`This modulefile
+</iceberg/software/modulefiles/libs/binlibs/intel-mkl/11.2.3>` was installed as
+``/usr/local/modulefiles/libs/binlibs/intel-mkl/11.2.3``

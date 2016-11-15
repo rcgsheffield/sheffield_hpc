@@ -18,17 +18,17 @@ module-whatis   "Makes the `Intel Data Analytics Accelleration Library (DAAL)' a
 # module variables
 #
 set     version      2017.0
-set     intelpsroot     /usr/local/packages/dev/intel-ps-xe-ce/$version/binary/
+set     intelpsroot     /usr/local/packages6/compilers/intel-ps-xe-ce/$version/binary/
 
 # Variables determined using
-# env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary/compilers_and_libraries_2017.0.098/linux/daal/bin/daalvars.sh intel64" | sed -e "s#/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary#\$intelpsroot#g" -e 's/[{}]//g'
+# env2 -from bash -to modulecmd "/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary/compilers_and_libraries_2017.0.098/linux/daal/bin/daalvars.sh intel64" | sed -e "s#/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary#\$intelpsroot#g" -e 's/[{}]//g'
 prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/daal/lib/intel64_lin;
 prepend-path CLASSPATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/daal/lib/daal.jar;
 prepend-path CPATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/daal/include;
 prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/daal/lib/intel64_lin;
 
 # License file (points at license server)
-setenv INTEL_LICENSE_FILE /usr/local/packages/dev/intel-ps-xe-ce/license.lic
+setenv INTEL_LICENSE_FILE /usr/local/packages6/compilers/intel-ps-xe-ce/license.lic
 
 # Sample code
 setenv DAAL_SAMPLES $intelpsroot/samples_2017/en/daal/

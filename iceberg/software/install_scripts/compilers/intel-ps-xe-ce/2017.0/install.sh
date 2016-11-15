@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install 'Intel Parallel Studio XE 2017 Composer Edition' on sharc
+# Install 'Intel Parallel Studio XE 2017 Composer Edition' on Iceberg
 
 ###############
 # Set variables
@@ -13,21 +13,21 @@ export TMPDIR="${TMPDIR:-/tmp}"
 # Store unpacked source files
 export SOURCE_DIR="${TMPDIR}/${USER}/intel/${VERS}"
 export TARBALL_FNAME="parallel_studio_xe_${SHORT_VERS}_composer_edition.tgz"
-export APPLICATION_ROOT="/usr/local/packages"
-export INSTALL_ROOT_DIR="${APPLICATION_ROOT}/dev/intel-ps-xe-ce"
+export APPLICATION_ROOT="/usr/local/packages6"
+export INSTALL_ROOT_DIR="${APPLICATION_ROOT}/compilers/intel-ps-xe-ce"
 # Install in this dir
 export INSTALL_DIR="${INSTALL_ROOT_DIR}/${VERS}/binary"
 # License file (contains details of license server)
-export LIC_FPATH="/usr/local/packages/dev/intel-ps-xe-ce/license.lic"
+export LIC_FPATH="/usr/local/packages6/compilers/intel/license.lic"
 
 # Mapping from modulefile sources to destinations
 declare -A modfile_dests_map
 MODFILE_DEST_ROOT="/usr/local/modulefiles/"
-modfile_dests_map["compilers"]="${MODFILE_DEST_ROOT}/dev/intel-compilers/${VERS}/binary"
-modfile_dests_map["daal"]="${MODFILE_DEST_ROOT}/libs/intel-daal/${VERS}/binary"
-modfile_dests_map["ipp"]="${MODFILE_DEST_ROOT}/libs/intel-ipp/${VERS}/binary"
-modfile_dests_map["mkl"]="${MODFILE_DEST_ROOT}/libs/intel-mkl/${VERS}/binary"
-modfile_dests_map["tbb"]="${MODFILE_DEST_ROOT}/libs/intel-tbb/${VERS}/binary"
+modfile_dests_map["compilers"]="${MODFILE_DEST_ROOT}/compilers/intel-compilers/${VERS}"
+modfile_dests_map["daal"]="${MODFILE_DEST_ROOT}/libs/binlibs/intel-daal/${VERS}"
+modfile_dests_map["ipp"]="${MODFILE_DEST_ROOT}/libs/binlibs/intel-ipp/${VERS}"
+modfile_dests_map["mkl"]="${MODFILE_DEST_ROOT}/libs/binlibs/intel-mkl/${VERS}"
+modfile_dests_map["tbb"]="${MODFILE_DEST_ROOT}/libs/binlibs/intel-tbb/${VERS}"
 
 ################
 # Error handling
@@ -77,8 +77,10 @@ cd $extracted_dir
 ###########
 # Configure
 ###########
+# NB need to 'continue with optional error' as Scientific Linux 6.8
+# isn't an officially supported OS (yet RHEL 6.x and Centos 6.x are)
 sed -e "s:.*ACCEPT_EULA=.*:ACCEPT_EULA=accept:" \
-    -e "s:.*CONTINUE_WITH_OPTIONAL_ERROR=.*:CONTINUE_WITH_OPTIONAL_ERROR=no:" \
+    -e "s:.*CONTINUE_WITH_OPTIONAL_ERROR=.*:CONTINUE_WITH_OPTIONAL_ERROR=yes:" \
     -e "s:.*PSET_INSTALL_DIR=.*:PSET_INSTALL_DIR=${INSTALL_DIR}:" \
     -e "s:.*ACTIVATION_LICENSE_FILE=.*:ACTIVATION_LICENSE_FILE=${LIC_FPATH}:" \
     -e "s:.*PSET_MODE=.*:PSET_MODE=install:" \
@@ -89,11 +91,14 @@ sed -e "s:.*ACCEPT_EULA=.*:ACCEPT_EULA=accept:" \
 #########
 # Install
 #########
-# Try to install but if an install previously failed then
-# try to repair the install instead
-./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR} || \
-    sed -i -e "s:.*PSET_MODE=.*:PSET_MODE=repair:" silent.cfg.custom && \
-    ./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR} 
+# Need 'true' here as otherwise this script will exit due to the error trapping
+# (see above) and the Intel install.sh returning a non-zero exit code (as a
+# result of the OS being unsupported (but not a problem)).
+./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR} || true
+
+# sed -i -e "s:.*PSET_MODE=.*:PSET_MODE=repair:" silent.cfg.custom && \
+# ./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR}
+
 #######################
 # Install code examples
 #######################

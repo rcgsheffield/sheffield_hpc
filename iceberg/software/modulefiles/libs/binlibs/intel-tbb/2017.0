@@ -18,10 +18,10 @@ module-whatis   "Makes `Intel Threading Building Blocks (TBB)' available for use
 # module variables
 #
 set     version      2017.0
-set     intelpsroot     /usr/local/packages/dev/intel-ps-xe-ce/$version/binary/
+set     intelpsroot    /usr/local/packages6/libs/intel-tbb/$version/binary
 
 # Variables determined using
-# env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary/compilers_and_libraries_2017.0.098/linux/tbb/bin/tbbvars.sh intel64" | sed -e "s#/usr/local/packages/dev/intel-ps-xe-ce/2017.0/binary#\$intelpsroot#g" -e 's/[{}]//g'
+# env2 -from bash -to modulecmd "/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary/compilers_and_libraries_2017.0.098/linux/tbb/bin/tbbvars.sh intel64" | sed -e "s#/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary#\$intelpsroot#g" -e 's/[{}]//g'
 prepend-path MIC_LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/mic;
 prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/intel64/gcc4.7;
 prepend-path MIC_LIBRARY_PATH $intelpsroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/mic;
@@ -30,7 +30,7 @@ prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_2017.0.098/lin
 setenv TBBROOT $intelpsroot/compilers_and_libraries_2017.0.098/linux/tbb;
 
 # License file (points at license server)
-setenv INTEL_LICENSE_FILE /usr/local/packages/dev/intel-ps-xe-ce/license.lic
+setenv INTEL_LICENSE_FILE /usr/local/packages6/compilers/intel/license.lic
 
 # Sample code
 setenv TBB_SAMPLES $intelpsroot/samples_2017/en/tbb/

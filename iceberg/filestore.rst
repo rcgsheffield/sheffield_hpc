@@ -9,7 +9,7 @@ Here are the current details of filestore available to each user.
 
 Home directory
 --------------
-All users have a home directory in the location ``/home/username``. The filestore quota is **10 GB** per user.
+All users have a home directory in the location ``/home/yourusername``. The filestore quota is **10 GB** per user.
 
 **Backup policy:** ``/home`` has backup snapshots taken every 4 hours and we keep the 10 most recent. ``/home`` also has daily snapshots taken each night, and we keep 28 days worth, mirrored onto a separate storage system.
 
@@ -17,13 +17,21 @@ The filesystem is NFS.
 
 Data directory
 --------------
-Every user has access to a much larger data-storage area provided at the location ``/data/username``.
+Every user has access to a much larger data-storage area provided at the location ``/data/yourusername``.
 
 The quota for this area is **100 GB** per user.
 
 **Backup policy:** ``/data`` has snapshots taken every 4 hours and we keep the 10 most recent. ``/data`` also has daily snapshots taken each night, and we keep 7 days worth, but this is not mirrored.
 
 The filesystem is NFS.
+
+**Note**: the directory ``/data/yourusername`` is **made available to you (mounted) on demand**: 
+if you list the contents of ``/data`` after first logging on then this subdirectory might not be shown.
+However, if you list the contents of ``/data/yourusername`` itself or change into that directory
+then its contents will appear.  
+Later on if you list the contents of ``/data`` again 
+you may find that ``/data/yourusername`` has disappeared again, as 
+it is automatically *unmounted* following a period of inactivity.  
 
 Fastdata directory
 ------------------

@@ -1,0 +1,117 @@
+#%Module1.0#####################################################################
+##
+## Intel compilers 17.0.0 module file
+## 
+################################################################################
+
+## Module file logging
+#source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global $compilerversion
+
+        puts stderr "   Makes `Intel C++ and Fortran compilers plus debugger version $compilerversion' available for use"
+}
+
+module-whatis   "Makes Intel C++ and Fortran compilers (ifort and icc) and debugger available"
+
+conflict compilers/intel
+
+set     compilerversion 17.0.0
+set     parallelstudioversion 2017.0
+set     intelroot    /usr/local/packages6/compilers/intel-ps-xe-ce/$parallelstudioversion/binary
+ 
+# load java  ( needed with debugging etc. ) 
+module load apps/java
+
+# Compiler variables determined using
+# env2 -from bash -to modulecmd "/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary/bin/compilervars.sh intel64" | sed -e "s#/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary#\$intelroot#g" -e 's/[{}]//g'
+prepend-path MIC_LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/mic;
+prepend-path MIC_LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/lib/mic;
+prepend-path MIC_LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/mic;
+prepend-path MIC_LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/ipp/lib/mic;
+prepend-path MIC_LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/mic;
+prepend-path MIC_LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/mic/lib;
+prepend-path PATH $intelroot/debugger_2017/gdb/intel64_mic/bin;
+prepend-path PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/intel64/bin;
+prepend-path PATH $intelroot/compilers_and_libraries_2017.0.098/linux/bin/intel64;
+prepend-path MANPATH $intelroot/documentation_2017/en/debugger//gdb-igfx/man/;
+prepend-path MANPATH $intelroot/documentation_2017/en/debugger//gdb-mic/man/;
+prepend-path MANPATH $intelroot/documentation_2017/en/debugger//gdb-ia/man/;
+prepend-path MANPATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/man;
+prepend-path MANPATH $intelroot/man/common;
+prepend-path LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/daal/lib/intel64_lin;
+prepend-path LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/intel64/gcc4.7;
+prepend-path LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/lib/intel64;
+prepend-path LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/intel64;
+prepend-path LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/ipp/lib/intel64;
+prepend-path MIC_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/mic;
+prepend-path MIC_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/lib/mic;
+prepend-path MIC_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/mic;
+prepend-path MIC_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/mic;
+prepend-path MIC_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/mic/lib;
+prepend-path CLASSPATH $intelroot/compilers_and_libraries_2017.0.098/linux/daal/lib/daal.jar;
+prepend-path CLASSPATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/intel64/lib/mpi.jar;
+append-path INTEL_LICENSE_FILE $intelroot/compilers_and_libraries_2017.0.098/linux/licenses;
+append-path INTEL_LICENSE_FILE /opt/intel/licenses;
+append-path INTEL_LICENSE_FILE /home/sa_cs1wf/intel/licenses;
+prepend-path CPATH $intelroot/compilers_and_libraries_2017.0.098/linux/daal/include;
+prepend-path CPATH $intelroot/compilers_and_libraries_2017.0.098/linux/tbb/include;
+prepend-path CPATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/include;
+prepend-path CPATH $intelroot/compilers_and_libraries_2017.0.098/linux/ipp/include;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/daal/lib/intel64_lin;
+prepend-path LD_LIBRARY_PATH $intelroot/debugger_2017/libipt/intel64/lib;
+prepend-path LD_LIBRARY_PATH $intelroot/debugger_2017/iga/lib;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/tbb/lib/intel64/gcc4.7;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/ipp/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/mic/lib;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/mpi/intel64/lib;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/intel64_lin;
+prepend-path LD_LIBRARY_PATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/intel64;
+prepend-path INFOPATH $intelroot/documentation_2017/en/debugger//gdb-igfx/info/;
+prepend-path INFOPATH $intelroot/documentation_2017/en/debugger//gdb-mic/info/;
+prepend-path INFOPATH $intelroot/documentation_2017/en/debugger//gdb-ia/info/;
+prepend-path NLSPATH $intelroot/debugger_2017/gdb/intel64/share/locale/%l_%t/%N;
+prepend-path NLSPATH $intelroot/debugger_2017/gdb/intel64_mic/share/locale/%l_%t/%N;
+prepend-path NLSPATH $intelroot/compilers_and_libraries_2017.0.098/linux/mkl/lib/intel64/locale/%l_%t/%N;
+prepend-path NLSPATH $intelroot/compilers_and_libraries_2017.0.098/linux/compiler/lib/intel64/locale/%l_%t/%N;
+
+# Debugger variables determined using
+# env2 -from bash -to modulecmd "/usr/local/packages6/compilers/intel-ps-xe-ce/2017.0/binary/debugger_2017/bin/debuggervars.sh intel64" | sed -e "s#/usr/local/packages6/compilers/intel-pe-xe-ce/2017.0/binary#\$intelroot#g" -e 's/[{}]//g'
+#
+setenv       GDB_CROSS        $intelroot/debugger_2017/gdb/intel64_mic/bin/gdb-mic;
+setenv       INTEL_PYTHONHOME $intelroot/debugger_2017/python/intel64/;
+prepend-path PATH             $intelroot/debugger_2017/gdb/intel64_mic/bin;
+prepend-path LD_LIBRARY_PATH  $intelroot/debugger_2017/libipt/intel64/lib;
+prepend-path LD_LIBRARY_PATH  $intelroot/debugger_2017/iga/lib;
+prepend-path MANPATH          $intelroot/documentation_2017/en/debugger//gdb-igfx/man/;
+prepend-path MANPATH          $intelroot/documentation_2017/en/debugger//gdb-mic/man/;
+prepend-path MANPATH          $intelroot/documentation_2017/en/debugger//gdb-ia/man/;
+setenv       MPM_LAUNCHER     $intelroot/debugger_2017/mpm/mic/bin/start_mpm.sh;
+append-path  INFOPATH         $intelroot/documentation_2017/en/debugger//gdb-ia/info/;
+append-path  INFOPATH         $intelroot/documentation_2017/en/debugger//gdb-mic/info/;
+append-path  INFOPATH         $intelroot/documentation_2017/en/debugger//gdb-igfx/info/;
+setenv       GDBSERVER_MIC    $intelroot/debugger_2017/gdb/targets/mic/bin/gdbserver;
+prepend-path NLSPATH          $intelroot/debugger_2017/gdb/intel64/share/locale/%l_%t/%N;
+prepend-path NLSPATH          $intelroot/debugger_2017/gdb/intel64_mic/share/locale/%l_%t/%N;
+
+# Shorthand variables for compilers
+
+set     cc              icc
+set     cxx             icpc
+set     f77             ifort
+set     f90             ifort
+set     f95             ifort
+set     fc              ifort
+setenv          CC              $cc
+setenv          CXX             $cxx
+setenv          F77             $f77
+setenv          FC              $fc
+setenv          F90             $f90
+setenv          F95             $f95
+
+# License file (points at license server)
+setenv INTEL_LICENSE_FILE /usr/local/packages6/compilers/intel/license.lic

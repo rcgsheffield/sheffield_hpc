@@ -1,4 +1,4 @@
-.. _sharc-intel-tbb:
+.. _iceberg_intel_tbb:
 
 Intel Threading Building Blocks
 ===============================
@@ -11,7 +11,7 @@ Interactive usage
 -----------------
 
 TBB can be used with and without :ref:`other Parallel Studio packages
-<sharc-intel-parallel-studio>`.
+<iceberg_intel_parallel_studio>`.
 
 To make use of it you first need to start an :ref:`interactive session that has access to multiple cores <sge-queue>`.
 Here we request six cores from the clusters' scheduler: ::
@@ -20,7 +20,7 @@ Here we request six cores from the clusters' scheduler: ::
 
 Next, we need to *active* a specific version of TBB: ::
 
-        $ module load libs/intel-tbb/2017.0/binary
+        $ module load libs/binlibs/intel-tbb/2017.0
 
 You can find sample TBB programs in the directory ``$TBB_SAMPLES``: ::
 
@@ -48,9 +48,8 @@ then running ``make``: ::
          Done with serial version.
          Done with parallel version.
          Done validating results.
-        Serial version ran in 3.79692 seconds
-        Parallel version ran in 0.794959 seconds
-        Resulting in a speedup of 4.77625
+        Serial version ran in 8.51745 seconds
+        Parallel version ran in 1.51716 seconds
 
 Many of the sample directories contain HTML documentation.  
 To read this you need to start an :ref:`interactive graphical session <sge-queue>` (using ``qsh`` or ``qrshx``) then run: ::
@@ -68,7 +67,7 @@ Licensing and availability
 --------------------------
 
 See the information on :ref:`Parallel Studio licensing
-<sharc-intel-parallel-studio>`.
+<iceberg_intel_parallel_studio>`.
 
 Installation Notes
 ------------------
@@ -78,8 +77,8 @@ The following notes are primarily for system administrators.
 **Intel TBB 2017.0**
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2017
-<sharc-intel-parallel-studio>`.
+<iceberg_intel_parallel_studio>`.
 
-:download:`This modulefile 
-</sharc/software/modulefiles/libs/intel-tbb/2017.0/binary>` was installed as
-``/usr/local/modulefiles/libs/intel-tbb/2017.0/binary``.
+:download:`This modulefile
+</iceberg/software/modulefiles/libs/binlibs/intel-tbb/2017.0>` was installed as
+``/usr/local/modulefiles/libs/binlibs/intel-tbb/2017.0``.

@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## Netlogo 5.3.1 modulefile
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+
+proc ModulesHelp { } {
+        puts stderr "Makes Netlogo 5.3.1 available"
+}
+
+module-whatis   "Makes Netlogo v5.3.1 available"
+
+prepend-path PATH "/usr/local/packages6/apps/binapps/netlogo/netlogo-5.3.1-64"
+setenv NETLOGO_DIR "/usr/local/packages6/apps/binapps/netlogo/netlogo-5.3.1-64/app"

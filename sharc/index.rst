@@ -3,8 +3,15 @@
 ShARC
 =====
 
-The University of Sheffield's new HPC service, ShARC, is currently under development and is not yet ready for users to access.
-Please use our current system, Iceberg, for now.
+This is the documentation for ShARC (Sheffield Advanced Research Computer), The University of Sheffield's new High Performance Computing System and the successor to Iceberg.
 
 .. toctree::
-   software/index
+  :hidden:
+  :maxdepth: 1
+  :glob:
+
+  software/index
+  differences
+
+* :ref:`sharc-software`
+* :ref:`sharc-differences`

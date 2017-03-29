@@ -121,8 +121,8 @@ Installation Notes
 ------------------
 These are primarily for system administrators.
 
-Version 16.1
-^^^^^^^^^^^^
+Version 16.11
+^^^^^^^^^^^^^
 
 Serial (no MPI) and parallel (MPI) builds were compiled. 
 Both builds were compiled with Intel compiler 15.0.3 (including the Intel MKL 2015.3 for BLAS and FFT routines).  
@@ -212,6 +212,8 @@ The directory ``CASTEP-8.0`` was then deleted and the parallel version was insta
 
 Modulefiles
 -----------
+* :download:`CASTEP 16.11-serial </iceberg/software/modulefiles/apps/intel/15/castep/16.11-serial>`
+* :download:`CASTEP 16.11-parallel </iceberg/software/modulefiles/apps/intel/15/castep/16.11-parallel>`
 * :download:`CASTEP 16.1-serial </iceberg/software/modulefiles/apps/intel/15/castep/16.1-serial>`
 * :download:`CASTEP 16.1-parallel </iceberg/software/modulefiles/apps/intel/15/castep/16.1-parallel>`
 * :download:`CASTEP 8.0-serial </iceberg/software/modulefiles/apps/intel/15/castep/8.0-serial>`

@@ -9,6 +9,8 @@ source /usr/local/etc/module_logging.tcl
 
 module load compilers/gcc/5.2
 
+module load libs/gcc/4.4.7/zlib/1.2.8
+
 proc ModulesHelp { } {
         puts stderr "Makes the vcftools library available"
 }

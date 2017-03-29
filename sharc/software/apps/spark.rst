@@ -88,14 +88,22 @@ Spark 2.0 was built using the system gcc 4.8.5 ::
     cd ..
     mv spark-2.1.0 /usr/local/packages/apps/spark/2.1
 
+The default install of Spark is incredibly verbose. Even a 'Hello World' program results in many lines of ``[INFO]``.
+To make it a little quieter, the default log4j level has been reduced from ``INFO`` to ``WARN``: ::
+
+    cd /usr/local/packages/apps/spark/2.1/spark-2.1.0/conf/
+    cp log4j.properties.template log4j.properties
+    
+The file ``log4j.properties`` was then edited so that the line beginning ``log4j.rootCategory`` reads: ::
+ 
+     log4j.rootCategory=WARN, console
+
 Modulefile
 ----------
 
 **Version 2.1**
 
-* The module file is on the system at `/usr/local/modulefiles/apps/spark/2.1.0/gcc-4.8.5`
-
-Its contents are ::
+The following module file is on the system at ``/usr/local/modulefiles/apps/spark/2.1.0/gcc-4.8.5`` ::
 
     #%Module1.0#####################################################################
     ##
@@ -104,8 +112,10 @@ Its contents are ::
 
     ## Module file logging
     source /usr/local/etc/module_logging.tcl
-    ##
+
+    set sparkhome /usr/local/packages/apps/spark/2.1/spark-2.1.0
 
     # Use only one core. User can override this if they want
     setenv MASTER local\[1\]
-    prepend-path PATH /usr/local/packages/apps/spark/2.1/spark-2.1.0/bin/
+    setenv SPARK_HOME $sparkhome
+    prepend-path PATH $sparkhome/bin

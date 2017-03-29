@@ -12,6 +12,7 @@ IPP can be used with and without :ref:`other Parallel Studio packages <sharc-int
 To access it, use one of the following: ::
 
         module load libs/intel-ipp/2017.0/binary
+        module load libs/intel-ipp/2016.1/binary
         module load libs/intel-ipp/2015.7/binary
 
 Licensing and availability
@@ -29,6 +30,12 @@ The following notes are primarily for system administrators.
 Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
 
 :download:`This modulefile </sharc/software/modulefiles/libs/intel-ipp/2017.0/binary>` was installed as ``/usr/local/modulefiles/libs/intel-ipp/2017.0/binary``.
+
+**Intel IPP 2016.1**
+
+Installed as part of :ref:`Parallel Studio Composer Edition 2016.1 <sharc-intel-parallel-studio>`.
+
+:download:`This modulefile </sharc/software/modulefiles/libs/intel-ipp/2016.1/binary>` was installed as ``/usr/local/modulefiles/libs/intel-ipp/2016.1/binary``.
 
 **Intel IPP 2015.7**
 

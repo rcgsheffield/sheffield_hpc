@@ -12,6 +12,7 @@ MKL can be used with and without :ref:`other Parallel Studio packages <sharc-int
 To access it run **one** of the following: ::
 
     module load libs/intel-mkl/2017.0/binary
+    module load libs/intel-mkl/2016.1/binary
     module load libs/intel-mkl/2015.7/binary
 
 Sample C and Fortran programs demonstrating matrix multiplication 
@@ -87,6 +88,13 @@ Intel MKL 2017.0
 Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
 
 :download:`This modulefile </sharc/software/modulefiles/libs/intel-mkl/2017.0/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2017.0/binary``.
+
+Intel MKL 2016.1
+^^^^^^^^^^^^^^^^
+
+Installed as part of :ref:`Parallel Studio Composer Edition 2016 <sharc-intel-parallel-studio>`.
+
+:download:`This modulefile </sharc/software/modulefiles/libs/intel-mkl/2016.1/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2016.1/binary``.
 
 Intel MKL 2015.7
 ^^^^^^^^^^^^^^^^

@@ -23,7 +23,7 @@ export LIC_FPATH="/usr/local/packages/dev/intel-ps-xe-ce/license.lic"
 # Mapping from modulefile sources to destinations
 declare -A modfile_dests_map
 MODFILE_DEST_ROOT="/usr/local/modulefiles/"
-modfile_dests_map["compilers"]="${MODFILE_DEST_ROOT}/dev/intel-compilers/${VERS}/binary"
+modfile_dests_map["compilers"]="${MODFILE_DEST_ROOT}/dev/intel-compilers/${COMP_VERS}"
 modfile_dests_map["daal"]="${MODFILE_DEST_ROOT}/libs/intel-daal/${VERS}/binary"
 modfile_dests_map["ipp"]="${MODFILE_DEST_ROOT}/libs/intel-ipp/${VERS}/binary"
 modfile_dests_map["mkl"]="${MODFILE_DEST_ROOT}/libs/intel-mkl/${VERS}/binary"

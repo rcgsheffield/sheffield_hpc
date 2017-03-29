@@ -1,0 +1,106 @@
+#%Module1.0#####################################################################
+##
+## Intel compilers 16.0.1 module file
+## 
+################################################################################
+
+## Module file logging
+#source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+    global $compvers
+    puts stderr "   Makes `Intel C++ and Fortran compilers plus debugger version $compvers' available for use"
+}
+
+module-whatis   "Makes Intel C++ and Fortran compilers (ifort and icc) and debugger available"
+
+conflict dev/intel-compilers
+
+# Module variables
+set compvers    16.0.1
+set majvers     2016
+set minvers     1
+set patchvers   150
+set shortvers   [join [list $majvers $minvers] "."]
+set fullvers    [join [list $majvers $minvers $patchvers] "."]
+set intelpsroot /usr/local/packages/dev/intel-ps-xe-ce/$shortvers/binary/
+ 
+# Load Java (needed with debugging etc.) 
+module load apps/java
+
+# Compiler variables determined using
+# SHORTVERS=2016.1; FULLVERS=${SHORTVERS}.150; env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/${SHORTVERS}/binary/bin/compilervars.sh intel64" | sed -e 's#1ary#1/binary#g' -e "s#/usr/local/packages/dev/intel-ps-xe-ce/${SHORTVERS}/binary#\$intelpsroot#g" -e 's/[{}]//g' -e "s#${FULLVERS}#\$fullvers#g" | sort -k2
+# Then remove any paths containing '/mpi'
+prepend-path CLASSPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/lib/daal.jar;
+prepend-path CPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/include;
+prepend-path CPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp/include;
+prepend-path CPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/mkl/include;
+prepend-path CPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/tbb/include;
+setenv DAALROOT $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin;
+setenv GDB_CROSS $intelpsroot/debugger_2016/gdb/intel64_mic/bin/gdb-mic;
+setenv GDBSERVER_MIC $intelpsroot/debugger_2016/gdb/targets/mic/bin/gdbserver;
+setenv INFOPATH $intelpsroot/documentation_2016/en/debugger//gdb-ia/info/:$intelpsroot/documentation_2016/en/debugger//gdb-mic/info/:$intelpsroot/documentation_2016/en/debugger//gdb-igfx/info/;
+setenv INTEL_LICENSE_FILE $intelpsroot/compilers_and_libraries_$fullvers/linux/licenses:/opt/intel/licenses:/home/sa_cs1wf/intel/licenses;
+setenv INTEL_PYTHONHOME $intelpsroot/debugger_2016/python/intel64/;
+setenv IPPROOT $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/../compiler/lib/intel64_lin;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/lib/intel64_lin;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/../tbb/lib/intel64_lin/gcc4.4;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/mkl/lib/intel64;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/tbb/lib/intel64/gcc4.4;
+prepend-path LD_LIBRARY_PATH $intelpsroot/debugger_2016/libipt/intel64/lib;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/intel64;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/../compiler/lib/intel64_lin;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/lib/intel64_lin;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/daal/bin/../tbb/lib/intel64_lin/gcc4.4;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp/lib/intel64;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/mkl/lib/intel64;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/tbb/lib/intel64/gcc4.4;
+prepend-path MANPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/man/en_US;
+prepend-path MANPATH $intelpsroot/documentation_2016/en/debugger//gdb-ia/man/;
+prepend-path MANPATH $intelpsroot/documentation_2016/en/debugger//gdb-igfx/man/;
+prepend-path MANPATH $intelpsroot/documentation_2016/en/debugger//gdb-mic/man/;
+prepend-path MANPATH $intelpsroot/man/common;
+setenv MIC_LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/mic:$intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/mic:$intelpsroot/compilers_and_libraries_$fullvers/linux/mkl/lib/mic:$intelpsroot/compilers_and_libraries_$fullvers/linux/tbb/lib/mic;
+setenv MIC_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/mic:$intelpsroot/compilers_and_libraries_$fullvers/linux/tbb/lib/mic;
+setenv MKLROOT $intelpsroot/compilers_and_libraries_$fullvers/linux/mkl;
+setenv MPM_LAUNCHER $intelpsroot/debugger_2016/mpm/mic/bin/start_mpm.sh;
+setenv NLSPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/compiler/lib/intel64/locale/%l_%t/%N:$intelpsroot/compilers_and_libraries_$fullvers/linux/mkl/lib/intel64/locale/%l_%t/%N:$intelpsroot/debugger_2016/gdb/intel64_mic/share/locale/%l_%t/%N:$intelpsroot/debugger_2016/gdb/intel64/share/locale/%l_%t/%N;
+prepend-path PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/bin/intel64;
+prepend-path PATH $intelpsroot/debugger_2016/gdb/intel64_mic/bin;
+setenv TBBROOT $intelpsroot/compilers_and_libraries_$fullvers/linux/tbb;
+
+# Debugger variables determined using
+# MAJVERS=2016; SHORTVERS=${MAJVERS}.1; FULLVERS=${SHORTVERS}.150; env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/${SHORTVERS}/binary/debugger_${MAJVERS}/bin/debuggervars.sh intel64" | sed -e 's#1ary#1/binary#g' -e "s#/usr/local/packages/dev/intel-ps-xe-ce/${SHORTVERS}/binary#\$intelpsroot#g" -e 's/[{}]//g' -e "s#${FULLVERS}#\$fullvers#g" -e "s#${MAJVERS}#\$majvers#g" | sort -k2
+setenv GDB_CROSS $intelpsroot/debugger_$majvers/gdb/intel64_mic/bin/gdb-mic;
+setenv GDBSERVER_MIC $intelpsroot/debugger_$majvers/gdb/targets/mic/bin/gdbserver;
+setenv INFOPATH $intelpsroot/documentation_$majvers/en/debugger//gdb-ia/info/:$intelpsroot/documentation_$majvers/en/debugger//gdb-mic/info/:$intelpsroot/documentation_$majvers/en/debugger//gdb-igfx/info/;
+setenv INTEL_PYTHONHOME $intelpsroot/debugger_$majvers/python/intel64/;
+prepend-path LD_LIBRARY_PATH $intelpsroot/debugger_$majvers/libipt/intel64/lib;
+prepend-path MANPATH $intelpsroot/documentation_$majvers/en/debugger//gdb-ia/man/;
+prepend-path MANPATH $intelpsroot/documentation_$majvers/en/debugger//gdb-igfx/man/;
+prepend-path MANPATH $intelpsroot/documentation_$majvers/en/debugger//gdb-mic/man/;
+setenv MPM_LAUNCHER $intelpsroot/debugger_$majvers/mpm/mic/bin/start_mpm.sh;
+setenv NLSPATH $intelpsroot/debugger_$majvers/gdb/intel64_mic/share/locale/%l_%t/%N:$intelpsroot/debugger_$majvers/gdb/intel64/share/locale/%l_%t/%N;
+prepend-path PATH $intelpsroot/debugger_$majvers/gdb/intel64_mic/bin;
+
+# Shorthand variables for compilers
+set    cc  icc
+set    cxx icpc
+set    f77 ifort
+set    f90 ifort
+set    f95 ifort
+set    fc  ifort
+setenv CC  $cc
+setenv CXX $cxx
+setenv F77 $f77
+setenv FC  $fc
+setenv F90 $f90
+setenv F95 $f95
+
+# License file (points at license server)
+setenv INTEL_LICENSE_FILE /usr/local/packages/dev/intel-ps-xe-ce/license.lic

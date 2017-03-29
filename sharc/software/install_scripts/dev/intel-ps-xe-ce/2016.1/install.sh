@@ -1,19 +1,18 @@
 #!/bin/bash
-# Install 'Intel Parallel Studio XE 2015 Composer Edition' on sharc
+# Install 'Intel Parallel Studio XE 2016.1 Composer Edition' on sharc
 
 ###############
 # Set variables
 ###############
-export SHORT_VERS=2015
-export VERS="${SHORT_VERS}.7"
-export COMP_VERS=15.0.7  # compilers versioned differently
+export SHORT_VERS=2016
+export VERS="${SHORT_VERS}.1"
+export COMP_VERS=16.0.1  # compilers versioned differently ### CORRECT VERSION?
 # Directory containing tarball to store downloaded tarball and build logs
 export MEDIA_DIR="/usr/local/media/protected/intel/${VERS}"
 export TMPDIR="${TMPDIR:-/tmp}"
 # Store unpacked source files
 export SOURCE_DIR="${TMPDIR}/${USER}/intel/${VERS}"
-export TARBALL_FNAME="parallel_studio_xe_${SHORT_VERS}_composer_edition.tgz"
-export TARBALL_FNAME="l_compxe_${VERS}.235.tgz"
+export TARBALL_FNAME="parallel_studio_xe_${SHORT_VERS}_composer_edition_update1.tar"
 export APPLICATION_ROOT="/usr/local/packages"
 export INSTALL_ROOT_DIR="${APPLICATION_ROOT}/dev/intel-ps-xe-ce"
 # Install in this dir
@@ -25,6 +24,7 @@ export LIC_FPATH="/usr/local/packages/dev/intel-ps-xe-ce/license.lic"
 declare -A modfile_dests_map
 MODFILE_DEST_ROOT="/usr/local/modulefiles/"
 modfile_dests_map["compilers"]="${MODFILE_DEST_ROOT}/dev/intel-compilers/${COMP_VERS}"
+modfile_dests_map["daal"]="${MODFILE_DEST_ROOT}/libs/intel-daal/${VERS}/binary"
 modfile_dests_map["ipp"]="${MODFILE_DEST_ROOT}/libs/intel-ipp/${VERS}/binary"
 modfile_dests_map["mkl"]="${MODFILE_DEST_ROOT}/libs/intel-mkl/${VERS}/binary"
 modfile_dests_map["tbb"]="${MODFILE_DEST_ROOT}/libs/intel-tbb/${VERS}/binary"
@@ -68,10 +68,10 @@ if [[ -e ./.untar_complete ]]; then
     echo "Directory already untarred. Moving on"
 else
     echo "Untarring Intel Parallel Studio"
-   tar xzf ${MEDIA_DIR}/${TARBALL_FNAME}
+   tar xf ${MEDIA_DIR}/${TARBALL_FNAME}
     touch ./.untar_complete
 fi
-extracted_dir=$(basename $TARBALL_FNAME .tgz)
+extracted_dir=$(basename $TARBALL_FNAME .tar)
 cd $extracted_dir
 
 ###########
@@ -89,11 +89,13 @@ sed -e "s:.*ACCEPT_EULA=.*:ACCEPT_EULA=accept:" \
 #########
 # Install
 #########
-# Try to install but if an install previously failed then
-# try to repair the install instead
-./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR} || \
-    sed -i -e "s:.*PSET_MODE=.*:PSET_MODE=repair:" silent.cfg.custom && \
-    ./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR} 
+./install.sh --silent silent.cfg.custom --user-mode --tmp-dir ${TMPDIR}
+
+#######################
+# Install code examples
+#######################
+#samples_tarball="/usr/local/media/protected/intel/${VERS}/ipsxe${SHORT_VERS}_samples_lin_20161018.tgz"
+#tar -C $INSTALL_DIR/samples_2016/en/ -zxf $samples_tarball
 
 #################
 # Set permissions

@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## ITKSNAP Ver 3.6 module file
+## 
+#  By Desmond Ryan February 2017
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "	Makes ITKSNAP Version 3.6 available for use"
+}
+
+module-whatis   "Makes ITKSNAP Version 3.6 available"
+
+# module variables
+#
+ set     version 3.6
+ set     localroot  /usr/local/packages6/apps/binapps/itksnap/3.6 
+#  setenv     ITKSNAPVER  3.6    
+ prepend-path PATH $localroot/bin
+#
+ setenv XLIB_SKIP_ARGB_VISUALS 1 

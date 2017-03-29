@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+#
+# Intel Integrated Performance Primitives (IPP) 2016.1 module file
+# 
+################################################################################
+
+## Module file logging
+#source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    global fullvers
+    puts stderr "   Makes the `Intel Integrated Performance Primitives (IPP) $fullvers' available for use"
+}
+
+module-whatis   "Makes the `Intel Integrated Performance Primitives (IPP)' available for use"
+
+# module variables
+set majvers     2016
+set minvers     1
+set patchvers   150
+set shortvers   [join [list $majvers $minvers] "."]
+set fullvers    [join [list $majvers $minvers $patchvers] "."]
+set intelpsroot /usr/local/packages/dev/intel-ps-xe-ce/$shortvers/binary/
+
+# Variables determined using
+# SHORTVERS=2016.1 FULLVERS=${SHORTVERS}.150 env2 -from bash -to modulecmd "/usr/local/packages/dev/intel-ps-xe-ce/${SHORTVERS}/binary/compilers_and_libraries_${FULLVERS}/linux/ipp/bin/ippvars.sh intel64" | sed -e 's#1ary#1/binary#g' -e "s#/usr/local/packages/dev/intel-ps-xe-ce/${SHORTVERS}/binary#\$intelpsroot#g" -e 's/[{}]//g' -e "s#${FULLVERS}#\$fullvers#g"
+setenv IPPROOT $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp;
+prepend-path CPATH $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp/include;
+prepend-path LD_LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp/lib/intel64;
+prepend-path LIBRARY_PATH $intelpsroot/compilers_and_libraries_$fullvers/linux/ipp/lib/intel64;
+
+# License file (points at license server)
+setenv INTEL_LICENSE_FILE /usr/local/packages/dev/intel-ps-xe-ce/license.lic

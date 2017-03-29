@@ -21,6 +21,7 @@ Here we request six cores from the clusters' scheduler: ::
 Next, we need to *active* a specific version of TBB.  Run **one** of the following: ::
 
         $ module load libs/intel-tbb/2017.0/binary
+        $ module load libs/intel-tbb/2016.1/binary
         $ module load libs/intel-tbb/2015.7/binary
 
 You can find sample TBB programs **for TBB 2017.0** in the directory ``$TBB_SAMPLES``: ::
@@ -85,6 +86,16 @@ Installed as part of :ref:`Parallel Studio Composer Edition 2017
 :download:`This modulefile 
 </sharc/software/modulefiles/libs/intel-tbb/2017.0/binary>` was installed as
 ``/usr/local/modulefiles/libs/intel-tbb/2017.0/binary``.
+
+Intel TBB 2016.1
+^^^^^^^^^^^^^^^^
+
+Installed as part of :ref:`Parallel Studio Composer Edition 2016
+<sharc-intel-parallel-studio>`.
+
+:download:`This modulefile 
+</sharc/software/modulefiles/libs/intel-tbb/2016.1/binary>` was installed as
+``/usr/local/modulefiles/libs/intel-tbb/2016.1/binary``.
 
 Intel TBB 2015.7
 ^^^^^^^^^^^^^^^^

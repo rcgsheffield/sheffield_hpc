@@ -79,7 +79,7 @@ Once you have a terminal open run the following command: ::
 
     ssh -X <username>@iceberg.shef.ac.uk
 
-where you replace `<username>` with your CICS username.
+where you replace ``<username>`` with your CICS username.
 
 .. note::
 
@@ -109,11 +109,11 @@ which will pop up another terminal window, which supports graphical applications
 
     Iceberg is a compute cluster. When you login to the cluster you reach one 
     of two login nodes. You **should not** run applications on the login nodes.
-    Running qsh gives you an interactive terminal on one of the many worker nodes
+    Running ``qsh`` gives you an interactive terminal on one of the many worker nodes
     in the cluster.
 
-    If you only need terminal based (CLI) applications you can run the qrsh command.
-    Which will give you a shell on a worker node, but without graphical application
+    If you only need terminal-based (CLI) applications you can run the ``qrsh`` command,
+    which will give you a shell on a worker node, but without graphical application
     (X server) support.
 
 
@@ -121,7 +121,7 @@ which will pop up another terminal window, which supports graphical applications
 
    <p>
     This video shows the connection process using mobaxterm, and then connection 
-    and running matlab from a <cite>qsh</cite> terminal.
+    and running matlab from a <code>qsh</code> terminal.
    </p>
 
    <video style="margin-left: auto; margin-right:auto; display: block;" width=70% controls>

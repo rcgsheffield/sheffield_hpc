@@ -3,8 +3,8 @@
 Iceberg's Queue System
 ======================
 
-To manage use of the Iceberg cluster, there is a queue system
-(`SoGE <https://arc.liv.ac.uk/trac/SGE>`_, a derivative of the Sun Grid Engine).
+To manage use of the iceberg cluster, there is a queue system
+(`Son of Grid Engine <https://arc.liv.ac.uk/trac/SGE>`_, a derivative of Sun Grid Engine).
 
 The queue system works by a user requesting some task, either a script or an
 interactive session, be run on the cluster and then the scheduler will take
@@ -28,11 +28,11 @@ There are three commands which give you an interactive shell:
 
 You can configure the resources available to the interactive session by
 specifying them as command line options to the qsh or qrsh commands.
-For example to run a ``qrshx`` session with access to 16 GB of virtual RAM ::
+For example to run a ``qrshx`` session with access to 16 GB of virtual memory: ::
 
     [te1st@iceberg-login2 ~]$ qrshx -l mem=16G
 
-or a session with access to 8 cores::
+or a session with access to 8 cores: ::
 
     [te1st@iceberg-login2 ~]$ qrshx -pe openmp 8
 
@@ -86,35 +86,35 @@ used without their GUIs.
 When you submit a batch job, you provide an executable file that will be run by
 the scheduler. This is normally a bash script file which provides commands and
 options to the program you are using.
-Once you have a script file, or other executable file, you can submit it to the queue by running::
+Once you have a script file, or other executable file, you can submit it to the queue by running: ::
 
     qsub myscript.sh
 
-Here is an example batch submission script that runs a fictitious program called `foo` ::
+Here is an example batch submission script that runs a fictitious program called ``foo``: ::
 
     #!/bin/bash
-    # Request 5 gigabytes of real memory (mem)
+    # Request 5 gigabytes of real memory (rmem)
     # and 5 gigabytes of virtual memory (mem)
     #$ -l mem=5G -l rmem=5G
 
-    # load the module for the program we want to run
+    # Load the module for the program we want to run
     module load apps/gcc/foo
 
-    #Run the program foo with input foo.dat
-    #and output foo.res
+    # Run the program foo with input foo.dat
+    # and output foo.res
     foo < foo.dat > foo.res
 
 Some things to note:
 
-* The first line always needs to be `#!/bin/bash` to tell the scheduler that this is a bash batch script.
-* Comments start with a `#`
-* Scheduler options, such as the amount of memory requested, start with `#$`
-* You will usually require one or more `module` commands in your submission file. These make programs and libraries available to your scripts.
+* The first line always needs to be ``#!/bin/bash`` to tell the scheduler that this is a bash batch script.
+* Comments start with a ``#``
+* Scheduler options, such as the amount of memory requested, start with ``#$``
+* You will usually require one or more ``module load`` commands in your submission file. These make programs and libraries available to your scripts.
 
-Here is a more complex example that requests more resources ::
+Here is a more complex example that requests more resources: ::
 
   #!/bin/bash
-  # Request 16 gigabytes of real memory (mem)
+  # Request 16 gigabytes of real memory (rmem)
   # and 16 gigabytes of virtual memory (mem)
   #$ -l mem=16G -l rmem=16G
   # Request 4 cores in an OpenMP environment
@@ -124,15 +124,17 @@ Here is a more complex example that requests more resources ::
   # Email notifications if the job aborts
   #$ -m a
 
-  # load the modules required by our program
+  # Load the modules required by our program
   module load compilers/gcc/5.2
   module load apps/gcc/foo
 
-  #Set the OPENMP_NUM_THREADS environment variable to 4
+  # Set the OMP_NUM_THREADS environment variable to 4
+  # to make sure the job does not try to use
+  # all cores on the machine
   export OMP_NUM_THREADS=4
 
-  #Run the program foo with input foo.dat
-  #and output foo.res
+  # Run the program foo with input foo.dat
+  # and output foo.res
   foo < foo.dat > foo.res
 
 Scheduler Options
@@ -147,22 +149,33 @@ Command                Description
 
 -l hostname=           Target a node by name. Not recommended for normal use.
 
--l arch=               Target a processor architecture. Options on Iceberg include
-                       `intel-e5-2650v2` and `intel-x5650`
+-l arch=               Target a processor architecture. Options on Iceberg 
+                       include ``intel-e5-2650``, ``intel-e5-2650``, 
+                       ``intel-e5-2650`` and ``intel-x5650``.  
+                       To request the Sandy Bridge architecture: 
+                       ``-l arch=intel-e5-26?0`` (note the ``?`` wildcard).
+                       To request the Westmere architecture: 
+                       ``-l arch=intel-x5650``.
+                       A small number of machines contain AMD 
+                       processors; to explicitly request an Intel processor: 
+                       ``-l arch=intel-*`` (note the ``*`` wildcard).
 
 -N                     Job name, used to name output files and in the queue list.
 
 -j                     Join the error and normal output into one file rather
-                       than two.
+                       than two (``y`` for yes, ``n`` for no).
 
--M                     Email address to send notifications to.
+-M                     Follow this by the email address you want notifications
+                       to be sent to.  Specify ``-M`` again for each additional
+                       address that you would like to receive notifications.
 
 -m bea                 Type of notifications to send. Can be any combination of
-                       begin (b) end (e) or abort (a) i.e. `-m ea` for end and
+                       begin (b) end (e) or abort (a) i.e. ``-m ea`` for end and
                        abortion messages.
 -a                     Specify the earliest time for a job to start, in the
-                       format MMDDhhmm. e.g. -a 01011130 will schedule the job
-                       to begin no sooner than 11:30 on 1st January.
+                       format MMDDhhmm. e.g. ``-a 01011130`` will schedule the job
+                       to begin on or after 11:30 on 1st January (the delay depends
+                       on your resource requests and the cluster load)
 ====================== ========================================================
 
 All scheduler commands
@@ -173,11 +186,11 @@ Frequently Asked SGE Questions
 ------------------------------
 **How many jobs can I submit at any one time**
 
-You can submit up to 2000 jobs to the cluster, and the scheduler will allow up to 200 of your jobs to run simultaneously (we occasionally alter this value depending on the load on the cluster).
+You can submit up to 2000 jobs to the cluster, and the scheduler will allow up to 85 of your jobs to run simultaneously (we occasionally alter this value depending on the load on the cluster).
 
 **How do I specify the processor type on Iceberg?**
 
-Add the following line to your submission script ::
+Add the following line to your submission script: ::
 
     #$ -l arch=intel-e5-2650v2
 
@@ -187,25 +200,3 @@ All such nodes on Iceberg have 16 cores.
 To only target the older, 12 core nodes that contain `X5650 CPUs <http://ark.intel.com/products/47922/Intel-Xeon-Processor-X5650-12M-Cache-2_66-GHz-6_40-GTs-Intel-QPI>`_ add the following line to your submission script ::
 
     #$ -l arch=intel-x5650
-
-
-**How do I specify multiple email addresses for job notifications?**
-
-Specify each additional email with it's own `-M` option ::
-
-  #$ -M foo@example.com
-  #$ -M bar@example.com
-
-**How do you ensure that a job starts after a specified time?**
-
-Add the following line to your submission script ::
-
-    #$ -a time
-
-but replace ``time`` with a time in the format MMDDhhmm
-
-For example, for 22nd July at 14:10, you’d do ::
-
-    #$ -a 07221410
-
-This won’t guarantee that it will run precisely at this time since that depends on available resources. It will, however, ensure that the job runs *after* this time. If your resource requirements aren’t too heavy, it will be pretty soon after. When I tried it, it started about 10 seconds afterwards but this will vary.

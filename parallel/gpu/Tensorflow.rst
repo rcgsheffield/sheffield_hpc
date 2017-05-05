@@ -21,13 +21,13 @@ Load the relevant modules (our example uses CUDA 8.0 with cuDNN 5.1 but :ref:`ot
 
 Create a conda environment to load relevant modules on your local user account and activate it ::
 
-	conda create -n tensorflow python=3.5 anaconda3-2.5.0 
+	conda create -n tensorflow
 	source activate tensorflow
 		
 Then install tensorflow with the following commands ::
 
 	export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.11.0-cp35-cp35m-linux_x86_64.whl
-	pip install $TF_BINARY_URL
+	pip install --user $TF_BINARY_URL
 
 You can test that Tensorflow is running on the GPU with the following python code ::
 

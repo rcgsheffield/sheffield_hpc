@@ -1,0 +1,21 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+
+proc ModulesHelp { } {
+    global helpmsg
+    puts stderr "\t$helpmsg\n"
+}
+
+
+set version 1.7.1
+
+set tigervnchome /usr/local/packages/apps/tigervnc/1.7.1/binary
+
+module-whatis "Sets TigerVNC to version 1.7.1"
+set helpmsg "Changes the default version of TigerVNC to Version $version"
+prepend-path PATH $tigervnchome/usr/bin
+prepend-path MANPATH $tigervnchome/usr/share/man

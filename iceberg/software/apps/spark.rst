@@ -28,8 +28,12 @@ Spark was built using the system gcc 4.4.7: ::
   mkdir -p /usr/local/packages6/apps/gcc/4.4.7/spark
   mv spark-2.0.0 /usr/local/packages6/apps/gcc/4.4.7/spark/
   
+<<<<<<< HEAD
 The default install of Spark is incredibly verbose. Even a 'Hello World' program results in many lines of ``[INFO]``.
 To make it a little quieter, reduce the default log4j level from ``INFO`` to ``WARN``: ::
+=======
+The default install of Spark is incredibly verbose. Even a 'Hello World' prohram results in many lines of 'INFO'. To make it a little quieter ::
+>>>>>>> parent of a9ef5fb... Update spark.rst
 
     cd /usr/local/packages6/apps/gcc/4.4.7/spark/spark-2.0.0/conf/
     cp log4j.properties.template log4j.properties

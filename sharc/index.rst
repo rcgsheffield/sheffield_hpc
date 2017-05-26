@@ -11,7 +11,5 @@ This is the documentation for ShARC (Sheffield Advanced Research Computer), The 
   :glob:
 
   software/index
-  differences
 
 * :ref:`sharc-software`
-* :ref:`sharc-differences`

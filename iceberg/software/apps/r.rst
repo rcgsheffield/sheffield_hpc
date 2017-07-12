@@ -101,6 +101,15 @@ The associated R packages are not included in the system install of R, so you wi
 * :ref:`gdal_iceberg` and :ref:`proj_iceberg` These are the libraries required for the ``rgdal`` package.
 * :ref:`jags` This is the library required for the ``rjags`` and ``runjags`` packages
 
+.. warning::
+	To install r packages that require external libraries, the libraries need to be loaded prior to installing the r packages. E.g. 
+	to install package `rgeos` you would need to load ``geos``, enter an interactive R session and then install ``rgeos`` ::
+	
+		module load libs/geos/3.6.1/gcc-4.9.4
+		R
+		install.packages("rgeos")
+		
+
 Using the Rmath library in C Programs
 -------------------------------------
 The Rmath library allows you to access some of R's functionality from a C program. For example, consider the C-program below ::

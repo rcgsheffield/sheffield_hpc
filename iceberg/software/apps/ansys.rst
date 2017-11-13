@@ -5,7 +5,7 @@ ANSYS
 
 .. sidebar:: ANSYS
 
-   :Version:  14, 14.5, 15, 16.1, 17.2
+   :Versions: 14, 14.5, 15, 16.1, 17.2, 18.2
    :Support Level: FULL
    :Dependencies: If using the User Defined Functions (UDF) will also need the following:
                   For ANSYS Mechanical, Workbench, CFX and AutoDYN : Intel 14.0 or above Compiler
@@ -17,7 +17,7 @@ The Ansys suite of programs can be used to numerically simulate a large variety 
 
 Interactive usage
 -----------------
-After connecting to iceberg (see :ref:`ssh`),  start an interactive sesssion with the ``qsh`` command. Alternatively, if you require more memory, for example 16 GB, use the command ``qsh` -l rmem=16G,mem=16G``.
+After connecting to iceberg (see :ref:`ssh`),  start an interactive sesssion with the ``qsh`` command. Alternatively, if you require more memory, for example 16 GB, use the command ``qsh -l rmem=16G``.
 
 To make the **default** version of ANSYS available (currently **version 16.1**), run the following: ::
 
@@ -25,6 +25,7 @@ To make the **default** version of ANSYS available (currently **version 16.1**),
 
 Alternatively, you can make a specific version available with one of the following commands: ::
 
+      module load apps/ansys/18.2
       module load apps/ansys/17.2
       module load apps/ansys/16.1
       module load apps/ansys/15.0
@@ -43,8 +44,30 @@ You can then issue one of the following commands to run an ANSYS product. The te
       icemcfx or icem: to run icemcfd outside the workbench.
       lsdyna  : to run LS Dyna command line outside of the workbench (note: version required i.e. lsdyna161)
 
-Running Batch fluent and ansys jobs
+Running batch fluent and ansys jobs
 -----------------------------------
+
+Users are encouraged to write their own batch submission scripts. The following is an example batch submission script, ``my_job.sh``, to run ``fluent`` version 17.2 and which is submitted to the queue by typing ``qsub my_job.sh``. ::
+
+     #!/bin/bash
+     #$ -cwd
+     #$ -l h_rt=00:30:00
+     #$ -l rmem=2G
+     #$ -pe openmpi-ib 8
+
+     module load apps/ansys/17.2
+
+     fluent 2d -i flnt.inp -g
+
+The script requests 8 cores using the MPI parallel environment ``openmpi-ib`` with a runtime of 30 mins and 2 GB of real memory per core. The Fluent input file is ``flnt.inp``. 
+
+To run a multi-core job on a single node, add the following line to the SGE parameters (i.e. the lines beginning with ``#$``) in the above script. ::
+
+     #$ -l excl=true
+
+
+The ``runansys`` and ``runfluent`` commands (deprecated)
+--------------------------------------------------------
 
 The easiest way of running batch jobs for a particular version of ANSYS (e.g. 17.2) is: ::
 
@@ -57,6 +80,8 @@ Or the same for Fluent: ::
      runfluent
 
 The ``runfluent`` and ``runansys`` commands submit a Fluent journal or ANSYS input file into the batch system and can take a number of different parameters, according to your requirements. 
+
+**Note:** Specification of virtual memory, ``-mem=nn``, is now redundant on iceberg. ``runansys`` and ``runfluent`` are not setup for use with Ansys 18.2.
 
 runfluent command
 #################

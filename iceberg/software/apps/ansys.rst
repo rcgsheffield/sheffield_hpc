@@ -21,7 +21,7 @@ After connecting to iceberg (see :ref:`ssh`),  start an interactive sesssion wit
 
 To make the **default** version of ANSYS available (currently **version 16.1**), run the following: ::
 
-        module load apps/ansys
+      module load apps/ansys
 
 Alternatively, you can make a specific version available with one of the following commands: ::
 
@@ -61,15 +61,23 @@ Users are encouraged to write their own batch submission scripts. The following 
 
 The script requests 8 cores using the MPI parallel environment ``openmpi-ib`` with a runtime of 30 mins and 2 GB of real memory per core. The Fluent input file is ``flnt.inp``. 
 
-To run a multi-core job on a single node, add the following line to the SGE parameters (i.e. the lines beginning with ``#$``) in the above script. ::
+To run a multi-core job on a single node, using the OpenMP parallel environment ``openmp``, use the following SGE parameters (i.e. the lines beginning with ``#$``) in the batch submission script. ::
 
-     #$ -l excl=true
+     #!/bin/bash
+     #$ -cwd
+     #$ -l h_rt=00:30:00
+     #$ -l rmem=2G
+     #$ -pe openmp 8
+
+     module load apps/ansys/17.2
+
+     fluent 2d -i flnt.inp -g
 
 
 The ``runansys`` and ``runfluent`` commands (deprecated)
 --------------------------------------------------------
 
-The easiest way of running batch jobs for a particular version of ANSYS (e.g. 17.2) is: ::
+Historically, the way of running batch jobs for a particular version of ANSYS (e.g. 17.2) was: ::
 
      module load apps/ansys/17.2
      runansys  

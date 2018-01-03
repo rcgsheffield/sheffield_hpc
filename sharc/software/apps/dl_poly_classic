@@ -38,7 +38,7 @@ The script requests 8 cores using the MPI parallel environment ``mpi`` with a ru
 *Note:* If your ``OUTPUT`` file appears truncated when running a DL_POLY job using MPI, then add the ``l_scr`` keyword to your ``CONTROL`` file to place the output in the standard output file (see section 5.2.5 Parallel I/O in the user manual).
 
 Installation notes
-------------------
+-------------------
 
 DL_POLY_CLASSIC 1.9 was compiled from source using the -O3 Fortran compiler options. 
 

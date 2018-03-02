@@ -38,12 +38,12 @@ Usage instructions
     *******To connect: *******
 
     Either startup a web-browser and enter the address:
-    http://iceberg-gateway.shef.ac.uk:5801
+    http://node000.sheffield.ac.uk:5801
 
                   or 
 
     use the TigerVNC application to connect to:
-    iceberg-gateway.shef.ac.uk:5901
+    node000.sheffield.ac.uk:5901
 
     Make sure to enter your normal Iceberg username/password when prompted.
 
@@ -54,7 +54,7 @@ Usage instructions
 
     .. image:: /images/vncviewer_dialog.png
 
-#. Enter the connection details for TigerVNC that were issued by the ``qsh-vis`` command e.g. ``iceberg-gateway.shef.ac.uk:5901`` (NB the last four digits may differ when you run ``qsh-vis``).
+#. Enter the connection details for TigerVNC that were issued by the ``qsh-vis`` command e.g. ``node000.shef.ac.uk:5901`` (NB the node name and last four digits may differ when you run ``qsh-vis``).
 #. Click *Connect*
 #. You should now see a desktop within a window.  This desktop is running on a worker node (in the case of the presented example this is ``node000```; see the ``qsh-vis`` output) that is equipped with a graphics card (Optional: run ``nvidia-smi`` to see what type of graphics card).  A terminal window is automatically started from which you can :ref:`load modules <env_modules>` and start applications that require hardware-accelerated graphics.
 

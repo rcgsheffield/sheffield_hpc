@@ -76,13 +76,17 @@ Installation notes
 ------------------
 These notes are primarily for administrators of the system.
 
-Spark 2.0 was built using the system gcc 4.8.5 ::
+**Version 2.1**
+
+Spark 2.1 was built using the system gcc 4.8.5 ::
 
     qrsh -l rmem=10G
 
     module load apps/java/jdk1.8.0_102/binary
+    export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=512m"
     tar -xvzf ./spark-2.1.0.tgz
     cd spark-2.1.0
+    ./build/mvn -DskipTests clean package
 
     mkdir -p /usr/local/packages/apps/spark/2.1
     cd ..
@@ -93,9 +97,9 @@ To make it a little quieter, the default log4j level has been reduced from ``INF
 
     cd /usr/local/packages/apps/spark/2.1/spark-2.1.0/conf/
     cp log4j.properties.template log4j.properties
-    
+
 The file ``log4j.properties`` was then edited so that the line beginning ``log4j.rootCategory`` reads: ::
- 
+
      log4j.rootCategory=WARN, console
 
 Modulefile

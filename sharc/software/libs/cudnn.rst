@@ -20,8 +20,6 @@ Usage
 
 Load the appropriate cuDNN version (**and implicitly load a specific CUDA version**) with one of the following commands: ::
 
-    module load libs/cudnn/7.0/binary-cuda-9.1.85
-    module load libs/cudnn/7.0/binary-cuda-8.0.44
     module load libs/cudnn/6.0/binary-cuda-8.0.44
     module load libs/cudnn/5.1/binary-cuda-8.0.44
     module load libs/cudnn/5.1/binary-cuda-7.5.18
@@ -32,13 +30,6 @@ Installation notes
 This section is primarily for administrators of the system.
 
 The cuDNN library is only available to download through the `developer portal <https://developer.nvidia.com/cudnn>`_.  Installation ``.tgz`` files are located in ``/usr/local/media/protected/cudnn``.
-
-Version 7.0
-^^^^^^^^^^^
-
-- Install script: :download:`install_cudnn7.0_for_cuda8.0_cuda9.1.sh </sharc/software/install_scripts/libs/cudnn/install_7.0_for_cuda_8.0_cuda_9.1.sh>`
-- :download:`Module file for CUDA 9.1 </sharc/software/modulefiles/libs/cudnn/7.0/binary-cuda-9.1.85>`
-- :download:`Module file for CUDA 8.0 </sharc/software/modulefiles/libs/cudnn/7.0/binary-cuda-8.0.44>`
 
 Version 6.0
 ^^^^^^^^^^^

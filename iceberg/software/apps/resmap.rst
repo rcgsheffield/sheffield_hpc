@@ -1,3 +1,5 @@
+.. _iceberg_resmap:
+
 ResMap
 ======
 

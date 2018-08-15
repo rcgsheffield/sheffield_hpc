@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## relion module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    global relionvers
+    puts stderr "   Set up `relion-$relionvers' environment variables"
+}
+
+set relionvers 1.4
+
+module load apps/gcc/4.4.7/ctffind/3.140609
+module load apps/binapps/resmap/1.1.4
+module load mpi/gcc/openmpi/1.8.8
+
+prepend-path PATH /usr/local/packages6/apps/gcc/4.4.7/relion/1.4/bin
+prepend-path LD_LIBRARY_PATH /usr/local/packages6/apps/gcc/4.4.7/relion/1.4/lib
+setenv RELION_QSUB_TEMPLATE /usr/local/packages6/apps/gcc/4.4.7/relion/1.4/bin/relion_qsub.csh
+setenv RELION_CTFFIND_EXECUTABLE ctffind3_mp.exe
+setenv RELION_RESMAP_EXECUTABLE /usr/local/packages6/apps/binapps/resmap/1.1.4
+setenv RELION_QSUB_EXTRA1 "parallel environment"
+setenv RELION_QSUB_EXTRA2 "project"

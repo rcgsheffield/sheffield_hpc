@@ -22,4 +22,6 @@ setenv  ANSWBCOMMAND $ANSYS_DIR/Framework/bin/Linux64/runwb2
 setenv  FLUENT_INC $ANSYS_DIR/fluent
 
 prepend-path PATH $localroot:$ANSYS_DIR/ansys/bin:$ANSYS_DIR/Framework/bin/Linux64/:$ANSYS_DIR/fluent/bin:$ANSYS_DIR/CFD-Post/bin:$ANSYS_DIR/CFX/bin:$ANSYS_DIR/Icepak/bin:$ANSYS_DIR/TurboGrid/bin:$ANSYS_DIR/polyflow/bin:$ANSYS_DIR/ansys/bin
+ set-alias  ansyswb {\$ANSYSROOT/Framework/bin/Linux64/runwb2}
+ set-alias  ansys-mechanical {\$ANSYSROOT/ansys/bin/mapdl}
 

@@ -102,14 +102,14 @@ file is
 :download:`/usr/local/modulefiles/apps/ansys/19.1/binary </sharc/software/modulefiles/apps/ansys/19.1/binary>`.
 
 Ansys 19.2 was installed using the
-:download:`install_ansys_191.sh </sharc/software/install_scripts/apps/ansys/19.2/binary/install_ansys_192.sh>` script; the module
+:download:`install_ansys_192.sh </sharc/software/install_scripts/apps/ansys/19.2/binary/install_ansys_192.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.1/binary </sharc/software/modulefiles/apps/ansys/19.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.2/binary </sharc/software/modulefiles/apps/ansys/19.2/binary>`.
 
 Ansys 19.3 was installed using the
-:download:`install_ansys_191.sh </sharc/software/install_scripts/apps/ansys/19.3/binary/install_ansys_193.sh>` script; the module
+:download:`install_ansys_193.sh </sharc/software/install_scripts/apps/ansys/19.3/binary/install_ansys_193.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.1/binary </sharc/software/modulefiles/apps/ansys/19.3/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.3/binary </sharc/software/modulefiles/apps/ansys/19.3/binary>`.
 
 The binary installations were tested by launching ``ansyswb`` and by using the above batch submission script. 
 The ``mpi-rsh`` tight-integration parallel environment is required to run Ansys/Fluent using MPI due to 

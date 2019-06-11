@@ -1,5 +1,10 @@
 language: python
-cache: pip
+dist: xenial
+
+cache:
+  paths:
+    - .venv
+  key: "${CI_COMMIT_REF_SLUG}"
 
 sudo: false
 
@@ -18,15 +23,14 @@ env:
     - BUILD_CMD='latexpdf'
             
 python:
-    - 3.6
+    - 3.7
 
-virtualenv:
-     system_site_packages: false
-
-install:
-    - pip install -r requirements.txt
+before_install:
+  - pip install poetry
 
 script:
+    - poetry config settings.virtualenvs.in-project true
+    - poetry install
     - mkdir -p _build/latex/
     - bash get_newfloat.sty.sh ./_build/latex/
-    - make $BUILD_CMD
+    - poetry run make $BUILD_CMD

@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+## udunits module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    global gdalversion
+    global compiler
+    global compilervers
+    puts stderr "   Activate v$udunitsversion of the udunits library (plus $compiler $compilervers expat library)"
+}
+
+set udunitsversion  2.2.26
+set compiler     gcc
+set compilervers 4.9.4
+
+module-whatis   "Activate v$udunitsversion of the udunits library (plus $compiler $compilervers expat library)"
+
+set udunitsroot /usr/local/packages/libs/udunits/$udunitsversion/$compiler-$compilervers/
+
+# Need a particular version of the C++ std lib & expat library
+module load libs/expat/2.2.7/gcc/gcc-4.9.4
+
+prepend-path CPATH $udunitsroot/include
+prepend-path LIBRARY_PATH $udunitsroot/lib/
+prepend-path LD_LIBRARY_PATH $udunitsroot/lib/
+prepend-path PATH $udunitsroot/bin/

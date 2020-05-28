@@ -1,7 +1,7 @@
 .. _hpc-home:
 
 High Performance Computing at Sheffield
-=======================================
+========================================
 
 .. image:: images/iceberg.png
    :width: 40%
@@ -23,7 +23,7 @@ Research Computing Team
 
 The research computing team are the team responsible for the HPC services, as well as all other aspects of research computing.
 If you require support with HPC, training or software for your workstations, the research computing team would be happy to help.
-Take a look at the `Research Computing <https://www.shef.ac.uk/it-services/research>`_ website or email `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
+Take a look at the `Research Computing <https://www.shef.ac.uk/it-services/research`_ website or email `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
 
 Research Software Engineering Team
 ----------------------------------
@@ -31,7 +31,7 @@ Research Software Engineering Team
 The Research Software Engineering team is an academically-led group in the `Department of Computer Science <https://www.sheffield.ac.uk/dcs>`_
 that collaborates closely with IT Services.
 They can assist with code optimisation, training and all aspects of High Performance Computing including GPU computing along with local, national, regional and cloud computing services.
-Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ website or email `rse@sheffield.ac.uk <rse@sheffield.ac.uk>`_
+Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ website or email `rse@sheffield.ac.uk <rse@sheffield.ac.uk>`_.
 
 .. toctree::
    :maxdepth: 1

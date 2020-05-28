@@ -1,7 +1,7 @@
 .. _hpc-home:
 
 High Performance Computing at Sheffield
-========================================
+=======================================
 
 .. image:: images/iceberg.png
    :width: 40%
@@ -23,7 +23,7 @@ Research Computing Team
 
 The research computing team are the team responsible for the HPC services, as well as all other aspects of research computing.
 If you require support with HPC, training or software for your workstations, the research computing team would be happy to help.
-Take a look at the `Research Computing <https://www.shef.ac.uk/it-services/research`_ website or email `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
+Take a look at the `Research Computing <https://www.shef.ac.uk/it-services/research>`_ website or email `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
 
 Research Software Engineering Team
 ----------------------------------

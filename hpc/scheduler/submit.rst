@@ -77,7 +77,7 @@ Common Interactive Job Options
 ====================== ======================== ================================================================
 SGE Command            Slurm Command            Description
 ====================== ======================== ================================================================
-``-l h_rt=hh:mm:ss``   | ``-t [min]``           Specify the total maximum wall clock execution time for the job.
+``-l h_rt=hh:mm:ss``   | ``-t [min]``           Specify the total maximum execution time for the job.
                        | ``-t [days-hh:mm:ss]`` The upper limit is 08:00:00.  NB these limits may
                                                 differ for reservations/projects.
 
@@ -223,7 +223,7 @@ Scheduler Options
 ====================== ======================== ====================================================================
 SGE Command            Slurm Command            Description
 ====================== ======================== ====================================================================
-``-l h_rt=hh:mm:ss``   | ``-t [min]``           Specify the total maximum wall clock execution time for the job.
+``-l h_rt=hh:mm:ss``   | ``-t [min]``           Specify the total maximum execution time for the job.
                        | ``-t [days-hh:mm:ss]`` The upper limit is typically 96:00:00 (4 days) on ShARC
                                                 and 168:00:00 (7 days) on Iceberg and Bessemer.  Note that these 
                                                 limits may differ for specific Projects/Queues.  

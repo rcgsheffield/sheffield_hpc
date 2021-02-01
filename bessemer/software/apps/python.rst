@@ -219,5 +219,4 @@ You can load the module whenever you need it with (assuming you named the module
     
 ``Avoid loading any two modules of the same type at the same time - i.e. do not load our anaconda modules and miniconda at the same time.``
 
-------------
 

@@ -7,7 +7,7 @@ This is the documentation for ShARC (Sheffield Advanced Research Computer), The 
 
 .. toctree::
   :hidden:
-  :maxdepth: 1
+  :maxdepth: 2
   :glob:
 
   software/index
@@ -16,6 +16,7 @@ This is the documentation for ShARC (Sheffield Advanced Research Computer), The 
   GPUComputingShARC
   DeepLearningShARC
   groupnodes/index
+  hw-accel-gfx
 
 * :ref:`sharc-software`
 * :ref:`sharc-differences`
@@ -23,3 +24,4 @@ This is the documentation for ShARC (Sheffield Advanced Research Computer), The 
 * :ref:`GPUComputing_sharc`
 * :ref:`DeepLearning_sharc`
 * :ref:`groupnodes_sharc`
+* :ref:`sharc-hw-accel-gfx`

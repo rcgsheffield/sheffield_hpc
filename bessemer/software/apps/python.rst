@@ -25,7 +25,7 @@ Using conda Python
 After connecting to Bessemer, start an interactive session
 with the ``srun --pty bash -i command``.
 
-Anaconda Python can be loaded with one of the following:
+Anaconda Python can be loaded with one of the following: ::
 
     module load Anaconda3/2019.07
     module load Anaconda3/5.3.0 
@@ -140,4 +140,84 @@ Then submit this to Slurm by running:
 .. code-block:: bash
 
    sbatch myscript.slurm
+
+
+
+Installing a personal copy of miniconda
+---------------------------------------
+
+
+Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
+
+------------
+
+The latest miniconda releases will be made available at https://docs.conda.io/en/latest/miniconda.html
+
+On Bessemer you should install miniconda to your home directory e.g. (``/home/$USER/miniconda``).
+
+Download the installer: ::
+
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+Check the sums match with those listed on the website: ::
+
+    sha256sum Miniconda3-latest-Linux-x86_64.sh
+
+Make the file executable: ::
+
+    chmod +x Miniconda3-latest-Linux-x86_64.sh
+
+Run the installer but make sure to choose your home directory and subdirectory i.e. /home/$USER/miniconda (n.b. don't make this directory prior to intalling as it makes the directory itself when you supply it with a directory path.)
+
+``Ensure you do not initialize Miniconda as this will break you loading other Anaconda modules on the cluster!`` ::
+
+    ./Miniconda3-latest-Linux-x86_64.sh
+    
+Make a modules folder for yourself: ::
+
+    mkdir /home/$USER/modules
+    
+Make a module file for the install you just made: ::
+
+    nano /home/$USER/modules/minconda
+    
+Make a suitable module file: ::
+
+    #%Module10.2#####################################################################
+    ##
+    ## User home Directory Miniconda module file
+    ##
+    #  Updated by JKWMoore 10/12/2020
+    #
+    #
+    ################################################################################
+    proc ModulesHelp { } {
+    global version
+
+    puts stderr "Makes a user's personal install of Miniconda in their home directory available."
+    }
+
+    module-whatis   "Makes a user's personal install of Miniconda in their home directory available."
+
+    # module variables
+    #
+    set MINICONDA_DIR     /home/$env(USER)/miniconda/bin
+
+    prepend-path PATH $MINICONDA_DIR
+    
+``Warning - module files are written in TCL not bash!``
+    
+Make your own modules available to be loaded: ::
+
+    module use /home/$USER/modules
+
+To skip doing the above everytime you login, you can add this line to the .bashrc file in your home directory.
+
+You can load the module whenever you need it with (assuming you named the module file miniconda): ::
+
+    module load miniconda
+    
+``Avoid loading any two modules of the same type at the same time - i.e. do not load our anaconda modules and miniconda at the same time.``
+
+------------
 

@@ -140,6 +140,7 @@ using pip, *i.e.*::
 Using Python with MPI
 ---------------------
 
+
 There is an **experimental** set of packages for conda
 that have been compiled by the RSE and RCG teams,
 which allow you to use a MPI stack entirely managed by Conda.
@@ -163,6 +164,87 @@ Currently, this channel provides Conda packages for:
 
 The build scripts for these packages can be found in
 this `GitHub <https://github.com/rcgsheffield/conda-packages>`_ repository.
+
+
+
+
+Installing a personal copy of miniconda
+---------------------------------------
+
+
+Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
+
+------------
+
+The latest miniconda releases will be made available at https://docs.conda.io/en/latest/miniconda.html
+
+On ShARC you should install miniconda to your data directory e.g. (``/data/$USER/miniconda``) as your home partition will rapidly fill with conda packages.
+
+Download the installer: ::
+
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+Check the sums match with those listed on the website: ::
+
+    sha256sum Miniconda3-latest-Linux-x86_64.sh
+
+Make the file executable: ::
+
+    chmod +x Miniconda3-latest-Linux-x86_64.sh
+
+Run the installer but make sure to choose your data directory and subdirectory i.e. /data/$USER/miniconda (n.b. don't make this directory prior to intalling as it makes the directory itself when you supply it with a directory path.)
+
+``Ensure you do not initialize Miniconda as this will break you loading other Anaconda modules on the cluster!`` ::
+
+    ./Miniconda3-latest-Linux-x86_64.sh
+    
+Make a modules folder for yourself: ::
+
+    mkdir /home/$USER/modules
+    
+Make a module file for the install you just made: ::
+
+    nano /home/$USER/modules/minconda
+    
+Make a suitable module file: ::
+
+    #%Module10.2#####################################################################
+    ##
+    ## User Data Directory Miniconda module file
+    ##
+    #  Updated by JKWMoore 10/12/2020
+    #
+    #
+    ################################################################################
+    proc ModulesHelp { } {
+    global version
+
+    puts stderr "Makes a user's personal install of Miniconda in their data directory available."
+    }
+
+    module-whatis   "Makes a user's personal install of Miniconda in their data directory available."
+
+    # module variables
+    #
+    set MINICONDA_DIR     /data/$env(USER)/miniconda/bin
+
+    prepend-path PATH $MINICONDA_DIR
+    
+``Warning - module files are written in TCL not bash!``
+    
+Make your own modules available to be loaded: ::
+
+    module use /home/$USER/modules
+
+To skip doing the above everytime you login, you can add this line to the .bashrc file in your home directory.
+
+You can load the module whenever you need it with (assuming you named the module file miniconda): ::
+
+    module load miniconda
+    
+``Avoid loading any two modules of the same type at the same time - i.e. do not load our anaconda modules and miniconda at the same time.``
+
+------------
 
 Installation Notes
 ------------------

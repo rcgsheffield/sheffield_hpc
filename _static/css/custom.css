@@ -1,7 +1,55 @@
-.wy-nav-content {
-  max-width: 75% !important;
-}
 
 .wy-menu-vertical li.toctree-l3, .wy-menu-vertical li.toctree-l4 .wy-menu-vertical {
     font-size: 1em;
+}
+
+.wy-nav-content {
+	max-width: 1200px;
+
+}
+
+
+@media screen and (min-width: 1800px)  {
+    /* Pop out the in-page links to the right instead of the left */
+    div.wy-side-scroll li.toctree-l1.current > ul {
+        position: fixed;
+        margin-left: 0px;
+        margin-top: 75px;
+        overflow-y: auto;
+        padding-left: 15px;
+        height: 85%;
+        top: 0px;
+        left: 1500px;
+    }
+
+    div.wy-side-scroll li.toctree-l1.current a {
+        border-right: none;
+    }
+
+    div.wy-side-scroll li.toctree-l1.current ul {
+        max-width: 400px;
+    }
+
+    div.wy-side-scroll li.toctree-l1.current ul, li.toctree-l1.current li, li.toctree-l1.current a {
+        background-color: transparent !important;
+    }
+
+    /* All items should now be visible regardless of expandy state */
+    div.wy-side-scroll li.toctree-l1.current ul {
+      display: block !important;
+    }
+
+    /* hide the expandy buttons */
+    div.wy-side-scroll li.toctree-l1.current span.toctree-expand {
+        display: none !important;
+    }
+
+    /* Make the padding correct */
+    div.wy-side-scroll li.toctree-l2 li.toctree-l3 > a {
+      padding: .4045em 4.045em !important;
+    }
+
+    div.wy-side-scroll li.toctree-l4 > a {
+      padding: .4045em 5.663em !important;
+  }
 }

@@ -7,16 +7,16 @@
 ## Module file logging
 source /usr/local/etc/module_logging.tcl
 
-proc ModulesHelp { } {
-        global vers
-        puts stderr "	Adds `Nvidia Cuda-$vers' to your PATH environment variable and necessary libraries"
-}
-
 set vers      8.0.44
 set shortvers 8.0
 
+proc ModulesHelp { } {
+        global vers
+        puts stderr "Load NVIDIA CUDA $vers (libraries and binaries)"
+}
+module-whatis   "Load NVIDIA CUDA $vers (libraries and binaries)"
 
-module-whatis   "Loads the necessary `cuda-$vers' library paths"
+module conflict libs/CUDA
 
 set prefix /usr/local/packages/libs/CUDA/$vers/binary
 

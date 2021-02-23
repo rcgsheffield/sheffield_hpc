@@ -15,7 +15,7 @@ proc ModulesHelp { } {
 
 module-whatis   "Makes Intel C++ and Fortran compilers (ifort and icc) and debugger available"
 
-conflict dev/intel-compilers
+module conflict dev/gcc dev/intel-compilers
 
 set     compilerversion 17.0.0
 set     parallelstudioversion 2017.0

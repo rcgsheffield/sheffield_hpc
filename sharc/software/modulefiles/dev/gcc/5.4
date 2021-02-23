@@ -4,13 +4,18 @@
 
 ## Module file logging
 source /usr/local/etc/module_logging.tcl
-##
 
-set     app gcc
 set     version 5.4.0
-module-whatis   "loads the necessary `$app-$version' library paths"
 
-set BASEPATH /usr/local/packages/dev/$app/$version
+proc ModulesHelp { } {
+        global $version
+        puts stderr "Make GCC compilers $version available for use"
+}
+module-whatis   "Make GCC compilers $version available for use"
+
+module conflict dev/gcc dev/intel-compilers
+
+set BASEPATH /usr/local/packages/dev/gcc/$version
 
 setenv GCCDIR $BASEPATH
 

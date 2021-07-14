@@ -21,6 +21,7 @@ This guide will get you set up using the University's clusters
    scheduler/index
    modules
    Choosing-appropriate-resources
+   installing-software
    hw-accel-gfx
    jupyterhub
    hpcgateway

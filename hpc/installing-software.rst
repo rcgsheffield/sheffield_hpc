@@ -94,7 +94,7 @@ be loaded prior in order for the software to install or function correctly.
 What are environment variables?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In Linux based operating systems environment variables are dynamic named values stored within the 
+In Linux based operating systems, environment variables are dynamic named values stored within the 
 system which are used by shells or subshells (your terminal) to facillitate functionality. Simply put, 
 they are variables with a name and value which perform a function in how the operating system and 
 applications work.
@@ -180,13 +180,6 @@ useful during installlation (e.g. setting directories in which to install) and t
 The .bashrc file and its purpose
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``.bashrc`` file is a hidden script file located in a user's home directory which runs 
-when the user logs in using the bash shell. The contents of ``.bashrc`` can be changed to define 
-functions, command aliases, and customize the bash shell to the user's liking.
-
-As this file is executed when the user logs in, it can be customised to add additional directories 
-to the ``PATH`` and ``LD_LIBRARY_PATH`` in order to make software available to the shell.
-
 .. caution::
     Like setting or changing environment variables, editing the ``.bashrc`` file can lead to a 
     corrupted shell environment which can leave you unable to login or run programs. 
@@ -199,6 +192,14 @@ to the ``PATH`` and ``LD_LIBRARY_PATH`` in order to make software available to t
     you suspect you may have corrupted your shell environment by editing the ``.bashrc`` file you 
     can reset it with the command ``resetenv`` or ``/usr/local/scripts/resetenv`` then 
     logging out and back in.
+
+
+The ``.bashrc`` file is a hidden script file located in a user's home directory which runs 
+when the user logs in using the bash shell. The contents of ``.bashrc`` can be changed to define 
+functions, command aliases, and customize the bash shell to the user's liking.
+
+As this file is executed when the user logs in, it can be customised to add additional directories 
+to the ``PATH`` and ``LD_LIBRARY_PATH`` in order to make software available to the shell.
 
 Adding a directory such as a personal installation directory with executables and libraries can be 
 achieved as below: 
@@ -216,6 +217,8 @@ achieved as below:
     preferentially run the binaries from the personal installations if there are multiple locations 
     with the same named executable or library.
 
+
+
 ---------
 
 .. _software_installs_modules:
@@ -227,6 +230,16 @@ Using modules to make software executables available
 
 Module files are written in TCL, please have a look at some of our modules in /usr/local/modulefiles/ 
 to get an idea of what these should look like.
+
+
+.. hint::
+    
+    If wanting to use the :ref:`modules system <software_installs_modules>` with personal module files you 
+    can add a directory called modules to your home directory ``mkdir $HOME/modules`` and populate this 
+    with your own module files.
+
+    To make these available automatically you can then add the ``module use $HOME/modules`` command to 
+    your ``.bashrc`` file.
 
 .. raw:: html
 
@@ -243,31 +256,177 @@ Installing software from binaries
     Using incorrectly versioned dependencies may allow a program to function but this could lead to 
     instability and software errors.
 
-1) binary installs - copy the relevant binary files to a folder of
-your choice (in general create a folder with the software name e.g.
-plink_install). The path to this folder is:  
+Downloading your binaries
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: bash
+The first step of completing and installation from binaries on the clusters is to download the binaries. 
+In general there are few methods for downloading your binaries which will be detailed below in the 
+prefered order.
 
-    /home/username/plink_install
+---------
 
-The executable can then be run in 2 ways: 
+1. Downloading binaries for the cluster using Yumdownloader
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-.. code-block:: bash
+`Yumdownloader <https://linux.die.net/man/1/yumdownloader>`_ is an application installed on the cluster which will allow you to download RPM packaged 
+applications directly from the cluster operating system's repositories. 
 
-    cd /home/username/plink_install
+This is the best method as this will natively ensure that you get a version that is not only 
+compatible with the operating system but this will also ensure that the package is downloaded 
+from a trusted location.
 
-If the binary is called plink then run it using: 
+As an example the following command will download the GNU Make RPM to your local folder indicating 
+where it is downloading the RPM from as well as the full name of the file downloaded.
 
-.. code-block:: bash
+.. code-block:: console
+    :emphasize-lines: 1
+    
+    [user@sharc-node004 yumpackages]$ yumdownloader make
+    Loaded plugins: fastestmirror, priorities
+    Loading mirror speeds from cached hostfile
+    * epel: ftp.nluug.nl
+    make-3.82-24.el7.x86_64.rpm                                | 421 kB  00:00:00     
+    [user@sharc-node004 yumpackages]$                  
 
-    ./plink
+---------
 
-OR, from anywhere in your directory structure run using
+2. Downloading binaries from pkgs.org
+"""""""""""""""""""""""""""""""""""""
 
-.. code-block:: bash
+`pkgs.org <https://pkgs.org/>`_ is a website which allows a user to search for and download binary packages 
+for numerous Linux and Unix operating systems. Using this website you will be able to query for Centos 7 
+x86_64 compatible packages and then download them.
 
-    /home/username/plink_install/plink
+.. caution::
+
+    It is possible to download and use packages for different versions of Centos (or RHEL as both 
+    operating systems are binary compatible) but this is not recommended and may lead to application 
+    instability or errors.
+
+Using GNU Make again as an example, the required page can be found by searching as: 
+
+https://centos.pkgs.org/7/centos-x86_64/make-3.82-24.el7.x86_64.rpm.html
+
+Looking at the **Download** section, the binary package download URL can be seen as:
+
+http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
+
+This RPM can now be downloaded using the wget command on the cluster:
+
+.. code-block:: console
+    :emphasize-lines: 1
+
+    [user@sharc-node004 yumpackages]$ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
+    --2021-07-15 12:19:18--  http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
+    Resolving mirror.centos.org (mirror.centos.org)... 85.236.43.108, 2604:1380:2001:d00::3
+    Connecting to mirror.centos.org (mirror.centos.org)|85.236.43.108|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 430712 (421K) [application/x-rpm]
+    Saving to: ‘make-3.82-24.el7.x86_64.rpm’
+
+    100%[==================================================================================================>] 430,712     --.-K/s   in 0.1s    
+
+    2021-07-15 12:19:18 (3.74 MB/s) - ‘make-3.82-24.el7.x86_64.rpm’ saved [430712/430712]
+
+Because we have downloaded this manually we should now verify both the package integrity and that the 
+package has been signed as trusted. We can do this with the ``rpm --checksig`` command.
+
+.. code-block:: console
+    :emphasize-lines: 1
+
+    [user@sharc-node004 yumpackages]$ rpm --checksig make-3.82-24.el7.x86_64.rpm 
+    make-3.82-24.el7.x86_64.rpm: rsa sha1 (md5) pgp md5 OK
+
+.. hint::
+
+    The `pkgs.org <https://pkgs.org/>`_ website_will also show the dependencies of a package in the 
+    **Requires** section. This can be very useful for resolving package / library dependencies.
+
+---------
+
+3. Dowloading binaries from a vendor / package maintainer
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+If you have software from a vendor who does not supply source code or a package maintainer has provided 
+binaries that are not supplied as part of the normal package repositories for the operating system you 
+will typically be supplied by them with a RPM file (package.rpm) or a compressed tarball (package.tar.gz).
+
+You may be able to use the wget command as above to download this directly to the cluster or may have to 
+transfer this manually.
+
+Typically these packages will be supplied with a checksum value (usually MD5 or SHA256) and you should 
+check that this checksum is correct post-upload to the cluster to verify the integrity of the uploaded 
+files.
+
+An example of checking the integrity of the Make RPM is shown below using the 
+``md5sum`` and ``sha256sum`` commands:
+
+.. code-block:: console
+    :emphasize-lines: 1,3
+
+    [user@sharc-node004 yumpackages]$ md5sum make-3.82-24.el7.x86_64.rpm 
+    c678cfe499cd64bae54a09b43f600231  make-3.82-24.el7.x86_64.rpm
+    [user@sharc-node004 yumpackages]$ sha256sum make-3.82-24.el7.x86_64.rpm 
+    d4829aff887b450f0f3bd307f782e062d1067ca4f95fcad5511148679c14a668  make-3.82-24.el7.x86_64.rpm
+
+---------
+
+Unpacking your binaries
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Unpacking binaries is typically an easy process but will depend on how they have been packaged, examples 
+of unpacking an RPM and a Tarball are given below.
+
+Unpacking an RPM
+""""""""""""""""
+
+Unpacking an RPM is achieved by using the ``rpm2cpio`` and ``cpio`` commands in concert as shown below. 
+This will unpackage the RPM into the current directory following a localised structure which would 
+otherwise be where this package would be installed conventionally.
+
+i.e. ``./usr/bin/gmake`` rather than ``/usr/bin/gmake``
+
+.. code-block:: console
+    :emphasize-lines: 1
+    :caption: The output below has been truncated to save space as indicated by \*SNIP\*.
+
+    [user@sharc-node004 yumpackages]$ rpm2cpio make-3.82-24.el7.x86_64.rpm | cpio -idmv
+    ./usr/bin/gmake
+    ./usr/bin/make
+    ./usr/share/doc/make-3.82
+    ./usr/share/doc/make-3.82/AUTHORS
+    ./usr/share/doc/make-3.82/COPYING
+    ./usr/share/doc/make-3.82/NEWS
+    ./usr/share/doc/make-3.82/README
+    *SNIP*
+    ./usr/share/info/make.info-1.gz
+    ./usr/share/info/make.info-2.gz
+    ./usr/share/info/make.info.gz
+    ./usr/share/man/man1/gmake.1.gz
+    ./usr/share/man/man1/make.1.gz
+    2278 blocks
+
+
+
+At this stage you can then move the unpackaged software as desired and any executables (in ``./bin``) 
+or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH``.
+
+
+---------
+
+Unpacking an Tarball
+""""""""""""""""""""
+
+* tar xvf mytarball.tar.gz
+* checksum
+* sig checking
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
+Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
+Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
+amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
+lorem commodo ultrices. 
+
 
 .. raw:: html
 
@@ -276,91 +435,39 @@ OR, from anywhere in your directory structure run using
 Installing software by compiling from source
 --------------------------------------------
 
-
-Some software installation procedures require running a command called configure that sets up the 
-installation in a default location which is usually a system area where users do not have write access. 
-If you do need to run configure to install a program on iceberg under your area you can use the following 
-parameter to configure to install the software on a specified location.
-
-.. code-block:: bash
-
-    ./configure --prefix /home/csxyz
-
-We shall make available an area ( under /usr/local/extras ) with necessary disk space for the work,
-we shall give the principle installer full access rights to this area for installation work,
-if and when necessary we shall help install the execution scripts to a commonly accessible area and create module files.
-
-The fact that during the installation there will be no (write access) to some system areas should not present any major problems.
-
-Here are some technical hints;
-
-Extra libraries that may be needed can be installed under the programs own directory and
-the LD_LIBRARY_PATH system variable can be altered to add this directory to it;
-i.e. LD_LIBRARY_PATH=$LD_LIBRARY_PATH:location_of_your_own_library
-Similarly PATH variable can be altered either by
-PATH=$PATH:location_of_your_own_executables
-or
-by using the addpath locally written command. Just type addpath for further info.
-the above changes can be inserted into your own .bashrc file to automate it all
-Finally we can create a module that implements these so that anyone can use the module load command to access the software. If you like to take advantage of this option contact research-it@sheffield.ac.uk .
-
-Single user software install: users can install software in their /home or /data directories as follows:
+Downloading the source code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-2) build & install source code - copy the source code (normally a .zip
-or .tar.gz) to your /home or /data areas. Extract the files using
-unzip or tar xf, & then cd into the source code directory. It is
-important to read the README file here since this will give details on
-how to build the code & any dependencies etc. However in general the
-build process is as follows:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
+Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
+Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
+amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
+lorem commodo ultrices. 
 
-Source code is for an application called wobble.
+---------
 
-Install the software in a directory called wobble_install in /data:
+Downloading source Tarballs
+"""""""""""""""""""""""""""
 
-.. code-block:: bash
 
-    mkdir /data/username/wobble_install
-    #cd into the source code directory which we extracted
-    cd wobble
-    module load dev/gcc/4.9.4 (altho the README file may suggest a
-    different gcc version &/or cmake)
-    ./configure --prefix=/data/username/wobble_install
-    make install
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
+Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
+Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
+amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
+lorem commodo ultrices. 
 
-If the program executable is called wobble, located in
-``/data/username/wobble_install/bin``, then it can be run using:
+---------
 
-.. code-block:: bash
+Downloading source code with Git 
+""""""""""""""""""""""""""""""""
 
-    /data/username/wobble_install/bin/wobble
 
-Note for both (1) & (2) above you can add the directories containing the 
-executables to the PATH variable so that to run the executables you just type 
-their names i.e. plink or wobble:
-
-export PATH=path_to_executable_folder:$PATH
-
-NOTE on Library dependencies - sometimes during a build you will get errors related to 
-missing libraries or other dependencies (these should be specified in the README file). 
-However before you trigger a help desk call check to see if the library or other dependency is
-available on ShARC. Do this using: 
-
-.. code-block:: bash
-
-    module avail
-    
-or: 
-
-.. code-block:: bash
-
-    module avail |& grep -i name_of_dependency
-
-If it is available then load it using:
-
-.. code-block:: bash
-
-    module load name_module
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
+Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
+Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
+amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
+lorem commodo ultrices. 
 
 
 .. raw:: html
@@ -372,3 +479,13 @@ Why should I install from source if binaries are available?
 
 * Performance optimisations
 * Dependencies may not be available with the versions used for binary compilation.
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator">
+
+What alternative methods exist?
+-------------------------------
+
+* Conda
+* Pip

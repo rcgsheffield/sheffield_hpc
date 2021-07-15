@@ -11,7 +11,7 @@ Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-
 
 Interactive usage
 -----------------
-After connecting to Bessemer (see :ref:`ssh`),  start an interactive session with the :code:`qrshx` command.
+After connecting to Bessemer (see :ref:`ssh`),  start an interactive session with the :code:`srun --pty bash -i` command.
 
 The latest version of bedtools (currently version 2.29.2) is made available with the command:
 
@@ -35,4 +35,4 @@ See: https://github.com/rcgsheffield/sheffield_hpc/issues/1157
 
 Modulefile
 ----------
-The module file is on the system at :download:`/usr/local/packages/live/eb/BEDTools/2.29.2-GCC-9.3.0/easybuild/ </bessemer/software/modulefiles/BEDTools/2.29.2-GCC-9.3.0>`.
+The module file is on the system at :download:`/usr/local/modulefiles/live/eb/all/BEDTools/2.29.2-GCC-9.3.0 </bessemer/software/modulefiles/BEDTools/2.29.2-GCC-9.3.0>`.

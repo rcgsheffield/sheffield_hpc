@@ -1,0 +1,40 @@
+#%Module
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+Binary maven install, Apache Maven is a software project management and comprehension tool. Based on
+the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a
+central piece of information.
+
+
+More information
+================
+ - Homepage: https://maven.apache.org/index.html
+    }
+}
+
+module-whatis {Description: Binary maven install, Apache Maven is a software project management and comprehension tool. Based on
+the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a
+central piece of information.
+}
+module-whatis {Homepage: https://maven.apache.org/index.html}
+module-whatis {URL: https://maven.apache.org/index.html}
+
+set root /usr/local/packages/live/eb/Maven/3.6.3
+
+conflict Maven
+
+prepend-path	CMAKE_PREFIX_PATH		$root
+prepend-path	LD_LIBRARY_PATH		$root/lib
+prepend-path	LIBRARY_PATH		$root/lib
+prepend-path	PATH		$root/bin
+setenv	EBROOTMAVEN		"$root"
+setenv	EBVERSIONMAVEN		"3.6.3"
+setenv	EBDEVELMAVEN		"$root/easybuild/Maven-3.6.3-easybuild-devel"
+
+prepend-path	PATH		$root
+# Built with EasyBuild version 4.3.4

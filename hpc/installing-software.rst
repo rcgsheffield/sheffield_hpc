@@ -328,8 +328,11 @@ This RPM can now be downloaded using the wget command on the cluster:
 
     2021-07-15 12:19:18 (3.74 MB/s) - ‘make-3.82-24.el7.x86_64.rpm’ saved [430712/430712]
 
+.. _rpm-check-sigs:
+
 Because we have downloaded this manually we should now verify both the package integrity and that the 
 package has been signed as trusted. We can do this with the ``rpm --checksig`` command.
+
 
 .. code-block:: console
     :emphasize-lines: 1
@@ -368,6 +371,23 @@ An example of checking the integrity of the Make RPM is shown below using the
     c678cfe499cd64bae54a09b43f600231  make-3.82-24.el7.x86_64.rpm
     [user@sharc-node004 yumpackages]$ sha256sum make-3.82-24.el7.x86_64.rpm 
     d4829aff887b450f0f3bd307f782e062d1067ca4f95fcad5511148679c14a668  make-3.82-24.el7.x86_64.rpm
+
+At this stage if being thorough you should check that any vendor or package maintainer signatures on 
+the downloaded binary packages is valid.
+
+If you know that the vendor or maintainer already signs their other releases into the Centos repository 
+and has supplied you an RPM then you can :ref:`check signatures as above <rpm-check-sigs>`.
+
+If the vendor or maintainer has supplied a tarball and associated associated signature file (typically 
+packagename.tar.gz.asc  or packagename.tar.gz.sig) then you can use gpg to check if it is valid as 
+demonstrated below with the GNU Make project's source tarball: 
+
+.. code-block:: console
+    :emphasize-lines: 1
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ---------
 

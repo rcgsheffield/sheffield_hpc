@@ -91,65 +91,7 @@ be loaded prior in order for the software to install or function correctly.
 
 ---------
 
-What are environment variables?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In Linux based operating systems, environment variables are dynamic named values stored within the 
-system which are used by shells or subshells (your terminal) to facillitate functionality. Simply put, 
-they are variables with a name and value which perform a function in how the operating system and 
-applications work.
-
-These variables have a simple format:
-
-.. code-block:: bash
-
-    KEY=value
-    KEY="Some other value"
-    KEY=value1:value2
-
-.. important::
-
-    * The variable names are case sensitive and by convention they are UPPER CASE.
-    * If a variable has multiple values they should be separated by a colon ``:``.
-    * Variables **do not** have spaces around the equals ``=`` sign.
-
-Note that **environment variables** are variables that are available system-wide and are inherited 
-by all spawned child processes and shells where **shell variables** are variables that apply only to 
-the current shell instance. Each shell such as bash (the default on the clusters), has its own 
-set of internal shell variables.
-
----------
-
-Listing environment variables
-"""""""""""""""""""""""""""""
-
-* **env** – This command allows you to run another program in a custom environment without modifying 
-  the current one. When used without an argument it will print a list of the current environment variables.
-* **printenv** – This command prints all or the specified environment variables.
-* **echo $MYVARIABLE** - The command **echo** when supplied with a variable name prefixed with ``$`` will 
-  print that variable. An alternative syntax would be **echo ${MYVARIABLE}**. Variables can also be 
-  utilized in bash scripts in this manner.
-
----------
-
-Setting environment variables
-"""""""""""""""""""""""""""""
-
-Manually setting environment variables is trivial and can be accomplished with the commands below.
-
-* **set** – The command sets or unsets shell variables. When used without an argument it will print a 
-  **list** of all variables including environment and shell variables, and shell functions.
-* **unset** – The command deletes shell and environment variables.
-* **export** – The command sets environment variables.
-
-.. caution::
-    Setting or changing environment variables can lead to a corrupted shell environment which can leave you 
-    unable to login or run programs. Manually changing values should be avoided in favour of using the 
-    :ref:`modules system <software_installs_modules>`.
-
-    If you find your shell environment is behaving oddly, programs are no longer available and 
-    you suspect you may have corrupted your current shell environment by changing environment variables 
-    in the terminal you can simply log out and log back in to clear the problem.
+.. include:: ../referenceinfo/linux-shell/what-are-environment-variables.rst
 
 ---------
 
@@ -177,47 +119,7 @@ useful during installlation (e.g. setting directories in which to install) and t
 
 ---------
 
-The .bashrc file and its purpose
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. caution::
-    Like setting or changing environment variables, editing the ``.bashrc`` file can lead to a 
-    corrupted shell environment which can leave you unable to login or run programs. 
-
-    Please take care if editing this file and consider using the 
-    :ref:`modules system <software_installs_modules>` to add directories to the ``PATH`` and 
-    ``LD_LIBRARY_PATH`` to avoid inadvertent mistakes.
-    
-    If you find your shell environment is behaving oddly, programs are no longer available and 
-    you suspect you may have corrupted your shell environment by editing the ``.bashrc`` file you 
-    can reset it with the command ``resetenv`` or ``/usr/local/scripts/resetenv`` then 
-    logging out and back in.
-
-
-The ``.bashrc`` file is a hidden script file located in a user's home directory which runs 
-when the user logs in using the bash shell. The contents of ``.bashrc`` can be changed to define 
-functions, command aliases, and customize the bash shell to the user's liking.
-
-As this file is executed when the user logs in, it can be customised to add additional directories 
-to the ``PATH`` and ``LD_LIBRARY_PATH`` in order to make software available to the shell.
-
-Adding a directory such as a personal installation directory with executables and libraries can be 
-achieved as below: 
-
-.. code-block:: bash
-
-    export PATH=$HOME/software/bin:$PATH
-    export LD_LIBRARY_PATH=$HOME/software/lib:$LD_LIBRARY_PATH
-
-.. note::
-    The code above adds the personal directory to the front of each list - the order of the directories 
-    in each list is important as the highest priority for the list is read from left to right.
-
-    This means that in the above case, the personal installations take priority and the shell will 
-    preferentially run the binaries from the personal installations if there are multiple locations 
-    with the same named executable or library.
-
-
+.. include:: ../referenceinfo/linux-shell/the-bashrc-file.rst
 
 ---------
 
@@ -226,20 +128,28 @@ achieved as below:
 Using modules to make software executables available
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+‘Environment Modules’ are the mechanism by which much of the software is made available to the users 
+of the Bessemer and ShARC clusters. You are able to load and unload modules which make specific 
+configurations of software available in a structured way.
 
+They do this by adding and removing software to the the ``PATH`` and ``LD_LIBRARY_PATH`` environment 
+variables as well as set any additional required environment varibles, configuration or license files using 
+the ``module load`` or  ``module unload`` functionality.
 
-Module files are written in TCL, please have a look at some of our modules in /usr/local/modulefiles/ 
+Module files are written in TCL, please have a look at some of our modules in ``/usr/local/modulefiles/`` 
 to get an idea of what these should look like.
-
 
 .. hint::
     
-    If wanting to use the :ref:`modules system <software_installs_modules>` with personal module files you 
+    If you wish to use the :ref:`modules system <software_installs_modules>` with personal module files you 
     can add a directory called modules to your home directory ``mkdir $HOME/modules`` and populate this 
     with your own module files.
 
     To make these available automatically you can then add the ``module use $HOME/modules`` command to 
     your ``.bashrc`` file.
+
+Further detail on the environment modules system in use on the clusters can be found on the 
+:ref:`modules page <env_modules>`.
 
 .. raw:: html
 
@@ -287,6 +197,8 @@ where it is downloading the RPM from as well as the full name of the file downlo
     * epel: ftp.nluug.nl
     make-3.82-24.el7.x86_64.rpm                                | 421 kB  00:00:00     
     [user@sharc-node004 yumpackages]$                  
+
+This method will automatically check the package integrity and check it also has valid signatures.
 
 ---------
 
@@ -347,47 +259,22 @@ package has been signed as trusted. We can do this with the ``rpm --checksig`` c
 
 ---------
 
-3. Dowloading binaries from a vendor / package maintainer
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+3. Downloading binaries from a vendor / package maintainer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 If you have software from a vendor who does not supply source code or a package maintainer has provided 
 binaries that are not supplied as part of the normal package repositories for the operating system you 
-will typically be supplied by them with a RPM file (package.rpm) or a compressed tarball (package.tar.gz).
+will typically be supplied by them with a RPM file (``package.rpm``) or a compressed tarball (``package.tar.gz``)
+from their website, via email or similar.
 
-You may be able to use the wget command as above to download this directly to the cluster or may have to 
-transfer this manually.
+You may be able to use the wget command to download this directly to the cluster or may have to 
+transfer this manually using SCP or similar. Once downloaded you should verify the software download's 
+integrity and validity.
 
-Typically these packages will be supplied with a checksum value (usually MD5 or SHA256) and you should 
-check that this checksum is correct post-upload to the cluster to verify the integrity of the uploaded 
-files.
-
-An example of checking the integrity of the Make RPM is shown below using the 
-``md5sum`` and ``sha256sum`` commands:
-
-.. code-block:: console
-    :emphasize-lines: 1,3
-
-    [user@sharc-node004 yumpackages]$ md5sum make-3.82-24.el7.x86_64.rpm 
-    c678cfe499cd64bae54a09b43f600231  make-3.82-24.el7.x86_64.rpm
-    [user@sharc-node004 yumpackages]$ sha256sum make-3.82-24.el7.x86_64.rpm 
-    d4829aff887b450f0f3bd307f782e062d1067ca4f95fcad5511148679c14a668  make-3.82-24.el7.x86_64.rpm
-
-At this stage if being thorough you should check that any vendor or package maintainer signatures on 
-the downloaded binary packages is valid.
+.. include:: ../referenceinfo/linux-shell/verifying-software-package-downloads.rst
 
 If you know that the vendor or maintainer already signs their other releases into the Centos repository 
-and has supplied you an RPM then you can :ref:`check signatures as above <rpm-check-sigs>`.
-
-If the vendor or maintainer has supplied a tarball and associated associated signature file (typically 
-packagename.tar.gz.asc  or packagename.tar.gz.sig) then you can use gpg to check if it is valid as 
-demonstrated below with the GNU Make project's source tarball: 
-
-.. code-block:: console
-    :emphasize-lines: 1
-    
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+and has supplied you an RPM then alternatively you can :ref:`check signatures as detailed previously <rpm-check-sigs>`.
 
 ---------
 
@@ -397,55 +284,22 @@ Unpacking your binaries
 Unpacking binaries is typically an easy process but will depend on how they have been packaged, examples 
 of unpacking an RPM and a Tarball are given below.
 
-Unpacking an RPM
-""""""""""""""""
-
-Unpacking an RPM is achieved by using the ``rpm2cpio`` and ``cpio`` commands in concert as shown below. 
-This will unpackage the RPM into the current directory following a localised structure which would 
-otherwise be where this package would be installed conventionally.
-
-i.e. ``./usr/bin/gmake`` rather than ``/usr/bin/gmake``
-
-.. code-block:: console
-    :emphasize-lines: 1
-    :caption: The output below has been truncated to save space as indicated by \*SNIP\*.
-
-    [user@sharc-node004 yumpackages]$ rpm2cpio make-3.82-24.el7.x86_64.rpm | cpio -idmv
-    ./usr/bin/gmake
-    ./usr/bin/make
-    ./usr/share/doc/make-3.82
-    ./usr/share/doc/make-3.82/AUTHORS
-    ./usr/share/doc/make-3.82/COPYING
-    ./usr/share/doc/make-3.82/NEWS
-    ./usr/share/doc/make-3.82/README
-    *SNIP*
-    ./usr/share/info/make.info-1.gz
-    ./usr/share/info/make.info-2.gz
-    ./usr/share/info/make.info.gz
-    ./usr/share/man/man1/gmake.1.gz
-    ./usr/share/man/man1/make.1.gz
-    2278 blocks
-
-
-
-At this stage you can then move the unpackaged software as desired and any executables (in ``./bin``) 
-or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH``.
-
+.. include:: ../referenceinfo/linux-shell/unpacking-an-rpm.rst
 
 ---------
 
-Unpacking an Tarball
-""""""""""""""""""""
+.. include:: ../referenceinfo/linux-shell/unpacking-a-tarball.rst
 
-* tar xvf mytarball.tar.gz
-* checksum
-* sig checking
+Making your binaries available in the shell
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
-Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
-Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
-amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
-lorem commodo ultrices. 
+At this stage you can typically move the unpackaged binaries as desired and any executables (in ``./bin``) 
+or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH`` 
+using one of the two methodologies below.
+
+.. include:: ../referenceinfo/linux-shell/making-software-available-with-bashrc.rst
+
+.. include:: ../referenceinfo/environment-modules/creating-custom-modulefiles.rst
 
 
 .. raw:: html
@@ -458,47 +312,165 @@ Installing software by compiling from source
 Downloading the source code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The first step of completing and installation from source on the clusters is to download 
+the source code. In general there are few methods for downloading the source code for a project 
+which will be detailed below.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
-Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
-Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
-amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
-lorem commodo ultrices. 
+Typically source code will be made available from the maintainer's FTP/HTTP servers or mirrors in the form 
+of a compressed tarball or hosted on their chosen version control system site such as 
+`Github <https://github.com/>`_ , `Gitlab <https://about.gitlab.com/>`_ , 
+`Atlassian Bitbucket <https://bitbucket.org/>`_  and `GNU Savannah <https://savannah.gnu.org/>`_  
+among many others.
 
 ---------
 
 Downloading source Tarballs
 """""""""""""""""""""""""""
 
+Downloading a source tarball is typically straightforwardand you can simply navigate to a package 
+maintainer's website, go into the download area and then download a tarball and it's signature file if 
+available.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
-Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
-Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
-amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
-lorem commodo ultrices. 
+For example, the GNU make project download area can be found at https://ftp.gnu.org/gnu/make/ or on one of 
+the numerous mirror websites.
 
+You may be able to use the wget command to download this directly to the cluster or may have to 
+transfer this manually using SCP or similar. Once downloaded you should verify the software download's 
+integrity and validity.
+
+.. include:: ../referenceinfo/linux-shell/verifying-software-package-downloads.rst
+
+.. include:: ../referenceinfo/linux-shell/unpacking-a-tarball.rst
+
+With the files now decompressed and available on the local file system you are ready to compile your 
+software.
 ---------
 
 Downloading source code with Git 
 """"""""""""""""""""""""""""""""
 
+Downloading source code with Git is straightforward with the Git program already installed on the clusters.
+Once you have located the source code repository of interest you need only clone it to your local filesystem.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in tempor lorem. 
-Suspendisse dictum porttitor elementum. Donec gravida sapien risus, vel ornare nisi pretium non. 
-Ut scelerisque tincidunt ante, in tristique nisl vestibulum vitae. Nunc dolor purus, commodo sit 
-amet viverra nec, mollis nec ex. Sed blandit augue at consequat tincidunt. Duis ultrices arcu vel 
-lorem commodo ultrices. 
+An example of this process is shown with the GNU Make project. The GNU make project source code is hosted at 
+https://git.savannah.gnu.org/cgit/make.git . Opening this page in the web browser will detail some important 
+infomation needed in order to download and select the version of Make we are interested in.
+
+First clone the project using Git and the ``.git`` URL above as follows:
+
+.. code-block:: console
+    :emphasize-lines: 1
+
+    [user@sharc-login4 make-git]$ git clone https://git.savannah.gnu.org/git/make.git
+    Cloning into 'make'...
+    remote: Counting objects: 16331, done.
+    remote: Compressing objects: 100% (3434/3434), done.
+    remote: Total 16331 (delta 12822), reused 16331 (delta 12822)
+    Receiving objects: 100% (16331/16331), 5.07 MiB | 2.79 MiB/s, done.
+    Resolving deltas: 100% (12822/12822), done.
+
+This has cloned the latest version of the master branch into our local filesystem. Now we can instruct Git 
+to checkout a specific version of Make via tags after entering the subdirectory that has been cloned. 
+The available tags and branches will be shown on the source code repository webpage.
+
+.. code-block:: console
+    :emphasize-lines: 1,2
+
+    [user@sharc-login4 make-git]$ cd make
+    [user@sharc-login4 make]$ git checkout tags/4.3
+    Note: checking out 'tags/4.3'.
+    
+    You are in 'detached HEAD' state. You can look around, make experimental
+    changes and commit them, and you can discard any commits you make in this
+    state without impacting any branches by performing another checkout.
+    
+    If you want to create a new branch to retain commits you create, you may
+    do so (now or later) by using -b with the checkout command again. Example:
+    
+      git checkout -b new_branch_name
+    
+    HEAD is now at f430a65... GNU Make release 4.3
+
+The files on the local file system are now version 4.3, have been cloned over HTTPS and Git will have 
+ensured the integrity of the downloaded files automatically. You are now able to compile your software.
+
+Compiling your source code into binaries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Compiling from source is normally straightforward assuming that the prerequisites that a software package 
+has are fulfilled correctly. 
+
+Care **must** be taken to read though and documentation provided in the 
+software package files which are usually called ``README`` or ``INSTALL`` in the top level directory of
+the downloaded files. These files will dictate what specific instructions, compilers, build systems and 
+versions are required for a successful compile.
+
+With this in mind, the process is very similar for most packages and will require you to first module 
+load appropriate versions of GCC and / or CMake, potentially run a specific script (e.g. ./autogen.sh or 
+./build), configure the build options and then compile the source code.
+
+
+
+.. note::
+
+    Make is a tool which controls the generation of executables and other non-source files of a program 
+    from the program's source files.
+
+    Below shows the ``make`` program provided by the base operating system using GCC 8.2 to compile a more 
+    modern version of itself. This may seem quirky or recursive but is normal and will not lead to 
+    conflicts or issues.    
+
+e.g. the commands for compiling a more modern version of the ``make`` program on the ShARC cluster:
+
+.. code-block:: console
+
+    [user@sharc-login4 make]$ module load dev/gcc/8.2
+    [user@sharc-login4 make]$ cd make
+    [user@sharc-login4 make]$ mkdir ./build && cd ./build
+    [user@sharc-login4 make]$ ../configure --prefix=$HOME/software/installed/make
+    [user@sharc-login4 make]$ make -j $NSLOTS
+    [user@sharc-login4 make]$ make -j $NSLOTS check
+    [user@sharc-login4 make]$ make -j $NSLOTS install
+
+* A ``build`` directory is made and then used to keep the source files unpolluted.
+* The ``../configure`` script is called from the directory above with the ``--prefix`` option set
+  to where we want the installed files to be located.
+* The ``make`` program provided the base operating system is then called 3 times. The first instance 
+  calls the compiler to compile the code, the second instance runs the maintainers' check scripts to 
+  verify successful compilation and the final instance is called to then install the files.
+* The ``-j $NSLOTS`` argument supplied to ``make`` instructs ``make`` to use multiple cores with the 
+  ``$NSLOTS`` variable containing the number of cores currently available in the requested interactive 
+  or batch session.
+
+
+  .. warning::
+    Care should be taken to observe the log output generated by this process to verify successful compilation 
+    and any indicated warnings or failed checks which could negatively affect your work or result in hard to 
+    diagnose unexpected behaviour.
+
+Making your compiled binaries available in the shell
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+At this stage you can typically move the unpackaged binaries as desired and any executables (in ``./bin``) 
+or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH`` 
+using one of the two methodologies below.
+
+.. include:: ../referenceinfo/linux-shell/making-software-available-with-bashrc.rst
+
+.. include:: ../referenceinfo/environment-modules/creating-custom-modulefiles.rst
 
 
 .. raw:: html
 
     <hr class="hr-mid-section-separator">
 
-Why should I install from source if binaries are available?
-------------------------------------------------------------
+Why should I install from source?
+---------------------------------
 
-* Performance optimisations
-* Dependencies may not be available with the versions used for binary compilation.
+* Further performance optimisations may be available for your chosen cluster / computer.
+* Dependencies may not be available with the versions required for a binary installation.
+* The version of the software you desire has no precompiled binaries available.
+* Your machine architecture does not have any precompiled binaries available.
 
 .. raw:: html
 

@@ -25,6 +25,9 @@ Load the appropriate cuDNN version (**and implicitly load a specific CUDA versio
 
 .. code-block:: bash
 
+   module load libs/cudnn/8.2.1.32/binary-cuda-11.3.0
+   module load libs/cudnn/8.2.1.32/binary-cuda-11.2.0
+   module load libs/cudnn/8.1.1.33/binary-cuda-11.2.0
    module load libs/cudnn/8.0.5.39/binary-cuda-11.1.1
    module load libs/cudnn/7.6.5.32/binary-cuda-10.2.89
    module load libs/cudnn/7.6.5.32/binary-cuda-10.1.243
@@ -47,6 +50,9 @@ Examples
 
 Examples are provided for the following versions 
 
+ * ``libs/cudnn/8.2.1.32/binary-cuda-11.3.0``
+ * ``libs/cudnn/8.2.1.32/binary-cuda-11.2.0``
+ * ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``
  * ``libs/cudnn/8.0.5.39/binary-cuda-11.1.1``
  * ``libs/cudnn/7.6.5.32/binary-cuda-10.2.89``
  * ``libs/cudnn/7.6.5.32/binary-cuda-10.1.243``
@@ -79,6 +85,26 @@ This section is primarily for administrators of the system.
 
 The cuDNN library is only available to download through the `developer portal <https://developer.nvidia.com/cudnn>`_.  
 Installation ``.tgz`` files and ``.deb`` files containing samples are located in ``/usr/local/media/protected/cudnn``.
+
+
+Version 8.2.1.32
+^^^^^^^^^^^^^^^^
+- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 11.3 </sharc/software/modulefiles/libs/cudnn/8.2.1.32/binary-cuda-11.3.0>`
+- :download:`Module file for CUDA 11.2 </sharc/software/modulefiles/libs/cudnn/8.2.1.32/binary-cuda-11.2.0>`
+- Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 11.2 & 11.3 on a K80 GPU. 
+
+Note that FreeImage is no longer distributed with CUDA version 11.2 or higher thus the 
+``libs/FreeImage/3.18.0/gcc-8.2`` module must be loaded during testing with the ``mnistCUDNN`` example.
+
+Version 8.1.1.33
+^^^^^^^^^^^^^^^^
+- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 11.2 </sharc/software/modulefiles/libs/cudnn/8.1.1.33/binary-cuda-11.2.0>`
+- Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 11.2 on a K80 GPU. Note that
+
+Note that FreeImage is no longer distributed with CUDA version 11.2 or higher thus the 
+``libs/FreeImage/3.18.0/gcc-8.2`` module must be loaded during testing with the ``mnistCUDNN`` example.
 
 Version 8.0.5.39
 ^^^^^^^^^^^^^^^^

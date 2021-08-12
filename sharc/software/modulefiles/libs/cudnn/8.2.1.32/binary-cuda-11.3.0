@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## cuDNN 8.2.1.32 module file for CUDA 11.3
+##
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global cudnnvers
+        global cudavers
+
+        puts stderr "	Adds `Nvidia cuDNN-$cudnnvers and CUDA $cudavers' to your PATH environment variable 
+}
+
+set cudnnvers 8.2.1.32
+set cudavers  11.3.0
+set cudashortvers  11.3
+
+module-whatis   "loads the necessary `cuDNN-$cudnnvers and CUDA $cudavers' library paths"
+
+module load libs/CUDA/$cudavers/binary
+
+set CUDNN_HOME /usr/local/packages/libs/cudnn/$cudnnvers/binary-cuda-$cudashortvers/cuda
+setenv CUDNN_HOME $CUDNN_HOME
+
+prepend-path C_INCLUDE_PATH $CUDNN_HOME/include/
+prepend-path CPLUS_INCLUDE_PATH $CUDNN_HOME/include/
+prepend-path LD_LIBRARY_PATH $CUDNN_HOME/lib64/
+prepend-path CPATH $CUDNN_HOME/include/
+prepend-path LIBRARY_PATH $CUDNN_HOME/lib64/

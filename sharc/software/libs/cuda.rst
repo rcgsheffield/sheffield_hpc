@@ -23,6 +23,8 @@ There are several versions of the CUDA library available.
 As with much software installed on the cluster, 
 versions of CUDA are activated via the :ref:`'module load' command<env_modules>`: ::
 
+   module load libs/CUDA/11.3.0/binary
+   module load libs/CUDA/11.2.0/binary
    module load libs/CUDA/11.1.1/binary
    module load libs/CUDA/11.0.2/binary
    module load libs/CUDA/10.2.89/binary
@@ -67,23 +69,24 @@ In a ``qrshx`` session:
 .. code-block:: sh
 
    # Load modules
-   module load libs/CUDA/11.1.1/binary
+   module load libs/CUDA/11.3.0/binary
 
    # Copy CUDA samples to a local directory
-   # It will create a directory called NVIDIA_CUDA-11.1_Samples/
+   # It will create a directory called NVIDIA_CUDA-11.3_Samples/
    mkdir cuda_samples
    cd cuda_samples
    cp -r $CUDA_SDK .
 
-   # Compile (this will take a while)
-   cd NVIDIA_CUDA-11.1_Samples/
+   # Compile
+   cd NVIDIA_CUDA-11.3_Samples/1_Utilities/deviceQuery
    make
 
 The ``make`` command then runs the ``nvcc`` CUDA compiler and
 generates a binary executable that you can then run on a node with
 an NVIDIA GPU installed.
 
-A basic test is to run one of the resulting binaries, ``deviceQuery``.
+A basic test is to run the resulting binary, ``deviceQuery`` on a GPU equipped node to show the GPU 
+characteristics.
 
 GPU Code Generation Options
 ---------------------------
@@ -182,7 +185,20 @@ This service runs ``/usr/local/scripts/gpu-nvidia-driver.sh`` at boot time to:
 - Load the ``nvidia`` kernel module;
 - Create several *device nodes* in ``/dev/``.
 
-CUDA 11.0.2
+CUDA 11.3.0
+^^^^^^^^^^^
+
+#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.3.0_465.19.01`` as the sole argument. 
+#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/11.3.0/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.3.0/binary``
+
+
+CUDA 11.2.0
+^^^^^^^^^^^
+
+#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.2.0_460.27.04`` as the sole argument. 
+#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/11.2.0/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.2.0/binary``
+
+CUDA 11.1.1
 ^^^^^^^^^^^
 
 #. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.1.1_455.32.00`` as the sole argument. 

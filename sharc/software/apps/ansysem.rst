@@ -57,15 +57,23 @@ The following is an example batch submission script which is submitted to the qu
 
     module load apps/ansysem/21.1
 
-    ansysedt -ng -BatchSolve -Distributed -machinelist num=8 -batchoptions 'HFSS/HPCLicenseType'='pool' -batchoptions 'HFSS-IE/HPCLicenseType'='pool' -useElectronicsPPE Tee.aedt
+    ansysedt -ng -BatchSolve -Distributed -machinelist num=8 -batchoptions 'HPCLicenseType'='pool' -useElectronicsPPE Tee.aedt
+
+The script requests 8 cores using the MPI parallel environment ``mpi`` with a runtime of 
+30 mins and 2 GB of real memory per core. The Ansys EM input file is ``Tee.aedt`` and batch options 
+``'HPCLicenseType'='pool'`` to change the HPC licencing from "pack" (the default) to "pool".
 
 .. note::
 
     * The University of Sheffield ANSYS licence servers currently only support ANSYS EM 2020 R1 or higher.
-    * The ``-useElectronicsPPE`` argument is required if you are using the University of Sheffield ANSYS licence server.
-    * If you are using an alternative licencing method and one of the older modules this option is unlikely to be required.
-
-The script requests 8 cores using the MPI parallel environment ``mpi`` with a runtime of 30 mins and 2 GB of real memory per core. The Ansys EM input file is ``Tee.aedt`` and batch options ``'HFSS/HPCLicenseType'='pool'`` and ``'HFSS-IE/HPCLicenseType'='pool'`` change the HPC licencing from "pack" (the default) to "pool".
+    * The ``-useElectronicsPPE`` argument is required if you are using the University of Sheffield ANSYS 
+      licence server however if you are using an alternative licencing method (e.g. a flat-file) 
+      and one of the older modules this option is unlikely to be required.
+    * If you are using an older module the batch options may need adjusting from 
+      ``-batchoptions 'HPCLicenseType'='pool'`` to project type specific options 
+      `click here and see post 4. <https://forum.ansys.com/discussion/5955/hfsshpc-vs-hfsshpc-pack-license>`_
+    * If you are using commercial licenses the use of ``-batchoptions 'HPCLicenseType'='pack'`` 
+      is likely compulsory.
 
 Installation notes
 ------------------

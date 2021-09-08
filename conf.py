@@ -58,7 +58,14 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'themes', 'README.rst','global.rst']
+exclude_patterns = [
+    '_build',
+    'themes',
+    'README.rst',
+    'global.rst',
+    '.tox',
+    'mypy_cache'
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'

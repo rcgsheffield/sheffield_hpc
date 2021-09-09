@@ -1,4 +1,0 @@
-[build-system]
-# Pin setuptools because of https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216
-requires = ["setuptools<58", "wheel"]
-build-backend = "setuptools.build_meta"

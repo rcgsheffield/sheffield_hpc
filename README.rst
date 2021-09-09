@@ -18,7 +18,7 @@ build and serve the documentation.
 
 The ReadTheDocs build configuration is stored in the ``.readthedocs.yaml`` file with the Python version pinned to 3.7 and two PIP 
 requirements files. The first requirements file is ``setuptoolsrequirements.txt``  and is set in order to first pin setuptools to 
-version 57.5.0 in ``setuptoolsrequirements.txt`` to retain support for the current theme. See the following for details: 
+version 57.5.0 to retain support for the current theme. See the following for details: 
 https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216 
 
 The second requirements file ``requirements.txt`` then installs the remaining dependencies.

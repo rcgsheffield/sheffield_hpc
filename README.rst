@@ -16,6 +16,15 @@ Rendered Documentation
 each push to the ``master`` branch causes the `ReadTheDocs <https://readthedocs.org/>`__ service to
 build and serve the documentation.
 
+The ReadTheDocs build configuration is stored in the ``.readthedocs.yaml`` file with the Python version pinned to 3.7 and two PIP 
+requirements files. The first requirements file is ``setuptoolsrequirements.txt``  and is set in order to first pin setuptools to 
+version 57.5.0 in ``setuptoolsrequirements.txt`` to retain support for the current theme. See the following for details: 
+https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216 
+
+The second requirements file ``requirements.txt`` then installs the remaining dependencies.
+
+Please note that the use of the ``.readthedocs.yaml`` file will also override certain webGUI settings set in the ReadTheDocs administrative panel.
+
 How to Contribute
 -----------------
 To contribute to this documentation, first you have to fork it on GitHub and clone it to your machine, see `Fork a Repo <https://help.github.com/articles/fork-a-repo/>`_ for the GitHub documentation on this process.

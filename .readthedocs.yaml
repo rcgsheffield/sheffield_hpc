@@ -12,6 +12,8 @@ sphinx:
    fail_on_warning: true
 
 # Optionally set the version of Python and requirements required to build your docs
+# Python version pinning and sequential requirements files needed to keep RTD build process working
+# Theme requirement of 2to3 support see: https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216
 python:
    version: "3.7"
    install:

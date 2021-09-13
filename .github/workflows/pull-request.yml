@@ -7,7 +7,7 @@ on:
     branches:
       - master
 jobs:
-  test_docs:
+  test_docs_build:
     runs-on: ubuntu-latest
     strategy:
       # Spawn and run a job for each of two supported Python 3.x versions
@@ -16,14 +16,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Checkout
-        run: |
-          git fetch --tags --prune --force
 
       - name: Set up a version of Python
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
+
       - name: Upgrade pip and install Tox
         run: |
           python -m pip install --upgrade pip
@@ -31,9 +29,10 @@ jobs:
 
       - name: Run tests using Tox
         run: tox -e py
-        
+    
       - name: Upload generated builds
         uses: actions/upload-artifact@v2
         with:
           name: generated_build-${{ matrix.python }}
           path: _build/html
+

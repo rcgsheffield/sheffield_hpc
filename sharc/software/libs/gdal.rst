@@ -99,7 +99,10 @@ script. This script will automatically install GDAL, generate the module file an
 permissions as needed. Build logs are also automatically generated and copied to the base install 
 directory or src directory.
 
-The **file formats** supported by this build are listed in the compilation log files which can be found 
+The additional **GPKG** and **SQlite** drivers are added via the loading of the SQLite module and manual specification 
+of the SQLite root directory for the ``./configure`` step.
+
+The **file formats** and **drivers** supported by this build are listed in the compilation log files which can be found 
 in the module top level directory. e.g. ``gdal-install.o1234567``
 
 **Version 3.0.1**
@@ -110,7 +113,10 @@ script. This script will automatically install GDAL, generate the module file an
 permissions as needed. Build logs are also automatically generated and copied to the base install 
 directory or src directory.
 
-The **file formats** supported by this build are listed in the compilation log files which can be found 
+The additional **GPKG** and **SQlite** drivers are added via the loading of the SQLite module and manual specification 
+of the SQLite root directory for the ``./configure`` step.
+
+The **file formats** and **drivers** supported by this build are listed in the compilation log files which can be found 
 in the module top level directory. e.g. ``gdal-install.o1234567``
 
 **Version 2.2.0**

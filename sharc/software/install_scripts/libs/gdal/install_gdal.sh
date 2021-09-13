@@ -4,7 +4,7 @@
 #$ -m abe
 #$ -l h_rt=02:00:00
 #$ -l rmem=2G
-#$ -pe smp 4
+#$ -pe smp 8
 #$ -N gdal-install
 ##$ -q cstest.q
 ##$ -P cstest
@@ -22,7 +22,7 @@
 
 #Define Names and versions
 PACKAGENAME=gdal
-PACKAGEVER=3.0.1
+PACKAGEVER=3.3.1
 GCCVER=8.2
 CMAKEVER=3.17.1
 
@@ -60,6 +60,7 @@ module load dev/gcc/$GCCVER
 module load dev/cmake/$CMAKEVER/gcc-$GCCVER
 module load apps/doxygen/1.9.1/gcc-$GCCVER-cmake-$CMAKEVER
 module load libs/proj/7.1.0/gcc-8.2.0
+module load libs/sqlite/3.32.3/gcc-8.2.0
 
 echo "Loaded Modules: " $LOADEDMODULES
 
@@ -99,7 +100,7 @@ cd $PACKAGENAME-$PACKAGEVER
 
 #Configure
 
-./configure --prefix=$INSTALLDIR
+./configure --prefix=$INSTALLDIR --with-sqlite3=/usr/local/packages/libs/sqlite/3.32.3/gcc-8.2.0
 
 #Clean
 echo "Make precleaning:"

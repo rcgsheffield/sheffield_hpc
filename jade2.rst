@@ -9,9 +9,6 @@ The computational hub harnesses the capabilities of the **NVIDIA DGX MAX-Q** Dee
 
 The `RSE`_ group director (Paul Richmond) is a co-investigator in the EPSRC Tier 2 JADE II system. As such members of the University of Sheffield are able to access this resource for free (for use with deep learning research).
 
-.. note::
-    The system is expected to be launched and accessible to researchers by the end of 2020.
-
 JADE II Specification
 ---------------------
 
@@ -31,5 +28,12 @@ Software
 ^^^^^^^^
 
 * Redhat Linux
+
+Requesting access
+-----------------
+
+If you would like to use JADE for the purpose of machine learning, `please fill in this form <https://docs.google.com/forms/d/e/1FAIpQLSf8iln8PuEGeZr2fSwJPH0mRMUq_eipxP4rtbJUSDq860g5cQ/viewform>`__ to request access.
+The application will be put through a short internal review process by the `RSE`_ team before approval.
+Please contact ``tier-2-hpc-support-group@sheffield.ac.uk`` if you have any questions regarding JADE 2 in general and the application process.
 
 .. _RSE: https://rse.shef.ac.uk

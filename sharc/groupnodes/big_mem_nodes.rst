@@ -49,7 +49,7 @@ Access to the node is managed by the `RSE team <https://rse.shef.ac.uk>`_. Acces
 * PhD students, researchers and staff in Computer Science can all request access to the nodes.
 * Access to others who are collaborating on projects with some Computer Science / RSE involvement
   can be made on a case-by-case basis.
-* Access to Computer Science MSc students
+* Access to Computer Science MSc and BSc students
   can be made on a case-by-case basis.
 
 A number of other users were granted access before this policy was developed.

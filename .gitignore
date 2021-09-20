@@ -4,5 +4,7 @@ html/
 get_docs.py
 *.*~
 *swp
-.mypy_cache
-.vscode
+.mypy_cache/
+.vscode/
+UNKNOWN.egg-info/
+.tox/

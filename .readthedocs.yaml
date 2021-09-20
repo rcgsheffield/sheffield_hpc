@@ -1,0 +1,22 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
+version: 2
+
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+   builder: html
+   configuration: conf.py
+   fail_on_warning: true
+
+# Optionally set the version of Python and requirements required to build your docs
+# Python version pinning and sequential requirements files needed to keep RTD build process working
+# Theme requirement of 2to3 support see: https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216
+# requires initial setuptools downgrade.
+python:
+   version: "3.7"
+   install:
+   - requirements: ./setuptoolsrequirements.txt
+   - requirements: ./requirements.txt

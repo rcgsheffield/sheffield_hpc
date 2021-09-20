@@ -72,6 +72,7 @@ See the `N8 CIR's Bede site <https://n8cir.org.uk/supporting-research/facilities
 * How to acknowledge Bede and the N8 CIR in publications
 * Bede and N8 CIR logos 
 
+Please contact ``tier-2-hpc-support-group@sheffield.ac.uk`` if you have any questions regarding Bede in general and the application process.
 
 .. _IBM AC922: https://www.ibm.com/uk-en/marketplace/power-systems-ac922
 .. _IBM IC922: https://www.ibm.com/uk-en/marketplace/power-system-ic922

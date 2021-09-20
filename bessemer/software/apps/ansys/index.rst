@@ -44,6 +44,7 @@ ANSYS example models
 ANSYS contains a large number of example models which can be used to become familiar with the software.
 The models can be found in::
 
+   /usr/local/packages/live/noeb/ANSYS/21.2/binary/v212/ansys/data/
    /usr/local/packages/live/noeb/ANSYS/21.1/binary/v211/ansys/data/
    /usr/local/packages/live/noeb/ANSYS/20.2/binary/v202/ansys/data/
    /usr/local/packages/live/noeb/ANSYS/20.1/binary/v201/ansys/data/
@@ -68,15 +69,16 @@ The following instruction should be inserted at line 2433 in ``anssh.ini``::
 
 ------------
 
-Please note ANSYS 20.1, 20.2 and 21.1 have been installed manually with the GUI in the following directories and permissions corrected as follows::
+Please note ANSYS 20.1 and higher versions have been installed manually with the GUI in the following directories and permissions corrected as follows::
 
     chmod 775 -R /usr/local/packages/live/noeb/ANSYS/20.1/binary/
     chmod 775 -R /usr/local/packages/live/noeb/ANSYS/20.2/binary/
     chmod 775 -R /usr/local/packages/live/noeb/ANSYS/21.1/binary/
+    chmod 775 -R /usr/local/packages/live/noeb/ANSYS/21.2/binary/
 
 Please follow the same install directory structure.
 
-In addition the following software packages are not included with the installations::
+In addition the following software packages are not included with the installations for ANSYS 19.4::
 
 
     "ANSYS Chemkin"
@@ -89,3 +91,5 @@ Module files are available below:
 - :download:`/usr/local/modulefiles/live/eb/all/ANSYS/19.4 </bessemer/software/modulefiles/ansys/19.4/19.4>`
 - :download:`/usr/local/modulefiles/live/noeb/ANSYS/20.1/binary </bessemer/software/modulefiles/ansys/20.1/binary>`
 - :download:`/usr/local/modulefiles/live/noeb/ANSYS/20.2/binary  </bessemer/software/modulefiles/ansys/20.2/binary>`
+- :download:`/usr/local/modulefiles/live/noeb/ANSYS/21.1/binary  </bessemer/software/modulefiles/ansys/21.1/binary>`
+- :download:`/usr/local/modulefiles/live/noeb/ANSYS/21.2/binary  </bessemer/software/modulefiles/ansys/21.2/binary>`

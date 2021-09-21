@@ -2,7 +2,8 @@
 
 qstat
 =====
-`qstat` is a scheduler command that displays the status of the queues.
+
+``qstat`` is a scheduler command that displays the status of the queues.
 
 Examples
 --------

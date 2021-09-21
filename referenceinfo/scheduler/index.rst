@@ -12,6 +12,7 @@ This sub-tree contains reference information that is pulled into other pages.
   :glob:
 
   SGE/index
+  SLURM/index
   TimeAllocationLimits
   MemoryAllocationLimits
   CpuAllocationLimits

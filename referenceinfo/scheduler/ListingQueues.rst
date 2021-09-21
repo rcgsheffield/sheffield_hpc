@@ -22,7 +22,7 @@ Bessemer
 
 On Bessemer you can list the queues with: ::
 
-    sinfo -h
+    sinfo -a
 
 As Bessemer has non-homogenous nodes you can list more information by formatting the output, e.g.: ::
 

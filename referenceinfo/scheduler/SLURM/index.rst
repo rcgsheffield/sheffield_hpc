@@ -1,7 +1,7 @@
-.. _sge_referenceinfo:
+.. _slurm_referenceinfo:
 
-SGE Reference Info
-==================
+SLURM Reference Info
+====================
 
 This sub-tree contains reference information that is pulled into other pages.
 
@@ -11,5 +11,4 @@ This sub-tree contains reference information that is pulled into other pages.
   :glob:
 
   Common-commands/index
-  sge_parallel_environments
-  sge_environment_variables
+  SLURM-environment-variables

@@ -49,7 +49,7 @@ must be done on your machine (see :ref:`create_image_singularity_bessemer`).
 Interactive Usage of Singularity Images
 ---------------------------------------
 
-**To use Singularity interactively, an interactive session must first be requested using** :ref:`qrshx` **for example.**
+**To use Singularity interactively, an interactive session must first be requested using** :ref:`srun <slurm_interactive>` **for example.**
 
 To get an interactive shell in to the image, use the following command: ::
 
@@ -91,9 +91,9 @@ two approaches are shown in the following job script ``my_singularity_job.sh``:
 .. code-block:: bash
 
   #!/bin/bash
-  #$ -l rmem=8G
+  #SBATCH --mem 8G
   # We requested 8GB of memory in the line above, change this according to your
-  # needs e.g. add -l gpu=1 to reqest a single GPU
+  # needs e.g. add --gpus-per-node=1 to request a single GPU
 
   #Calling ls directly using the exec command
   singularity exec path/to/imgfile.img ls /
@@ -111,9 +111,9 @@ Where the content of ``~/myscript.sh`` is shown below:
 
   ls /
 
-The job can then be submitted as normal with ``qsub``: ::
+The job can then be submitted as normal with ``sbatch``: ::
 
-  qsub my_singularity_job.sh
+  sbatch my_singularity_job.sh
 
 
 Using Nvidia GPU with Singularity Images

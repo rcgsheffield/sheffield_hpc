@@ -1,0 +1,33 @@
+#%Module1.0#####################################################################
+##
+## Intel-MPI version 2018.5.288 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+    global openmpiversion
+
+    puts stderr "   Adds `Intel-MPI version $intelmpiversion' to your PATH environment variable and necessary libraries"
+}
+
+set intelmpiversion   2018.5.288
+set intelmpiroot      /usr/local/packages/mpi/impi/2018.5.288/binary/
+
+module-whatis   "loads the necessary `Intel-MPI version $intelmpiversion' library paths"
+
+# Prepend paths generated through the use of env2 - see: https://sourceforge.net/projects/env2/
+# Also see: https://software.intel.com/content/www/us/en/develop/articles/using-environment-modules-with-the-intel-development-tools.html
+prepend-path PATH {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/mpi/intel64/bin};
+prepend-path PATH {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/bin/intel64};
+prepend-path MANPATH {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/mpi/man};
+prepend-path CLASSPATH {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/mpi/intel64/lib/mpi.jar};
+prepend-path I_MPI_ROOT {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/mpi};
+prepend-path INTEL_LICENSE_FILE {/usr/local/packages/dev/intel-ps-xe-ce/license.lic};
+prepend-path LD_LIBRARY_PATH {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/compiler/lib/intel64:/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/compiler/lib/intel64_lin:/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/mpi/intel64/lib:/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/mpi/mic/lib};
+prepend-path NLSPATH {/usr/local/packages/mpi/impi/2018.5.288/binary/compilers_and_libraries_2018.6.288/linux/compiler/lib/intel64/locale/%l_%t/%N};
+
+# Set the Infini/omnipath fabric
+setenv I_MPI_FABRICS shm:ofi

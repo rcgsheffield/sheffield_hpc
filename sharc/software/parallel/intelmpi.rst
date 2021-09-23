@@ -191,6 +191,9 @@ The module file is adjusted to include the statement below to enable usage of th
    # Set the Infini/omnipath fabric
    setenv I_MPI_FABRICS shm:ofi
 
+This module file can be downloaded here: :download:`impi/2019.9.304/binary </sharc/software/modulefiles/mpi/impi/2019.9.304/binary>`.
+
+
 
 The module was subsequently tested using the built in 
 `IMB-MPI1 <https://software.intel.com/content/www/us/en/develop/documentation/imb-user-guide/top/mpi-1-benchmarks.html>`_ 
@@ -209,6 +212,8 @@ The module file is adjusted to include the statement below to enable usage of th
 
    # Set the Infini/omnipath fabric
    setenv I_MPI_FABRICS shm:ofi
+
+This module file can be downloaded here: :download:`impi/2018.5.288/binary </sharc/software/modulefiles/mpi/impi/2018.5.288/binary>`.
 
 The module was subsequently tested using the built in 
 `IMB-MPI1 <https://software.intel.com/content/www/us/en/develop/documentation/imb-user-guide/top/mpi-1-benchmarks.html>`_ 

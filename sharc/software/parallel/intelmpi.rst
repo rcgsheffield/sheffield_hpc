@@ -67,11 +67,7 @@ supplied by Intel. An example of this using 2 cores in the required MPI environm
    echo -e " MACHINE FILE\n"
    echo $MACHINEFILE
 
-   MACHINELIST=""
-   for host in $(cat $MACHINEFILE)
-   do
-      MACHINELIST+="${host}:1:"
-   done
+   MACHINELIST="$(awk '{for (i=0; i<$2; i++) {print $1}}' test.txt $PE_HOSTFILE | paste -sd:)"
 
    mpirun -print-rank-map -np $NSLOTS IMB-MPI1
 
@@ -143,11 +139,7 @@ provided by Intel. An example of this using 2 cores in the required MPI environm
    echo -e " MACHINE FILE\n"
    echo $MACHINEFILE
 
-   MACHINELIST=""
-   for host in $(cat $MACHINEFILE)
-   do
-      MACHINELIST+="${host}:1:"
-   done
+   MACHINELIST="$(awk '{for (i=0; i<$2; i++) {print $1}}' test.txt $PE_HOSTFILE | paste -sd:)"
 
    cd /data/$USER
    cp -R $I_MPI_ROOT/test ./ && cd test/

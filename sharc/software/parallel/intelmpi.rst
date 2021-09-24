@@ -37,10 +37,6 @@ Example: MPI Performance testing
 A simple test of these modules can be performed by running the built in performance benchmark tests 
 supplied by Intel. An example of this using 2 cores in the required MPI environment is given below: 
 
-.. hint::
-
-   The ``-print-rank-map`` argument is used to print out the node/core locations of the allocated MPI tasks
-
 .. code-block:: bash
 
    #!/bin/bash
@@ -56,30 +52,34 @@ supplied by Intel. An example of this using 2 cores in the required MPI environm
 
    MACHINEFILE="machinefile.$JOB_ID"
 
+   # Show which nodes you have been allocated CPU cores on
+   echo -e "\nShow node core allocation:\n"
+   cat $PE_HOSTFILE
+
    for host in `cat $PE_HOSTFILE | awk '{print $1}'`; do
       num=`grep $host $PE_HOSTFILE | awk '{print $2}'`
-   ##  for i in {1..$num}; do
       for i in `seq 1 $num`; do
          echo $host >> $MACHINEFILE
       done
    done
 
-   echo -e " MACHINE FILE\n"
-   echo $MACHINEFILE
+   MACHINELIST="$(awk '{for (i=0; i<$2; i++) {print $1}}' $PE_HOSTFILE | paste -sd:)"
 
-   MACHINELIST="$(awk '{for (i=0; i<$2; i++) {print $1}}' test.txt $PE_HOSTFILE | paste -sd:)"
-
-   mpirun -print-rank-map -np $NSLOTS IMB-MPI1
+   echo -e "\nBegin running application:\n"
+   mpirun -np $NSLOTS IMB-MPI1
 
 This will generate output of the form:
 
 .. code-block:: bash
 
-   MACHINE FILE
+   Show node core allocation:
 
-   machinefile.8298177
-   (sharc-node037.shef.ac.uk:0)
-   (sharc-node147.shef.ac.uk:1)
+   sharc-node010.shef.ac.uk 1 all.q@sharc-node010.shef.ac.uk UNDEFINED
+   sharc-node072.shef.ac.uk 1 all.q@sharc-node072.shef.ac.uk UNDEFINED
+
+   Begin running application:
+
+
    #------------------------------------------------------------
    #    Intel (R) MPI Benchmarks 2018, MPI-1 part
    #------------------------------------------------------------
@@ -128,18 +128,18 @@ provided by Intel. An example of this using 2 cores in the required MPI environm
 
    MACHINEFILE="machinefile.$JOB_ID"
 
+   # Show which nodes you have been allocated CPU cores on
+   echo -e "\nShow node core allocation:\n"
+   cat $PE_HOSTFILE
+
    for host in `cat $PE_HOSTFILE | awk '{print $1}'`; do
       num=`grep $host $PE_HOSTFILE | awk '{print $2}'`
-   ##  for i in {1..$num}; do
       for i in `seq 1 $num`; do
          echo $host >> $MACHINEFILE
       done
    done
 
-   echo -e " MACHINE FILE\n"
-   echo $MACHINEFILE
-
-   MACHINELIST="$(awk '{for (i=0; i<$2; i++) {print $1}}' test.txt $PE_HOSTFILE | paste -sd:)"
+   MACHINELIST="$(awk '{for (i=0; i<$2; i++) {print $1}}' $PE_HOSTFILE | paste -sd:)"
 
    cd /data/$USER
    cp -R $I_MPI_ROOT/test ./ && cd test/
@@ -147,19 +147,23 @@ provided by Intel. An example of this using 2 cores in the required MPI environm
    mpif90 test.f90
    # Alternatively you can compile the C example instead
    #mpicc test.c
-   mpirun -print-rank-map -np $NSLOTS /data/$USER/test/a.out
+
+   echo -e "\nBegin running application:\n"
+   mpirun -np $NSLOTS /data/$USER/test/a.out
 
 This will generate output of the form:
 
 .. code-block:: bash
 
-   MACHINE FILE
+   Show node core allocation:
 
-   machinefile.8343156
-   (sharc-node149.shef.ac.uk:0)
-   (sharc-node052.shef.ac.uk:1)
-   Hello world: rank            0  of            2  running on sharc-node149.shef.ac.uk                                                                                                       
-   Hello world: rank            1  of            2  running on sharc-node052.shef.ac.uk
+   sharc-node046.shef.ac.uk 1 all.q@sharc-node046.shef.ac.uk UNDEFINED
+   sharc-node091.shef.ac.uk 1 all.q@sharc-node091.shef.ac.uk UNDEFINED
+
+   Begin running application:
+
+   Hello world: rank            0  of            2  running on sharc-node046.shef.ac.uk                                                                                                       
+   Hello world: rank            1  of            2  running on sharc-node091.shef.ac.uk
 
 
 --------
@@ -168,6 +172,12 @@ Installation notes
 ------------------
 
 These are primarily for administrators of the system.
+
+.. hint::
+
+   The ``-print-rank-map`` argument can be used with ``mpirun`` to print out the node/core locations of the 
+   allocated MPI tasks as Intel-MPI / hydra uses them for comparison with ``$PE_HOSTFILE``.
+
 
 Version 2019.9.304
 ^^^^^^^^^^^^^^^^^^

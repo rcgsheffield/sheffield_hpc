@@ -45,9 +45,9 @@ After connecting to Bessemer (see :ref:`ssh`), you can start an `interactive gra
     cd /fastdata/$USER/tests/openfoam/run
     cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
     chmod 700 -R pitzDaily && cd pitzDaily
-    srun --export=ALL blockMesh
-    srun --export=ALL simpleFoam
-    srun --export=ALL paraFoam #To view the output.
+    mpirun blockMesh
+    mpirun simpleFoam
+    mpirun paraFoam #To view the output.
 
 ------------
 

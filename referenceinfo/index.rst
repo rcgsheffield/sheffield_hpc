@@ -1,7 +1,7 @@
 .. _referenceinfo:
 
 =========================================================
-Reference Infomation Index
+Reference Information Index
 =========================================================
 
 This page provides an index for various pieces of reference information which is included in several locations within other pages of the documentation.

@@ -1,9 +1,10 @@
 .. _slurm_referenceinfo:
 
-SLURM Reference Info
-====================
+SLURM Scheduler (Bessemer) Reference Info
+=========================================
 
-This sub-tree contains reference information that is pulled into other pages.
+This page provides links to reference information about the SLURM scheduler used on Bessemer which 
+is included in other pages.
 
 
 .. toctree::

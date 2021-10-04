@@ -1,9 +1,9 @@
-.. _MFA_update_20_10_2021:
+.. _MFA_update_21_10_2021:
 
-Multi-factor authentication change - October 20th 2021
+Multi-factor authentication change - October 21st 2021
 ======================================================
 
-On 20th October 2021 we will be deploying `Multifactor Authentication (MFA) <https://sites.google.com/sheffield.ac.uk/mfa/home>`_ 
+On the 21st of October 2021 we will be deploying `Multifactor Authentication (MFA) <https://sites.google.com/sheffield.ac.uk/mfa/home>`_ 
 on the HPC login nodes (ShARC & Bessemer) for any logins using a :underline-bold:`username and password.`
 What this means is that when you attempt to login to the HPCs using a password you will be 
 required to do an MFA push to your chosen trusted device (normally your mobile phone), and 

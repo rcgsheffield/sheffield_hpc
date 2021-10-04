@@ -1,6 +1,6 @@
 .. attention::
 
-  On the 21th October 2021 we will be deploying multi-factor authentication on the HPC login nodes 
+  On the 21st of October 2021 we will be deploying multi-factor authentication on the HPC login nodes 
   (ShARC & Bessemer) for all password logins.
 
   For more information :ref:`please see our page on this change 

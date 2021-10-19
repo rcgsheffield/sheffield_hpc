@@ -49,7 +49,7 @@ An example is seen as follows with the ``sleep 10`` command with a single task o
 .. code-block:: console
     :emphasize-lines: 1,6
 
-    $ salloc --nodes=1 --ntasks-per-node=1 --mem-per-cpu=2G --time=01:00:00 bash -c 'sleep 10'
+    $ salloc --nodes=1 --ntasks-per-node=1 --mem-per-cpu=2G --time=00:01:00 bash -c 'sleep 10'
     salloc: Pending job allocation 2165971
     salloc: job 2165971 queued and waiting for resources
     salloc: job 2165971 has been allocated resources

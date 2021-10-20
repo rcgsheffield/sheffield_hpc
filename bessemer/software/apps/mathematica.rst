@@ -69,7 +69,7 @@ An example batch submission script for this file is ::
   #!/bin/bash
   # Request 4 gigabytes of real memory
   #SBATCH --mem=4000
-  #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+  #SBATCH --mail-user=a.person@sheffield.ac.uk
   #SBATCH --mail-type=ALL
   module load MATHEMATICA/12.0.0/binary
 

@@ -59,7 +59,7 @@ The script requests 2 cores using the SMP parallel environment with a runtime of
     #SBATCH --job-name=ansys_mech-test
     #SBATCH --output=output_ansys_mech_test
     #SBATCH --time=01:00:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load ANSYS/20.2
     mapdl -smp -dir $(pwd) -b -np $SLURM_NTASKS -j solution -i CrankSlot_Flexible.inp

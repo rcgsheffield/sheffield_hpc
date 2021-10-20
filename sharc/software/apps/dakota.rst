@@ -72,7 +72,7 @@ Batch Usage
     #!/bin/bash
     #$ -cwd
     #$ -V 
-    #$ -M joe.bloggs@sheffield.ac.uk
+    #$ -M a.person@sheffield.ac.uk
     #$ -m abe
     #$ -l h_rt=00:10:00
     #$ -l rmem=2G

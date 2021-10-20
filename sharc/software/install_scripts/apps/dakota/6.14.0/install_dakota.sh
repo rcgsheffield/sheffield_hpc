@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -V
 #$ -cwd
-#$ -M joe.bloggs@sheffield.ac.uk
+#$ -M a.person@sheffield.ac.uk
 #$ -m abe
 #$ -l h_rt=02:00:00
 #$ -l rmem=2G

@@ -52,7 +52,7 @@ Your batch script (script.sh) should contain the following commands:
 
       #!/bin/bash
       ## your email address
-      #$ -M joebloggs@sheffield.ac.uk
+      #$ -M a.person@sheffield.ac.uk
       #$ -m eba
       ## set max runtime to 1 minute (for this test)
       #$ -l h_rt=00:01:00
@@ -88,7 +88,7 @@ Your batch script (mpi_script.sh) should contain the following commands:
 
       #!/bin/bash
       ## your email address
-      #$ -M joebloggs@sheffield.ac.uk
+      #$ -M a.person@sheffield.ac.uk
       #$ -m eba
       ## no of cores using mpi
       #$ -pe mpi 4

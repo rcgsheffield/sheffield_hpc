@@ -84,7 +84,7 @@ The script requests 8 cores using the MPI parallel environment ``mpi-rsh`` with 
     #!/bin/bash
     #$ -V
     #$ -cwd
-    #$ -M joe.bloggs@sheffield.ac.uk
+    #$ -M a.person@sheffield.ac.uk
     #$ -m abe
     #$ -l h_rt=00:30:00
     #$ -l rmem=2G
@@ -107,7 +107,7 @@ The following is an example batch submission script, ``cfd_job.sh``, to run the 
     #!/bin/bash
     #$ -V
     #$ -cwd
-    #$ -M joe.bloggs@sheffield.ac.uk
+    #$ -M a.person@sheffield.ac.uk
     #$ -m abe
     #$ -l h_rt=00:30:00
     #$ -l rmem=2G

@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J octeract-engine.install
 #SBATCH -o "%j".out
-#SBATCH --mail-user joe.bloggs@sheffield.ac.uk
+#SBATCH --mail-user a.person@sheffield.ac.uk
 #SBATCH --mail-type=ALL
 #SBATCH -t 0:50:0 # Request 50 mins run time
 #SBATCH --ntasks-per-node=8

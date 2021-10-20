@@ -40,7 +40,7 @@ supplied by Intel. An example of this using 2 cores in the required MPI environm
 .. code-block:: bash
 
    #!/bin/bash
-   #$ -M joe.bloggs@sheffield.ac.uk
+   #$ -M a.person@sheffield.ac.uk
    #$ -m abe
    #$ -l h_rt=00:10:00
    #$ -l rmem=1G
@@ -116,7 +116,7 @@ provided by Intel. An example of this using 2 cores in the required MPI environm
 .. code-block:: bash
 
    #!/bin/bash
-   #$ -M joe.bloggs@sheffield.ac.uk
+   #$ -M a.person@sheffield.ac.uk
    #$ -m abe
    #$ -l h_rt=00:10:00
    #$ -l rmem=1G

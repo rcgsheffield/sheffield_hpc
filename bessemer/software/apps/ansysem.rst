@@ -44,7 +44,7 @@ typing ``sbatch my_job.sh``::
     #SBATCH --job-name=name_ansysedt_smp_8
     #SBATCH --output=output_ansysedt_smp_8
     #SBATCH --time=00:30:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
 
     module load ANSYSEM/21.1/binary

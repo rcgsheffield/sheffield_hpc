@@ -78,7 +78,7 @@ Sample SMP Fluent Scheduler Job Script
     #SBATCH --job-name=name_fluent_smp_4
     #SBATCH --output=output_fluent_smp_4
     #SBATCH --time=01:00:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load ANSYS/20.2
     fluent 2ddp -i test.jou -gu -t$SLURM_NTASKS -driver null

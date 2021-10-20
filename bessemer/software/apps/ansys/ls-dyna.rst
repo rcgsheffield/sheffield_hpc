@@ -97,7 +97,7 @@ Sample SMP LS-DYNA Batch Job Script
     #SBATCH --job-name=ANSYS-LSDYNA-Example
     #SBATCH --output=ANSYS-LSDYNA-Example
     #SBATCH --time=01:00:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
 
     #Only load ANSYS

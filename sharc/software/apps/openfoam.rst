@@ -74,7 +74,7 @@ The following is an example batch job running the pitzDaily example model:
   #!/bin/bash
   #$ -V
   #$ -cwd
-  #$ -M joe.bloggs@sheffield.ac.uk
+  #$ -M a.person@sheffield.ac.uk
   #$ -m abe
   #$ -l h_rt=01:00:00
   #$ -l rmem=2G

@@ -3,6 +3,10 @@
 High Performance Computing at Sheffield
 =======================================
 
+This will :hoverxreftooltip:`show a tooltip <hoverxref>` in the linked words.
+
+This will :hoverxref:`show a tooltip <hoverxref>` in the linked words to ``hoverxref``.
+
 This is the documentation for The University of Sheffield's High Performance Computing (HPC) clusters:
 
 * :ref:`bessemer` 
@@ -41,4 +45,5 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    oldsystems
    referenceinfo/index
    mfa-update-21-10-2021
+   hoverxref
 

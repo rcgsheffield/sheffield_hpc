@@ -20,6 +20,7 @@ import shutil
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'hoverxref.extension',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
 ]

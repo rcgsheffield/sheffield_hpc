@@ -89,14 +89,14 @@ You can enable email notifications for jobs finishing or aborting by setting two
 .. code-block:: python
 
      jt.blockEmail = False
-     jt.email = ['somebody@sheffield.ac.uk']
+     jt.email = ['a.person@sheffield.ac.uk']
 
 This is equivalent to having the following in a Grid Engine batch job submission script:
 
 .. code-block:: bash
 
     #$ -m ea
-    #$ -M somebody@sheffield.ac.uk
+    #$ -M a.person@sheffield.ac.uk
 
 Other useful job template attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

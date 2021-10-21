@@ -1,8 +1,8 @@
 .. _bash-reference-info-environment-variables-USER:
 
-*****************************************
+
 Bash Environment Variable $USER
-*****************************************
+================================
 
 The $USER bash environment variable contains a string of your 
 current user's username.

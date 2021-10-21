@@ -14,3 +14,4 @@ This section should be used to look for a quick references to very specific info
 
   scheduler/index
   ANSYS/index
+  bash/index

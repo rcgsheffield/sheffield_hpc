@@ -3,9 +3,9 @@
 High Performance Computing at Sheffield
 =======================================
 
-This will :hoverxreftooltip:`show a tooltip <bash-reference-info-environment-variables-USER>` in the linked words.
+This will :hoverxreftooltip:`show a tooltip <bash-reference-info-environment-variables-USER>` to the Bash environment variable $USER page.
 
-This will :hoverxref:`show a tooltip <bash-reference-info-environment-variables-USER>` in the linked words to ``hoverxref``.
+This will :hoverxref:`show a tooltip <bessemer>` to the Bessemer page.
 
 This is the documentation for The University of Sheffield's High Performance Computing (HPC) clusters:
 

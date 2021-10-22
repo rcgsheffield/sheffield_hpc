@@ -92,15 +92,28 @@ Download and install the *Installer edition* of `MobaXterm <https://mobaxterm.mo
 After starting MobaXterm you should see something like this:
 
 .. image:: /images/mobaxterm-welcome.png
-   :width: 50%
+   :width: 100%
    :align: center
 
-Click *Start local terminal* and if you see something like the following then please continue to :ref:`ssh`.
+Create a session profile for your login for each cluster by clicking *Session* in the top left, and then *SSH*. 
+
+Enter the details for the cluster in the *Remote host* box, either ``bessemer.shef.ac.uk`` or ``sharc.shef.ac.uk``. 
+Then click the *Specify Username* checkmark and enter your username.
+Please ensure that the checkmark for *X11 Forwarding* is ticked or GUI applications will be unable to open 
+and that *Use SCP protocol* is also ticked then click *OK* to save your session profile.
+You should add a session for each cluster.
+
+You can now double click on this session profile to start connecting at which point you will be prompted for your username, password and then with a Duo MFA prompt.  
+Please enter these details and your terminal will connect as shown below.
+
+You **may** be asked to submit your username and password with a second MFA prompt in order for the file browser to work correctly. On a successful 
+login you should be presented with a screen like the below:
 
 .. image:: /images/mobaxterm-terminal.png
-   :width: 50%
+   :width: 100%
    :align: center
 
+|br|
 Running commands from a terminal (from the command-line) may initially be
 unfamiliar to Windows users but this is the recommended approach for
 running commands on Bessemer or ShARC as
@@ -138,28 +151,31 @@ Here you need to:
     * Check that your `XQuartz <https://www.xquartz.org/>`_ is up to date then try again *or*
     * Try again with ``-Y`` instead of ``-X``
 
+After typing in this command hit enter to start connecting at which point you will be prompted 
+for your username, password and then with a Duo MFA prompt. 
+
 This should give you a prompt resembling the one below: ::
 
     [te1st@sharc-login1 ~]$
 
 At this prompt type: ::
 
-    qsh
+    qrshx
 
 Like this: ::
 
-    [te1st@sharc-login2 ~]$ qsh
-    Your job 135355 ("INTERACTIVE") has been submitted
-    waiting for interactive job to be scheduled ....
-    Your interactive job 135355 has been successfully scheduled.
+    [te1st@sharc-login2 ~]$ qrshx
 
-Which will pop up another terminal window, which supports graphical applications.
+
+Which will start an interactive session, which supports graphical applications resembling the below: ::
+
+    [te1st@sharc-node001 ~]$ qrshx
 
 .. note::
 
     When you login to a cluster you reach one of two login nodes.
     You **should not** run applications on the login nodes.
-    Running ``qsh`` gives you an interactive terminal
+    Running ``qrshx`` gives you an interactive terminal
     on one of the many worker nodes in the cluster.
 
     If you only need terminal-based (command-line only) applications
@@ -168,17 +184,6 @@ Which will pop up another terminal window, which supports graphical applications
     but without graphical application (X server) support.
 
 
-.. raw:: html
-
-   <p>
-    This video shows the connection process using MobaXterm, and then connection
-    and running MATLAB from a <code>qsh</code> terminal.
-   </p>
-
-   <video style="margin-left: auto; margin-right:auto; display: block;" width=70% controls>
-       <source src="https://rcg.group.shef.ac.uk/tutorial_videos/mobaxterm-login-matlab-demo.webm" type="video/webm" />
-       <source src="https://rcg.group.shef.ac.uk/tutorial_videos/mobaxterm-login-matlab-demo.mp4" type="video/mp4" />
-   </video>
 
 ---------
 

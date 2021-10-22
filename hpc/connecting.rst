@@ -77,12 +77,6 @@ including *MobaXTerm*.
 | ShARC    | Password + MFA **or** public key      | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
 +----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
 
-.. warning::
-
-    At present in order to access the clusters, MFA is needed only in order to connect to the VPN. 
-    Users can then login with either their password or using a public key. This is however subject 
-    to change with future password based logins from campus or via VPN to the clusters requiring 
-    their own MFA prompt as of the 21st of October 2021.
 
 SSH client software on Windows
 ------------------------------

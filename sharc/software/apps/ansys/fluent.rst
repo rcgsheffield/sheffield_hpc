@@ -14,6 +14,11 @@ ANSYS Fluent is a Computational Fluid Dynamics (CFD) code for modelling fluid fl
 Fluent has interfaces to other pre and post processing packages supplied by ANSYS such as ICEMCFD or Ensight and can incorporate user developed models via user defined functions.
 Fluent can make use of  built in :ref:`MPI <parallel_MPI>` to utilize multiple cross node CPU and can scale to hundreds of cores.
 
+.. caution::
+
+    Do not use versions **prior** to ANSYS 19.0 if cross-node MPI is taking place as these older versions are no longer supported nor will 
+    work correctly with cross-node MPI jobs.
+
 ----------------
 
 .. include:: ../ansys/module-load-list.rst
@@ -26,16 +31,15 @@ Interactive jobs
 While using a X11 GUI forwarding supported SSH client, an interactive session can be started on ShARC with the ``qrshx`` command which supports graphical applications.
 You can load an ANSYS module above and then start the fluent program by running the ``fluent`` command.
 
-If desired, the ANSYS Workbench GUI executable can be launched with the  ``runwb2`` command.
-To use more than a single core, you should write a batch job script and fluent journal file for submission to the batch queues.
-
-
 .. caution::
 
-  Warning for ANSYS versions >= 18.0 using the command ``fluent`` results in an unresponsive fluent launcher. To launch fluent and bypass the launcher use ``fluent dim`` where dim = 2d, 2ddp, 3d or 3ddp or unset the following environment variables before running the command::
+  Warning for ANSYS versions >= 18.0 using the command ``fluent`` results in an unresponsive fluent launcher. To launch fluent and bypass the launcher use ``fluent dim`` where dim = 2d, 2ddp, 3d or 3ddp **or** unset the following environment variables before running the command::
 
     unset SGE_TASK_ID
     unset RESTARTED
+
+If desired, the ANSYS Workbench GUI executable can be launched with the  ``runwb2`` command.
+To use more than a single core, you should write a batch job script and fluent journal file for submission to the batch queues.
 
 --------------------
 
@@ -57,7 +61,7 @@ A more thorough explanation and tutorial on how to make a Fluent journal file ca
 Batch Submission Script
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Fluent is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP>` parallel environments but will use its in-build MPI communications for both.
+Fluent is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP>` parallel environments but will use its in-built MPI communications for both.
 On ShARC, cross process communication must use the RSH protocol instead of SSH.
 This necessitates the use of either the ``smp`` (up to 16 cores on a single node only) or ``mpi-rsh`` (as many cores as desired across many nodes) parallel processing environments.
 
@@ -75,9 +79,15 @@ The script requests 8 cores using the MPI parallel environment ``mpi-rsh`` with 
     * The ``2ddp`` argument is used to specify a 2D double precision simulation. Valid values include: ``2d``, ``2ddp``, ``3d`` and ``3ddp``
     * The argument ``$NSLOTS`` is a Sun of Grid Engine variable which will return the requested number of cores.
     * The argument ``-mpi=intel`` instructs Fluent to use the in-built Intel MPI communications - important for using the high performance :ref:`Omnipath networking <sharc-network-specs>` between nodes.
-    * The argument ``-pib.infinipath`` instructs Fluent to use the high performance Omnipath networking. :ref:`Omnipath networking <sharc-network-specs>` This will not work on version 18.2 and earlier.
+    * The argument ``-pib.infinipath`` instructs Fluent to use the high performance Omnipath networking. :ref:`Omnipath networking <sharc-network-specs>` This will not work on versions prior to 19.0.
     * The arguments ``-gu`` and ``-driver null`` instruct Fluent that it will be running with no GUI to avoid errors caused by plot / figure export.
-    * The arguments ``-sgepe mpi-rsh -sge`` are not required and will cause issues if used with Fluent 21.1.
+    * The bash **for loop** logic is used to construct a machine file to ensure Fluent will allocate MPI tasks correctly.
+    * The ``-cnf=$MACHINEFILE`` argument is used to supply the PATH to the machine file created for Fluent.
+
+.. caution::
+
+    * The arguments ``-sgepe mpi-rsh -sge`` are **not required** and will cause issues if used with Fluent 21.1 or above.
+
 
 .. code-block:: bash
 
@@ -91,9 +101,17 @@ The script requests 8 cores using the MPI parallel environment ``mpi-rsh`` with 
     #$ -pe mpi-rsh 8
     #$ -N JobName
 
-    module load apps/ansys/20.2/binary
+    MACHINEFILE="machinefile.$JOB_ID"
 
-    fluent 2ddp -i test.jou -gu -t$NSLOTS -rsh -mpi=intel -pib.infinipath -driver null
+    for host in `cat $PE_HOSTFILE | awk '{print $1}'`; do
+        num=`grep $host $PE_HOSTFILE | awk '{print $2}'`
+        for i in `seq 1 $num`; do
+        echo $host >> $MACHINEFILE
+        done
+    done
+
+    module load apps/ansys/21.2/binary
+    fluent 3ddp -i test.jou -gu -t $NSLOTS -rsh -mpi=intel -driver null -cnf=$MACHINEFILE -pib.infinipath
 
 -----------------------
 
@@ -114,9 +132,9 @@ The following is an example batch submission script, ``cfd_job.sh``, to run the 
     #$ -pe smp 8
     #$ -N JobName
 
-    module load apps/ansys/20.2/binary
+    module load apps/ansys/21.2/binary
 
-    fluent 2ddp -i test.jou -gu -t$NSLOTS -driver null
+    fluent 2ddp -i test.jou -gu -t $NSLOTS -driver null
 
 
 Further details about how to construct batch jobs can be found on the :ref:`batch submission guide <submit-batch>` page
@@ -135,8 +153,8 @@ The job is submitted to the queue by typing:
 Notes
 -------
 
-The previous options below have been removed due to a bug in Fluent 21.1 which results in incorrect job rewriting and resubmission to the scheduler. All versions have been tested and should automatically detect SGE correctly.
+The previous options below have been removed due to a bug in Fluent 21.1 and above which results in incorrect job rewriting and resubmission to the scheduler. 
+All available versions above 18.2 have been tested and should function correctly with the manually specified machine file for batch MPI jobs.
 
-* **-rsh** tells Fluent to use RSH instead of SSH.
-* **-sge** forces Fluent to recognise job submission via SGE.
-* **-sgepe** selects the *mpi-rsh* SGE parallel environment.
+* **-sge** forcing Fluent to recognise job submission via SGE.
+* **-sgepe** selecting the *mpi-rsh* SGE parallel environment.

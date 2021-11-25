@@ -202,7 +202,7 @@ What Next?
 ----------
 
 Now you have connected to a cluster,
-you can look at how to submit jobs with :ref:`submit-queue` or
+you can look at how to submit jobs on the :ref:`job_submission_control` page or
 look at the software installed on
 :ref:`Bessemer <bessemer-software>` and
 :ref:`ShARC <sharc-software>`

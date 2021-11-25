@@ -18,4 +18,4 @@ Usage
 
 The ``srun`` command is used to request and interactive job from the SLURM scheduler. 
 More specific information for using the ``srun`` command can be found on 
-the :ref:`interactive and batch submission instructions page.<submit-interactive>` 
+the :ref:`interactive and batch submission instructions page.<submit_interactive_bessemer>` 

@@ -129,7 +129,7 @@ Sample SMP LS-DYNA Batch Job Script
     $SOLVER i=$INPUT memory=$MEMORY ncpu=$SLURM_NTASKS
 
 Further details about how to construct batch jobs can be found on the 
-:ref:`batch submission guide <submit-batch>` page
+:ref:`batch submission guide <submit_batch_bessemer>` page
 
 The job is submitted to the queue by typing:
 

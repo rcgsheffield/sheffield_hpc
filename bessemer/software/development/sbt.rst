@@ -12,7 +12,7 @@ Interactive Usage
 -----------------
 
 After :ref:`connecting to the cluster <connecting>`,
-:ref:`start an interactive session <submit-queue>`.
+:ref:`start an interactive session <submit_interactive_bessemer>`.
 
 Load a particular version of sbt using: ::
 

@@ -9,9 +9,11 @@ within sbatch job scripts.
 Documentation
 -------------
 
-Documentation is available on the system using the command::
+Documentation is available on the system using the command
 
-    man srun
+.. code-block:: console
+
+    $ man srun
 
 Usage
 -----

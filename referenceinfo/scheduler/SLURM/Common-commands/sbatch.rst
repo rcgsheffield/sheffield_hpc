@@ -8,9 +8,11 @@ sbatch
 Documentation
 -------------
 
-Documentation is available on the system using the command::
+Documentation is available on the system using the command
 
-    man sbatch
+.. code-block:: console
+
+    $ man sbatch
 
 Usage
 -----

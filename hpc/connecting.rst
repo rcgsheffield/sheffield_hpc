@@ -148,35 +148,68 @@ Here you need to:
 After typing in this command hit enter to start connecting at which point you will be prompted 
 for your username, password and then with a Duo MFA prompt. 
 
-This should give you a prompt resembling the one below: ::
+This should give you a prompt resembling the one below: 
+
+For the ShARC cluster
+^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
 
     [te1st@sharc-login1 ~]$
 
-At this prompt type: ::
+At this prompt type: 
+
+.. code-block:: console
 
     qrshx
 
-Like this: ::
+Like this: 
 
-    [te1st@sharc-login2 ~]$ qrshx
+.. code-block:: console
+
+    [te1st@sharc-login1 ~]$ qrshx
 
 
-Which will start an interactive session, which supports graphical applications resembling the below: ::
+Which will start an interactive session, which supports graphical applications resembling the below: 
 
-    [te1st@sharc-node001 ~]$ qrshx
+.. code-block:: console
+
+    [te1st@sharc-node001 ~]$ 
+
+For the Bessemer cluster
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$
+
+At this prompt type: 
+
+.. code-block:: console
+
+    srun --pty bash -i
+
+Like this: 
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$ srun --pty bash -i
+
+
+Which will start an interactive session, which supports graphical applications resembling the below: 
+
+.. code-block:: console
+
+    [te1st@bessemer-node001 ~]$ 
+
+
 
 .. note::
 
     When you login to a cluster you reach one of two login nodes.
     You **should not** run applications on the login nodes.
-    Running ``qrshx`` gives you an interactive terminal
-    on one of the many worker nodes in the cluster.
-
-    If you only need terminal-based (command-line only) applications
-    you can run the ``qrsh`` command,
-    which will give you a shell on a worker node,
-    but without graphical application (X server) support.
-
+    Running the interactive job command gives you an interactive terminal
+    on one of the many worker nodes in the clusters.
 
 
 ---------

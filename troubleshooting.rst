@@ -141,6 +141,8 @@ If you know the node that a program was compiled on but do not know the CPU arch
 
         qhost | egrep '(ARCH|node116)'
 
+.. _windows_eol_issues:
+
 Windows-style line endings
 --------------------------
 If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the system. A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and you are presented with an error message containing: ::
@@ -162,6 +164,8 @@ will look like the following to programs on a Unix system: ::
 If you suspect that this is affecting your jobs, run the following command on the system: ::
 
         dos2unix your_files_filename
+
+You can / should set your text editor to use Linux endings to avoid this issue.
 
 error: no DISPLAY variable found with interactive job
 -----------------------------------------------------

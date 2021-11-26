@@ -8,10 +8,14 @@ The resulting session will **not** support graphical applications. You will usua
 
 Examples
 --------
-Request an interactive session that provides the default amount of memory resources ::
+Request an interactive session that provides the default amount of memory resources 
 
-    qrsh
+.. code-block:: console
 
-Request an interactive session that provides 10 Gigabytes of real memory ::
+    $ qrsh
 
-    qrsh -l rmem=10G 
+Request an interactive session that provides 10 Gigabytes of real memory 
+
+.. code-block:: console
+
+    $ qrsh -l rmem=10G 

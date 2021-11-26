@@ -14,3 +14,4 @@ is included in other pages.
   Common-commands/index
   sge_parallel_environments
   sge_environment_variables
+  sge_failure_codes

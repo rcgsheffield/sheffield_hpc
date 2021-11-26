@@ -8,15 +8,19 @@ qhost
 Documentation
 -------------
 
-Documentation is available on the system using the command::
+Documentation is available on the system using the command
 
-    man qhost
+.. code-block:: console
+
+    $ man qhost
 
 Usage
 -----
 
-Get an overview of the nodes and CPUS on ShARC: ::
+Get an overview of the nodes and CPUS on ShARC: 
 
-    qhost
+.. code-block:: console
+
+    $ qhost
 
 This shows every node in the cluster. Some of these nodes may be reserved/purchased for specific research groups and hence may not be available for general use.

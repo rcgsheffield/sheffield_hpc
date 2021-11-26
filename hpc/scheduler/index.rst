@@ -32,6 +32,8 @@ commands and work on the same three basic principles:
 * they provide a framework for starting, executing, and monitoring work on the set of allocated nodes,
 * they arbitrate contention for resources by managing a queue of pending work.
 
+--------
+
 Key Concepts 
 ------------
 
@@ -119,6 +121,7 @@ lower priority running before your own with a higher priority. This is because t
 before the job trapping those resources is finished. This is not unfair and it would be inefficient and irresponsible for us to 
 intentionally block a job from running simply because the priority is lower than a larger job that won't fit in that trapped resource.
 
+--------
 
 Job Submission / Control on ShARC
 ---------------------------------
@@ -271,11 +274,71 @@ Here is a more complex example that requests more resources:
 Monitoring running Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+There is a single command to monitor running and queued jobs via the ``qstat`` command:
+
+* :ref:`qstat` 
+
+.. include:: ../../referenceinfo/imports/scheduler/SGE/common-commands/qstat_examples_import.rst
+
 Stopping or cancelling Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Jobs can be stopped or cancelled using the ``qdel`` command:
+
+* :ref:`qdel` 
+
+.. include:: ../../referenceinfo/imports/scheduler/SGE/common-commands/qdel_example_import.rst
 
 Investigating finished Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Jobs which have already finished can be investigated using the ``qacct`` command:
+
+* :ref:`qacct` 
+
+.. include:: ../../referenceinfo/imports/scheduler/SGE/common-commands/qacct_usage_import.rst
+
+By default the ``qacct`` command will only bring up summary info about the user's jobs from the 
+current accounting file (which rotates monthly). Further detail about the output metrics and how 
+to query jobs older than a month can be found on the dedicated :ref:`qacct` page.
+
+Debugging failed Jobs
+^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+
+    One common form of job failure on ShARC is caused by Windows style line endings. If you see
+    and error reported of the form: ::
+
+        failed searching requested shell because:
+
+    You must replace these line endings as detailed in the :ref:`FAQ <windows_eol_issues>`.
+
+
+If one of your jobs has failed and you need to debug why this has occured you should consult the 
+job records held by the scheduler with the :ref:`qacct` referenced above as well as the generated 
+job logs.
+ 
+These output and error log files will be generated in the job working directory 
+with the structure ``$JOBNAME.o$JOBID`` and ``$JOBNAME.e$JOBID`` where ``$JOBNAME`` is 
+the user chosen name of the job and ``$JOBID`` is the scheduler provided job id. 
+Looking at these logs should indicate the source of any issues.
+
+The ``qacct`` info will contain two important metrics, the **exit code** and **failure code**.
+
+The **exit code** is the return value of the exiting program/script. It can be a user defined value if the 
+job is finished with a call to 'exit(number)'. For abnormally terminated jobs it is the signal 
+number + 128. 
+
+As an example: 137-128 = 9, therefore: signal 9 ( SIGKILL), it was sent the KILL signal 
+and was killed, likely by the scheduler.
+
+The **failure code**  indicates why a job was abnormally terminated (by the scheduler). 
+An incomplete table of common failure codes is shown below:
+
+.. include:: ../../referenceinfo/imports/scheduler/SGE/failure_codes_import.rst
+
+
+--------
 
 Job Submission / Control on Bessemer
 ------------------------------------
@@ -422,17 +485,96 @@ Here is a more complex example that requests more resources:
 Monitoring running Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+There is are two commands to monitor running and queued jobs:
+
+* :ref:`sstat`
+* :ref:`squeue`
+
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/squeue_usage_import.rst
+
+|br|
+
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/sstat_usage_import.rst
+
 Stopping or cancelling Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Jobs can be stopped or cancelled using the ``scancel`` command:
+
+* :ref:`scancel`
+
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/scancel_usage_import.rst
 
 Investigating finished Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Jobs which have already finished can be investigated using the ``sacct`` command:
+
+* :ref:`sacct` 
+
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/sacct_usage_import.rst
+
+Debugging failed Jobs
+^^^^^^^^^^^^^^^^^^^^^
+
+If one of your jobs has failed and you need to debug why this has occured you should consult the 
+job records held by the scheduler with the :ref:`sacct` referenced above as well as the generated 
+job logs.
+ 
+These output and error log files will be generated in the job working directory with the job name or 
+output log file name as of the form ``slurm-$JOBID.out`` where ``$JOBID`` is the scheduler provided job id. 
+Looking at these logs should indicate the source of any issues.
+
+:ref:`sacct` will also give a job's **state** and **ExitCode** field with each job.
+
+The **ExitCode** is the return value of the exiting program/script. It can be a user defined value if the 
+job is finished with a call to 'exit(number)'. Any non-zero exit code will be assumed to be a job failure 
+and will result in a Job State of FAILED with a Reason of "NonZeroExitCode".
+
+The job logs may also include a "derived exit code" field. This is set to the value of the highest exit code returned by 
+all of the job's steps (srun invocations). 
+
+--------
+
+Cluster job resource limits
+---------------------------
+
+While the Sheffield cluster have very large amounts of resources to use for your jobs there 
+are limits applied in order for the schedulers to function.  The limits below apply to the default 
+free queues. Other queues may have different settings.
+
+.. warning::
+
+    You must ensure that your jobs do not attempt to exceed these limits as the schedulers are not 
+    forgiving and will summarily kill any job which exceeds the requested limits without warning. 
+
+CPU Limits
+^^^^^^^^^^
+
+Please note that the CPU limits do depend on the chosen :ref:`parallel <parallel>` environment for ShARC 
+jobs, with SMP type jobs limited to a maximum of 16 cores in either job type. Please also note that interactive 
+jobs with more than 16 cores are only available in the MPI parallel environment 
+
+.. warning::
+
+    Please note that for either cluster the larger the number of cores you request in an interactive job the more 
+    likely the request is to fail as the requested resource is not immediately available.
+
+.. include:: /referenceinfo/imports/scheduler/cpu_allocation_limits_table_import.rst
+
+Time Limits
+^^^^^^^^^^^
+
+.. include:: /referenceinfo/imports/scheduler/time_allocation_limits_table_import.rst
+
+Memory Limits
+^^^^^^^^^^^^^
+
+.. include:: /referenceinfo/imports/scheduler/memory_allocation_limits_table_import.rst
 
 
-
-Advanced job submission and management
---------------------------------------
+Advanced / Automated job submission and management
+--------------------------------------------------
 
 The Distributed Resource Management Application API (DRMAA) is available on both clusters which 
 can be used with advanced scripts or a Computational Pipeline manager (such as `Ruffus <http://www.ruffus.org.uk/>`_)

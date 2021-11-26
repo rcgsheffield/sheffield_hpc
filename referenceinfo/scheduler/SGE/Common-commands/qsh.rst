@@ -7,14 +7,20 @@ qsh
 
 Examples
 --------
-Request an interactive X-Windows session that provides the default amount of memory resources ::
+Request an interactive X-Windows session that provides the default amount of memory resources 
 
-    qsh
+.. code-block:: console
+    
+    [te1st@sharc-login1 ~]$ qsh
 
-Request an interactive X-Windows session that provides 10 Gigabytes of real memory ::
+Request an interactive X-Windows session that provides 10 Gigabytes of real memory 
 
-    qsh -l rmem=10G 
+.. code-block:: console
 
-Request an interactive X-Windows session that provides 10 Gigabytes of real memory and 4 CPU cores ::
+    [te1st@sharc-login1 ~]$ qsh -l rmem=10G 
 
-   qsh -l rmem=10G  -pe openmp 4
+Request an interactive X-Windows session that provides 10 Gigabytes of real memory and 4 CPU cores 
+
+.. code-block:: console
+
+   [te1st@sharc-login1 ~]$ qsh -l rmem=10G  -pe openmp 4

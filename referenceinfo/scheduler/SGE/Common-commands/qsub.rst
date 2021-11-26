@@ -7,9 +7,11 @@ qsub
 
 Examples
 --------
-Submit a batch job called myjob.sh to the system ::
+Submit a batch job called myjob.sh to the system 
 
-    qsub myjob.sh
+.. code-block:: console
+
+    $ qsub myjob.sh
 
 Usage
 -----

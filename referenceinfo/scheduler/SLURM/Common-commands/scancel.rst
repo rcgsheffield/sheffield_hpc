@@ -8,20 +8,17 @@ scancel
 Documentation
 -------------
 
-Documentation is available on the system using the command::
+Documentation is available on the system using the command
 
-    man scancel
+.. code-block:: console
+
+    $ man scancel
 
 Usage
 -----
 
-Sometimes you may need to stop a job while it’s running. You can accomplish this 
-with the ``scancel`` command and the job's ID: ::
+Sometimes you may need to stop a job while it’s running. 
 
-    scancel job-id
-
-To cancel multiple jobs you can supply a comma separated list: ::
-
-    scancel job-id1, job-id2, job-id3
+.. include:: ../../../../referenceinfo/imports/scheduler/SLURM/common_commands/scancel_usage_import.rst
 
  

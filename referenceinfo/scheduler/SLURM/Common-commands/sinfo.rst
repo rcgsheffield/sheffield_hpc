@@ -8,24 +8,32 @@ sinfo
 Documentation
 -------------
 
-Documentation is available on the system using the command::
+Documentation is available on the system using the command
 
-    man sinfo
+.. code-block:: console
+
+    $ man sinfo
 
 Usage
 -----
 
-**Get an overview of the nodes on Bessemer:** ::
+**Get an overview of the nodes on Bessemer:** 
 
-    sinfo -N
+.. code-block:: console
+
+    $ sinfo -N
 
 This shows every node in the cluster. Some of these nodes may be reserved/purchased for specific research groups and hence may not be available for general use.
 
-**Get an overview of the partitions on Bessemer:** ::
+**Get an overview of the partitions on Bessemer:** 
 
-    sinfo -a
+.. code-block:: console
+
+    $ sinfo -a
 
 
-**As Bessemer has non-homogenous nodes you can list more information by formatting the output, e.g.:** ::
+**As Bessemer has non-homogenous nodes you can list more information by formatting the output, e.g.:** 
 
-    sinfo -o "%P %l %c %D "  # PARTITION TIMELIMIT CPUS NODES
+.. code-block:: console
+
+    $ sinfo -o "%P %l %c %D "  # PARTITION TIMELIMIT CPUS NODES

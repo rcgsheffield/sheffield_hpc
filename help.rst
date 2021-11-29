@@ -26,6 +26,12 @@ General HPC Problems
 If you are struggling to get something working on the HPC you should first have a look through our documentation on the technology (e.g. :ref:`parallel_MPI`), 
 software (e.g. :ref:`sharc-software` ) or cluster (e.g. :ref:`Bessemer`) you are using to see if we have already installed the software / addressed your problem.
 
+You should also make sure you look through our :ref:`troubleshooting` section as this covers many common mistakes.
+
+.. note::
+
+    Please make sure you check through our resources prior to contacting us as we are a small team with limited resources.
+
 If you are still having issues or need specific advice e.g. how to best parallelise your workflow, please contact 
 `Research IT <mailto:research-it@sheffield.ac.uk>`_ or if you have more specific queries about programming / coding for HPC clusters e.g. CUDA programming please contact
 the `Research Software Engineering Group <https://rse.shef.ac.uk/contact/>`_.

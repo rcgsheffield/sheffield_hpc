@@ -7,15 +7,13 @@ Need help?
 If you need some help Research and Innovation IT have a lot of resources available to help you, please 
 read through these resources below to find the most appropriate resources for your issues.
 
-
 ------
-
 
 HPC Documentation
 -----------------
 
 The HPC documentation we provide (this website) is regularly updated and contains a large amount of info about using our 
-HPC clusters. Users should at minimum ensure they have read through the :ref:`getting-started` section and it contains a 
+HPC clusters. Users should at minimum ensure they have read through the :ref:`getting-started` section as it contains a 
 concise summary of relevant information required to start using our HPC clusters efficiently and optimally.
 
 ------
@@ -26,7 +24,7 @@ General HPC Problems
 If you are struggling to get something working on the HPC you should first have a look through our documentation on the technology (e.g. :ref:`parallel_MPI`), 
 software (e.g. :ref:`sharc-software` ) or cluster (e.g. :ref:`Bessemer`) you are using to see if we have already installed the software / addressed your problem.
 
-You should also make sure you look through our :ref:`troubleshooting` section as this covers many common mistakes.
+You should also make sure you look through our :ref:`troubleshooting` section as it covers many common mistakes.
 
 .. note::
 

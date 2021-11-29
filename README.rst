@@ -113,6 +113,20 @@ The validity of the reStructuredText in this repo and the ability to convert tha
 * By a [GitHub Actions](https://github.com/rcgsheffield/sheffield_hpc/actions/) Workflow each time a contributor creates or updates a Pull Request.
 * By `ReadTheDocs <https://readthedocs.org/projects/iceberg/>`__ on each push to the ``master`` branch.
 
+Important files / folders
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* ``conf.py`` - Sphinx configuration file.
+* ``requirements.txt`` - Main requirements file.
+* ``setuptoolsrequirements.txt`` - Initial requirements file set in order to first pin setuptools to version 57.5.0 to `retain support for the current theme <https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216>`__.
+* ``tox.ini`` - Tox configuration file.
+* ``.readthedocs.yaml`` - ReadTheDocs configuration file (must match the PIP requirements.)
+* ``Makefile`` 
+* ``global.rst`` - A globally included file (goes into all pages) which is excluded from direct building using exclude_patterns in ``conf.py``.
+* ``referenceinfo/imports`` - sub-folder tree of files to be included by not directly built. This is excluded from direct building using exclude_patterns in ``conf.py``.
+* ``_static/css/custom.css`` - custom CSS overrides for the theme.
+
+
 (Re)-generating PNG images from Mermaid.js diagram definitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

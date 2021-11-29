@@ -39,6 +39,7 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    glossary
    other-uk-hpc-resources
    oldsystems
+   help
    referenceinfo/index
    mfa-update-21-10-2021
 

@@ -8,3 +8,6 @@ get_docs.py
 .vscode/
 UNKNOWN.egg-info/
 .tox/
+
+#Allow
+!_static/html/

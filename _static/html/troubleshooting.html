@@ -1,0 +1,413 @@
+
+
+<div class="search-container">
+    Please search if desired or scroll below:
+    <form class="form-search form-inline">
+        <input type="text" class="input-medium search-query" placeholder="Search">
+        <button type="submit" class="btn">Search</button>
+    </form>
+</div>
+</section>
+
+</br>
+
+
+
+<div class="item-container">
+    <div class="hidden">terminal broke, terminal broken, shell broke, shell broken, shell, terminal</div>
+    <div class="item">
+
+            <section id="strange-things-are-happening-with-my-terminal">
+    <h3>Strange things are happening with my terminal<a class="headerlink" href="#strange-things-are-happening-with-my-terminal" title="Permalink to this headline">¶</a></h3>
+    <p>Symptoms include many of the commands not working and just <code class="docutils literal notranslate"><span class="pre">bash-4.1$</span></code> being displayed instead of your username at the bash prompt.</p>
+    <p>This may be because you’ve deleted your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> and <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> files - these are ‘hidden’ files which live in your home directory and are used to correctly set up your environment.  If you hit this problem you can run the command <code class="docutils literal notranslate"><span class="pre">resetenv</span></code> which will restore the default files.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">login broke, login broken, stuck, login stuck, cannot login, not login</div>
+    <section id="i-can-no-longer-log-in">
+    <h3>I can no longer log in<a class="headerlink" href="#i-can-no-longer-log-in" title="Permalink to this headline">¶</a></h3>
+    <p>If you are confident that you have no password or remote-access-client related issues but you still can not log onto a cluster you may be having problems due to exceeding your cluster filestore quota.
+    If you exceed your filestore quota in your <code class="docutils literal notranslate"><span class="pre">/home</span></code> area it is sometimes possible that crucial system files in your home directory gets truncated that effect the subsequent login process.</p>
+    <p>You may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file - please attempt to resolve this first by resetting your environment with the following command, replacing the variables appropriately: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-t</span> <span class="pre">$USER&#64;$CLUSTER.shef.ac.uk</span> <span class="pre">'resetenv</span> <span class="pre">-f'</span></code></p>
+    <p>If this does not resolve your issue and you suspect your <code class="docutils literal notranslate"><span class="pre">/home</span></code> area is full , you should immediately email <code class="docutils literal notranslate"><span class="pre">research-it&#64;sheffield.ac.uk</span></code> and ask to be unfrozen.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+
+    <section id="i-can-not-log-into-a-cluster-via-the-myapps-applications-portal">
+    <h3>I can not log into a cluster via the MyApps applications portal<a class="headerlink" href="#i-can-not-log-into-a-cluster-via-the-myapps-applications-portal" title="Permalink to this headline">¶</a></h3>
+    <p>Most of the time such problems arise due to due to Java version issues. As Java updates are released regularly, these problems are usually caused by the changes to the Java plug-in for the browser.
+    Follow the trouble-shooting link from the <a class="reference external" href="https://www.sheffield.ac.uk/it-services/research/hpc/using/access/browser">browser-access page</a> to resolve these problems. There is also a link on that page to test the functionality of your java plug-in. It can also help to try a different browser to see if it makes any difference.
+    All failing, you may have to fall back to one of the <a class="reference external" href="https://www.sheffield.ac.uk/it-services/research/hpc/using/access">non-browser access methods</a>.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">folders broke, folders broken, folders missing</div>
+    <section id="i-cannot-see-my-folders-in-data-or-shared">
+    <h3>I cannot see my folders in /data or /shared<a class="headerlink" href="#i-cannot-see-my-folders-in-data-or-shared" title="Permalink to this headline">¶</a></h3>
+    <p>Some directories such as <code class="docutils literal notranslate"><span class="pre">/data/&lt;your</span> <span class="pre">username&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">/shared/&lt;your</span> <span class="pre">project/</span></code> are made available <strong>on-demand</strong>:.
+    For example, if your username is <cite>ab1def</cite> and you look in <cite>/data</cite> straight after logging in, you may not see <cite>/data/ab1def</cite>.
+    The directory is there, it has just not been made available (via a process called <strong>mounting</strong>) to you automatically.
+    When you attempt to do something with the directory such as <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/data/ab1def</span></code> or <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/data/ab1def</span></code>, the directory will be mounted automatically and will appear to you.
+    The directory will be automatically unmounted after a period of inactivity.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">job terminated, killed, job killed</div>
+    <section id="my-batch-job-terminates-without-any-messages-or-warnings">
+    <h3>My batch job terminates without any messages or warnings<a class="headerlink" href="#my-batch-job-terminates-without-any-messages-or-warnings" title="Permalink to this headline">¶</a></h3>
+    <p>When a batch job that is initiated by using the <code class="docutils literal notranslate"><span class="pre">qsub</span></code> command or <code class="docutils literal notranslate"><span class="pre">runfluent</span></code>, <code class="docutils literal notranslate"><span class="pre">runansys</span></code> or <code class="docutils literal notranslate"><span class="pre">runabaqus</span></code> commands, it gets allocated specific amount of real memory and run-time.
+    If a job exceeds either the real memory or time limits it gets terminated immediately and usually without any warning messages.</p>
+    <p>It is therefore important to estimate the amount of memory and time that is needed to run your job to completion and specify it at the time of submitting the job to the batch queue.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">terminal broke, terminal broken, shell broke, shell broken, shell, terminal, cannot login</div>
+    <section id="exceeding-your-disk-space-quota">
+    <h3>Exceeding your disk space quota<a class="headerlink" href="#exceeding-your-disk-space-quota" title="Permalink to this headline">¶</a></h3>
+    <p>Each user of the system has a fixed amount of disk space available in their home directory.
+    If you exceed this quota, various problems can emerge such as an inability to launch applications and run jobs.
+    To see if you have exceeded your disk space quota, run the <code class="docutils literal notranslate"><span class="pre">quota</span></code> command:</p>
+    <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>quota
+    
+    Size  Used Avail Use% Mounted on
+    10.1G  5.1G     0 100% /home/foo11b
+    100G     0   100G   0% /data/foo11b
+    </pre></div>
+    </div>
+    <p>In the above, you can see that the quota was set to 10.1 gigabytes and all of this is in use.
+    Any jobs submitted by this user will likely result in an <code class="docutils literal notranslate"><span class="pre">Eqw</span></code> status.
+    The recommended action is for the user to delete enough files to allow normal work to continue.</p>
+    <p>Sometimes, it is not possible to log in to the system because of a full quota,
+    in which case you need to contact <code class="docutils literal notranslate"><span class="pre">research-it&#64;sheffield.ac.uk</span></code> and ask to the unfrozen.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">OOM, out of memory, killed, job killed</div>
+    <section id="i-am-getting-warning-messages-and-warning-emails-from-my-batch-jobs-about-insufficient-memory">
+    <h3>I am getting warning messages and warning emails from my batch jobs about insufficient memory<a class="headerlink" href="#i-am-getting-warning-messages-and-warning-emails-from-my-batch-jobs-about-insufficient-memory" title="Permalink to this headline">¶</a></h3>
+    <p>If a job exceeds its real memory resource it gets terminated. You can use the <code class="docutils literal notranslate"><span class="pre">rmem=</span></code> parameter to increase the amount of real memory that your job requests.</p>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+
+    <section id="what-are-the-rmem-real-memory-and-deprecated-mem-virtual-memory-options">
+    <span id="real-vs-virt-mem"></span><h3>What are the rmem (real memory) and (deprecated) mem (virtual memory) options?<a class="headerlink" href="#what-are-the-rmem-real-memory-and-deprecated-mem-virtual-memory-options" title="Permalink to this headline">¶</a></h3>
+    <div class="admonition warning">
+    <p class="admonition-title">Warning</p>
+    <p>The following is most likely only of interest when revisiting job submission scripts and documentation created before
+    26 June 2017 as now users only need to request real memory (<code class="docutils literal notranslate"><span class="pre">rmem</span></code>) and jobs are only killed if they exceed their <code class="docutils literal notranslate"><span class="pre">rmem</span></code> quota
+    (whereas prior to that date jobs could request and be policed using virtual memory <code class="docutils literal notranslate"><span class="pre">mem</span></code> requests).</p>
+    </div>
+    <p>Running a program always involves loading the program instructions and also its data (i.e. all variables and arrays that it uses) into the computer’s memory.
+    A program’s entire instructions and its entire data, along with any dynamically-linked libraries it may use, defines the <strong>virtual storage</strong> requirements of that program.
+    If we did not have clever operating systems we would need as much physical memory (RAM) as the virtual storage requirements of that program.
+    However, operating systems are clever enough to deal with situations where we have insufficient <strong>real memory</strong> (physical memory, typically called RAM) to
+    load all the program instructions and data into the available RAM.
+    This technique works because hardly any program needs to access all its instructions and its data simultaneously.
+    Therefore the operating system loads into RAM only those bits (<strong>pages</strong>) of the instructions and data that are needed by the program at a given instance.
+    This is called <strong>paging</strong> and it involves copying bits of the programs instructions and data to/from hard-disk to RAM as they are needed.</p>
+    <p>If the real memory (i.e. RAM) allocated to a job is much smaller than the entire memory requirements of a job ( i.e. virtual memory)
+    then there will be excessive need for paging that will slow the execution of the program considerably due to
+    the relatively slow speeds of transferring information to/from the disk into RAM.</p>
+    <p>On the other hand if the RAM allocated to a job is larger than the virtual memory requirement of that job then
+    it will result in waste of RAM resources which will be idle duration of that job.</p>
+    <ul class="simple">
+    <li><p>The virtual memory limit defined by the <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">mem</span></code> cluster scheduler parameter defines the maximum amount of virtual memory your job will be allowed to use. <strong>This option is now deprecated</strong> - you can continue to submit jobs requesting virtual memory, however the scheduler <strong>no longer applies any limits to this resource</strong>.</p></li>
+    <li><p>The real memory limit is defined by the <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">rmem</span></code> cluster scheduler parameter and defines the amount of RAM that will be allocated to your job.  The job scheduler will terminate jobs which exceed their real memory resource request.</p></li>
+    </ul>
+    <div class="admonition note">
+    <p class="admonition-title">Note</p>
+    <p>As mentioned above, jobs now need to just request real memory and are policed using real memory usage.  The reasons for this are:</p>
+    <ul class="simple">
+    <li><p>For best performance it is preferable to request as much real memory as the virtual memory storage requirements of a program as paging impacts on performance and memory is (relatively) cheap.</p></li>
+    <li><p>Real memory is more tangible to newer users.</p></li>
+    </ul>
+    </div>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">OOM, out of memory, killed, job killed</div>
+    <section id="insufficient-memory-in-an-interactive-session">
+    <h3>Insufficient memory in an interactive session<a class="headerlink" href="#insufficient-memory-in-an-interactive-session" title="Permalink to this headline">¶</a></h3>
+    <p>By default, an interactive session provides you with 2 Gigabytes of RAM (sometimes called real memory).
+    You can request more than this when running your <code class="docutils literal notranslate"><span class="pre">qrshx</span></code>/<code class="docutils literal notranslate"><span class="pre">qsh</span></code>/<code class="docutils literal notranslate"><span class="pre">qrsh</span></code> command e.g.:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qrshx</span> <span class="o">-</span><span class="n">l</span> <span class="n">rmem</span><span class="o">=</span><span class="mi">8</span><span class="n">G</span>
+    </pre></div>
+    </div>
+    <p>This asks for 8 Gigabytes of RAM (real memory). Note that you should:</p>
+    <ul class="simple">
+    <li><p>not specify more than 256 GB of RAM (real memory) (<code class="docutils literal notranslate"><span class="pre">rmem</span></code>)</p></li>
+    </ul>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+
+    <section id="illegal-instruction-errors">
+    <h3>‘Illegal Instruction’ errors<a class="headerlink" href="#illegal-instruction-errors" title="Permalink to this headline">¶</a></h3>
+    <p>If your program fails with an <strong>Illegal Instruction</strong> error then it may have been compiled using (and optimised for) one type of processor but is running on another.</p>
+    <p>If you get this error <strong>after copying compiled programs onto a cluster</strong> then you may need to recompile them on on the cluster or recompile them elsewhere without aggressively optimising for processor architecture.</p>
+    <p>If however you get this error when <strong>running programs on the cluster that you have also compiled on the cluster</strong> then you may have compiled on one processor type and be running on a different type.
+    You may not consistently get the <em>illegal instruction</em> error here as the scheduler may allocate you a different type of processor every time you run your program.
+    you can either recompile your program without optimisations for processor architecture or force your job to run on the type of processor it was compiled on using the <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">arch=</span></code> <code class="docutils literal notranslate"><span class="pre">qsub</span></code>/<code class="docutils literal notranslate"><span class="pre">qrsh</span></code>/<code class="docutils literal notranslate"><span class="pre">qsh</span></code> parameter e.g.</p>
+    <ul class="simple">
+    <li><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">arch=intel*</span></code> to avoid being allocated one of the few AMD-powered nodes</p></li>
+    <li><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">arch=intel-x5650</span></code> to use the Intel Westmere CPU architecture</p></li>
+    <li><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">arch=intel-e5-26[567]0</span></code> to use the Intel Sandy Bridge CPU architecture</p></li>
+    </ul>
+    <p>If you know the node that a program was compiled on but do not know the CPU architecture of that node then you can discover it using the following command (substituting in the relevant node name):</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qhost</span> <span class="o">|</span> <span class="n">egrep</span> <span class="s1">&#39;(ARCH|node116)&#39;</span>
+    </pre></div>
+    </div>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+
+    <section id="windows-style-line-endings">
+    <h3>Windows-style line endings<a class="headerlink" href="#windows-style-line-endings" title="Permalink to this headline">¶</a></h3>
+    <p>If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the system. A very common example is when a job immediately goes into <code class="docutils literal notranslate"><span class="pre">Eqw</span></code> status after you have submitted it and you are presented with an error message containing:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">failed</span> <span class="n">searching</span> <span class="n">requested</span> <span class="n">shell</span> <span class="n">because</span><span class="p">:</span>
+    </pre></div>
+    </div>
+    <p>The reason for this behaviour is that Windows and Unix machines have different conventions for specifying ‘end of line’ in text files. Windows uses the control characters for ‘carriage return’ followed by ‘linefeed’, <code class="docutils literal notranslate"><span class="pre">\r\n</span></code>, whereas Unix uses just ‘linefeed’ <code class="docutils literal notranslate"><span class="pre">\n</span></code>.</p>
+    <p>The practical upshot of this is that a script prepared in Windows using Notepad looking like this:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+    <span class="n">echo</span> <span class="s1">&#39;hello world&#39;</span>
+    </pre></div>
+    </div>
+    <p>will look like the following to programs on a Unix system:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash\r</span>
+    <span class="n">echo</span> <span class="s1">&#39;hello world&#39;</span>\<span class="n">r</span>
+    </pre></div>
+    </div>
+    <p>If you suspect that this is affecting your jobs, run the following command on the system:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dos2unix</span> <span class="n">your_files_filename</span>
+    </pre></div>
+    </div>
+    </section>
+        </p>
+    </div>
+</div>
+    
+<div class="item-container">
+    <div class="item">
+
+    <section id="error-no-display-variable-found-with-interactive-job">
+    <h3>error: no DISPLAY variable found with interactive job<a class="headerlink" href="#error-no-display-variable-found-with-interactive-job" title="Permalink to this headline">¶</a></h3>
+    <p>If you receive the error message:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">no</span> <span class="n">DISPLAY</span> <span class="n">variable</span> <span class="n">found</span> <span class="k">with</span> <span class="n">interactive</span> <span class="n">job</span>
+    </pre></div>
+    </div>
+    <p>the most likely cause is that you forgot the <code class="docutils literal notranslate"><span class="pre">-X</span></code> switch when you logged into the cluster. That is, you might have typed:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">username</span><span class="nd">@clustername</span><span class="o">.</span><span class="n">sheffield</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+    </pre></div>
+    </div>
+    <p>instead of:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">X</span> <span class="n">username</span><span class="nd">@clustername</span><span class="o">.</span><span class="n">sheffield</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+    </pre></div>
+    </div>
+    <p>macOS users might also encounter this issue if their <a class="reference external" href="https://www.xquartz.org/">XQuartz</a> is not up to date.</p>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+    <div class="hidden">connection problem, connection stuck, slow, broken</div>
+    <section id="problems-connecting-with-winscp">
+    <h3>Problems connecting with WinSCP<a class="headerlink" href="#problems-connecting-with-winscp" title="Permalink to this headline">¶</a></h3>
+    <p>Some users have reported issues while connetcing to the system using WinSCP, usually when working from home with a poor connection and when accessing folders with large numbers of files.</p>
+    <p>In these instances, turning off <code class="docutils literal notranslate"><span class="pre">Optimize</span> <span class="pre">Connection</span> <span class="pre">Buffer</span> <span class="pre">Size</span></code> in WinSCP can help:</p>
+    <ul class="simple">
+    <li><p>In WinSCP, goto the settings for the site (ie. from the menu <code class="docutils literal notranslate"><span class="pre">Session-&gt;Sites-&gt;SiteManager</span></code>)</p></li>
+    <li><p>From the <code class="docutils literal notranslate"><span class="pre">Site</span> <span class="pre">Manager</span></code> dialog click on the selected session and click edit button</p></li>
+    <li><p>Click the advanced button</p></li>
+    <li><p>The Advanced Site Settings dialog opens.</p></li>
+    <li><p>Click on connection</p></li>
+    <li><p>Untick the box which says <code class="docutils literal notranslate"><span class="pre">Optimize</span> <span class="pre">Connection</span> <span class="pre">Buffer</span> <span class="pre">Size</span></code></p></li>
+    </ul>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+
+    <section id="strange-fonts-or-errors-re-missing-fonts-when-trying-to-start-a-graphical-application">
+    <h3>Strange fonts or errors re missing fonts when trying to start a graphical application<a class="headerlink" href="#strange-fonts-or-errors-re-missing-fonts-when-trying-to-start-a-graphical-application" title="Permalink to this headline">¶</a></h3>
+    <p>Certain programs require esoteric fonts to be installed on the machine running the X server (i.e. your local machine).
+    Example of such programs are <code class="docutils literal notranslate"><span class="pre">qmon</span></code>, a graphical interface to the Grid Engine scheduling software, and the Ansys software.
+    If you try to run <code class="docutils literal notranslate"><span class="pre">qmon</span></code> or Ansys <strong>on a Linux machine</strong> and see strange symbols instead of the Latin alphabet or get an error message that includes:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="n">Error</span> <span class="n">of</span> <span class="n">failed</span> <span class="n">request</span><span class="p">:</span> <span class="n">BadName</span> <span class="p">(</span><span class="n">named</span> <span class="n">color</span> <span class="ow">or</span> <span class="n">font</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span><span class="p">)</span>
+    </pre></div>
+    </div>
+    <p>then you should try running the following <strong>on your own machine</strong>:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for i in 75dpi 100dpi; do
+        sudo apt-get install xfonts-75dpi
+        pushd /usr/share/fonts/X11/$i/
+        sudo mkfontdir
+        popd
+        xset fp+ /usr/share/fonts/X11/$i
+    done
+    </pre></div>
+    </div>
+    <p>Note that these instructions are Ubuntu/Debian-specific; on other systems package names and paths may differ.</p>
+    <p>Next, try <a class="reference internal" href="hpc/connecting.html#connecting"><span class="std std-ref">connecting to a cluster</span></a> using <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span> <span class="pre">clustername</span></code>, start a graphical session then try running <code class="docutils literal notranslate"><span class="pre">qmon</span></code>/Ansys again.
+    If you can now run <code class="docutils literal notranslate"><span class="pre">qmon</span></code>/Ansys without problems
+    then you need to add two lines to the <code class="docutils literal notranslate"><span class="pre">.xinitrc</span></code> file in your home directory <strong>on your own machine</strong>
+    so this solution will continue to work following a reboot of your machine:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FontPath</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span><span class="o">/</span><span class="n">X11</span><span class="o">/</span><span class="mi">100</span><span class="n">dpi</span>
+    <span class="n">FontPath</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span><span class="o">/</span><span class="n">X11</span><span class="o">/</span><span class="mi">75</span><span class="n">dpi</span>
+    </pre></div>
+    </div>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+
+    <section id="can-i-run-programs-that-need-to-be-able-to-talk-to-an-audio-device">
+    <h3>Can I run programs that need to be able to talk to an audio device?<a class="headerlink" href="#can-i-run-programs-that-need-to-be-able-to-talk-to-an-audio-device" title="Permalink to this headline">¶</a></h3>
+    <p>On ShARC all worker nodes have a dummy sound device installed
+    (which is provided by a kernel module called <a class="reference external" href="https://www.alsa-project.org/main/index.php/Matrix:Module-dummy">snd_dummy</a>).</p>
+    <p>This may be useful if you wish to run a program that expects to be able to output audio (and crashes if no sound device is found)
+    but you don’t actually want to monitor that audio output.</p>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+
+    <section id="login-node-rsa-ecdsa-ed25519-fingerprints">
+    <h3>Login node RSA/ECDSA/ED25519 fingerprints<a class="headerlink" href="#login-node-rsa-ecdsa-ed25519-fingerprints" title="Permalink to this headline">¶</a></h3>
+    <p>The RSA, ECDSA and ED25519 fingerprints for ShARC’s login nodes are:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHA256</span><span class="p">:</span><span class="n">NVb</span><span class="o">+</span><span class="n">eAG6sMFQEbVXeF5a</span><span class="o">+</span><span class="n">x5ALHhTqtYqdV6g31Kn6vE</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+    <span class="n">SHA256</span><span class="p">:</span><span class="n">WJYHPbMKrWud4flwhIbrfTB1SR4pprGhx4Vu88LhP58</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+    <span class="n">SHA256</span><span class="p">:</span><span class="n">l8imoZMnO</span><span class="o">+</span><span class="n">fHGle6zWi</span><span class="o">/</span><span class="n">pf4eyiVsEYYscKsl1ellrnE</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+    </pre></div>
+    </div>
+    <p>The RSA, ECDSA and ED25519 fingerprints for Bessemer’s login nodes are:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHA256</span><span class="p">:</span><span class="n">AqxYHUlW3r</span><span class="o">+</span><span class="n">vrmwS0g0Eru9u4ZujcFCRJajkTRdcAfA</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+    <span class="n">SHA256</span><span class="p">:</span><span class="n">eG</span><span class="o">/</span><span class="n">eFhOXyKS77WCsMmkDwZSV4t7y</span><span class="o">/</span><span class="n">D8zBFHt1mFP280</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+    <span class="n">SHA256</span><span class="p">:</span><span class="n">TVzevzGC2uz8r1Z16MB9C9xEQpm7DAJC4tcSvYSD36k</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+    </pre></div>
+    </div>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+
+    <section id="issue-when-running-multiple-mpi-jobs-in-sequence">
+    <h3>Issue when running multiple MPI jobs in sequence<a class="headerlink" href="#issue-when-running-multiple-mpi-jobs-in-sequence" title="Permalink to this headline">¶</a></h3>
+    <p>If you have multiple <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> commands in a single batch job submission script,
+    you may find that one or more of these may fail after
+    complaining about not being able to communicate with the <code class="docutils literal notranslate"><span class="pre">orted</span></code> daemon on other nodes.
+    This appears to be something to do with multiple <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> commands being called quickly in succession,
+    and connections not being pulled down and new connections established quickly enough.</p>
+    <p>Putting a sleep of e.g. 5s between <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> commands seems to help here. i.e.</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mpirun</span> <span class="n">program1</span>
+    <span class="n">sleep</span> <span class="mi">5</span><span class="n">s</span>
+    <span class="n">mpirun</span> <span class="n">program2</span>
+    </pre></div>
+    </div>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+
+    <section id="warning-about-groups-cannot-find-name-for-group-id-xxxxx">
+    <span id="unnamed-groups"></span><h3>Warning about ‘groups: cannot find name for group ID xxxxx’<a class="headerlink" href="#warning-about-groups-cannot-find-name-for-group-id-xxxxx" title="Permalink to this headline">¶</a></h3>
+    <p>You may occasionally see warnings like the above e.g. when running a <a class="reference internal" href="sharc/software/apps/singularity.html#singularity-sharc"><span class="std std-ref">Singularity</span></a> container or when running the standard <code class="docutils literal notranslate"><span class="pre">groups</span></code> Linux utility.
+    These warnings can be ignored.</p>
+    <p>The scheduler, Son of Grid Engine, dynamically creates a Unix group per job to
+    keep track of resources (files and process) associated with that job.
+    These groups have numeric IDs but no names, which can result in harmless warning messages in certain circumstances.</p>
+    <p>See <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">8</span> <span class="pre">pam_sge-qrsh-setup</span></code> for the details of how and why Grid Engine creates these groups.</p>
+    </section>
+        </p>
+    </div>
+</div>
+
+<div class="item-container">
+    <div class="item">
+
+    <section id="using-sudo-to-install-software-on-the-clusters">
+    <h3>Using ‘sudo’ to install software on the clusters<a class="headerlink" href="#using-sudo-to-install-software-on-the-clusters" title="Permalink to this headline">¶</a></h3>
+    <p>HPC users do not have sufficient access privileges to use sudo to install software (in /usr/local). Users can however install applications in their /home or /data directories.
+    The webpage <a class="reference external" href="https://www.sheffield.ac.uk/it-services/research/hpc/using/install">Installing Applications on Bessemer and ShARC</a> provides guidance on how to do this.</p>
+    </section>
+        </p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+$('.form-search').on('submit',function(){return false;});
+$('.form-search .btn').on('click', function(e){
+    var query = $.trim($(this).prevAll('.search-query').val()).toLowerCase();
+    $('div.item-container').each(function(){
+         var $this = $(this);
+         if($this.text().toLowerCase().indexOf(query) === -1)
+             $this.closest('div.item-container').fadeOut();
+        else $this.closest('div.item-container').fadeIn();
+    });
+});
+
+</script>
+

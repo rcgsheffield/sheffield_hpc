@@ -79,7 +79,7 @@ from the mounted directories (See :ref:`auto_mounting_filestore_singularity_shar
 
         groups: cannot find name for group ID ...
 
-    :ref:`This can be ignored <unnamed_groups>` and will not have an affect on running the image.
+    :ref:`This can be ignored <troubleshooting>` and will not have an affect on running the image.
 
 
 .. _use_image_batch_singularity_sharc:

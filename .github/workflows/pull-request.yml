@@ -1,5 +1,7 @@
 name: test_docs_build
 on:
+  # Trigger on manual requests
+  workflow_dispatch:
   # Trigger on pull requests against the master branch
   pull_request:
     branches:
@@ -27,3 +29,10 @@ jobs:
 
       - name: Run tests using Tox
         run: tox -e py
+    
+      - name: Upload generated builds
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated_build-${{ matrix.python }}
+          path: _build/html
+

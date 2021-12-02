@@ -35,8 +35,7 @@ CPU and can scale to hundreds of cores.
 Interactive jobs
 ----------------
 
-While using a X11 GUI forwarding supported SSH client, an interactive session can be started on Bessemer with 
-the ``srun --pty bash -i`` command which supports graphical applications. You can load an ANSYS module above and then 
+While using a X11 GUI forwarding supported SSH client, an interactive session can be started on Bessemer as linked above. You can load an ANSYS module above and then 
 use the LS-DYNA executables as below. To use more than a single core, you should write a batch job script like 
 one of the examples below.
 

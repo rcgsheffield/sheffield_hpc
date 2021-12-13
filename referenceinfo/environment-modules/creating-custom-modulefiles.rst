@@ -83,4 +83,4 @@ And unload with:
 
 Modulefiles make it easy to add many versions of the same software easily via duplication and simple editing 
 without the risk of permanently corrupting your shell environment. Further info on the modules system can be 
-found on the :ref:`modules page <env_modules>`
+found on the :ref:`modules page <env_modules>`.

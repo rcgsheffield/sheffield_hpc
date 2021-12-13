@@ -1,0 +1,48 @@
+#%Module10.2#####################################################################
+##
+## ANSYS 21.2 module file
+##
+#  Updated by James Moore 01/09/2021
+#
+#  
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "   Makes ANSYS Version 21.2 available for use"
+}
+
+module-whatis   "Makes ANSYS V21.2 available"
+
+# module variables
+#
+set ANSYS_DIR     /usr/local/packages/apps/ansys/21.2/binary/v212
+
+setenv  ANSYSROOT $ANSYS_DIR
+setenv  ANSYSVER 212
+setenv  ANSWBCOMMAND $ANSYS_DIR/Framework/bin/Linux64/runwb2
+setenv  FLUENT_INC $ANSYS_DIR/fluent
+setenv  ICEM_ACN $ANSYS_DIR/icemcfd/linux64_amd
+setenv  REACTION_DIR $ANSYS_DIR/reaction
+
+prepend-path PATH $ANSYS_DIR/Framework/bin/Linux64/
+prepend-path PATH $ANSYS_DIR/aisol/bin/linx64
+prepend-path PATH $ANSYS_DIR/RSM/bin
+prepend-path PATH $ANSYS_DIR/ansys/bin
+prepend-path PATH $ANSYS_DIR/autodyn/bin
+prepend-path PATH $ANSYS_DIR/CFD-Post/bin
+prepend-path PATH $ANSYS_DIR/CFX/bin
+prepend-path PATH $ANSYS_DIR/fluent/bin
+prepend-path PATH $ANSYS_DIR/TurboGrid/bin
+prepend-path PATH $ANSYS_DIR/polyflow/bin
+prepend-path PATH $ANSYS_DIR/Icepak/bin
+prepend-path PATH $ANSYS_DIR/icemcfd/linux64_amd/bin
+prepend-path PATH $ANSYS_DIR/CEI/bin
+
+set-alias  ansyswb {\$ANSYSROOT/Framework/bin/Linux64/runwb2}
+set-alias  ansys-mechanical {\$ANSYSROOT/ansys/bin/mapdl}

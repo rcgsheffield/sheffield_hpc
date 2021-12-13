@@ -8,3 +8,4 @@ After connecting to Bessemer (see :ref:`ssh`),  you can start an `interactive gr
    module load ANSYS/20.1/binary
    module load ANSYS/20.2/binary
    module load ANSYS/21.1/binary
+   module load ANSYS/21.2/binary

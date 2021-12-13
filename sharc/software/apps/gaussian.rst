@@ -1,6 +1,8 @@
 Gaussian
 ========
 
+.. _gaussian_sharc:
+
 .. sidebar:: Gaussian 
 
    :Version: 09 E.01, 16 C.01

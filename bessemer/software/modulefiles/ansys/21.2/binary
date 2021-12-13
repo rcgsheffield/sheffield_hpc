@@ -1,0 +1,52 @@
+#%Module
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+ANSYS simulation software enables organizations to confidently predict
+    how their products will operate in the real world. We believe that every product is
+    a promise of something greater.
+
+
+More information
+================
+ - Homepage: http://www.ansys.com
+    }
+}
+
+module-whatis {Description: ANSYS simulation software enables organizations to confidently predict
+    how their products will operate in the real world. We believe that every product is
+    a promise of something greater. }
+module-whatis {Homepage: http://www.ansys.com}
+module-whatis {URL: http://www.ansys.com}
+
+set root /usr/local/packages/live/noeb/ANSYS/21.2/binary/
+
+conflict ANSYS
+
+prepend-path	PATH		$root/v212/Framework/bin/Linux64
+prepend-path	PATH		$root/v212/aisol/bin/linx64
+prepend-path	PATH		$root/v212/RSM/bin
+prepend-path	PATH		$root/v212/ansys/bin
+prepend-path	PATH		$root/v212/autodyn/bin
+prepend-path	PATH		$root/v212/CFD-Post/bin
+prepend-path	PATH		$root/v212/CFX/bin
+prepend-path	PATH		$root/v212/fluent/bin
+prepend-path	PATH		$root/v212/TurboGrid/bin
+prepend-path	PATH		$root/v212/polyflow/bin
+prepend-path	PATH		$root/v212/Icepak/bin
+prepend-path	PATH		$root/v212/icemcfd/linux64_amd/bin
+prepend-path	PATH		$root/v212/CEI/bin
+setenv	EBROOTANSYS		"$root"
+setenv	EBVERSIONANSYS		"21.2"
+setenv	EBDEVELANSYS		"$root/easybuild/ANSYS-21.2-easybuild-devel"
+
+prepend-path	PATH		$root
+setenv	ICEM_ACN		"/usr/local/packages/live/noeb/ANSYS/21.2/binary/v212/icemcfd/linux64_amd"
+# NOT Built with EasyBuild version 4.0.0
+
+# Fix applied for issue with core allocation problem - JM 25-09-2020 - see https://github.com/rcgsheffield/sheffield_hpc/issues/1082
+setenv FLUENT_AFFINITY "0" 

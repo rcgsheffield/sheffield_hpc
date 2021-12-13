@@ -13,6 +13,7 @@ This guide will get you set up using the University's clusters
 .. toctree::
    :maxdepth: 2
 
+   what-is-hpc
    accounts
    connecting
    mfa

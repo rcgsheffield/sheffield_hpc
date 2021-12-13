@@ -22,9 +22,21 @@ VASP 5.4.1 can be activated using the module file::
 
 The VASP executables are ``vasp_std``, ``vasp_gam`` and ``vasp_ncl``.
 
-**Important note:** Only licensed users of VASP are entitled to use the code; refer to VASP's website for license details: https://www.vasp.at/registration_form/ . Access to VASP on Bessemer is restricted to members of the unix group ``hpc_vasp``.
-To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use VASP.
+.. important::
 
+    Only licensed users of VASP are entitled to use the code; refer to VASP's website for license details: https://www.vasp.at/registration_form/ . Access to VASP on Bessemer is restricted to members of the unix group ``hpc_vasp``.
+    To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use VASP.
+
+Pseudopotential files
+^^^^^^^^^^^^^^^^^^^^^
+
+VASP Pseudopotentials can be found in the ``$VASP_ROOT`` directory in versioned ``potpaw`` sub-directories after loading the module, e.g. :
+
+.. code-block:: console
+
+    $ module load VASP/5.4.1-intel-2019b
+    $ ls $VASP_ROOT
+    bin  easybuild  potpaw_LDA  potpaw_PBE
 
 Batch jobs
 ----------
@@ -53,8 +65,16 @@ Installation notes
 
 VASP 5.4.1 and 5.4.4 were installed using Easybuild, build details can be found in ``/usr/local/packages/live/eb/VASP/5.4.1-intel-2019b/easybuild`` and ``/usr/local/packages/live/eb/VASP/5.4.4-intel-2019b/easybuild``
 
+Module files have been modified to include the VASP Pseudopotentials directory environment variables. Installations have also been modified and had 
+correctly versioned Pseudopotentials folders symlinked into their ``$VASP_ROOT`` directory from the main Pseudopotentials storage directory as indicated by ``$PSEUDOPOTENTIAL_DIR``.
+
+VASP Pseudopotential files downloaded from the VASP portal and/or license holders can provide future versions as these are provided under the same license as the program.
+
 The module files are:
-:download:`/usr/local/modulefiles/live/eb/all/VASP/5.4.1-intel-2019b </bessemer/software/modulefiles/VASP/5.4.1/5.4.1-intel-2019b>`.
-:download:`/usr/local/modulefiles/live/eb/all/VASP/5.4.4-intel-2019b </bessemer/software/modulefiles/VASP/5.4.4/5.4.4-intel-2019b>`.
+
+* :download:`/usr/local/modulefiles/live/eb/all/VASP/5.4.1-intel-2019b </bessemer/software/modulefiles/VASP/5.4.1/5.4.1-intel-2019b>`.
+* :download:`/usr/local/modulefiles/live/eb/all/VASP/5.4.4-intel-2019b </bessemer/software/modulefiles/VASP/5.4.4/5.4.4-intel-2019b>`.
+
+
 
 These installations were tested by running a batch job using the ``my_job.sh`` batch script above, and the input for the "O atom" example (https://cms.mpi.univie.ac.at/wiki/index.php/O_atom) from the online VASP tutorials (https://cms.mpi.univie.ac.at/wiki/index.php/VASP_tutorials).

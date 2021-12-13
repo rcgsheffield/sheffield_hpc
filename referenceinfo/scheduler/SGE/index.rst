@@ -1,16 +1,16 @@
 .. _sge_referenceinfo:
 
-SGE Reference Info
-==================
+SGE Scheduler (ShARC) Reference Info
+====================================
 
-This sub-tree contains reference information that is pulled into other pages.
+This page provides links to reference information about the SGE scheduler used on ShARC which 
+is included in other pages.
 
 
 .. toctree::
-  :hidden:
   :maxdepth: 1
   :glob:
 
+  Common-commands/index
   sge_parallel_environments
-
-* :doc:`sge_parallel_environments`
+  sge_environment_variables

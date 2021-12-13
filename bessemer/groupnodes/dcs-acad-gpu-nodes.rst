@@ -13,7 +13,7 @@ share two GPU nodes in :ref:`Bessemer <bessemer>`.
 
    * - Academic
      - Slurm Account name
-   * - `Loic Barrault`_
+   * - `Carolina Scarton`_
      - ``dcs-acad1``
    * - `Chenghua Lin`_
      - ``dcs-acad2``
@@ -126,7 +126,7 @@ Resource limits per job:
    These jobs can be pre-empted by jobs submitted to the ``dcs-acad-pre`` and ``dcs-acad`` partitions.
 
 
-.. _Loic Barrault: https://www.sheffield.ac.uk/dcs/people/academic/loic-barrault
+.. _Carolina Scarton: https://www.sheffield.ac.uk/dcs/people/academic/carolina-scarton
 .. _Chenghua Lin: https://www.sheffield.ac.uk/dcs/people/academic/chenghua-lin
 .. _Aditya Gilra: https://www.sheffield.ac.uk/dcs/people/academic/aditya-gilra
 .. _Po Yang: https://www.sheffield.ac.uk/dcs/people/academic/po-yang

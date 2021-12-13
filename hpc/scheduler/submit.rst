@@ -193,7 +193,7 @@ Using  batch scheduler commands
 
 Here is an example SGE batch submission script that runs a fictitious program called ``foo``:
 
-   .. code-block:: bash
+.. code-block:: bash
 
     #!/bin/bash
     # Request 5 gigabytes of real memory (mem)
@@ -208,7 +208,7 @@ Here is an example SGE batch submission script that runs a fictitious program ca
 
 To use Slurm the equivalent batch submission script would be:
 
-   .. code-block:: bash
+.. code-block:: bash
 
     #!/bin/bash
     # Request 5 gigabytes of real memory (mem)
@@ -239,7 +239,7 @@ Here is a more complex example that requests more resources:
 
 Using **SGE:**
 
-   .. code-block:: bash
+.. code-block:: bash
 
     #!/bin/bash
     # Request 16 gigabytes of real memory (RAM) 4 cores *4G = 16
@@ -264,7 +264,7 @@ Using **SGE:**
 
 Using **Slurm:**
 
-   .. code-block:: bash
+.. code-block:: bash
 
     #!/bin/bash
     # Request 16 gigabytes of real memory (RAM) 4 cores *4G = 16

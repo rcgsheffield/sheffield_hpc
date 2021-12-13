@@ -25,8 +25,21 @@ VASP 5.4.4 can be activated using the module file::
 
 The VASP executables are ``vasp_std``, ``vasp_gam`` and ``vasp_ncl``.
 
-**Important note:** Only licensed users of VASP are entitled to use the code; refer to VASP's website for license details: https://www.vasp.at/registration_form/ . Access to VASP on ShARC is restricted to members of the unix group ``vasp``.
-To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use VASP.
+.. important::
+    Only licensed users of VASP are entitled to use the code; refer to VASP's website for license details: https://www.vasp.at/registration_form/ . Access to VASP on ShARC is restricted to members of the unix group ``vasp``.
+    To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use VASP.
+
+Pseudopotential files
+^^^^^^^^^^^^^^^^^^^^^
+
+VASP Pseudopotentials can be found in the ``$VASP_ROOT`` directory in versioned ``potpaw`` sub-directories after loading the module, e.g. :
+
+.. code-block:: console
+
+    $ module load apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1
+    $ ls $VASP_ROOT
+    potpaw_LDA  potpaw_PBE  vasp.5.4.4.pl2
+
 
 
 Batch jobs
@@ -49,6 +62,11 @@ The script requests 4 cores using the Open MPI parallel environment ``mpi`` with
 
 Installation notes
 ------------------
+
+Module files have been modified to include the VASP Pseudopotentials directory environment variables. Installations have also been modified and had 
+correctly versioned Pseudopotentials folders symlinked into their ``$VASP_ROOT`` directory from the main Pseudopotentials storage directory as indicated by ``$PSEUDOPOTENTIAL_DIR``.
+
+VASP Pseudopotential files downloaded from the VASP portal and/or license holders can provide future versions as these are provided under the same license as the program.
 
 VASP 5.4.4.pl2 was installed using the
 :download:`install_vasp.sh </sharc/software/install_scripts/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1/install_vasp.sh>` script;

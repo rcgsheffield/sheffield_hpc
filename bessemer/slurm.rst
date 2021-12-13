@@ -24,15 +24,15 @@ You can request an interactive node with multiple CPU cores by using the command
 
 .. code-block:: sh
 
-    srun -c="N" --pty bash -i
+    srun --cpus-per-task="N" --pty bash -i
 
 The parameter "N" represents the number of CPU cores upto 4 per interactive job. Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively. 
 
-You can request additional memory (parameter "nn" represents the amount of memory):
+You can request additional memory (parameter "NN" represents the amount of memory):
 
 .. code-block:: sh
 
-    srun --mem="NN"G --pty bash -i
+    srun --mem="NNG" --pty bash -i
 
 
 .. _slurm_job:
@@ -43,7 +43,7 @@ Submitting Non-Interactive Jobs
 Write a job-submission shell script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can submit your job, using a shell script. A general job-submission shell script contains the "bang-line" in the first row.
+You can submit your job, using a shell script. A general job-submission shell script contains the "shebang-line" in the first row.
 
 .. code-block:: sh
 
@@ -53,20 +53,20 @@ Next you may specify some additional options, such as memory,CPU or time limit.
 
 .. code-block:: sh
 
-    #SBATCH --"OPTION"="VALUE"
+    #SBATCH --OPTION="VALUE"
 
-Load the approipate modules if necessery.
+Load the appropriate modules if necessery.
 
 .. code-block:: sh
 
-    module use "PATH"
-    module use "MODULE NAME"
+    module use PATH
+    module load MODULE-NAME
 
 Finally, run your program by using the Slurm "srun" command.
 
 .. code-block:: sh
 
-    srun "PROGRAM"
+    srun PROGRAM
 
 The next example script requests 40 CPU cores in total and 64Gb memory. Notifications will be sent to an email address.
 
@@ -75,14 +75,14 @@ The next example script requests 40 CPU cores in total and 64Gb memory. Notifica
     #!/bin/bash
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=40
-    #SBATCH --mem=64000
+    #SBATCH --mem=64G
     #SBATCH --mail-user=username@sheffield.ac.uk
 
     module load OpenMPI/3.1.3-GCC-8.2.0-2.31.1
 
     srun --export=ALL program
 
-Maximum 40 cores can be requested per node in the general use queues.
+A maximum of 40 cores can be requested per node in the general use queues.
 
 
 Job Submission
@@ -104,7 +104,7 @@ Check your output file when the job is finished.
 
 .. code-block:: sh
 
-    cat "JOB_NAME"-1226.out
+    cat JOB_NAME-1226.out
 
 Additional options for job submission
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -126,7 +126,7 @@ Memory allocation:
 
 .. code-block:: sh
 
-    #SBATCH --mem=16000
+    #SBATCH --mem=16G
 
 Specify the output file name:
 

@@ -61,7 +61,7 @@ The following is an example batch submission script, ``my_job.sh``, to run the e
     #SBATCH --mem=8000
     #SBATCH --output=output_abaqus_smp_4
     #SBATCH --time=00:30:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load ABAQUS/2018
     unset SLURM_GTIDS
@@ -84,7 +84,7 @@ The script below is an example of a batch submission script for a single core jo
     #SBATCH --mem=8000
     #SBATCH --output=output_abaqus_subroutine
     #SBATCH --time=00:30:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load ABAQUS/2018
     module load ifort/2019.1.144-GCC-8.2.0-2.31.1
@@ -162,7 +162,7 @@ The following is an example batch submission script, ``my_job.sh``, to run the e
     #SBATCH --mem=8000
     #SBATCH --output=output_abaqus_smp_4
     #SBATCH --time=00:30:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module use /usr/local/modulefiles/live/apps
     module load ABAQUS/6.14.2/binary

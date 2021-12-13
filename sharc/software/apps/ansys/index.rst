@@ -16,7 +16,7 @@ The ANSYS suite of programs can be used to numerically simulate a large variety 
 
 .. include:: ../ansys/module-load-list.rst
 
-The ANSYS Workbench GUI executable is ``ansyswb``. ``ansyswb`` can be launched during an interactive session with X Window support (e.g. an interactive ``qrshx`` session).
+The ANSYS Workbench GUI executable is ``runwb2``. ``runwb2`` can be launched during an interactive session with X Window support (e.g. an interactive ``qrshx`` session).
 
 
 ------------------
@@ -33,6 +33,7 @@ As the ANSYS suite contains a large number of packages, links to each dedicated 
 
   fluent
   mechanical
+  ls-dyna
 
 ------------------
 

@@ -5,7 +5,7 @@
 #SBATCH --job-name=name_OpenFOAM_smp_4
 #SBATCH --output=output_OpenFOAM_smp_4
 #SBATCH --time=01:00:00
-#SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+#SBATCH --mail-user=a.person@sheffield.ac.uk
 #SBATCH --mail-type=ALL
 
 rm -r /fastdata/$USER/tests/openfoam/run/

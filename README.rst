@@ -16,11 +16,8 @@ Rendered Documentation
 each push to the ``master`` branch causes the `ReadTheDocs <https://readthedocs.org/>`__ service to
 build and serve the documentation.
 
-The ReadTheDocs build configuration is stored in the ``.readthedocs.yaml`` file with the Python version pinned to 3.7 and two Pip 
-requirements files. The first requirements file is ``setuptoolsrequirements.txt``  and is set in order to first pin setuptools to 
-version 57.5.0 to `retain support for the current theme <https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/216>`__.
-
-The second requirements file ``requirements.txt`` then installs the remaining dependencies.
+The ReadTheDocs build configuration is stored in the ``.readthedocs.yaml`` file with the Python version pinned to 3.7 and the Pip 
+requirements file. The requirements file is ``requirements.txt``.
 
 Please note that the use of the ``.readthedocs.yaml`` file will also override certain web UI settings set in the ReadTheDocs administrative panel.
 

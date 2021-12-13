@@ -35,6 +35,7 @@ As the ANSYS suite contains a large number of packages, links to each dedicated 
 
   fluent
   mechanical
+  ls-dyna
 
 --------------------
 

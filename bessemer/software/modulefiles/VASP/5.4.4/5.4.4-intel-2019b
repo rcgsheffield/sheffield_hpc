@@ -1,4 +1,6 @@
 #%Module
+source /usr/local/etc/module_logging.tcl
+
 proc ModulesHelp { } {
     puts stderr {
 
@@ -32,6 +34,8 @@ if { ![ is-loaded intel/2019b ] } {
 prepend-path	CMAKE_PREFIX_PATH		$root
 prepend-path	PATH		$root/bin
 setenv	EBROOTVASP		"$root"
+setenv	VASP_ROOT		"$root"
+setenv  PSEUDOPOTENTIAL_DIR	"/usr/local/packages/live/noeb/VASP_POTCAR"
 setenv	EBVERSIONVASP		"5.4.4"
 setenv	EBDEVELVASP		"$root/easybuild/VASP-5.4.4-intel-2019b-easybuild-devel"
 

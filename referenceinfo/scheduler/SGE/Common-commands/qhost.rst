@@ -2,16 +2,19 @@
 
 qhost
 =====
-`qhost` is a scheduler command that show's the status of Sun Grid Engine hosts.
+
+``qhost`` is a scheduler command that show's the status of Sun Grid Engine hosts.
 
 Documentation
 -------------
+
 Documentation is available on the system using the command::
 
     man qhost
 
-Examples
---------
+Usage
+-----
+
 Get an overview of the nodes and CPUS on ShARC: ::
 
     qhost

@@ -2,7 +2,8 @@
 
 qstat
 =====
-`qstat` is a scheduler command that displays the status of the queues.
+
+``qstat`` is a scheduler command that displays the status of the queues.
 
 Examples
 --------
@@ -16,7 +17,7 @@ Display all jobs queued by the username foo1bar ::
 
 Display all jobs in the openmp parallel environment ::
 
-    stat -pe openmp
+    qstat -pe openmp
 
 Display all jobs in the queue named foobar ::
 

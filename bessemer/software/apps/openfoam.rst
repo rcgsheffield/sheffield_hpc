@@ -45,9 +45,9 @@ After connecting to Bessemer (see :ref:`ssh`), you can start an `interactive gra
     cd /fastdata/$USER/tests/openfoam/run
     cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
     chmod 700 -R pitzDaily && cd pitzDaily
-    srun --export=ALL blockMesh
-    srun --export=ALL simpleFoam
-    srun --export=ALL paraFoam #To view the output.
+    mpirun blockMesh
+    mpirun simpleFoam
+    mpirun paraFoam #To view the output.
 
 ------------
 
@@ -69,7 +69,7 @@ The following is an example batch job running the pitzDaily example model:
     #SBATCH --job-name=name_OpenFOAM_smp_4
     #SBATCH --output=output_OpenFOAM_smp_4
     #SBATCH --time=01:00:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     rm -r /fastdata/$USER/tests/openfoam/run/
     mkdir -p /fastdata/$USER/tests/openfoam/run

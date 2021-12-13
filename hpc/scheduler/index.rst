@@ -25,11 +25,5 @@ See our guide to the :ref:`drmaa` API.
 Reference information
 ---------------------
 
-Commands that allow you to interact with the scheduler:
-
-* :ref:`qhost` - Show's the status of Sun Grid Engine hosts.
-* :ref:`qrsh` - Requests an interactive session on a worker node. No support for graphical applications.
-* :ref:`qrshx` - Requests an interactive session on a worker node. Supports graphical applications. Superior to :ref:`qsh` in most cases.
-* :ref:`qsh` - Requests an interactive session on a worker node. Supports graphical applications.
-* :ref:`qstat` - Displays the status of jobs and queues.
-* :ref:`qsub` - Submits a batch job to the system.
+Quick reference information for the SGE scheduler (ShARC) and Bessemer scheduler (SLURM) can be 
+found in the :ref:`scheduler-reference-info` section.

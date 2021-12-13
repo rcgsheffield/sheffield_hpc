@@ -33,6 +33,11 @@ modules, it is automatically updated, and not recommended for general use, just
 as a base for your own environments. There is also a ``python2`` environment,
 which is the same but with a Python 2 installation.
 
+.. warning::
+
+    Due to Anaconda being installed in a module you must use the ``source`` command instead of ``conda`` 
+    when activating or deactivating environments!
+
 Quickly Loading Anaconda Environments
 -------------------------------------
 
@@ -126,16 +131,21 @@ First, tell conda where to look for a config file: ::
 
 Next, create a ``.condarc-sharc.yml`` file in your home directory, 
 copy in the contents of your ``.condarc`` file if you have one,
-then ensure that the first line beneath ``envs_dirs:`` in that file is: ::
+then add an ``envs_dirs:`` and ``pkgs_dirs:`` entries below as:
 
-      - /data/te1st/.conda-sharc
+::
 
-i.e.: ::
+    pkgs_dirs:
+    - /data/username/anaconda/.pkg-cache/
 
     envs_dirs:
-      - /data/te1st/.conda-sharc
+    - /data/username/anaconda/.envs
 
-making sure to replace ``te1st`` with your username.
+
+Make sure to replace ``username`` with your own username and 
+then create these folders by running the following command: ::
+
+    mkdir -p /data/$USER/anaconda/.pkg-cache/  /data/$USER/anaconda/.envs
 
 
 Installing Packages Inside an Environment

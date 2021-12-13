@@ -4,7 +4,9 @@
 Scheduler Reference Info
 **********************************
 
-This sub-tree contains reference information that is pulled into other pages.
+This page provides links to reference information on the schedulers' commands, parallel environments 
+and environment variables as well as general comparison pages for the resource limits on the 
+ShARC and Bessemer clusters.
 
 
 .. toctree::
@@ -12,6 +14,7 @@ This sub-tree contains reference information that is pulled into other pages.
   :glob:
 
   SGE/index
+  SLURM/index
   TimeAllocationLimits
   MemoryAllocationLimits
   CpuAllocationLimits

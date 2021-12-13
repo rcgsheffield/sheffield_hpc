@@ -117,40 +117,6 @@ useful during installlation (e.g. setting directories in which to install) and t
   libraries are located. Adding a directory to this list makes any of the libraries in 
   that directory available to programs.
 
----------
-
-.. include:: ../referenceinfo/linux-shell/the-bashrc-file.rst
-
----------
-
-.. _software_installs_modules:
-
-Using modules to make software executables available
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-‘Environment Modules’ are the mechanism by which much of the software is made available to the users 
-of the Bessemer and ShARC clusters. You are able to load and unload modules which make specific 
-configurations of software available in a structured way.
-
-They do this by adding and removing software to the the ``PATH`` and ``LD_LIBRARY_PATH`` environment 
-variables as well as set any additional required environment varibles, configuration or license files using 
-the ``module load`` or  ``module unload`` functionality.
-
-Module files are written in TCL, please have a look at some of our modules in ``/usr/local/modulefiles/`` 
-to get an idea of what these should look like.
-
-.. hint::
-    
-    If you wish to use the :ref:`modules system <software_installs_modules>` with personal module files you 
-    can add a directory called modules to your home directory ``mkdir $HOME/modules`` and populate this 
-    with your own module files.
-
-    To make these available automatically you can then add the ``module use $HOME/modules`` command to 
-    your ``.bashrc`` file.
-
-Further detail on the environment modules system in use on the clusters can be found on the 
-:ref:`modules page <env_modules>`.
-
 .. raw:: html
 
     <hr class="hr-mid-section-separator">
@@ -223,7 +189,7 @@ Looking at the **Download** section, the binary package download URL can be seen
 
 http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
 
-This RPM can now be downloaded using the wget command on the cluster:
+This RPM can now be downloaded using the ``wget`` command on the cluster:
 
 .. code-block:: console
     :emphasize-lines: 1
@@ -254,7 +220,7 @@ package has been signed as trusted. We can do this with the ``rpm --checksig`` c
 
 .. hint::
 
-    The `pkgs.org <https://pkgs.org/>`_ website_will also show the dependencies of a package in the 
+    The `pkgs.org <https://pkgs.org/>`_ website will also show the dependencies of a package in the 
     **Requires** section. This can be very useful for resolving package / library dependencies.
 
 ---------
@@ -267,7 +233,7 @@ binaries that are not supplied as part of the normal package repositories for th
 will typically be supplied by them with a RPM file (``package.rpm``) or a compressed tarball (``package.tar.gz``)
 from their website, via email or similar.
 
-You may be able to use the wget command to download this directly to the cluster or may have to 
+You may be able to use the ``wget`` command to download this directly to the cluster or may have to 
 transfer this manually using SCP or similar. Once downloaded you should verify the software download's 
 integrity and validity.
 
@@ -295,12 +261,8 @@ Making your binaries available in the shell
 
 At this stage you can typically move the unpackaged binaries as desired and any executables (in ``./bin``) 
 or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH`` 
-using one of the two methodologies below.
-
-.. include:: ../referenceinfo/linux-shell/making-software-available-with-bashrc.rst
-
-.. include:: ../referenceinfo/environment-modules/creating-custom-modulefiles.rst
-
+using one of the two methodologies mentioned in the 
+:ref:`Making installed software available to execute <make_installed_software_available>` section.
 
 .. raw:: html
 
@@ -334,16 +296,21 @@ available.
 For example, the GNU make project download area can be found at https://ftp.gnu.org/gnu/make/ or on one of 
 the numerous mirror websites.
 
-You may be able to use the wget command to download this directly to the cluster or may have to 
+You may be able to use the ``wget`` command to download this directly to the cluster or may have to 
 transfer this manually using SCP or similar. Once downloaded you should verify the software download's 
 integrity and validity.
 
+---------
+
 .. include:: ../referenceinfo/linux-shell/verifying-software-package-downloads.rst
+
+---------
 
 .. include:: ../referenceinfo/linux-shell/unpacking-a-tarball.rst
 
 With the files now decompressed and available on the local file system you are ready to compile your 
 software.
+
 ---------
 
 Downloading source code with Git 
@@ -452,12 +419,52 @@ Making your compiled binaries available in the shell
 
 At this stage you can typically move the unpackaged binaries as desired and any executables (in ``./bin``) 
 or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH`` 
-using one of the two methodologies below.
+using one of the two methodologies mentioned in the :ref:`following <make_installed_software_available>` section.
+
+
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator">
+
+.. _make_installed_software_available:
+
+Making installed software available to execute
+-----------------------------------------------
+
+Software on the HPC cluster can be made available using one of the two methods below: 
+using your ``.bashrc`` file or making a custom module file (preferred) to enable multiple 
+versions of the same software without conflicts.
+
+.. _software_installs_bashrc:
+
+.. include:: ../referenceinfo/linux-shell/the-bashrc-file.rst
 
 .. include:: ../referenceinfo/linux-shell/making-software-available-with-bashrc.rst
 
-.. include:: ../referenceinfo/environment-modules/creating-custom-modulefiles.rst
+------------
 
+.. _software_installs_modules:
+
+Environment 'Modules' and their purpose
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+‘Environment Modules’ are the mechanism by which much of the software is made available to the users 
+of the Bessemer and ShARC clusters. You are able to load and unload modules which make specific 
+configurations of software available in a structured way which can avoid conflicts between different 
+versions of the same software.
+
+They do this by adding and removing software to the the ``PATH`` and ``LD_LIBRARY_PATH`` environment 
+variables as well as set any additional required environment varibles, configuration or license files using 
+the ``module load`` or  ``module unload`` functionality.
+
+Module files are written in TCL, please have a look at some of our modules in ``/usr/local/modulefiles/`` 
+to get an idea of what these should look like.
+
+Further detail on the environment modules system in use on the clusters can be found on the 
+:ref:`modules page <env_modules>`.
+
+.. include:: ../referenceinfo/environment-modules/creating-custom-modulefiles.rst
 
 .. raw:: html
 

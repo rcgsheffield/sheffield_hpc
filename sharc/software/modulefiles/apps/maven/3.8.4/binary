@@ -1,0 +1,32 @@
+#%Module10.2#####################################################################
+##
+## Maven version 3.8.4 module file
+##
+#  Updated by James Moore 23/11/2021
+#
+#  
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "   Makes Maven version 3.8.4 available for use"
+}
+
+module-whatis   "Makes Maven version 3.8.4 available"
+
+conflict maven
+
+module load apps/java/jdk1.8.0_102/binary
+
+set		MAVEN_VER	3.8.4
+set		MAVEN_DIR	/usr/local/packages/apps/maven/3.8.4/binary
+setenv		MAVEN_ROOT	$MAVEN_DIR
+
+prepend-path	PATH		$MAVEN_DIR/bin
+prepend-path	LD_LIBRARY_PATH	$MAVEN_DIR/lib
+prepend-path	LIBRARY_PATH	$MAVEN_DIR/lib

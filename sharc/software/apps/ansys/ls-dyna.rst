@@ -80,7 +80,8 @@ Batch Submission Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. hint::
 
-    * Use of the ``#$ -V`` SGE option will instruct SGE to import your current terminal environment variables to be imported - **CAUTION** - this may not be desirable.
+    * Use of the ``#$ -V`` SGE option will instruct SGE to import your current terminal environment variables to be imported - **CAUTION** - 
+      this may not be desirable and can break job submission if jobs are submitted from an existing interactive job.
     * Use of the ``mpi`` parallel environment to run MPI parallel jobs for Ansys is required if using more than 16 cores on ShARC.
     * The argument ``$NSLOTS`` is a Sun of Grid Engine variable which will return the requested number of cores.
 
@@ -90,7 +91,6 @@ Sample MPI LS-DYNA Batch Job Script
 .. code-block:: bash
 
     #!/bin/bash
-    #$ -V
     #$ -cwd
     #$ -M a.person@sheffield.ac.uk
     #$ -m abe
@@ -119,7 +119,6 @@ Sample MPI LS-DYNA Batch Job Script
 
     for host in `cat $PE_HOSTFILE | awk '{print $1}'`; do
         num=`grep $host $PE_HOSTFILE | awk '{print $2}'`
-    ##  for i in {1..$num}; do
         for i in `seq 1 $num`; do
         echo $host >> $MACHINEFILE
         done
@@ -149,7 +148,6 @@ Sample SMP LS-DYNA Batch Job Script
 .. code-block:: bash
 
     #!/bin/bash
-    #$ -V
     #$ -cwd
     #$ -M a.person@sheffield.ac.uk
     #$ -m abe

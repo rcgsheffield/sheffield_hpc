@@ -50,17 +50,18 @@ The script requests 4 cores using the MPI parallel environment with a runtime of
 
 .. hint::
 
-    * Use of the ``#$ -V`` SGE option will instruct SGE to import your current terminal environment variables to be imported - **CAUTION** - this may not be desirable.
+    * The ``#$ -V`` SGE option **can** be used to instruct SGE to import your current terminal environment variables. **CAUTION** - 
+      this may not be desirable and can break job submission if jobs are submitted from an existing interactive job.
     * Use of the ``mpi`` parallel environment to run MPI parallel jobs for Ansys is required if using more than 16 cores on ShARC.
     * The argument ``$NSLOTS`` is a Sun of Grid Engine variable which will return the requested number of cores.
     * The argument ``-mpi=INTELMPI`` instructs MAPDL to use the in-built Intel MPI communications - 
       important for using the high performance :ref:`Omnipath networking <sharc-network-specs>` between nodes.
+    * The exported ``I_MPI_FABRICS`` and ``I_MPI_FALLBACK`` variables instruct MAPDL to use the high performance :ref:`Omnipath networking <sharc-network-specs>`.
 
 
 .. code-block:: bash
 
     #!/bin/bash
-    #$ -V
     #$ -cwd
     #$ -N JobName
     #$ -M a.person@sheffield.ac.uk
@@ -69,7 +70,26 @@ The script requests 4 cores using the MPI parallel environment with a runtime of
     #$ -l rmem=2G
     #$ -pe mpi 4
     module load apps/ansys/20.2/binary
-    mapdl -i CrankSlot_Flexible.inp -b -np $NSLOTS -mpi=INTELMPI
+
+    MACHINEFILE="machinefile.$JOB_ID"
+
+    for host in `cat $PE_HOSTFILE | awk '{print $1}'`; do
+        num=`grep $host $PE_HOSTFILE | awk '{print $2}'`
+        for i in `seq 1 $num`; do
+        echo $host >> $MACHINEFILE
+        done
+    done
+
+    MACHINELIST=""
+    for host in $(cat $MACHINEFILE)
+    do
+        MACHINELIST+="${host}:1:"
+    done
+
+    export I_MPI_FABRICS=shm:ofi    #Set Omnipath. 
+    export I_MPI_FALLBACK=no        #You may wish to allow fallback to ethernet.
+
+    mapdl -b -np $NSLOTS -machines $MACHINELIST -mpi=INTELMPI -i CrankSlot_Flexible.inp
 
 -----------------------
 
@@ -82,7 +102,6 @@ The script requests 4 cores using the SMP (``single node shared memory``) parall
 .. code-block:: bash
 
     #!/bin/bash
-    #$ -V
     #$ -cwd
     #$ -N JobName
     #$ -M a.person@sheffield.ac.uk

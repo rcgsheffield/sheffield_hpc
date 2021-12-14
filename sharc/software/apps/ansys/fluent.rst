@@ -74,7 +74,8 @@ The script requests 8 cores using the MPI parallel environment ``mpi-rsh`` with 
 
 .. hint::
 
-    * Use of the ``#$ -V`` SGE option will instruct SGE to import your current terminal environment variables to be imported - **CAUTION** - this may not be desirable.
+    * The ``#$ -V`` SGE option **can** be used to instruct SGE to import your current terminal environment variables. **CAUTION** - 
+      this may not be desirable and can break job submission if jobs are submitted from an existing interactive job.
     * Use of the ``mpi-rsh`` parallel environment to run MPI parallel jobs for Ansys is required if using more than 16 cores on ShARC.
     * The ``2ddp`` argument is used to specify a 2D double precision simulation. Valid values include: ``2d``, ``2ddp``, ``3d`` and ``3ddp``
     * The argument ``$NSLOTS`` is a Sun of Grid Engine variable which will return the requested number of cores.
@@ -92,7 +93,6 @@ The script requests 8 cores using the MPI parallel environment ``mpi-rsh`` with 
 .. code-block:: bash
 
     #!/bin/bash
-    #$ -V
     #$ -cwd
     #$ -M a.person@sheffield.ac.uk
     #$ -m abe
@@ -123,7 +123,6 @@ The following is an example batch submission script, ``cfd_job.sh``, to run the 
 .. code-block:: bash
 
     #!/bin/bash
-    #$ -V
     #$ -cwd
     #$ -M a.person@sheffield.ac.uk
     #$ -m abe

@@ -173,27 +173,8 @@ At this prompt type:
 Like this: 
 
 .. code-block:: console
-<<<<<<< HEAD
 
     [te1st@sharc-login1 ~]$ qrshx
-
-
-Which will start an interactive session, which supports graphical applications resembling the below: 
-
-.. code-block:: console
-
-    [te1st@sharc-node001 ~]$ 
-
-For the Bessemer cluster
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: console
-
-    [te1st@bessemer-login1 ~]$
-=======
-
-    [te1st@sharc-login1 ~]$ qrshx
->>>>>>> master
 
 At this prompt type: 
 
@@ -214,8 +195,6 @@ Which will start an interactive session, which supports graphical applications r
 
     [te1st@bessemer-node001 ~]$ 
 
-<<<<<<< HEAD
-=======
 Which will start an interactive session, which supports graphical applications resembling the below: 
 
 .. code-block:: console
@@ -248,7 +227,6 @@ Which will start an interactive session, which supports graphical applications r
 
     [te1st@bessemer-node001 ~]$ 
 
->>>>>>> master
 
 
 .. note::

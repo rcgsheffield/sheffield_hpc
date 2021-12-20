@@ -176,24 +176,6 @@ Like this:
 
     [te1st@sharc-login1 ~]$ qrshx
 
-At this prompt type: 
-
-.. code-block:: console
-
-    srun --pty bash -i
-
-Like this: 
-
-.. code-block:: console
-
-    [te1st@bessemer-login1 ~]$ srun --pty bash -i
-
-
-Which will start an interactive session, which supports graphical applications resembling the below: 
-
-.. code-block:: console
-
-    [te1st@bessemer-node001 ~]$ 
 
 Which will start an interactive session, which supports graphical applications resembling the below: 
 

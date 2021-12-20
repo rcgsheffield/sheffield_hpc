@@ -17,7 +17,7 @@ Interactive Usage
 -----------------
 
 After connecting to Bessemer (see :ref:`ssh`),
-start an :ref:`interactive session <submit-interactive>`.
+start an :ref:`interactive session <submit_interactive_bessemer>`.
 You can then load a specific version of R using: ::
         
    module load R/3.6.2-foss-2019b
@@ -160,7 +160,7 @@ This makes use of R's ``qbeta`` function.
 You can compile and run this on a worker node as follows.
 
 Start a session on a worker node with ``qrshx`` and load a version of R: ::
-start an :ref:`interactive session <submit-interactive>` on a worker node
+start an :ref:`interactive session <submit_interactive_bessemer>` on a worker node
 and load a version of R: ::
 
    module load R/3.6.2-foss-2019b

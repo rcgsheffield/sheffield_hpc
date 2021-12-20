@@ -113,7 +113,7 @@ The script requests 4 cores using the SMP (``single node shared memory``) parall
     mapdl -b -np $NSLOTS -smp -i CrankSlot_Flexible.inp
 
 
-Further details about how to construct batch jobs can be found on the :ref:`batch submission guide <submit-batch>` page
+Further details about how to construct batch jobs can be found on the :ref:`batch submission guide <submit_batch_sharc>` page
 
 The job is submitted to the queue by typing:
 

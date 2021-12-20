@@ -19,7 +19,7 @@ you can often enable OpenMP support at compile-time and/or run-time using compil
 Batch OpenMP jobs
 -----------------
 
-To submit a SMP job to our system, we we need to request a particular **Parallel Environment** in our :ref:`batch job submission scripts <submit-queue>`.
+To submit a SMP job to our system, we we need to request a particular **Parallel Environment** in our :ref:`batch job submission scripts <submit_batch_sharc>`.
 On ShARC your script needs to include a line like: ::
 
    #$ -pe smp N

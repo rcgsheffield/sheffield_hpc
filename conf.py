@@ -64,7 +64,8 @@ exclude_patterns = [
     'README.rst',
     'global.rst',
     '.tox',
-    'mypy_cache'
+    'mypy_cache',
+    'referenceinfo/imports'
 ]
 
 # The name of the Pygments (syntax highlighting) style to use.

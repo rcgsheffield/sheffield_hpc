@@ -13,7 +13,7 @@ Interactive usage
 TBB can be used with and without :ref:`other Parallel Studio packages
 <sharc-intel-parallel-studio>`.
 
-To make use of it you first need to start an :ref:`interactive session that has access to multiple cores <submit-queue>`.
+To make use of it you first need to start an :ref:`interactive session that has access to multiple cores <submit_batch_sharc>`.
 Here we request six cores from the clusters' scheduler: ::
 
         $ qrsh -pe smp 6
@@ -56,7 +56,7 @@ then running ``make``: ::
         Resulting in a speedup of 4.77625
 
 Many of the sample directories contain HTML documentation.  
-To read this you need to start an :ref:`interactive graphical session <submit-queue>` (using ``qrshx`` or ``qrshx``) then run: ::
+To read this you need to start an :ref:`interactive graphical session <submit_batch_sharc>` (using ``qrshx`` or ``qrshx``) then run: ::
 
         $ firefox ~/tbb_samples/index.html
  

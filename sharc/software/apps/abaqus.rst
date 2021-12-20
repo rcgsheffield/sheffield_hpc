@@ -7,7 +7,7 @@ Abaqus
    :Dependencies: Module loaded for Intel compiler 15.0.7 (and Foxit for Abaqus version 6.14-2). User subroutines need Intel compiler 2011 or above, GCC 4.1.2 or above.
    :URL: http://www.3ds.com/products-services/simulia/products/abaqus/
    :Documentation: https://help.3ds.com/ (note: register for an account to access.)
-   :Local URL: https://www.sheffield.ac.uk/it-services/research/software/abaqus
+   :Local URL: https://students.sheffield.ac.uk/it-services/research/software#a
 
 
 Abaqus is a software suite for Finite Element Analysis (FEA) developed by Dassault Systèmes.

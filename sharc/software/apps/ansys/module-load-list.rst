@@ -2,8 +2,8 @@
 Module loading
 -----------------
 
-After connecting to ShARC (see :ref:`ssh`),  you can start an :ref:`interactive graphical session <submit-interactive>`
-or :ref:`submit a batch job <submit-batch>` using ANSYS programs by activating them and making them available with one of the module load commands below: ::
+After connecting to ShARC (see :ref:`ssh`),  you can start an :ref:`interactive graphical session <submit_interactive_sharc>`
+or :ref:`submit a batch job <submit_batch_sharc>` using ANSYS programs by activating them and making them available with one of the module load commands below: ::
 
 
   module load apps/ansys/15.0

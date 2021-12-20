@@ -14,7 +14,7 @@ Usage
 -----
 
 You need to first request one or more GPUs within an
-:ref:`interactive session or batch job on a worker node <submit-queue>`.
+:ref:`interactive session or batch job on a worker node <submit_interactive_bessemer>`.
 
 To request say three unspecified public GPUs for a batch job
 you would include *all* the following in the header of your submission script: ::

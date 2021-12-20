@@ -1,0 +1,24 @@
+
+Display all jobs queued on the system 
+
+.. code-block:: console
+
+    $ qstat
+
+Display all jobs queued by the username foo1bar 
+
+.. code-block:: console
+
+    $ qstat -u foo1bar
+
+Display all jobs in the openmp parallel environment 
+
+.. code-block:: console
+
+    $ qstat -pe openmp
+
+Display all jobs in the queue named foobar 
+
+.. code-block:: console
+
+    $ qstat -q foobar.q

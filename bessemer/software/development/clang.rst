@@ -10,7 +10,7 @@ Usage
 -----
 
 It is possible to switch versions of the Clang compiler suite using modules (if more than one version is installed).
-After connecting to Bessemer, :ref:`start an interactive sessson <submit-interactive>`
+After connecting to Bessemer, :ref:`start an interactive sessson <submit_interactive_bessemer>`
 then load Clang using: ::
 
    module load Clang/10.0.0-GCCcore-8.3.0

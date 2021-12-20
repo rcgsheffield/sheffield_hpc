@@ -9,26 +9,16 @@ the SGE job accounting file / SGE accounting database.
 Documentation
 -------------
 
-Documentation is available on the system using the command::
+Documentation is available on the system using the command
 
-    man qacct
+.. code-block:: console
+
+    $ man qacct
 
 Usage
 -----
 
-The ``qacct`` command can be used to display status information about a user's historical 
-jobs.
-
-Running the ``qacct``  command alone will provide a summary of used resources from the current month 
-for the user running the command.
-
-The command can be used as follows with the job's ID to get job specific info: ::
-
-    qacct -j job-id
-
-Or to view information about all of a specific user's jobs: ::
-
-    qacct -j -u $USER
+.. include:: ../../../../referenceinfo/imports/scheduler/SGE/common-commands/qacct_usage_import.rst
 
 Important metrics listed for your jobs are detailed in the table below: 
 

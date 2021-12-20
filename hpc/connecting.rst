@@ -47,9 +47,21 @@ including *MobaXTerm*.
 
 * Where you are connecting from:
 
-  * on campus;
-  * off campus *after* `establishing a VPN connection <https://www.sheffield.ac.uk/it-services/vpn>`_;
-  * off campus without a VPN connection.
+  * on campus using wired ethernet;
+  * on campus using Eduroam *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
+  * off campus *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
+  * off campus without a VPN connection using the HPC SSH gateway.
+
+.. warning::
+
+    The `University Connect for China (UCC) <https://www.sheffield.ac.uk/it-services/university-connect-china>`_ is not the same service as the SSL VPN service and will not grant access to the HPC clusters.
+    Users of the UCC must disconnect the UCC and connect to the SSL VPN in order to connect to the HPC clusters.
+
+
+.. warning::
+
+    Eduroam no longer grants direct access to the clusters. If using Eduroam, you must keep the  `VPN <https://www.sheffield.ac.uk/it-services/vpn>`_ 
+    connected at all times while using the clusters.
 
 * Whether `Multifactor Authentication (MFA) <https://sites.google.com/sheffield.ac.uk/mfa/home>`__  has been enabled on your University account.
 
@@ -61,11 +73,6 @@ including *MobaXTerm*.
   In addition, if you do not have MFA enabled on your account then you will not be able to login from off campus without using the VPN.
 
 * Whether you want to use password-based authentication or 'public-key'-based authentication.
-
-.. warning::
-
-    The `University Connect for China (UCC) <https://www.sheffield.ac.uk/it-services/university-connect-china>`_ is not the same service as the SSL VPN service and will not grant access to the HPC clusters.
-    Users of the UCC must disconnect the UCC and connect to the SSL VPN in order to connect to the HPC clusters.
 
 **Authentication requirements per cluster**:
 
@@ -166,10 +173,49 @@ At this prompt type:
 Like this: 
 
 .. code-block:: console
+<<<<<<< HEAD
 
     [te1st@sharc-login1 ~]$ qrshx
 
 
+Which will start an interactive session, which supports graphical applications resembling the below: 
+
+.. code-block:: console
+
+    [te1st@sharc-node001 ~]$ 
+
+For the Bessemer cluster
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$
+=======
+
+    [te1st@sharc-login1 ~]$ qrshx
+>>>>>>> master
+
+At this prompt type: 
+
+.. code-block:: console
+
+    srun --pty bash -i
+
+Like this: 
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$ srun --pty bash -i
+
+
+Which will start an interactive session, which supports graphical applications resembling the below: 
+
+.. code-block:: console
+
+    [te1st@bessemer-node001 ~]$ 
+
+<<<<<<< HEAD
+=======
 Which will start an interactive session, which supports graphical applications resembling the below: 
 
 .. code-block:: console
@@ -202,6 +248,7 @@ Which will start an interactive session, which supports graphical applications r
 
     [te1st@bessemer-node001 ~]$ 
 
+>>>>>>> master
 
 
 .. note::

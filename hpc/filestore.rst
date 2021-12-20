@@ -231,7 +231,7 @@ Here we try to explain why.
 
 Behind the scenes, the file server that provides this shared storage manages permissions using 
 Windows-style `ACLs <https://en.wikipedia.org/wiki/Access_control_list>`_ 
-(which can be set by area owners via the `Research Storage management web interface <https://sheffield.ac.uk/storage>`__.
+(which can be set by area owners via the `Research Storage management web interface <https://sheffield.ac.uk/storage/>`__.
 However, the filesystem is mounted on a Linux cluster using NFSv4 so the file server therefore requires 
 a means for mapping Windows-style permissions to Linux ones.  
 An effect of this is that the Linux `mode bits <https://en.wikipedia.org/wiki/Modes_(Unix)>`_ for files/directories under ``/shared`` on the HPC systems

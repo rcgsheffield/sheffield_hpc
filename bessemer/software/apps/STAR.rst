@@ -54,9 +54,9 @@ generate a genome index.
     #SBATCH --comment=STAR_smp_test
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=4
-    #SBATCH --mem=32000
+    #SBATCH --mem=24000
     #SBATCH --output=output_STAR_smp_4
-    #SBATCH --time=2:00:00
+    #SBATCH --time=00:30:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load STAR/2.7.6a-GCC-9.3.0

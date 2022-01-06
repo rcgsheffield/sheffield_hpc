@@ -301,6 +301,8 @@ By default the ``qacct`` command will only bring up summary info about the user'
 current accounting file (which rotates monthly). Further detail about the output metrics and how 
 to query jobs older than a month can be found on the dedicated :ref:`qacct` page.
 
+.. _job_debugging_sharc:
+
 Debugging failed Jobs
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -513,6 +515,8 @@ Jobs which have already finished can be investigated using the ``sacct`` command
 * :ref:`sacct` 
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/sacct_usage_import.rst
+
+.. _job_debugging_bessemer:
 
 Debugging failed Jobs
 ^^^^^^^^^^^^^^^^^^^^^

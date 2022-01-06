@@ -24,7 +24,8 @@ General HPC Problems
 If you are struggling to get something working on the HPC you should first have a look through our documentation on the technology (e.g. :ref:`parallel_MPI`), 
 software (e.g. :ref:`sharc-software` ) or cluster (e.g. :ref:`Bessemer`) you are using to see if we have already installed the software / addressed your problem.
 
-You should also make sure you look through our :ref:`troubleshooting` section as it covers many common mistakes.
+You should also make sure you look through our :ref:`troubleshooting` section as it covers many common mistakes. If you are having issues with your jobs failing 
+please have a look through the sections for :ref:`job debugging on ShARC <job_debugging_sharc>`  and :ref:`job debugging on Bessemer <job_debugging_bessemer>` clusters.
 
 .. note::
 

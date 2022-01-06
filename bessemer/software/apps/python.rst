@@ -34,6 +34,11 @@ The ``root`` conda environment (the default) provides Python 3 and no extra
 modules, it is automatically updated, and not recommended for general use, just
 as a base for your own environments.
 
+.. warning::
+
+    Due to Anaconda being installed in a module you must use the ``source`` command instead of ``conda`` 
+    when activating or deactivating environments!
+
 .. _python_conda_bessemer_create_env:
 
 Creating an Environment

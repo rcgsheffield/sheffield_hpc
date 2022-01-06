@@ -129,7 +129,7 @@ In the example, ``myprog`` is run ten times per task: ::
 Email notifications
 -------------------
 
-If you :ref:`enable email notifications <submit-queue>` in your batch job submission script then
+If you :ref:`enable email notifications <submit_batch_sharc>` in your batch job submission script then
 you will receive emails for *every* task in your Array Job.
 This helps you determine if any tasks in the Array Job failed but
 doesn't help you determine if the entire Array Job has finished running.

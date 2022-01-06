@@ -183,13 +183,13 @@ While a job is still running find out its job id by: ::
 
 And check its current usage of memory by: ::
 
-    sstat job_id --format='JobID,MaxVMSize'
+    sstat job_id --format='JobID,MaxVMSize,MaxRSS'
 
 If your job has already finished you can list the memory usage with sacct: ::
 
-    sacct --format='JobID,Elapsed,MaxVMSize'
+    sacct --format='JobID,Elapsed,MaxVMSize,MaxRSS'
 
-It is the **MaxVMSize** figure that you will need to use to determine the ``--mem=`` parameter for your next job.
+It is the **MaxVMSize** / **MaxRSS** figures that you will need to use to determine the ``--mem=`` parameter for your next job.
 
 .. _Filestore-limits:
 

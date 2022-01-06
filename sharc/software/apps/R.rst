@@ -13,7 +13,7 @@ R is a statistical computing language.
 
 Interactive Usage
 -----------------
-After connecting to ShARC, start an :ref:`interactive session <submit-interactive>`.
+After connecting to ShARC, start an :ref:`interactive session <submit_interactive_sharc>`.
 
 The latest version of R can be loaded with: ::
 
@@ -176,7 +176,7 @@ For example, consider this C program:
 This makes use of R's ``qbeta`` function. 
 You can compile and run this on a worker node as follows.
 
-After connecting to ShARC, start an :ref:`interactive session <submit-interactive>` on a worker node
+After connecting to ShARC, start an :ref:`interactive session <submit_interactive_sharc>` on a worker node
 and load a version of R: ::
 
    module load apps/R/3.5.1/gcc-4.8.5

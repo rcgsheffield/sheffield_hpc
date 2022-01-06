@@ -33,6 +33,11 @@ modules, it is automatically updated, and not recommended for general use, just
 as a base for your own environments. There is also a ``python2`` environment,
 which is the same but with a Python 2 installation.
 
+.. warning::
+
+    Due to Anaconda being installed in a module you must use the ``source`` command instead of ``conda`` 
+    when activating or deactivating environments!
+
 Quickly Loading Anaconda Environments
 -------------------------------------
 

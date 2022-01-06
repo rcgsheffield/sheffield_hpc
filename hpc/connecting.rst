@@ -47,9 +47,21 @@ including *MobaXTerm*.
 
 * Where you are connecting from:
 
-  * on campus;
-  * off campus *after* `establishing a VPN connection <https://www.sheffield.ac.uk/it-services/vpn>`_;
-  * off campus without a VPN connection.
+  * on campus using wired ethernet;
+  * on campus using Eduroam *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
+  * off campus *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
+  * off campus without a VPN connection using the HPC SSH gateway.
+
+.. warning::
+
+    The `University Connect for China (UCC) <https://www.sheffield.ac.uk/it-services/university-connect-china>`_ is not the same service as the SSL VPN service and will not grant access to the HPC clusters.
+    Users of the UCC must disconnect the UCC and connect to the SSL VPN in order to connect to the HPC clusters.
+
+
+.. warning::
+
+    Eduroam no longer grants direct access to the clusters. If using Eduroam, you must keep the  `VPN <https://www.sheffield.ac.uk/it-services/vpn>`_ 
+    connected at all times while using the clusters.
 
 * Whether `Multifactor Authentication (MFA) <https://sites.google.com/sheffield.ac.uk/mfa/home>`__  has been enabled on your University account.
 
@@ -61,11 +73,6 @@ including *MobaXTerm*.
   In addition, if you do not have MFA enabled on your account then you will not be able to login from off campus without using the VPN.
 
 * Whether you want to use password-based authentication or 'public-key'-based authentication.
-
-.. warning::
-
-    The `University Connect for China (UCC) <https://www.sheffield.ac.uk/it-services/university-connect-china>`_ is not the same service as the SSL VPN service and will not grant access to the HPC clusters.
-    Users of the UCC must disconnect the UCC and connect to the SSL VPN in order to connect to the HPC clusters.
 
 **Authentication requirements per cluster**:
 
@@ -148,35 +155,68 @@ Here you need to:
 After typing in this command hit enter to start connecting at which point you will be prompted 
 for your username, password and then with a Duo MFA prompt. 
 
-This should give you a prompt resembling the one below: ::
+This should give you a prompt resembling the one below: 
+
+For the ShARC cluster
+^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
 
     [te1st@sharc-login1 ~]$
 
-At this prompt type: ::
+At this prompt type: 
+
+.. code-block:: console
 
     qrshx
 
-Like this: ::
+Like this: 
 
-    [te1st@sharc-login2 ~]$ qrshx
+.. code-block:: console
+
+    [te1st@sharc-login1 ~]$ qrshx
 
 
-Which will start an interactive session, which supports graphical applications resembling the below: ::
+Which will start an interactive session, which supports graphical applications resembling the below: 
 
-    [te1st@sharc-node001 ~]$ qrshx
+.. code-block:: console
+
+    [te1st@sharc-node001 ~]$ 
+
+For the Bessemer cluster
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$
+
+At this prompt type: 
+
+.. code-block:: console
+
+    srun --pty bash -i
+
+Like this: 
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$ srun --pty bash -i
+
+
+Which will start an interactive session, which supports graphical applications resembling the below: 
+
+.. code-block:: console
+
+    [te1st@bessemer-node001 ~]$ 
+
+
 
 .. note::
 
     When you login to a cluster you reach one of two login nodes.
     You **should not** run applications on the login nodes.
-    Running ``qrshx`` gives you an interactive terminal
-    on one of the many worker nodes in the cluster.
-
-    If you only need terminal-based (command-line only) applications
-    you can run the ``qrsh`` command,
-    which will give you a shell on a worker node,
-    but without graphical application (X server) support.
-
+    Running the interactive job command gives you an interactive terminal
+    on one of the many worker nodes in the clusters.
 
 
 ---------
@@ -202,7 +242,7 @@ What Next?
 ----------
 
 Now you have connected to a cluster,
-you can look at how to submit jobs with :ref:`submit-queue` or
+you can look at how to submit jobs on the :ref:`job_submission_control` page or
 look at the software installed on
 :ref:`Bessemer <bessemer-software>` and
 :ref:`ShARC <sharc-software>`

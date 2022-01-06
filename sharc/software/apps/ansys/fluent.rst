@@ -136,7 +136,7 @@ The following is an example batch submission script, ``cfd_job.sh``, to run the 
     fluent 2ddp -i test.jou -gu -t $NSLOTS -driver null
 
 
-Further details about how to construct batch jobs can be found on the :ref:`batch submission guide <submit-batch>` page
+Further details about how to construct batch jobs can be found on the :ref:`batch submission guide <submit_batch_sharc>` page
 
 The job is submitted to the queue by typing:
 

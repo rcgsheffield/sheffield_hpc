@@ -7,20 +7,26 @@ qrshx
 
 Examples
 --------
-Request an interactive X-Windows session that provides the default amount of memory resources and launch the ``gedit`` text editor: ::
+Request an interactive X-Windows session that provides the default amount of memory resources and launch the ``gedit`` text editor: 
 
-    qrshx
-    gedit
+.. code-block:: console
 
-Request an interactive X-Windows session that provides 10 Gigabytes of real memory and launch the latest version of MATLAB: ::
+    [te1st@sharc-login1 ~]$ qrshx
+    [te1st@sharc-node001 ~]$ gedit
 
-    qrshx -l rmem=10G
-    module load apps/matlab
-    matlab
+Request an interactive X-Windows session that provides 10 Gigabytes of real memory and launch the latest version of MATLAB: 
 
-Request an interactive X-Windows session that provides 10 Gigabytes of real memory and 4 CPU cores: ::
+.. code-block:: console
 
-    qrshx -l rmem=10G -pe openmp 4
+    [te1st@sharc-login1 ~]$ qrshx -l rmem=10G
+    [te1st@sharc-node001 ~]$ module load apps/matlab
+    [te1st@sharc-node001 ~]$ matlab
+
+Request an interactive X-Windows session that provides 10 Gigabytes of real memory and 4 CPU cores: 
+
+.. code-block:: console
+
+    [te1st@sharc-login1 ~]$ qrshx -l rmem=10G -pe openmp 4
 
 Sysadmin notes
 --------------

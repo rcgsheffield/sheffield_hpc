@@ -1,0 +1,40 @@
+#%Module
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.
+
+
+More information
+================
+ - Homepage: https://github.com/alexdobin/STAR
+    }
+}
+
+module-whatis {Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.}
+module-whatis {Homepage: https://github.com/alexdobin/STAR}
+module-whatis {URL: https://github.com/alexdobin/STAR}
+
+set root /usr/local/packages/live/eb/STAR/2.7.6a-GCC-9.3.0
+
+conflict STAR
+
+if { ![ is-loaded GCC/9.3.0 ] } {
+    module load GCC/9.3.0
+}
+
+if { ![ is-loaded zlib/1.2.11-GCCcore-9.3.0 ] } {
+    module load zlib/1.2.11-GCCcore-9.3.0
+}
+
+prepend-path	CMAKE_PREFIX_PATH		$root
+prepend-path	PATH		$root/bin
+setenv	EBROOTSTAR		"$root"
+setenv	EBVERSIONSTAR		"2.7.6a"
+setenv	EBDEVELSTAR		"$root/easybuild/STAR-2.7.6a-GCC-9.3.0-easybuild-devel"
+
+# Built with EasyBuild version 4.4.0

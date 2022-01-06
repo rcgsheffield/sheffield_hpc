@@ -38,7 +38,7 @@ An example Sun Grid Engine submission script that makes use of a .mpl file calle
 
     maple < mycode.mpl
 
-For general information on how to submit batch jobs refer to :ref:`submit-batch`
+For general information on how to submit batch jobs refer to :ref:`submit_batch_sharc`.
 
 Tutorials
 ---------

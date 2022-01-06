@@ -10,4 +10,12 @@ in other pages.
   :maxdepth: 1
   :glob:
 
-  ./*
+  qacct
+  qdel
+  qhost
+  qrsh
+  qrshx
+  qsh
+  qstat
+  qsub
+

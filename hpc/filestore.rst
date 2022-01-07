@@ -348,21 +348,31 @@ Note that:
 How to check your quota usage
 -----------------------------
 
-To find out your storage quota usage for your :ref:`home directory <home_dir>`, :ref:`data directory <data_dir>` (if not on Bessemer) and particular :ref:`shared_dir`: ::
+To find out your storage quota usage for your :ref:`home directory <home_dir>` and :ref:`data directory <data_dir>` (if not on Bessemer) 
+you can use the ``quota`` command:
 
-    df -h somedirectoryname
+.. code-block:: console
 
-For example:
+       [foo11b@sharc-node004 binary]$ quota
 
-+--------------------------------------------------+------------------------------+
-| Storage area                                     | Command to check quota       |
-+==================================================+==============================+
-| :ref:`Home directory <home_dir>`                 | ``df -h /home/$USER``        |
-+--------------------------------------------------+------------------------------+
-| :ref:`Data directory <data_dir>`                 | ``df -h /data/$USER``        |
-+--------------------------------------------------+------------------------------+
-| A :ref:`Shared (project) directory <shared_dir>` | ``df -h /shared/myproject1`` |
-+--------------------------------------------------+------------------------------+
+       Size  Used Avail Use%  Mounted on
+       10G    10G    0G 100%  /home/foo11b
+       100G     0  100G   0%  /data/foo11b
+
+In the above, you can see that the quota was set to 10 gigabytes and all of this is in use which is likely to cause jobs to fail.
+
+To determine usage in a particular :ref:`shared_dir` you can use the ``df`` command like so: 
+
+.. code-block:: console
+
+    [foo11b@sharc-node004 binary]$ df -h /shared/myproject1
+    Filesystem                        Size  Used Avail Use% Mounted on
+    172.X.X.X:/myproject1/myproject1   10T  9.1T  985G  91% /shared/myproject1
+
+To assess what is using up your quota within a given directory, you can make use of the 
+:ref:`ncdu module on ShARC <ncdu_sharc>` or the 
+:ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
+interactive display of what files/folders are taking up storage in a given directory tree.
 
 .. _exceed_quota:
 

@@ -52,17 +52,22 @@ Each user of the system has a fixed amount of disk space available in their home
 If you exceed this quota, various problems can emerge such as an inability to launch applications and run jobs.
 To see if you have exceeded your disk space quota, run the ``quota`` command:
 
-.. code-block:: none
+.. code-block:: console
 
-       quota
+       [foo11b@sharc-node004 binary]$ quota
 
-       Size  Used Avail Use% Mounted on
-       10.1G  5.1G     0 100% /home/foo11b
-       100G     0   100G   0% /data/foo11b
+       Size  Used Avail Use%  Mounted on
+       10G    10G    0G 100%  /home/foo11b
+       100G     0  100G   0%  /data/foo11b
 
-In the above, you can see that the quota was set to 10.1 gigabytes and all of this is in use.
+In the above, you can see that the quota was set to 10 gigabytes and all of this is in use.
 Any jobs submitted by this user will likely result in an ``Eqw`` status.
 The recommended action is for the user to delete enough files to allow normal work to continue.
+
+To assess what is using up your quota within a given directory, you can make use of the 
+:ref:`ncdu module on ShARC <ncdu_sharc>` or the 
+:ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
+interactive display of what files/folders are taking up storage in a given directory tree.
 
 Sometimes, it is not possible to log in to the system because of a full quota,
 in which case you need to contact ``research-it@sheffield.ac.uk`` and ask to the unfrozen.

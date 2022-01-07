@@ -39,7 +39,7 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    other-uk-hpc-resources
    oldsystems
    help
-   troubleshooting
+   FAQs
    Latest Software / HPC changelog<https://rcgsheffield.github.io/hpc-changelog/>
    referenceinfo/index
    mfa-update-21-10-2021

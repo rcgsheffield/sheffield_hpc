@@ -32,12 +32,8 @@ What is source code?
 ^^^^^^^^^^^^^^^^^^^^
 
 Source code is the collection of code written in a human readable programming language for a given 
-software package.Source code is transformed by an assembler or compiler into machine code that can be 
+software package. Source code is transformed by a compiler into machine code that can be 
 executed by a computer.
-
-Compiling and what a compiler does is explained below but the differences between 
-`assemblers and assembler code versus compilers and compiler code <https://www.geeksforgeeks.org/language-processors-assembler-compiler-and-interpreter/>`_ 
-is out of the scope of the explanation for software installation on the HPC clusters.
 
 ---------
 
@@ -88,6 +84,19 @@ in order to function.
 This means that the installation of one software package may require multiple packages requiring 
 installation and loading prior or existing software modules provided on the cluster may need to 
 be loaded prior in order for the software to install or function correctly.
+
+---------
+
+What is a Linux shell?
+^^^^^^^^^^^^^^^^^^^^^^
+
+A shell is a program that takes commands typed from the keyboard and gives them to the computer to run. 
+Historically the shell was the only user interface available on a Unix-like system such as Linux. In the present 
+day, graphical user interfaces (GUIs) are available in addition to interfaces such as the shell.
+
+Most Linux operating systems use a program called **bash** (the Bourne Again SHell, an enhanced version of the original 
+Unix shell program, **sh**, written by Steve Bourne) as the shell program. There are other shell programs available for 
+Linux systems if desired by a user. Examples include: ash, dash, csh, tcsh, ksh and zsh.
 
 ---------
 
@@ -153,6 +162,11 @@ from a trusted location.
 
 As an example the following command will download the GNU Make RPM to your local folder indicating 
 where it is downloading the RPM from as well as the full name of the file downloaded.
+
+.. important::
+
+    GNU Make is already available on our clusters! Any further examples of installing or compiling GNU Make are 
+    examples only, you do not need to download or install Make.
 
 .. code-block:: console
     :emphasize-lines: 1
@@ -368,7 +382,7 @@ Compiling your source code into binaries
 Compiling from source is normally straightforward assuming that the prerequisites that a software package 
 has are fulfilled correctly. 
 
-Care **must** be taken to read though and documentation provided in the 
+Care **must**  be taken to read through the documentation provided in the 
 software package files which are usually called ``README`` or ``INSTALL`` in the top level directory of
 the downloaded files. These files will dictate what specific instructions, compilers, build systems and 
 versions are required for a successful compile.
@@ -417,8 +431,8 @@ e.g. compiling a more modern version of the ``make`` program on the ShARC cluste
 Making your compiled binaries available in the shell
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At this stage you can typically move the unpackaged binaries as desired and any executables (in ``./bin``) 
-or libraries (typically in **./lib** and **./lib64** ) can be added to ``PATH`` or ``LD_LIBRARY_PATH`` 
+At this stage you can typically move the generated binaries as desired and any executables (in ``./bin``) 
+or libraries (typically in **./lib** and **./lib64** ) can be added to the ``PATH`` or ``LD_LIBRARY_PATH`` 
 using one of the two methodologies mentioned in the :ref:`following <make_installed_software_available>` section.
 
 

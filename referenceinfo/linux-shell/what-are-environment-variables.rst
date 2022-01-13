@@ -7,7 +7,7 @@ What are environment variables?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Linux based operating systems, environment variables are dynamic named values stored within the 
-system which are used by shells or subshells (your terminal) to facillitate functionality. Simply put, 
+system which are used by shells or subshells (your terminal) to facilitate functionality. Simply put, 
 they are variables with a name and value which perform a function in how the operating system and 
 applications work.
 

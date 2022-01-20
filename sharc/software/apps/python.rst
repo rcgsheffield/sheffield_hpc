@@ -125,13 +125,8 @@ If you want to create one or more large Conda environments
 (e.g. containing bulky Deep Learning packages such as TensorFlow or PyTorch)
 then there's a risk you'll quickly use up your home directory's :ref:`10GB storage quota <filestore>`.
 
-First, tell conda where to look for a config file: ::
-
-   echo "export CONDARC=$HOME/.condarc-sharc.yml" >> ~/.bashrc
-
-Next, create a ``.condarc-sharc.yml`` file in your home directory, 
-copy in the contents of your ``.condarc`` file if you have one,
-then add an ``envs_dirs:`` and ``pkgs_dirs:`` entries below as:
+Create a ``.condarc`` file in your home directory if it does not already exist. 
+Add an ``envs_dirs:`` and ``pkgs_dirs:`` section as shown below:
 
 ::
 
@@ -146,6 +141,9 @@ Make sure to replace ``username`` with your own username and
 then create these folders by running the following command: ::
 
     mkdir -p /data/$USER/anaconda/.pkg-cache/  /data/$USER/anaconda/.envs
+
+Installations of environments and package caching should now occur in your ``/data`` 
+area.
 
 
 Installing Packages Inside an Environment

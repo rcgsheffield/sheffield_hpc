@@ -11,8 +11,8 @@ relevant environment variables.
 .. warning::
 
     Using your ``.bashrc`` file to make software available on ShARC will not work correctly in 
-    ``qsub`` batch jobs unless you amend the bash shebang from ``#!/bin/bash`` to ``#!/bin/bash -i`` 
-    due to non-interactive sessions **not** sourcing the ``.bashrc`` file. 
+    ``qsub`` batch jobs unless you supply the ``#$ -V`` SGE  argument in your submission script as 
+    non-interactive sessions **do not** source the ``.bashrc`` file.
 
 .. caution::
 

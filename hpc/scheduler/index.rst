@@ -487,14 +487,13 @@ Here is a more complex example that requests more resources:
 Monitoring running Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-There is are two commands to monitor running and queued jobs:
+There are two commands to monitor running and queued jobs:
 
 * :ref:`sstat`
 * :ref:`squeue`
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/squeue_usage_import.rst
 
-|br|
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/sstat_usage_import.rst
 

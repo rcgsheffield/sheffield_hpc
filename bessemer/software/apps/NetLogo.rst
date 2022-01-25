@@ -89,7 +89,7 @@ commands and the GUI will open:
 
     $ module load Java/11.0.2
     $ module load NetLogo/6.2.0-64
-    $ # Optional symlink in use of the models library is required.
+    $ # Optional symlink if use of the models library is required.
     $ # [ ! -d "./models" ] && ln -s $EBROOTNETLOGO/app/models models
     $ netlogo-gui.sh
 
@@ -134,9 +134,9 @@ multicore NetLogo jobs.
 
 The job is submitted to the queue by typing:
 
-.. code-block:: bash
+.. code-block:: console
 
-    sbatch batch_smp_4_core.sh
+    $ sbatch batch_smp_4_core.sh
 
 And will generate the normal log output file in addition to ``table_output.csv`` and 
 ``spreadsheet_output.csv`` in the current workking directory.
@@ -156,9 +156,10 @@ in ``/usr/local/packages/live/eb/NetLogo/6.2.0-64/easybuild/``
 Testing
 ^^^^^^^
 
-Testing has been conducted by running an interactive session and running 
-``models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo`` example and 
-by running the batch job using the BehaviorSpace methodology.
+Testing has been conducted by running an interactive session testing the 
+``./models/IABM Textbook/chapter 4/Wolf Sheep Simple 5.nlogo`` example in 
+addition to running the batch job using the BehaviorSpace methodology as 
+above.
 
 --------
 

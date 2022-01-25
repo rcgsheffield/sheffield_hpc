@@ -1,0 +1,38 @@
+#%Module
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+NetLogo is a multi-agent programmable modeling environment. It
+is used by tens of thousands of students, teachers and researchers worldwide.
+It also powers HubNet participatory simulations. It is authored by Uri Wilensky
+and developed at the CCL.
+
+
+More information
+================
+ - Homepage: https://ccl.northwestern.edu/netlogo/
+    }
+}
+
+module-whatis {Description: NetLogo is a multi-agent programmable modeling environment. It
+is used by tens of thousands of students, teachers and researchers worldwide.
+It also powers HubNet participatory simulations. It is authored by Uri Wilensky
+and developed at the CCL.}
+module-whatis {Homepage: https://ccl.northwestern.edu/netlogo/}
+module-whatis {URL: https://ccl.northwestern.edu/netlogo/}
+
+set root /usr/local/packages/live/eb/NetLogo/6.2.0-64
+
+conflict NetLogo
+
+prepend-path	CMAKE_PREFIX_PATH		$root
+setenv	EBROOTNETLOGO		"$root"
+setenv	EBVERSIONNETLOGO		"6.2.0"
+setenv	EBDEVELNETLOGO		"$root/easybuild/NetLogo-6.2.0-64-easybuild-devel"
+
+prepend-path	PATH		$root
+# Built with EasyBuild version 4.4.0

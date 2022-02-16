@@ -19,7 +19,9 @@ cuDNN is part of the NVIDIA Deep Learning SDK.
 Usage
 -----
 
-**Only GPU-enabled nodes are able to run the library.**
+.. warning:: 
+
+   **Only GPU-enabled nodes are able to run the cuDNN library.**
 
 .. See** :ref:`GPUComputing_bessemer` **for more information on how to request a GPU-enabled node for an interactive session or job submission.**
 

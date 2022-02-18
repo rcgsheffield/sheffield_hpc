@@ -116,7 +116,7 @@ Resource limits per job:
 Checking Queue and Node Status
 ------------------------------
 
-Using the ``squeue`` and ``sinfo`` :ref:`SLURM Commands<slurm_info>` it is possible to query the status of these nodes.
+Using the ``squeue`` and ``sinfo`` :ref:`SLURM Commands<slurm_referenceinfo_common_commands>` it is possible to query the status of these nodes.
 Knowing how many jobs are queued for these nodes, and the status of the nodes can be helpful when estimating when your jobs will run.
 
 ``squeue`` can be used to view running and queued jobs for specific partitions, using ``-p <partition_list>``.

@@ -33,3 +33,4 @@ sphinxcontrib-serializinghtml==1.1.5
 tornado==6.1
 urllib3==1.26.8
 watchdog==2.1.6
+Sphinx-Substitution-Extensions==2022.02.16

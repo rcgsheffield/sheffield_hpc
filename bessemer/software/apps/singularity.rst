@@ -49,7 +49,7 @@ must be done on your machine (see :ref:`create_image_singularity_bessemer`).
 Interactive Usage of Singularity Images
 ---------------------------------------
 
-**To use Singularity interactively, an interactive session must first be requested using** :ref:`srun <slurm_interactive>` **for example.**
+**To use Singularity interactively, an interactive session must first be requested using** :ref:`srun <submit_interactive_bessemer>` **for example.**
 
 To get an interactive shell in to the image, use the following command: ::
 

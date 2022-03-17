@@ -11,7 +11,7 @@ Interactive use of the GPUs
 
 .. note::
 
-  See :ref:`requesting an interactive session on slurm <slurm_interactive>` if you're not already familiar with the concept.
+  See :ref:`requesting an interactive session on slurm <submit_interactive_bessemer>` if you're not already familiar with the concept.
 
 To start using the GPU enabled nodes interactively, type:
 
@@ -51,7 +51,7 @@ Submitting batch GPU jobs
 
 .. note::
 
-  See :ref:`submitting jobs on slurm <slurm_job>` if you're not already familiar with the concept.
+  See :ref:`submitting jobs on slurm <submit_job_bessemer>` if you're not already familiar with the concept.
 
 To run batch jobs on GPU nodes, ensure your job submission script includes a request for GPUs,
 e.g. for a single GPU ``--nodes=1 --gpus-per-node=1``:

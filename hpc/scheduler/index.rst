@@ -123,6 +123,8 @@ intentionally block a job from running simply because the priority is lower than
 
 --------
 
+.. _submit_job_sharc:
+
 Job Submission / Control on ShARC
 ---------------------------------
 
@@ -161,45 +163,22 @@ To start a session with access to 2 cores in the SMP parallel environment:
 A table of common interactive job options is given below; any of these can be
 combined together to request more resources.
 
-======================  ======================================================================================================================
+======================  =========================================================================================
 SGE Command             Description
-======================  ======================================================================================================================
-``-l h_rt=hh:mm:ss``    Specify the total maximum wall clock
-                        execution
-                        time for the job. The upper limit is
-                        08:00:00. NB these limits may differ
-                        for reservations /projects.
+======================  =========================================================================================
+``-l h_rt=hh:mm:ss``    Specify the total maximum wall clock execution time for the job. The upper limit is
+                        08:00:00. **Note:** these limits may differ for reservations /projects.
 
-``-l rmem=xxG``         
-                        
-                        ``-l rmem=xxG``
-                        is used to specify the maximum amount
-                        (``xx``)
-                        of real memory to be requested **per
+``-l rmem=xxG``         ``-l rmem=xxG`` is used to specify the maximum amount (``xx``) of real 
+                        memory to be requested **per
                         CPU core**.
 
+                        |br| If the real memory usage of your job exceeds this value multiplied by the number
+                        of cores / nodes you requested then your job will be killed.
 
-                        If the real memory usage of your
-                        job exceeds
-                        this value multiplied by the number
-                        of cores
-                        / nodes you requested then your
-                        job will be
-                        killed.
-
-``-pe <env> <nn>``      Specify an MPI *parallel
-                        environment* and a
-                        number of processor cores.
-
-``-pe smp <nn>``
-                        The smp parallel
-                        environment
-                        provides multiple cores on one node.
-                        ``<nn>``
-                        specifies the max number of
-                        cores.
-
-======================  ======================================================================================================================
+``-pe env nn``          Specify a parallel, ``env``, environment and a number of processor cores ``nn``. 
+                        e.g. SMP jobs ``-pe smp 4`` or MPI jobs ``-pe mpi 4``.    
+======================  =========================================================================================
 
 Note that ShARC has multiple :ref:`parallel environments <parallel>`, the current parallel environments can 
 be found on the `ShARC Parallel Environments <../../referenceinfo/scheduler/SGE/sge_parallel_environments.html>`_ page.
@@ -215,9 +194,71 @@ There is a single command to submit jobs via SGE:
 
 The batch submission scripts are executed for submission as below:
 
-.. code-block:: console
+.. code-block:: sh
 
-    $ qsub myscript.sh
+    qsub submission.sh
+
+Note the job submission number. For example:
+
+.. code-block:: sh
+
+    Your job 12345678 ("submission.sh") has been submitted
+
+You can check your output log or error log file when the job is finished.
+
+.. code-block:: sh
+
+    cat job.sh.o12345678
+    cat job.sh.e12345678
+
+There are numerous further options you can request in your batch submission files which are 
+detailed below:
+
+Pass through current shell environment (sometimes important):
+
+.. code-block:: sh
+
+    #$ -V
+
+Name your job submission:
+
+.. code-block:: sh
+
+    #$ -N test_job
+
+Specify a parallel environment for SMP jobs where ``N`` is a number of cores:
+
+.. code-block:: sh
+
+    #$ -pe smp N
+
+Specify a parallel environment for MPI jobs where ``N`` is a number of cores:
+
+.. code-block:: sh
+
+    #$ -pe mpi N
+
+Request a specific amount of memory where ``N`` is a number of gigabytes **per core**:
+
+.. code-block:: sh
+
+    #$ -l rmem=NG
+
+Request a specific amount of time in hours, minutes and seconds:
+
+.. code-block:: sh
+
+    #$ -l h_rt=hh:mm:ss
+
+Request email notifications on start, end and abort:
+
+.. code-block:: sh
+
+
+    #$ -M me@somedomain.com
+    #$ -m abe
+
+For the full list of the available options please visit the SGE manual webpage for qsub here: http://gridscheduler.sourceforge.net/htmlman/htmlman1/qsub.html
 
 Here is an example SGE batch submission script that runs a fictitious program called ``foo``:
 
@@ -232,13 +273,14 @@ Here is an example SGE batch submission script that runs a fictitious program ca
 
     # Run the program foo with input foo.dat
     # and output foo.res
-    foo < foo.dat > foo.res
+    foo foo.dat foo.res
 
 Some things to note:
 
 * The first line always needs to be ``#!/bin/bash`` (to tell the scheduler that this is a bash batch script).
-* Comments start with a ``#``
-* **SGE** Scheduler options, such as the amount of memory requested, start with ``#$``
+* Comments start with a ``#``.
+* It is always best to fully specify job's resources with your submission script.
+* All **SGE** Scheduler options, such as the amount of memory requested, start with ``#$``
 
 
 * You will often require one or more ``module`` commands in your submission file.
@@ -259,12 +301,17 @@ Here is a more complex example that requests more resources:
     #$ -M me@somedomain.com
     # Email notifications if the job aborts
     #$ -m a
+    # Name the job
+    #$ -N my_job
+    # Request 24 hours of time
+    #$ -l h_rt=24:00:00
 
     # Load the modules required by our program
     module load compilers/gcc/5.2
     module load apps/gcc/foo
 
     # Set the OPENMP_NUM_THREADS environment variable to 4
+    # This is needed to ensure efficient core usage.
     export OMP_NUM_THREADS=$NSLOTS
 
     # Run the program foo with input foo.dat
@@ -309,7 +356,7 @@ Debugging failed Jobs
 .. note::
 
     One common form of job failure on ShARC is caused by Windows style line endings. If you see
-    and error reported of the form: ::
+    an error reported of the form: ::
 
         failed searching requested shell because:
 
@@ -342,6 +389,8 @@ An incomplete table of common failure codes is shown below:
 
 --------
 
+.. _submit_job_bessemer:
+
 Job Submission / Control on Bessemer
 ------------------------------------
 
@@ -368,50 +417,47 @@ For example to start an interactive session with access to 16 GB of RAM:
 
     $ srun --mem=16G --pty bash -i
 
-To start a session with access to 2 cores:
+To start a session with access to 2 cores, use **either**:
 
 .. code-block:: console
 
-    $ srun -c 2 --pty bash -i
+    $ srun --cpus-per-task=2 --pty bash -i #2 cores per task, 1 task and 1 node per job default. Preferred!
+    $ srun --ntasks-per-node=2 --pty bash -i #2 tasks per node, 1 core per task and 1 node per job default.
 
-The SLURM ``-c`` is cores per task, take care with your chosen number of tasks.
+Please take care with your chosen options as usage in concert with other options
+can be multiplicative.
+
+A further explanation of why you may use the tasks options or cpus options can be found :ref:`here<slurm_tasks_vs_cpus_per_task>`.
 
 A table of common interactive job options is given below; any of these can be
 combined together to request more resources.
 
-======================== ======================================================================================================================
-Slurm Command            Description
-======================== ======================================================================================================================
-``-t [min]``             Specify the total maximum wall clock
-``-t [days-hh:mm:ss]``   execution
-                         time for the job. The upper limit is
-                         08:00:00. NB these limits may differ
-                         for reservations /projects.
+==================================== =======================================================================
+Slurm Command                        Description
+==================================== =======================================================================
+``-t min`` or ``-t days-hh:mm:ss``   Specify the total maximum wall clock execution time for the job. 
+                                     The upper limit is 08:00:00. **Note:** these limits may differ
+                                     for reservations /projects.
 
-``-l rmem=xxG``          |br| 
-                         ``--mem=xxG``
-                         is used to specify the maximum
-                         amount (``xx``)
-                         of real memory to be requested
-                         **per node**.
+``--mem=xxG``                        |br| 
+                                     ``--mem=xxG`` is used to specify the maximum amount (``xx``)
+                                     of real memory to be requested **per node**.
+ 
+ 
+                                     |br| If the real memory usage of your job exceeds this value 
+                                     multiplied by the number of cores / nodes you requested then your
+                                     job will be killed.
 
+``-c nn`` or ``--cpus-per-task=nn``
+                                     |br| ``-c`` is cores per task, take care with your chosen
+                                     number of tasks.
 
-                         If the real memory usage of your
-                         job exceeds
-                         this value multiplied by the number
-                         of cores
-                         / nodes you requested then your
-                         job will be
-                         killed.
-
-``-c <nn>``
-
-                         |br| ``-c`` is cores per
-                         task,
-                         take care with your chosen
-                         number of tasks.
-
-======================== ======================================================================================================================
+``--ntasks-per-node=nn``
+                                     |br| ``--ntasks-per-node=`` is tasks per node, take care with your 
+                                     chosen number of cores per node. The default is one task per node, 
+                                     but note that other options can adjust the default of 1 core per task 
+                                     e.g. ``--cpus-per-task``. 
+==================================== =======================================================================
 
 .. _submit_batch_bessemer:
 
@@ -426,12 +472,87 @@ The `Slurm docs <https://slurm.schedmd.com/sbatch.html>`_ have a complete list o
 
 The batch submission scripts are executed for submission as below:
 
-.. code-block:: console
+.. code-block:: sh
 
-    $ sbatch myscript.sh
+    sbatch submission.sh
 
+Note the job submission number. For example:
 
-For Slurm an example batch submission script could be:
+.. code-block:: sh
+
+    Submitted batch job 1226
+
+You can check your output log or error log file as below:
+
+.. code-block:: sh
+
+    cat JOB_NAME-1226.out
+
+There are numerous further options you can request in your batch submission files which are 
+detailed below:
+
+Name your job submission:
+
+.. code-block:: sh
+
+    #SBATCH --comment=JOB_NAME
+
+Specify a number of nodes:
+
+.. code-block:: sh
+
+    #SBATCH --nodes=1
+
+.. warning::
+    
+    Note that the Bessemer free queues do not permit the use of more than 1 node per job.
+
+Specify a number of tasks per node:
+
+.. code-block:: sh
+
+    #SBATCH --ntasks-per-node=4
+
+Specify a number of tasks:
+
+.. code-block:: sh
+
+    #SBATCH --ntasks=4
+
+Specify a number of cores per task:
+
+.. code-block:: sh
+
+    #SBATCH --cpus-per-task=4
+
+Request a specific amount of memory **per job**:
+
+.. code-block:: sh
+
+    #SBATCH --mem=16G
+
+Specify the job output log file name:
+
+.. code-block:: sh
+
+    #SBATCH --output=output.%j.test.out
+
+Request a specific amount of time:
+
+.. code-block:: sh
+
+    #SBATCH --time=00:30:00
+
+Request job update email notifications:
+
+.. code-block:: sh
+
+    #SBATCH --mail-user=username@sheffield.ac.uk
+
+For the full list of the available options please visit the SLURM manual webpage for 
+sbatch here: https://slurm.schedmd.com/sbatch.html
+
+Here is an example SLURM batch submission script that runs a fictitious program called ``foo``:
 
 .. code-block:: bash
 
@@ -444,20 +565,28 @@ For Slurm an example batch submission script could be:
 
     # Run the program foo with input foo.dat
     # and output foo.res
-    foo < foo.dat > foo.res
+    foo foo.dat foo.res
+
+.. _slurm_tasks_vs_cpus_per_task:
 
 Some things to note:
 
 * The first line always needs to be ``#!/bin/bash`` (to tell the scheduler that this is a bash batch script).
-* Comments start with a ``#``
-* **Slurm** Scheduler options start with ``#SBATCH``
+* Comments start with a ``#``.
+* It is always best to fully specify job's resources with your submission script.
+* All **Slurm** Scheduler options start with ``#SBATCH``
+* You should use the SLURM option ``--ntasks=nn`` Number of "tasks", for programs using distributed 
+  parallelism (:ref:`MPI<parallel_MPI>`).
+* You should use the SLURM option ``--ntasks-per-node=nn`` Number of "tasks per node", for programs 
+  using distributed parallelism (:ref:`MPI<parallel_MPI>`). Note that the Bessemer free queues do not 
+  permit the use of more than 1 node per job.
+* You should use the SLURM option ``--cpus-per-task=nn`` Number of "cores per task", for programs using 
+  shared memory parallelism (:ref:`SMP<parallel_SMP>` or :ref:`openmp<parallel_SMP>`).
+* You will often require one or more ``module`` commands in your submission file to make programs and 
+  libraries available to your scripts. Many applications and libraries are available as modules on 
+  :ref:`Bessemer <bessemer-software>`.
 
-* You will often require one or more ``module`` commands in your submission file.
-  These make programs and libraries available to your scripts.
-  Many applications and libraries are available as modules on :ref:`Bessemer <bessemer-software>`.
-
-Here is a more complex example that requests more resources:
-
+Here is a more complex :ref:`SMP<parallel_SMP>` example that requests more resources:
 
 .. code-block:: bash
 
@@ -465,18 +594,24 @@ Here is a more complex example that requests more resources:
     # Request 16 gigabytes of real memory (RAM) 4 cores *4G = 16
     #SBATCH --mem=16G
     # Request 4 cores
-    #SBATCH --ntasks-per-node=4
+    #SBATCH --cpus-per-task=4
     # Email notifications to me@somedomain.com
     #SBATCH --mail-user=me@somedomain.com
     # Email notifications if the job fails
     #SBATCH --mail-type=FAIL
+    # Change the name of the output log file.
+    #SBATCH --output=output.%j.test.out
+    # Rename the job's name
+    #SBATCH --comment=my_smp_job
+
 
     # Load the modules required by our program
     module load compilers/gcc/5.2
     module load apps/gcc/foo
 
     # Set the OPENMP_NUM_THREADS environment variable to 4
-    export OMP_NUM_THREADS=$SLURM_NTASKS
+    # This is needed to ensure efficient core usage.
+    export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
     # Run the program foo with input foo.dat
     # and output foo.res

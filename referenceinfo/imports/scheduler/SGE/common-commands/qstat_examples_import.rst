@@ -5,6 +5,11 @@ Display your own jobs queued on the system
 
     $ qstat
 
+Show a specific running or queueing job's details:
+
+.. code-block:: sh
+
+    qstat -j jobid
 
 Display all jobs queued on the system 
 

@@ -40,9 +40,9 @@ Here's an example that requests 4 cores and 4 threads on ShARC: ::
 
 Note that you have to specify the number of cores at least **twice** when running OpenMP jobs:
 
- * Once to the scheduler (``#$ -pe smp 4``) so that it knows how many cores to assign to your job;
- * Once to the OpenMP runtime environment (``export OMP_NUM_THREADS=$NSLOTS``) so that OpenMP knows how many threads to create.
- * You may also need to expliclty need to tell your application how many threads it should create.
+* Once to the scheduler (``#$ -pe smp 4``) so that it knows how many cores to assign to your job;
+* Once to the OpenMP runtime environment (``export OMP_NUM_THREADS=$NSLOTS``) so that OpenMP knows how many threads to create.
+* You may also need to expliclty need to tell your application how many threads it should create.
 
 Running other SMP schemes
 -------------------------

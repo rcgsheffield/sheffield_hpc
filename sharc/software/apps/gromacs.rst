@@ -63,7 +63,7 @@ submitted to the queue by typing ``qsub my_job.sh``.
 
     To get optimal parallelisation of GROMACS sub-commands, users should consult the 
     `GROMACS documentation <https://manual.gromacs.org/documentation/>`_
-    to determine which of the have parallelisation enabled. For example, ``mdrun`` is parallelisable where ``grompp`` and many others are not.
+    to determine which of the commands have parallelisation enabled. For example, ``mdrun`` is parallelisable where ``grompp`` and many others are not.
 
     Please also ensure you consult the right version of the documentation as more modern versions of GROMACS are likely to have numerous differences.
 

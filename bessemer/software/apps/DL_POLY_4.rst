@@ -55,7 +55,8 @@ submission script, ``my_job.sh``, to run ``DLPOLY.Z`` and which is submitted to 
     wget ftp://ftp.dl.ac.uk/ccp5/DL_POLY/DL_POLY_4.0/TUTORIAL/Exercise2.tar.gz
     tar -xvf Exercise2.tar.gz
     cd Exercise2
-    srun --export=ALL DLPOLY.Z
+    mpirun -np $SLURM_NTASKS DLPOLY.Z
+
 
 ========
 

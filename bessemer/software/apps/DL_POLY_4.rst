@@ -66,6 +66,7 @@ Installation notes
 Installation method
 ^^^^^^^^^^^^^^^^^^^
 
+
 |softwarename| version 5.0.0 was installed using Easybuild 4.4.0 and was optionally interfaced 
 with the PLUMED 2.6.2 library. build details can be found in 
 ``/usr/local/packages/live/eb/DL_POLY_4_PLUMED_INTEG/5.0.0-intel-2020b/easybuild``

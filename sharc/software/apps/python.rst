@@ -105,7 +105,7 @@ environment named ``mynumpy``.
 
 Any version of Python or list of packages can be provided::
 
-    conda create -n myscience python=3.5 numpy=1.8.1 scipy
+    conda create -n myscience python=3.5 numpy=1.15.2 scipy
 
 If you wish to modify an existing environment, such as one of the anaconda
 installations, you can ``clone`` that environment::

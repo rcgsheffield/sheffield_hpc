@@ -17,3 +17,4 @@ This section should be used to look for a quick references to very specific info
   environment-modules/index
   linux-shell/index
   scheduler/index
+  computer-architecture/index

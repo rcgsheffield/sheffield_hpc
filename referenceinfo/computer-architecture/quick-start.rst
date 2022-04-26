@@ -18,69 +18,102 @@ we need to understand to apply to running jobs on a HPC cluster.
 -----
 
 Physical architecture
-***************************
+*********************
 
-``CPU``
+Physical architecture refers to the real physical components and structures used by computers.
 
-A central processing unit (CPU), the most common processing device in a computer which performs calculations in order to run applications and coordinate work with other components. Also known as a microprocessor.
+.. raw:: html
 
-``Core``
+    <hr class="hr-mid-section-separator-dashed">
 
-A CPU core or processor core is a single subprocessing unit capable of one task at a time. Modern CPUs are made of multiple processor cores which share system memory.
+.. include:: ../imports/computer-architecture/cpu.rst
 
-``Socket``
+.. raw:: html
 
-A physical socket on a motherboard in which a CPU is inserted. Physical sockets are usually connected to their own groups of memory slots.
+    <hr class="hr-mid-section-separator-dashed">
 
-``Motherboard``
+.. include:: ../imports/computer-architecture/cpu-cache.rst
 
-A motherboard is the main electronic board in which computer components reside and connect to one another. They contain one or more sockets, memory slots, PCIe slots and buses.
+.. raw:: html
 
-``System bus / buses``
+    <hr class="hr-mid-section-separator-dashed">
 
-A system bus or motherboard bus is a physical pathway of electronic circuits which enable discrete components within a computer to communicate with one another via the motherboard.
+.. include:: ../imports/computer-architecture/core.rst
 
-``Memory slot``
+.. raw:: html
 
-A memory slot is a physical slot in which physical memory sticks are inserted to provide the system memory.
+    <hr class="hr-mid-section-separator-dashed">
 
-``Memory``
+.. include:: ../imports/computer-architecture/cpu-socket.rst
 
-Memory or system memory is a computer's low latency, extremely high bandwidth short term data storage. It is used to store the data which the CPU currently requires to perform the computations to run applications.
+.. raw:: html
 
-``Memory Bus``
+    <hr class="hr-mid-section-separator-dashed">
 
-This is the communication bus between system memory and a Socket/CPU.
+.. include:: ../imports/computer-architecture/motherboard.rst
 
-``PCI or PCIe slot``
+.. raw:: html
 
-A physical slot on the motherboard in which additional compatible components like a GPU can be inserted to connect with the PCIe Bus.
+    <hr class="hr-mid-section-separator-dashed">
 
-``PCI or PCIe Bus``
+.. include:: ../imports/computer-architecture/system-buses.rst
 
-A communication bus between a Socket/CPU and input/output controllers connected to storage such as hard drives or solid state disks, network adaptors, GPUs or other compatible devices.
+.. raw:: html
 
-``GPU``
+    <hr class="hr-mid-section-separator-dashed">
 
-A graphical processing unit (GPU) is the second most common processing unit in a computer which is designed to perform specific graphical calculations very quickly and is normally used to drive a computer's displays. 
-These are commonly connected via a PCIe slot and bus. More recently GPUs have been used to perform the same kinda of graphical calculations but for other purposes such as AI or machine learning.
+.. include:: ../imports/computer-architecture/memory-slot.rst
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/memory.rst
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/memory-bus.rst
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/pcie-bus.rst
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/pcie-slot.rst
+
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/gpu.rst
 
 -----
 
 Virtual architecture
-***************************
+********************
 
-``Threads / Hyperthreading``
+Virtual architecture refers to the real virtual components, concepts or structures used by computers.
 
-A modern CPU core can normally execute 2 threads, or conceptually, 2 flows of instructions at the same time for additional performance. This is called hyperthreading. 
-Performance improvements are usually modest but hyperthreading can decrease performance for some programs. Hyperthreading is disabled on the University of Sheffield HPC clusters.
+.. raw:: html
 
-.. tip::
+    <hr class="hr-mid-section-separator-dashed">
 
-    Multiple threads running on one core can be thought of like a single human (core) using both hands (two threads) to complete tasks. Simple tasks like carrying and moving items can be completed quicker by moving more items at 
-    once. More complex tasks like throwing darts accurately could be detrimentally affected by attempting to do so with both hands at the same time.
+.. include:: ../imports/computer-architecture/threads-hyperthreading.rst
 
-``Virtual memory``
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/virtual-memory.rst
     
+.. raw:: html
 
+    <hr class="hr-mid-section-separator-dashed">
 

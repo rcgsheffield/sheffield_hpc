@@ -1,10 +1,12 @@
+.. _general_computer_architecture_quickstart:
+
 .. toctree::
     :hidden:
     :maxdepth: 1
     :glob:
 
-Quick Start on general computer architecture
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+General Computer Architecture Quick Start 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This page details the parts of a modern computer and their connectivity that 
 we need to understand to apply to running jobs on a HPC cluster.
@@ -16,6 +18,25 @@ we need to understand to apply to running jobs on a HPC cluster.
     resources.
 
 -----
+
+Computer architecture as a concept
+**********************************
+
+Before discussing aspects of "computer architecture" we must first define what this means. In short:
+
+    Computer architecture refers to how a computer system is designed and what technologies 
+    it is compatible with.
+
+This can also be roughly subdivided into, system (physical) design, instruction set architecture and 
+microarchitecture. 
+
+.. tip::
+
+    Further info on these subdivisions can be found at the following link: 
+    https://online.sunderland.ac.uk/what-is-computer-architecture/
+
+-----
+
 
 Physical architecture
 *********************
@@ -94,12 +115,18 @@ Physical architecture refers to the real physical components and structures used
 
 .. include:: ../imports/computer-architecture/gpu.rst
 
+.. raw:: html
+
+    <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/CPU-microarchitecture.rst
+    
 -----
 
 Virtual architecture
 ********************
 
-Virtual architecture refers to the real virtual components, concepts or structures used by computers.
+In this case, virtual architecture refers to the real virtual components, concepts or structures used by computers.
 
 .. raw:: html
 
@@ -116,4 +143,7 @@ Virtual architecture refers to the real virtual components, concepts or structur
 .. raw:: html
 
     <hr class="hr-mid-section-separator-dashed">
+
+.. include:: ../imports/computer-architecture/instruction-sets.rst
+    
 

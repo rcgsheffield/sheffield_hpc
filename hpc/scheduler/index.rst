@@ -37,6 +37,12 @@ commands and work on the same three basic principles:
 Key Concepts 
 ------------
 
+.. tip::
+
+    If you are not familiar with basic computer architecture we **highly recommend** reading our 
+    :ref:`General Computer Architecture Quick Start page <general_computer_architecture_quickstart>` 
+    before continuing.
+
 When engaging with our documentation several concepts must be well understood with reference to 
 schedulers and jobs which will be explained below:
 

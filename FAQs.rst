@@ -225,13 +225,18 @@ If you know the node that a program was compiled on but do not know the CPU arch
 
 ------
 
-Windows-style line endings or "failed searching requested shell" errors
------------------------------------------------------------------------
+"failed: No such file or directory" or "failed searching requested shell" errors
+--------------------------------------------------------------------------------
 
 If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the HPC systems. 
-A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and you are presented with an error message containing: ::
+A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and when you query the job with ``qacct`` you 
+are presented with an error message containing: ::
 
         failed searching requested shell because:
+
+Or if you query the ``Eqw`` job with ``qstat`` ::
+
+        failed: No such file or directory
 
 The reason for this behaviour is that Windows and Unix machines have different conventions for specifying 'end of line' in text files. Windows uses the 
 control characters for 'carriage return' followed by 'linefeed', ``\r\n``, whereas Unix uses just 'linefeed' ``\n``.
@@ -243,8 +248,8 @@ This means a script prepared in Windows using Notepad whichs looks like this: ::
 
 will look like the following to programs on a Unix system: ::
 
-        #!/bin/bash\r
-        echo 'hello world'\r
+        #!/bin/bash\r\n
+        echo 'hello world'\r\n
 
 If you suspect that this is affecting your jobs, run the following command on the system: ::
 

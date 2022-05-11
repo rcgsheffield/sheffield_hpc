@@ -126,7 +126,7 @@ Physical architecture refers to the real physical components and structures used
 Virtual architecture
 ********************
 
-In this case, virtual architecture refers to the real virtual components, concepts or structures used by computers.
+In this case, virtual architecture refers to the virtual components, concepts or structures used by computers.
 
 .. raw:: html
 

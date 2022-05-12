@@ -80,12 +80,15 @@ Please refer to our :ref:`Choosing appropriate compute resources page <choosing_
 
 ------
 
-Exceeding your disk space quota
--------------------------------
+"No space left on device" errors and jobs prematurely stopping
+--------------------------------------------------------------
 
-Each user of the system has a fixed amount of disk space available in their home directory.
-If you exceed this quota, various problems can emerge such as an inability to launch applications or run jobs, the inability to login or abruptly terminated jobs.
-To see if you have exceeded your disk space quota, run the ``quota`` command:
+Each user of the system has a fixed amount of disk space available in their home directory. If you see an error in your job's logs indicating "No space left on device" 
+it is likely that your quota has ran out.
+
+If you attempt to exceed this quota, various problems can emerge such as an inability to launch applications or run jobs, the inability to login or abruptly terminated jobs 
+as programs or executables are now unable to write to your ``/home`` folder.
+To see if you are attempting to exceed your disk space quota, run the ``quota`` command:
 
 .. code-block:: console
 
@@ -97,7 +100,7 @@ To see if you have exceeded your disk space quota, run the ``quota`` command:
 
 In the above, you can see that the quota is 10 gigabytes and all of this is currently in use.
 Any jobs submitted by this user will likely result in an ``Eqw`` status.
-The recommended action is for the user to delete enough files to allow normal work to continue.
+The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
 
 To assess what is using up your quota within a given directory, you can make use of the 
 :ref:`ncdu module on ShARC <ncdu_sharc>` or the 

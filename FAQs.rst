@@ -76,7 +76,7 @@ Please refer to our :ref:`Choosing appropriate compute resources page <choosing_
 
 .. tip::
 
-        If you are confident that the scheduler is not terminating your job please check if you have attempted to exceed your disk space quota, instructions for this are seen below.
+        If you are confident that the scheduler is not terminating your job, but your job is prematurely stopping, please check if you have attempted to exceed your disk space quota, instructions for this are seen below.
 
 ------
 
@@ -185,7 +185,7 @@ For ShARC (SGE scheduler):
 
 .. code-block:: console
 
-        $ qrshx -l rmem=16G
+        $ qrshx -l rmem=8G
 
 For Bessemer (SLURM scheduler):
 
@@ -287,7 +287,7 @@ macOS users should also try ``-Y`` if ``-X`` is not working:
 Problems connecting with WinSCP
 -------------------------------
 
-Some users have reported issues while connetcing to the system using WinSCP, usually when working from home with a poor connection and when accessing folders with large numbers of files.
+Some users have reported issues while connecting to the system using WinSCP, usually when working from home with a poor connection and when accessing folders with large numbers of files.
 
 In these instances, turning off ``Optimize Connection Buffer Size`` in WinSCP can help:
 
@@ -414,4 +414,4 @@ Using 'sudo' to install software on the clusters
 HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators. 
 Users can however install applications in their ``/home`` or ``/data`` directories.
 
-The webpage `Installing Applications on Bessemer and ShARC <https://www.sheffield.ac.uk/it-services/research/hpc/using/install>`_ provides guidance on how to do this.
+The webpage `Installing Applications on Bessemer and ShARC <https://docs.hpc.shef.ac.uk/en/latest/hpc/installing-software.html>`_ provides guidance on how to do this.

@@ -37,7 +37,7 @@ To make a quick assessment of what storage area is likely to best fulfil your ne
 
 .. raw:: html
 
-  <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;zoom&quot;:0.75,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-05-12T13:11:51.554Z\&quot; agent=\&quot;5.0 (X11)\&quot; etag=\&quot;QhXgf6g9HzIt2syvAibr\&quot; version=\&quot;18.0.2\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;9c096ad6-e400-ecc8-3e38-643d2caac077\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+  <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;lightbox&quot;:true,&quot;nav&quot;:true,&quot;zoom&quot;:0.75,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-05-16T16:38:52.416Z\&quot; agent=\&quot;5.0 (X11)\&quot; etag=\&quot;py5i9on_hISCBZpXKUtE\&quot; version=\&quot;18.0.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;9c096ad6-e400-ecc8-3e38-643d2caac077\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
   <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
   <!--This currently uses the remote JS hosted at diagrams.net but I saved a copy in the repo at _static/js/viewer-static.min.js in case service is ever withdrawn. -->
 
@@ -305,27 +305,51 @@ The documentation for the ``/shared`` storage service includes information on:
 For **jobs that need to read/write lots of small files** the most performant storage will be 
 the temporary storage on each node (under the ``/scratch`` directory).
 
-This is because with :ref:`home_dir`, :ref:`data_dir`, :ref:`fastdata_dir`, :ref:`shared_dir`
+This is because with :ref:`home_dir`, :ref:`data_dir`, :ref:`fastdata_dir` and :ref:`shared_dir`,
 each time a file is accessed the filesystem needs to request ownership/permissions information from another server
 and for small files these overheads are proportionally high. 
-However, for ``/scratch`` such ownership/permissions metadata is available on the local machine, 
-so it is faster when dealing with small files.
 
-The most obvious disadvantage to the ``/scratch`` node-local storage is that 
-a given directory cannot reliabily be accessed between jobs as
-you cannot guarantee that your next job will run on the same node.
-Any data of value must therefore be **copied off** ``/scratch`` 
-(e.g. to :ref:`home_dir` or :ref:`data_dir`)
-**before the end of your job**.
+For the ``/scratch`` store, such ownership/permissions metadata is available on the local machine, 
+thus it is faster when dealing with small files.
 
-**Where to store data beneath** ``/scratch``: 
-The scheduler automatically creates a per-job directory for you under ``/scratch``.
-The name of this directory is stored in the ``$TMPDIR`` environment variable e.g. on ShARC: ::
+As the ``/scratch`` areas are node-local storage and files/folders are deleted when jobs end:
+
+* any data used by the job must be **copied to** ``/scratch`` when the jobs starts. 
+* any output data stored in ``/scratch`` must also be **copied off** to another area before the job finishes.
+  (e.g. to :ref:`home_dir` or :ref:`data_dir`).
+
+Further conditions also apply:
+
+* Anything in the ``/scratch`` area may be deleted periodically when the worker-node is **idle**. 
+* The ``/scratch`` area is **not backed up**. 
+* There are no quotas for ``/scratch`` storage.
+* The ``/scratch`` area uses the **ext4** filesystem.
+
+.. danger::
+
+  ``/scratch`` areas are temporary and have no backups. If you forget to copy your output data out of the 
+  ``/scratch`` area before your job finishes, your data **cannot** be recovered!
+
+**Where to store data inside** ``/scratch`` **areas**: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The schedulers automatically create a per-job directory for you under ``/scratch``.
+The name of this directory is stored in the ``$TMPDIR`` environment variable e.g. 
+
+On ShARC: ::
 
     [te1st@sharc-login1 ~]$ qrshx
     [te1st@sharc-node003 ~]$ cd $TMPDIR
     [te1st@sharc-node003 667443.1.all.q]$ pwd
     /scratch/667443.1.all.q
+
+On Bessemer: ::
+
+    [te1st@bessemer-login1 ~]$  srun -c 1 --mem=4G --pty bash -i
+    [te1st@bessemer-node001 ~]$ cd $TMPDIR
+    [te1st@bessemer-node001 2660172]$ pwd
+    /scratch/2660172
+
 
 The scheduler will then clean up (delete) ``$TMPDIR`` at the end of your job, 
 ensuring that the space can be used by other users.
@@ -336,11 +360,6 @@ ensuring that the space can be used by other users.
    the ``TMPDIR`` environment variable will unfortunately be undefined
    so you will need to manually create a directory under ``/scratch`` (named using your username)
    and this will not be cleaned up when the job ends.
-
-Anything under the ``/scratch`` may be deleted periodically when the worker-node is idle. 
-``/scratch`` is **not backed up**.  There are no quotas for ``/scratch`` storage.
-
-``/scratch`` uses the ext4 filesystem.
 
 -----
 

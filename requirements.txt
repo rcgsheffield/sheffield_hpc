@@ -32,4 +32,4 @@ sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 tornado==6.1
 urllib3==1.26.9
-watchdog==2.1.7
+watchdog==2.1.8

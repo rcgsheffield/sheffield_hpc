@@ -20,13 +20,12 @@ If you hit this problem you can run the command ``resetenv`` which will restore 
 I can no longer log in
 ----------------------
 
-If you are confident that you have no password entry issues, have already requested and been granted a HPC account and are connected to the VPN but you still can not log onto a cluster
-you may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file - please attempt to resolve this first by resetting 
+If you are confident that you have no password entry issues, have already requested and been granted a HPC account and are connected to the VPN but you still can not log onto a cluster,
+you may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file. Please attempt to resolve this first by resetting 
 your environment with the following command, replacing the variables appropriately: ``ssh -t $USER@$CLUSTER.shef.ac.uk 'resetenv -f'``
 
-Alternatively,  you may be having problems due to exceeding your cluster filestore quota.
-
-If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial files in your home directory get truncated which effect or prevent the login process.
+Alternatively, you may be having problems due to exceeding your cluster filestore quota. If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial 
+files in your home directory get truncated which effect or prevent the login process.
 
 If the ``resetenv -f`` command does not resolve your issue and you suspect your ``/home`` area is full , you should contact ``research-it@sheffield.ac.uk`` and ask to be unfrozen 
 providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
@@ -36,7 +35,7 @@ providing your username and a list files or folders which can be removed or temp
 I can not log into a cluster via the MyApps applications portal
 ---------------------------------------------------------------
 
-Most of the time such problems arise due to due to Java version issues. As Java updates are released regularly, these problems are usually caused by the changes to the Java plug-in for the browser.
+Most of the time such problems arise due to Java version issues. As Java updates are released regularly, these problems are usually caused by the changes to the Java plug-in for the browser.
 
 Most users can swap to using the HTML5 client to resolve these problems via the **"Client Options"** link at the bottom right of the login window and then clicking the **"To use the HTML5 Client login"** link.
 
@@ -60,14 +59,14 @@ If you are in MobaXterm, you should attempt to navigate to the folder with using
 
 .. warning::
 
-        The directory will be automatically unmounted after a period of inactivity.
+        Directories will be automatically unmounted after a period of inactivity.
 
 ------
 
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
 
-When a batch job that is initiated by using the ``qsub`` or ``sbatch`` commands, it gets allocated specific amount of real memory and run-time that you request, or a small default values.
+When a batch job is initiated by using the ``qsub`` or ``sbatch`` commands, it gets allocated specific amount of real memory and run time that you request, or small default values.
 If a job exceeds either the real memory or time limits it gets terminated immediately and usually without any warning messages.
 
 It is therefore important to estimate the amount of memory and time that is needed to run your job to completion and specify it at the time of submitting the job to the batch queue.
@@ -258,7 +257,7 @@ If you suspect that this is affecting your jobs, run the following command on th
 
         dos2unix your_files_filename
 
-You can / should set your text editor to use Linux endings to avoid this issue. 
+You should set your text editor to use Linux endings to avoid this issue. 
 
 ------
 

@@ -134,7 +134,7 @@ These errors on Bessemer will be noted in the job record or sent via email with 
 
 To query if your job has been killed due to insufficient memory please see the cluster specific "**Investigating finished jobs**" sections on our  :ref:`Job Submission and Control page <job_submission_control>`. 
 
-To request more memory and for information on how to assess sensible resource amounts please refer to our :ref:`Choosing appropriate compute resources page <choosing_appropriate_compute_resources>`.
+To request more memory and for information on how to assess sensible resource amounts please refer to our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>`.
 
 
 .. _real-vs-virt-mem:

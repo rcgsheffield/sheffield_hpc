@@ -72,7 +72,7 @@ If a job exceeds either the real memory or time limits it gets terminated immedi
 
 It is therefore important to estimate the amount of memory and time that is needed to run your job to completion and specify it at the time of submitting the job to the batch queue.
 
-Please refer to our :ref:`Choosing appropriate compute resources page <choosing_appropriate_compute_resources>` for information on how to assess sensible resource amounts and avoid these problems.
+Please refer to our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>` for information on how to assess sensible resource amounts and avoid these problems.
 
 .. tip::
 

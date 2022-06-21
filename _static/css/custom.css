@@ -50,6 +50,10 @@
     background: #fcfcfc;
     }
 
+    hr.hr-mid-section-separator-dashed {
+      border-top: 2px dashed rgba(0, 0, 0, 0.28) !important;
+      }
+
     .rst-content blockquote {
       border-left: 10px solid rgb(155, 155, 155);
       color: #333;

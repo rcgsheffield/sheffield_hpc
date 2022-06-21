@@ -37,6 +37,12 @@ commands and work on the same three basic principles:
 Key Concepts 
 ------------
 
+.. tip::
+
+    If you are not familiar with basic computer architecture we **highly recommend** reading our 
+    :ref:`General Computer Architecture Quick Start page <general_computer_architecture_quickstart>` 
+    before continuing.
+
 When engaging with our documentation several concepts must be well understood with reference to 
 schedulers and jobs which will be explained below:
 
@@ -187,6 +193,11 @@ be found on the `ShARC Parallel Environments <../../referenceinfo/scheduler/SGE/
 
 Batch Jobs
 ^^^^^^^^^^
+
+.. tip::
+
+    Batch jobs have larger resource limits than interactive jobs! For guidance on what these 
+    limits are and how best to select resources please see our :ref:`Choosing appropriate compute resources <Choosing-appropriate-compute-resources>` page.
 
 There is a single command to submit jobs via SGE:
 
@@ -356,9 +367,13 @@ Debugging failed Jobs
 .. note::
 
     One common form of job failure on ShARC is caused by Windows style line endings. If you see
-    an error reported of the form: ::
+    an error reported by ``qacct`` of the form: ::
 
         failed searching requested shell because:
+
+    Or by ``qstat`` of the form: ::
+
+        failed: No such file or directory
 
     You must replace these line endings as detailed in the :ref:`FAQ <windows_eol_issues>`.
 
@@ -463,6 +478,11 @@ Slurm Command                        Description
 
 Batch Jobs
 ^^^^^^^^^^
+
+.. tip::
+
+    Batch jobs have larger resource limits than interactive jobs! For guidance on what these 
+    limits are and how best to select resources please see our :ref:`Choosing appropriate compute resources <Choosing-appropriate-compute-resources>` page.
 
 SLURM uses a single command to submit batch jobs:
 

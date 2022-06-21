@@ -28,6 +28,12 @@ software available to other Bessemer and ShARC users by copying/installing scrip
 General background prequisites
 ------------------------------
 
+.. tip::
+
+    If you are not familiar with basic computer architecture we **highly recommend** reading our 
+    :ref:`General Computer Architecture Quick Start page <general_computer_architecture_quickstart>` 
+    before continuing.
+
 What is source code?
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -36,6 +42,8 @@ software package. Source code is transformed by a compiler into machine code tha
 executed by a computer.
 
 ---------
+
+.. _what-is-compiling:
 
 What is a compiler or compiling?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

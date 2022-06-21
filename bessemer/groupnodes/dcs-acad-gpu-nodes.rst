@@ -4,7 +4,7 @@ GPU nodes for specific Computer Science academics
 =================================================
 
 Four academics in the `Department of Computer Science <https://www.sheffield.ac.uk/dcs>`__ (DCS)
-share two GPU nodes in :ref:`Bessemer <bessemer>`.
+share two NVIDIA V100 GPU nodes in :ref:`Bessemer <bessemer>`:
 
 .. _dcs_acad_gpu_node_accounts:
 
@@ -12,22 +12,52 @@ share two GPU nodes in :ref:`Bessemer <bessemer>`.
    :header-rows: 1
 
    * - Academic
+     - Node
      - Slurm Account name
+     - Slurm Partition name
    * - `Carolina Scarton`_
+     - ``bessemer-node041``
      - ``dcs-acad1``
+     - (see notes below)
    * - `Chenghua Lin`_
+     - ``bessemer-node041``
      - ``dcs-acad2``
-   * - Matt Ellis
+     - (see notes below)
+   * - `Matt Ellis`_
+     - ``bessemer-node042``
      -  ``dcs-acad3``
+     - (see notes below)
    * - `Po Yang`_
-     - ``dcs-acad3``
+     - ``bessemer-node042``
+     - ``dcs-acad4``
+     - (see notes below)
+
+Other academics in the department have **temporary** access to some NVIDIA A100 GPU nodes in Bessemer:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Academic(s)
+     - Node
+     - Slurm Account name
+     - Slurm Partition name
+   * - `Heidi Christensen`_ / `Jon Barker`_
+     - ``gpu-node017``
+     - ``dcs-acad5``
+     - ``dcs-acad5``
+   * - `Nafise Sadat Moosavi`_
+     - ``gpu-node018``
+     - ``dcs-acad6``
+     - ``dcs-acad6``
+
 
 .. _dcs_acad_gpu_nodes_hw:
 
 Hardware specifications
 -----------------------
 
-``bessemer-node041`` and ``bessemer-node042`` each have:
+``bessemer-node041`` and ``bessemer-node042``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 0
@@ -45,14 +75,16 @@ Hardware specifications
    * - Local storage
      - 140 GB of temporary storage under ``/scratch`` (2x SSD RAID1)
 
-.. note::
+``gpu-node017`` and ``gpu-node018`` 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Most other GPU nodes in Bessemer have 32GB of GPU memory per GPU.
+See the 
+:ref:`specifications of the NVIDIA A100 nodes listed here <GPUResources_bessemer_tmp_a100_nodes>`.
 
 Requesting access
 -----------------
 
-Users other than the :ref:`four listed academics <dcs_acad_gpu_node_accounts>`
+Users other than the :ref:`listed academics <dcs_acad_gpu_node_accounts>`
 should contact one of those academics should they want access to these nodes.
 
 That academic can then grant users access to the relevant SLURM Account (e.g. ``dcs-acad1``)
@@ -67,12 +99,12 @@ Only certain users have access to a given Account.
 
 .. _dcs_acad_gpu_nodes_non_prempt_access:
 
-1. Non-preemptable access to half a node
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sharc-node041 and sharc-node042: non-preemptable access to half a node
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each of the four academics (plus their collaborators) have ring-fenced, on-demand access to the resources of half a node.
+Each of four academics (plus their collaborators) have ring-fenced, on-demand access to the resources of half a node.
 
-To submit a job via this route, you need to :ref:`specify a *Partition* and *Account* <slurm_access_priv_nodes>` when submitting a batch job or starting an interactive session:
+To submit a job via this route, you need to :ref:`specify a Partition and an Account <slurm_access_priv_nodes>` when submitting a batch job or starting an interactive session:
 
 * Partition: ``dcs-acad``
 * Account: ``dcs-acadX`` where ``X`` is 1, 2, 3 or 4 and :ref:`varies between the academics <dcs_acad_gpu_node_accounts>`).
@@ -89,10 +121,10 @@ Resource limits per job:
 .. todo::
    If using cluster-wide values for default and max run time then link to central info re that rather than duplicating here.
 
-2. Preemptable access to both nodes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sharc-node041 and sharc-node042: preemptable access to both nodes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If any of the academics (or their collaborators) want to run a larger job that requires
+If any of the four academics (or their collaborators) want to run a larger job that requires
 up to *all* the resources available in *one* of these two nodes
 then they can :ref:`specify a different Partition <slurm_access_priv_nodes>` when submitting a batch job or starting an interactive session:
 
@@ -112,20 +144,31 @@ Resource limits per job:
   i.e. multi-node jobs are not permitted.
 * Same default and maximum run-time (:ref:`as above <dcs_acad_gpu_nodes_non_prempt_access>`).
 
-.. todo::
+gpu-node017 and gpu-node018: access to a node
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Re-add the following after setting it up:
+Two sets two academics (plus their collaborators) each have access to one node.
 
-   3. General preemptable access to both nodes
+To submit a job via this route, you need to 
+:ref:`specify a Partition and an Account <slurm_access_priv_nodes>` 
+when submitting a batch job or starting an interactive session:
 
-   Users other than the academics and their collaborators can make use of idle time on these nodes and other nodes by
-   submitting batch jobs and starting interactive sessions using a :ref:`particular partition <slurm_access_priv_nodes>`:
+* Partition: ``dcs-acadX`` where ``X`` is 5 or 6 and :ref:`varies between the academics <dcs_acad_gpu_node_accounts>`).
+* Account: ``dcs-acadX`` where again ``X`` is 5 or 6.
+* QoS: do not specify one i.e. do not use the ``--qos`` parameter.
 
-   * Partition: ``preempt``
+Resource limits per job:
 
-   These jobs can be preempted by jobs submitted to the ``dcs-acad-pre`` and ``dcs-acad`` partitions.
-
+* Default run-time: 8 hours
+* Maximum run-time: 7 days
+* CPU cores: 48
+* GPUs: 4
+* Memory: 512 GB
 
 .. _Carolina Scarton: https://www.sheffield.ac.uk/dcs/people/academic/carolina-scarton
 .. _Chenghua Lin: https://www.sheffield.ac.uk/dcs/people/academic/chenghua-lin
+.. _Heidi Christensen: https://www.sheffield.ac.uk/dcs/people/academic/heidi-christensen
+.. _Jon Barker: https://www.sheffield.ac.uk/dcs/people/academic/jon-barker
+.. _Matt Ellis: https://www.sheffield.ac.uk/dcs/people/academic/matt-ellis
+.. _Nafise Sadat Moosavi: https://www.sheffield.ac.uk/dcs/people/academic/nafise-sadat-moosavi
 .. _Po Yang: https://www.sheffield.ac.uk/dcs/people/academic/po-yang

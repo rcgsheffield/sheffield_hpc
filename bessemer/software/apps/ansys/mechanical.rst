@@ -2,7 +2,7 @@
 
 .. include:: ../ansys/bessemer-sidebar.rst
 
-Mechanical / Map-DL
+Mechanical / MAPDL
 =========================
 
 .. contents::
@@ -69,3 +69,20 @@ The job is submitted to the queue by typing:
 .. code-block:: bash
 
     sbatch mech_job.sh
+
+
+-----------------------
+
+ANSYS Mechnical training and help resources
+-------------------------------------------
+
+.. important::
+
+  Academic support requests should be directed to the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_  or 
+  the `ANSYS Learning Forum <https://forum.ansys.com/>`_ (**ensure you register with your University email for priority support**).
+
+ANSYS provides numerous academic training and help resources including tutorials, video lectures and examples for structural and mechnical products. 
+A short list of the resources ANSYS maintains is summarised below:
+
+*  `"How to" youtube playlists for structural and mechnical products. <https://www.youtube.com/user/ANSYSHowToVideos/playlists?view=50&sort=dd&shelf_id=8>`_
+*  `An extensive number of free online courses on structural and mechnical products and theory <https://courses.ansys.com/index.php/structures/>`_

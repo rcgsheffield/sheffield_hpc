@@ -136,6 +136,24 @@ The job is submitted to the queue by typing:
 
     sbatch my_job_script.sh
 
+-----------------------
+
+ANSYS LS-DYNA training and help resources
+-----------------------------------------
+
+.. important::
+
+  Academic support requests should be directed to the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_  or 
+  the `ANSYS Learning Forum <https://forum.ansys.com/>`_ (**ensure you register with your University email for priority support**).
+
+ANSYS provides numerous academic training and help resources including tutorials, video lectures and examples. 
+A short list of these resources is summarised below:
+
+* `ANSYS provides free online Innovation Courses <https://courses.ansys.com>`_ which cover numerous topics including the theory and implementation of modelling with ANSYS products.
+* The `ANSYS How to Videos channel <https://www.youtube.com/user/ANSYSHowToVideos/playlists>`_ has many in depth tutorials for many ANSYS products.
+
+.. ANSYS as yet does not appear to give specific LS-DYNA videos or courses.
+
 --------------------
 
 Notes

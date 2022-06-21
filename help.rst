@@ -4,7 +4,7 @@
 Need help?
 ==========
 
-If you need some help Research and Innovation IT have a lot of resources available to help you, please 
+If you need some help the Research and Innovation team in IT Services have a lot of resources available to help you, please 
 read through these resources below to find the most appropriate resources for your issues.
 
 ------
@@ -32,16 +32,16 @@ please have a look through the sections for :ref:`job debugging on ShARC <job_de
     Please make sure you check through our resources prior to contacting us as we are a small team with limited resources.
 
 If you are still having issues or need specific advice e.g. how to best parallelise your workflow, please contact 
-`Research IT <mailto:research-it@sheffield.ac.uk>`_ or if you have more specific queries about programming / coding for HPC clusters e.g. CUDA programming please contact
-the `Research Software Engineering Group <https://rse.shef.ac.uk/contact/>`_.
+`IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_ or if you have more specific queries about programming / coding for HPC clusters e.g. CUDA programming please contact
+the `Research Software Engineering team <https://rse.shef.ac.uk/contact/>`_.
 
 ------
 
 HPC training?
 -------------
 
-Research IT Training courses
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IT Services' Research and Innovation courses
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are new to the cluster, have never used Linux or HPC before you should attend the RIT 101 (Introduction to Linux), 
 102 (Linux Shell Scripting Tutorial) and 103 (Introduction to Running Software on the HPC) courses.
@@ -49,19 +49,12 @@ If you are new to the cluster, have never used Linux or HPC before you should at
 These courses are very popular and run through both semesters. You can register for these courses at the course registration 
 website: https://crs.shef.ac.uk (Only accessible with the VPN turned on.)
 
-Research IT Training index
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+IT Services' Research and Innovation training index
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Research IT training index is a website which will allow you to search for internal (to TUoS) and external training resources 
+The `Research and Innovation team's training index <https://rcgsheffield.github.io/TUoS-RIT-training-resources/training.html>`__ 
+allows you to search for internal (to TUoS) and external training resources 
 covering categories including HPC, Data Analysis / Visualisation, containerisation as well as domain specific resources such as 
 FEA, CFD, Chemistry and more.
 
 This site is currently in beta and more links are resources are being added.
-
-The site can be found at: https://rcgsheffield.github.io/TUoS-RIT-training-resources/training.html
-
-
-
-
-
-

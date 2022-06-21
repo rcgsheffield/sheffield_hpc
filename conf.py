@@ -37,9 +37,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Sheffield HPC Documentation'
-copyright = u'2021, The University of Sheffield'
-author = u'The University of Sheffield'
+project = 'Sheffield HPC Documentation'
+copyright = '2022, The University of Sheffield'
+author = 'The University of Sheffield'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -95,8 +95,8 @@ html_theme_options = {
 #                       'navbar_title': ' ',
 #                       'navbar_links': [
 #                           ("Home", "index"),
-#                           ("Research Computing @ IT Services", "https://www.shef.ac.uk/it-services/research", True),
-#                           ("Research Software Engineering @ TUOS", "https://rse.shef.ac.uk", True)
+#                           ("Research and Innovation team, IT Services", "https://students.sheffield.ac.uk/it-services/research", True),
+#                           ("Research Software Engineering", "https://rse.shef.ac.uk", True)
 #                       ],
 #                       'globaltoc_depth': 1}
 

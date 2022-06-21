@@ -19,7 +19,7 @@ home area. This page will guide you through loading conda and then creating and
 modifying environments so you can install and use whatever Python packages you
 need.
 
-Using conda Python
+Using Conda Python
 ------------------
 
 After connecting to Bessemer, start an interactive session
@@ -41,8 +41,8 @@ as a base for your own environments.
 
 .. _python_conda_bessemer_create_env:
 
-Creating an Environment
-#######################
+Creating a Conda Environment
+----------------------------
 
 Every user can create their own environments, and packages shared with the
 system-wide environments will not be reinstalled or copied to your file store,
@@ -58,7 +58,7 @@ environment named ``mynumpy``.
 
 Any version of Python or list of packages can be provided::
 
-    conda create -n myscience python=3.5 numpy=1.8.1 scipy
+    conda create -n myscience python=3.5 numpy=1.15.2 scipy
 
 If you wish to modify an existing environment, such as one of the anaconda
 installations, you can ``clone`` that environment::
@@ -69,8 +69,8 @@ This will create an environment called ``myexperiment`` which has all the
 same conda packages as the ``myscience`` environment.
 
 
-Installing Packages Inside an Environment
-#########################################
+Installing Packages Inside a Conda Environment
+----------------------------------------------
 
 Once you have created your own environment you can install additional packages
 or different versions of packages into it. There are two methods for doing
@@ -97,7 +97,7 @@ using pip, *i.e.*::
 
 
 Using conda Environments
-########################
+------------------------
 
 Once the conda module is loaded you have to load or create the desired
 conda environments. For the documentation on conda environments see
@@ -122,8 +122,8 @@ installed with the anaconda version number in the environment name, and never
 modified. They will therefore provide a static base for derivative environments
 or for using directly.
 
-Using conda and Python in a batch job
-#####################################
+Using Conda and Python in a batch job
+-------------------------------------
 
 Create a batch job submission script called ``myscript.slurm`` that is similar to the following:
 
@@ -147,3 +147,8 @@ Then submit this to Slurm by running:
 
    sbatch myscript.slurm
 
+
+Further Conda Python Learning Resources
+---------------------------------------
+
+.. include:: /referenceinfo/imports/software/python/python_learning_resources_import.rst

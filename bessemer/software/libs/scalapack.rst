@@ -1,7 +1,7 @@
 .. _scalapack_bessemer:
 
 ScaLAPACK
-#========
+=========
 
 .. sidebar:: ScaLAPACK
    

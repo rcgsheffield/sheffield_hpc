@@ -133,7 +133,7 @@ To load external libraries you should  :ref:`search for a module <search_env_mod
 build chain of the R version you are using to avoid load conflicts e.g. for R 4.0.0, foss-2020a.
 
 To request the installation of dependencies for R packages that depend on non-R libraries
-please contact ``it-servicedesk@sheffield.ac.uk``.
+please contact ``research-it@sheffield.ac.uk``.
 
 Using the Rmath library in C Programs
 -------------------------------------

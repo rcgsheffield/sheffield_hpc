@@ -5,79 +5,140 @@ Frequently Asked Questions
 In this section, we'll discuss some tips for solving problems with Bessemer and ShARC.
 It is suggested that you work through some of the ideas here before contacting the IT Services Helpdesk for assistance.
 
+------
 
-Strange things are happening with my terminal
----------------------------------------------
-Symptoms include many of the commands not working and just ``bash-4.1$`` being displayed instead of your username at the bash prompt.
+Strange things are happening with my terminal or my terminal seems broken
+-------------------------------------------------------------------------
 
-This may be because you've deleted your ``.bashrc`` and ``.bash_profile`` files - these are 'hidden' files which live in your home directory and are used to correctly set up your environment.  If you hit this problem you can run the command ``resetenv`` which will restore the default files.
+Symptoms include many of the commands not working and just ``bash-4.1$`` or ``sh-4.2$`` being displayed instead of your username at the bash prompt.
+
+This may be because you've deleted your ``.bashrc`` and ``.bash_profile`` files - these are 'hidden' files which live in your home directory and are used to correctly set up your shell environment.  
+If you hit this problem you can run the command ``resetenv`` which will restore the default files, then you should logout and log back in.
+
+------
 
 I can no longer log in
 ----------------------
-If you are confident that you have no password or remote-access-client related issues but you still can not log onto a cluster you may be having problems due to exceeding your cluster filestore quota.
-If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial system files in your home directory gets truncated that effect the subsequent login process.
 
-You may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file - please attempt to resolve this first by resetting your environment with the following command, replacing the variables appropriately: ``ssh -t $USER@$CLUSTER.shef.ac.uk 'resetenv -f'``
+If you are confident that you have no password entry issues, have already requested and been granted a HPC account and are connected to the VPN but you still can not log onto a cluster,
+you may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file. Please attempt to resolve this first by resetting 
+your environment with the following command, replacing the variables appropriately: ``ssh -t $USER@$CLUSTER.shef.ac.uk 'resetenv -f'``
 
-If this does not resolve your issue and you suspect your ``/home`` area is full , you should immediately email ``research-it@sheffield.ac.uk`` and ask to be unfrozen.
+Alternatively, you may be having problems due to exceeding your cluster filestore quota. If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial 
+files in your home directory get truncated which effect or prevent the login process.
+
+If the ``resetenv -f`` command does not resolve your issue and you suspect your ``/home`` area is full , you should contact ``research-it@sheffield.ac.uk`` and ask to be unfrozen 
+providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
+
+------
 
 I can not log into a cluster via the MyApps applications portal
 ---------------------------------------------------------------
-Most of the time such problems arise due to due to Java version issues. As Java updates are released regularly, these problems are usually caused by the changes to the Java plug-in for the browser.
-Follow the trouble-shooting link from the `browser-access page <https://www.sheffield.ac.uk/it-services/research/hpc/using/access/browser>`_ to resolve these problems. There is also a link on that page to test the functionality of your java plug-in. It can also help to try a different browser to see if it makes any difference.
-All failing, you may have to fall back to one of the `non-browser access methods <https://www.sheffield.ac.uk/it-services/research/hpc/using/access>`_.
+
+Most of the time such problems arise due to Java version issues. As Java updates are released regularly, these problems are usually caused by the changes to the Java plug-in for the browser.
+
+Most users can swap to using the HTML5 client to resolve these problems via the **"Client Options"** link at the bottom right of the login window and then clicking the **"To use the HTML5 Client login"** link.
+
+It can also help to try a different browser to see if it makes any difference.
+All failing, you may have to fall back to one of the `non-browser access methods <https://docs.hpc.shef.ac.uk/en/latest/hpc/connecting.html#connecting-to-a-cluster-using-ssh>`_.
+
+------
 
 I cannot see my folders in /data or /shared
 -------------------------------------------
-Some directories such as ``/data/<your username>`` or ``/shared/<your project/`` are made available **on-demand**:.
-For example, if your username is `ab1def` and you look in `/data` straight after logging in, you may not see `/data/ab1def`.
-The directory is there, it has just not been made available (via a process called **mounting**) to you automatically.
-When you attempt to do something with the directory such as ``ls /data/ab1def`` or ``cd /data/ab1def``, the directory will be mounted automatically and will appear to you.
-The directory will be automatically unmounted after a period of inactivity.
+
+Some directories such as ``/data/<your username>`` or ``/shared/<your project/`` are only made available **on-demand**:.
+For example, if your username is `te1st` and you look in ``/data`` straight after logging in, you may not see ``/data/te1st`` in your terminal or MobaXterm file browser.
+
+The directory is there, it has just not been made available (via a process called **mounting**) to you automatically yet.
+
+When you attempt to do something with the directory such as ``ls /data/te1st`` or ``cd /data/te1st`` in the terminal, the directory will be mounted automatically and will appear to you.
+
+If you are in MobaXterm, you should attempt to navigate to the folder with using the file browser path entry / display box, then hit the refresh button.
+
+
+.. warning::
+
+        Directories will be automatically unmounted after a period of inactivity.
+
+------
 
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
 
-When a batch job that is initiated by using the ``qsub`` command or ``runfluent``, ``runansys`` or ``runabaqus`` commands, it gets allocated specific amount of real memory and run-time.
+When a batch job is initiated by using the ``qsub`` or ``sbatch`` commands, it gets allocated specific amount of real memory and run time that you request, or small default values.
 If a job exceeds either the real memory or time limits it gets terminated immediately and usually without any warning messages.
 
 It is therefore important to estimate the amount of memory and time that is needed to run your job to completion and specify it at the time of submitting the job to the batch queue.
 
-..
-   Please refer to the section on `hitting-limits and estimating-resources <https://www.shef.ac.uk/it-services/research/hpc/iceberg/requirements>`_ for information on how to avoid these problems.
+Please refer to our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>` for information on how to assess sensible resource amounts and avoid these problems.
 
-Exceeding your disk space quota
--------------------------------
-Each user of the system has a fixed amount of disk space available in their home directory.
-If you exceed this quota, various problems can emerge such as an inability to launch applications and run jobs.
-To see if you have exceeded your disk space quota, run the ``quota`` command:
+.. tip::
+
+        If you are confident that the scheduler is not terminating your job, but your job is prematurely stopping, please check if you have attempted to exceed your disk space quota, instructions for this are seen below.
+
+------
+
+"No space left on device" errors and jobs prematurely stopping
+--------------------------------------------------------------
+
+Each user of the system has a fixed amount of disk space available in their home directory. If you see an error in your job's logs indicating "No space left on device" 
+it is likely that your quota has ran out.
+
+If you attempt to exceed this quota, various problems can emerge such as an inability to launch applications or run jobs, the inability to login or abruptly terminated jobs 
+as programs or executables are now unable to write to your ``/home`` folder.
+To see if you are attempting to exceed your disk space quota, run the ``quota`` command:
 
 .. code-block:: console
 
-       [foo11b@sharc-node004 binary]$ quota
+       [te1st@sharc-node004 ~]$ quota
 
        Size  Used Avail Use%  Mounted on
-       10G    10G    0G 100%  /home/foo11b
-       100G     0  100G   0%  /data/foo11b
+       10G    10G    0G 100%  /home/te1st
+       100G     0  100G   0%  /data/te1st
 
-In the above, you can see that the quota was set to 10 gigabytes and all of this is in use.
+In the above, you can see that the quota is 10 gigabytes and all of this is currently in use.
 Any jobs submitted by this user will likely result in an ``Eqw`` status.
-The recommended action is for the user to delete enough files to allow normal work to continue.
+The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
 
 To assess what is using up your quota within a given directory, you can make use of the 
 :ref:`ncdu module on ShARC <ncdu_sharc>` or the 
 :ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
-interactive display of what files/folders are taking up storage in a given directory tree.
+interactive display of wihch files or folders are taking up storage in a given directory tree.
 
-Sometimes, it is not possible to log in to the system because of a full quota,
-in which case you need to contact ``research-it@sheffield.ac.uk`` and ask to the unfrozen.
+Sometimes, it is not possible to log in to the system because of a full quota. In this situation you should contact ``research-it@sheffield.ac.uk`` 
+to ask for assistance, providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
+
+------
 
 I am getting warning messages and warning emails from my batch jobs about insufficient memory
 ---------------------------------------------------------------------------------------------
 
-If a job exceeds its real memory resource it gets terminated. You can use the ``rmem=`` parameter to increase the amount of real memory that your job requests.
+If a job exceeds its real memory resource it gets terminated. 
+
+These errors on ShARC will be noted in the job record or sent via email and will resemble: ::
+
+        failed qmaster enforced h_rt, h_cpu, or h_vmem limit because:
+        job 1345678.1 died through signal KILL (9)
+
+.. tip::
+
+        This error from ShARC can also indicate the job has ran out of time (**h_rt**).
+
+
+These errors on Bessemer will be noted in the job record or sent via email with a subject line resembling: ::
+
+        Slurm Job_id=12345678 Name=job.sh Failed, Run time 00:11:06, OUT_OF_MEMORY
+
+
+To query if your job has been killed due to insufficient memory please see the cluster specific "**Investigating finished jobs**" sections on our  :ref:`Job Submission and Control page <job_submission_control>`. 
+
+To request more memory and for information on how to assess sensible resource amounts please refer to our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>`.
+
 
 .. _real-vs-virt-mem:
+
+------
 
 What are the rmem (real memory) and (deprecated) mem (virtual memory) options?
 ------------------------------------------------------------------------------
@@ -107,23 +168,41 @@ it will result in waste of RAM resources which will be idle duration of that job
 * The virtual memory limit defined by the ``-l mem`` cluster scheduler parameter defines the maximum amount of virtual memory your job will be allowed to use. **This option is now deprecated** - you can continue to submit jobs requesting virtual memory, however the scheduler **no longer applies any limits to this resource**.
 * The real memory limit is defined by the ``-l rmem`` cluster scheduler parameter and defines the amount of RAM that will be allocated to your job.  The job scheduler will terminate jobs which exceed their real memory resource request.
 
-.. note::
+.. hint::
 
    As mentioned above, jobs now need to just request real memory and are policed using real memory usage.  The reasons for this are:
 
    * For best performance it is preferable to request as much real memory as the virtual memory storage requirements of a program as paging impacts on performance and memory is (relatively) cheap.
    * Real memory is more tangible to newer users.
 
+------
+
 Insufficient memory in an interactive session
 ---------------------------------------------
+
 By default, an interactive session provides you with 2 Gigabytes of RAM (sometimes called real memory).
-You can request more than this when running your ``qrshx``/``qsh``/``qrsh`` command e.g.: ::
+You can request more than this when running your ``qrshx``, ``qsh``, ``qrsh`` or ``srun`` command.
 
-        qrshx -l rmem=8G
+For ShARC (SGE scheduler):
 
-This asks for 8 Gigabytes of RAM (real memory). Note that you should:
+.. code-block:: console
 
-* not specify more than 256 GB of RAM (real memory) (``rmem``)
+        $ qrshx -l rmem=8G
+
+For Bessemer (SLURM scheduler):
+
+.. code-block:: console
+
+        $ srun --mem=8G --pty bash -i 
+
+This asks for 8 Gigabytes of RAM (real memory). 
+
+.. hint::
+
+        You cannot request more memory than a single node possesses and the larger the memory request, the less likely the interactive session request is to succeed. 
+        Please see the cluster specific "**Interactive jobs**" sections on our  :ref:`Job Submission and Control page <job_submission_control>`.
+
+------
 
 'Illegal Instruction' errors
 ----------------------------
@@ -134,7 +213,7 @@ If you get this error **after copying compiled programs onto a cluster** then yo
 
 If however you get this error when **running programs on the cluster that you have also compiled on the cluster** then you may have compiled on one processor type and be running on a different type.
 You may not consistently get the *illegal instruction* error here as the scheduler may allocate you a different type of processor every time you run your program.
-you can either recompile your program without optimisations for processor architecture or force your job to run on the type of processor it was compiled on using the ``-l arch=`` ``qsub``/``qrsh``/``qsh`` parameter e.g.
+You can either recompile your program without optimisations for processor architecture or force your job to run on the type of processor it was compiled on using the ``-l arch=`` ``qsub``/``qrsh``/``qsh`` parameter e.g.
 
 * ``-l arch=intel*`` to avoid being allocated one of the few AMD-powered nodes
 * ``-l arch=intel-x5650`` to use the Intel Westmere CPU architecture
@@ -146,49 +225,71 @@ If you know the node that a program was compiled on but do not know the CPU arch
 
 .. _windows_eol_issues:
 
-Windows-style line endings
---------------------------
-If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the system. A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and you are presented with an error message containing: ::
+------
+
+"failed: No such file or directory" or "failed searching requested shell" errors
+--------------------------------------------------------------------------------
+
+If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the HPC systems. 
+A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and when you query the job with ``qacct`` you 
+are presented with an error message containing: ::
 
         failed searching requested shell because:
 
-The reason for this behaviour is that Windows and Unix machines have different conventions for specifying 'end of line' in text files. Windows uses the control characters for 'carriage return' followed by 'linefeed', ``\r\n``, whereas Unix uses just 'linefeed' ``\n``.
+Or if you query the ``Eqw`` job with ``qstat`` ::
 
-The practical upshot of this is that a script prepared in Windows using Notepad looking like this: ::
+        failed: No such file or directory
+
+The reason for this behaviour is that Windows and Unix machines have different conventions for specifying 'end of line' in text files. Windows uses the 
+control characters for 'carriage return' followed by 'linefeed', ``\r\n``, whereas Unix uses just 'linefeed' ``\n``.
+
+This means a script prepared in Windows using Notepad whichs looks like this: ::
 
         #!/bin/bash
         echo 'hello world'
 
 will look like the following to programs on a Unix system: ::
 
-        #!/bin/bash\r
-        echo 'hello world'\r
+        #!/bin/bash\r\n
+        echo 'hello world'\r\n
 
 If you suspect that this is affecting your jobs, run the following command on the system: ::
 
         dos2unix your_files_filename
 
-You can / should set your text editor to use Linux endings to avoid this issue.
+You should set your text editor to use Linux endings to avoid this issue. 
+
+------
 
 error: no DISPLAY variable found with interactive job
 -----------------------------------------------------
+
 If you receive the error message: ::
 
         error: no DISPLAY variable found with interactive job
 
 the most likely cause is that you forgot the ``-X`` switch when you logged into the cluster. That is, you might have typed: ::
 
-        ssh username@clustername.sheffield.ac.uk
+        ssh username@clustername.shef.ac.uk
 
 instead of: ::
 
-        ssh -X username@clustername.sheffield.ac.uk
+        ssh -X username@clustername.shef.ac.uk
 
 macOS users might also encounter this issue if their `XQuartz <https://www.xquartz.org/>`_ is not up to date.
 
+macOS users should also try ``-Y`` if ``-X`` is not working:
+
+::
+
+        ssh -Y username@clustername.shef.ac.uk
+
+------
+
 Problems connecting with WinSCP
 -------------------------------
-Some users have reported issues while connetcing to the system using WinSCP, usually when working from home with a poor connection and when accessing folders with large numbers of files.
+
+Some users have reported issues while connecting to the system using WinSCP, usually when working from home with a poor connection and when accessing folders with large numbers of files.
 
 In these instances, turning off ``Optimize Connection Buffer Size`` in WinSCP can help:
 
@@ -199,16 +300,30 @@ In these instances, turning off ``Optimize Connection Buffer Size`` in WinSCP ca
 * Click on connection
 * Untick the box which says ``Optimize Connection Buffer Size``
 
+------
+
+Problems connecting with Filezilla due to MFA
+---------------------------------------------
+
+Due to the change to the use of MFA (multi-factor authentication) two simple changes are needed to connect using Filezilla to the HPC clusters.
+
+*  Change the logon type to interactive login.
+*  Limit the number of simultaneous connections to 1.
+
+Detailed instructions are contained in the following link: https://unm-student.custhelp.com/app/answers/detail/a_id/7857/~/filezilla-ftp-configuration-for-duo-mfa-protected-linux-servers
+
+------
+
 Strange fonts or errors re missing fonts when trying to start a graphical application
 -------------------------------------------------------------------------------------
 
 Certain programs require esoteric fonts to be installed on the machine running the X server (i.e. your local machine).
-Example of such programs are ``qmon``, a graphical interface to the Grid Engine scheduling software, and the Ansys software.
-If you try to run ``qmon`` or Ansys **on a Linux machine** and see strange symbols instead of the Latin alphabet or get an error message that includes: ::
+Example of such programs are ``qmon``, a graphical interface to the Grid Engine scheduling software, and the ANSYS software.
+If you try to run ``qmon`` or ANSYS software **on a Linux machine** and see strange symbols instead of the Latin alphabet or get an error message that includes: ::
 
         X Error of failed request: BadName (named color or font does not exist)
 
-then you should try running the following **on your own machine**: ::
+Then you should try running the following **on your own machine**: ::
 
         for i in 75dpi 100dpi; do
             sudo apt-get install xfonts-75dpi
@@ -218,15 +333,19 @@ then you should try running the following **on your own machine**: ::
             xset fp+ /usr/share/fonts/X11/$i
         done
 
-Note that these instructions are Ubuntu/Debian-specific; on other systems package names and paths may differ.
+.. warning::
 
-Next, try :ref:`connecting to a cluster <connecting>` using ``ssh -X clustername``, start a graphical session then try running ``qmon``/Ansys again.
-If you can now run ``qmon``/Ansys without problems
-then you need to add two lines to the ``.xinitrc`` file in your home directory **on your own machine**
+        Note that these instructions are Ubuntu/Debian-specific; on other systems package names, paths and commands may differ.
+
+Next, try :ref:`connecting to a cluster <connecting>` using ``ssh -X clustername.shef.ac.uk``, start a graphical session then try running ``qmon`` or ANSYS software again.
+
+If you can now run ``qmon`` or ANSYS software without problems then you need to add two lines to the ``.xinitrc`` file in your home directory **on your own machine**
 so this solution will continue to work following a reboot of your machine: ::
 
         FontPath /usr/share/fonts/X11/100dpi
         FontPath /usr/share/fonts/X11/75dpi
+
+------
 
 Can I run programs that need to be able to talk to an audio device?
 -------------------------------------------------------------------
@@ -236,6 +355,8 @@ On ShARC all worker nodes have a dummy sound device installed
 
 This may be useful if you wish to run a program that expects to be able to output audio (and crashes if no sound device is found)
 but you don't actually want to monitor that audio output.
+
+------
 
 Login node RSA/ECDSA/ED25519 fingerprints
 -----------------------------------------
@@ -252,6 +373,8 @@ The RSA, ECDSA and ED25519 fingerprints for Bessemer's login nodes are: ::
    SHA256:eG/eFhOXyKS77WCsMmkDwZSV4t7y/D8zBFHt1mFP280 (ECDSA)
    SHA256:TVzevzGC2uz8r1Z16MB9C9xEQpm7DAJC4tcSvYSD36k (ED25519)
 
+------
+
 Issue when running multiple MPI jobs in sequence
 ------------------------------------------------
 
@@ -261,11 +384,15 @@ complaining about not being able to communicate with the ``orted`` daemon on oth
 This appears to be something to do with multiple ``mpirun`` commands being called quickly in succession,
 and connections not being pulled down and new connections established quickly enough.
 
-Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e. ::
+Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e. 
+
+.. code-block:: console
 
   mpirun program1
   sleep 5s
   mpirun program2
+
+------
 
 .. _unnamed_groups:
 
@@ -281,8 +408,12 @@ These groups have numeric IDs but no names, which can result in harmless warning
 
 See ``man 8 pam_sge-qrsh-setup`` for the details of how and why Grid Engine creates these groups.
 
+------
+
 Using 'sudo' to install software on the clusters
 ------------------------------------------------
 
-HPC users do not have sufficient access privileges to use sudo to install software (in /usr/local). Users can however install applications in their /home or /data directories.
-The webpage `Installing Applications on Bessemer and ShARC <https://www.sheffield.ac.uk/it-services/research/hpc/using/install>`_ provides guidance on how to do this.
+HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators. 
+Users can however install applications in their ``/home`` or ``/data`` directories.
+
+The webpage `Installing Applications on Bessemer and ShARC <https://docs.hpc.shef.ac.uk/en/latest/hpc/installing-software.html>`_ provides guidance on how to do this.

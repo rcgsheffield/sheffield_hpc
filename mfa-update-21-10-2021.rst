@@ -23,10 +23,3 @@ The purpose of this layer to the HPC login procedure is to protect your research
 If you are having issues with Filezilla transfers please see our `new instructions <https://notesrcg.blogspot.com/2021/10/mfa-on-hpc-login-nodes-how-to-use.html>`_.
 
 If you are having issues with MobaXterm file transfer windows not loading, please recreate your profiles as instructed on our :ref:`connection instructions <mobaxterm_connecting_profile_setup>` page.
-
-
-*Best wishes,*
-
-*Research-IT*
-
-

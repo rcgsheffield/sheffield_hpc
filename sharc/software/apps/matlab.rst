@@ -5,7 +5,7 @@ MATLAB
 
 .. sidebar:: MATLAB
 
-   :Versions:  2013a, 2016a, 2016b, 2017a, 2017b, 2018a, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b 
+   :Versions:  2013a, 2016a, 2016b, 2017a, 2017b, 2018a, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, 2022a 
    :Support Level: FULL
    :Dependancies: None
    :URL: http://uk.mathworks.com/products/matlab
@@ -17,7 +17,7 @@ Interactive usage
 -----------------
 After connecting to ShARC (see :ref:`ssh`),  start an interactive session with the ``qrshx`` command.
 
-The latest version of MATLAB (currently 2021b) is made available by running:
+The latest version of MATLAB (currently 2022a) is made available by running:
 
 .. code-block:: bash
 
@@ -27,19 +27,11 @@ Alternatively, you can load a specific version with one of the following command
 
 .. code-block:: bash
 
-   module load apps/matlab/2013a/binary
-   module load apps/matlab/2016a/binary
-   module load apps/matlab/2016b/binary
-   module load apps/matlab/2017a/binary
-   module load apps/matlab/2017b/binary
-   module load apps/matlab/2018a/binary
-   module load apps/matlab/2018b/binary
-   module load apps/matlab/2019a/binary
-   module load apps/matlab/2019b/binary
    module load apps/matlab/2020a/binary
    module load apps/matlab/2020b/binary
    module load apps/matlab/2021a/binary
    module load apps/matlab/2021b/binary
+   module load apps/matlab/2022a/binary
 
 You can then run MATLAB by entering ``matlab``.
 
@@ -61,7 +53,7 @@ We assume you'll call this ``my_job.sge``:
    #!/bin/bash
    #$ -l rmem=4G                  		# Request  4 GB of real memory
    #$ -cwd                        		# Run job from current directory
-   module load apps/matlab/2021b/binary  	# Make specific version of MATLAB available
+   module load apps/matlab/2022a/binary  	# Make specific version of MATLAB available
 
    matlab -nodesktop -nosplash -r helloworld
 
@@ -89,8 +81,8 @@ To compile a MATLAB function or script for example called ``myscript.m`` the fol
 
 .. code-block:: bash
 
-   # Load the matlab 2021b module
-   module load apps/matlab/2021b/binary  
+   # Load the matlab 2022a module
+   module load apps/matlab/2022a/binary  
 
    # Compile your program to generate the executable myscript and 
    # also generate a shell script named run_myscript.sh 
@@ -139,7 +131,7 @@ An example batch script ``my_parallel_job.sh`` is:
    #$ -m bea
    #$ -j y
 
-   module load apps/matlab/2021b/binary
+   module load apps/matlab/2022a/binary
 
    # Run parallel_example.m
    matlab -nodisplay -r parallel_example
@@ -181,7 +173,7 @@ Parallel MATLAB using multiple nodes is restricted to 32 cores.
 The user must first configure MATLAB for cluster usage by starting MATLAB interactively.
 This is done by logging into ShARC, 
 launching a ``qrshx`` session, 
-loading a version of MATLAB (e.g. using ``module load apps/matlab/2021b``) and 
+loading a version of MATLAB (e.g. using ``module load apps/matlab/2022a``) and 
 launching MATLAB with ``matlab``. 
 You then need to type the following at the prompt within the MATLAB GUI:
 
@@ -201,7 +193,7 @@ An example batch script ``submit_Matlab_mpi.sh`` is:
    #$ -m bea
    #$ -j y
 
-   module load apps/matlab/2021b/binary
+   module load apps/matlab/2022a/binary
 
    # Run parallel_example.m
    matlab -nodisplay -nosplash -r submit_matlab_fnc
@@ -291,8 +283,8 @@ Installation and configuration is a five-stage process:
 In more detail:
 
 #. If necessary, update the floating license keys on ``matlablm.shef.ac.uk`` to ensure that the licenses are served for the versions to install.
-#. Log on to Mathworks site to download the MATLAB installer package for 64-bit Linux ( for R2021b this was called ``matlab_R2021b_glnxa64.zip`` )
-#. ``unzip`` the installer package in a directory with ~15GB of space (needed as many MATLAB *archive* files will subsequently be downloaded here).  Using a directory on an NFS mount (e.g. ``/data/${USER}/MathWorks/R2021b``) allows the same downloaded archives to be used to install MATLAB on multiple clusters.
+#. Log on to Mathworks site to download the MATLAB installer package for 64-bit Linux ( for R2022a this was called ``matlab_R2022a_glnxa64.zip`` )
+#. ``unzip`` the installer package in a directory with ~15GB of space (needed as many MATLAB *archive* files will subsequently be downloaded here).  Using a directory on an NFS mount (e.g. ``/data/${USER}/MathWorks/R2022a``) allows the same downloaded archives to be used to install MATLAB on multiple clusters.
 #. ``./install`` to start the graphical installer (needed to download the MATLAB archive files).
 #. Select install choice of *Log in to Mathworks Account* and log in with a *License Administrator* account (not a *Licensed End User* (personal) account).
 #. Select *Download only*.
@@ -301,7 +293,7 @@ In more detail:
     
     fileInstallationKey=XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
     agreeToLicense=yes
-    outputFile=matlab_2021b_install.log
+    outputFile=matlab_2022a_install.log
     mode=silent
     licensePath=/usr/local/packages/matlab/network.lic
     lmgrFiles=false
@@ -309,20 +301,20 @@ In more detail:
 
 #. Create the installation directory e.g.: ::
 
-    mkdir -m 2755 -p /usr/local/packages/apps/matlab/R2021b/binary
-    chown ${USER}:app-admins /usr/local/packages/apps/matlab/R2021b/binary
+    mkdir -m 2755 -p /usr/local/packages/apps/matlab/R2022a/binary
+    chown ${USER}:app-admins /usr/local/packages/apps/matlab/R2022a/binary
 
 #. Run the installer using our customized ``installer_input.txt`` like so: ``./install -mode silent -inputFile ${PWD}/installer_input.txt`` ; installation should finish with exit status ``0`` if all has worked.
 #. Ensure the contents of the install directory and the modulefile are writable by those in ``app-admins`` group e.g.: ::
 
-    chmod -R g+w ${USER}:app-admins /usr/local/packages/apps/matlab/R2021b /usr/local/modulefiles/apps/matlab/2021b
+    chmod -R g+w ${USER}:app-admins /usr/local/packages/apps/matlab/R2022a /usr/local/modulefiles/apps/matlab/2022a
 
-#. The modulefile is :download:`/usr/local/modulefiles/apps/matlab/2021b/binary </sharc/software/modulefiles/apps/matlab/2021b/binary>`.
+#. The modulefile is :download:`/usr/local/modulefiles/apps/matlab/2022a/binary </sharc/software/modulefiles/apps/matlab/2022a/binary>`.
 
 #. Copy integration scripts to MATLAB local directory (required for MATLAB parallel (multi-node)): ::
 
-    cd /usr/local/packages/apps/matlab/2021b/binary/toolbox/local
-    cp -r /usr/local/packages/apps/matlab/parallel_mpi_integration_scripts_2021b/* .
+    cd /usr/local/packages/apps/matlab/2022a/binary/toolbox/local
+    cp -r /usr/local/packages/apps/matlab/parallel_mpi_integration_scripts_2022a/* .
     NOTE: for all other Matlab versions
     cp -r /usr/local/packages/apps/matlab/parallel_mpi_integration_scripts/* .
 

@@ -47,8 +47,12 @@
     top: -0.7em;
     font-size: 1.5em;
     padding: 0 0.25em;
-    background: white;
+    background: #fcfcfc;
     }
+
+    hr.hr-mid-section-separator-dashed {
+      border-top: 2px dashed rgba(0, 0, 0, 0.28) !important;
+      }
 
     .rst-content blockquote {
       border-left: 10px solid rgb(155, 155, 155);

@@ -122,7 +122,7 @@ Next, create a batch job submission script like the following (for serial testin
 
         module purge
         module load apps/gulp/4.4/intel-17.0.0
-        export OMP_NUM_THREADS=1
+        export OMP_NUM_THREADS=$NSLOTS
 
         for infile in ./example*.gin; do
             outfile=${infile/gin/got}

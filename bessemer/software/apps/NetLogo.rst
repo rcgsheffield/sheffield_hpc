@@ -113,7 +113,7 @@ multicore NetLogo jobs.
 
 .. code-block:: shell
 
-    !/bin/bash
+    #!/bin/bash
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=4
     #SBATCH --mem=8000
@@ -149,6 +149,10 @@ Installation method
 
 |softwarename| version 6.2.0 was installed using Easybuild 4.4.0, build details can be found 
 in ``/usr/local/packages/live/eb/NetLogo/6.2.0-64/easybuild/``
+
+The NetLogo configuration files (.cfg) at ``/usr/local/packages/live/eb/NetLogo/6.2.0-64/app/`` have been amended 
+to permit a larger default JVM "maximum Java heapsize" of 192GB RAM. For further details see: 
+https://ccl.northwestern.edu/netlogo/docs/faq.html#how-big-can-my-model-be-how-many-turtles-patches-procedures-buttons-and-so-on-can-my-model-contain
 
 
 --------

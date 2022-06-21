@@ -24,6 +24,26 @@ The storage areas differ in terms of:
   and the maximum duration data can be retained for;
 * whether they handle permissions like a typical Linux filesystem.
 
+-----
+
+Choosing the correct filestore
+------------------------------
+
+To make a quick assessment of what storage area is likely to best fulfil your needs, please take a look at the provided decision tree below:
+
+.. warning::
+
+  This decision tree only provides a quick assessment, please check the full details of each filestore before committing to using them for your work.
+
+.. raw:: html
+
+  <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;zoom&quot;:0.75,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-05-17T10:51:33.887Z\&quot; agent=\&quot;5.0 (X11)\&quot; etag=\&quot;aTNH6U6dok4a2rC7qD6_\&quot; version=\&quot;18.0.5\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;9c096ad6-e400-ecc8-3e38-643d2caac077\&quot;&gt;7V1Zd9q6Fv41PIZlefZjhpP2nJVzV29zV9M+dSkgsFtjUVs0pL/+Sh4ASwIU4kEkfkmwPMna397aozSyrhfrDylchv/iKYpHpjFdj6ybkWmahmvSf6zluWjxnKBomKfRtGgC24b76A8qG42ydRVNUVa7kGAck2hZb5zgJEETUmuDaYqf6pfNcFx/6xLOkdBwP4Fx1Tp2tu0P0ZSEZTtwg+2Jjyiah+XLfdMtTjzCyc95ildJ+cYEJ6g4s4DVY8qvzEI4xU87TdZfI+s6xZgUvxbraxSzga3GrLqPPFcdHVlXIVnE9ADQn/np2z03A5Wb6XelKCG7r9v3vK9/7taPkzsSrH9mH+e//jHWjw8XvvCSfCgQu8egL8EpCfEcJzC+w3hZvvkHIuS5BAFcEVzvF1pH5Gt5O/v9jf2m9CmObtY7p26eq4OEpM9ftxeyw2+757a35UfVfTOckFu4iGLW8AWlU5jAsrnsH3DZTVOKlvITt1/017ZVMpjV8ONVOkEHRrCCO0zniBy4zimHmvVl5w0lrT4gvED0y+gFKYohiX7X8Q5LBplvrtvc+glHtM+mUTKzU6GuZGXTNeqPKHpa3rXFC/2x041tU46iFyAKlD3+DeNV+Q334eXnawFobCDu4COVRDX4wDiaJ/T3hFICpbThN0pJRFn9sjyxiKbTnGYpyqI/8DF/HgPDkn1S/pHO1ci5keBgD1xE4h/ilVKGlS/ecjnrJ1ofJG151hgbnuPUqFTB6FTiV5fg2SxDrdA1kBLwMFc1JkuAPrKkA0kRdCMpgGn3LCoqztmKiiuUZWhB+f7spUXQlLS4MMYAGG6dUrpLC3ESeAijScgGJF5lOaluj6geT2FE0P0S5jz1RPXWY+oPeOnI+sCrjSowSuI87WiQFcHCHeWR55Pdoa6N5EuHzRSGbWS6MSnByDRjWIoY99eKqZ1XFS43DfTXvPyf3/jIN5RP2o57dSc7cZHlDHBJLwDucl3cxj35PkSzWYSoim4aHz/RDzWuS5qaxj3BKdPV6S8UU9xHOGFmBZpEWfGTpKh4ftm7lO8eHbeih0Kz8CXCpRyeKAxIe+KCzVZZKS7oYUZS/BNd4xjT597kVgQd0iiOuaYGcOuawbiuPrgicB1DAlyzLeBavgS53esLinN4Ric2csnsTgW6HJ3XPU9xYrcbNwFeRTPXPSeanU4fK1Clj60Vfap+79DnBqOMcT39ZPrvB37MOwOZJMas5Smlcyb9H2PCrsMzNj4LmL+LyiLmoul/2nUNTu30JdOu2+W0a8vmXW05oWHppcodjqkVd7jOOdHsdPrY1nlKr6rfb016USNBO/FlS1hB0P5vs0kKCbPBZBp136YY77WUDSpwK7W3k2F1vXciYXzVGcDSSsL4Z0Mfu/FZ21elma/ZrCDaicqzAvtUnWYCXo+1zb4nAvesrPDT0V+pomcnsc7G4m5eYnmuqsRytKJZhbW3ILEE3bV/keWIZoJMd53BjEwhgXoqr1vF9NC4dhpJcPbbBJD1IUWzvLVy7oeEsFydS/ZW83aKJ9k4XE7GWYhmYzgZr37SVpTQP5TnUEboD3qaEYZhm+AUjfMxNa3SyriYRima0BMR4xU+hPAA0yRK5kWgIcGjIg1nRXtgsnhChig9YM5DlC6svwfjBfC8IgAnxxlfDEzPtDlgWrYrANMCXUYKHJnfpgtgViLkgkHqGCbl6NKhm+wGRpd8ZomjRcR8Jbp2lnU0mWo9nnXpo2svZT0bD+KOE3eGPza5ibhyEuzKO7tLeVfN8EPi1Onmnqqzo4qYaWI6+L1Yd5rl39rdkN4HWpHeET0xlykqjEbWiVWS6xr0zRsLMjcd2aRQnIiS5YrkM+ctO7kixWFuBL3WlMzomVzVufGbkbyWW7crQe8xEXfgvVeLXeW8Cb28bKBKQX/XU+4r5a4q7YHhaUX8quO6C96gGcEr5HBrIHnF3N/P4qifm+Vit2q5ODwVA1n4u0uzxRNz8wcqHmPGDYn0IaPIjN+YQ3YgXM1x4NXpZkro1qnTwBODTgPZBLIFjm5kE4NZA9mOcptt9U02MSQxkO0ot/VPNjH/6z94oBqXpORyAUBPpJrVKdXOKkcJJdPGMmCU61C8xk3q8lauANj16xy9CYxUjyg+Saj/Pfogm0dPy4XEnmj0D5JATP7RTRT4oo35TkSBclFHhezW1wIwmpIFwpO6FgbB2UwwzSdZAsNWBFagl8/eF/0UNywxo/DaJohSgi0pNcoXYar8ucxvWyQFUhFG2OICmIR5GfoqQ6keGZcqdS2dumd90Ua93/i+i9Ec5s1dEgoedplTr9Nie1+t3iukrxvVUq82Z/OQh+ye/Tm2+/IvZasy6JOa63L850hWSug2Mdffn/8oEk/DEQWGfkMqzviD+n/MEeCAvrV/0WjTWE9rVPtXTmrqaM1AwX73T1T++Qc5Ha8o5okFVoMkOOoI6F0UVBrV+xMFypWMFbI7dwScLAuEJ3UtDIJ3XG0JgOqiVIFe5ZbBOy7qB8BRJZpeVf2BivdmtsoftIjocKV5S1F1MypXetl16GiX4Mz7caRGT6d+nED043xGGYJpvspm7iWbjoq8xqJWrKik7Nl6tHww9urahw5LvQQv8ahoaJRb+6ba3mzyQM3NoW1NN+C8fl7va8MGMnv5jDAKHKNHkH6Z2c4HI1xZ9jJ5uPpn+Qd8BxeytQe61zWkU/mp8R8gahDST++3QsMQFYbBThcYxtcsXg8MPRimBzvdl/DVYWi3baibnDQ9OWDPP6jreP0mZj2kXx5U8bjaAkuikHSafgmMs1mBtUdp0LihvoeJ+fQdcKI0kBhowrNa30HorNzBDfuATHVs6bXawaYSVKscnq0nyGnKMORYrf+Ung0SzssXBExXS2cQAEOK1Et5wqrzRP85Uhtf+qBVvkSrdCT8161WCc4qatekVhkoz/yg8ZidmlbpBCdrlUce1LpKOdSKvdzh5DqiMOjW4QTOKpe/J2HQUbUY7ydyebKf6nDahFaaFwZy17fofO4DVDtomcQwy6JJ0XgbxW1EBoCk+lA6PMEr0fNKjh9K+RQEtWPrFhowz8pn06Sk3vg9FER1V9V8Drce3+nVfPyTOo8OmKK0Huw4iQWuXXigEgCDRFBAd+sSgfdanhwgAJYnrLLceYTA3L9rRLvrdLPsmsNbG/yXHsJyB2Xjw7BNgYoTisOmK1lZRpoY1KLw6mv7jHwReHWADQhTmx6tusDyJPoy6Fhh7msfjBeKsAFhigpYwDnPZEKsY4jJXOl6QOyqSv0vtgfJErjMQrxvK5MBarXp0hbCpjJPrdltvM2UFe4MYDt3sAGbcwDoADVZVEAP5ex+iy0DJ5QcA8QUlDMuHiBLHujYd7G/1qLl3fPyXJ2LZYp/UJAdxtrfiyVOCcyN8xtEYBQPEk1l+hR8o7YIN1n+Vntws2SusgFubwJuwg4NOuCtL/cZo9YCUlpfsFMXUxQjEuHkoAmaU2zY/u440nwQjPmFPYAItW4daZbW+9ByMKOQMoadZpvBnlUtXtQF9pxn88v3q+U6u8NZ8i3+Nfke/u+iLwebEvKWeY57gqdoY5cW24SbRi4V84RtOCP5ZcU+RfQly2w8oPE4Gj1D2PfYFSddy2kJjdK0Gj2KpcQw5zbjyNgM/kszjvZXGCvkG9lyUjaebyR9ud8LEV65U5xZ2ysOjMHmeM92cfnRJ5RGdNAY85eNfULhULlcX2BQWcWGTR0x+w4ml3/l6gP9sBDSiaEMlrSxdo0g+iR0OGCB8Ck8ppoB0tq6C3qk+DcIcOVVt7uq0DvUy7eeWvk6ZvH7WxtRLpT0WHOhw9lCNVEZmL1OFm6fqsOJGwzbHqc6GLqrDqp75oDOip8PdfPNqQ582mD/uoOkrrNnedhs9UY7ok4xu7vFJVoPfNegkhxmQr7ao0WdhB6mmDmqtlSmUib8F08Ru+L/&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+  <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+  <!--This currently uses the remote JS hosted at diagrams.net but I saved a copy in the repo at _static/js/viewer-static.min.js in case service is ever withdrawn. -->
+
+
+-----
+
 .. _home_dir:
 
 Home directories
@@ -94,6 +114,8 @@ then its contents will appear.
 Later on if you list the contents of ``/data`` again 
 you may find that ``/data/te1st`` has disappeared again, as 
 it is automatically *unmounted* following a period of inactivity.  
+
+-----
 
 .. _fastdata_dir:
 
@@ -175,6 +197,8 @@ As of September 2020 POSIX file locking is enabled on all Lustre filesystems.
 Prior to this the lack of file locking support on the University's Lustre filesystems caused problems for certain workflows/applications
 (e.g. for programs that create/use SQLite databases).
 
+-----
+
 .. _shared_dir:
 
 *Shared* (project) directories
@@ -211,7 +235,7 @@ will be accessible if you ``cd`` (change directory) into a subdirectory e.g. ``c
 Specifics for Bessemer
 ^^^^^^^^^^^^^^^^^^^^^^
 
-If you need to access a ``/shared`` area on Bessemer please contact `it-servicedesk@sheffield.ac.uk <it-servicedesk@sheffield.ac.uk>`__ to arrange this.
+If you need to access a ``/shared`` area on Bessemer please contact `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`__ to arrange this.
 
 
 .. warning::
@@ -271,6 +295,8 @@ The documentation for the ``/shared`` storage service includes information on:
 * `how to create folders with associated permissions <https://www.sheffield.ac.uk/it-services/research-storage/create-folders>`__ 
   within ``/shared`` storage areas
 
+-----
+
 .. _scratch_dir:
 
 *Scratch* directories
@@ -279,40 +305,63 @@ The documentation for the ``/shared`` storage service includes information on:
 For **jobs that need to read/write lots of small files** the most performant storage will be 
 the temporary storage on each node (under the ``/scratch`` directory).
 
-This is because with :ref:`home_dir`, :ref:`data_dir`, :ref:`fastdata_dir`, :ref:`shared_dir`
+This is because with :ref:`home_dir`, :ref:`data_dir`, :ref:`fastdata_dir` and :ref:`shared_dir`,
 each time a file is accessed the filesystem needs to request ownership/permissions information from another server
 and for small files these overheads are proportionally high. 
-However, for ``/scratch`` such ownership/permissions metadata is available on the local machine, 
-so it is faster when dealing with small files.
 
-The most obvious disadvantage to the ``/scratch`` node-local storage is that 
-a given directory cannot reliabily be accessed between jobs as
-you cannot guarantee that your next job will run on the same node.
-Any data of value must therefore be **copied off** ``/scratch`` 
-(e.g. to :ref:`home_dir` or :ref:`data_dir`)
-**before the end of your job**.
+For the ``/scratch`` store, such ownership/permissions metadata is available on the local machine, 
+thus it is faster when dealing with small files.
 
-**Where to store data beneath** ``/scratch``: 
-The scheduler automatically creates a per-job directory for you under ``/scratch``.
-If you started your job using ``qrshx``, ``qsh`` or ``qsub`` then 
-the name of this directory is stored in the ``$TMPDIR`` environment variable e.g. ::
+As the ``/scratch`` areas are node-local storage and files/folders are deleted when jobs end:
+
+* any data used by the job must be **copied to** ``/scratch`` when the jobs starts. 
+* any output data stored in ``/scratch`` must also be **copied off** to another area before the job finishes.
+  (e.g. to :ref:`home_dir` or :ref:`data_dir`).
+
+Further conditions also apply:
+
+* Anything in the ``/scratch`` area may be deleted periodically when the worker-node is **idle**. 
+* The ``/scratch`` area is **not backed up**. 
+* There are no quotas for ``/scratch`` storage.
+* The ``/scratch`` area uses the **ext4** filesystem.
+
+.. danger::
+
+  ``/scratch`` areas are temporary and have no backups. If you forget to copy your output data out of the 
+  ``/scratch`` area before your job finishes, your data **cannot** be recovered!
+
+**Where to store data inside** ``/scratch`` **areas**: 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The schedulers automatically create a per-job directory for you under ``/scratch``.
+The name of this directory is stored in the ``$TMPDIR`` environment variable e.g. 
+
+On ShARC: ::
 
     [te1st@sharc-login1 ~]$ qrshx
     [te1st@sharc-node003 ~]$ cd $TMPDIR
     [te1st@sharc-node003 667443.1.all.q]$ pwd
     /scratch/667443.1.all.q
 
+On Bessemer: ::
+
+    [te1st@bessemer-login1 ~]$  srun -c 1 --mem=4G --pty bash -i
+    [te1st@bessemer-node001 ~]$ cd $TMPDIR
+    [te1st@bessemer-node001 2660172]$ pwd
+    /scratch/2660172
+
+
 The scheduler will then clean up (delete) ``$TMPDIR`` at the end of your job, 
 ensuring that the space can be used by other users.
 
-If using ``qrsh`` to start your job then the environment variable will unfortunately be undefined
-so you will need to manually create a directory under ``/scratch`` (named using your username)
-and this will not be cleaned up when the job ends.
+.. warning::
 
-Anything under the ``/scratch`` may be deleted periodically when the worker-node is idle. 
-``/scratch`` is **not backed up**.  There are no quotas for ``/scratch`` storage.
+   If using ``qrsh`` on ShARC to start an interactive job then 
+   the ``TMPDIR`` environment variable will unfortunately be undefined
+   so you will need to manually create a directory under ``/scratch`` (named using your username)
+   and this will not be cleaned up when the job ends.
 
-``/scratch`` uses the ext4 filesystem.
+-----
 
 .. _community_dir:
 
@@ -342,6 +391,7 @@ Note that:
 * Software installations must be maintained by a responsible owner.
 * Software which is not actively maintained may be removed.
 
+-----
 
 .. _quota_check:
 
@@ -374,6 +424,8 @@ To assess what is using up your quota within a given directory, you can make use
 :ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
 interactive display of what files/folders are taking up storage in a given directory tree.
 
+-----
+
 .. _exceed_quota:
 
 If you exceed your filesystem quota
@@ -391,6 +443,8 @@ In order to avoid this situation it is strongly recommended that you:
 * :ref:`Check your quota usage <quota_check>` regularly.
 * Copy files that do not need to be backed up to a :ref:`Fastdata area <fastdata_dir>`
   or remove them from Bessemer/ShARC completely.
+
+-----
 
 .. _recovering_snapshots:
 

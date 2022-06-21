@@ -232,7 +232,7 @@ if you are unable to use VPN we also provide an SSH gateway service to allow off
 
 .. note::
   * Access to the HPC SSH gateway service requires that you have an existing :ref:`HPC account <accounts>`.
-  * You must additionally request access to the HPC SSH gateway by emailing `it-servicedesk@sheffield.ac.uk <it-servicedesk@sheffield.ac.uk>`_ including a justification for your request.
+  * You must additionally request access to the HPC SSH gateway by emailing `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_ including a justification for your request.
   * If the cluster access can be handled via the usage of the SSL VPN without undue effort, your request will not be granted.
 
 For more information see :ref:`HPC Gateway Service Details <hpcgateway>`.

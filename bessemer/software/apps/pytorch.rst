@@ -37,7 +37,7 @@ Conda is used to create a virtual python environment for installing your local v
    so you **must** use the ``--mem=8G`` flag to request more memory.
    ``8G`` means 8 GB of RAM.
 
-First request an interactive session, e.g. with :ref:`slurm_interactive` or optionally with GPU :ref:`GPUInteractive_bessemer`. ::
+First request an interactive session, e.g. with :ref:`submit_interactive_bessemer` or optionally with GPU :ref:`GPUInteractive_bessemer`. ::
 
    # To request 8GB of RAM for the session
    srun --mem=8G --pty bash

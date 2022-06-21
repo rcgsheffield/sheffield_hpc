@@ -1,3 +1,4 @@
+.. _Choosing-appropriate-compute-resources:
 
 *****************************************
 Choosing appropriate compute resources

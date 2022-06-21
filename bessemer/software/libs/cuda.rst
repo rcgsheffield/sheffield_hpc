@@ -133,6 +133,8 @@ In this demonstration, we create a batch job that
 
 ---------
 
+.. _bessemer_gpu_code_gen_opts:
+
 GPU Code Generation Options
 ---------------------------
 
@@ -146,7 +148,7 @@ allows for 'fatbinary' executables that are optimised for multiple device archit
 Each ``-gencode`` argument requires two values,
 the *virtual architecture* and *real architecture*,
 for use in NVCC's `two-stage compilation <https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#virtual-architectures>`_.
-I.e. ``-gencode=arch=compute_70,code=sm_70`` specifies a virtual architecture of ``compute_70`` and real architecture ``sm_70``.
+For example, ``-gencode=arch=compute_70,code=sm_70`` specifies a virtual architecture of ``compute_70`` and real architecture ``sm_70``.
 
 To support future hardware of higher compute capability,
 an additional ``-gencode`` argument can be used to enable Just in Time (JIT) compilation of embedded intermediate PTX code.
@@ -156,14 +158,25 @@ i.e. ``-gencode=arch=compute_70,code=compute_70``.
 
 The minimum specified virtual architecture must be less than or equal to the `Compute Capability <https://developer.nvidia.com/cuda-gpus>`_ of the GPU used to execute the code.
 
-Public and private GPU nodes in Bessemer contain Tesla V100 GPUs, which are compute capability 70.
+Most public and private GPU nodes in Bessemer contain Tesla V100 GPUs, which are Compute Capability 70.
 To build a CUDA application which targets just the public GPUS nodes, use the following ``-gencode`` arguments:
 
 .. code-block:: sh
 
    nvcc filename.cu \
       -gencode=arch=compute_70,code=sm_70 \
-      -gencode=arch=compute_70,code=compute_70 \
+      -gencode=arch=compute_70,code=compute_70
+
+There are :ref:`(temporarily) also a number of A100 GPU nodes in Bessemer <GPUResources_bessemer_tmp_a100_nodes>`
+which are Compute Capability 80.
+To build a CUDA application which targets just those nodes
+you need CUDA >= 11 and need to supply the following ``-gencode`` arguments:
+
+.. code-block:: sh
+
+   nvcc filename.cu \
+      -gencode=arch=compute_80,code=sm_80 \
+      -gencode=arch=compute_80,code=compute_80
 
 Further details of these compiler flags can be found in the `NVCC Documentation <https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#options-for-steering-gpu-code-generation>`_,
 along with details of the supported `virtual architectures <https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#virtual-architecture-feature-list>`_ and `real architectures <https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html#gpu-feature-list>`_.

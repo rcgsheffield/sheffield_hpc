@@ -20,7 +20,7 @@ requests==2.27.1
 setuptools <63
 six==1.16.0
 snowballstemmer==2.2.0
-Sphinx==4.5.0
+Sphinx==5.0.2
 sphinx-autobuild==2021.3.14
 sphinx-bootstrap-theme==0.8.1
 sphinx-rtd-theme==1.0.0

@@ -191,6 +191,31 @@ Documentation
 
 ---------
 
+Nsight Systems
+--------------
+
+Nsight Systems is a system-wide performance analysis tool designed to visualize an application’s algorithms and identify the largest opportunities to optimize. It supports Pascal (SM 60) and newer GPUs.
+
+A common use-case for Nsight Systems is to generate application timelines via the command line, which can later be visualised on a local computer using the GUI component. Nsight Systems, nsys 2020.3.2, is provided by the following modules. ::
+
+    module load CUDAcore/11.0.2
+    module load CUDAcore/11.1.1
+    module load cuDNN/8.0.4.30-CUDA-11.0.2
+    module load cuDNN/8.0.4.30-CUDA-11.1.1
+
+You should use a versions of nsys that is at least as new as the CUDA toolkit used to compile your application (if appropriate).
+
+To generate an application timeline with Nsight Systems CLI (nsys): ::
+
+    nsys profile -o timeline ./myapplication <arguments>
+
+Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The --trace argument to specify which APIs should be traced. See the 'nsys profiling command switch options <https://docs.nvidia.com/nsight-systems/profiling/index.html#cli-profile-command-switch-options>`_. for further information. ::
+
+    nsys profile -o timeline --trace cuda,nvtx,osrt,openacc ./myapplication <arguments>
+
+Once this file has been downloaded to your local machine, it can be opened in nsys-ui/nsight-sys via File > Open > timeline.qdrep
+
+
 Profiling using nvprof
 ----------------------
 

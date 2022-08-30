@@ -196,7 +196,7 @@ Nsight Systems
 
 Nsight Systems is a system-wide performance analysis tool designed to visualize an application’s algorithms and identify the largest opportunities to optimize. It supports Pascal (SM 60) and newer GPUs.
 
-A common use-case for Nsight Systems is to generate application timelines via the command line, which can later be visualised on a local computer using the GUI component. Nsight Systems, ``nsys 2020.3.2``, is provided by the following modules. ::
+A common use-case for Nsight Systems is to generate application timelines via the command line, which can later be visualised on a local computer using the GUI component. Nsight Systems, ``nsys``, is provided by the following modules. ::
 
     module load CUDAcore/11.0.2
     module load CUDAcore/11.1.1

@@ -213,7 +213,7 @@ Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The ``--trace`
 
     nsys profile -o timeline --trace cuda,nvtx,osrt,openacc ./myapplication <arguments>
 
-Once this file has been downloaded to your local machine, it can be opened in nsys-ui/nsight-sys via File > Open > timeline.qdrep
+Once this file has been downloaded to your local machine, it can be opened in ``nsys-ui``/``nsight-sys`` via File > Open > timeline.qdrep
 
 
 Profiling using nvprof

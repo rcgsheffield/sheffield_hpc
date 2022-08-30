@@ -209,7 +209,7 @@ To generate an application timeline with Nsight Systems CLI (nsys): ::
 
     nsys profile -o timeline ./myapplication <arguments>
 
-Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The --trace argument to specify which APIs should be traced. See the `nsys profiling command switch options <https://docs.nvidia.com/nsight-systems/profiling/index.html#cli-profile-command-switch-options>`_. for further information. ::
+Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The ``--trace`` argument to specify which APIs should be traced. See the `nsys profiling command switch options <https://docs.nvidia.com/nsight-systems/profiling/index.html#cli-profile-command-switch-options>`_ for further information. ::
 
     nsys profile -o timeline --trace cuda,nvtx,osrt,openacc ./myapplication <arguments>
 

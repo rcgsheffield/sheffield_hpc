@@ -203,7 +203,7 @@ A common use-case for Nsight Systems is to generate application timelines via th
     module load cuDNN/8.0.4.30-CUDA-11.0.2
     module load cuDNN/8.0.4.30-CUDA-11.1.1
 
-You should use a versions of nsys that is at least as new as the CUDA toolkit used to compile your application (if appropriate).
+You should use a version of nsys that is at least as new as the CUDA toolkit used to compile your application (if appropriate).
 
 To generate an application timeline with Nsight Systems CLI (nsys): ::
 

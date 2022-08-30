@@ -216,6 +216,30 @@ Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The ``--trace`
 Once this file has been downloaded to your local machine, it can be opened in ``nsys-ui``/``nsight-sys`` via File > Open > timeline.qdrep
 
 
+Nsight Compute
+--------------
+
+Nsight Compute is a kernel profiler for CUDA applications, which can also be used for API debugging. It supports Volta (SM 70) and newer GPUs.
+
+A common use-case for using Nsight Compute is to capture all available profiling metrics via the command line, which can later be analysed on a local computer using the GUI component. Nsight Compute, ``ncu``, is provided by the following modules. ::
+
+    module load CUDAcore/11.0.2
+    module load CUDAcore/11.1.1
+    module load cuDNN/8.0.4.30-CUDA-11.0.2
+    module load cuDNN/8.0.4.30-CUDA-11.1.1
+
+You should use a versions of ``ncu`` that is at least as new as the CUDA toolkit used to compile your application.
+
+To generate the default set of profile metrics with Nsight Compute CLI (``ncu``): ::
+
+    ncu -o metrics ./myapplication <arguments>
+
+Nsight compute can capture many different metrics which are used to generate the different sections of the profiling report. The ``--set`` argument can be used to control which set of metrics and sections are captured. See the `Nsight Compute CLI Command Line Options <https://docs.nvidia.com/nsight-compute/NsightComputeCli/index.html#command-line-options-profile>`_ for further information. ::
+
+    ncu -o metrics --set full ./myapplication <arguments>
+
+Once this file has been downloaded to your local machine, it can be opened in ``ncu-ui``/``nv-nsight-cu`` via File > Open File > metrics.ncu-rep
+
 Profiling using nvprof
 ----------------------
 

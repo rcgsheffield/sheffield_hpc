@@ -9,9 +9,9 @@ Making the NAG Compiler available
 After connecting to ShARC (see :ref:`ssh`),  start an interactive sesssion with the :code:`qrshx` command. 
 To make a version of the NAG Fortran Compiler available: ::
 
-        module load dev/NAG/6.2
+        module load dev/NAG/7.1
 
-Older versions (6.0 and 6.1) are deprecated.
+Older versions (6.0, 6.1 & 6.2) are deprecated.
 
 Compilation examples
 --------------------
@@ -40,6 +40,16 @@ Add the license key(s) to ``/usr/local/packages/dev/NAG/license.lic``.
 The license key needs to be updated annually before 31st July.
 
 The NAG compiler environment modules (see below) set the environment variable ``$NAG_KUSARI_FILE`` to the path to this file.
+
+Version 7.1
+^^^^^^^^^^^
+
+#. Perform an unattended install using :download:`this script </sharc/software/install_scripts/dev/NAG/7.1/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/7.1``.
+#. Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/7.1>` as ``/usr/local/modulefiles/dev/NAG/7.1``
+#. Test the installation by compiling and building a sample Fortran 90 program ::
+
+        module load dev/NAG/7.1
+        nagfor -o /tmp/f90_util /usr/local/packages/dev/NAG/7.1/lib/NAG_Fortran/f90_util.f90
 
 Version 6.2
 ^^^^^^^^^^^

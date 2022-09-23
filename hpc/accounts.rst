@@ -11,8 +11,14 @@ of all of our clusters (:ref:`Bessemer <bessemer>` and :ref:`ShARC <sharc>`).
 For Staff
 ^^^^^^^^^
 
-HPC access is made available for staff by emailing their request to 
-`it-servicedesk@sheffield.ac.uk <it-servicedesk@sheffield.ac.uk>`_.
+HPC access is made available for staff by request via the HPC access 
+request form which can be found at the 
+`IT Service Desk Self Service Portal <https://shef.topdesk.net/tas/public/ssp/>`_ under the option 
+Service Request Forms.
+
+We recommend that staff also complete the 
+`HPC Driving License test <https://infosecurity.shef.ac.uk/>`_. **(The VPN must be connected for 
+access.)**
 
 For Students
 ^^^^^^^^^^^^
@@ -25,7 +31,7 @@ the permission of their supervisors:
 * Undergraduates 3rd & 4th year  - for project work
 
 To be granted HPC access, all students must first pass the 
-`HPC Driving License test <https://infosecurity.shef.ac.uk/>`_. **(The VPN must be connected in order to 
+`HPC Driving License test <https://infosecurity.shef.ac.uk/>`_. **(The VPN must be connected for 
 access.)**
 
 Following this, they should request that their academic supervisor fill in the HPC access 
@@ -62,12 +68,12 @@ controls that the HPC may not have in place.
 
    The High Performance Computing service should not be used to store or process sensitive information.
    For example: medical records, personal information, financial data, commercially sensitive or 
-   any other form of restricted data without first discussing your requirements with the Research IT Team - 
-   research-it@sheffield.ac.uk 
+   any other form of restricted data without first
+   :ref:`discussing your requirements with IT Services <need_help>`.
 
 Extra care should always be taken when dealing with sensitive information; if you are in any doubt about 
 the sensitivity of information, or how it should be handled, then please contact IT Services 
-`it-servicedesk@sheffield.ac.uk <it-servicedesk@sheffield.ac.uk>`_ for advice.
+`research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_ for advice.
 
 
 

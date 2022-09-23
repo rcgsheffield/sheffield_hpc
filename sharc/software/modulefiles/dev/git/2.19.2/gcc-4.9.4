@@ -16,5 +16,7 @@ set GIT_DIR /usr/local/packages/dev/git/$vers/$compiler-$compilervers/
 
 module-whatis   "Makes git $vers available"
 
+puts stderr "DEPRECATED: please load Git >= 2.35.2 or the OS-provided git instead; will be removed in future."
+
 prepend-path PATH $GIT_DIR/bin
 prepend-path MANPATH $GIT_DIR/man

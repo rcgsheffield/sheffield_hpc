@@ -5,7 +5,7 @@ Maple
 
 .. sidebar:: Maple
 
-   :Latest Version:  2018
+   :Latest Version:  2022
    :URL: http://www.maplesoft.com/products/maple/
 
 Scientific Computing and Visualisation
@@ -14,13 +14,13 @@ Interactive Usage
 -----------------
 After connecting to sharc (see :ref:`ssh`),  start an interactive session with the :ref:`qrshx` command.
 
-The latest version of Maple (currently 2018) is made available with the command ::
+The latest version of Maple (currently 2022) is made available with the command ::
 
         module load apps/maple
 
 Alternatively, you can load a specific version with ::
 
-        module load apps/maple/2018/binary
+        module load apps/maple/2022/binary
 
 You can then run the graphical version of Maple by entering ``xmaple`` or the command line version by entering ``maple``.
 
@@ -34,11 +34,11 @@ An example Sun Grid Engine submission script that makes use of a .mpl file calle
     # Request 4 gigabytes of real memory
     #$ -l rmem=4G
 
-    module load apps/maple/2018
+    module load apps/maple/2022
 
     maple < mycode.mpl
 
-For general information on how to submit batch jobs refer to :ref:`submit-batch`
+For general information on how to submit batch jobs refer to :ref:`submit_batch_sharc`.
 
 Tutorials
 ---------
@@ -48,14 +48,14 @@ Installation notes
 ------------------
 These are primarily for administrators of the system.
 
-**Maple 2018**
+**Maple 2022**
 
-* Run the installer **Maple2018.1LinuxX64Installer.run** and follow instructions.
-* Choose Install folder `/usr/local/packages/apps/maple/2018/binary`
+* Run the installer **Maple2022.1LinuxX64Installer.run** and follow instructions.
+* Choose Install folder `/usr/local/packages/apps/maple/2022/binary`
 * Do not configure MATLAB
 * Choose a network license. Details on IT Services internal wiki.
-* Uncheck 'Enable periodic checking for Maple 2018 updates'
+* Uncheck 'Enable periodic checking for Maple 2022 updates'
 * Check 'Check for updates now'
 
-The module file is :download:`/usr/local/modulefiles/apps/maple/2018/binary </sharc/software/modulefiles/apps/maple/2018/binary>`.
+The module file is :download:`/usr/local/modulefiles/apps/maple/2022/binary </sharc/software/modulefiles/apps/maple/2022/binary>`.
 

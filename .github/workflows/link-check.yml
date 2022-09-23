@@ -1,14 +1,26 @@
-name: "Periodic docs external links check"
+name: periodic_link_check
 on: 
+  workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0 0 1,15 * *'
+
 jobs:
-  docs:
+  link_check:
+
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: rcgsheffield/sphinx-action@master
-      with:
-        docs-folder: "."
-        build-command: "make linkcheck"
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Upgrade pip and install Tox
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install tox
+
+      - name: Check links
+        run: tox -e py37-linkcheck

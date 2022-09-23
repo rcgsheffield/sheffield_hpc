@@ -19,7 +19,7 @@ home area. This page will guide you through loading conda and then creating and
 modifying environments so you can install and use whatever Python packages you
 need.
 
-Using conda Python
+Using Conda Python
 ------------------
 After connecting to ShARC (see :ref:`ssh`),  start an interactive session
 with the ``qrshx`` or ``qrsh`` command.
@@ -33,7 +33,12 @@ modules, it is automatically updated, and not recommended for general use, just
 as a base for your own environments. There is also a ``python2`` environment,
 which is the same but with a Python 2 installation.
 
-Quickly Loading Anaconda Environments
+.. warning::
+
+    Due to Anaconda being installed in a module you must use the ``source`` command instead of ``conda`` 
+    when activating or deactivating environments!
+
+Quickly Conda Environments
 -------------------------------------
 
 There are a small number of environments provided for everyone to use, these are
@@ -55,8 +60,8 @@ activate the anaconda environment specified.
    result in higher numerical performance.
 
 
-Using conda Environments
-########################
+Using a Conda Environment
+-------------------------
 
 Once the conda module is loaded you have to load or create the desired
 conda environments. For the documentation on conda environments see
@@ -83,8 +88,8 @@ or for using directly.
 
 .. _sharc_conda_create_env:
 
-Creating an Environment
-#######################
+Creating a Conda Environment
+----------------------------
 
 Every user can create their own environments, and packages shared with the
 system-wide environments will not be reinstalled or copied to your file store,
@@ -100,7 +105,7 @@ environment named ``mynumpy``.
 
 Any version of Python or list of packages can be provided::
 
-    conda create -n myscience python=3.5 numpy=1.8.1 scipy
+    conda create -n myscience python=3.5 numpy=1.15.2 scipy
 
 If you wish to modify an existing environment, such as one of the anaconda
 installations, you can ``clone`` that environment::
@@ -114,32 +119,35 @@ anaconda 4.2.0 packages installed with Python 3.
 .. _sharc_conda_data_dir:
 
 Avoiding large Conda environments filling up your home directory
-################################################################
+----------------------------------------------------------------
 
 If you want to create one or more large Conda environments
 (e.g. containing bulky Deep Learning packages such as TensorFlow or PyTorch)
 then there's a risk you'll quickly use up your home directory's :ref:`10GB storage quota <filestore>`.
 
-First, tell conda where to look for a config file: ::
+Create a ``.condarc`` file in your home directory if it does not already exist. 
+Add an ``envs_dirs:`` and ``pkgs_dirs:`` section as shown below:
 
-   echo "export CONDARC=$HOME/.condarc-sharc.yml" >> ~/.bashrc
+::
 
-Next, create a ``.condarc-sharc.yml`` file in your home directory, 
-copy in the contents of your ``.condarc`` file if you have one,
-then ensure that the first line beneath ``envs_dirs:`` in that file is: ::
-
-      - /data/te1st/.conda-sharc
-
-i.e.: ::
+    pkgs_dirs:
+    - /data/username/anaconda/.pkg-cache/
 
     envs_dirs:
-      - /data/te1st/.conda-sharc
+    - /data/username/anaconda/.envs
 
-making sure to replace ``te1st`` with your username.
+
+Make sure to replace ``username`` with your own username and 
+then create these folders by running the following command: ::
+
+    mkdir -p /data/$USER/anaconda/.pkg-cache/  /data/$USER/anaconda/.envs
+
+Installations of environments and package caching should now occur in your ``/data`` 
+area.
 
 
 Installing Packages Inside an Environment
-#########################################
+-----------------------------------------
 
 Once you have created your own environment you can install additional packages
 or different versions of packages into it. There are two methods for doing
@@ -186,11 +194,17 @@ which currently include ``openmpi``, ``hdf5``, ``mpi4py`` and ``h5py``: ::
 
 Currently, this channel provides Conda packages for:
 
- - ``mpi4py`` (and ``openmpi``) for Python 3.4, 3.5, 3.6 and 2.7
- - ``h5py`` (and ``hdf5``) with MPI support for Python 3.5 and 2.7
+- ``mpi4py`` (and ``openmpi``) for Python 3.4, 3.5, 3.6 and 2.7
+- ``h5py`` (and ``hdf5``) with MPI support for Python 3.5 and 2.7
 
 The build scripts for these packages can be found in
 this `GitHub <https://github.com/rcgsheffield/conda-packages>`_ repository.
+
+
+Further Conda Python Learning Resources
+---------------------------------------
+
+.. include:: /referenceinfo/imports/software/python/python_learning_resources_import.rst
 
 Installation Notes
 ------------------

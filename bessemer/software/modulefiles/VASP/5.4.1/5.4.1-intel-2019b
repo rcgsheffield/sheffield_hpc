@@ -1,4 +1,6 @@
 #%Module
+source /usr/local/etc/module_logging.tcl
+
 proc ModulesHelp { } {
     puts stderr {
 
@@ -21,7 +23,7 @@ from first principles.}
 module-whatis {Homepage: http://www.vasp.at}
 module-whatis {URL: http://www.vasp.at}
 
-set root /usr/local/packages/staging/eb/VASP/5.4.1-intel-2019b
+set root /usr/local/packages/live/eb/VASP/5.4.1-intel-2019b
 
 conflict VASP
 
@@ -32,6 +34,8 @@ if { ![ is-loaded intel/2019b ] } {
 prepend-path	CMAKE_PREFIX_PATH		$root
 prepend-path	PATH		$root/bin
 setenv	EBROOTVASP		"$root"
+setenv	VASP_ROOT		"$root"
+setenv  PSEUDOPOTENTIAL_DIR	"/usr/local/packages/live/noeb/VASP_POTCAR"
 setenv	EBVERSIONVASP		"5.4.1"
 setenv	EBDEVELVASP		"$root/easybuild/VASP-5.4.1-intel-2019b-easybuild-devel"
 

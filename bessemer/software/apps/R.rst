@@ -17,7 +17,7 @@ Interactive Usage
 -----------------
 
 After connecting to Bessemer (see :ref:`ssh`),
-start an :ref:`interactive session <submit-interactive>`.
+start an :ref:`interactive session <submit_interactive_bessemer>`.
 You can then load a specific version of R using: ::
         
    module load R/3.6.2-foss-2019b
@@ -125,11 +125,15 @@ R Packages that require external libraries
 ------------------------------------------
 Some R packages require external libraries to be installed before you can install and use them
 (e.g. ``rgdal``, ``rgeos``, ``hdf5r``).
+
 Since there are so many, we only install those libraries that have been explicitly requested by users of the system.
 The associated R packages are not included in the central installation of R.
 
-To request the installation of R packages that depend on non-R libraries
-please contact ``it-servicedesk@sheffield.ac.uk``.
+To load external libraries you should  :ref:`search for a module <search_env_modules>` which matches the 
+build chain of the R version you are using to avoid load conflicts e.g. for R 4.0.0, foss-2020a.
+
+To request the installation of dependencies for R packages that depend on non-R libraries
+please contact ``research-it@sheffield.ac.uk``.
 
 Using the Rmath library in C Programs
 -------------------------------------
@@ -156,7 +160,7 @@ This makes use of R's ``qbeta`` function.
 You can compile and run this on a worker node as follows.
 
 Start a session on a worker node with ``qrshx`` and load a version of R: ::
-start an :ref:`interactive session <submit-interactive>` on a worker node
+start an :ref:`interactive session <submit_interactive_bessemer>` on a worker node
 and load a version of R: ::
 
    module load R/3.6.2-foss-2019b

@@ -15,11 +15,15 @@ DAFoam is an Open-Source Adjoint Framework for Multidisciplinary Design Optimiza
 Interactive Usage
 -----------------
 
-DAFoam v2.2.5 is provided only as a Singularity image and can be used interactively by issuing starting an interactive session with ``qrshx`` and then issuing the command:   ::
+DAFoam v2.2.5 is provided only as a Singularity image and can be used interactively by issuing starting an interactive session with ``qrshx`` and then issuing the command:   
+
+.. code-block:: bash
 
     singularity shell /usr/local/packages/singularity/images/DAFoam/DAFoam-v2.2.5-docker.simg
 
-Then you must run the following command to setup the internal shell environment correctly: ::
+Then you must run the following command to setup the internal shell environment correctly: 
+
+.. code-block:: bash
 
     . /home/dafoamuser/dafoam/loadDAFoam.sh
 
@@ -28,7 +32,12 @@ You can then use DAFoam as expected with the appropriate commands now available.
 Batch Usage
 ------------
 
-Currently the usage of this container is limited to the SMP parallel environment and an example script is given below with the example NACA0012_Airfoil tutorial which is available from the DAFoam Github: https://github.com/DAFoam/tutorials/archive/master.tar.gz ::
+Sample SMP DAFoam Scheduler Job Script
+"""""""""""""""""""""""""""""""""""""""""
+
+An example SMP batch submission script is given below with the example NACA0012_Airfoil tutorial which is available from the DAFoam Github: https://github.com/DAFoam/tutorials/archive/master.tar.gz 
+
+.. code-block:: bash
 
     #!/bin/bash
     #$ -l rmem=4G
@@ -39,7 +48,9 @@ Currently the usage of this container is limited to the SMP parallel environment
 
     singularity exec --bind $PE_HOSTFILE:$PE_HOSTFILE:ro /usr/local/packages/singularity/images/DAFoam/DAFoam-v2.2.5-docker.simg /home/$USER/dafoam/tutorials-master/NACA0012_Airfoil/incompressible/DAfoam_internal_script.sh #All one line.
 
-Where the DAfoam_internal_script.sh is as follows: ::
+Where the DAfoam_internal_script.sh is as follows: 
+
+.. code-block:: bash
 
     #!/bin/bash
     . /home/dafoamuser/dafoam/loadDAFoam.sh #Gap between dot and /home is important.
@@ -47,10 +58,37 @@ Where the DAfoam_internal_script.sh is as follows: ::
     ./preProcessing.sh
     mpirun -np 4 python runScript.py
 
+
+Sample MPI DAFoam Scheduler Job Script
+"""""""""""""""""""""""""""""""""""""""""
+
+An example MPI batch submission script is given below with the example NACA0012_Airfoil tutorial which is available from the DAFoam Github: https://github.com/DAFoam/tutorials/archive/master.tar.gz 
+
+.. important:: 
+
+    This example uses the hybrid MPI approach specified in the Singularity documentation here: https://sylabs.io/guides/latest/user-guide/mpi.html#hybrid-model
+    This requires the matching of the container and cluster MPI versions as shown here by loading the matching MPI module for the Singularity image.
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #$ -l rmem=4G
+    #$ -pe mpi 4
+    #$ -l h_rt=01:00:00
+    #$ -cwd
+    #$ -V
+    
+    module load mpi/openmpi/1.10.4/gcc-6.2
+
+    singularity exec --bind $PE_HOSTFILE:$PE_HOSTFILE:ro /usr/local/packages/singularity/images/DAFoam/DAFoam-v2.2.5-docker.simg bash -c ". /home/dafoamuser/dafoam/loadDAFoam.sh && cd /home/$USER/dafoam/tutorials-master/NACA0012_Airfoil/incompressible/ && ./preProcessing.sh"
+
+    mpirun -n 4 singularity exec /usr/local/packages/singularity/images/DAFoam/DAFoam-v2.2.5-docker.simg bash -c ". /home/dafoamuser/dafoam/loadDAFoam.sh && cd /home/$USER/dafoam/tutorials-master/NACA0012_Airfoil/incompressible/ && python runScript.py"
+
+
 Installation notes
 ------------------
 
-Installation was tested as above with the batch script and NACA0012_Airfoil tutorial.
+Installation was tested as above with the batch scripts and NACA0012_Airfoil tutorial.
 
 This Singularity image has been bootstrapped from the project's provided docker container and the following configuration: ::
 

@@ -43,9 +43,13 @@ General CPU node specifications
 Large memory node specifications
 --------------------------------
 
-Four nodes are publicly available (not exclusive to research groups).
+Ten nodes are publicly available (not exclusive to research groups).
 
-These are identical to the general :ref:`CPU nodes <sharc-cpu-specs>` but with 256 GiB RAM (16 GiB per core).
+These are similar to the general :ref:`CPU nodes <sharc-cpu-specs>` but with some differences in terms of CPU model, CPU core count and total RAM:
+
+* 2x nodes with Intel Xeon E5-2630 v3 CPU (2.40GHz), 16 CPU cores total (8 per socket) and 256 GB RAM
+* 7x nodes with 2x Intel Xeon E5-2640 v4 CPU (2.40GHz) processors, 20 CPU cores total (10 per socket) and 256 GB RAM
+* 1x node with 2x Intel Gold 5120 CPU (2.20GHz) processors, 28 CPU cores total (14 per socket) and 384 GB RAM
 
 .. _sharc-gpu-specs:
 

@@ -26,7 +26,7 @@ Interactive jobs
 While using a X11 GUI forwarding supported SSH client, an interactive session can be started on Bessemer with the ``srun --pty bash -i`` command which supports graphical applications.
 You can load an ANSYS module above and then start the fluent program by running the ``fluent`` command.
 
-If desired, the ANSYS Workbench GUI executable can be launched with the  ``ansyswb`` command.
+If desired, the ANSYS Workbench GUI executable can be launched with the  ``runwb2`` command.
 To use more than a single core, you should write a batch job script and fluent journal file for submission to the batch queues.
 
 --------------------
@@ -78,7 +78,7 @@ Sample SMP Fluent Scheduler Job Script
     #SBATCH --job-name=name_fluent_smp_4
     #SBATCH --output=output_fluent_smp_4
     #SBATCH --time=01:00:00
-    #SBATCH --mail-user=joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load ANSYS/20.2
     fluent 2ddp -i test.jou -gu -t$SLURM_NTASKS -driver null
@@ -96,3 +96,19 @@ The job is submitted to the queue by typing:
 
 
 .. include:: ../../../../referenceinfo/ANSYS/fluent/export-fluent-plots-while-using-batch-jobs.rst
+
+---------------
+
+ANSYS Fluent training and help resources
+----------------------------------------
+
+.. important::
+
+  Academic support requests should be directed to the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_  or 
+  the `ANSYS Learning Forum <https://forum.ansys.com/>`_ (**ensure you register with your University email for priority support**).
+
+ANSYS provides numerous academic training and help resources including tutorials, video lectures and examples for computational fluid dynamics products.
+A short list of the resources ANSYS maintains is summarised below:
+
+*  `"How to" youtube playlists for computational fluid dynamics products. <https://www.youtube.com/user/ANSYSHowToVideos/playlists?view=50&sort=dd&shelf_id=3>`_
+*  `An extensive number of free online courses on computational fluid dynamics products and theory <https://courses.ansys.com/index.php/fluids/>`_

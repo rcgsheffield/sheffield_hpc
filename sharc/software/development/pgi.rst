@@ -32,20 +32,20 @@ To compile a C hello world example into an executable called ``hello`` using the
 
 To compile a C++ hello world example into an executable called ``hello`` using the PGI C++ compiler ::
 
-      pgc++ hello.cpp -o hello
+    pgc++ hello.cpp -o hello
 
 **Fortran**
 
 To compile a Fortran hello world example into an executable called ``hello`` using the PGI Fortran compiler ::
 
-      pgf90 hello.f90 -o hello
+    pgf90 hello.f90 -o hello
 
 Compiling on the GPU using the PGI Compiler
 -------------------------------------------
 
 Start an interactive GPU session (:ref:`GPUInteractive_sharc`) and the following module command ::
 
-        module load dev/PGI-compilers/19.5
+    module load dev/PGI-compilers/19.5
 
 The PGI compilers have several features that make them interesting to users of GPU hardware:-
 

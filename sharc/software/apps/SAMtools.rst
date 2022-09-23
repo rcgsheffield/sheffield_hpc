@@ -5,7 +5,7 @@ SAMtools
 .. sidebar:: SAMtools
    
    :Version: 1.7
-   :Dependancies: gcc/4.9.4
+   :Dependencies: gcc/4.9.4
    :URL: https://github.com/samtools/samtools/releases/download/1.7/samtools-1.7.tar.bz2
    :Documentation: http://www.htslib.org/doc/samtools.html
 

@@ -8,18 +8,18 @@ This is the documentation for The University of Sheffield's High Performance Com
 * :ref:`bessemer` 
 * :ref:`sharc` 
 
-Run by IT Services' Research Computing Group
+Run by IT Services' Research and Innovation team
 with additional support from the Research Software Engineering team in Computer Science,
 they support the computational needs of hundreds of researchers across all departments.
 
-Research Computing Team
------------------------
+Research and Innovation team
+----------------------------
 
-The research computing team are the team responsible for the HPC services, as well as all other aspects of research computing.
-If you require support with HPC, training or software for your workstations, the research computing team would be happy to help.
-Take a look at the `Research Computing <https://www.shef.ac.uk/it-services/research>`_ website or email `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
+The Research and Innovation team in IT Services are the team responsible for the HPC services, as well as all other aspects of research computing.
+If you require support with HPC, training or software for your workstations, the Research and Innovation team would be happy to help.
+Take a look at the `Research and Innovation <https://students.sheffield.ac.uk/it-services/research>`_ website or email `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
 
-Research Software Engineering Team
+Research Software Engineering team
 ----------------------------------
 
 The Research Software Engineering team is an academically-led group in the `Department of Computer Science <https://www.sheffield.ac.uk/dcs>`_
@@ -35,10 +35,13 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    bessemer/index
    sharc/index
    parallel/index
-   troubleshooting
    glossary
-   jade
-   jade2
-   bede
+   other-uk-hpc-resources
    oldsystems
+   help
+   Courses / Training Index<https://rcgsheffield.github.io/TUoS-RIT-training-resources/training.html>
+   FAQs
+   Latest Software / HPC changelog<http://changelog.hpc.shef.ac.uk/>
    referenceinfo/index
+   mfa-update-21-10-2021
+

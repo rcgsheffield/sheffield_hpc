@@ -28,7 +28,7 @@ Batch MPI
 ---------
 To use MPI you need to: 
 
-* Include information in your :ref:`batch job submission script <submit-queue>` that tells the Grid Engine scheduler you want to use a particular **Parallel Environment** (``mpi`` on ShARC);
+* Include information in your :ref:`batch job submission script <submit_batch_sharc>` that tells the Grid Engine scheduler you want to use a particular **Parallel Environment** (``mpi`` on ShARC);
 * Use ``module load`` to activate a particular :ref:`MPI implementation <mpi_impl>` (or ``module load`` an application that itself loads an MPI implementation behind the scenes).
 
 Here is an example that requests 4 *slots* (CPU cores) with 8GB of RAM per slot then runs a program called ``executable`` in the current directory using the OpenMPI library (version 2.0.1, built using version 6.2 of the gcc compiler).  It is assumed that ``executable`` was previously compiled using that exact same MPI library.  The Parallel Environment is specified using ``-pe``. :: 

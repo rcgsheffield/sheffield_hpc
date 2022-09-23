@@ -35,6 +35,24 @@ As the ANSYS suite contains a large number of packages, links to each dedicated 
 
   fluent
   mechanical
+  ls-dyna
+
+--------------------
+
+ANSYS training and help resources
+---------------------------------
+
+.. important::
+
+  Academic support requests should be directed to the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_  or 
+  the `ANSYS Learning Forum <https://forum.ansys.com/>`_ (**ensure you register with your University email for priority support**).
+
+ANSYS provides numerous academic training and help resources including tutorials, video lectures and examples. 
+A short list of these resources is summarised below:
+
+* `ANSYS provides free online Innovation Courses <https://courses.ansys.com>`_ which cover numerous topics including the theory and implementation of modelling with ANSYS products.
+* The `ANSYS How to Videos channel <https://www.youtube.com/user/ANSYSHowToVideos/playlists>`_ has many in depth tutorials for many ANSYS products.
+* Those with an Ansys Learning Hub Subscription can also access further courses at  the `ANSYS Learning Hub courses index <https://www.ansys.com/training-center/course-catalog>`_.
 
 --------------------
 
@@ -44,6 +62,7 @@ ANSYS example models
 ANSYS contains a large number of example models which can be used to become familiar with the software.
 The models can be found in::
 
+   /usr/local/packages/live/noeb/ANSYS/21.2/binary/v212/ansys/data/
    /usr/local/packages/live/noeb/ANSYS/21.1/binary/v211/ansys/data/
    /usr/local/packages/live/noeb/ANSYS/20.2/binary/v202/ansys/data/
    /usr/local/packages/live/noeb/ANSYS/20.1/binary/v201/ansys/data/
@@ -68,15 +87,16 @@ The following instruction should be inserted at line 2433 in ``anssh.ini``::
 
 ------------
 
-Please note ANSYS 20.1, 20.2 and 21.1 have been installed manually with the GUI in the following directories and permissions corrected as follows::
+Please note ANSYS 20.1 and higher versions have been installed manually with the GUI in the following directories and permissions corrected as follows::
 
     chmod 775 -R /usr/local/packages/live/noeb/ANSYS/20.1/binary/
     chmod 775 -R /usr/local/packages/live/noeb/ANSYS/20.2/binary/
     chmod 775 -R /usr/local/packages/live/noeb/ANSYS/21.1/binary/
+    chmod 775 -R /usr/local/packages/live/noeb/ANSYS/21.2/binary/
 
 Please follow the same install directory structure.
 
-In addition the following software packages are not included with the installations::
+In addition the following software packages are not included with the installations for ANSYS 19.4::
 
 
     "ANSYS Chemkin"
@@ -89,3 +109,5 @@ Module files are available below:
 - :download:`/usr/local/modulefiles/live/eb/all/ANSYS/19.4 </bessemer/software/modulefiles/ansys/19.4/19.4>`
 - :download:`/usr/local/modulefiles/live/noeb/ANSYS/20.1/binary </bessemer/software/modulefiles/ansys/20.1/binary>`
 - :download:`/usr/local/modulefiles/live/noeb/ANSYS/20.2/binary  </bessemer/software/modulefiles/ansys/20.2/binary>`
+- :download:`/usr/local/modulefiles/live/noeb/ANSYS/21.1/binary  </bessemer/software/modulefiles/ansys/21.1/binary>`
+- :download:`/usr/local/modulefiles/live/noeb/ANSYS/21.2/binary  </bessemer/software/modulefiles/ansys/21.2/binary>`

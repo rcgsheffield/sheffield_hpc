@@ -1,0 +1,48 @@
+#%Module
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a
+ remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular
+ desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like
+ environment with ncurses installed.
+
+
+More information
+================
+ - Homepage: https://dev.yorhel.nl/ncdu
+    }
+}
+
+module-whatis {Description: Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a
+ remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular
+ desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like
+ environment with ncurses installed.}
+module-whatis {Homepage: https://dev.yorhel.nl/ncdu}
+module-whatis {URL: https://dev.yorhel.nl/ncdu}
+
+set root /usr/local/packages/live/eb/ncdu/1.15.1-GCCcore-9.3.0
+
+conflict ncdu
+
+if { ![ is-loaded GCCcore/9.3.0 ] } {
+    module load GCCcore/9.3.0
+}
+
+if { ![ is-loaded ncurses/6.2-GCCcore-9.3.0 ] } {
+    module load ncurses/6.2-GCCcore-9.3.0
+}
+
+prepend-path	CMAKE_PREFIX_PATH		$root
+prepend-path	MANPATH		$root/share/man
+prepend-path	PATH		$root/bin
+prepend-path	XDG_DATA_DIRS		$root/share
+setenv	EBROOTNCDU		"$root"
+setenv	EBVERSIONNCDU		"1.15.1"
+setenv	EBDEVELNCDU		"$root/easybuild/ncdu-1.15.1-GCCcore-9.3.0-easybuild-devel"
+
+# Built with EasyBuild version 4.4.0

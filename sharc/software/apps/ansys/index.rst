@@ -16,7 +16,7 @@ The ANSYS suite of programs can be used to numerically simulate a large variety 
 
 .. include:: ../ansys/module-load-list.rst
 
-The ANSYS Workbench GUI executable is ``ansyswb``. ``ansyswb`` can be launched during an interactive session with X Window support (e.g. an interactive ``qrshx`` session).
+The ANSYS Workbench GUI executable is ``runwb2``. ``runwb2`` can be launched during an interactive session with X Window support (e.g. an interactive ``qrshx`` session).
 
 
 ------------------
@@ -33,8 +33,26 @@ As the ANSYS suite contains a large number of packages, links to each dedicated 
 
   fluent
   mechanical
+  ls-dyna
 
 ------------------
+
+ANSYS training and help resources
+---------------------------------
+
+.. important::
+
+  Academic support requests should be directed to the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_  or 
+  the `ANSYS Learning Forum <https://forum.ansys.com/>`_ (**ensure you register with your University email for priority support**).
+
+ANSYS provides numerous academic training and help resources including tutorials, video lectures and examples. 
+A short list of these resources is summarised below:
+
+* `ANSYS provides free online Innovation Courses <https://courses.ansys.com>`_ which cover numerous topics including the theory and implementation of modelling with ANSYS products.
+* The `ANSYS How to Videos channel <https://www.youtube.com/user/ANSYSHowToVideos/playlists>`_ has many in depth tutorials for many ANSYS products.
+* Those with an Ansys Learning Hub Subscription can also access further courses at  the `ANSYS Learning Hub courses index <https://www.ansys.com/training-center/course-catalog>`_.
+
+--------------------
 
 ANSYS example models
 --------------------
@@ -42,6 +60,7 @@ ANSYS example models
 ANSYS contains a large number of example models which can be used to become familiar with the software.
 The models can be found in::
 
+  /usr/local/packages/apps/ansys/21.2/binary/v212/ansys/data
   /usr/local/packages/apps/ansys/21.1/binary/v211/ansys/data
   /usr/local/packages/apps/ansys/20.2/binary/v202/ansys/data
   /usr/local/packages/apps/ansys/20.1/binary/v201/ansys/data
@@ -63,6 +82,9 @@ The models can be found in::
 
 Installation notes
 ------------------
+
+The ``mpi-rsh`` tight-integration parallel environment is required to run ANSYS/Fluent using MPI due to
+SSH access to worker nodes being prohibited for most users.
 
 ANSYS 15.0 was installed using the
 :download:`install_ansys.sh </sharc/software/install_scripts/apps/ansys/15.0/install_ansys.sh>` script; the module
@@ -114,18 +136,35 @@ ANSYS 19.4 was installed using the
 file is
 :download:`/usr/local/modulefiles/apps/ansys/19.4/binary </sharc/software/modulefiles/apps/ansys/19.4/binary>`.
 
+ANSYS 20.1 was installed using the GUI installer with all features and the module
+file is
+:download:`/usr/local/modulefiles/apps/ansys/20.1/binary </sharc/software/modulefiles/apps/ansys/20.1/binary>`.
+
+ANSYS 20.2 was installed using the GUI installer with all features and the module
+file is
+:download:`/usr/local/modulefiles/apps/ansys/20.2/binary </sharc/software/modulefiles/apps/ansys/20.2/binary>`.
+
+ANSYS 21.1 was installed using the GUI installer with all features and the module
+file is
+:download:`/usr/local/modulefiles/apps/ansys/21.1/binary </sharc/software/modulefiles/apps/ansys/21.1/binary>`.
+
+ANSYS 21.2 was installed using the GUI installer with all features and the module
+file is
+:download:`/usr/local/modulefiles/apps/ansys/21.2/binary </sharc/software/modulefiles/apps/ansys/21.2/binary>`.
+
+
 ----------
 
-ANSYS 20.1, 20.2 and 21.1 were installed using the GUI installer and then permissions were corrected as follows::
+ANSYS 20.1, and higher were installed using the GUI installer and then permissions were corrected as follows::
 
     chmod 775 -R /usr/local/packages/apps/ansys/20.1/binary
     chmod 775 -R /usr/local/packages/apps/ansys/20.2/binary
     chmod 775 -R /usr/local/packages/apps/ansys/21.1/binary
+    chmod 775 -R /usr/local/packages/apps/ansys/21.2/binary
 
 Please follow the same install directory structure.
 
-The ``mpi-rsh`` tight-integration parallel environment is required to run ANSYS/Fluent using MPI due to
-SSH access to worker nodes being prohibited for most users.
+
 
 For versions 19.3 & 19.4 and onward mapdl will not run without modifying the file::
 

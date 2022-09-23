@@ -7,6 +7,8 @@ Intel has compilers for C (icc), C++ (icpc) and Fortran (ifort).
 
 To activate *both* the C/C++ and Fortran compilers use one of: ::
 
+   module load iccifort/2020.4.304  # subset of intel-2020b EasyBuild toolchain
+   module load iccifort/2020.1.217  # subset of intel-2020a EasyBuild toolchain
    module load iccifort/2019.5.281  # subset of intel-2019b EasyBuild toolchain
    module load iccifort/2019.1.144-GCC-8.2.0-2.31.1  # subset of intel-2019a toolchain
    module load iccifort/2018.3.222-GCC-7.3.0-2.30 # subset of intel-2018b toolchain

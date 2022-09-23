@@ -17,7 +17,7 @@ Eight nodes (``bessemer-node030`` to ``bessemer-node037``) each have:
    :header-rows: 0
 
    * - Processors
-     - 2x Intel Xeon Gold 6138 (2.00GHz; 40 cores per CPU)
+     - 2x Intel Xeon Gold 6138 (2.00GHz; 20 cores per CPU)
    * - RAM
      - 192GB (DDR4 @ 2666 MHz)
    * - NUMA nodes
@@ -37,7 +37,7 @@ Access to the node is managed by the `RSE team <https://rse.shef.ac.uk>`_. Acces
 * PhD students, researchers and staff in Computer Science can all request access to the nodes.
 * Access to others who are collaborating on projects with some Computer Science / RSE involvement
   can be made on a case-by-case basis.
-* Access to Computer Science MSc students
+* Access to Computer Science MSc and BSc students
   can be made on a case-by-case basis.
 
 A number of other users were granted access before this policy was developed.
@@ -99,7 +99,7 @@ Resource limits per job:
 
    Leave commented until implemented and tested
 
-   3. General pre-emptable access
+   3. General preemptable access
 
    Users other than Computer Science researchers and their collaborators can
    make use of idle time on these nodes and other nodes
@@ -108,6 +108,11 @@ Resource limits per job:
 
    * Partition: ``preempt``
 
-   These jobs can be pre-empted by jobs submitted to the ``dcs-gpu`` and ``dcs-gpu-test`` partitions;
+   These jobs can be preempted by jobs submitted to the ``dcs-gpu`` and ``dcs-gpu-test`` partitions;
    if this happens
-   the pre-empted jobs will be stopped mid-execution and re-queued.
+   the preempted jobs will be stopped mid-execution and re-queued.
+
+
+.. |partitions| replace:: dcs-gpu,dcs-gpu-test
+
+.. include:: ../../referenceinfo/imports/scheduler/SLURM/slurm-gpu-node-queries.rst

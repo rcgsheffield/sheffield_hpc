@@ -42,7 +42,7 @@ Installation in Home Directory - CPU Version
 In order to to install to your home directory,
 Conda is used to create a virtual python environment for installing your local version of TensorFlow.
 
-First request an interactive session, e.g. with :ref:`slurm_interactive`.
+First request an interactive session, e.g. with :ref:`submit_interactive_bessemer`.
 
 Then TensorFlow can be installed by the following: ::
 

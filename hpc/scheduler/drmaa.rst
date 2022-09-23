@@ -5,7 +5,7 @@ DRMAA
 
 The Distributed Resource Management Application API (DRMAA) is a specification for 
 **programatically submitting/controlling jobs** to/on job scheduling software 
-such as the :ref:`Grid Engine <submit-queue>` software used on 
+such as the :ref:`Grid Engine <submit_interactive_sharc>` software used on 
 the :ref:`sharc` cluster.  
 
 Support for DRMAA is built in to Grid Engine and other scheduling software such as Torque, PBS, HTCondor and SLURM.
@@ -89,14 +89,14 @@ You can enable email notifications for jobs finishing or aborting by setting two
 .. code-block:: python
 
      jt.blockEmail = False
-     jt.email = ['somebody@sheffield.ac.uk']
+     jt.email = ['a.person@sheffield.ac.uk']
 
 This is equivalent to having the following in a Grid Engine batch job submission script:
 
 .. code-block:: bash
 
     #$ -m ea
-    #$ -M somebody@sheffield.ac.uk
+    #$ -M a.person@sheffield.ac.uk
 
 Other useful job template attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

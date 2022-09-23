@@ -4,7 +4,8 @@
 ANSYS Packages Reference Info
 **********************************
 
-This sub-tree contains ANSYS packages reference information that is pulled into other pages.
+This page provides links to reference information on ANSYS software packages and configuration on 
+the HPC clusters.
 
 
 .. toctree::

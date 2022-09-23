@@ -72,9 +72,6 @@ To learn more about what software is available on the system and discover the na
 * :ref:`software on Bessemer <bessemer-software>`
 * :ref:`software on ShARC <sharc-software>`
 
-You can search for a module using: ::
-
-    module avail |& grep -i somename
 
 The name of a Module should tell you:
  
@@ -92,6 +89,37 @@ Some other things to be aware of:
 * Available applications and application versions may differ between Bessemer and ShARC;
 * The order in which you load modules may be significant (e.g. if module A sets ``SOME_ENV_VAR=apple`` and module B sets ``SOME_ENV_VAR=pear``);
 * Some related module files have been set up so that they are mutually exclusive e.g. on ShARC the modules ``dev/NAG/6.0`` and ``dev/NAG/6.1`` cannot be loaded simultaneously (as users should never want to have both loaded).
+
+.. _search_env_modules:
+
+Searching for Modules
+----------------------
+
+You can search for a module using: ::
+
+    module avail |& grep -i somename
+
+Where you replace **somename** with the string you wish to search for.
+
+You may wish to setup a bash alias in your ``$HOME/.bashrc`` file with this as a short cut e.g. : ::
+
+    alias modulefind="module avail |& grep -i"
+
+After sourcing ``$HOME/.bashrc`` this command can then be called like so: 
+
+.. code-block:: console
+
+    $ source $HOME/.bashrc
+    $ modulefind intel
+    CFITSIO/3.45-intel-2018b
+    FDS/6.7.5-intel-2020a
+    intel/2018b
+    intel/2019a
+    intel/2019b
+    intel/2020a
+    VASP/5.4.1-intel-2019b
+    VASP/5.4.4-intel-2019b
+
 
 Behind the scenes
 -----------------

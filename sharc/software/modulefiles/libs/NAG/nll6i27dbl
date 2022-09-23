@@ -13,6 +13,11 @@ proc ModulesHelp { } {
     puts stderr "Makes the $product NAG C and Fortran libraries available (Mark $mark for the $compiler (>= $compilerminvers) compilers) "
 }
 
+set curMod [module-info name]
+if { [ module-info mode load ] } {
+     puts stderr "Note: '$curMod' is deprecated on this system."
+}
+
 set product         nll6i27dbl 
 set mark            27
 set compiler        intel

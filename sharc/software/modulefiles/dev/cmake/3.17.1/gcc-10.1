@@ -1,0 +1,27 @@
+#%Module1.0#####################################################################
+##
+## cmake 3.17.1 module file
+##
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+
+set cmakevers 3.17.1
+set compiler gcc
+set compilervers 10.1
+
+proc ModulesHelp { } {
+        global cmakevers
+        global compiler
+        global compilervers
+        puts stderr "Makes cmake version $cmakevers (plus $compiler $compilervers) available"
+}
+module-whatis "Makes cmake version $cmakevers (plus $compiler $compilervers) available"
+
+module load dev/$compiler/$compilervers
+
+set CMAKE_HOME /usr/local/packages/dev/cmake/$cmakevers/$compiler-$compilervers
+
+setenv CMAKE_HOME CMAKE_HOME
+prepend-path PATH $CMAKE_HOME/bin
+prepend-path MANPATH $CMAKE_HOME/man

@@ -4,9 +4,9 @@ OpenFOAM
 .. sidebar:: OpenFOAM
 
    :Version: 4.1, 8, v2012
+   :URL: https://openfoam.org/ or https://www.openfoam.com/
+   :Documentation: https://cfd.direct/openfoam/user-guide or https://www.openfoam.com/documentation/overview
    :Dependencies: GCC compiler, Open MPI, NCurses (essential), Scotch/PT-Scotch, GMP, MPFR.
-   :URL: https://openfoam.org
-   :Documentation: https://cfd.direct/openfoam/user-guide/
 
 
 OpenFOAM is leading software for computational fluid dynamics (CFD). It is licensed free and open source only under the GNU General Public Licence (GPL) by the OpenFOAM Foundation.
@@ -36,6 +36,12 @@ OpenFOAM version 4.1 uses the module file to match the shell environment and can
 
     module load apps/openfoam/4.1/gcc-6.2-openmpi-2.0.1
 
+.. hint::
+
+    Users should investigate OpenFOAM documentation to determine which OpenFOAM executables are parallel compatible and 
+    which are serial only. Only the ``simpleFoam`` executable shown below is parallel compatible and is executed with ``srun``
+    in multiple core jobs.
+
 ----------
 
 Interactive Usage
@@ -55,7 +61,6 @@ After connecting to ShARC (see :ref:`ssh`), you can start an `interactive graphi
   cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
   chmod 700 -R pitzDaily && cd pitzDaily
   blockMesh
-  decomposePar
   simpleFoam
 
 ------------
@@ -74,7 +79,7 @@ The following is an example batch job running the pitzDaily example model:
   #!/bin/bash
   #$ -V
   #$ -cwd
-  #$ -M joe.bloggs@sheffield.ac.uk
+  #$ -M a.person@sheffield.ac.uk
   #$ -m abe
   #$ -l h_rt=01:00:00
   #$ -l rmem=2G
@@ -89,8 +94,8 @@ The following is an example batch job running the pitzDaily example model:
   cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
   chmod 700 -R pitzDaily && cd pitzDaily
   cp /fastdata/$USER/tests/openfoam/decomposeParDict system/decomposeParDict
-  mpirun -n $NSLOTS blockMesh
-  mpirun -n $NSLOTS decomposePar
+  blockMesh
+  decomposePar
   mpirun -n $NSLOTS simpleFoam -parallel
 
 

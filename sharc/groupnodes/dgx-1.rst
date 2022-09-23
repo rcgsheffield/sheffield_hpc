@@ -112,7 +112,7 @@ An output file is created in your home directory that captures your script's out
 Note that the maximum run-time for jobs submitted to the (batch job only) ``rse.q`` is four days, 
 as is standard for batch jobs on ShARC.
 
-See :ref:`submit-queue` for more information on job submission and the Sun Grid Engine scheduler.
+See :ref:`submit_batch_sharc` for more information on job submission and the Sun Grid Engine scheduler.
 
 Deep Learning on the DGX-1
 --------------------------

@@ -1,0 +1,37 @@
+#%Module
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+MATLAB is a high-level language and interactive environment
+ that enables you to perform computationally intensive tasks faster than with
+ traditional programming languages such as C, C++, and Fortran.
+
+
+More information
+================
+ - Homepage: http://www.mathworks.com/products/matlab
+    }
+}
+
+module-whatis {Description: MATLAB is a high-level language and interactive environment
+ that enables you to perform computationally intensive tasks faster than with
+ traditional programming languages such as C, C++, and Fortran.}
+module-whatis {Homepage: http://www.mathworks.com/products/matlab}
+module-whatis {URL: http://www.mathworks.com/products/matlab}
+
+set root /usr/local/packages/live/noeb/MATLAB/2022a/binary
+
+conflict MATLAB
+
+prepend-path	PATH		$root/bin
+prepend-path	LD_LIBRARY_PATH	$root/extern/bin/glnxa64
+setenv	EBROOTMATLAB		"$root"
+setenv	EBVERSIONMATLAB		"2022a"
+setenv	LM_LICENSE_FILE		"48832@matlablm.shef.ac.uk"
+prepend-path	PATH		$root
+setenv	_JAVA_OPTIONS		"-Xmx256m"
+# Built with EasyBuild version 4.0.0

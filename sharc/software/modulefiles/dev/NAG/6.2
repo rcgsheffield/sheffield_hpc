@@ -18,6 +18,11 @@ set nagroot /usr/local/packages/dev/NAG/$nagvers
 
 module-whatis   "Makes the NAG Fortran Compiler v$nagvers available"
 
+set curMod [module-info name]
+if { [ module-info mode load ] } {
+     puts stderr "Note: '$curMod' is deprecated on this system."
+}
+
 prepend-path PATH $nagroot/bin
 prepend-path MANPATH $nagroot/man
 setenv NAG_KUSARI_FILE /usr/local/packages/dev/NAG/license.lic

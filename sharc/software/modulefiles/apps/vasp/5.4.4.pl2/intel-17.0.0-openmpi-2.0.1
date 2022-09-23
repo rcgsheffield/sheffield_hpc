@@ -26,6 +26,8 @@ module-whatis   "Makes VASP Version 5.4.4 available"
 # module variables
 #
  set     version 5.4.4.pl2
- set     vasproot /usr/local/packages/apps/vasp/$version/intel-17.0.0-openmpi-2.0.1/vasp.5.4.4.pl2
-
- prepend-path PATH $vasproot/bin
+ set     vasproot /usr/local/packages/apps/vasp/$version/intel-17.0.0-openmpi-2.0.1
+ setenv  VASP_ROOT $vasproot
+ setenv  PSEUDOPOTENTIAL_DIR /usr/local/packages/apps/vasp/POTCAR
+ 
+ prepend-path PATH $vasproot/vasp.5.4.4.pl2/bin

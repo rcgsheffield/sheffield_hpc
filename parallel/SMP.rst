@@ -19,7 +19,7 @@ you can often enable OpenMP support at compile-time and/or run-time using compil
 Batch OpenMP jobs
 -----------------
 
-To submit a SMP job to our system, we we need to request a particular **Parallel Environment** in our :ref:`batch job submission scripts <submit-queue>`.
+To submit a SMP job to our system, we we need to request a particular **Parallel Environment** in our :ref:`batch job submission scripts <submit_batch_sharc>`.
 On ShARC your script needs to include a line like: ::
 
    #$ -pe smp N
@@ -35,14 +35,14 @@ Here's an example that requests 4 cores and 4 threads on ShARC: ::
    #$ -l rmem=4G
  
    # Tell programs that use the OpenMP library to use 4 threads
-   export OMP_NUM_THREADS=4
+   export OMP_NUM_THREADS=$NSLOTS
    ./myprogram
 
 Note that you have to specify the number of cores at least **twice** when running OpenMP jobs:
 
- * Once to the scheduler (``#$ -pe smp 4``) so that it knows how many cores to assign to your job;
- * Once to the OpenMP runtime environment (``export OMP_NUM_THREADS=4``) so that OpenMP knows how many threads to create.
- * You may also need to expliclty need to tell your application how many threads it should create.
+* Once to the scheduler (``#$ -pe smp 4``) so that it knows how many cores to assign to your job;
+* Once to the OpenMP runtime environment (``export OMP_NUM_THREADS=$NSLOTS``) so that OpenMP knows how many threads to create.
+* You may also need to expliclty need to tell your application how many threads it should create.
 
 Running other SMP schemes
 -------------------------

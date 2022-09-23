@@ -22,6 +22,7 @@ import shutil
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'sphinx_substitution_extensions',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -36,9 +37,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Sheffield HPC Documentation'
-copyright = u'2021, The University of Sheffield'
-author = u'The University of Sheffield'
+project = 'Sheffield HPC Documentation'
+copyright = '2022, The University of Sheffield'
+author = 'The University of Sheffield'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -54,11 +55,19 @@ release = ''
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'themes', 'README.rst','global.rst']
+exclude_patterns = [
+    '_build',
+    'themes',
+    'README.rst',
+    'global.rst',
+    '.tox',
+    'mypy_cache',
+    'referenceinfo/imports'
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -86,8 +95,8 @@ html_theme_options = {
 #                       'navbar_title': ' ',
 #                       'navbar_links': [
 #                           ("Home", "index"),
-#                           ("Research Computing @ IT Services", "https://www.shef.ac.uk/it-services/research", True),
-#                           ("Research Software Engineering @ TUOS", "https://rse.shef.ac.uk", True)
+#                           ("Research and Innovation team, IT Services", "https://students.sheffield.ac.uk/it-services/research", True),
+#                           ("Research Software Engineering", "https://rse.shef.ac.uk", True)
 #                       ],
 #                       'globaltoc_depth': 1}
 

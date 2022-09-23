@@ -33,7 +33,7 @@ Octeract Engine 3.1.0 can be loaded by module loading with the following command
 Interactive jobs
 ----------------
 
-After connecting to Bessemer (see :ref:`ssh`), Octeract Engine can be used interactively by starting an :ref:`interactive session <submit-interactive>` with ``srun --pty bash -i`` 
+After connecting to Bessemer (see :ref:`ssh`), Octeract Engine can be used interactively by starting an :ref:`interactive session <submit_interactive_bessemer>` with ``srun --pty bash -i`` 
 and then issuing the commands:
 
 .. code-block:: bash
@@ -65,7 +65,7 @@ Example job:
     !/bin/bash
     #SBATCH -J octeract-8core-test
     #SBATCH -o "%j".out
-    #SBATCH --mail-user joe.bloggs@sheffield.ac.uk
+    #SBATCH --mail-user a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     #SBATCH -t 0:05:0 # Request 5 mins run time
     #SBATCH --ntasks-per-node=8

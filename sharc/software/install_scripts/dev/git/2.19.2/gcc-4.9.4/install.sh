@@ -18,7 +18,7 @@ MODULEFILE="/usr/local/modulefiles/dev/git/${GIT_VERS}/${COMPILER}-${COMPILER_VE
 # Signal handling for failure
 handle_error () {
     errcode=$? # save the exit code as the first thing done in the trap function 
-    echo "Error: $errorcode" 
+    echo "Error: $errcode" 
     echo "Command: $BASH_COMMAND" 
     echo "Line: ${BASH_LINENO[0]}"
     exit $errcode  # or use some other value or do return instead 

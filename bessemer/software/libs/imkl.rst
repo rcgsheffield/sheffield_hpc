@@ -21,6 +21,8 @@ Usage
 
 The Intel MKL can be activated using one of the following: ::
 
+   module load imkl/2020.4.304-iimpi-2020b  # subset of intel-2020b EasyBuild toolchain
+   module load imkl/2020.1.217-iimpi-2020a  # subset of intel-2020a EasyBuild toolchain
    module load imkl/2019.5.281-iimpi-2019b  # subset of intel-2019b EasyBuild toolchain
    module load imkl/2019.1.144-iimpi-2019a  # subset of intel-2019a EasyBuild toolchain
    module load imkl/2018.3.222-iimpi-2018b  # subset of intel-2018b EasyBuild toolchain

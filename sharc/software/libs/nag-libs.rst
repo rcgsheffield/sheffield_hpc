@@ -18,17 +18,17 @@ including Python, Java, .NET and MATLAB.
 
 Usage
 -----
-Use the following command to make Mark 27 of the serial (1 CPU core) version of the NAG C and Fortran Library for Intel compilers available: ::
+Use the following command to make Mark 28.5 of the serial (1 CPU core) version of the NAG C and Fortran Library for Intel compilers available: ::
 
-   module load libs/NAG/nll6i27dbl
+   module load libs/NAG/nll6i285bl
 
 In addition to loading a module for the library, 
 you will usually need to load a module for the compiler you are using.
 
-``nll6i27dbl`` is compatible with the Intel compilers >= 19.0.3 
+``nll6i285bl`` is compatible with the Intel compilers >= 19.0.5 
 so you should load an appropriate module from the :ref:`list of available Intel compiler modules <sharc-intel-compilers>` e.g.: ::
 
-   module load dev/intel-compilers/19.0.3
+   module load dev/intel-compilers/19.1.3
 
 You can now compile a Fortran program so it is linked against the NAG library: ::
 
@@ -62,58 +62,63 @@ the output you get will vary according to which version of the NAG library you a
 
    nag_example a00aaf
 
-If you have loaded the ``module`` for nll6i27dbl this will give the following output ::
+If you have loaded the ``module`` for nll6i285bl this will give the following output ::
 
    Use nagvars script to set NAG compile and link environment
    variables within nag_example script
-   . /usr/local/packages/libs/NAG/nll6i27dbl/scripts/nagvars.sh -quiet int32 static nag
-   
+   . /usr/local/packages/libs/NAG/nll6i285bl/scripts/nagvars.sh -quiet int32 static nag
+
    Copying a00aafe.f90 to current directory
-   cp /usr/local/packages/libs/NAG/nll6i27dbl/f_examples/source/a00aafe.f90 .
-   
+   cp /usr/local/packages/libs/NAG/nll6i285bl/f_examples/source/a00aafe.f90 .
+
    Compiling and linking a00aafe.f90 to produce executable a00aafe.exe
-   ifort -I/usr/local/packages/libs/NAG/nll6i27dbl/lp64/include -I/usr/local/packages/libs/NAG/nll6i27dbl/lp64/nag_interface_blocks a00aafe.f90 /usr/local/packages/libs/NAG/nll6i27dbl/lp64/lib/libnag_nag.a -lm -ldl -lpthread -lstdc++ -o a00aafe.exe
-   
+   ifort -I/usr/local/packages/libs/NAG/nll6i285bl/lp64/nag_interface_blocks a00aafe.f90 /usr/local/packages/libs/NAG/nll6i285bl/lp64/lib/libnag_nag.a -lm -ldl -lstdc++ -o a00aafe.exe
+
    Running a00aafe.exe
    ./a00aafe.exe > a00aafe.r
     A00AAF Example Program Results
-    
+ 
     *** Start of NAG Library implementation details ***
-    
-    Implementation title: Linux, 64-bit, Intel C/C++ or Intel Fortran
+ 
+    Implementation title: Linux, 64-bit, Intel Classic C/C++ or Intel Classic Fortran
                Precision: double precision
-            Product Code: NLL6I27DBL
-                    Mark: 27.0.0 (self-contained)
-    
+            Product Code: NLL6I285BL
+                    Mark: 28.5.0 (self-contained)
+ 
      This is a 64-bit library using 32-bit integers.
-    
+ 
     *** End of NAG Library implementation details ***
 
 Documentation
 -------------
 
 The Numerical and statistical capabilities of the Fortran and C library are described in the 
-`The NAG Library Mark 27 Manual <https://www.nag.co.uk/numeric/nl/nagdoc_27/>`_ (Link to NAG's webbsite).
+`The NAG Library Mark 28.5 Manual <https://www.nag.com/numeric/nl/nagdoc_28.5/>`_ (Link to NAG's webbsite).
+
+Older versions
+--------------
+
+You may find older versions installed; these have been deprecated as they are no longer licensed or supported by NAG.
 
 Installation notes
 ------------------
-**nll6i27dbl (Mark 27)**
+**nll6i285bl (Mark 28.5)**
 
 These are primarily for system administrators ::
 
-    PRODUCT='nll6i27dbl'
+    PRODUCT='nll6i285bl'
     pushd "${TMPDIR-/tmp}"
     wget "https://www.nag.co.uk/downloads/impl/${PRODUCT}.tgz"
     tar -xvzf "${PRODUCT}.tgz"
+    cd "$PRODUCT"
     ./install.sh \
         -silent \
         -accept \
-        -installdir=/usr/local/packages/libs/NAG \
-        -docinstalldir="/usr/local/packages/libs/NAG/${PRODUCT}/doc"
+        -installdir=/usr/local/packages/libs/NAG
 
 Module Files
 ------------
-**nll6i27dbl (Mark 27)**
+**nll6i285bl (Mark 28.5)**
 
-* The module file is on the system at ``/usr/local/modulefiles/libs/NAG/nll6i27dbl``
-* The module file is :download:`on github </sharc/software/modulefiles/libs/NAG/nll6i27dbl>`.
+* The module file is on the system at ``/usr/local/modulefiles/libs/NAG/nll6i285bl``
+* The module file is :download:`on github </sharc/software/modulefiles/libs/NAG/nll6i285bl>`.

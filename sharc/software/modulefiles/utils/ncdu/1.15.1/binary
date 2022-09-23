@@ -1,0 +1,26 @@
+#%Module10.2#####################################################################
+##
+## NCDU version 1.15.1 module file
+##
+#  Updated by James Moore 23/11/2021
+#
+#  
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "   Makes NCDU version 1.15.1 available for use"
+}
+
+module-whatis   "Makes NCDU version 1.15.1 available"
+
+
+set		NCDU_DIR	/usr/local/packages/utils/ncdu/1.15.1/binary
+setenv		NCDU_ROOT	$NCDU_DIR
+
+prepend-path	PATH		$NCDU_DIR/bin

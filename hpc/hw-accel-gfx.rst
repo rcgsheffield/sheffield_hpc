@@ -71,7 +71,7 @@ Resources available to qsh-vis sessions
   * 1 CPU core
   * 1 GPU
 
-* You can request additional resources by passing the same parameters to ``qsh-vis`` that can be used with ``qrsh``/``qrshx``/``qsh``/``qsub`` (see :ref:`submit-queue`).
+* You can request additional resources by passing the same parameters to ``qsh-vis`` that can be used with ``qrsh``/``qrshx``/``qsh``/``qsub`` (see :ref:`submit_interactive_sharc`).
 * Research groups who have purchased their own GPU visualisation nodes may have different defaults.
 
 Availability

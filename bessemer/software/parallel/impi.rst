@@ -16,103 +16,124 @@ Versions
 --------
 
 You can load a specific version using one of the following: ::
-
-   module use impi/2018.5.288-iccifort-2019.5.281  # subset of intel 2019b EasyBuild toolchain
-   module use impi/2018.4.274-iccifort-2019.1.144-GCC-8.2.0-2.31.1  # subset of intel 2019a EasyBuild toolchain
-   module use impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30 # subset of intel 2018b EasyBuild toolchain
+    
+   module load impi/2019.9.304-iccifort-2020.4.304  # subset of intel 2020b EasyBuild toolchain
+   module load impi/2019.7.217-iccifort-2020.1.217  # subset of intel 2020a EasyBuild toolchain
+   module load impi/2018.5.288-iccifort-2019.5.281  # subset of intel 2019b EasyBuild toolchain
+   module load impi/2018.4.274-iccifort-2019.1.144-GCC-8.2.0-2.31.1  # subset of intel 2019a EasyBuild toolchain
+   module load impi/2018.3.222-iccifort-2018.3.222-GCC-7.3.0-2.30 # subset of intel 2018b EasyBuild toolchain
 
 which implicitly load versions of icc, ifort (and GCC).
 
-Example
--------
+.. warning::
 
-Consider the following source code (hello.c):
+   The Bessemer cluster does not have a high performance interconnect between nodes. As 
+   a result cross-node MPI performance will be sharply limited in comparison to ShARC.
 
-.. code-block:: c
-
-    #include <mpi.h>
-    #include <stdio.h>
-
-    int main(int argc, char** argv) {
-        // Initialize the MPI environment
-        MPI_Init(NULL, NULL);
-
-        // Get the number of processes
-        int world_size;
-        MPI_Comm_size(MPI_COMM_WORLD, &world_size);
-
-        // Get the rank of the process
-        int world_rank;
-        MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
-
-        // Get the name of the processor
-        char processor_name[MPI_MAX_PROCESSOR_NAME];
-        int name_len;
-        MPI_Get_processor_name(processor_name, &name_len);
-
-        // Print off a hello world message
-        printf("Hello world from processor %s, rank %d out of %d processors\n",
-               processor_name, world_rank, world_size);
-
-        // Finalize the MPI environment.
-        MPI_Finalize();
-    }
-
-MPI_COMM_WORLD (which is constructed for us by MPI) encloses all of the processes in the job, so this call should return the amount of processes that were requested for the job.
-
-Compile your source code by using on of the following commands: ::
-
-    mpic++ hello.cpp -o file
-    mpicxx hello.cpp -o file
-    mpicc hello.c -o file
-    mpiCC hello.c -o file
+   In addition, cross-node MPI is not normally permitted as these kinds of workloads 
+   should be run on the ShARC cluster for the reason above.
 
 
-Interactive job submission
-##########################
+Examples
+--------
 
+Two examples are given below, the first assessing the MPI performance and the second demonstrating the use 
+of the Intel MPI compilers.
 
-You can run your job interactively: ::
+Example: MPI Performance testing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    srun file
+A simple test of these modules can be performed by running the built in performance benchmark tests 
+supplied by Intel. An example of this using 2 cores is given below: 
 
-Your output would be something like: ::
-
-    Hello world from processor bessemer-node001.shef.ac.uk, rank 0 out of 1 processors
-
-
-This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive session.
-You can request an interactive node with multiple cores (4 in this example) by using the command: ::
-
-    srun --ntasks=4 --pty bash -i
-
-Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively.
-
-
-Non-interactive job submission
-##############################
-
-Write a shell script (minimal example) We name the script as ‘test.sh’: ::
-
+.. code-block:: bash
 
     #!/bin/bash
     #SBATCH --nodes=1
-    #SBATCH --ntasks-per-node=40
+    #SBATCH --ntasks-per-node=2
 
-    module load OpenMPI/3.1.3-GCC-8.2.0-2.31.1
+    module load impi/2018.5.288-iccifort-2019.5.281
 
-    srun --export=ALL file
+    MACHINEFILE="machinefile.$JOB_ID"
 
-Maximum 40 cores can be requested.
+    # Show which nodes you have been allocated CPU cores on
+    echo -e "\nShow node core allocation:\n"
 
-Submit your script by using the command: ::
+    NODELIST=nodelist.$SLURM_JOB_ID
+    srun -l bash -c 'hostname' | sort | awk '{print $2}' > $NODELIST
+    cat $NODELIST
 
-    sbatch test.sh
 
-Your output would be something like: ::
+    echo -e "\nBegin running application:\n"
+    srun --export=ALL IMB-MPI1
 
-    Hello world from processor bessemer-node003.shef.ac.uk, rank 24 out of 40 processors
-    Hello world from processor bessemer-node002.shef.ac.uk, rank 5 out of 40 processors
-    ...
-    Hello world from processor bessemer-node003.shef.ac.uk, rank 31 out of 40 processors
-    Hello world from processor bessemer-node003.shef.ac.uk, rank 32 out of 40 processors
+This will generate output of the form:
+
+.. code-block:: bash
+
+    Show node core allocation:
+
+    bessemer-node006.shef.ac.uk
+    bessemer-node006.shef.ac.uk
+
+    Begin running application:
+
+    #------------------------------------------------------------
+    #    Intel (R) MPI Benchmarks 2018, MPI-1 part
+    #------------------------------------------------------------
+    # Date                  : Mon Sep 27 09:48:58 2021
+    # Machine               : x86_64
+    # System                : Linux
+    # Release               : 3.10.0-1160.36.2.el7.x86_64
+    # Version               : #1 SMP Wed Jul 21 11:57:15 UTC 2021
+    # MPI Version           : 3.1
+    # MPI Thread Environment:
+
+
+This is followed by a series of test benchmark results for each of the many tests.
+
+
+Example: Using the Intel MPI compilers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Another simple test of these modules can be performed by compiling and running the example executable 
+provided by Intel. An example of this using 2 cores is given below:
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=2
+
+    module load impi/2018.5.288-iccifort-2019.5.281
+
+    # Show which nodes you have been allocated CPU cores on
+    echo -e "\nShow node core allocation:\n"
+
+    NODELIST=nodelist.$SLURM_JOB_ID
+    srun -l bash -c 'hostname' | sort | awk '{print $2}' > $NODELIST
+    cat $NODELIST
+
+    cd /fastdata/$USER
+    cp -R $I_MPI_ROOT/test ./ && chmod 700 -R test && cd test/
+    # Compiling the fortran example
+    mpif90 test.f90
+    # Alternatively you can compile the C example instead
+    #mpicc test.c
+
+    echo -e "\nBegin running application:\n"
+    srun --export=ALL /fastdata/$USER/test/a.out
+
+This will generate output of the form:
+
+.. code-block:: bash
+
+    Show node core allocation:
+
+    bessemer-node006.shef.ac.uk
+    bessemer-node006.shef.ac.uk
+
+    Begin running application:
+
+    Hello world: rank            0  of            2  running on bessemer-node006.shef.ac.uk                                                   $
+    Hello world: rank            1  of            2  running on bessemer-node006.shef.ac.uk

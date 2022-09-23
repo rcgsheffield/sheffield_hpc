@@ -182,7 +182,7 @@ Place the following commands in your journal file: ::
   (set! checkpoint/check-filename "./check-fluent")
   (set! checkpoint/exit-filename "./exit-fluent")
 
-This is instructing Fluent to check for files called ``check-fluent`` and ``exit-fluent`` in the current working directory for your Fluent job. The prescence of ``check-fluent`` file will instruct Fluent to conduct a save and then resume computation. The prescence of ``exit-fluent`` file will instruct Fluent to conduct a save and then exit.
+This is instructing Fluent to check for files called ``check-fluent`` and ``exit-fluent`` in the current working directory for your Fluent job. The presence of ``check-fluent`` file will instruct Fluent to conduct a save and then resume computation. The presence of ``exit-fluent`` file will instruct Fluent to conduct a save and then exit.
 The ``exit-fluent`` command will also automatically generate a ``#restart.inp`` file (a fluent journal) which can be used to restart the job from where it stopped.
 
 We can write a small timer trigger script which will place the ``exit-fluent`` file prior to your job ending which is ran and forked as part of your main batch submission script.
@@ -218,7 +218,7 @@ You would use this like so in an example batch submission script for ShARC with 
   #!/bin/bash
   #$ -V
   #$ -cwd
-  #$ -M joe.bloggs@sheffield.ac.uk
+  #$ -M a.person@sheffield.ac.uk
   #$ -m abe
   #$ -l h_rt=02:00:00
   #$ -l rmem=2G

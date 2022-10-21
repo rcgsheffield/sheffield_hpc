@@ -1,0 +1,19 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global ver
+
+        puts stderr " Makes julia $ver available to the system."
+}
+
+# julia version (not in the user's environment)
+set     ver     1.8.2
+
+module-whatis   "sets the necessary julia $ver paths"
+
+prepend-path PATH /usr/local/packages/apps/julia/1.8.2/binary/bin
+

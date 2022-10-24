@@ -1,3 +1,8 @@
+.. _julia_sharc:
+
+Julia
+=====
+
 The latest version of Julia (currently 1.8.2) is made available with the command ::
 
         module load apps/julia/1.8.2/binary

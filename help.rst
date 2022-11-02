@@ -4,6 +4,8 @@
 Need help?
 ==========
 
+Minor edit.
+
 If you need some help the Research and Innovation team in IT Services have a lot of resources available to help you, please 
 read through these resources below to find the most appropriate resources for your issues.
 

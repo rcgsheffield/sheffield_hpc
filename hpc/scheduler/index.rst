@@ -111,12 +111,12 @@ to queue as a result of the fair scheduling algorithm.
 Fair scheduling
 ^^^^^^^^^^^^^^^
 
-Job schedulers are typically configured to use a fair-share / wait time system. Inshort - the scheduler assesses 
-your previous CPU time and memory time (consumption) to give a requested job  a priority. Subsequently it uses how 
+Job schedulers are typically configured to use a fair-share / wait time system. In short, the scheduler assesses 
+your previous CPU time and memory time (consumption) to give a requested job a priority. Subsequently it uses how 
 long your job has had to wait in order to bump up that priority. Once your job is the highest priority, the job will 
 then run when the requested resources become available on the system. Your running total for CPU time / memory time usage 
-will decay overtime but in general the more resources you request and for longer, the lower your initial job priority 
-gets and the longer you have to wait behind other peoples jobs.
+will decay over time but in general the more resources you request and for longer, the lower your initial job priority 
+gets and the longer you have to wait behind other people's jobs.
 
 If you are seeing one job start and another immediately begin this is not an intentional chaining setting on the scheduler's 
 part. This is quite likely simply a reflection of your subsequent jobs waiting for resources to become available and it just so 

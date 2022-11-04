@@ -27,7 +27,7 @@ Like the ``sstat`` command, the ``--format`` flag can be used to choose the comm
 
     $ sacct --user=$USER --format=var_1,var_2, ... ,var_N
 
-.. list-table:: sstat format variable names
+.. list-table:: sacct format variable names
    :widths: 50 50
    :header-rows: 1
 

@@ -8,9 +8,6 @@ Job Submission and Control
     :maxdepth: 1
     :glob:
 
-    ./*
-
-
 Introduction
 ------------
 
@@ -637,44 +634,14 @@ Here is a more complex :ref:`SMP<parallel_SMP>` example that requests more resou
     # and output foo.res
     foo foo.dat foo.res
 
-.. _preemptable_jobs_bessemer:
+.. tip::
 
-Preemptable Jobs
-^^^^^^^^^^^^^^^^^
+    Bessemer currently supports running preemptable jobs. These are jobs which have been set to run in a reserved queue's node when those nodes are idle. These reserved queues 
+    are typically :ref:`private (research group-owned or dept-owned) nodes <groupnodes_bessemer>`,
+    but these resources will be reclaimed (and the associated jobs preempted) if
+    members of those groups/departments submit jobs that can only start if those resources are repurposed.
 
-Under certain conditions,
-Slurm on Bessemer allows jobs running in higher-priority Partitions (sets of nodes) to
-*preempt* jobs in lower-priority Partitions.
-When a higher priority job *preempts* a lower priority job,
-the lower priority job is stopped (and by default cancelled) and
-the higher priority job takes its place.
-
-Specifically, Slurm allows users to run interactive sessions and batch jobs using idle resources
-in :ref:`private (research group-owned or dept-owned) nodes <groupnodes_bessemer>`,
-but these resources will be reclaimed (and the associated jobs preempted) if
-members of those groups/departments submit jobs that can only start if those resources are repurposed.
-
-.. note::
-    Support for preemptable jobs has been enabled on a trial basis
-    and will be disabled if it impacts on
-    priority access by groups / departments to
-    private nodes they have purchased.
-
-An example of the use of preemptable jobs:
-
-1. Researcher A wants to run a job using 2 GPUs.  All 'public' GPUs are being used by jobs, but some GPUs in a private node belonging to research group X are idle.
-2. Researcher A decides that they want to use those idle GPUs but they aren't a member of research group X; however, they are happy to take the risk of their job being preempted by a member of research group X.
-3. Researcher A submits a job and makes it preemptable (by adding submitting it to the ``preempt`` Partition using ``--partition=preempt``).
-4. The job starts running on a node which is a member of the ``preempt`` and ``research-group-X`` Partitions.
-5. Researcher B is a member of research group X and submits a job to the ``research-group-X`` Partition.  
-6. This job can only start if the resources being used by the first job are reclaimed.
-7. As a result, Slurm preempts the first job with this second job, as a result of which the first job is cancelled.
-8. The second job runs to completion.
-
-Tips for using preemptable jobs:
-
-* Ensure that you're able to reliably re-submit your preemptable job if it is preempted before completion.  A common way of doing this is to write out state/progress information periodically whilst the job is running.
-* Select a sensible frequency for writing out state/progress information or you may cause poor performance due to storage write speed limits.
+    For more details on running preemptable jobs on Bessemer please see: :ref:`preemptable_jobs_bessemer`
 
 Monitoring running Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -976,10 +943,7 @@ Memory Limits
 Advanced / Automated job submission and management
 --------------------------------------------------
 
-The Distributed Resource Management Application API (DRMAA) is available on both clusters which 
-can be used with advanced scripts or a Computational Pipeline manager (such as `Ruffus <http://www.ruffus.org.uk/>`_)
-
-For further detail see our guide to the :ref:`drmaa` API.
+Further information on advanced or automated job submission and management can be found on our dedicated page: :ref:`advanced_job_submission_control` 
 
 Reference information and further resources
 -------------------------------------------

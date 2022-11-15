@@ -19,7 +19,8 @@ This guide will get you set up using the University's clusters
    mfa
    filestore
    transferring-files
-   scheduler/index
+   scheduler/basic_job_submission_and_control
+   scheduler/advanced_job_submission_and_control
    modules
    Choosing-appropriate-resources
    installing-software

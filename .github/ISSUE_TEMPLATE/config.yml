@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Online HPC Documentation
+    url: https://docs.hpc.shef.ac.uk
+    about: Please see the online userguide and documentation for our HPC clusters.
+  - name: Software installation request?
+    url: https://www.sheffield.ac.uk/nap/service/redirect/helpdesks
+    about: Please submit software installation requests via the University support desk (click "Report a new issue") and request the call is forwarded to Research IT.
+  - name: HPC Documentation bugs and suggestions
+    url: https://github.com/rcgsheffield/sheffield_hpc/issues
+    about: Please report issues with the documentation here

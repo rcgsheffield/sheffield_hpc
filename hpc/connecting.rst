@@ -114,7 +114,7 @@ Create a session profile for your login for each cluster by clicking *Session* i
 Enter the details for the cluster in the *Remote host* box, either ``bessemer.shef.ac.uk`` or ``sharc.shef.ac.uk``. 
 Then click the *Specify Username* checkmark and enter your username.
 Please ensure that the checkmark for *X11 Forwarding* is ticked or GUI applications will be unable to open 
-and that *Use SCP protocol* is also ticked (or depending on MobaXterm version select *SCP (normal speed)* 
+and that *Use SCP protocol* is also ticked (or depending on MobaXterm version select *SCP (enhanced speed)* 
 option from the *SSH-browser type* dropdown menu) then click *OK* to save your session profile.
 You should add a session for each cluster.
 

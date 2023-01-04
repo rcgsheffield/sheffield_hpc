@@ -430,3 +430,20 @@ Due to the complexity of the multi-user High Performance Computing service,
 the service is not currently certified as being compliant with the
 Cyber Essentials, Cyber Essentials Plus or ISO 27001 schemes/standards.
 This is unlikely to change in future.
+
+Can I use VSCode on the HPC clusters?
+---------------------------------------------------------------------------------------------------------
+We're not explicitly set against VSCode as it is a very useful tool. However, some users try to use large amounts of CPU by running code / debugging 
+on the login nodes which unfairly impacts other users as well as VSCode not cleaning up correctly. Thus we don't permit it's use on the login nodes and 
+instead offer a solution which runs VSCode on a worker node.
+
+Specifically, the issues are caused by the Visual Studio Code Remote - SSH and Visual Studio Code Remote Explorer extensions (these extensions are not 
+'normal SSH connections'). These extensions use SSH to download a copy of VSCode to the cluster then start VSCode on the login nodes and forward back 
+the interface to you. This means the VSCode and all dependent processes you run in the terminal are run on the login nodes. This tends to spawn lots 
+of processes (which might hit our 100 processes per user limit on the login nodes and will lock you out of the cluster) as well as not cleaning up 
+processes when the SSH connection is eventually terminated (resulting in the orphaned processes / high CPU processes). More detail on exactly what 
+this is doing can be found here: https://code.visualstudio.com/docs/remote/ssh
+
+ Typically if you are doing anything that will require a lot of CPU or memory you should use a worker node, this is why we have the alternative script 
+ (linked via [Github](https://github.com/rcgsheffield/vscoderemote_sheffield_hpc)) which spawns a VS Code server on a worker node and forwards you 
+ the GUI via web browser. Please feel free to run VSCode on the worker nodes as much as you like as this does not unfairly impact other users access to the HPC.

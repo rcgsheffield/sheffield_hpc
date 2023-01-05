@@ -25,7 +25,12 @@ extensions = [
     'sphinx_substitution_extensions',
     'sphinxcontrib.jquery',
     'sphinx_rtd_theme',
+    'sphinx.ext.autosectionlabel',
 ]
+
+# Make sure the autosectionlabel target is unique
+autosectionlabel_prefix_document = True
+# Sphinx will create explicit targets for all your sections, the name of target has the form {path/to/page}:{title-of-section}.
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']

@@ -138,3 +138,9 @@ How to install mermaid-cli and regenerate one of these diagrams: ::
 .. _reStructuredText: https://docutils.sourceforge.io/rst.html
 .. _Miniconda installer: https://conda.io/miniconda.html
 .. _Tox: https://tox.readthedocs.io/en/latest/
+
+Automatically label sections
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The extension autosectionlabel will create explicit targets for all your sections, the name of target has the form ``{path/to/page}:{title-of-section}``
+

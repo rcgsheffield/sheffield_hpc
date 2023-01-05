@@ -30,7 +30,7 @@ extensions = [
 
 # Make sure the autosectionlabel target is unique
 autosectionlabel_prefix_document = True
-autosectionlabel_maxdepth = 1
+autosectionlabel_maxdepth = 2
 # Sphinx will create explicit targets for all your sections, the name of target has the form {path/to/page}:{title-of-section}.
 
 # Add any paths that contain templates here, relative to this directory.

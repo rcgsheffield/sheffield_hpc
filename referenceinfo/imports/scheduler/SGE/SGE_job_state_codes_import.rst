@@ -10,4 +10,8 @@
 | Error     | all pending states with error                  | Eqw, Ehqw, EhRqw                            |
 +-----------+------------------------------------------------+---------------------------------------------+
 
-A full list of SGE states can be found `here <https://manpages.ubuntu.com/manpages/jammy/man5/sge_status.5.html>`_ 
+**Key:** **q**: *queueing*, **r**: *running*, **w**: *waiting*, **h**: *on hold*, **E**: *error*, **R**: *re-run*, **s**: *job suspended*, **S**: *queue suspended*, **t**: *transferring*, **d**: *deletion*.
+
+.. note::
+
+    A full list of SGE and DRMAA states can be found `here <https://manpages.ubuntu.com/manpages/jammy/man5/sge_status.5.html>`_ 

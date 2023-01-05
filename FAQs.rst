@@ -63,6 +63,23 @@ If you are in MobaXterm, you should attempt to navigate to the folder with using
 
 ------
 
+I've loaded software but it isn't working
+-----------------------------------------
+
+This usually means that you are on a :ref:`login node <login-nodes>`. You will need to start an interactive session after which you will be able to load cluster software. 
+
+For the Bessemer cluster you will need to type the following:
+
+.. code-block:: console
+
+    srun --pty bash -i
+
+For the ShARC cluster you will need to type the following:
+
+.. code-block:: console
+
+    qrshx
+    
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
 

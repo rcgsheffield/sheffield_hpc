@@ -66,7 +66,7 @@ If you are in MobaXterm, you should attempt to navigate to the folder with using
 I've loaded software but it isn't working
 -----------------------------------------
 
-This usually means that you are on a :ref:`login node <login-nodes>`. You will need to start an interactive session after which you will be able to load cluster software. 
+This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en/latest/hpc/what-is-hpc.html#login-nodes>`_. You will need to start an interactive session after which you will be able to load cluster software. 
 
 For the Bessemer cluster you will need to type the following:
 

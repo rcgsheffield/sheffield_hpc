@@ -36,7 +36,7 @@ All changes to the repository should be made through Pull Requests, including th
 Building the documentation on a local Windows machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Install **Python 3** on your machine by downloading and running the `Miniconda installer`_:
+#. Install **Python 3** on your machine by downloading and running the Miniconda_ installer:
 
    * Install for *just you*;
    * Install to the default location (e.g. ``C:\Users\myusername\Miniconda3``);
@@ -73,7 +73,7 @@ The output should be written to ``./_build/html``.
 Building the documentation on a local Mac machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Ensure Python 3 is installed.  If you do not already have a python distribution installed, we recommend you install :ref:`Miniconda <Miniconda installer>`.
+#. Ensure Python 3 is installed.  If you do not already have a python distribution installed, we recommend you install Miniconda_.
 #. Install the Python packages needed to build the HTML documentation.  If you are using (mini)conda create a new *conda environment* for building the documentation by running: ::
 
     export PATH=${HOME}/miniconda3/bin:$PATH
@@ -136,5 +136,5 @@ How to install mermaid-cli and regenerate one of these diagrams: ::
 
 .. _Sphinx: https://www.sphinx-doc.org/en/master/
 .. _reStructuredText: https://docutils.sourceforge.io/rst.html
-.. _Miniconda installer: https://conda.io/miniconda.html
+.. _Miniconda: https://conda.io/miniconda.html
 .. _Tox: https://tox.readthedocs.io/en/latest/

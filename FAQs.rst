@@ -96,6 +96,65 @@ Please refer to our :ref:`Choosing appropriate compute resources page <Choosing-
 
 ------
 
+I've submitted a job but it's not running
+-----------------------------------------
+
+I submitted a job and after several days it is still waiting in the queue. How can I resolve this?
+
+
+**For ShARC (SGE scheduler):**
+
+The maximum run time for ShARC is 96 hours.
+
+You can check if a job will ever run on ShARC using:
+
+.. code-block:: console
+
+        qalter -w v <job_id>
+
+However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_ 
+
+You can reduce the runtime using:
+
+.. code-block:: console
+
+        qalter <job_id> -l h_rt=96:00:00
+
+then to verify the time change (which will be shown in seconds) type:
+
+.. code-block:: console
+
+        qstat -r
+
+Alternatively, delete the job using qdel and re-submit with the new max runtime.
+
+**For Bessemer (SLURM scheduler):**
+
+
+The maximum run time for Bessemer is 168 hours.
+
+You can get an estimate for when your job will run on Bessemer using:
+
+.. code-block:: console
+        
+        squeue --start -j <jobid>
+
+You can reduce the runtime using:
+
+.. code-block:: console
+        
+        scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
+
+then to verify the time change type:
+
+.. code-block:: console
+
+        squeue -j <jobid> --long    
+
+Alternatively, delete the job using scancel and re-submit with the new max runtime
+
+------       
+
 "No space left on device" errors and jobs prematurely stopping
 --------------------------------------------------------------
 

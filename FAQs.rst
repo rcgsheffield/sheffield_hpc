@@ -102,8 +102,8 @@ I've submitted a job but it's not running
 I submitted a job and after several days it is still waiting in the queue. How can I resolve this?
 
 
-**For ShARC (SGE scheduler):**
-
+For ShARC (SGE scheduler)
+^^^^^^^^^^^^^^^^^^^^^^^^^
 The maximum run time for ShARC is 96 hours.
 
 You can check if a job will ever run on ShARC using:
@@ -128,8 +128,8 @@ then to verify the time change (which will be shown in seconds) type:
 
 Alternatively, delete the job using qdel and re-submit with the new max runtime.
 
-**For Bessemer (SLURM scheduler):**
-
+For Bessemer (SLURM scheduler)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The maximum run time for Bessemer is 168 hours.
 

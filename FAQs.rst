@@ -104,7 +104,7 @@ There are a multitude of factors which could be causing your job to queue for a 
 Occasionally parts of the system may be in a maintenance period or may be utlised to capacity.   
 A few things to consider which would cause your job to not run at all:
 
-* Did you request an acceptable amount of memory for a given node? (e.g. on Bessemer 192GB or less)
+* Did you request an acceptable amount of memory for a given node? (e.g. on Bessemer, 192GB or less.)
 * Did you request too much memory in the wrong parallel environment? (e.g on ShARC, OpenMP `-l rmem=16G` with 16 cores would request 16*16=256G exceeding node memory.)
 * Did you request too many cores in the wrong parallel environment?
   )

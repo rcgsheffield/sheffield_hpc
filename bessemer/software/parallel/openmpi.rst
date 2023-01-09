@@ -5,7 +5,7 @@ OpenMPI
 
 .. sidebar:: OpenMPI
 
-   :Latest Version: 3.1.4
+   :Latest Version: 4.0.5
    :Dependencies: gcc
    :URL: https://www.open-mpi.org/
 
@@ -16,13 +16,15 @@ Versions
 
 You can load a specific version using one of the following: ::
 
-   module load OpenMPI/3.1.1-GCC-7.3.0-2.30  # part of the foss-2018b toolchain
-   module load OpenMPI/3.1.3-GCC-8.2.0-2.31.1  # part of the foss-2019a toolchain
-   module load OpenMPI/3.1.3-gcccuda-2019a  # part of the fosscuda-2019a toolchain
-   module load OpenMPI/3.1.4-GCC-8.3.0  # part of the foss-2019b toolchain
-   module load OpenMPI/3.1.4-gcccuda-2019b  # part of the fosscuda-2019b toolchain
+   module load OpenMPI/3.1.1-GCC-7.3.0-2.30     # part of the foss-2018b toolchain
+   module load OpenMPI/3.1.3-GCC-8.2.0-2.31.1   # part of the foss-2019a toolchain
+   module load OpenMPI/3.1.3-gcccuda-2019a      # part of the fosscuda-2019a toolchain
+   module load OpenMPI/3.1.4-GCC-8.3.0          # part of the foss-2019b toolchain
+   module load OpenMPI/3.1.4-gcccuda-2019b      # part of the fosscuda-2019b toolchain
+   module load OpenMPI/4.0.3-GCC-9.3.0          # part of the foss-2020a toolchain
+   module load OpenMPI/4.0.5-GCC-10.2.0         # part of the foss-2020b toolchain 
 
-See `here <https://mail-archive.com/announce@lists.open-mpi.org/msg00118.html>`__ for a brief guide to the new features in OpenMPI 3.x and `here <https://raw.githubusercontent.com/open-mpi/ompi/v3.1.x/NEWS>`__ for a detailed view of the changes between OpenMPI versions.
+See `here <https://www.open-mpi.org/software/ompi/major-changes.php>`__ for a brief guide to the new features in OpenMPI 4.x and `here <https://raw.githubusercontent.com/open-mpi/ompi/v4.0.x/NEWS>`__ for a detailed view of the changes between OpenMPI versions.
 
 Example
 -------
@@ -62,34 +64,9 @@ Consider the following source code (hello.c):
 
 MPI_COMM_WORLD (which is constructed for us by MPI) encloses all of the processes in the job, so this call should return the amount of processes that were requested for the job.
 
-Compile your source code by using on of the following commands: ::
+Compile your source code by using the following command: ::
 
-    mpic++ hello.cpp -o file
-    mpicxx hello.cpp -o file
-    mpicc hello.c -o file
-    mpiCC hello.c -o file
-
-
-Interactive job submission
-##########################
-
-
-You can run your job interactively: ::
-
-    srun file
-
-Your output would be something like: ::
-
-    Hello world from processor bessemer-node001.shef.ac.uk, rank 0 out of 1 processors
-
-
-This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive session.
-You can request an interactive node with multiple cores (4 in this example) by using the command: ::
-
-    srun --ntasks=4 --pty bash -i
-
-Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively. 
-
+    mpicc hello.c -o hello
 
 Non-interactive job submission
 ##############################
@@ -99,11 +76,11 @@ Write a shell script (minimal example) We name the script as ‘test.sh’: ::
 
     #!/bin/bash
     #SBATCH --nodes=1
-    #SBATCH --ntasks-per-node=40
+    #SBATCH --ntasks-per-node=4
 
     module load OpenMPI/3.1.3-GCC-8.2.0-2.31.1
 
-    srun --export=ALL file
+    srun --export=ALL hello
 
 Maximum 40 cores can be requested.
 
@@ -113,11 +90,10 @@ Submit your script by using the command: ::
 
 Your output would be something like: ::
 
-    Hello world from processor bessemer-node003.shef.ac.uk, rank 24 out of 40 processors
-    Hello world from processor bessemer-node002.shef.ac.uk, rank 5 out of 40 processors
-    ...
-    Hello world from processor bessemer-node003.shef.ac.uk, rank 31 out of 40 processors
-    Hello world from processor bessemer-node003.shef.ac.uk, rank 32 out of 40 processors
+    Hello world from processor bessemer-node003.shef.ac.uk, rank 4 out of 4 processors
+    Hello world from processor bessemer-node003.shef.ac.uk, rank 3 out of 4 processors
+    Hello world from processor bessemer-node003.shef.ac.uk, rank 1 out of 4 processors
+    Hello world from processor bessemer-node003.shef.ac.uk, rank 2 out of 4 processors
 
 
 

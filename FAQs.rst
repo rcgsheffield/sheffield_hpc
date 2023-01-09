@@ -82,6 +82,7 @@ To list all avaiable command man pages:
 .. code-block:: console
 
         apropros .
+
 ------
 
 

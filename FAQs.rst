@@ -44,6 +44,48 @@ All failing, you may have to fall back to one of the `non-browser access methods
 
 ------
 
+How do I find out more about the commands available on the clusters?
+--------------------------------------------------------------------
+
+To view the manual for a command, you can use the command:
+
+.. code-block:: console
+
+        man <command_name>
+
+By default, man uses less as its pager. In less, you can use:
+
+        * **Space** to advance one page
+        * **d** to advance half a page
+        * **b** to go back one page
+        * **u** to go back half a page
+        * **/** starts search mode, after which you enter a search term
+
+whilst in search mode press **n** for next occurrence and **N** for previous occurrence.
+
+You can also press **h** when viewing man pages to show help.
+
+Documentation for less is available on the system using the command: 
+
+.. code-block:: console
+
+        man less
+
+If you don't know the specific command name then you can use **apropos** which searches all man pages:
+
+.. code-block:: console
+
+        apropros <search_term>
+
+To list all avaiable command man pages:
+
+.. code-block:: console
+
+        apropros .
+------
+
+
+
 I cannot see my folders in /data or /shared
 -------------------------------------------
 

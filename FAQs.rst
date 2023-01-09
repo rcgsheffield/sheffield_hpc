@@ -108,7 +108,7 @@ A few things to consider which would cause your job to not run at all:
 * Did you request too much memory in the wrong parallel environment? (e.g on ShARC, OpenMP `-l rmem=16G` with 16 cores would request 16*16=256G exceeding node memory.)
 * Did you request too many cores in the wrong parallel environment?
   )
-* Did you request too much time? (e.g on Bessemer more than 168 hrs) 
+* Did you request too much time? (e.g on Bessemer, more than 168 hrs.) 
 
 Following are ways to fix too much time requested
 

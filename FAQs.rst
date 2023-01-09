@@ -100,6 +100,17 @@ I've submitted a job but it's not running
 -----------------------------------------
 
 I submitted a job and after several days it is still waiting in the queue. How can I resolve this?
+There are a multitude of factors which could be causing your job to queue for a long time or to not run at all.
+Occasionally parts of the system may be in a maintenance period or may be utlised to capacity.   
+A few things to consider which would cause your job to not run at all:
+
+* Did you request an acceptable amount of memory for a given node? (e.g. on Bessemer 192GB or less)
+* Did you request too much memory in the wrong parallel environment? (e.g on Bessemer OpenMP `-l rmem=16G` with 16 cores would request 16*16=256G exceeding node memory)
+* Did you request too many cores in the wrong parallel environment?
+  )
+* Did you request too much time? (e.g on Bessemer more than 168 hrs) 
+
+Following are ways to fix too much time requested
 
 
 For ShARC (SGE scheduler)

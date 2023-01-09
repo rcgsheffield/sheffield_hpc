@@ -71,7 +71,7 @@ Documentation for less is available on the system using the command:
 
         man less
 
-If you don't know the specific command name then you can use **apropos** which searches all man pages:
+If you don't know the specific command name then you can use **apropros** which searches all man pages:
 
 .. code-block:: console
 

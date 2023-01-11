@@ -63,6 +63,23 @@ If you are in MobaXterm, you should attempt to navigate to the folder with using
 
 ------
 
+I've loaded software but it isn't working
+-----------------------------------------
+
+This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en/latest/hpc/what-is-hpc.html#login-nodes>`_. You will need to start an interactive session after which you will be able to load cluster software. 
+
+For the Bessemer cluster you will need to type the following:
+
+.. code-block:: console
+
+    srun --pty bash -i
+
+For the ShARC cluster you will need to type the following:
+
+.. code-block:: console
+
+    qrshx
+    
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
 
@@ -78,6 +95,75 @@ Please refer to our :ref:`Choosing appropriate compute resources page <Choosing-
         If you are confident that the scheduler is not terminating your job, but your job is prematurely stopping, please check if you have attempted to exceed your disk space quota, instructions for this are seen below.
 
 ------
+
+I've submitted a job but it's not running
+-----------------------------------------
+
+I submitted a job and after several days it is still waiting in the queue. How can I resolve this?
+There are a multitude of factors which could be causing your job to queue for a long time or to not run at all.
+Occasionally parts of the system may be in a maintenance period or may be utlised to capacity.   
+A few things to consider which would cause your job to not run at all:
+
+* Did you request an acceptable amount of memory for a given node? (e.g. on Bessemer, 192GB or less.)
+* Did you request too much memory in the wrong parallel environment? (e.g on ShARC, OpenMP `-l rmem=16G` with 16 cores would request 16*16=256G exceeding node memory.)
+* Did you request too many cores in the wrong parallel environment? (e.g on ShARC,  `-pe openmp 40` would request 40 cores, exceeding a single node's core count.)
+* Did you request too much time? (e.g for ShARC, more than 96 hours or on Bessemer, more than 168 hrs.) 
+
+Following are ways to fix too much time requested
+
+
+For ShARC (SGE scheduler)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+The maximum run time for ShARC is 96 hours.
+
+You can check if a job will ever run on ShARC using:
+
+.. code-block:: console
+
+        qalter -w v <job_id>
+
+However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_ 
+
+You can reduce the runtime using:
+
+.. code-block:: console
+
+        qalter <job_id> -l h_rt=96:00:00
+
+then to verify the time change (which will be shown in seconds) type:
+
+.. code-block:: console
+
+        qstat -r
+
+Alternatively, delete the job using qdel and re-submit with the new max runtime.
+
+For Bessemer (SLURM scheduler)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The maximum run time for Bessemer is 168 hours.
+
+You can get an estimate for when your job will run on Bessemer using:
+
+.. code-block:: console
+        
+        squeue --start -j <jobid>
+
+You can reduce the runtime using:
+
+.. code-block:: console
+        
+        scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
+
+then to verify the time change type:
+
+.. code-block:: console
+
+        squeue -j <jobid> --long    
+
+Alternatively, delete the job using scancel and re-submit with the new max runtime
+
+------       
 
 "No space left on device" errors and jobs prematurely stopping
 --------------------------------------------------------------
@@ -456,3 +542,44 @@ Due to the complexity of the multi-user High Performance Computing service,
 the service is not currently certified as being compliant with the
 Cyber Essentials, Cyber Essentials Plus or ISO 27001 schemes/standards.
 This is unlikely to change in future.
+
+
+Can I use VSCode on the HPC clusters?
+---------------------------------------------------------------------------------------------------------
+
+Usage restrictions
+^^^^^^^^^^^^^^^^^^
+
+.. caution::
+
+        The usage of VSCode on the Sheffield HPC clusters is partially restricted. Usage of the **Visual Studio Code Remote - SSH** 
+        and **Visual Studio Code Remote Explorer** extensions to run VSCode on the HPC clusters is not permitted.
+
+The **Visual Studio Code Remote - SSH** and **Visual Studio Code Remote Explorer** extensions use SSH to download a copy of VSCode 
+to the cluster then start VSCode on the login nodes and forward back the interface to you. This means the VSCode and all 
+dependent processes you run in the terminal are run on the login nodes. Not only does this tend to spawn lots of processes 
+(which might hit our 100 processes per user limit on the login nodes which will lock you out of the cluster) it also fails 
+to clean up processes correctly when the SSH connection is eventually terminated. This results in orphaned processes using 
+high CPU, wasting resources. Furthermore, some users also try to use large amounts of CPU by running code / debugging on 
+the login nodes which unfairly impacts other users as well.
+
+.. hint::
+
+        As documented elsewhere in this site, if you are doing anything that will require a lot of CPU or memory you should use a worker node.
+
+Permitted alternative methods for running VSCode are detailed below in the ideal order of preference
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In the first instance, we recommend a workflow where version control with Github (or similar) is used alongside VSCode where scripts/code are 
+synchronised between machines (e.g. your local machine and the HPC cluster) using conventional Git sync commands. Users are free to use the 
+VSCode terminal on the local machine to SSH to the clusters and execute commands where necessary.
+
+If this is not possible then VSCode can be ran on a worker node and forwarded back to your local machine in a web browser 
+via our VSCode Remote HPC script, (from `Github <https://github.com/rcgsheffield/vscoderemote_sheffield_hpc>`_). Details for its use 
+are included on the linked Github page.
+
+If neither of these options are not feasible, then running VSCode on a local machine in concert with 
+`an SSHFS mount of the desired folders <https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/>`_ 
+from the HPC clusters to the local filesystem is possible but discouraged due to the likelihood of poor performance from machines remote 
+from the clusters. By mounting the folder from the HPC cluster to a local filesystem folder, users can edit files on the cluster with VSCode 
+as if they were normal local machine files.

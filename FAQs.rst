@@ -381,7 +381,7 @@ To transfer data between your old account and your new account you could make us
 
 * Log into your new username in the cluster you want to copy to and create a folder named "OldUserAccount". 
 
-.. code-block:: console
+.. code-block:: bash
 
         mkdir OldUserAccount
 
@@ -389,13 +389,13 @@ To transfer data between your old account and your new account you could make us
 
 1. You want to copy the files to the new account on the same cluster node(e.g old account on Bessemer to new account on Bessemer), here we are only going to use the "avP" options as we dont need to compress the data.
 
-.. code-block:: console
+.. code-block:: bash
 
         rsync -avP /Path/To/File_Or_Directory $Your_New_UserName@localhost:/home/$Your_New_UserName/OldUserAccount
 
 2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on Sharc/Stannage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
 
-.. code-block:: console
+.. code-block:: bash
 
         rsync -avzP /Path/To/File_Or_Directory $Your_New_UserName@$clustername.shef.ac.uk:/home/$Your_New_UserName/OldUserAccount
 

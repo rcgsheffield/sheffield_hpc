@@ -378,19 +378,21 @@ The RSA, ECDSA and ED25519 fingerprints for Bessemer's login nodes are: ::
 I Have a new account, how do I transfer data from my old account
 ----------------------------------------------------------------
 To transfer data between your old account and your new account you could make use of either `SCP <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-scp-in-the-terminal>`__ or `RSYNC <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-rsync>`__. We encourage users to use RSYNC as it preserves timestamps and permisions. Follow the following workflow to carry out the transfer.
+
 * Log into your new username in the cluster you want to copy to and create a folder named "OldUserAccount". 
 
 .. code-block:: console
 
         mkdir OldUserAccount
 
-* Log into your old account and run the RSYNC command. There are two ways to run it, the first examples assumes you are copying the files to the new account on the same cluster node(e.g old account on Bessemer to new account on Bessemer), here we are only going to use the "avP" options as we dont need to compress the data.
+* Log into your old account and run the RSYNC command. Here we show two examples.
+1. You want to copying the files to the new account on the same cluster node(e.g old account on Bessemer to new account on Bessemer), here we are only going to use the "avP" options as we dont need to compress the data.
 
 .. code-block:: console
 
         rsync -avP /Path/To/File_Or_Directory $Your_New_UserName@localhost:/home/$Your_New_UserName/OldUserAccount
 
-The other example assumes you are copying the files to the new account on a different cluster node(e.g old account on Bessemer to new account on Sharc/Stannage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
+2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on Sharc/Stannage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
 
 .. code-block:: console
 

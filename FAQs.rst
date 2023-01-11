@@ -385,7 +385,7 @@ To transfer data between your old account and your new account you could make us
 
         mkdir OldUserAccount
 
-* Log into your old account and run the RSYNC command. Here we show two examples.
+* Log into your old account and run the rsync command. Here we show two examples.
 
 1. You want to copy the files to the new account on the same cluster node(e.g old account on Bessemer to new account on Bessemer), here we are only going to use the "avP" options as we dont need to compress the data.
 

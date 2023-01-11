@@ -61,7 +61,7 @@ By default, man uses less as its pager. In less, you can use:
         * **u** to go back half a page
         * **/** starts search mode, after which you enter a search term
 
-whilst in search mode press **n** for next occurrence and **N** for previous occurrence.
+Whilst in search mode press **n** for next occurrence and **N** for previous occurrence.
 
 You can also press **h** when viewing man pages to show help.
 
@@ -71,17 +71,17 @@ Documentation for less is available on the system using the command:
 
         man less
 
-If you don't know the specific command name then you can use **apropros** which searches all man pages:
+If you don't know the specific command name then you can use **apropos** which searches all man pages:
 
 .. code-block:: console
 
-        apropros <search_term>
+        apropos <search_term>
 
 To list all avaiable command man pages:
 
 .. code-block:: console
 
-        apropros .
+        apropos .
 
 ------
 

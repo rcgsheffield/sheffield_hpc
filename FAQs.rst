@@ -377,7 +377,7 @@ The RSA, ECDSA and ED25519 fingerprints for Bessemer's login nodes are: ::
 
 I have a new account, how do I transfer data from my old account
 ----------------------------------------------------------------
-To transfer data between your old account and your new account you could make use of either `SCP <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-scp-in-the-terminal>`__ or `RSYNC <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-rsync>`__. We encourage users to use RSYNC as it preserves timestamps and permisions. Follow the following workflow to carry out the transfer.
+To transfer data between your old account and your new account you could make use of either `SCP <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-scp-in-the-terminal>`__ or `rsync <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-rsync>`__. We encourage users to use rsync as it preserves timestamps and permisions. Follow the following workflow to carry out the transfer.
 
 * Log into your new username in the cluster you want to copy to and create a folder named "OldUserAccount". 
 

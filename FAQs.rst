@@ -44,16 +44,20 @@ All failing, you may have to fall back to one of the `non-browser access methods
 
 ------
 
-How do I find out more about the commands available on the clusters?
---------------------------------------------------------------------
+.. _man_pages:
 
-To view the manual for a command, you can use the command:
+How do I find out more about the commands available on the clusters with man pages?
+-----------------------------------------------------------------------------------
+
+Man pages (manuals) are installed by default alongside commands/software on unix-like operating systems such as those found on the clusters.  
+
+To view the man page (official manual) for a command, you can use the command:
 
 .. code-block:: console
 
         man <command_name>
 
-By default, man uses less as its pager. In less, you can use:
+You can navigate man pages using (the same keyboard shorcuts as **less**): 
 
         * **Space** to advance one page
         * **d** to advance half a page
@@ -71,7 +75,7 @@ Documentation for less is available on the system using the command:
 
         man less
 
-If you don't know the specific command name then you can use **apropos** which searches all man pages:
+If you don't know the specific command name then you can use **apropos** which searches all names of man pages and their one line descriptions:
 
 .. code-block:: console
 
@@ -84,6 +88,8 @@ To list all avaiable command man pages:
         apropos .
 
 ------
+
+
 
 
 

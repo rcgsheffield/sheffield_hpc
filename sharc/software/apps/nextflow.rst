@@ -1,0 +1,104 @@
+.. _nextflow_sharc:
+
+Nextflow
+========
+
+.. sidebar:: Nextflow
+
+   :Latest version: 22.04.0
+   :URL: https://www.nextflow.io/
+   :Dependencies: Java 11
+   :Documentation: https://www.nextflow.io/docs/latest/index.html
+   :Nextflow pipelines: https://nf-co.re/
+   
+Nextflow is a free and open-source software distributed under the Apache 2.0 licence, developed by Seqera Labs. The software is used by scientists and engineers to write, deploy and share data-intensive, highly scalable, workflows on any infrastructure.
+
+Nextflow enables scalable and reproducible scientific workflows using software containers. It allows the adaptation of pipelines written in the most common scripting languages.
+
+Its fluent DSL simplifies the implementation and the deployment of complex parallel and reactive workflows on clouds and clusters
+
+Interactive Usage
+-----------------
+After connecting to ShARC (see :ref:`ssh`),  start an interactive session with the 
+:ref:`qrshx` or :ref:`qrsh` command. 
+
+The latest version of Nextflow (currently version 22.4.0) is made available with the command:
+
+.. code-block:: console
+
+    $ module load apps/Nextflow/22.04.0/binary
+
+Note: The module file also loads apps/java/11.0.2/binary
+
+You can now run the ``nextflow`` command:
+
+.. code-block:: console
+
+    $ nextflow -version
+    N E X T F L O W
+    version 22.04.0 build 5697
+    created 23-04-2022 18:00 UTC (19:00 BST)
+    cite doi:10.1038/nbt.3820
+    http://nextflow.io
+    .
+
+
+
+Installation notes
+------------------
+Test
+----
+
+Write a file named **tutorial.nf** with the following content: `Source <https://www.nextflow.io/docs/latest/getstarted.html#your-first-script>`_
+
+.. code-block:: console
+    
+    params.str = 'Hello world!'
+
+    process splitLetters {
+      output:
+        path 'chunk_*'
+
+      """
+      printf '${params.str}' | split -b 6 - chunk_
+      """
+    }
+
+    process convertToUpper {
+      input:
+        path x
+      output:
+        stdout
+
+      """
+      cat $x | tr '[a-z]' '[A-Z]'
+      """
+    }
+
+    workflow {
+      splitLetters | flatten | convertToUpper | view { it.trim() }
+    }
+    
+Execute the script by entering the following command in your terminal:
+
+.. code-block:: console
+
+  nextflow run tutorial.nf
+
+It will output something similar to the text shown below:
+
+.. code-block:: console
+
+    N E X T F L O W  ~  version 19.04.0
+    executor >  local (3)
+    [69/c8ea4a] process > splitLetters   [100%] 1 of 1 ✔
+    [84/c8b7f1] process > convertToUpper [100%] 2 of 2 ✔
+    HELLO
+    WORLD!
+
+
+Version 22.04.0
+^^^^^^^^^^^^^^^
+
+* Installed using :download:`install.sh </sharc/software/install_scripts/apps/nextflow/22.04.0/install_nextflow.sh>`
+* :download:`This module file </sharc/software/modulefiles/apps/nextflow/22.04.0>` was installed as ``/usr/local/modulefiles/apps/Nextflow/22.04.0/binary``

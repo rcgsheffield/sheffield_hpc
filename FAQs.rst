@@ -631,7 +631,7 @@ If this is not possible then VSCode can be ran on a worker node and forwarded ba
 via our VSCode Remote HPC script, (from `Github <https://github.com/rcgsheffield/vscoderemote_sheffield_hpc>`_). Details for its use 
 are included on the linked Github page.
 
-If neither of these options are not feasible, then running VSCode on a local machine in concert with 
+If neither of these options are feasible, then running VSCode on a local machine in concert with 
 `an SSHFS mount of the desired folders <https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/>`_ 
 from the HPC clusters to the local filesystem is possible but discouraged due to the likelihood of poor performance from machines remote 
 from the clusters. By mounting the folder from the HPC cluster to a local filesystem folder, users can edit files on the cluster with VSCode 

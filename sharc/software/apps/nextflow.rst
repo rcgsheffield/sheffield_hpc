@@ -42,12 +42,8 @@ You can now run the ``nextflow`` command:
     http://nextflow.io
     .
 
-
-
-Installation notes
-------------------
-Test
-----
+A Simple Script
+^^^^^^^^^^^^^^^
 
 Write a file named **tutorial.nf** (`source <https://www.nextflow.io/docs/latest/getstarted.html#your-first-script>`_) with the following content: 
 
@@ -96,6 +92,74 @@ It will output something similar to the text shown below:
     HELLO
     WORLD!
 
+Batch usage
+-----------
+
+Ensure you have produced the above tutorial.nf script then write a file named **batch.sh** with the following content:
+
+.. code-block:: bash
+
+    #!/bin/bash
+    # your email address
+    #$ -M a.person@sheffield.ac.uk
+    #$ -m eba
+    ## set the number of cores 
+    #$ -pe smp 2
+    ## set max runtime to 1 minute (for this test)
+    #$ -l h_rt=00:01:00
+    ## set max memory to 1Gb per core (default is 2G)
+    #$ -l rmem=1G
+    #$ -cwd   
+    module load apps/Nextflow/22.04.0/binary
+    nextflow run tutorial.nf
+     
+You can now submit this job to the SLURM scheduler with ::
+
+  sbatch batch.sh
+
+Your output file content will be similar to the following:
+
+.. code-block ::
+
+    N E X T F L O W  ~  version 22.04.0
+    Launching `tutorial.nf` [thirsty_mahavira] DSL2 - revision: 7ed0e799f3
+    [-        ] process > splitLetters   -
+    [-        ] process > convertToUpper -
+
+    [-        ] process > splitLetters   [  0%] 0 of 1
+    [-        ] process > convertToUpper -
+
+    executor >  local (1)
+    [be/6c0c6b] process > splitLetters   [  0%] 0 of 1
+    [-        ] process > convertToUpper -
+
+    executor >  local (1)
+    [be/6c0c6b] process > splitLetters   [100%] 1 of 1 ✔
+    [-        ] process > convertToUpper -
+
+    executor >  local (2)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [4b/4c2a74] process > convertToUpper (1) [  0%] 0 of 2
+
+    executor >  local (3)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [1b/1ed03e] process > convertToUpper (2) [ 50%] 1 of 2
+    HELLO
+
+    executor >  local (3)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [1b/1ed03e] process > convertToUpper (2) [ 50%] 1 of 2
+    HELLO
+
+    executor >  local (3)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [1b/1ed03e] process > convertToUpper (2) [100%] 2 of 2 ✔
+    HELLO
+    WORLD!
+
+
+Installation notes
+------------------
 
 Version 22.04.0
 ^^^^^^^^^^^^^^^

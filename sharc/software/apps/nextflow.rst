@@ -17,6 +17,10 @@ Nextflow enables scalable and reproducible scientific workflows using software c
 
 Its fluent DSL simplifies the implementation and the deployment of complex parallel and reactive workflows on clouds and clusters
 
+.. note::
+
+  `nf-core <https://nf-co.re/pipelines>`_ is a community effort to collect a curated set of analysis pipelines built using Nextflow.
+
 Interactive Usage
 -----------------
 After connecting to ShARC (see :ref:`ssh`),  start an interactive session with the 

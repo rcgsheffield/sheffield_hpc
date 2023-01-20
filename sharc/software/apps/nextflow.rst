@@ -25,6 +25,7 @@ After connecting to ShARC (see :ref:`ssh`),  start an interactive session with t
 The latest version of Nextflow (currently version 22.4.0) is made available with the command:
 
 .. code-block:: console
+    :emphasize-lines: 1
 
     $ module load apps/Nextflow/22.04.0/binary
 
@@ -33,6 +34,7 @@ Note: The module file also loads apps/java/11.0.2/binary
 You can now run the ``nextflow`` command:
 
 .. code-block:: console
+  :emphasize-lines: 1
 
     $ nextflow -version
     N E X T F L O W
@@ -78,8 +80,9 @@ Write a file named **tutorial.nf** (`source <https://www.nextflow.io/docs/latest
 Execute the script by entering the following command in your terminal:
 
 .. code-block:: console
+  :emphasize-lines: 1
 
-  nextflow run tutorial.nf
+  $ nextflow run tutorial.nf
 
 It will output something similar to the text shown below:
 
@@ -113,9 +116,12 @@ Ensure you have produced the above tutorial.nf script then write a file named **
     module load apps/Nextflow/22.04.0/binary
     nextflow run tutorial.nf
      
-You can now submit this job to the SLURM scheduler with ::
+You can now submit this job to the SLURM scheduler with
 
-  sbatch batch.sh
+.. code-block:: console
+  :emphasize-lines: 1
+
+  $ sbatch batch.sh
 
 Your output file content will be similar to the following:
 

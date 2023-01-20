@@ -45,6 +45,7 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    help
    Courses / Training Index<https://rcgsheffield.github.io/TUoS-RIT-training-resources/training.html>
    FAQs
+   cheatsheets/index
    Latest Software / HPC changelog<http://changelog.hpc.shef.ac.uk/>
    referenceinfo/index
    citing

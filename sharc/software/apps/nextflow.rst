@@ -171,6 +171,8 @@ Your output file content will be similar to the following:
 Installation notes
 ------------------
 
+This installation was tested with the above examples. 
+
 Version 22.04.0
 ^^^^^^^^^^^^^^^
 

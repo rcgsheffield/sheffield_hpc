@@ -9,7 +9,7 @@ Nextflow
    :URL: https://www.nextflow.io/
    :Dependencies: Java 11
    :Documentation: https://www.nextflow.io/docs/latest/index.html
-   :Nextflow pipelines: https://nf-co.re/
+   :Nextflow pipelines: https://nf-co.re/pipelines
 
 Nextflow is a free and open-source software distributed under the Apache 2.0 licence, developed by Seqera Labs. The software is used by scientists and engineers to write, deploy and share data-intensive, highly scalable, workflows on any infrastructure.
 

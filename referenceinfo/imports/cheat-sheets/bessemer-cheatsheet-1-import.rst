@@ -1,10 +1,8 @@
-.. table::
+.. table:: **CONNECTING TO THE CLUSTER AND TRANSFERRING FILES** 
    :align: left
    :widths: auto
 
-   ==========================================================================      =========================================================================              
-   **Connecting to the cluster and transferring files**                                                             
-   ---------------------------------------------------------------------------------------------------------------------------------------------------------
+   ==========================================================================      =========================================================================
    *ssh -X $USER@$CLUSTER_NAME.shef.ac.uk*                                          Connect - :ref:`Link<ssh>`
    *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
    *scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER*             Upload  - :ref:`Link<transferring_files>`
@@ -15,13 +13,12 @@
    ==========================================================================      =========================================================================
 
 
-.. table::
+
+.. table:: **BATCH JOB SUBMISSION, MONITORING AND CONTROL**
    :align: left
    :widths: auto
 
    ===============================        =======================================================================================             
-   **Batch job submission, monitoring and control**                                                    
-   ------------------------------------------------------------------------------------------------------------------------------
    *sbatch MY_SCRIPT.sh*                  Submit a batch job - :ref:`Link<submit_batch_bessemer>`
    *squeue -u $USER*                      Invesitgate jobs in queue (Running **R** and Pending **PD**) - :ref:`Link<squeue>`
    *sstat -j 1234567*                     Invesitgate running job - :ref:`Link<sstat>`
@@ -33,25 +30,20 @@
    ===============================        =======================================================================================           
 
 
-.. table::
+.. table:: **PARTITION INFORMATION**
    :align: left
    :widths: auto
    
    ==========================    =======================================
-   **Partition information**
-   ---------------------------------------------------------------------
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
    **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
    **GPU nodes**                 32GB Memory/GPU, 40 cores/node 186 hrs   
    ==========================    =======================================
 
-.. table::
-   :align: left
+.. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
    :widths: auto
    
    ==========================================      =======================================
-   **Modules (activating software)** - :ref:`Link<env_modules>`     
-   ---------------------------------------------------------------------------------------
    *module avail*                                  List available modules
    *module avail |& grep -i somename*              Find a module
    *module load <class>/<name>/<version>*          Load a module
@@ -59,8 +51,8 @@
    *module list*                                   List loaded modules
    *module purge*                                  Unload all modules
    ==========================================      =======================================
- 
 
+ 
 .. tip:: 
 
     You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*

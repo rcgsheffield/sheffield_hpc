@@ -20,7 +20,7 @@ Usage
 
 Load by running one of the following ::
 
-    module load libs/votca/v2022/gcc-8.2-cmake-3.17.1
+    module load libs/votca/v2022/gcc-10.1-cmake-4.1.4
 
 This will:
 
@@ -49,6 +49,13 @@ The command-line programs that Votca provides are:
 * ``votca_property``
 
 
+It will also load the following modules that votca heavily relies on:
+
+1.	Lammps
+2.	Gromacs
+3.	Lapack
+4.	Blas
+
 
 -------
 
@@ -72,4 +79,4 @@ This section is primarily for administrators of the system.
 
 **Version .v2022**
 
-Votca v2022 was compiled with GCC 8.2 and cmake 3.1.7. 
+Votca v2022 was compiled with GCC 10.1 and cmake 4.1.4. 

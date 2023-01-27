@@ -32,31 +32,26 @@ This cheat sheet covers basic functionality for Bessemer.
 
 Bessemer Cheat Sheet 2
 ----------------------
+This cheat covers more advanced functionality for Bessemer.
 
 .. include:: /referenceinfo/imports/cheat-sheets/bessemer-cheatsheet-2-import.rst
- 
-----------
-
-Linux Cheat Sheet
------------------
-
-.. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
- 
---------
-
-Yum Cheat Sheet
----------------
-
-.. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
  
 ----------
 
 SGE to SLURM conversions
 ------------------------
 
-.. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
- 
+.. include:: /referenceinfo/imports/cheat-sheets/sge_slurm_convert.rst
+
 ----------
+
+Linux Cheat Sheet
+-----------------
+
+.. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
+  
+
+
 
 .. toctree::
     :hidden:

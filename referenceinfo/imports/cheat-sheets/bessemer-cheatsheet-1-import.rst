@@ -52,7 +52,7 @@
    *module purge*                                  Unload all modules
    ==========================================      =======================================
 
-.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<_filestore>`
+.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
    :widths: auto
    
    ==========================================      =======================================

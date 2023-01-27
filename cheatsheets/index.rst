@@ -50,15 +50,8 @@ Linux Cheat Sheet
 
 .. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
   
-
-
+---------
 
 .. toctree::
     :hidden:
-    :maxdepth: 1
-
-
-
-
-
-  
+    :maxdepth: 1  

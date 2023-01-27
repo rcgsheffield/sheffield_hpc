@@ -3,7 +3,7 @@ git
 
 .. sidebar:: git
 
-   :Latest version: 2.35.2
+   :Latest version: 2.39.1
    :Dependancies: None
    :URL: https://git-scm.com/
 
@@ -20,13 +20,21 @@ And a newer version that can be activated by loading a module file and is only a
 
    $ module load dev/git/2.35.2/gcc-4.9.4 
    $ git --version
-   git version 2.35.2
+   git version 2.39.1
 
 Installation notes
 ------------------
 
+2.39.1
+^^^^^^
+
+* :download:`Install script </sharc/software/install_scripts/dev/git/2.39.1/gcc-4.9.4/install_git.sh>`
+* :download:`Module file </sharc/software/modulefiles/dev/git/2.39.1/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.39.1/gcc-4.9.4``
+
 2.35.2
 ^^^^^^
+
+Retired due to CVE-2022-41903 and CVE-2022-23521.
 
 * :download:`Install script </sharc/software/install_scripts/dev/git/2.35.2/gcc-4.9.4/install.sh>`
 * :download:`Module file </sharc/software/modulefiles/dev/git/2.35.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.35.2/gcc-4.9.4``

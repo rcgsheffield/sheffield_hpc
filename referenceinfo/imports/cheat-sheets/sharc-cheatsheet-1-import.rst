@@ -1,12 +1,10 @@
-TODO
-
 .. table:: **CONNECTING TO THE CLUSTER AND TRANSFERRING FILES** 
    :align: left
    :widths: auto
 
    ==========================================================================      =========================================================================
    *ssh -X $USER@$CLUSTER_NAME.shef.ac.uk*                                          Connect - :ref:`Link<ssh>`
-   *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
+   *qrshx*                                                                          Start an interactive session - :ref:`Link<submit_interactive_sharc>`
    *scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER*             Upload  - :ref:`Link<transferring_files>`
    *scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/*            Download file  - :ref:`Link<transferring_files>`
    *scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/*       Download directory  - :ref:`Link<transferring_files>`
@@ -21,14 +19,12 @@ TODO
    :widths: auto
 
    ===============================        =======================================================================================             
-   *sbatch MY_SCRIPT.sh*                  Submit a batch job - :ref:`Link<submit_batch_bessemer>`
-   *squeue -u $USER*                      Invesitgate jobs in queue (Running **R** and Pending **PD**) - :ref:`Link<squeue>`
-   *sstat -j 1234567*                     Invesitgate running job - :ref:`Link<sstat>`
-   *sacct -j 1234567*                     Invesitgate historical job - :ref:`Link<sacct>`
-   *scancel 1234567*                      Cancel a job - :ref:`Link<scancel>`
-   *scontrol <action> 1234567*            Control a job (*hold/release*) - :ref:`Link<scontrol>`
-   *salloc*                               Allocate resources to an interactive job  - :ref:`Link<salloc>`                        
-   *srun*                                 Start a task inside a job  - :ref:`Link<srun>`
+   *qsub MY_SCRIPT.sh*                    Submit a batch job - :ref:`Link<submit_batch_sharc>`
+   *qstat*                                Investigate own jobs in queue (**q** queueing, **r** running, **w** waiting, *h* on hold) - :ref:`Link<qstat>`
+   *qstat -j 1234567*                     Investigate running job - :ref:`Link<qstat>`
+   *qacct -j 1234567*                     Investigate historical job - :ref:`Link<qacct>`
+   *qdel 1234567*                         Cancel a job - :ref:`Link<qdel>`
+   *qhold* or *qrelease 1234567*          Control a job
    ===============================        =======================================================================================           
 
 
@@ -36,11 +32,13 @@ TODO
    :align: left
    :widths: auto
    
-   ==========================    =======================================
-   *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
-   **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
-   **GPU nodes**                 32GB Memory/GPU, 40 cores/node 168 hrs   
-   ==========================    =======================================
+   ==========================    ==========================================
+   *qhost*                       Node and partition information  - :ref:`Link<qhost>`
+   **CPU nodes**                 64GB Memory/node, 16 cores/node 96 hrs - :ref:`Link<sharc-specs>`
+   **GPU nodes**                 12GB Memory/GPU, 16 cores/node 96 hrs
+   **Hvis node**                 128GB Memory/node, 16 cores/node 96 hrs
+   ==========================    ==========================================
+
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
    :widths: auto
@@ -52,6 +50,17 @@ TODO
    *module unload <class>/<name>/<version>*        Unload a module
    *module list*                                   List loaded modules
    *module purge*                                  Unload all modules
+   ==========================================      =======================================
+
+.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
+   :widths: auto
+   
+   ==========================================      =======================================
+   */home/$USER/*                                  Home (backed up)
+   */data/$USER/*                                  Data (backed up)
+   */mnt/fastdata/cs1cdk*                          Fastdata (not backed up)
+   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
+   *cd /data/$USER/.snapshot*                      Data snapshot (every 4hrs*10, 24hrs*7)
    ==========================================      =======================================
 
  

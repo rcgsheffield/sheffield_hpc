@@ -48,7 +48,7 @@ SGE to SLURM conversions
 Linux Cheat Sheet
 -----------------
 
-.. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
+.. include:: /referenceinfo/imports/cheat-sheets/linux-cheatsheet-import.rst
   
 ---------
 

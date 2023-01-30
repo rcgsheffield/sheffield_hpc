@@ -20,9 +20,9 @@
 
    ===============================        =======================================================================================             
    *sbatch MY_SCRIPT.sh*                  Submit a batch job - :ref:`Link<submit_batch_bessemer>`
-   *squeue -u $USER*                      Invesitgate jobs in queue (Running **R** and Pending **PD**) - :ref:`Link<squeue>`
-   *sstat -j 1234567*                     Invesitgate running job - :ref:`Link<sstat>`
-   *sacct -j 1234567*                     Invesitgate historical job - :ref:`Link<sacct>`
+   *squeue -u $USER*                      Investigate jobs in queue (Running **R** and Pending **PD**) - :ref:`Link<squeue>`
+   *sstat -j 1234567*                     Investigate running job - :ref:`Link<sstat>`
+   *sacct -j 1234567*                     Investigate historical job - :ref:`Link<sacct>`
    *scancel 1234567*                      Cancel a job - :ref:`Link<scancel>`
    *scontrol <action> 1234567*            Control a job (*hold/release*) - :ref:`Link<scontrol>`
    *salloc*                               Allocate resources to an interactive job  - :ref:`Link<salloc>`                        

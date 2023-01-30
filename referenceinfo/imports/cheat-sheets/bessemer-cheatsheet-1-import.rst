@@ -34,11 +34,12 @@
    :align: left
    :widths: auto
    
-   ==========================    =======================================
+   ==========================    ==========================================
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
    **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
-   **GPU nodes**                 32GB Memory/GPU, 40 cores/node 168 hrs   
-   ==========================    =======================================
+   **GPU nodes**                 32GB Memory/GPU, 40 cores/node 168 hrs
+   Free queues                   **Limit** 1 node per job.
+   ==========================    ==========================================
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
    :widths: auto
@@ -57,10 +58,8 @@
    
    ==========================================      =======================================
    */home/$USER/*                                  Home (backed up)
-   */data/$USER/*                                  Data (backed up)
    */mnt/fastdata/cs1cdk*                          Fastdata (not backed up)
    *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
-   *cd /data/$USER/.snapshot*                      Data snapshot (every 4hrs*10, 24hrs*7)
    ==========================================      =======================================
  
 .. tip:: 

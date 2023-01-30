@@ -23,6 +23,9 @@ And a newer version that can be activated by loading a module file and is only a
    git version 2.39.1
 
 
+.. include:: /referenceinfo/imports/software/git/git-training-help-resources.rst
+
+
 Installation notes
 ------------------
 

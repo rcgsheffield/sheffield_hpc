@@ -18,7 +18,7 @@ Two version of git are available - an older version that is provided by the oper
 
 And a newer version that can be activated by loading a module file and is only available on the worker nodes: ::
 
-   $ module load dev/git/2.35.2/gcc-4.9.4 
+   $ module load dev/git/2.39.1/gcc-4.9.4
    $ git --version
    git version 2.39.1
 

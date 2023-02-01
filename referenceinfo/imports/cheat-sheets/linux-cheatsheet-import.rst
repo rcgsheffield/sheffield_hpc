@@ -75,17 +75,17 @@
    :align: left
    :widths: auto
 
-   ==========================    ======================================================
-   grep *pattern* *files*        Search for *pattern* in *files*
-   grep -i                       Case insensitive search
-   grep -r                       Recursive search
-   grep -v                       Inverted search
-   grep -o                       Show matched part of file only
-   find /dir/ -name name*        Find files starting with name in dir
-   find /dir/ -mmin num          Find files modified less than num minutes ago in dir
-   whereis *command*             Find binary / source / manual for command
-   locate *file*                 Find file (quick search of system index)
-   ==========================    ======================================================
+   ============================     ======================================================
+   grep *pattern* *files*           Search for *pattern* in *files*
+   grep -i                          Case insensitive search
+   grep -r                          Recursive search
+   grep -v                          Inverted search
+   grep -o                          Show matched part of file only
+   find /dir/ -name *dir_name*      Find files starting with name in dir
+   find /dir/ -mmin num             Find files modified less than num minutes ago in dir
+   whereis *command*                Find binary / source / manual for command
+   locate *file*                    Find file (quick search of system index)
+   ============================     ======================================================
 
 .. table:: **FILE PERMISSIONS**
    :align: left

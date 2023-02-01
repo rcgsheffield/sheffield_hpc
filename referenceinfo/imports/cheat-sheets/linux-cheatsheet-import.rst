@@ -10,7 +10,8 @@
    cd -              Go to previous directory
    cd *or* cd ~      Navigate to home directory
    du -sh *dir*      Size of directory *dir*
-   rmdir *dir*       Deletes directory *dir*
+   rmdir *dir*       Deletes empty directory *dir*
+   rm -r *dir*       Deletes directory *dir* and contents 
    mv *dir* *dir2*   Rename *dir* to *dir2*
    ls                List contents of directory
    ================  ===============================

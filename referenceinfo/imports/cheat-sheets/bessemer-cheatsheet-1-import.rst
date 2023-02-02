@@ -2,15 +2,16 @@
    :align: left
    :widths: auto
 
-   ==========================================================================      =========================================================================
+   ===========================================================================      =========================================================================
    *ssh -X $USER@$CLUSTER_NAME.shef.ac.uk*                                          Connect - :ref:`Link<ssh>`
    *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
    *scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER*             Upload  - :ref:`Link<transferring_files>`
    *scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/*            Download file  - :ref:`Link<transferring_files>`
    *scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/*       Download directory  - :ref:`Link<transferring_files>`
+   *rsync -avzP /home/user/ $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/*            Sync/transfer directory `Link<rsync>` 
    *wget https://software.github.io/program/files/myprogram.tar.gz*                 Download direct from website  - :ref:`Link<transferring_files>`
    *curl -O https://software.github.io/program/files/myprogram.tar.gz*              Download direct from website  - :ref:`Link<transferring_files>`                                            
-   ==========================================================================      =========================================================================
+   ===========================================================================      =========================================================================
 
 
 

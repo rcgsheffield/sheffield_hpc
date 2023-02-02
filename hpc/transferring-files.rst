@@ -133,6 +133,8 @@ You can drag-and-drop files between the left (local) and right (remote) sides of
 
     <hr class="hr-mid-section-separator">
 
+:: _rsync:
+
 Using rsync
 ^^^^^^^^^^^^^^^^^^^^
 

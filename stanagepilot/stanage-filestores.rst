@@ -64,7 +64,7 @@ Where ``$USER`` is the user's username.
 .. tip::
 
     This folder doesn't exist by default, you can create it with safe permissions by running the command: 
-    ``mkdir /mnt/parscratch/users/$USER && chmod 700 /mnt/parscratch/users/$USER``
+    ``mkdir -m 0700 /mnt/parscratch/users/$USER``
 
 Snapshotting and mirrored backups
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

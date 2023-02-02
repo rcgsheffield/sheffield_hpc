@@ -34,7 +34,7 @@
 .. table:: **PARTITION INFORMATION**
    :align: left
    :widths: auto
-   
+
    ==========================    ==========================================
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
    **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
@@ -42,6 +42,15 @@
    Free queues                   **Limit** 1 node per job
    Private nodes                 May have different specifications - :ref:`Link<groupnodes_bessemer>`
    ==========================    ==========================================
+
+.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
+   :widths: auto
+   
+   ==========================================      =======================================
+   */home/$USER/*                                  Home (backed up)
+   */mnt/fastdata/$USER/*                          Fastdata (not backed up)
+   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
+   ==========================================      =======================================
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
    :widths: auto
@@ -55,15 +64,6 @@
    *module purge*                                  Unload all modules
    ==========================================      =======================================
 
-.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
-   :widths: auto
-   
-   ==========================================      =======================================
-   */home/$USER/*                                  Home (backed up)
-   */mnt/fastdata/$USER/*                          Fastdata (not backed up)
-   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
-   ==========================================      =======================================
- 
 .. tip:: 
 
     You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*

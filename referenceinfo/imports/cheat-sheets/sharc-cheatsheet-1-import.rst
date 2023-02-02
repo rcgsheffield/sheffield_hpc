@@ -40,6 +40,16 @@
    **Hvis node**                 128GB Memory/node, 16 cores/node 96 hrs
    ==========================    ==========================================
 
+.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
+   :widths: auto
+   
+   ==========================================      =======================================
+   */home/$USER/*                                  Home (backed up)
+   */data/$USER/*                                  Data (backed up)
+   */mnt/fastdata/$USER/*                          Fastdata (not backed up)
+   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
+   *cd /data/$USER/.snapshot*                      Data snapshot (every 4hrs*10, 24hrs*7)
+   ==========================================      =======================================
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
    :widths: auto
@@ -51,17 +61,6 @@
    *module unload <class>/<name>/<version>*        Unload a module
    *module list*                                   List loaded modules
    *module purge*                                  Unload all modules
-   ==========================================      =======================================
-
-.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
-   :widths: auto
-   
-   ==========================================      =======================================
-   */home/$USER/*                                  Home (backed up)
-   */data/$USER/*                                  Data (backed up)
-   */mnt/fastdata/$USER/*                          Fastdata (not backed up)
-   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
-   *cd /data/$USER/.snapshot*                      Data snapshot (every 4hrs*10, 24hrs*7)
    ==========================================      =======================================
 
  

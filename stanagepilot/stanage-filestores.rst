@@ -103,7 +103,7 @@ Each user is encouraged to use ``/tmp/users/$USER`` (where ``$USER`` is the user
 .. tip::
 
     This folder doesn't exist by default, you can create it with safe permissions by running the command: 
-    ``mkdir /tmp/users/$USER && chmod 700 /tmp/users/$USER``
+    ``mkdir -p /tmp/users/$USER && chmod 700 /tmp/users/$USER``
 
     **You should run this command in each batch submission script prior to using this directory!**
 

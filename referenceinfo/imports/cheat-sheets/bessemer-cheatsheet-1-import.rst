@@ -38,7 +38,8 @@
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
    **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
    **GPU nodes**                 32GB Memory/GPU, 40 cores/node 168 hrs
-   Free queues                   **Limit** 1 node per job.
+   Free queues                   **Limit** 1 node per job
+   Private nodes                 May have different specifications - :ref:`Link<groupnodes_bessemer>`
    ==========================    ==========================================
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`

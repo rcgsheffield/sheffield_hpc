@@ -58,7 +58,7 @@
    
    ==========================================      =======================================
    */home/$USER/*                                  Home (backed up)
-   */mnt/fastdata/cs1cdk*                          Fastdata (not backed up)
+   */mnt/fastdata/$USER/*                          Fastdata (not backed up)
    *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
    ==========================================      =======================================
  

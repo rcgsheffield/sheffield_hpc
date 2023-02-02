@@ -27,26 +27,26 @@ Number of cores                     $NSLOTS                             $SLURM_N
 **Job Specification**
 ------------------------------------------------------------------------------------------------                   
 Script directive                    #$                                  #SBATCH 
-queue                               -q [queue]                          -p [queue] 
+queue/partition                     -q [queue/partition]                -p [queue/partition] 
 count of nodes                      N/A                                 -N [min[-max]] 
-CPU count                           -pe [PE] [count]                    -n [count] 
+CPU count                           -pe [PE] [count]                    -c [count(cpus-per-task)] 
 Wall clock limit                    -l h_rt=[seconds]                   -t [min] OR -t [days-hh:mm:ss] 
 Standard out file                   -o [file_name]                      -o [file_name] 
-Standard error file                 -e [file_name]                      e [file_name] 
+Standard error file                 -e [file_name]                      -e [file_name] 
 Combine STDOUT & STDERR files       -j yes                              (use -o without -e) 
 Copy environment                    -V                                  -\-export=[ALL | NONE | variables] 
 Event notification                  -m abe                              -\-mail-type=[events] 
-send notification email             -M [address]                        -\-mail-user=[address] 
+Send notification email             -M [address]                        -\-mail-user=[address] 
 Job name                            -N [name]                           -\-job-name=[name] 
 Restart job                         -r [yes|no]                         -\-requeue OR -\-no-requeue (NOTE: configurable default) 
 Set working directory               -wd [directory]                     -\-workdir=[dir_name] 
 Resource sharing                    -l exclusive                        -\-exclusive OR -\-shared 
-Memory size                         -l mem_free=[memory][K|M|G]         -\-mem=[mem][M|G|T] OR -\-mem-percpu= [mem][M|G|T] 
+Real memory per core                -l rmem=[memory per core][K|M|G]    -\-mem=[mem per node][M|G|T] OR -\-mem-percpu= [mem][M|G|T] 
 Charge to an account                -A [account]                        -\-account=[account] 
 Tasks per node                      (Fixed allocation_rule in PE)       -\-tasks-per-node=[count]
                                                                         -\-cpus-per-task=[count] 
 Job dependency                      -hold_jid [job_id | job_name]       -\-depend=[state:job_id] 
-Job project                         -P [name]                           -\-wckey=[name]    
+Job project/account                 -P [name]                           -\-account=[account]    
 Job host preference                 -q [queue]@[node] OR                -\-nodelist=[nodes] AND/OR
                                     -q [queue]@@[hostgroup]             -\-exclude= [nodes] 
 Quality of service                                                      -\-qos=[name] 
@@ -67,11 +67,10 @@ qsub -N jobname                     sbatch -J jobname
 qsub -m beas                        sbatch -\-mail-type=ALL
 qsub -M user@shef.ac.uk             sbatch -\-mail-user=user@shef.ac.uk
 qsub -l h_rt=24:00:00               sbatch -t 24:00:00
-qsub -pe dmp4 16                    sbatch -p node -n 16
+qsub -pe smp 4                      sbatch -N 1 -n 1 -c 4
 qsub -l mem=4G                      sbatch -\-mem=4000
 qsub -P projectname                 sbatch -A projectname
 qsub -o filename                    sbatch -o filename
-qsub -e filename                    sbatch -e filename
-qsub -l scratch_free=20G            sbatch -\-tmp=20480 
+qsub -e filename                    sbatch -e filename 
 qdel                                scancel
 ===========================         =========================================

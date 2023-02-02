@@ -14,6 +14,7 @@
    rm -r *dir*       Deletes directory *dir* and contents 
    mv *dir* *dir2*   Rename *dir* to *dir2*
    ls                List contents of directory
+   ls -la            List all contents with permissions
    ================  ===============================
 
 .. table:: **LS OPTIONS**
@@ -45,6 +46,9 @@
    rm *file*                  Deletes the *file*
    head *file*                Display first 10 lines of *file*
    tail *file*                Display last 10 lines of *file*
+   less *file*                Display contents of *file* with a pager
+   more *file1* *file2*       Display contents of multiple files with a pager
+   more *begins**             Display contents of files starting with *begins*
    ========================   =============================================
 
 .. table:: **BASH SHORTCUTS**
@@ -52,12 +56,13 @@
    :widths: auto
    
    ========    ================================
-   CTRL-c      Stop current execution
-   CTRL-r      Search history
+   Ctrl + c    Stop current execution
+   Ctrl + r    Search history
    history     Show history
    !1234       Repeat 1234 command in history
    !!          Repeat last command in history
-   clear       Clears the terminal
+   Ctrl + l    Clears the terminal
+   Ctrl + d    Exit shell or terminal
    ========    ================================
 
 .. table:: **COMMAND LISTS**
@@ -92,9 +97,9 @@
    :widths: auto
    
    =============================    ================================
-   chmod777 *file*                  File read, write, execute permissions to everyone 
-   chmod755 *file*                  Full permission to owner, read permissions for others  
-   chmod766 *file*                  Full permission to owner, read and write for others 
+   chmod 777 *file*                 File read, write, execute permissions to everyone 
+   chmod 755 *file*                 Full permission to owner, read permissions for others  
+   chmod 766 *file*                 Full permission to owner, read and write for others 
    chown *user* *file*              Change file ownership 
    chown *user*:*group* *file*      Change file owner and group   
    =============================    ================================

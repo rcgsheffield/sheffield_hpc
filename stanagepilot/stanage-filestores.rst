@@ -25,8 +25,10 @@ All users have a home directory on Stanage. This area is seperate from the other
 +----------+------------------------+------+----------------------+-----------------------------------------------+-------------------------+
 | System   | Path                   | Type | Quota per user       | Shared between system login and worker nodes? | Shared between systems? |
 +==========+========================+======+======================+===============================================+=========================+
-| Stanage  | ``/users/yourusername``| NFS  | 50 GB or 300000 files| Yes                                           | No                      |
+| Stanage  | ``/users/$USER``       | NFS  | 50 GB or 300000 files| Yes                                           | No                      |
 +----------+------------------------+------+----------------------+-----------------------------------------------+-------------------------+
+
+Where ``$USER`` is the user's username.
 
 See also: :ref:`stanage_quota_check` and * :ref:`stanage_exceed_quota`.
 
@@ -54,8 +56,15 @@ An example of how slow it can be for large numbers of small files is detailed `h
 +----------+---------------------------------------+--------+----------------+---------------------+-------------------------+---------------------------+
 | System   | Path                                  | Type   | Quota per user | Filesystem capacity | Shared between systems? | Network bandwith per link |
 +==========+=======================================+========+================+=====================+=========================+===========================+
-| Stanage  | ``/users/yourusername/sharedscratch`` | Lustre | No limits      | 2 PiB               | No                      | 100Gb/s (*Omni-Path*)     |
+| Stanage  | ``/mnt/parscratch/users/$USER``       | Lustre | No limits      | 2 PiB               | No                      | 100Gb/s (*Omni-Path*)     |
 +----------+---------------------------------------+--------+----------------+---------------------+-------------------------+---------------------------+
+
+Where ``$USER`` is the user's username.
+
+.. tip::
+
+    This folder doesn't exist by default, you can create it with safe permissions by running the command: 
+    ``mkdir /mnt/parscratch/users/$USER && chmod 700 /mnt/parscratch/users/$USER``
 
 Snapshotting and mirrored backups
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -89,8 +98,14 @@ and for small files these overheads are proportionally high.
 For the scratch storage area, such ownership/permissions metadata is available on the local machine, 
 thus it is faster when dealing with small files.
 
-Each user is encouraged to use ``/tmp/users/$USER`` (where ``$USER`` is the user's username) for node-local storage.  
-For this reason there is a symlink called ``localscratch`` in each user's home directory that points at this directory.
+Each user is encouraged to use ``/tmp/users/$USER`` (where ``$USER`` is the user's username) for node-local storage. 
+
+.. tip::
+
+    This folder doesn't exist by default, you can create it with safe permissions by running the command: 
+    ``mkdir /tmp/users/$USER && chmod 700 /tmp/users/$USER``
+
+    **You should run this command in each batch submission script prior to using this directory!**
 
 Further conditions also apply:
 

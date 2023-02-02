@@ -56,16 +56,17 @@ Licenses                            -l [license]=[count]                -\-licen
 Begin Time                          -a [YYMMDDhhmm]                     -\-begin=YYYY-MM-DD[THH:MM[:SS]]
 ================================    ================================    ========================
 
-===========================         =========================================
+
+================================    =========================================
 SGE                                 SLURM                           
-===========================         =========================================
+================================    =========================================
 qstat                               squeue 
 qstat -u username                   squeue -u username                   
 qstat -f                            squeue -al 
 qsub                                sbatch
 qsub -N jobname                     sbatch -J jobname 
 qsub -m beas                        sbatch -\-mail-type=ALL
-qsub -M user@shef.ac.uk             sbatch -\-mail-user=user@shef.ac.uk
+qsub -M `user@shef.ac.uk`           sbatch `-\-mail-user=user@shef.ac.uk`
 qsub -l h_rt=24:00:00               sbatch -t 24:00:00
 qsub -pe smp 4                      sbatch -N 1 -n 1 -c 4
 qsub -l mem=4G                      sbatch -\-mem=4000
@@ -73,4 +74,4 @@ qsub -P projectname                 sbatch -A projectname
 qsub -o filename                    sbatch -o filename
 qsub -e filename                    sbatch -e filename 
 qdel                                scancel
-===========================         =========================================
+================================    =========================================     

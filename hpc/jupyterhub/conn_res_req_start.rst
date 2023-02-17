@@ -49,21 +49,11 @@ using a Project you can:
 **Most users do not need to select a specific Project and 
 should leave this setting as its default.**
 
-Currently supported projects:
-
-* ``gpu``:    GPU-equipped nodes (public)
-* ``rse``:    The `Research Software Engineering group's <https://rse.shef.ac.uk>`_ nodes (restricted access)
-* ``cstest``: IT Services testing only
-
-Support for other Projects can be added on request.
-
 Job Queue
 ^^^^^^^^^
 
 Selecting ``any`` lets the scheduler choose an appropriate Job Queue, 
 which is typically what you want.
-
-Support for additional Job Queues can be added on request.
 
 Email address
 ^^^^^^^^^^^^^
@@ -99,7 +89,7 @@ A value in gigabytes.
 GPUS per CPU core
 ^^^^^^^^^^^^^^^^^
 
-Requires that **Project** is ``gpu`` (public GPUs) or ``rse`` (private GPUs).
+Requires that **Project** is ``gpu`` (public GPUs) or another project that allow *you* access to GPUs e.g. ``rse``.
 
 Notebook session runtime
 ^^^^^^^^^^^^^^^^^^^^^^^^

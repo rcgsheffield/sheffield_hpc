@@ -81,7 +81,10 @@ The script requests 4 cores using the OpenMP parallel environment with a runtime
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load ANSYS/2022R2
-    fluent 2ddp -t$SLURM_NTASKS -g -driver null -sifile=./"$SLURM_JOBID"_fluent_server_info.txt -i test.jou
+
+    srun hostname -s > hosts.$SLURM_JOB_ID
+
+    fluent 2ddp -t$SLURM_NTASKS -mpi=intel -ssh -cnf=hosts.$SLURM_JOB_ID -g -driver null  -pib.infinipath -sifile=./"$SLURM_JOBID"_fluent_server_info.txt -i test.jou
 
 
 The job is submitted to the queue by typing:

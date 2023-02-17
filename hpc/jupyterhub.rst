@@ -110,14 +110,7 @@ via a web form then these resources are requested as part of the batch job submi
 Credits
 -------
 
-The JupyterHub service on ShARC is currently developed and maintained by the University's `Research Software Engineering team`_.  This work has been funded by OpenDreamKit_, a Horizon2020_ European `Research Infrastructure`_ project (676541_) that aims to advance the open source computational mathematics ecosystem.
-
-.. image:: /images/jupyterhub/opendreamkit.png
-   :width: 10%
-   :alt: OpenDreamKit logo
-   :align: center
-   :target: OpenDreamKit_
-
+The JupyterHub service on ShARC was originally developed and maintained by the University's `Research Software Engineering team`_, funded by OpenDreamKit_, a Horizon2020_ European `Research Infrastructure`_ project (676541_) that aimed to advance the open source computational mathematics ecosystem.
 
 .. _676541: http://cordis.europa.eu/project/rcn/198334_en.html
 .. _Horizon2020: https://ec.europa.eu/programmes/horizon2020/

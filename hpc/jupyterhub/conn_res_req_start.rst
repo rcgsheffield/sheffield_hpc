@@ -18,10 +18,6 @@ Connecting
 
    .. image:: /images/jupyterhub/jh-sharc-login.png
 
-#. Click **Start server** when prompted:
-
-   .. image:: /images/jupyterhub/jh-sharc-start-server.png
-
    You can only run one Jupyer Notebook Server on the cluster at a time but 
    you can use your Notebook Server to run multiple Notebooks.
 
@@ -101,9 +97,6 @@ Starting your Notebook session using the requested resources
 
 After you've specified the resources you want for your job,
 click *Spawn* to try starting a Jupyter session on one (or more) worker nodes.
-
-.. image:: /images/jupyterhub/jh-sharc-server-starting.png
-
 This may take a minute.
 
 .. warning::

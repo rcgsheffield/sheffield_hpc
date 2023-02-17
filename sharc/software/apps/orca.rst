@@ -3,10 +3,8 @@ ORCA
 
 .. sidebar:: ORCA
 
-   :Version: 4.0.1
-   :Dependencies: Module for Open MPI 2.1.1 loaded. Open MPI 2.0.2 and above is required for the ORCA 4.0.1 MPI binaries.
-   :URL: https://orcaforum.cec.mpg.de/
-   :Documentation: https://cec.mpg.de/fileadmin/media/Forschung/ORCA/orca_manual_4_0_1.pdf
+   :Version: 5.0.3
+   :URL: https://orcaforum.kofo.mpg.de/app.php/portal
 
 
 An ab initio, DFT and semiempirical SCF-MO package. The program ORCA is a modern electronic structure program package written by F. Neese, with contributions from many current and former coworkers and several collaborating groups. The binaries of ORCA are available free of charge for academic users for a variety of platforms.
@@ -14,12 +12,15 @@ An ab initio, DFT and semiempirical SCF-MO package. The program ORCA is a modern
 
 Usage
 -----
+The latest version of ORCA (currently 5.0.3) can be activated using the module file::
 
-ORCA 4.0.1 can be activated using the module file::
+    module load apps/orca/5.0.3/binary
+
+Alternatively, you can load a specific version with the following command::
 
     module load apps/orca/4.0.1/binary
 
-The ORCA 4.0.1 executable is ``orca``. All the ORCA 4.0.1 executables are in ``/usr/local/packages/apps/orca/4.0.1/binary/orca_4_0_1_linux_x86-64_openmpi202``.
+The ORCA 5.0.3 executable is ``orca``. All the ORCA 5.0.5 executables are in ``/usr/local/packages/apps/orca/5.0.3/binary/bin``.
 
 
 Batch jobs
@@ -32,15 +33,21 @@ Users are encouraged to write their own batch submission scripts. The following 
     #$ -l h_rt=00:30:00
     #$ -l rmem=2G
 
-    module load apps/orca/4.0.1/binary
+    module load apps/orca/5.0.3/binary
     
     orca my_input.inp > my_input.out
 
-The script requests a serial job with a runtime of 30 mins and 2G of real memory. The ORCA 4.0.1 input file is ``my_input.inp``.
+The script requests a serial job with a runtime of 30 mins and 2G of real memory. The ORCA 5.0.3 input file is ``my_input.inp``.
 
 
 Installation notes
 ------------------
+ORCA 5.0.3 comes pre compiled and is behind a log in portal. The download links are now dynamic so you manually download it before running the install script. Also the URLs have changed URL hence the removal/change to some of the links.
+
+ORCA 5.0.3 was installed as a binary installation using the
+:download:`install_orca.sh </sharc/software/install_scripts/apps/orca/5.0.3/binary/install_orca.sh>` script;
+the module file is
+:download:`binary </sharc/software/modulefiles/apps/orca/5.0.3/binary>`.
 
 ORCA 4.0.1 was installed as a binary installation using the
 :download:`install_orca.sh </sharc/software/install_scripts/apps/orca/4.0.1/binary/install_orca.sh>` script;

@@ -99,14 +99,11 @@ then, after a single-user Jupyter server has been spawned, certain web connectio
 From the user's perspective it appears that they are interacting with a single web application, 
 even though at times they might be talking to a single-user Jupyter server that running on a different machine to the Hub.
 
-ShARC uses a custom spawner, `sgespawner <https://github.com/willfurnass/sgespawner>`__, that 
-spawns single-user Jupyter servers on one or more worker nodes on ShARC by submitting batch jobs to the Grid Engine job scheduler.
+ShARC uses `BatchSpawner <https://github.com/jupyterhub/batchspawner>`__ to
+spawn single-user Jupyter servers on one or more worker nodes on ShARC by submitting batch jobs to the Grid Engine job scheduler.
 
-The JupyterHub and ``sgespawner`` configuration allows the user to specify the Grid Engine resources required for the Jupyter session in advance
+The JupyterHub and BatchSpawner configuration allows the user to specify the Grid Engine resources required for the Jupyter session in advance
 via a web form then these resources are requested as part of the batch job submission.
-
-Further details of how JupyterHub and ``sgespawner`` are configured on ShARC 
-can be found in `this repository <https://github.com/RSE-Sheffield/jupyterhub-gridengine-sharc/>`__.
 
 .. _jh_svc_credits:
 

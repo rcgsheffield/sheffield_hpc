@@ -1,0 +1,20 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global ver
+
+        puts stderr " Makes orca  available to the system."
+}
+
+# orca version (not in the user's environment)
+set     ver     5.0.3
+
+module-whatis   "sets the necessary orca 5.0.3 paths"
+module           load mpi/openmpi/4.1.4/gcc-10.1
+prepend-path PATH /usr/local/packages/apps/orca/5.0.3/binary/bin
+prepend-path ORCAHOME /usr/local/packages/apps/orca/5.0.3/binary/bin
+prepend-path LD_LIBRARY_PATH /usr/local/packages/apps/orca/5.0.3/binary/bin

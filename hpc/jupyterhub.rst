@@ -34,7 +34,7 @@ your local machine or
 a **remote server**
 (which may have more memory, CPU cores and/or GPUs than your local machine).
 
-On the university's **ShARC cluster** a (:ref:`beta <jh_svc_status>`) JupyterHub_ service allows a user to:
+On the University's **ShARC cluster** a JupyterHub_ service allows a user to:
 
 #. **Log in** to the JupyterHub web inteface,
 #. Specify what resources (**memory, CPU cores, GPUs**) they want for a Jupyter session,

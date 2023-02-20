@@ -27,7 +27,7 @@ For now create and modify conda environments from the command-line.
 I cannot browse to subdirectories below ``/data`` or ``/shared`` from the Jupyter file browser
 ----------------------------------------------------------------------------------------------
 
-This is a known issue; a workaround is :ref:`described here <jh_file_browse>`.
+This is a known issue; a workaround is :ref:`described here <jh_jupyterlab>`.
 
 Less common issues
 ------------------

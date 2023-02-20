@@ -66,7 +66,7 @@ Using Jupyter on ShARC
    :maxdepth: 1
 
    Connecting to JupyterHub, requesting resources (RAM, processors, GPUs) for your Jupyter session, and starting your session <jupyterhub/conn_res_req_start>
-   Jupyter file browser <jupyterhub/file_browse>
+   JupyterLab interface <jupyterhub/jupyterlab_overview>
    Terminal in your browser <jupyterhub/terminal>
    Programming languages, software packages and execution environments <jupyterhub/conda>
    Creating, editing and running Jupyter Notebooks <jupyterhub/nb_usage>

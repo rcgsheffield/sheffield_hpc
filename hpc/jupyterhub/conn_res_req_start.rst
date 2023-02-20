@@ -107,6 +107,4 @@ This may take a minute.
    then this attempt to start a session will time out
    and you will return to the :ref:`Spawner options <jh_spawner_opts>` form.
 
-Once your session has started you should see the Jupyter file browser interface:
-
-.. image:: /images/jupyterhub/sharc-jh-main-nb-svr-interface.png
+Once your session has started you should see the main :ref:`main JupyterLab interface<jh_jupyterlab>`.

@@ -61,7 +61,7 @@ conda_ allows users to
 Using conda on ShARC via Jupyter
 --------------------------------
 
-From the browser tab containing the Jupyter's :ref:`file browser <jh_file_browse>` 
+From the browser tab containing the Jupyter's :ref:`file browser <jh_jupyterlab>` 
 activate the **Conda** tab within Jupyter's interface.
 
 You should then see something like:

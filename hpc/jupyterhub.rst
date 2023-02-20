@@ -40,6 +40,11 @@ On the University's **ShARC cluster** a JupyterHub_ service allows a user to:
 #. Specify what resources (**memory, CPU cores, GPUs**) they want for a Jupyter session,
 #. **Start** and **run** a **Jupyter Notebook server on a worker node** in the cluster using these resources.
 
+.. image:: /images/jupyterhub/jupyterhublogo.svg
+   :width: 30%
+   :align: center
+   :alt: JupyterHub logo
+
 ..
     More background?
     Background on separate page?
@@ -90,7 +95,7 @@ The **hub** of JupyterHub has several components:
 * a **spawner** that can start single-user Jupyter Notebook servers on demand.
 
 .. image:: /images/jupyterhub/jhub-parts.png
-   :width: 50%
+   :width: 30%
    :align: center
    :alt: JupyterHub architecture
 

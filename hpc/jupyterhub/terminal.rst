@@ -3,14 +3,12 @@
 Jupyter's web terminal
 ======================
 
-You can start a terminal from 
-the **New** menu within 
-Jupyter's :ref:`Files <jh_jupyterlab>` tab.
-This is a fully-featured web terminal, 
-running on a worker node.  
-It opens a new browser tab.
+You can start a terminal  
 
-.. image:: /images/jupyterhub/jupyterhub-terminal.png
+* Via the top menu bar (**File**, **New**, **Terminal**) or
+* via the :ref:`Files <jh_jupyterlab>` Launcher tab.
+
+.. image:: /images/jupyterhub/jupyterlab-terminal.png
 
 You can use this terminal to perform any command-line-only operation on the cluster, including:
 

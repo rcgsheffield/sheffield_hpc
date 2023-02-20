@@ -19,7 +19,7 @@ which is your choice of
 Kernels
 ^^^^^^^
 
-Jupyter Notebooks were originally known as IPython Notebooks
+Jupyter Notebooks were originally known as *IPython* Notebooks
 but now Jupyter supports Notebook code cells written in `many different languages <https://github.com/jupyter/jupyter/wiki/Jupyter-kernels>`__.
 This is achieved by the (per-user) Jupyter Notebook server 
 sending the contents of code cells to a **Kernel** for evaluation.
@@ -108,13 +108,13 @@ Python 3:
 
 .. code-block:: sh
 
-   conda create -n example-python-env python=3.6 ipykernel
+   conda create -n example-python-env python=3.10 ipykernel
 
 R: 
 
 .. code-block:: sh
 
-   conda create -n example-r-env python=3.6 r-irkernel jupyter_client libiconv
+   conda create -n example-r-env python=3.10 r-irkernel jupyter_client libiconv
 
 Python from the `Intel Python Distribution <https://software.intel.com/en-us/distribution-for-python>`__:
 

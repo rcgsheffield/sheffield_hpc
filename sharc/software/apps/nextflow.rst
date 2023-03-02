@@ -24,7 +24,7 @@ Its fluent DSL simplifies the implementation and the deployment of complex paral
 Interactive Usage
 -----------------
 After connecting to ShARC (see :ref:`ssh`),  start an interactive session with the 
-:ref:`qrshx` or :ref:`qrsh` command. 
+:ref:`qrsh` or :ref:`qrshx` command. 
 
 The latest version of Nextflow (currently version 22.4.0) is made available with the command:
 

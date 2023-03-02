@@ -100,7 +100,7 @@ you should specify a version number when running ``pip install`` i.e. ::
    pip install tensorflow-gpu==<version_number>
 
 .. note::
-   You can find which modules to load for various versions of TensorFlow :ref:`here<tensorflow_cudnn_compat_bess>`.
+   You can find which CUDA and cuDNN module to load for various versions of TensorFlow :ref:`here<tensorflow_cudnn_compat_bess>`.
 
 
 **Every Session Afterwards and in Your Job Scripts**

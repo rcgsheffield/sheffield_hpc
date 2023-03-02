@@ -79,6 +79,9 @@ Then GPU version of Tensorflow can be installed by the following ::
 
 If you wish to use an older version of tensorflow-gpu, you can do so using :code:`pip install tensorflow-gpu==<version_number>`
 
+.. note::
+   You can find which modules to load for various versions of TensorFlow :ref:`here<tensorflow_cudnn_compat_sharc>`.
+
 **Every Session Afterwards and in Your Job Scripts**
 
 Every time you use a new session or within your job scripts, the modules must be loaded and conda must be activated again. Use the following command to activate the Conda environment with Tensorflow installed: ::
@@ -125,9 +128,9 @@ Tensorflow releases depend on specific versions of both CUDA and CUDNN. If the w
 
 This indicates that Tensorflow was expecting to find CUDA 10.0 (and an appropriate version of CUDNN) but was unable to do so.
 
-The following table shows the which module to load for the various versions of Tensorflow, based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_. 
+The following table shows which module to load for the various versions of Tensorflow, based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_. 
 
-
+.. _tensorflow_cudnn_compat_sharc:
 
 +------------+------+--------+----------------------------------------------+
 | Tensorflow | CUDA | CUDNN  | Module                                       |

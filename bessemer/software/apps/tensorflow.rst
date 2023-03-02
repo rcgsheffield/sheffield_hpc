@@ -96,6 +96,10 @@ you should specify a version number when running ``pip install`` i.e. ::
 
    pip install tensorflow-gpu==<version_number>
 
+.. note::
+   You can find which modules to load for various versions of TensorFlow :ref:`here<tensorflow_cudnn_compat_bess>`.
+
+
 **Every Session Afterwards and in Your Job Scripts**
 
 Every time you use a new session or within your job scripts, the modules must be loaded and Conda must be activated again.
@@ -142,6 +146,8 @@ This indicates that TensorFlow was expecting to find CUDA 10.0 (and an appropria
 
 The following table shows the which module to load for the various versions of TensorFlow,
 based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_.
+
+.. _tensorflow_cudnn_compat_bess:
 
 +------------+------+--------+-------------------------------------------------------+
 | TensorFlow | CUDA | cuDNN  | cuDNN module to load                                  |

@@ -33,7 +33,6 @@ The latest version of Nextflow (currently version 22.4.0) is made available with
 
     $ module load apps/Nextflow/22.04.0/binary
 
-Note: The module file also loads apps/java/11.0.2/binary
 
 You can now run the ``nextflow`` command:
 

@@ -58,6 +58,9 @@ Installation in Home Directory - GPU Version
 
 The GPU version of Tensorflow comes in a different PIP package and is also dependent on CUDA and cuDNN libraries making the installation procedure slightly different.
 
+.. warning::
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used. 
+   
 First request an interactive session, e.g. see :ref:`GPUInteractive_sharc`.
 
 Then GPU version of Tensorflow can be installed by the following ::

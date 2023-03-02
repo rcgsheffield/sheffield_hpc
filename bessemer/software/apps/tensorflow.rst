@@ -72,6 +72,9 @@ The GPU version of TensorFlow is a distinct Pip package and
 is also dependent on CUDA and cuDNN libraries,
 making the installation procedure slightly different.
 
+.. warning::
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used.  
+
 First request an interactive session, e.g. see :ref:`GPUInteractive_bessemer`.
 
 Then GPU version of TensorFlow can be installed by the following ::

@@ -73,7 +73,8 @@ is also dependent on CUDA and cuDNN libraries,
 making the installation procedure slightly different.
 
 .. warning::
-   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used.  
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_bess>`).
+).  
 
 First request an interactive session, e.g. see :ref:`GPUInteractive_bessemer`.
 
@@ -98,10 +99,6 @@ To install a version of ``tensorflow-gpu`` other than the latest version
 you should specify a version number when running ``pip install`` i.e. ::
 
    pip install tensorflow-gpu==<version_number>
-
-.. note::
-   You can find which CUDA and cuDNN module to load for various versions of TensorFlow :ref:`here<tensorflow_cudnn_compat_bess>`.
-
 
 **Every Session Afterwards and in Your Job Scripts**
 

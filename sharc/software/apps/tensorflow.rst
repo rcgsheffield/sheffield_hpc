@@ -59,7 +59,8 @@ Installation in Home Directory - GPU Version
 The GPU version of Tensorflow comes in a different PIP package and is also dependent on CUDA and cuDNN libraries making the installation procedure slightly different.
 
 .. warning::
-   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used. 
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_sharc>`).
+
 
 First request an interactive session, e.g. see :ref:`GPUInteractive_sharc`.
 
@@ -81,10 +82,7 @@ Then GPU version of Tensorflow can be installed by the following ::
   pip install tensorflow-gpu==2.0
 
 If you wish to use an older version of tensorflow-gpu, you can do so using :code:`pip install tensorflow-gpu==<version_number>`
-
-.. note::
-   You can find which CUDA and cuDNN module to load for various versions of TensorFlow :ref:`here<tensorflow_cudnn_compat_sharc>`.
-
+   
 **Every Session Afterwards and in Your Job Scripts**
 
 Every time you use a new session or within your job scripts, the modules must be loaded and conda must be activated again. Use the following command to activate the Conda environment with Tensorflow installed: ::

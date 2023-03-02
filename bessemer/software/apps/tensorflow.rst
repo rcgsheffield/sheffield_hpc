@@ -74,7 +74,6 @@ making the installation procedure slightly different.
 
 .. warning::
    You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_bess>`).
-).  
 
 First request an interactive session, e.g. see :ref:`GPUInteractive_bessemer`.
 

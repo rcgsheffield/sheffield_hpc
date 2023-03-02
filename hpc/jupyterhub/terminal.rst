@@ -6,7 +6,7 @@ Jupyter's web terminal
 You can start a terminal  
 
 * Via the top menu bar (**File**, **New**, **Terminal**) or
-* via the :ref:`Files <jh_jupyterlab>` Launcher tab.
+* Via the :ref:`Files <jh_jupyterlab>` Launcher tab.
 
 .. image:: /images/jupyterhub/jupyterlab-terminal.png
 

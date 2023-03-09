@@ -7,6 +7,7 @@ Libraries on Stanage
     :maxdepth: 1
     :glob:
     
+    cfitsio
 
 ..
     Eventually the above should look like:

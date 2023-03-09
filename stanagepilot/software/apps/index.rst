@@ -11,6 +11,7 @@ Applications on Stanage
     openfoam
     vasp
     ncdu
+    mathematica
 
 ..
     Eventually the above should look like:

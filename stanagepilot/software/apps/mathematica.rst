@@ -23,7 +23,7 @@ Unfortunately, it is not possible to run Mathematica notebook .nb files directly
   Print["The result of the integral is "]
   Print [ Integrate[Sin[x]^2, x]]
 
-Copy and paste the above into a text file called `very_simple_mathematica.m`
+Copy and paste the above into a text file called ``very_simple_mathematica.m``
 
 An example batch submission script for this file is ::
 
@@ -37,11 +37,11 @@ An example batch submission script for this file is ::
 
   math -script very_simple_mathematica.m
 
-Copy and paste the above into a file called `run_job.sh` and submit with ::
+Copy and paste the above into a file called ``run_job.sh`` and submit with ::
 
   sbatch run_job.sh
 
-Once the job has successfully completed, the output will be in a file named like `slurm-4835.out`. The number at the end refers to the job-ID given to this job by the system and will be different for you. The contents of this file is ::
+Once the job has successfully completed, the output will be in a file named like ``slurm-4835.out``. The number at the end refers to the job-ID given to this job by the system and will be different for you. The contents of this file is ::
 
   more slurm-4835.out
   

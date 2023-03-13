@@ -67,5 +67,3 @@ Download the Mathematica package, Mathematica_13.2.1_LINUX.sh, from Wolfram.
 Mathematica was installed using Easybuild 4.7.0, build details can be found in ``$EBDEVELMATHEMATICA``
 
 Testing was performed using the above examples.
-
-The module file is on the system at :download:`/opt/apps/testapps/el7/modules/staging/math/Mathematica/13.2.1.lua </stanagepilot/software/modulefiles/mathematica/13.2.1.lua>`

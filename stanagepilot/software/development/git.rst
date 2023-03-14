@@ -18,7 +18,7 @@ Two version of git are available - an older version that is provided by the oper
     $ git --version
     git version 1.8.3.1
 
-And a newer version that can be activated by loading a module file and is only available on the worker nodes: ::
+And a newer version that can be activated by loading a module file: ::
 
    $ module load git/2.39.2-GCCcore-10.3.0-nodocs 
    $ git --version

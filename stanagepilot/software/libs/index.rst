@@ -7,6 +7,7 @@ Libraries on Stanage
     :maxdepth: 1
     :glob:
     
+    hdf5
 
 ..
     Eventually the above should look like:

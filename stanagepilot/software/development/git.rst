@@ -13,7 +13,7 @@ Git is a free and open source distributed version control system designed to han
 
 Usage
 -----
-Two version of git are available - an older version that is provided by the operating system and is available on both the login nodes and worker nodes: ::
+Two version of git are available - an older version that is provided by the operating system: ::
 
     $ git --version
     git version 1.8.3.1

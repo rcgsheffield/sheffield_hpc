@@ -6,7 +6,7 @@ git
 .. sidebar:: git
 
    :Latest version: 2.39.2
-   :Dependancies: None
+   :Dependencies: None
    :URL: https://git-scm.com/
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
@@ -31,5 +31,5 @@ And a newer version that can be activated by loading a module file: ::
 Installation notes
 ------------------
 
-The git module has been installed using Easybuild 4.4.0 and a custom made git-2.39.2-GCCcore-10.3.0-nodocs.eb which can be found on system in the installation 
-directory: ``/usr/local/packages/live/eb/git/2.39.2-GCCcore-10.3.0-nodocs/easybuild``
+The git module has been installed using Easybuild and a custom made git-2.39.2-GCCcore-10.3.0-nodocs.eb which can be found on system in the installation 
+directory: ``/opt/apps/testapps/common/easybuild/easyconfigs/stanage/easyconfigs/g/git``

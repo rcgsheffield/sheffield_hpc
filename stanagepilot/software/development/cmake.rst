@@ -10,10 +10,6 @@ Usage
 
 CMake can be loaded with one of: ::
 
-   
-   module load CMake/3.9.1-GCCcore-6.4.0   # compatible with foss-2018a toolchain
-   module load CMake/3.11.4-GCCcore-7.3.0  # compatible with foss-2019b toolchain  
-   module load CMake/3.15.3-GCCcore-8.3.0  # compatible with foss-2019b toolchain
    module load CMake/3.16.4-GCCcore-9.3.0  # compatible with foss-2021a toolchain   
    module load CMake/3.18.4-GCCcore-10.2.0 # compatible with foss-2021a toolchain
    module load CMake/3.20.1-GCCcore-10.3.0 # compatible with foss-2021b toolchain

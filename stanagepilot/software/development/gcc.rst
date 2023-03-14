@@ -14,19 +14,19 @@ After connecting to Stanage,  start an interactive sessson: ::
 then choose the version of the compiler you wish to use
 by running *one* of the following lines: ::
 
-   module load GCC/6.4.0-2.28    #part of the foss-2020a toolchain
-   module load GCC/7.3.0-2.30    #part of the foss-2021a toolchain
-   module load GCC/8.2.0-2.31.1  #part of the foss-2021a toolchain
-   module load GCC/8.3.0         #part of the foss-2021a toolchain
-   module load GCC/9.2.0         #part of the foss-2021a toolchain
-   module load GCC/9.3.0         #part of the foss-2021a toolchain
-   module load GCC/9.5.0         #part of the foss-2021a toolchain
-   module load GCC/10.1.0        #part of the foss-2021b toolchain
-   module load GCC/10.2.0        #part of the foss-2021a toolchain
-   module load GCC/10.3.0        #part of the foss-2021b toolchain
-   module load GCC/11.1.0        #part of the foss-2021b toolchain
-   module load GCC/11.2.0        #part of the foss-2022a toolchain
-   module load GCC/11.3.0        #part of the foss-2022b toolchain
+   module load GCC/6.4.0-2.28    #part of the foss-2017b toolchain
+   module load GCC/7.3.0-2.30    #part of the foss-2018b toolchain
+   module load GCC/8.2.0-2.31.1  #part of the foss-2019a toolchain
+   module load GCC/8.3.0         #part of the foss-2019b toolchain
+   module load GCC/9.2.0         
+   module load GCC/9.3.0         #part of the foss-2020a toolchain
+   module load GCC/9.5.0         
+   module load GCC/10.1.0        
+   module load GCC/10.2.0        #part of the foss-2020b toolchain
+   module load GCC/10.3.0        #part of the foss-2021a toolchain
+   module load GCC/11.1.0        
+   module load GCC/11.2.0        #part of the foss-2021b toolchain
+   module load GCC/11.3.0        #part of the foss-2022a toolchain
    module load GCC/12.2.0        #part of the foss-2022b toolchain
 
 Confirm that you've loaded the version of gcc you wanted using ``gcc -v``.

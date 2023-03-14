@@ -34,7 +34,7 @@ The three supported toolchains on Stanage are:
 Dependency versions for toolchains
 ----------------------------------
 
-See the `EasyBuild documentation for dependency versions for foss and intel <https://easybuild.readthedocs.io/en/latest/Common-toolchains.html#overview-of-common-toolchains>`__
+See the `EasyBuild documentation for dependency versions for foss and intel <https://docs.easybuild.io/common-toolchains>`__
 
 ``fosscuda-2019a`` has the same dependencies as ``foss-2019a`` plus 
 CUDA 10.1.

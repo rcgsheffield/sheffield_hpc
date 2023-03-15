@@ -82,3 +82,64 @@ The output should look like::
         COMMENT *
         COMMENT * CORE DATA ITEMS - COMMON SET
         COMMENT *
+
+Multi-thread Testing
+--------------------
+
+Download and unpack `threadtest.tar.gz <https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/node4.html>`_
+
+Navigate into unpacked directory ``threadtest/``. Next enter the following commands:
+
+.. code-block ::
+        
+        module load CFITSIO/3.49-GCCcore-11.2.0
+        module load GCC/11.2.0
+        gcc fits_threads.c -lcfitsio -o fits_threads
+        gcc fits_threads2.c  -lcfitsio -o fits_threads2
+        gcc threadhello.c -fopenmp -o threadhello
+   
+      
+Next source each compiled file (expected output shown):
+
+.. code-block:: console
+        :emphasize-lines: 1,25,30
+        
+        $ ./fits_threads
+
+        7  7  7  6  6  6  6  6  5  4
+        5  7  11  18  27  36  48  59  74  123
+        178  89  95  100  105  111  117  125  133  141
+        147  155  166  175  185  193  192  196  199  200
+        200  200  200  203  204  204  207  207  207  211
+        211  209  210  211  211  213  214  213  214  215
+        216  216  216  217  218  218  219  218  220  221
+        221  220  219  220  221  220  221  221  223  225
+        222  223  224  223  223  225  224  223  224  225
+        225  226  225  221  224  225  226  228  231  232
+
+        22  22  22  21  21  21  21  21  20  19
+        20  22  26  33  42  51  63  74  89  138
+        193  104  110  115  120  126  132  140  148  156
+        162  170  181  190  200  208  207  211  214  215
+        215  215  215  218  219  219  222  222  222  226
+        226  224  225  226  226  228  229  228  229  230
+        231  231  231  232  233  233  234  233  235  236
+        236  235  234  235  236  235  236  236  238  240
+        237  238  239  238  238  240  239  238  239  240
+        240  241  240  236  239  240  241  243  246  247
+
+        $ ./fits_threads2
+
+        sum of image 0 = 34417584.000000
+        sum of image 1 = 36397848.000000
+        
+        $ ./threadhello
+
+        Hello from thread 6, nthreads 8
+        Hello from thread 7, nthreads 8
+        Hello from thread 5, nthreads 8
+        Hello from thread 2, nthreads 8
+        Hello from thread 3, nthreads 8
+        Hello from thread 0, nthreads 8
+        Hello from thread 1, nthreads 8
+        Hello from thread 4, nthreads 8

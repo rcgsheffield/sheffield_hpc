@@ -12,7 +12,7 @@ Libraries on Stanage
     hdf5
     imkl
     openblas
-    
+    scalapack
 
 ..
     Eventually the above should look like:

@@ -8,6 +8,7 @@ Libraries on Stanage
     :glob:
     
     blas
+    fftw
     hdf5
     openblas
     

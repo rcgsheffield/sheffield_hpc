@@ -7,6 +7,7 @@ Parallel Systems on Stanage
     :maxdepth: 1
     :glob:
 
+    impi
     openmpi
     
 

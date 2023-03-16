@@ -1,0 +1,143 @@
+.. _impi_stanage:
+
+Intel MPI
+=========
+
+.. sidebar:: Intel MPI
+
+   :URL: https://software.intel.com/en-us/mpi-library
+
+"Intel MPI Library is a multifabric message-passing library
+that implements the open-source MPICH specification.
+Use the library to create, maintain, and test advanced, complex applications that
+perform better on HPC clusters based on Intel® processors."
+
+Versions
+--------
+
+You can load a specific version using one of the following: ::
+    
+    module load impi/2018.4.274-iccifort-2019.1.144-GCC-8.2.0-2.31.1 # subset of intel 2019a EasyBuild toolchain
+    module load impi/2018.5.288-iccifort-2019.5.281     # subset of the intel 2019b toolchain
+    module load impi/2019.7.217-iccifort-2020.1.217     # subset of the intel 2020a toolchain
+    module load impi/2019.9.304-iccifort-2020.4.304     # subset of the intel 2020b toolchain
+    module load impi/2021.2.0-intel-compilers-2021.2.0  # subset of the intel 2021a toolchain
+    module load impi/2021.4.0-intel-compilers-2021.4.0  # subset of the intel 2021b toolchain
+    module load impi/2021.6.0-intel-compilers-2022.1.0  # subset of the intel 2022a toolchain
+    module load impi/2021.7.1-intel-compilers-2022.2.1  # subset of the intel 2022b toolchain
+
+
+which implicitly load versions of icc, ifort (and GCC).
+
+.. warning::
+
+   The Stanage cluster does not have a high performance interconnect between nodes. As 
+   a result cross-node MPI performance will be sharply limited in comparison to ShARC.
+
+   In addition, cross-node MPI is not normally permitted as these kinds of workloads 
+   should be run on the ShARC cluster for the reason above.
+
+
+Examples
+--------
+
+Two examples are given below, the first assessing the MPI performance and the second demonstrating the use 
+of the Intel MPI compilers.
+
+Example: MPI Performance testing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A simple test of these modules can be performed by running the built in performance benchmark tests 
+supplied by Intel. An example of this using 2 cores is given below: 
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=2
+
+    module load impi/2021.7.1-intel-compilers-2022.2.1
+
+    MACHINEFILE="machinefile.$JOB_ID"
+
+    # Show which nodes you have been allocated CPU cores on
+    echo -e "\nShow node core allocation:\n"
+
+    NODELIST=nodelist.$SLURM_JOB_ID
+    srun -l bash -c 'hostname' | sort | awk '{print $2}' > $NODELIST
+    cat $NODELIST
+
+
+    echo -e "\nBegin running application:\n"
+    srun --export=ALL IMB-MPI1
+
+This will generate output of the form:
+
+.. code-block:: bash
+
+    Show node core allocation:
+
+    node051.pri.stanage.alces.network
+    node051.pri.stanage.alces.network
+
+    Begin running application:
+
+    #----------------------------------------------------------------
+    #    Intel(R) MPI Benchmarks 2021.4, MPI-1 part
+    #----------------------------------------------------------------
+    # Date                  : Thu Mar 16 16:00:38 2023
+    # Machine               : x86_64
+    # System                : Linux
+    # Release               : 3.10.0-1160.59.1.el7.x86_64
+    # Version               : #1 SMP Wed Feb 23 16:47:03 UTC 2022
+    # MPI Version           : 3.1
+    # MPI Thread Environment:
+
+
+This is followed by a series of test benchmark results for each of the many tests.
+
+
+Example: Using the Intel MPI compilers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Another simple test of these modules can be performed by compiling and running the example executable 
+provided by Intel. An example of this using 2 cores is given below:
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=2
+
+    module load impi/2021.7.1-intel-compilers-2022.2.1
+
+    # Show which nodes you have been allocated CPU cores on
+    echo -e "\nShow node core allocation:\n"
+
+    NODELIST=nodelist.$SLURM_JOB_ID
+    srun -l bash -c 'hostname' | sort | awk '{print $2}' > $NODELIST
+    cat $NODELIST
+
+    cd /mnt/parscratch/users/$USER
+    cp -R $I_MPI_ROOT/test ./ && chmod 700 -R test && cd test/
+    # Compiling the C example
+    mpicc test.c
+    # Alternatively you can compile the fortran example instead
+    #mpif90 test.f90
+
+    echo -e "\nBegin running application:\n"
+    srun --export=ALL /mnt/parscratch/users/$USER/test/a.out
+
+This will generate output of the form:
+
+.. code-block:: bash
+
+    Show node core allocation:
+
+    node051.pri.stanage.alces.network
+    node051.pri.stanage.alces.network
+
+    Begin running application:
+
+    Hello world: rank 0 of 2 running on node051.pri.stanage.alces.network
+    Hello world: rank 1 of 2 running on node051.pri.stanage.alces.network

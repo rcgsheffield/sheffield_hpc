@@ -10,6 +10,7 @@ Libraries on Stanage
     blas
     fftw
     hdf5
+    imkl
     openblas
     
 

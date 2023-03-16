@@ -7,7 +7,10 @@ Libraries on Stanage
     :maxdepth: 1
     :glob:
     
+    blas
     hdf5
+    openblas
+    
 
 ..
     Eventually the above should look like:

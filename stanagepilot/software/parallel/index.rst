@@ -7,6 +7,8 @@ Parallel Systems on Stanage
     :maxdepth: 1
     :glob:
 
+    openmpi
+    
 
 ..
     Eventually the above should look like:

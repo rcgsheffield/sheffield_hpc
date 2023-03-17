@@ -12,8 +12,6 @@ The three supported toolchains on Stanage are:
 
 - ``foss``
    - C, C++ and Fortran compilers: :ref:`GCC <gcc_stanage>`
-
-.. sweep
    - MPI implementation: :ref:`OpenMPI <openmpi_stanage>`
    - BLAS and LAPACK implementation: :ref:`OpenBLAS <openblas_stanage>`
    - Parallel, distributed LAPACK implementation: :ref:`ScaLAPACK <scalapack_stanage>`
@@ -26,8 +24,6 @@ The three supported toolchains on Stanage are:
 
 - ``intel``
    - C, C++ and Fortran compilers (:ref:`icc/icpc/ifort <icc_ifort_stanage>`)
-
-.. sweep
    - MPI implementation (:ref:`Intel MPI <impi_stanage>`)
    - BLAS, LAPACK and fourier transforms: :ref:`Intel MKL <imkl_stanage>`
 
@@ -54,5 +50,3 @@ corresponding to subsets of the main toolchain dependencies:
 * ``iccifort``: ``icc`` + ``ifort``
 * ``iccifort``: ``icc`` + ``ifort``
 * ``iimpi``: ``icc`` + ``ifort`` + ``impi``
-
-

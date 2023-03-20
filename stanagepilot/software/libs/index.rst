@@ -9,6 +9,8 @@ Libraries on Stanage
     
     blas
     fftw
+    gdal
+    geos
     hdf5
     imkl
     openblas

@@ -16,7 +16,6 @@ Usage
 
 OpenBLAS can be activated using one of: ::
 
-   module load OpenBLAS/0.3.1-GCC-7.3.0-2.30 # foss-2018b toolchain
    module load OpenBLAS/0.3.7-GCC-8.3.0      # foss-2019b toolchain
    module load OpenBLAS/0.3.9-GCC-9.3.0      # foss-2020a toolchain
    module load OpenBLAS/0.3.12-GCC-10.2.0    # foss-2020b toolchain

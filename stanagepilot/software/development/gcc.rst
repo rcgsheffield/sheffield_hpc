@@ -7,7 +7,7 @@ The GNU Compiler Collection (gcc) is a widely used, free collection of compilers
 for C (gcc), C++ (g++) and Fortran (gfortran).
 
 It is possible to switch versions of the gcc compiler suite using modules.
-After connecting to Stanage,  start an interactive sessson: :: 
+After connecting to Stanage,  start an interactive session: :: 
 
    srun --pty bash -i
 

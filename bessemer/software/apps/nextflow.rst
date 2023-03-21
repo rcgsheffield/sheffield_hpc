@@ -17,8 +17,14 @@ Nextflow enables scalable and reproducible scientific workflows using software c
 
 Its fluent DSL simplifies the implementation and the deployment of complex parallel and reactive workflows on clouds and clusters
 
+.. note::
+
+  `nf-core <https://nf-co.re/pipelines>`_ is a community effort to collect a curated set of analysis pipelines built using Nextflow.
+
 Interactive Usage
 -----------------
+
+After connecting to ShARC (see :ref:`ssh`),  start an interactive session with the ``srun --pty bash -i`` command.
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
 
@@ -34,6 +40,7 @@ Note: The module file also loads Java/11.0.2/
 You can now run the ``nextflow`` command:
 
 .. code-block:: console
+  :emphasize-lines: 1
 
     $ nextflow -version
     N E X T F L O W
@@ -42,13 +49,6 @@ You can now run the ``nextflow`` command:
     cite doi:10.1038/nbt.3820
     http://nextflow.io
     .
-
-
-
-Installation notes
-------------------
-Test
-----
 
 Write a file named **tutorial.nf** (`source <https://www.nextflow.io/docs/latest/getstarted.html#your-first-script>`_) with the following content: 
 
@@ -97,6 +97,77 @@ It will output something similar to the text shown below:
     HELLO
     WORLD!
 
+Batch usage
+-----------
+
+Ensure you have produced the above tutorial.nf script then write a file named **batch.sh** with the following content:
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=2
+    #SBATCH --mem=1000
+    #SBATCH --job-name=tutorial_smp_2
+    #SBATCH --output=tutorial_smp_2
+    #SBATCH --time=00:01:00
+    #SBATCH --mail-user=a.person@sheffield.ac.uk
+    #SBATCH --mail-type=ALL
+    module load apps/Nextflow/22.04.0/binary
+    nextflow run tutorial.nf
+     
+You can now submit this job to the SLURM scheduler with
+
+.. code-block:: console
+  :emphasize-lines: 1
+
+  $ sbatch batch.sh
+
+Your output file content will be similar to the following:
+
+.. code-block ::
+
+    N E X T F L O W  ~  version 22.04.0
+    Launching `tutorial.nf` [thirsty_mahavira] DSL2 - revision: 7ed0e799f3
+    [-        ] process > splitLetters   -
+    [-        ] process > convertToUpper -
+
+    [-        ] process > splitLetters   [  0%] 0 of 1
+    [-        ] process > convertToUpper -
+
+    executor >  local (1)
+    [be/6c0c6b] process > splitLetters   [  0%] 0 of 1
+    [-        ] process > convertToUpper -
+
+    executor >  local (1)
+    [be/6c0c6b] process > splitLetters   [100%] 1 of 1 ✔
+    [-        ] process > convertToUpper -
+
+    executor >  local (2)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [4b/4c2a74] process > convertToUpper (1) [  0%] 0 of 2
+
+    executor >  local (3)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [1b/1ed03e] process > convertToUpper (2) [ 50%] 1 of 2
+    HELLO
+
+    executor >  local (3)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [1b/1ed03e] process > convertToUpper (2) [ 50%] 1 of 2
+    HELLO
+
+    executor >  local (3)
+    [be/6c0c6b] process > splitLetters       [100%] 1 of 1 ✔
+    [1b/1ed03e] process > convertToUpper (2) [100%] 2 of 2 ✔
+    HELLO
+    WORLD!
+
+
+Installation notes
+------------------
+
+This installation was tested with the above examples.
 
 Version 22.04.0
 ^^^^^^^^^^^^^^^

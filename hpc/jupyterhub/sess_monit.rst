@@ -6,21 +6,20 @@ Monitoring and controlling your Jupyter session
 Monitoring and control
 ----------------------
 
-If you want to see what Jupyter Notebooks and Terminals your Jupyter server is running then
+Click here to see what Jupyter Notebooks and Terminals your Jupyter server is running:
 
-#. Click the *Home* browser tab;
-#. Click the *Running* browser tab.
+.. image:: /images/jupyterhub/jh-show-running-1.png
 
-Here you can **shut down (close) individual Notebooks**, which may be useful to free up 
-the memory and CPU cores that the cluster's job scheduler has allocated for your JupyterHub session.
+Here you can **shut down (close) individual Notebooks** and terminals, which may be useful to free up 
+the memory and CPU cores that the cluster's job scheduler has allocated for your JupyterHub session:
 
-.. image:: /images/jupyterhub/sharc-jh-show-running.png
+.. image:: /images/jupyterhub/jh-show-running-2.png
 
 ----
 
 If you want to **stop your entire Jupyter server** (i.e. end your JupyterHub session) you can 
 
-#. Click *Control Panel* on the *Home* browser tab;
+#. Click *File* on the top menu bar, then click *Hub Control Panel*
 #. Click *Stop My Server*
 
 ----

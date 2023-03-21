@@ -1,0 +1,30 @@
+#%Module10.2#####################################################################
+##
+## ANSYS EM 2022 R2 module file
+## 
+#  By D.Ryan March 2023
+################################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+###
+
+proc ModulesHelp { } {
+        global version
+
+                puts stderr "   Makes ANSYS EM Version 2022 R2 available for use"
+                }
+
+                module-whatis   "Makes ANSYS EM 2022 R2 available"
+
+#  # load modules
+  module load apps/ansys/22.2/binary
+#
+#
+## module variables
+#
+ set ANSYSEM_DIR     /usr/local/packages/apps/ansysem/22.2/binary/v222
+ prepend-path PATH $ANSYSEM_DIR/Linux64
+
+ prepend-path LD_LIBRARY_PATH /usr/local/packages/apps/ansysem/22.2/binary/v222/Linux64
+

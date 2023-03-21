@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+# Git 2.39.1 module file
+
+# Module file logging
+source /usr/local/etc/module_logging.tcl
+
+proc ModulesHelp {} {
+    local $vers
+    puts stderr "Makes git $vers available"
+}
+
+set vers 2.39.1
+set compiler gcc
+set compilervers 4.9.4
+set GIT_DIR /usr/local/packages/dev/git/$vers/$compiler-$compilervers/
+
+module-whatis   "Makes git $vers available"
+
+prepend-path PATH $GIT_DIR/bin
+prepend-path MANPATH $GIT_DIR/man

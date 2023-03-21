@@ -3,8 +3,8 @@ Ansys EM
 
 .. sidebar:: Ansys EM
 
-   :Versions: 16.1, 17.2, 18.0, 18.2, 19.0, 19.1, 19.2, 19.3,  19.4, 20.2 & 21.1
-   :Dependencies: For integration with Ansys Workbench requires Ansys 16.1, 17.2, 18.0, 18.2, 19.0, 19.1, 19.2, 19.3, 19.4, 20.2 & 21.1
+   :Versions: 16.1, 17.2, 18.0, 18.2, 19.0, 19.1, 19.2, 19.3,  19.4, 20.2, 21.1 & 22.2
+   :Dependencies: For integration with Ansys Workbench requires Ansys 16.1, 17.2, 18.0, 18.2, 19.0, 19.1, 19.2, 19.3, 19.4, 20.2, 21.1 & 22.2
    :URL: http://www.ansys.com
 
 
@@ -33,6 +33,7 @@ Ansys EM can be activated using the module files::
     module load apps/ansysem/19.4/binary
     module load apps/ansysem/20.2/binary
     module load apps/ansysem/21.1/binary
+    module load apps/ansysem/22.2/binary
 
 
 Ansys EM is integrated with the Ansys Workbench GUI (the ``runwb2`` executable) for each version. The Ansys EM exectuable is ``ansysedt``.
@@ -55,7 +56,7 @@ The following is an example batch submission script which is submitted to the qu
     #$ -l rmem=2G
     #$ -pe mpi 8
 
-    module load apps/ansysem/21.1
+    module load apps/ansysem/22.2
 
     ansysedt -ng -BatchSolve -Distributed -machinelist num=8 -batchoptions 'HPCLicenseType'='pool' -useElectronicsPPE Tee.aedt
 
@@ -130,6 +131,9 @@ Ansys EM 21.1: there is no install script;
 the module file is
 :download:`/usr/local/modulefiles/apps/ansysem/21.1/binary </sharc/software/modulefiles/apps/ansysem/21.1/binary>`.
 
+Ansys EM 21.1: there is no install script;
+the module file is
+:download:`/usr/local/modulefiles/apps/ansysem/22.2/binary </sharc/software/modulefiles/apps/ansysem/22.2/binary>`.
 
 
 The binary installations were tested using ``runwb2`` and the above batch submission script.

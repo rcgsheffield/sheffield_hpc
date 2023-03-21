@@ -72,6 +72,9 @@ The GPU version of TensorFlow is a distinct Pip package and
 is also dependent on CUDA and cuDNN libraries,
 making the installation procedure slightly different.
 
+.. warning::
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_bess>`).
+
 First request an interactive session, e.g. see :ref:`GPUInteractive_bessemer`.
 
 Then GPU version of TensorFlow can be installed by the following ::
@@ -143,10 +146,14 @@ This indicates that TensorFlow was expecting to find CUDA 10.0 (and an appropria
 The following table shows the which module to load for the various versions of TensorFlow,
 based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_.
 
+.. _tensorflow_cudnn_compat_bess:
+
 +------------+------+--------+-------------------------------------------------------+
 | TensorFlow | CUDA | cuDNN  | cuDNN module to load                                  |
 +============+======+========+=======================================================+
-| 2.2.0      | 10.1 | >= 7.6 | ``cuDNN/7.6.4.38-gcccuda-2019b`` (inc. CUDA 10.1.243) |
+| 2.4.0      | 11.0 | >= 8.0 | ``cuDNN/8.0.4.30-CUDA-11.0.2`` (inc. CUDA 11.0.2)     |
++------------+------+--------+-------------------------------------------------------+
+| 2.3.0      | 10.1 | >= 7.6 | ``cuDNN/7.6.4.38-gcccuda-2019b`` (inc. CUDA 10.1.243) |
 +------------+------+--------+-------------------------------------------------------+
 | 2.1.0      | 10.1 | >= 7.6 | ``cuDNN/7.6.4.38-gcccuda-2019b`` (inc. CUDA 10.1.243) |
 +------------+------+--------+-------------------------------------------------------+

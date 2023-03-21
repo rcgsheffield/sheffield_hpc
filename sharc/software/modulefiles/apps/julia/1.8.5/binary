@@ -1,0 +1,26 @@
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global ver
+
+        puts stderr " Makes julia $ver available to the system."
+}
+
+# julia version (not in the user's environment)
+set ver       1.8.5
+set juliaroot /usr/local/packages/apps/julia/1.8.5/binary
+
+
+module-whatis   "sets the necessary julia $ver paths"
+
+prepend-path PATH              $juliaroot/bin
+prepend-path CMAKE_PREFIX_PATH $juliaroot 
+prepend-path CPATH             $juliaroot/include 
+prepend-path LD_LIBRARY_PATH   $juliaroot/lib 
+prepend-path LIBRARY_PATH      $juliaroot/lib 
+prepend-path MANPATH           $juliaroot/share/man 
+prepend-path XDG_DATA_DIRS     $juliaroot/share 

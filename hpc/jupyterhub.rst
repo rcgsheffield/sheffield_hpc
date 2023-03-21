@@ -34,11 +34,16 @@ your local machine or
 a **remote server**
 (which may have more memory, CPU cores and/or GPUs than your local machine).
 
-On the university's **ShARC cluster** a (:ref:`beta <jh_svc_status>`) JupyterHub_ service allows a user to:
+On the University's **ShARC cluster** a JupyterHub_ service allows a user to:
 
 #. **Log in** to the JupyterHub web inteface,
 #. Specify what resources (**memory, CPU cores, GPUs**) they want for a Jupyter session,
 #. **Start** and **run** a **Jupyter Notebook server on a worker node** in the cluster using these resources.
+
+.. image:: /images/jupyterhub/jupyterhublogo.svg
+   :width: 30%
+   :align: center
+   :alt: JupyterHub logo
 
 ..
     More background?
@@ -61,7 +66,7 @@ Using Jupyter on ShARC
    :maxdepth: 1
 
    Connecting to JupyterHub, requesting resources (RAM, processors, GPUs) for your Jupyter session, and starting your session <jupyterhub/conn_res_req_start>
-   Jupyter file browser <jupyterhub/file_browse>
+   JupyterLab interface <jupyterhub/jupyterlab_overview>
    Terminal in your browser <jupyterhub/terminal>
    Programming languages, software packages and execution environments <jupyterhub/conda>
    Creating, editing and running Jupyter Notebooks <jupyterhub/nb_usage>
@@ -71,12 +76,8 @@ Using Jupyter on ShARC
 
 .. _jh_svc_status:
 
-Status of and maintenance of ShARC's JupyterHub service
--------------------------------------------------------
-
-This service is currenty **experimental**.
-If you use this service and encounter a problem,
-please contact `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
+Maintenance of ShARC's JupyterHub service
+-----------------------------------------
 
 The server that provider the JupyterHub service is 
 typically **rebooted at 03:26 on the 2nd Tuesday of the month**
@@ -94,7 +95,7 @@ The **hub** of JupyterHub has several components:
 * a **spawner** that can start single-user Jupyter Notebook servers on demand.
 
 .. image:: /images/jupyterhub/jhub-parts.png
-   :width: 50%
+   :width: 30%
    :align: center
    :alt: JupyterHub architecture
 
@@ -103,28 +104,18 @@ then, after a single-user Jupyter server has been spawned, certain web connectio
 From the user's perspective it appears that they are interacting with a single web application, 
 even though at times they might be talking to a single-user Jupyter server that running on a different machine to the Hub.
 
-ShARC uses a custom spawner, `sgespawner <https://github.com/willfurnass/sgespawner>`__, that 
-spawns single-user Jupyter servers on one or more worker nodes on ShARC by submitting batch jobs to the Grid Engine job scheduler.
+ShARC uses `BatchSpawner <https://github.com/jupyterhub/batchspawner>`__ to
+spawn single-user Jupyter servers on one or more worker nodes on ShARC by submitting batch jobs to the Grid Engine job scheduler.
 
-The JupyterHub and ``sgespawner`` configuration allows the user to specify the Grid Engine resources required for the Jupyter session in advance
+The JupyterHub and BatchSpawner configuration allows the user to specify the Grid Engine resources required for the Jupyter session in advance
 via a web form then these resources are requested as part of the batch job submission.
-
-Further details of how JupyterHub and ``sgespawner`` are configured on ShARC 
-can be found in `this repository <https://github.com/RSE-Sheffield/jupyterhub-gridengine-sharc/>`__.
 
 .. _jh_svc_credits:
 
 Credits
 -------
 
-The JupyterHub service on ShARC is currently developed and maintained by the University's `Research Software Engineering team`_.  This work has been funded by OpenDreamKit_, a Horizon2020_ European `Research Infrastructure`_ project (676541_) that aims to advance the open source computational mathematics ecosystem.
-
-.. image:: /images/jupyterhub/opendreamkit.png
-   :width: 10%
-   :alt: OpenDreamKit logo
-   :align: center
-   :target: OpenDreamKit_
-
+The JupyterHub service on ShARC was originally developed and maintained by the University's `Research Software Engineering team`_, funded by OpenDreamKit_, a Horizon2020_ European `Research Infrastructure`_ project (676541_) that aimed to advance the open source computational mathematics ecosystem.
 
 .. _676541: http://cordis.europa.eu/project/rcn/198334_en.html
 .. _Horizon2020: https://ec.europa.eu/programmes/horizon2020/

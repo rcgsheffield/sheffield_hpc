@@ -58,6 +58,10 @@ Installation in Home Directory - GPU Version
 
 The GPU version of Tensorflow comes in a different PIP package and is also dependent on CUDA and cuDNN libraries making the installation procedure slightly different.
 
+.. warning::
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_sharc>`).
+
+
 First request an interactive session, e.g. see :ref:`GPUInteractive_sharc`.
 
 Then GPU version of Tensorflow can be installed by the following ::
@@ -78,7 +82,7 @@ Then GPU version of Tensorflow can be installed by the following ::
   pip install tensorflow-gpu==2.0
 
 If you wish to use an older version of tensorflow-gpu, you can do so using :code:`pip install tensorflow-gpu==<version_number>`
-
+   
 **Every Session Afterwards and in Your Job Scripts**
 
 Every time you use a new session or within your job scripts, the modules must be loaded and conda must be activated again. Use the following command to activate the Conda environment with Tensorflow installed: ::
@@ -125,28 +129,45 @@ Tensorflow releases depend on specific versions of both CUDA and CUDNN. If the w
 
 This indicates that Tensorflow was expecting to find CUDA 10.0 (and an appropriate version of CUDNN) but was unable to do so.
 
-The following table shows the which module to load for the various versions of Tensorflow, based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_. 
+The following table shows which module to load for the various versions of Tensorflow, based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_. 
 
+.. _tensorflow_cudnn_compat_sharc:
 
-
-+------------+------+--------+--------------------------------------------+
-| Tensorflow | CUDA | CUDNN  | Module                                     | 
-+============+======+========+============================================+
-| 2.1.0      | 10.1 | >= 7.4 | `libs/cudnn/7.6.5.32/binary-cuda-10.1.243` |
-+------------+------+--------+--------------------------------------------+
-| 2.0.0      | 10.0 | >= 7.4 | `libs/cudnn/7.5.0.56/binary-cuda-10.0.130` |
-+------------+------+--------+--------------------------------------------+
-| 1.14.0     | 10.0 | >= 7.4 | `libs/cudnn/7.5.0.56/binary-cuda-10.0.130` |
-+------------+------+--------+--------------------------------------------+
-| 1.13.1     | 10.0 | >= 7.4 | `libs/cudnn/7.5.0.56/binary-cuda-10.0.130` |
-+------------+------+--------+--------------------------------------------+
-| >= 1.5.0   |  9.0 | 7      | `libs/cudnn/7.3.1.20/binary-cuda-9.0.176`  |
-+------------+------+--------+--------------------------------------------+
-| >= 1.3.0   |  8.0 | 6      | `libs/cudnn/6.0/binary-cuda-8.0.44`        |
-+------------+------+--------+--------------------------------------------+
-| >= 1.0.0   |  8.0 | 5.1    | `libs/cudnn/5.1/binary-cuda-8.0.44`        |
-+------------+------+--------+--------------------------------------------+
-
++------------+------+--------+----------------------------------------------+
+| Tensorflow | CUDA | CUDNN  | Module                                       |
++============+======+========+==============================================+
+| 2.11.0     | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.10.0     | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.9.0      | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.8.0      | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.7.0      | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.6.0      | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.5.0      | 11.2 | >= 8.1 | ``libs/cudnn/8.1.1.33/binary-cuda-11.2.0``   |
++------------+------+--------+----------------------------------------------+
+| 2.3.0      | 10.1 | >= 7.6 | ``libs/cudnn/7.6.5.32/binary-cuda-10.1.243`` |
++------------+------+--------+----------------------------------------------+
+| 2.2.0      | 10.1 | >= 7.6 | ``libs/cudnn/7.6.5.32/binary-cuda-10.1.243`` |
++------------+------+--------+----------------------------------------------+
+| 2.1.0      | 10.1 | >= 7.4 | ``libs/cudnn/7.6.5.32/binary-cuda-10.1.243`` |
++------------+------+--------+----------------------------------------------+
+| 2.0.0      | 10.0 | >= 7.4 | ``libs/cudnn/7.5.0.56/binary-cuda-10.0.130`` |
++------------+------+--------+----------------------------------------------+
+| 1.14.0     | 10.0 | >= 7.4 | ``libs/cudnn/7.5.0.56/binary-cuda-10.0.130`` |
++------------+------+--------+----------------------------------------------+
+| 1.13.1     | 10.0 | >= 7.4 | ``libs/cudnn/7.5.0.56/binary-cuda-10.0.130`` |
++------------+------+--------+----------------------------------------------+
+| >= 1.5.0   | 9.0  | 7      | ``libs/cudnn/7.3.1.20/binary-cuda-9.0.176``  |
++------------+------+--------+----------------------------------------------+
+| >= 1.3.0   | 8.0  | 6      | ``libs/cudnn/6.0/binary-cuda-8.0.44``        |
++------------+------+--------+----------------------------------------------+
+| >= 1.0.0   | 8.0  | 5.1    | ``libs/cudnn/5.1/binary-cuda-8.0.44``        |
++------------+------+--------+----------------------------------------------+
 
 
 Tensorflow Apptainer/Singularity Images

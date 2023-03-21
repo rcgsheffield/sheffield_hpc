@@ -1,0 +1,71 @@
+#!/bin/bash
+#Naturally this script is written for the SHARC clusters to install JULIA.
+#Script was adapted by N Musembi 14/10/2022 based on a script/template by JMoore @ The University of Sheffield IT Services and ed.
+
+#Notes:
+
+########################  Options and version selections  #########################
+###################################################################################
+#Define Names and versions
+PACKAGENAME=julia
+PACKAGEVER=1.8.5
+
+FILENAME=$PACKAGENAME-$PACKAGEVER-linux-x86_64.tar.gz
+
+URL="https://julialang-s3.julialang.org/bin/linux/x64/1.8/julia-1.8.5-linux-x86_64.tar.gz"
+
+#Start the main work of the script
+echo "Running install script to make Package: "  $PACKAGENAME " Version: "  $PACKAGEVER 
+
+#Setup calculated variables
+INSTALLDIR=/usr/local/packages/apps/$PACKAGENAME/$PACKAGEVER/binary/
+BINARYDIR=/usr/local/modulefiles/apps/$PACKAGENAME/$PACKAGEVER/
+
+SOURCEDIR=$INSTALLDIR/src
+
+#Make directories
+mkdir -p $INSTALLDIR
+
+echo "Install Directory: "  $INSTALLDIR
+
+#Go to the source directory
+cd $INSTALLDIR
+
+#Download source and extract
+echo "Download Source"
+
+
+if test -f "$FILENAME"; then
+    rm -r $PACKAGENAME-$PACKAGEVER
+    tar -xzvf  $FILENAME
+else
+    wget $URL
+    tar -xzvf  $FILENAME
+	cp -r $PACKAGENAME-$PACKAGEVER/* .	
+    rm -r $PACKAGENAME-$PACKAGEVER
+fi
+
+
+mkdir $BINARYDIR
+cat <<EOF >>$BINARYDIR/binary
+#%Module10.2#####################################################################
+
+## Module file logging
+source /usr/local/etc/module_logging.tcl
+##
+
+proc ModulesHelp { } {
+        global ver
+
+        puts stderr " Makes julia $ver available to the system."
+}
+
+# julia version (not in the user's environment)
+set     ver     $PACKAGEVER
+
+module-whatis   "sets the necessary julia $PACKAGEVER paths"
+
+prepend-path PATH /usr/local/packages/apps/$PACKAGENAME/$PACKAGEVER/binary/bin
+
+
+EOF

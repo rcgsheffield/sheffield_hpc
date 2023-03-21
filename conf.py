@@ -26,6 +26,7 @@ extensions = [
     'sphinxcontrib.jquery',
     'sphinx_rtd_theme',
     'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton',
 ]
 
 # Make sure the autosectionlabel target is unique

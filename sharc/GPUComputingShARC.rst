@@ -6,8 +6,6 @@ Using GPUs on ShARC
 Requesting access to GPU facilities
 -----------------------------------
 
-.. note:: Public GPU nodes have now been made available to ShARC users, these can be be used without acquiring extra permission.
-
 Research groups also have an option to purchase and add nodes to the cluster to be managed by IT Services. 
 For these nodes (e.g. :ref:`dgx1_dcs_groupnodes_sharc`), 
 permission from the group leader is required for access.
@@ -23,7 +21,8 @@ please contact ``research-it@sheffield.ac.uk``.
 Interactive use of the GPUs
 ---------------------------
 
-Once you are included in the GPU project group you may start using the GPU enabled nodes interactively by typing:
+If you need to use GPUs interactively for e.g. debugging or exploratory data analysis
+you can start an interactive session on a GPU node with:
 
 .. code-block:: sh
 

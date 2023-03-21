@@ -1,0 +1,35 @@
+#%Module
+proc ModulesHelp { } {
+    puts stderr {
+
+Description
+===========
+Nextflow is a reactive workflow framework and a programming DSL 
+ that eases writing computational pipelines with complex data
+
+
+More information
+================
+ - Homepage: https://www.nextflow.io
+    }
+}
+
+set     ver     22.04.0
+
+module-whatis {Description: Nextflow is a reactive workflow framework and a programming DSL 
+ that eases writing computational pipelines with complex data}
+module-whatis {Homepage: https://www.nextflow.io}
+module-whatis {URL: https://www.nextflow.io}
+
+set root /usr/local/packages/apps/Nextflow/$ver/binary
+
+conflict Nextflow
+
+if { ![ is-loaded apps/java/11.0.2 ] } {
+    module load apps/java/11.0.2
+}
+
+prepend-path    CMAKE_PREFIX_PATH               $root
+prepend-path    PATH            $root/bin
+
+# Not Built with EasyBuild version 4.6.1

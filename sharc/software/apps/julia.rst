@@ -5,7 +5,7 @@ Julia
 
 .. sidebar:: Julia
 
-   :Latest version: 1.8.2
+   :Latest version: 1.8.5
    :URL: https://docs.julialang.org/en/v1/
    :dependencies:
 
@@ -18,6 +18,7 @@ After connecting to sharc (see :ref:`ssh`),  start an interactive session with t
 
 The latest version of Julia (currently 1.8.2) is made available with the command ::
 
+        module load apps/julia/1.8.5/binary
         module load apps/julia/1.8.2/binary
 
 You can then start Julia with ``julia``.
@@ -26,6 +27,10 @@ You can then start Julia with ``julia``.
 Installation notes
 ------------------
 These are primarily for administrators of the system.
+
+**julia version 1.8.5**
+was installed using the
+:download:`install_julia.sge </sharc/software/install_scripts/apps/julia/1.8.5/install_julia.sge>` script.
 
 **julia version 1.8.2**
 was installed using the

@@ -18,10 +18,6 @@ Connecting
 
    .. image:: /images/jupyterhub/jh-sharc-login.png
 
-#. Click **Start server** when prompted:
-
-   .. image:: /images/jupyterhub/jh-sharc-start-server.png
-
    You can only run one Jupyer Notebook Server on the cluster at a time but 
    you can use your Notebook Server to run multiple Notebooks.
 
@@ -49,21 +45,11 @@ using a Project you can:
 **Most users do not need to select a specific Project and 
 should leave this setting as its default.**
 
-Currently supported projects:
-
-* ``gpu``:    GPU-equipped nodes (public)
-* ``rse``:    The `Research Software Engineering group's <https://rse.shef.ac.uk>`_ nodes (restricted access)
-* ``cstest``: IT Services testing only
-
-Support for other Projects can be added on request.
-
 Job Queue
 ^^^^^^^^^
 
 Selecting ``any`` lets the scheduler choose an appropriate Job Queue, 
 which is typically what you want.
-
-Support for additional Job Queues can be added on request.
 
 Email address
 ^^^^^^^^^^^^^
@@ -99,7 +85,7 @@ A value in gigabytes.
 GPUS per CPU core
 ^^^^^^^^^^^^^^^^^
 
-Requires that **Project** is ``gpu`` (public GPUs) or ``rse`` (private GPUs).
+Requires that **Project** is ``gpu`` (public GPUs) or another project that allow *you* access to GPUs e.g. ``rse``.
 
 Notebook session runtime
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -111,9 +97,6 @@ Starting your Notebook session using the requested resources
 
 After you've specified the resources you want for your job,
 click *Spawn* to try starting a Jupyter session on one (or more) worker nodes.
-
-.. image:: /images/jupyterhub/jh-sharc-server-starting.png
-
 This may take a minute.
 
 .. warning::
@@ -124,6 +107,4 @@ This may take a minute.
    then this attempt to start a session will time out
    and you will return to the :ref:`Spawner options <jh_spawner_opts>` form.
 
-Once your session has started you should see the Jupyter file browser interface:
-
-.. image:: /images/jupyterhub/sharc-jh-main-nb-svr-interface.png
+Once your session has started you should see the main :ref:`main JupyterLab interface<jh_jupyterlab>`.

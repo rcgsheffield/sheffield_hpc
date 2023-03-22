@@ -3,14 +3,12 @@
 Jupyter's web terminal
 ======================
 
-You can start a terminal from 
-the **New** menu within 
-Jupyter's :ref:`Files <jh_file_browse>` tab.
-This is a fully-featured web terminal, 
-running on a worker node.  
-It opens a new browser tab.
+You can start a terminal  
 
-.. image:: /images/jupyterhub/jupyterhub-terminal.png
+* Via the top menu bar (**File**, **New**, **Terminal**) or
+* Via the :ref:`Files <jh_jupyterlab>` Launcher tab.
+
+.. image:: /images/jupyterhub/jupyterlab-terminal.png
 
 You can use this terminal to perform any command-line-only operation on the cluster, including:
 
@@ -23,7 +21,7 @@ You can use this terminal to perform any command-line-only operation on the clus
   creating/selecting environments and 
   installing/upgrading/removing packages 
   :ref:`using Jupyter's graphical interface <jh_conda>`);
-* :ref:`Triggering the automounting of directories <jh_automount_issue>` not visible in JupyterHub's :ref:`file browser <jh_file_browse>`.
+* :ref:`Triggering the automounting of directories <jh_automount_issue>` not visible in JupyterHub's :ref:`file browser <jh_jupyterlab>`.
 
 Having a terminal interface available within the browser 
 negates the need to separately :ref:`log into the cluster via SSH <connecting>`

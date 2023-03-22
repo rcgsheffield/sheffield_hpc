@@ -8,6 +8,7 @@ Libraries on Stanage
     :glob:
     
     blas
+    cfitsio
     fftw
     gdal
     geos
@@ -15,7 +16,7 @@ Libraries on Stanage
     imkl
     openblas
     scalapack
-
+    
 ..
     Eventually the above should look like:
 

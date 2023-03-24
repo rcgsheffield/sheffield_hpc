@@ -1,9 +1,9 @@
 .. _proj_stanage:
 
-PROJ.9
-======
+PROJ
+====
 
-.. sidebar:: PROJ.9
+.. sidebar:: PROJ
 
    :Versions: 9.1.1, 8.1.0, 7.2.1
    :URL: https://github.com/OSGeo/proj

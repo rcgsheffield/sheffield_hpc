@@ -26,6 +26,17 @@ This cheat sheet covers basic functionality for Bessemer.
 
 -----------
 
+Stanage Cheat Sheet
+----------------------
+
+.. include:: /referenceinfo/imports/cheat-sheets/cheat-sheet-note.rst
+
+This cheat sheet covers basic functionality for Stanage.
+
+.. include:: /referenceinfo/imports/cheat-sheets/stanage-cheatsheet-1-import.rst
+
+-----------
+
 SGE to SLURM conversions
 ------------------------
 

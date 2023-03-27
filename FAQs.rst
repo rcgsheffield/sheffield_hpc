@@ -682,3 +682,11 @@ If neither of these options are feasible, then running VSCode on a local machine
 from the HPC clusters to the local filesystem is possible but discouraged due to the likelihood of poor performance from machines remote 
 from the clusters. By mounting the folder from the HPC cluster to a local filesystem folder, users can edit files on the cluster with VSCode 
 as if they were normal local machine files.
+
+
+How can I get further help with terminal commands.
+---------------------------------------------------------------------------------------------------------
+
+.. |mancommand| replace:: COMMANDGOESHERE
+
+.. include:: referenceinfo/imports/man-prompt.rst

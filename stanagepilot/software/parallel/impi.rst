@@ -29,14 +29,6 @@ You can load a specific version using one of the following: ::
 
 which implicitly load versions of icc, ifort (and GCC).
 
-.. warning::
-
-   The Stanage cluster does not have a high performance interconnect between nodes. As 
-   a result cross-node MPI performance will be sharply limited in comparison to ShARC.
-
-   In addition, cross-node MPI is not normally permitted as these kinds of workloads 
-   should be run on the ShARC cluster for the reason above.
-
 
 Examples
 --------

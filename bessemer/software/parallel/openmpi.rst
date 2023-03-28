@@ -73,7 +73,7 @@ Interactive job submission
 ##########################
 
 
-You can run your job interactively: ::
+You can run your job interactively (from a login node): ::
 
     mpirun hello
 
@@ -82,12 +82,12 @@ Your output would be something like: ::
     Hello world from processor bessemer-node001.shef.ac.uk, rank 0 out of 1 processors
 
 
-This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive session.
-You can request an interactive node with multiple cores (4 in this example) by using the command: ::
+This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive job.
+You can request multiple cores (4 in this example) by using the command (from a login node): ::
 
-    srun --ntasks=4 --pty bash -i
+    srun --ntasks=4 hello
 
-Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively. 
+Please note that requesting multiple cores in an interactive job depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively. 
 
 
 Non-interactive job submission
@@ -102,10 +102,17 @@ Write a shell script (minimal example) We name the script as ‘test.sh’: ::
 
     module load OpenMPI/3.1.3-GCC-8.2.0-2.31.1
 
-    mpirun hello
+    srun --export=ALL hello
 
 Maximum 40 cores can be requested.
 
+.. note:: 
+    
+    It is common practice to use ``srun`` when using SLURM as a workload manager, as it ensures that resources are allocated correctly. 
+    In this case, it also exports all environment variables to the compute node(s) where the job will be executed.  
+    ``mpirun`` launches an MPI application and could replace ``srun`` here but should be used with caution.
+     
+    
 Submit your script by using the command: ::
 
     sbatch test.sh

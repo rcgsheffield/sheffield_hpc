@@ -119,7 +119,6 @@ Write a shell script (minimal example). We name the script as ``test.sh``: ::
 
     srun --export=ALL hello
 
-Maximum 64 cores can be requested.
 
 Submit your script by using the command: ::
 

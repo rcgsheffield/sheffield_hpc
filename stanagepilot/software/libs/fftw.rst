@@ -34,4 +34,7 @@ To make this library available, run one the following: ::
   and also load GCC and OpenMPI
 - `gompic` versions are a subset of the :ref:`fosscuda toolchain <stanage_eb_toolchains>`
   and also load GCC, OpenMPI and CUDA.
-- `intel` versions use an ``intel`` toolchain and load the Intel compilers and Intel MPI.
+
+
+Also see :ref:`imkl-fftw <imkl_fftw_stanage>` which is a library that combines FFTW library with Intel's Math Kernel Library (IMKL)
+to provide optimized FFT routines that are specifically optimized for Intel processors.

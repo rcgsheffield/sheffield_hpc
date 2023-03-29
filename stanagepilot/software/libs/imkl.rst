@@ -19,7 +19,7 @@ FFTW functions from other math libraries.
 Usage
 -----
 
-The Intel MKL can be activated using one of the following: ::
+Intel MKL can be activated using one of the following: ::
 
    module load imkl/2019.1.144-iimpi-2019a # subset of intel-2019a EasyBuild toolchain
    module load imkl/2019.5.281-iimpi-2019b # subset of intel-2019b EasyBuild toolchain
@@ -29,7 +29,22 @@ The Intel MKL can be activated using one of the following: ::
    module load imkl/2021.4.0
    module load imkl/2022.1.0
    module load imkl/2022.2.1
+  
 
    
 which also implicitly loads a version of the :ref:`iimpi <stanage_eb_toolchains>` toolchain,
 itself being a subset of the ``intel`` toolchain.
+
+.. _imkl_fftw_stanage:
+
+IMKL-FFTW
+----------
+
+IMKL-FFTW is a library that combines the :ref:`FFTW <fftw_stanage>` library with IMKL to provide optimized FFT routines that are specifically optimized for Intel processors.
+
+Intel MKL-FFTW can be activated using one of the following: ::
+   
+   module load imkl-FFTW/2021.4.0-iimpi-2021b
+   module load imkl-FFTW/2022.1.0-iimpi-2022a
+   module load imkl-FFTW/2022.2.1-iimpi-2022b
+

@@ -40,7 +40,7 @@ Example: MPI Performance testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A simple test of these modules can be performed by running the built in performance benchmark tests 
-supplied by Intel. An example of this using 2 cores is given below: 
+supplied by Intel. An example of this using 2 cores on one node is given below: 
 
 .. code-block:: bash
 
@@ -52,13 +52,13 @@ supplied by Intel. An example of this using 2 cores is given below:
 
     MACHINEFILE="machinefile.$JOB_ID"
 
-    # Show which nodes you have been allocated CPU cores on
+    # Show which node you have been allocated CPU cores on
     echo -e "\nShow node core allocation:\n"
 
-    NODELIST=nodelist.$SLURM_JOB_ID
-    srun -l bash -c 'hostname' | sort | awk '{print $2}' > $NODELIST
-    cat $NODELIST
-
+    echo "SLURM_JOB_NODELIST=${SLURM_JOB_NODELIST}"
+    echo "SLURM_NNODES=${SLURM_NNODES}"
+    echo "SLURM_NTASKS_PER_NODE=${SLURM_NTASKS_PER_NODE-1}"
+    echo "SLURM_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK-1}"
 
     echo -e "\nBegin running application:\n"
     srun --export=ALL IMB-MPI1
@@ -69,8 +69,11 @@ This will generate output of the form:
 
     Show node core allocation:
 
-    node051.pri.stanage.alces.network
-    node051.pri.stanage.alces.network
+    SLURM_JOB_NODELIST=node050
+    SLURM_NNODES=1
+    SLURM_NTASKS_PER_NODE=2
+    SLURM_CPUS_PER_TASK=1
+
 
     Begin running application:
 
@@ -105,10 +108,11 @@ provided by Intel. An example of this using 2 cores is given below:
 
     # Show which nodes you have been allocated CPU cores on
     echo -e "\nShow node core allocation:\n"
-
-    NODELIST=nodelist.$SLURM_JOB_ID
-    srun -l bash -c 'hostname' | sort | awk '{print $2}' > $NODELIST
-    cat $NODELIST
+    
+    echo "SLURM_JOB_NODELIST=${SLURM_JOB_NODELIST}"
+    echo "SLURM_NNODES=${SLURM_NNODES}"
+    echo "SLURM_NTASKS_PER_NODE=${SLURM_NTASKS_PER_NODE-1}"
+    echo "SLURM_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK-1}"
 
     cd /mnt/parscratch/users/$USER
     cp -R $I_MPI_ROOT/test ./ && chmod 700 -R test && cd test/
@@ -126,8 +130,10 @@ This will generate output of the form:
 
     Show node core allocation:
 
-    node051.pri.stanage.alces.network
-    node051.pri.stanage.alces.network
+    SLURM_JOB_NODELIST=node051
+    SLURM_NNODES=1
+    SLURM_NTASKS_PER_NODE=2
+    SLURM_CPUS_PER_TASK=1
 
     Begin running application:
 

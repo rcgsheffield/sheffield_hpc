@@ -8,6 +8,9 @@ Libraries on Stanage
     :glob:
     
     cfitsio
+    libsndfile
+    libunistring
+    udunits
 
 ..
     Eventually the above should look like:

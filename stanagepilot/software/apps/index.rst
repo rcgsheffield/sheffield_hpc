@@ -8,6 +8,7 @@ Applications on Stanage
     :glob:
 
     ansys/index
+    gmp
     openfoam
     vasp
     ncdu

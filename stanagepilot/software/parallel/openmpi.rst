@@ -133,5 +133,12 @@ Your output would be something like: ::
     Hello world from processor stanage-node003.shef.ac.uk, rank 1 out of 8 processors
     Hello world from processor stanage-node003.shef.ac.uk, rank 4 out of 8 processors
 
+Installation notes
+------------------
+
+This section is primarily for administrators of the system. OpenMPI has been installed using the default Easybuild config files.
+
+Build logs and test reports can be found in $EBROOTOPENMPI/easybuild with a given module loaded.
+
 
 

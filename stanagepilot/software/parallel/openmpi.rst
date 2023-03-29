@@ -79,19 +79,27 @@ Interactive job submission
 ##########################
 
 
-You can run your job interactively: ::
+You can run your job interactively (from a login node): ::
 
-    mpirun hello
+    srun hello
 
 Your output would be something like: ::
 
     Hello world from processor stanage-node001.shef.ac.uk, rank 0 out of 1 processors
 
 
-This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive session.
-You can request an interactive node with multiple cores (4 in this example) by using the command: ::
+This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive job.
+You can request an interactive job with multiple cores (4 in this example) by using this command (from a login node): ::
 
-    srun --ntasks=4 --pty bash -i
+    srun --ntasks=4 hello
+
+Your output would be something like: ::
+
+    Hello world from processor stanage-node003.shef.ac.uk, rank 3 out of 4 processors
+    Hello world from processor stanage-node003.shef.ac.uk, rank 1 out of 4 processors
+    Hello world from processor stanage-node003.shef.ac.uk, rank 0 out of 4 processors
+    Hello world from processor stanage-node001.shef.ac.uk, rank 2 out of 4 processors
+
 
 Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively. 
 
@@ -109,7 +117,7 @@ Write a shell script (minimal example). We name the script as ``test.sh``: ::
 
     module load OpenMPI/4.1.4-GCC-12.2.0
 
-    mpirun hello
+    srun --export=ALL hello
 
 Maximum 64 cores can be requested.
 

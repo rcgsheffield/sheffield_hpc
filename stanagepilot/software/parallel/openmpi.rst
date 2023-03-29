@@ -70,6 +70,11 @@ Compile your source code by using on of the following commands: ::
 
     mpicc hello.c -o hello
 
+.. note:: 
+
+        In this example we used the MPI C compiler. We could also choose to compile with either of the MPI C++ compilers ``mpicxx`` or ``mpiCC``
+
+
 Interactive job submission
 ##########################
 

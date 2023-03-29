@@ -89,7 +89,7 @@ Your output would be something like: ::
 
 
 This is an expected behaviour since by default interactive jobs get allocated one single-CPU-core task running on one node.
-You can request an interactive job with multiple cores (4 in this example) by using this command (from a login node): ::
+You can request an interactive job with multiple concurrent single-CPU-core tasks (4 in this example) by using this command (from a login node): ::
 
     srun --ntasks=4 hello
 

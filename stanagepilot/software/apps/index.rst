@@ -10,6 +10,7 @@ Applications on Stanage
     ansys/index
     gmp
     openfoam
+    python
     vasp
     ncdu
     mathematica

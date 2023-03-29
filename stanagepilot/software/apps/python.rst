@@ -1,5 +1,3 @@
-.. _python_conda_bessemer:
-
 Python
 ======
 
@@ -51,7 +49,6 @@ as a base for your own environments.
     Due to Anaconda being installed in a module you must use the ``source`` command instead of ``conda`` 
     when activating or deactivating environments!
 
-.. _python_conda_bessemer_create_env:
 
 Creating a Conda Environment
 ----------------------------

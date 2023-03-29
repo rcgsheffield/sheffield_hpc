@@ -88,7 +88,7 @@ Your output would be something like: ::
     Hello world from processor stanage-node001.shef.ac.uk, rank 0 out of 1 processors
 
 
-This is an expected behaviour since we did not specify the number of CPU cores when requesting our interactive job.
+This is an expected behaviour since by default interactive jobs get allocated one single-CPU-core task running on one node.
 You can request an interactive job with multiple cores (4 in this example) by using this command (from a login node): ::
 
     srun --ntasks=4 hello

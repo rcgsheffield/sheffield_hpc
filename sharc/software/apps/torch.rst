@@ -43,15 +43,21 @@ To get a bash terminal in to an image for example, use the command: ::
 
   apptainer exec --nv /usr/local/packages/singularity/images/torch/gpu.img /bin/bash
 
+To get a torch console: ::
+
+  singularity exec --nv /usr/local/packages/singularity/images/torch/gpu.img th
+
 The ``exec`` command can also be used to call any command/script inside the image e.g. ::
 
   apptainer exec --nv /usr/local/packages/singularity/images/torch/gpu.img th yourscript.lua
+
+
 
 **The** ``--nv`` **flag enables the use of GPUs within the image and can be removed if the software you're using does not use the GPU.**
 
 You may get a warning similar to ``groups: cannot find name for group ID ...``, this can be ignored and will not have an affect on running the image.
 
-The paths ``/fastdata``, ``/data``, ``/home``, ``/scratch``, ``/shared`` are automatically mounted to your ShARC filestore directories. For GPU-enabled images the ``/nvlib`` and ``/nvbin`` is mounted to the correct Nvidia driver version for the node that you're using.
+The paths ``/fastdata``, ``/data``, ``/home``, ``/scratch``, ``/shared`` are automatically mounted to your ShARC filestore directories.
 
 **To submit jobs that uses an Apptainer image, see** :ref:`use_image_batch_apptainer_sharc` **for more detail.**
 
@@ -68,39 +74,26 @@ Paths to the actual images and definition files are provided below for downloadi
         * Path: ``/usr/local/packages/singularity/images/torch/v7-GPU-Ubuntu16.04-CUDA8-cudNN5.0.img``
         * Def file: :download:`/sharc/software/apps/apptainer/torch_gpu.def </sharc/software/apps/apptainer/torch_gpu.def>`
 
-Using the Torch Module
-----------------------
 
-The following is an instruction on how to use the Torch module.
+Loading Torch module
+--------------------
 
-First request an interactive session, e.g. with :ref:`qrshx`. To use GPUs see :ref:`GPUInteractive_sharc`.
+A Torch module can be loaded with the folllowing command: ::
 
-Load the Torch module which also loads anaconda 3.4, CUDA 8.0, cuDNN 5.1 and GCC 4.9.4. ::
-
-	module load apps/torch/nvidia-7/gcc-4.9.4-cuda-8.0-cudnn-5.1-conda-3.4
-
-On the DGX-1, load the NCCL library optimised for the hardware: ::
-
-	moudle libs/nccl/dgx-1/binary-cuda-8.0
-
-On any other node use a generic NCCL build: ::
-
-	moudle load libs/nccl/generic/gcc-4.9.4-cuda-8.0
+  module load apps/torch/7/gcc-4.9.4-cuda-8.0-cudnn-5.1
 
 
-(Optional if you plan to interface with python) Create a conda environment to load relevant modules on your local user account and activate it ::
+Torch can then be run using the ``th`` command for the console mode: ::
 
-	conda create -n torch python=3.5
-	source activate torch
+  th
+   ______             __   |  Torch7
+  /_  __/__  ________/ /   |  Scientific computing for Lua.
+   / / / _ \/ __/ __/ _ \  |  Type ? for help
+  /_/  \___/_/  \__/_//_/  |  https://github.com/torch
+                           |  http://torch.ch
 
+  th>
 
+Or you can specify a lua script after the ``th`` command: ::
 
-Every Session Afterwards and in Your Job Scripts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In the interactive session or your batch script, load the relevant modules and (optionally) activate your conda environment ::
-
-	module load apps/torch/nvidia-7/gcc-4.9.4-cuda-8.0-cudnn-5.1-conda-3.4
-
-	#Optional
-	source activate torch
+  th myscript.lua

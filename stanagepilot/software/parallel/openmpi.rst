@@ -101,7 +101,7 @@ Your output would be something like: ::
     Hello world from processor stanage-node001.shef.ac.uk, rank 2 out of 4 processors
 
 
-Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of cpu cores interactively.  Therefore, it may be a better approach to submit your job non-interactively. 
+Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of CPU cores interactively.  Therefore, it is usually sensible to run MPI workloads as batch jobs. 
 
    
 

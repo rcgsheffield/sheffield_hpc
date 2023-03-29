@@ -28,7 +28,7 @@ Intel MKL can be activated using one of the following: ::
    module load imkl/2021.2.0-iimpi-2021a   # subset of intel-2021a EasyBuild toolchain
    module load imkl/2021.4.0 # part of intel-2021b EasyBuild toolchain
    module load imkl/2022.1.0 # part of intel-2022a EasyBuild toolchain
-   module load imkl/2022.2.1
+   module load imkl/2022.2.1 # part of intel-2022b EasyBuild toolchain
   
 
    

@@ -64,9 +64,14 @@ Consider the following source code (hello.c):
 
 MPI_COMM_WORLD (which is constructed for us by MPI) encloses all of the processes in the job, so this call should return the amount of processes that were requested for the job.
 
-Compile your source code by using the following command: ::
+Compile your source code using the MPI C compiler with the following command: ::
 
     mpicc hello.c -o hello
+
+.. note:: 
+
+        In this example we used the MPI C compiler. We could also choose to compile with either of the MPI C++ compilers ``mpicxx`` or ``mpiCC``
+
 
 
 Interactive job submission

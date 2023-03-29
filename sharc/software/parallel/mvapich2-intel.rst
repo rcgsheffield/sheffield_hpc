@@ -6,7 +6,7 @@ MVAPICH2 (Intel version)
 .. sidebar:: MVAPICH2 (Intel version)
 
    :Latest Version: 2.3b
-   :Dependancies: Intel compilers
+   :Dependencies: Intel compilers
    :URL: http://mvapich.cse.ohio-state.edu/
 
 MVAPICH, also known as MVAPICH2, is, like OpenMPI, an implementation of the MPI standard for passing messages between machines in parallel computing environments.

@@ -3,7 +3,7 @@ Mathematica
 
 .. sidebar:: Wolfram Mathematica
 
-   :Dependancies: None
+   :Dependencies: None
    :URL: http://www.wolfram.com/mathematica/
    :Latest version: 12.0.0
 

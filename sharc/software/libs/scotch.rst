@@ -4,7 +4,7 @@ SCOTCH
 .. sidebar:: SCOTCH
    
    :Version: 6.0.4
-   :Dependancies: GCC compiler and Open MPI
+   :Dependencies: GCC compiler and Open MPI
    :URL: http://scotch.gforge.inria.fr/ 
    :Documentation: https://gforge.inria.fr/docman/?group_id=248
 

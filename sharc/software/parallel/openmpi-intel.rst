@@ -6,7 +6,7 @@ OpenMPI (Intel version)
 .. sidebar:: OpenMPI (intel version)
 
    :Latest Version: 2.0.1
-   :Dependancies: Intel compilers
+   :Dependencies: Intel compilers
    :URL: http://www.open-mpi.org/
 
 The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. Open MPI offers advantages for system and software vendors, application developers and computer science researchers.

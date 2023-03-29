@@ -7,7 +7,7 @@ MATLAB
 
    :Versions:  2013a, 2016a, 2016b, 2017a, 2017b, 2018a, 2018b, 2019a, 2019b, 2020a, 2020b, 2021a, 2021b, 2022a 
    :Support Level: FULL
-   :Dependancies: None
+   :Dependencies: None
    :URL: http://uk.mathworks.com/products/matlab
    :Documentation: http://uk.mathworks.com/help/matlab
 

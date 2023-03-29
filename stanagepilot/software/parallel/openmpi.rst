@@ -85,7 +85,7 @@ You can run your job interactively (from a login node): ::
 
 Your output would be something like: ::
 
-    Hello world from processor stanage-node001.shef.ac.uk, rank 0 out of 1 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 0 out of 1 processors
 
 
 This is an expected behaviour since by default interactive jobs get allocated one single-CPU-core task running on one node.
@@ -95,10 +95,10 @@ You can request an interactive job with multiple concurrent single-CPU-core task
 
 Your output would be something like: ::
 
-    Hello world from processor stanage-node003.shef.ac.uk, rank 3 out of 4 processors
-    Hello world from processor stanage-node003.shef.ac.uk, rank 1 out of 4 processors
-    Hello world from processor stanage-node003.shef.ac.uk, rank 0 out of 4 processors
-    Hello world from processor stanage-node001.shef.ac.uk, rank 2 out of 4 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 3 out of 4 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 1 out of 4 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 0 out of 4 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 2 out of 4 processors
 
 
 Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of CPU cores interactively.  Therefore, it is usually sensible to run MPI workloads as batch jobs. 
@@ -126,11 +126,11 @@ Submit your script by using the command: ::
 
 Your output would be something like: ::
 
-    Hello world from processor stanage-node003.shef.ac.uk, rank 6 out of 8 processors
-    Hello world from processor stanage-node003.shef.ac.uk, rank 5 out of 8 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 6 out of 8 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 5 out of 8 processors
     ...
-    Hello world from processor stanage-node003.shef.ac.uk, rank 1 out of 8 processors
-    Hello world from processor stanage-node003.shef.ac.uk, rank 4 out of 8 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 1 out of 8 processors
+    Hello world from processor node003.pri.stanage.alces.network, rank 4 out of 8 processors
 
 Installation notes
 ------------------

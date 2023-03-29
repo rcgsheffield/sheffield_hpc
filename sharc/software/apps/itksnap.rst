@@ -6,7 +6,7 @@ ITK-SNAP
 .. sidebar:: ITK-SNAP
    
    :Version: 3.6.0-rc1
-   :Dependancies: 
+   :Dependencies: 
    :URL: http://www.itksnap.org
    :Documentation: http://www.itksnap.org/pmwiki/pmwiki.php?n=Documentation.SNAP3
 

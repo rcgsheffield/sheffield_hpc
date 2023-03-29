@@ -7,7 +7,7 @@ LAMMPS
 
    :Versions:  22_08_2018
    :Support Level: 
-   :Dependancies: gcc/4.9.4, openmpi/2.0.1
+   :Dependencies: gcc/4.9.4, openmpi/2.0.1
    :URL: https://lammps.sandia.gov/
    :Documentation: https://lammps.sandia.gov/doc/Manual.html
 

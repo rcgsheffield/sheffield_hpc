@@ -6,7 +6,7 @@ OpenMPI
 .. sidebar:: OpenMPI
 
    :Latest Version: 3.1.4
-   :Dependancies: gcc
+   :Dependencies: gcc
    :URL: https://www.open-mpi.org/
 
 The OpenMPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. OpenMPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. OpenMPI offers advantages for system and software vendors, application developers and computer science researchers.

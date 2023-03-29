@@ -5,7 +5,7 @@ Taverna-cli
 .. sidebar:: Taverna-cli
    
    :Version: 2.5.0
-   :Dependancies: 
+   :Dependencies: 
    :URL: http://www.taverna.org.uk
    :Documentation: http://www.taverna.org.uk/documentation/taverna-2-x/
 

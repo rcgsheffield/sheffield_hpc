@@ -5,7 +5,7 @@ Foxit
 .. sidebar:: Foxit
    
    :Version: 2.4.0
-   :Dependancies: - 
+   :Dependencies: - 
    :URL: https://www.foxitsoftware.com
    :Documentation: https://help.foxitsoftware.com
 

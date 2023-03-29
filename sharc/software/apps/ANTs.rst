@@ -6,7 +6,7 @@ ANTs
 .. sidebar:: ANTs
    
    :Version: 2.1.0-a
-   :Dependancies: gcc/4.9.4
+   :Dependencies: gcc/4.9.4
    :URL: https://github.com/stnava/ANTs.git
    :Documentation: http://stnava.github.io/ANTs/
 

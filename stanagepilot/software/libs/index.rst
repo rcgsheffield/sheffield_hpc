@@ -1,13 +1,14 @@
 .. _stanage-libs:
 
 Libraries on Stanage
-=====================
+====================
 
 .. toctree::
     :maxdepth: 1
     :glob:
     
     blas
+    boost
     cfitsio
     fftw
     gdal
@@ -15,6 +16,7 @@ Libraries on Stanage
     hdf5
     imkl
     openblas
+    proj
     scalapack
     
 ..

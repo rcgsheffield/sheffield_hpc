@@ -121,17 +121,27 @@ I've loaded software but it isn't working
 
 This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en/latest/hpc/what-is-hpc.html#login-nodes>`_. You will need to start an interactive session after which you will be able to load cluster software. 
 
-For the Bessemer cluster you will need to type the following:
+.. tabs::
 
-.. code-block:: console
+   .. group-tab:: Stanage
 
-    srun --pty bash -i
+    .. code-block:: console
 
-For the ShARC cluster you will need to type the following:
+        srun --pty bash -i  
 
-.. code-block:: console
+   .. group-tab:: Bessemer
 
-    qrshx
+    .. code-block:: console
+
+        srun --pty bash -i  
+
+   .. group-tab:: Sharc
+
+    .. code-block:: console
+
+        qrshx  
+
+------
     
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
@@ -165,58 +175,83 @@ A few things to consider which would cause your job to not run at all:
 Following are ways to fix too much time requested
 
 
-For ShARC (SGE scheduler)
-^^^^^^^^^^^^^^^^^^^^^^^^^
-The maximum run time for ShARC is 96 hours.
+.. tabs::
 
-You can check if a job will ever run on ShARC using:
+   .. group-tab:: Stanage
+        The maximum run time for Bessemer is 168 hours.
 
-.. code-block:: console
+        You can get an estimate for when your job will run on Bessemer using:
 
-        qalter -w v <job_id>
+        .. code-block:: console
+                
+                squeue --start -j <jobid>
 
-However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_ 
+        You can reduce the runtime using:
 
-You can reduce the runtime using:
+        .. code-block:: console
+                
+                scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
 
-.. code-block:: console
+        then to verify the time change type:
 
-        qalter <job_id> -l h_rt=96:00:00
+        .. code-block:: console
 
-then to verify the time change (which will be shown in seconds) type:
+                squeue -j <jobid> --long    
 
-.. code-block:: console
+        Alternatively, delete the job using scancel and re-submit with the new max runtime
 
-        qstat -r
+   .. group-tab:: Bessemer
 
-Alternatively, delete the job using qdel and re-submit with the new max runtime.
+        The maximum run time for Bessemer is 168 hours.
 
-For Bessemer (SLURM scheduler)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        You can get an estimate for when your job will run on Bessemer using:
 
-The maximum run time for Bessemer is 168 hours.
+        .. code-block:: console
+                
+                squeue --start -j <jobid>
 
-You can get an estimate for when your job will run on Bessemer using:
+        You can reduce the runtime using:
 
-.. code-block:: console
+        .. code-block:: console
+                
+                scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
+
+        then to verify the time change type:
+
+        .. code-block:: console
+
+                squeue -j <jobid> --long    
+
+        Alternatively, delete the job using scancel and re-submit with the new max runtime
+
+   .. group-tab:: Sharc
         
-        squeue --start -j <jobid>
+        The maximum run time for ShARC is 96 hours.
 
-You can reduce the runtime using:
+        You can check if a job will ever run on ShARC using:
 
-.. code-block:: console
-        
-        scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
+        .. code-block:: console
 
-then to verify the time change type:
+                qalter -w v <job_id>
 
-.. code-block:: console
+        However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_ 
 
-        squeue -j <jobid> --long    
+        You can reduce the runtime using:
 
-Alternatively, delete the job using scancel and re-submit with the new max runtime
+        .. code-block:: console
 
-------       
+                qalter <job_id> -l h_rt=96:00:00
+
+        then to verify the time change (which will be shown in seconds) type:
+
+        .. code-block:: console
+
+                qstat -r
+
+        Alternatively, delete the job using qdel and re-submit with the new max runtime.
+
+
+------  
 
 "No space left on device" errors and jobs prematurely stopping
 --------------------------------------------------------------
@@ -322,18 +357,26 @@ Insufficient memory in an interactive session
 By default, an interactive session provides you with 2 Gigabytes of RAM (sometimes called real memory).
 You can request more than this when running your ``qrshx``, ``qsh``, ``qrsh`` or ``srun`` command.
 
-For ShARC (SGE scheduler):
+.. tabs::
 
-.. code-block:: console
+   .. group-tab:: Stanage
 
-        $ qrshx -l rmem=8G
+        .. code-block:: console
 
-For Bessemer (SLURM scheduler):
+                $ srun --mem=8G --pty bash -i 
 
-.. code-block:: console
+   .. group-tab:: Bessemer
 
-        $ srun --mem=8G --pty bash -i 
+        .. code-block:: console
 
+                $ srun --mem=8G --pty bash -i  
+ 
+   .. group-tab:: Sharc
+
+        .. code-block:: console
+
+                $ qrshx -l rmem=8G
+                
 This asks for 8 Gigabytes of RAM (real memory). 
 
 .. hint::

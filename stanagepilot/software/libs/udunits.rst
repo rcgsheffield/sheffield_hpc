@@ -41,7 +41,7 @@ Installation notes
 ------------------
 This section is primarily for administrators of the system. 
 
-udunits was installed using Easybuild 4.7.0, build details can be found in $EBROOTGMP/easybuild with the module loaded.
+udunits was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 
 Testing
 -------

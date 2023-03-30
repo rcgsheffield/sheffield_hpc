@@ -35,7 +35,7 @@ libsndfile has the following main features:
 
 Usage
 -----
-To make this library available, run the following module commands
+To make this library available, run one of the following module commands:
 
 .. code-block:: console
 

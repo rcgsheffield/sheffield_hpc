@@ -50,7 +50,7 @@ Testing
 
     2. Run “udunits2“
 
-    3. For my test i converted 5km to miles , getting the following results:
+    3. For this test we convert 5km into miles, which produces the following results:
 
     .. code-block:: console
         

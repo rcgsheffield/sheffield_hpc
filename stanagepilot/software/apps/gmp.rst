@@ -31,5 +31,5 @@ GnuMP can be activated as follows:
 Installation notes
 ------------------
 
-GnuMP was installed using Easybuild 4.7.0, build details can be found in $EBROOTGMP/easybuild with the module loaded.
+GnuMP was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 

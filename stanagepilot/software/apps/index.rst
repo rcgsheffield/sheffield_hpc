@@ -8,7 +8,9 @@ Applications on Stanage
     :glob:
 
     ansys/index
+    gmp
     openfoam
+    python
     vasp
     ncdu
     mathematica

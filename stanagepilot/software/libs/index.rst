@@ -9,7 +9,11 @@ Libraries on Stanage
     
     boost
     cfitsio
+    libsndfile
+    libunistring
+    udunits
     proj
+    
     
 
 ..

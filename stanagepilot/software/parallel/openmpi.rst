@@ -25,6 +25,10 @@ You can load a specific version using one of the following: ::
     module load OpenMPI/4.1.4-GCC-11.3.0  # part of the foss-2022a toolchain
     module load OpenMPI/4.1.4-GCC-12.2.0  # part of the foss-2022b toolchain
 
+.. warning:: 
+
+    The current installation of OpenMPI 4.1.1 has poor performance over Omnipath which is still under investigation.
+
 
 See `here <https://www.open-mpi.org/software/ompi/major-changes.php>`__ for a brief guide to the new features in OpenMPI 4.x and `here <https://docs.open-mpi.org/en/v5.0.x/news/news-v4.1.x.html>`__ for a detailed view of the changes between OpenMPI versions.
 

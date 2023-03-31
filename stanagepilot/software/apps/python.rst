@@ -9,7 +9,7 @@ Python
     :URL: https://python.org
 
 
-This page documents the "anaconda" installation on Bessemer. This is the
+This page documents the "anaconda" installation on Stanage. This is the
 recommended way of using Python, and the best way to be able to configure custom
 sets of packages for your use.
 

@@ -36,7 +36,7 @@ Installation Notes
 ------------------
 This section is primarily for administrators of the system.
 
-GnuMP was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
+Libunistring was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 
 
 Testing

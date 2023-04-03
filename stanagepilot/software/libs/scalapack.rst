@@ -39,3 +39,7 @@ ScaLAPACK can be activated using one of: ::
 
    
 Note that all load OpenBLAS, despite the change in the module naming convention for more recent toolchains.
+
+
+.. include:: /referenceinfo/imports/stanage/openmpi_4.1.1_import.rst
+

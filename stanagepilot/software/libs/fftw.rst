@@ -30,6 +30,8 @@ To make this library available, run one the following: ::
       module load FFTW.MPI/3.3.10-gompi-2022a
       module load FFTW.MPI/3.3.10-gompi-2022b
 
+.. include:: /referenceinfo/imports/stanage/openmpi_4.1.1_import.rst
+
 - `gompi` versions are a subset of the :ref:`foss toolchain <stanage_eb_toolchains>`
   and also load GCC and OpenMPI
 - `gompic` versions are a subset of the :ref:`fosscuda toolchain <stanage_eb_toolchains>`

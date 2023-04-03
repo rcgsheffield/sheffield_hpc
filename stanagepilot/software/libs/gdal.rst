@@ -29,6 +29,8 @@ This will:
 * allow other programs to make use of (dynamically link against) the GDAL library
 * activate the modules associated with the specific :ref:`foss toolchain <stanage_eb_toolchains>`
 
+.. include:: /referenceinfo/imports/stanage/openmpi_4.1.1_import.rst
+
 You can run ``gdal-config --version`` to test that you are running the required version ::
 
     $ gdal-config --version

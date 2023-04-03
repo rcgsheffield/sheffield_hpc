@@ -18,7 +18,6 @@ the :ref:`gompi or iimpi toolchain<stanage_eb_toolchains>`
 run *one* of the following: ::
    
    module load HDF5/1.10.5-gompi-2019b
-   module load HDF5/1.10.5-iimpi-2019b
    module load HDF5/1.10.6-gompi-2020a
    module load HDF5/1.10.6-iimpi-2020a
    module load HDF5/1.10.7-gompi-2020b

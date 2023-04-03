@@ -15,13 +15,13 @@ Libraries on Stanage
     geos
     hdf5
     imkl
-    openblas
     libsndfile
     libunistring
-    udunits
+    openblas
     proj
     scalapack
-    
+    udunits
+
     
 
 ..

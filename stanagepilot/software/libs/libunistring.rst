@@ -24,7 +24,7 @@ Usage
 -----
 To make the library available, run one of the following: 
 
-.. code-block:: console
+.. code-block:: 
          
       module load libunistring/0.9.10-foss-2019b
       module load libunistring/0.9.10-GCCcore-10.3.0                     

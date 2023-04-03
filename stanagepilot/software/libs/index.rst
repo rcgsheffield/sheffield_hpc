@@ -7,12 +7,7 @@ Libraries on Stanage
     :maxdepth: 1
     :glob:
     
-    boost
-    cfitsio
-    libsndfile
-    libunistring
-    udunits
-    proj
+    ./*
     
     
 

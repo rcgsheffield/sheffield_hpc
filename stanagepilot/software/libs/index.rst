@@ -16,9 +16,14 @@ Libraries on Stanage
     hdf5
     imkl
     openblas
+    libsndfile
+    libunistring
+    udunits
     proj
     scalapack
     
+    
+
 ..
     Eventually the above should look like:
 

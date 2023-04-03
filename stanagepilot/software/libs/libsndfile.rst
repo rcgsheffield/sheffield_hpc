@@ -37,7 +37,7 @@ Usage
 -----
 To make this library available, run one of the following module commands:
 
-.. code-block:: console
+.. code-block:: 
 
     module load libsndfile/1.0.28-GCCcore-10.2.0 
     module load libsndfile/1.0.28-GCCcore-9.3.0   
@@ -56,6 +56,6 @@ Testing
 Testing has been conducted by running an interactive session and  compiling the example `list_formats <https://github.com/libsndfile/libsndfile/blob/master/examples/list_formats.c>`_.
 Using the command :
 
-.. code-block:: console
+.. code-block:: 
 
     gcc list_formats.c pkg-config --libs sndfile -o output

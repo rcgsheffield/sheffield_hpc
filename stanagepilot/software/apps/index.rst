@@ -8,11 +8,7 @@ Applications on Stanage
     :glob:
 
     ansys/index
-    java
-    openfoam
-    vasp
-    ncdu
-    mathematica
+    ./*
 
 ..
     Eventually the above should look like:

@@ -4,7 +4,7 @@ FLAME
 .. sidebar:: FLAME
    
    :Version: 0.17.1 (xparser), 0.3.1 (libmboard)
-   :Dependancies: GCC 6.2, (optional) OpenMPI 2.1.1, (optional) GSL 2.4
+   :Dependencies: GCC 6.2, (optional) OpenMPI 2.1.1, (optional) GSL 2.4
    :URL: https://github.com/FLAME-HPC/xparser/
    :Documentation: http://flame.ac.uk/docs/
 

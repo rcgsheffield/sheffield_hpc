@@ -93,7 +93,7 @@ The following is an example batch job running the pitzDaily example model on 4 n
     blockMesh
     decomposePar
 
-    srun --mpi=pmix_v4 --export=ALL simpleFoam -parallel
+    srun --export=ALL simpleFoam -parallel
 
 ------------
 

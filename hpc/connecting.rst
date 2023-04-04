@@ -95,6 +95,15 @@ including *MobaXTerm*.
 | ShARC    | Password + MFA **or** public key      | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
 +----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
 
+.. note::
+   Policy on the use of SSH public key authentication:
+
+   * All access to TUOS HPC systems via SSH public/private keypairs should use private keys that were encrypted with a passphrase :underline-bold:`at creation time`.
+   * Public key access should be from single-user machines (not shared machines) without good reason.
+   * SSH agent forwarding should not be used without good reason.
+   * Unencrypted private keys should not be stored on TUOS HPC systems.
+
+   To discuss exceptions to this policy please contact research-it@sheffield.ac.uk
 
 .. _mobaxterm_connecting_profile_setup:
 

@@ -4,7 +4,7 @@ GATK
 .. sidebar:: GATK
 
    :Version: 4.1.4
-   :Dependancies: Java 1.8
+   :Dependencies: Java 1.8
    :URL: https://www.broadinstitute.org/gatk/
    :Documentation: https://www.broadinstitute.org/gatk/guide/
 

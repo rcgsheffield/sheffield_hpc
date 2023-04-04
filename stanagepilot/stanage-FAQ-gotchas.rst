@@ -24,11 +24,11 @@ DUO authentication
 As DUO authentication is not yet fully implemented on Stanage, users should be aware that where you may normally be prompted by DUO 
 MFA this may not occur. This may change in future, possibly during the pilot phase.
 
-Poor performance with OpenMPI 4.1 and above
--------------------------------------------
+Poor performance with OpenMPI 4.1.1
+-----------------------------------
 
-Current installations of OpenMPI 4.1 and above have poor performance over Omnipath which is still under investigation. 
-These versions of OpenMPI will be in use for the ``foss-2021`` and above Easybuild toolchains.
+Current installations of OpenMPI 4.1.1 have poor performance over Omnipath which is still under investigation. 
+These versions of OpenMPI will be in use for the ``foss-2021`` Easybuild toolchain.
 
 
 Shared (project) directories

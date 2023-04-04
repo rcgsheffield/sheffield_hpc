@@ -5,7 +5,7 @@ Plink
 
    :Versions:  1.90b6.5
    :Support Level: 
-   :Dependancies: None
+   :Dependencies: None
    :URL: https://www.cog-genomics.org/plink2
 
 PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner.

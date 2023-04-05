@@ -116,6 +116,16 @@ Important files / folders
 * ``_static/css/custom.css`` - custom CSS overrides for the theme.
 * ``.github/workflows`` - GitHub Actions workflows for pull requests, pushes to ``master`` and link checking.
 
+Making or using imported files from the ``referenceinfo/imports`` area
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This area is intended to be used to contain .rst files which we wish to use in more than one location which can be imported. The general method for making use of imported files is as follows:
+
+* Make a new file to be imported within a sensible subdirectory within this area e.g. ``/referenceinfo/imports/software/mysoftware/import.rst``
+* Import your new file into your main page with: ``.. include:: /referenceinfo/imports/software/mysoftware/import.rst``
+* Build the documentation and ensure that hierarchical elements are correct e.g. titles within toctrees must be correct to fit in the parent document properly.
+* Add a comment within the import / parent document to explain why the import is necessary if it is not immediately obvious.
+
 (Re)-generating PNG images from Mermaid.js diagram definitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

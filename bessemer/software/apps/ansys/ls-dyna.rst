@@ -1,5 +1,10 @@
 .. _ansys-bessemer-ls-dyna:
 
+..
+  ######################################################################################################################################
+  Notice: Updating the sidebar or modules load list MUST be done in the linked files in the /referenceinfo/imports/software/ansys/ area.
+  ######################################################################################################################################
+  
 .. include:: /referenceinfo/imports/software/ansys/bessemer-sidebar.rst
 
 ANSYS LS-DYNA

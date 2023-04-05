@@ -7,9 +7,10 @@ Cheat Sheets
 ShARC Cheat Sheet
 -----------------
 
+This cheat sheet covers basic functionality for ShARC.
+
 .. include:: /referenceinfo/imports/cheat-sheets/cheat-sheet-note.rst
 
-This cheat sheet covers basic functionality for ShARC.
 
 .. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
 
@@ -18,9 +19,10 @@ This cheat sheet covers basic functionality for ShARC.
 Bessemer Cheat Sheet
 ----------------------
 
+This cheat sheet covers basic functionality for Bessemer.
+
 .. include:: /referenceinfo/imports/cheat-sheets/cheat-sheet-note.rst
 
-This cheat sheet covers basic functionality for Bessemer.
 
 .. include:: /referenceinfo/imports/cheat-sheets/bessemer-cheatsheet-1-import.rst
 
@@ -29,9 +31,10 @@ This cheat sheet covers basic functionality for Bessemer.
 Stanage Cheat Sheet
 ----------------------
 
+This cheat sheet covers basic functionality for Stanage.
+
 .. include:: /referenceinfo/imports/cheat-sheets/cheat-sheet-note.rst
 
-This cheat sheet covers basic functionality for Stanage.
 
 .. include:: /referenceinfo/imports/cheat-sheets/stanage-cheatsheet-1-import.rst
 

@@ -1,6 +1,6 @@
 .. _ansys-bessemer-fluent:
 
-.. include:: ../ansys/bessemer-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/bessemer-sidebar.rst
 
 Fluent
 ========================
@@ -16,7 +16,7 @@ Fluent can make use of  built in :ref:`MPI <parallel_MPI>` to utilize multiple c
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-bessemer.rst
 
 --------------------
 

@@ -1,6 +1,6 @@
 .. _ansys-stanage-index:
 
-.. include:: ../ansys/stanage-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/stanage-sidebar.rst
 
 ANSYS
 ========================
@@ -14,7 +14,7 @@ The ANSYS suite of programs can be used to numerically simulate a large variety 
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-stanage.rst
 
 and the workbench is launched using::
 

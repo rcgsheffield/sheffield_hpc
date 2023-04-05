@@ -1,6 +1,6 @@
 .. _ansys-sharc-fluent:
 
-.. include:: ../ansys/sharc-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/sharc-sidebar.rst
 
 Fluent
 ========================
@@ -21,7 +21,7 @@ Fluent can make use of  built in :ref:`MPI <parallel_MPI>` to utilize multiple c
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-sharc.rst
 
 --------------------
 

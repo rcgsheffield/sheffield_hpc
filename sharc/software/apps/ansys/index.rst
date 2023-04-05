@@ -1,6 +1,6 @@
 .. _ansys-sharc-index:
 
-.. include:: ../ansys/sharc-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/sharc-sidebar.rst
 
 ANSYS
 ========================
@@ -14,7 +14,7 @@ The ANSYS suite of programs can be used to numerically simulate a large variety 
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-sharc.rst
 
 The ANSYS Workbench GUI executable is ``runwb2``. ``runwb2`` can be launched during an interactive session with X Window support (e.g. an interactive ``qrshx`` session).
 

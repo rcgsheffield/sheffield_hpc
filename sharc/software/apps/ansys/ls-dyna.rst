@@ -1,6 +1,6 @@
 .. _ansys-sharc-ls-dyna:
 
-.. include:: ../ansys/sharc-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/sharc-sidebar.rst
 
 ANSYS LS-DYNA
 ========================
@@ -19,7 +19,7 @@ node CPU and can scale to hundreds of cores.
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-sharc.rst
 
 --------------------
 

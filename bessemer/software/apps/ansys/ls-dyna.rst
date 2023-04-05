@@ -1,6 +1,6 @@
 .. _ansys-bessemer-ls-dyna:
 
-.. include:: ../ansys/bessemer-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/bessemer-sidebar.rst
 
 ANSYS LS-DYNA
 ========================
@@ -19,7 +19,7 @@ CPU and can scale to hundreds of cores.
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-bessemer.rst
 
 --------------------
 

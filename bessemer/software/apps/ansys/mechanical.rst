@@ -1,6 +1,6 @@
 .. _ansys-bessemer-mechanical:
 
-.. include:: ../ansys/bessemer-sidebar.rst
+.. include:: /referenceinfo/imports/software/ansys/bessemer-sidebar.rst
 
 Mechanical / MAPDL
 =========================
@@ -16,7 +16,7 @@ ANSYS Mechanical has interfaces to other pre and post processing packages suppli
 
 ----------------
 
-.. include:: ../ansys/module-load-list.rst
+.. include:: /referenceinfo/imports/software/ansys/module-load-list-bessemer.rst
 
 --------------------
 

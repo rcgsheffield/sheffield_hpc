@@ -83,3 +83,5 @@
   .rst-content blockquote p {
     margin-bottom:0px;
   }
+
+.boldtext { font-weight: bold; }

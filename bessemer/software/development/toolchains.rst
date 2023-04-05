@@ -46,7 +46,6 @@ corresponding to subsets of the main toolchain dependencies:
 * ``gompic``: ``GCC`` + ``OpenMPI`` + ``CUDA``
 * ``gcccuda``: ``GCC`` + ``CUDA``
 * ``iccifort``: ``icc`` + ``ifort``
-* ``iccifort``: ``icc`` + ``ifort``
 * ``iimpi``: ``icc`` + ``ifort`` + ``impi``
 
 

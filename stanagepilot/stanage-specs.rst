@@ -88,12 +88,8 @@ Very large memory nodes
 GPU node specifications
 -----------------------
 
-
-16 nodes will be publicly available (not exclusive to research groups).
-
-.. tip::
-
-   To be added to Stanage in the near future.
+16 nodes are publicly available (not exclusive to research groups).
+Prior to December 2022 these were temporarily available in the Bessemer cluster.
 
 * Machine: `Dell XE8545`_
 * CPUs: 2 x 24 core `AMD EPYC 7413`_

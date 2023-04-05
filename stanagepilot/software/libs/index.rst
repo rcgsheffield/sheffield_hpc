@@ -8,14 +8,3 @@ Libraries on Stanage
     :glob:
     
     ./*
-    
-    
-
-..
-    Eventually the above should look like:
-
-    .. toctree::
-        :maxdepth: 1
-        :glob:
-        
-        ./*

@@ -12,7 +12,7 @@ Strange things are happening with my terminal or my terminal seems broken
 
 Symptoms include many of the commands not working and just ``bash-4.1$`` or ``sh-4.2$`` being displayed instead of your username at the bash prompt.
 
-This may be because you've deleted your ``.bashrc`` and ``.bash_profile`` files - these are 'hidden' files which live in your home directory and are used to correctly set up your shell environment.  
+This may be because you've deleted your ``.bashrc`` and ``.bash_profile`` files - these are 'hidden' files which live in your home directory and are used to correctly set up your shell environment.
 If you hit this problem you can run the command ``resetenv`` which will restore the default files, then you should logout and log back in.
 
 ------
@@ -21,13 +21,13 @@ I can no longer log in
 ----------------------
 
 If you are confident that you have no password entry issues, have already requested and been granted a HPC account and are connected to the VPN but you still can not log onto a cluster,
-you may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file. Please attempt to resolve this first by resetting 
+you may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file. Please attempt to resolve this first by resetting
 your environment with the following command, replacing the variables appropriately: ``ssh -t $USER@$CLUSTER.shef.ac.uk 'resetenv -f'``
 
-Alternatively, you may be having problems due to exceeding your cluster filestore quota. If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial 
+Alternatively, you may be having problems due to exceeding your cluster filestore quota. If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial
 files in your home directory get truncated which effect or prevent the login process.
 
-If the ``resetenv -f`` command does not resolve your issue and you suspect your ``/home`` area is full , you should contact ``research-it@sheffield.ac.uk`` and ask to be unfrozen 
+If the ``resetenv -f`` command does not resolve your issue and you suspect your ``/home`` area is full , you should contact ``research-it@sheffield.ac.uk`` and ask to be unfrozen
 providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
 
 ------
@@ -50,7 +50,7 @@ All failing, you may have to fall back to one of the `non-browser access methods
 How do I find out more about the commands available on the clusters with man pages?
 -----------------------------------------------------------------------------------
 
-Man pages (manuals) are installed by default alongside commands/software on unix-like operating systems such as those found on the clusters.  
+Man pages (manuals) are installed by default alongside commands/software on unix-like operating systems such as those found on the clusters.
 
 To view the man page (official manual) for a command, you can use the command:
 
@@ -60,7 +60,7 @@ To view the man page (official manual) for a command, you can use the command:
         man <command_name>
 
 
-You can navigate man pages using (the same keyboard shorcuts as **less**): 
+You can navigate man pages using (the same keyboard shorcuts as **less**):
 
         * **Space** to advance one page
         * **d** to advance half a page
@@ -72,7 +72,7 @@ Whilst in search mode press **n** for next occurrence and **N** for previous occ
 
 You can also press **h** when viewing man pages to show help.
 
-Documentation for less is available on the system using the command: 
+Documentation for less is available on the system using the command:
 
 .. code-block:: console
 
@@ -119,7 +119,7 @@ If you are in MobaXterm, you should attempt to navigate to the folder with using
 I've loaded software but it isn't working
 -----------------------------------------
 
-This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en/latest/hpc/what-is-hpc.html#login-nodes>`_. You will need to start an interactive session after which you will be able to load cluster software. 
+This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en/latest/hpc/what-is-hpc.html#login-nodes>`_. You will need to start an interactive session after which you will be able to load cluster software.
 
 .. tabs::
 
@@ -127,22 +127,22 @@ This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en
 
     .. code-block:: console
 
-        srun --pty bash -i  
+        srun --pty bash -i
 
    .. group-tab:: Bessemer
 
     .. code-block:: console
 
-        srun --pty bash -i  
+        srun --pty bash -i
 
    .. group-tab:: Sharc
 
     .. code-block:: console
 
-        qrshx  
+        qrshx
 
 ------
-    
+
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
 
@@ -164,13 +164,13 @@ I've submitted a job but it's not running
 
 I submitted a job and after several days it is still waiting in the queue. How can I resolve this?
 There are a multitude of factors which could be causing your job to queue for a long time or to not run at all.
-Occasionally parts of the system may be in a maintenance period or may be utlised to capacity.   
+Occasionally parts of the system may be in a maintenance period or may be utlised to capacity.
 A few things to consider which would cause your job to not run at all:
 
 * Did you request an acceptable amount of memory for a given node? (e.g. on Bessemer, 192GB or less.)
 * Did you request too much memory in the wrong parallel environment? (e.g on ShARC, OpenMP `-l rmem=16G` with 16 cores would request 16*16=256G exceeding node memory.)
 * Did you request too many cores in the wrong parallel environment? (e.g on ShARC,  `-pe openmp 40` would request 40 cores, exceeding a single node's core count.)
-* Did you request too much time? (e.g for ShARC, more than 96 hours or on Bessemer, more than 168 hrs.) 
+* Did you request too much time? (e.g for ShARC, more than 96 hours or on Bessemer, more than 168 hrs.)
 
 Following are ways to fix too much time requested
 
@@ -183,20 +183,20 @@ Following are ways to fix too much time requested
         You can get an estimate for when your job will run on Bessemer using:
 
         .. code-block:: console
-                
+
                 squeue --start -j <jobid>
 
         You can reduce the runtime using:
 
         .. code-block:: console
-                
+
                 scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
 
         then to verify the time change type:
 
         .. code-block:: console
 
-                squeue -j <jobid> --long    
+                squeue -j <jobid> --long
 
         Alternatively, delete the job using scancel and re-submit with the new max runtime
 
@@ -207,25 +207,25 @@ Following are ways to fix too much time requested
         You can get an estimate for when your job will run on Bessemer using:
 
         .. code-block:: console
-                
+
                 squeue --start -j <jobid>
 
         You can reduce the runtime using:
 
         .. code-block:: console
-                
+
                 scontrol update jobid=<job_id> TimeLimit=<new_timelimit>
 
         then to verify the time change type:
 
         .. code-block:: console
 
-                squeue -j <jobid> --long    
+                squeue -j <jobid> --long
 
         Alternatively, delete the job using scancel and re-submit with the new max runtime
 
    .. group-tab:: Sharc
-        
+
         The maximum run time for ShARC is 96 hours.
 
         You can check if a job will ever run on ShARC using:
@@ -234,7 +234,7 @@ Following are ways to fix too much time requested
 
                 qalter -w v <job_id>
 
-        However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_ 
+        However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_
 
         You can reduce the runtime using:
 
@@ -251,15 +251,15 @@ Following are ways to fix too much time requested
         Alternatively, delete the job using qdel and re-submit with the new max runtime.
 
 
-------  
+------
 
 "No space left on device" errors and jobs prematurely stopping
 --------------------------------------------------------------
 
-Each user of the system has a fixed amount of disk space available in their home directory. If you see an error in your job's logs indicating "No space left on device" 
+Each user of the system has a fixed amount of disk space available in their home directory. If you see an error in your job's logs indicating "No space left on device"
 it is likely that your quota has ran out.
 
-If you attempt to exceed this quota, various problems can emerge such as an inability to launch applications or run jobs, the inability to login or abruptly terminated jobs 
+If you attempt to exceed this quota, various problems can emerge such as an inability to launch applications or run jobs, the inability to login or abruptly terminated jobs
 as programs or executables are now unable to write to your ``/home`` folder.
 To see if you are attempting to exceed your disk space quota, run the ``quota`` command:
 
@@ -275,12 +275,12 @@ In the above, you can see that the quota is 10 gigabytes and all of this is curr
 Any jobs submitted by this user will likely result in an ``Eqw`` status.
 The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
 
-To assess what is using up your quota within a given directory, you can make use of the 
-:ref:`ncdu module on ShARC <ncdu_sharc>` or the 
-:ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
+To assess what is using up your quota within a given directory, you can make use of the
+:ref:`ncdu module on ShARC <ncdu_sharc>` or the
+:ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an
 interactive display of wihch files or folders are taking up storage in a given directory tree.
 
-Sometimes, it is not possible to log in to the system because of a full quota. In this situation you should contact ``research-it@sheffield.ac.uk`` 
+Sometimes, it is not possible to log in to the system because of a full quota. In this situation you should contact ``research-it@sheffield.ac.uk``
 to ask for assistance, providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
 
 ------
@@ -288,7 +288,7 @@ to ask for assistance, providing your username and a list files or folders which
 I am getting warning messages and warning emails from my batch jobs about insufficient memory
 ---------------------------------------------------------------------------------------------
 
-If a job exceeds its real memory resource it gets terminated. 
+If a job exceeds its real memory resource it gets terminated.
 
 These errors on ShARC will be noted in the job record or sent via email and will resemble: ::
 
@@ -305,7 +305,7 @@ These errors on Bessemer will be noted in the job record or sent via email with 
         Slurm Job_id=12345678 Name=job.sh Failed, Run time 00:11:06, OUT_OF_MEMORY
 
 
-To query if your job has been killed due to insufficient memory please see the cluster specific "**Investigating finished jobs**" sections on our  :ref:`Job Submission and Control page <job_submission_control>`. 
+To query if your job has been killed due to insufficient memory please see the cluster specific "**Investigating finished jobs**" sections on our  :ref:`Job Submission and Control page <job_submission_control>`.
 
 To request more memory and for information on how to assess sensible resource amounts please refer to our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>`.
 
@@ -363,25 +363,25 @@ You can request more than this when running your ``qrshx``, ``qsh``, ``qrsh`` or
 
         .. code-block:: console
 
-                $ srun --mem=8G --pty bash -i 
+                $ srun --mem=8G --pty bash -i
 
    .. group-tab:: Bessemer
 
         .. code-block:: console
 
-                $ srun --mem=8G --pty bash -i  
- 
+                $ srun --mem=8G --pty bash -i
+
    .. group-tab:: Sharc
 
         .. code-block:: console
 
                 $ qrshx -l rmem=8G
-                
-This asks for 8 Gigabytes of RAM (real memory). 
+
+This asks for 8 Gigabytes of RAM (real memory).
 
 .. hint::
 
-        You cannot request more memory than a single node possesses and the larger the memory request, the less likely the interactive session request is to succeed. 
+        You cannot request more memory than a single node possesses and the larger the memory request, the less likely the interactive session request is to succeed.
         Please see the cluster specific "**Interactive jobs**" sections on our  :ref:`Job Submission and Control page <job_submission_control>`.
 
 ------
@@ -412,8 +412,8 @@ If you know the node that a program was compiled on but do not know the CPU arch
 "failed: No such file or directory" or "failed searching requested shell" errors
 --------------------------------------------------------------------------------
 
-If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the HPC systems. 
-A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and when you query the job with ``qacct`` you 
+If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the HPC systems.
+A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and when you query the job with ``qacct`` you
 are presented with an error message containing: ::
 
         failed searching requested shell because:
@@ -422,7 +422,7 @@ Or if you query the ``Eqw`` job with ``qstat`` ::
 
         failed: No such file or directory
 
-The reason for this behaviour is that Windows and Unix machines have different conventions for specifying 'end of line' in text files. Windows uses the 
+The reason for this behaviour is that Windows and Unix machines have different conventions for specifying 'end of line' in text files. Windows uses the
 control characters for 'carriage return' followed by 'linefeed', ``\r\n``, whereas Unix uses just 'linefeed' ``\n``.
 
 This means a script prepared in Windows using Notepad whichs looks like this: ::
@@ -439,7 +439,7 @@ If you suspect that this is affecting your jobs, run the following command on th
 
         dos2unix your_files_filename
 
-You should set your text editor to use Linux endings to avoid this issue. 
+You should set your text editor to use Linux endings to avoid this issue.
 
 ------
 
@@ -564,7 +564,7 @@ Please note that the below guide assumes that both accounts are still be active.
 
 To transfer data between your old account and your new account you could make use of either `SCP <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-scp-in-the-terminal>`__ or `rsync <https://docs.hpc.shef.ac.uk/en/latest/hpc/transferring-files.html#using-rsync>`__. We encourage users to use rsync as it preserves timestamps and permisions. Follow the following workflow to carry out the transfer.
 
-* Log into your new username in the cluster you want to copy to and create a folder named "OldUserAccount". 
+* Log into your new username in the cluster you want to copy to and create a folder named "OldUserAccount".
 
 .. code-block:: bash
 
@@ -578,7 +578,7 @@ To transfer data between your old account and your new account you could make us
 
         rsync -avP /Path/To/File_Or_Directory $Your_New_UserName@localhost:/home/$Your_New_UserName/OldUserAccount
 
-2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on shARC/Stannage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
+2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on shARC/Stanage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
 
 .. code-block:: bash
 
@@ -595,7 +595,7 @@ complaining about not being able to communicate with the ``orted`` daemon on oth
 This appears to be something to do with multiple ``mpirun`` commands being called quickly in succession,
 and connections not being pulled down and new connections established quickly enough.
 
-Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e. 
+Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e.
 
 .. code-block:: console
 
@@ -624,7 +624,7 @@ See ``man 8 pam_sge-qrsh-setup`` for the details of how and why Grid Engine crea
 Using 'sudo' to install software on the clusters
 ------------------------------------------------
 
-HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators. 
+HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators.
 Users can however install applications in their ``/home`` or ``/data`` directories.
 
 The webpage `Installing Applications on Bessemer and ShARC <https://docs.hpc.shef.ac.uk/en/latest/hpc/installing-software.html>`_ provides guidance on how to do this.
@@ -651,15 +651,15 @@ Usage restrictions
 
 .. caution::
 
-        The usage of VSCode on the Sheffield HPC clusters is partially restricted. Usage of the **Visual Studio Code Remote - SSH** 
+        The usage of VSCode on the Sheffield HPC clusters is partially restricted. Usage of the **Visual Studio Code Remote - SSH**
         and **Visual Studio Code Remote Explorer** extensions to run VSCode on the HPC clusters is not permitted.
 
-The **Visual Studio Code Remote - SSH** and **Visual Studio Code Remote Explorer** extensions use SSH to download a copy of VSCode 
-to the cluster then start VSCode on the login nodes and forward back the interface to you. This means the VSCode and all 
-dependent processes you run in the terminal are run on the login nodes. Not only does this tend to spawn lots of processes 
-(which might hit our 100 processes per user limit on the login nodes which will lock you out of the cluster) it also fails 
-to clean up processes correctly when the SSH connection is eventually terminated. This results in orphaned processes using 
-high CPU, wasting resources. Furthermore, some users also try to use large amounts of CPU by running code / debugging on 
+The **Visual Studio Code Remote - SSH** and **Visual Studio Code Remote Explorer** extensions use SSH to download a copy of VSCode
+to the cluster then start VSCode on the login nodes and forward back the interface to you. This means the VSCode and all
+dependent processes you run in the terminal are run on the login nodes. Not only does this tend to spawn lots of processes
+(which might hit our 100 processes per user limit on the login nodes which will lock you out of the cluster) it also fails
+to clean up processes correctly when the SSH connection is eventually terminated. This results in orphaned processes using
+high CPU, wasting resources. Furthermore, some users also try to use large amounts of CPU by running code / debugging on
 the login nodes which unfairly impacts other users as well.
 
 .. hint::
@@ -669,16 +669,42 @@ the login nodes which unfairly impacts other users as well.
 Permitted alternative methods for running VSCode are detailed below in the ideal order of preference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the first instance, we recommend a workflow where version control with Github (or similar) is used alongside VSCode where scripts/code are 
-synchronised between machines (e.g. your local machine and the HPC cluster) using conventional Git sync commands. Users are free to use the 
+In the first instance, we recommend a workflow where version control with Github (or similar) is used alongside VSCode where scripts/code are
+synchronised between machines (e.g. your local machine and the HPC cluster) using conventional Git sync commands. Users are free to use the
 VSCode terminal on the local machine to SSH to the clusters and execute commands where necessary.
 
-If this is not possible then VSCode can be ran on a worker node and forwarded back to your local machine in a web browser 
-via our VSCode Remote HPC script, (from `Github <https://github.com/rcgsheffield/vscoderemote_sheffield_hpc>`_). Details for its use 
+If this is not possible then VSCode can be ran on a worker node and forwarded back to your local machine in a web browser
+via our VSCode Remote HPC script, (from `Github <https://github.com/rcgsheffield/vscoderemote_sheffield_hpc>`_). Details for its use
 are included on the linked Github page.
 
-If neither of these options are feasible, then running VSCode on a local machine in concert with 
-`an SSHFS mount of the desired folders <https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/>`_ 
-from the HPC clusters to the local filesystem is possible but discouraged due to the likelihood of poor performance from machines remote 
-from the clusters. By mounting the folder from the HPC cluster to a local filesystem folder, users can edit files on the cluster with VSCode 
+If neither of these options are feasible, then running VSCode on a local machine in concert with
+`an SSHFS mount of the desired folders <https://linuxize.com/post/how-to-use-sshfs-to-mount-remote-directories-over-ssh/>`_
+from the HPC clusters to the local filesystem is possible but discouraged due to the likelihood of poor performance from machines remote
+from the clusters. By mounting the folder from the HPC cluster to a local filesystem folder, users can edit files on the cluster with VSCode
 as if they were normal local machine files.
+
+-----
+
+.. _srun_vs_mpirun_mpiexec:
+
+Launching MPI tasks with srun versus mpirun or mpiexec
+------------------------------------------------------
+
+On ShARC we recommend launching MPI tasks from batch jobs
+using the ``mpirun`` (or ``mpiexec``) program that comes with the MPI implementation you are using.
+These MPI implementations *should* able to launch tasks on the primary node of the job and on remote nodes allocated to the job
+in such a way that all consumed resources are tracked by the SGE job scheduler on ShARC;
+this is the case for the :ref:`administrator-provided versions of OpenMPI and Intel MPI on ShARC <sharc-parallel>`;
+no extra configuration is required by the end user.
+
+On Bessemer and Stanage we recommend launching MPI tasks from batch jobs
+using Slurm's ``srun`` command.
+This only works if the MPI implmentation you are using is
+built against a version of the PMI2 or PMI-X library
+that is compatible with the PMI2 or PMI-X library used by the Slurm job scheduler.
+This is the case for the administrator-provided versions of OpenMPI and Intel MPI on Bessemer and Stanage;
+again, no extra configuration is required by the end user.
+
+For those more familiar with the use of ``mpirun`` and ``mpiexec``:
+``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,
+although it takes different arguments and can also be used for starting interactive sessions on Slurm clusters.

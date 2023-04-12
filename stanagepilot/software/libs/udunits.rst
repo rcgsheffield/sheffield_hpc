@@ -48,11 +48,8 @@ udunits was installed using Easybuild 4.7.0, build details can be found in ``$EB
 Testing
 -------
 
-
-1. load module
-
+1. Load module.
 2. Run “udunits2“.
-
 3. For this test we convert 5km into miles, which produces the following results:
 
 

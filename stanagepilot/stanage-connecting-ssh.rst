@@ -8,36 +8,40 @@
 Connecting with SSH
 ===================
 
-.. warning::
+The Stanage cluster has slightly different SSH configuration compared to other University of Sheffield HPC clusters: 
 
-  You must be connected to the VPN, whether you are located on or off campus, to connect to Stanage.
-  Note this applies even if you are on-campus using a wired ethernet connection.
+* When making direct SSH connections :underline-bold:`without the VPN connected` Stanage makes use of :ref:`TOTP multifactor authentication <mfa-totp-reference-info>` rather than the more commonly used DUO multifactor authentication
+
+* When connecting to Stanage via SSH :underline-bold:`with the VPN connected`, no further multifactor authentication will be required as connecting with the VPN already required.
+
+Users are :underline-bold:`strongly encouraged to connect to the Stanage cluster without the VPN connected` where possible as this will provide a quicker more direct connection. Users should only make use of the VPN when their connectivity :underline-bold:`is not` provided by a wired connection in a campus building.
+
+The following section describes the two different methods for connecting with SSH to the Stanage cluster, with or without VPN.
 
 .. Hint::
 
     Usernames to connect with all HPC services will be the same as those you use to login to MUSE :underline-bold:`not` the prefix on your email address.
 
+.. tabs::
 
-Once you have a terminal open run the following command to
-log in to a cluster: ::
+   .. group-tab:: Connecting to Stanage using SSH without VPN
 
-    ssh -X $USER@stanage.shef.ac.uk
+        .. include:: /referenceinfo/imports/mfa/setup-stanage-totp.rst
 
-When connecting for the first time you should make sure that the SSH 'fingerprint' is correct.
-The RSA, ECDSA and ED25519 fingerprints for Stanage's login nodes are: ::
+        
 
-    SHA256:mFfJmZHH0SUogoUhTtlatoZLEacfGAlj0cTrnInO5z0 (RSA)
-    SHA256:4HdvK3C1KDm+JG1TzxQKxezMz5ojEORynHUqF9tQfoI (ECDSA)
-    SHA256:aaTv+0TEc0nj7WR2ZuBYWFDD+QqzOKJpMjEFKBx6pQU (ED25519)
+   .. group-tab:: Connecting to Stanage using SSH with VPN
 
-Your SSH client will show one of these fingerprints by default. If any one of these fingerprints matches you should continue. 
+        First `setup and connect to the SSL VPN <https://students.sheffield.ac.uk/it-services/get-connected/vpn#set-up-and-connect-to-vpn>`_.
 
-.. warning::
+        Now connect with a client of choice or via the command line: ::
 
-    If none of these fingerprints matches the fingerprint shown in your terminal please 
-    contact the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_ .
+            ssh -X $USER@stanage.shef.ac.uk
 
-You can then launch an interactive session on Stanage using the following command: ::
+        .. include:: /referenceinfo/imports/stanage/ssh-host-keys.rst
+
+
+You can now launch an interactive session on Stanage using the following command: ::
 
     srun --mem=XXG --pty bash -i
 

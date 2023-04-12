@@ -83,7 +83,7 @@ Then GPU version of TensorFlow can be installed by the following ::
    module load Anaconda3/2022.10
 
    # Load the CUDA and cuDNN module
-   module load cuDNN/7.6.4.38-gcccuda-2019b
+   module load cuDNN/8.0.4.30-CUDA-11.1.1
 
    # Create an conda virtual environment called 'tensorflow-gpu'
    conda create -n tensorflow-gpu python=3.6
@@ -92,7 +92,7 @@ Then GPU version of TensorFlow can be installed by the following ::
    source activate tensorflow-gpu
 
    # Install GPU version of TensorFlow
-   pip install tensorflow==2.3.0
+   pip install tensorflow==2.4.0
 
 To install a different version of ``tensorflow`` other than the latest version
 you should specify a version number when running ``pip install`` i.e. ::
@@ -105,8 +105,8 @@ Every time you use a new session or within your job scripts, the modules must be
 Use the following command to activate the Conda environment with TensorFlow installed: ::
 
    module load Anaconda3/2022.10
-   module load cuDNN/8.6.0.163-CUDA-11.8.0
-   source activate tensorflow-gpu2
+   module load cuDNN/8.0.4.30-CUDA-11.1.1
+   source activate tensorflow-gpu
 
 Testing your TensorFlow installation
 ------------------------------------

@@ -47,7 +47,7 @@ First request an interactive session, e.g. with :ref:`submit_interactive_stanage
 Then TensorFlow can be installed by the following: ::
 
    # Load the conda module
-   module load Anaconda3/5.3.0
+   module load Anaconda3/2022.10
 
    # Create an conda virtual environment called 'tensorflow'
    conda create -n tensorflow python=3.6
@@ -62,7 +62,7 @@ Then TensorFlow can be installed by the following: ::
 Every time you use a new session or within your job scripts, the modules must be loaded and Conda must be activated again.
 Use the following command to activate the Conda environment with TensorFlow installed: ::
 
-   module load Anaconda3/5.3.0
+   module load Anaconda3/2022.10
    source activate tensorflow
 
 Installation in Home Directory - GPU Version
@@ -80,7 +80,7 @@ First request an interactive session, e.g. see :ref:`gpu_interactive_stanage`.
 Then GPU version of TensorFlow can be installed by the following ::
 
    # Load the conda module
-   module load Anaconda3/5.3.0
+   module load Anaconda3/2022.10
 
    # Load the CUDA and cuDNN module
    module load cuDNN/7.6.4.38-gcccuda-2019b
@@ -92,21 +92,21 @@ Then GPU version of TensorFlow can be installed by the following ::
    source activate tensorflow-gpu
 
    # Install GPU version of TensorFlow
-   pip install tensorflow-gpu
+   pip install tensorflow==2.3.0
 
-To install a version of ``tensorflow-gpu`` other than the latest version
+To install a different version of ``tensorflow`` other than the latest version
 you should specify a version number when running ``pip install`` i.e. ::
 
-   pip install tensorflow-gpu==<version_number>
+   pip install tensorflow==<version_number>
 
 **Every Session Afterwards and in Your Job Scripts**
 
 Every time you use a new session or within your job scripts, the modules must be loaded and Conda must be activated again.
 Use the following command to activate the Conda environment with TensorFlow installed: ::
 
-   module load Anaconda3/5.3.0
-   module load cuDNN/7.6.4.38-gcccuda-2019b
-   source activate tensorflow-gpu
+   module load Anaconda3/2022.10
+   module load cuDNN/8.6.0.163-CUDA-11.8.0
+   source activate tensorflow-gpu2
 
 Testing your TensorFlow installation
 ------------------------------------

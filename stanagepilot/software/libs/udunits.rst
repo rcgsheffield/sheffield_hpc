@@ -52,10 +52,9 @@ Testing
 2. Run “udunits2“.
 3. For this test we convert 5km into miles, which produces the following results:
 
+.. code-block::
 
-.. code-block:: 
-        
-        You have: 5km
-        You want: miles
-        5 km = 3.10686 miles
-        x/miles = 0.621371*(x/km)
+    You have: 5km
+    You want: miles
+    5 km = 3.10686 miles
+    x/miles = 0.621371*(x/km)

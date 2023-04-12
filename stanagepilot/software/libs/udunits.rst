@@ -43,17 +43,19 @@ This section is primarily for administrators of the system.
 
 udunits was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 
+------------------
+
 Testing
 -------
 
 
-1. load Module
+1. load module
 
-2. Run “udunits2“
+2. Run “udunits2“.
 
 3. For this test we convert 5km into miles, which produces the following results:
 
-.. code-block:: console
+.. code-block::
         
         You have: 5km
         You want: miles

@@ -56,7 +56,7 @@ Testing
 3. For this test we convert 5km into miles, which produces the following results:
 
 
-.. code-block:: console
+.. code-block:: 
         
         You have: 5km
         You want: miles

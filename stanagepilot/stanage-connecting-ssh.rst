@@ -10,7 +10,7 @@ Connecting with SSH
 
 The Stanage cluster has slightly different SSH configuration compared to other University of Sheffield HPC clusters: 
 
-* When making direct SSH connections :underline-bold:`without the VPN connected` Stanage makes use of :ref:`TOTP multifactor authentication <mfa-totp-reference-info>` rather than the more commonly used DUO multifactor authentication
+* When making direct SSH connections :underline-bold:`without the VPN connected` Stanage makes use of :ref:`TOTP multifactor authentication <mfa-totp-reference-info>` rather than the more commonly used DUO multifactor authentication.
 
 * When connecting to Stanage via SSH :underline-bold:`with the VPN connected`, no further multifactor authentication will be required as connecting with the VPN already required.
 

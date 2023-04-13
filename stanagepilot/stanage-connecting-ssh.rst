@@ -15,7 +15,7 @@ The Stanage cluster has slightly different SSH configuration compared to other U
 * When connecting to Stanage via SSH :underline-bold:`with the VPN connected`, no further multifactor authentication will be required as connecting with the VPN already required.
 
 
-Users are :underline-bold:`strongly encouraged to connect to the Stanage cluster without the VPN connected while on campus using a wired connection in a campus building` as this will provide a quicker more direct connection. 
+Users are :underline-bold:`strongly encouraged to connect to the Stanage cluster without the VPN connected while on campus using a wired connection` as this will provide a quicker more direct connection. 
 
 Users should only make use of the VPN when their connectivity :underline-bold:`is not` provided by a wired connection in a campus building.
 

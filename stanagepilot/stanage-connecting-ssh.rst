@@ -24,13 +24,13 @@ The following section describes the two different methods for connecting with SS
 
 .. tabs::
 
-   .. group-tab:: Connecting to Stanage using SSH without VPN
+   .. group-tab:: Connecting using SSH without VPN
 
         .. include:: /referenceinfo/imports/mfa/setup-stanage-totp.rst
 
         
 
-   .. group-tab:: Connecting to Stanage using SSH with VPN
+   .. group-tab:: Connecting using SSH with VPN
 
         First `setup and connect to the SSL VPN <https://students.sheffield.ac.uk/it-services/get-connected/vpn#set-up-and-connect-to-vpn>`_.
 

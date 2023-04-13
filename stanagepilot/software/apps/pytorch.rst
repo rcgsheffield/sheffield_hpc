@@ -33,17 +33,19 @@ Installation in Home Directory
 Conda is used to create a virtual python environment for installing your local version of PyTorch.
 
 .. warning::
-   Torch requires more than 2GB of RAM for installation
+   Torch requires more than 2GB of CPU RAM for installation
    so you **must** use the ``--mem=8G`` flag to request more memory.
-   ``8G`` means 8 GB of RAM.
+   ``8G`` means 8 GB of CPU RAM.
 
-First request an interactive session, e.g. with :ref:`submit_interactive_stanage` or optionally with GPU :ref:`gpu_interactive_stanage`. ::
+First request an interactive session, e.g. with :ref:`submit_interactive_stanage` or optionally with GPU :ref:`gpu_interactive_stanage`. 
 
-   # To request 8GB of RAM for the session
+..code-block ::
+
+   # To request 8GB of CPU RAM for the session
    srun --mem=8G --pty bash
 
-   # OR To request and 8GB RAM _and_ a GPU
-   srun --partition=gpu --qos=gpu --mem=8G --nodes=1 --gpus-per-node=1 --pty bash
+   # OR To request 8GB CPU RAM and a GPU (NB Each NVIDIA A100 GPU in Stanage has 80GB of RAM)
+   srun --partition=gpu --qos=gpu --mem=8G --gres=gpu:1 --pty bash
 
 Then PyTorch can be installed by the following ::
 
@@ -51,7 +53,7 @@ Then PyTorch can be installed by the following ::
    module load Anaconda3/2022.10
 
    # (Only needed if we're using GPU) Load a cuDNN module
-   # (which in this case implicitly loads CUDA 10.1.243)
+   # (which in this case implicitly loads CUDA 11.1.1)
    module load cuDNN/8.0.4.30-CUDA-11.1.1
 
    # Create an conda virtual environment called 'pytorch'

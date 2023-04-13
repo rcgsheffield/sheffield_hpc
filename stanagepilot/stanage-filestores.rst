@@ -177,9 +177,7 @@ To determine usage in a particular :ref:`stanage_shared_dir` you can use the ``d
     172.X.X.X:/myproject1/myproject1   10T  9.1T  985G  91% /shared/myproject1
 
 To assess what is using up your quota within a given directory, you can make use of the 
-:ref:`ncdu module on Stanage <ncdu_stanage>` or the 
-
-The **ncdu** utility will give you an 
+:ref:`ncdu module on Stanage <ncdu_stanage>`. The **ncdu** utility will give you an 
 interactive display of what files/folders are taking up storage in a given directory tree.
 
 -----

@@ -35,3 +35,17 @@ Shared (project) directories
 ----------------------------
 
 Shared project storage areas are not yet available on the Stanage cluster.
+
+Resetting Stanage TOTP multifactor authentication  
+-------------------------------------------------
+
+If you need to add your TOTP multifactor authentication to another phone you can show your QR Code again by logging into the cluster and running the commands: ::
+
+    flight start
+    flight mfa show
+
+If you need to reset your TOTP multifactor authentication as you have lost a device which had the TOTP account on it, you can generate a new seed key and matching QR code with: ::
+
+    flight start
+    flight mfa generate --force
+

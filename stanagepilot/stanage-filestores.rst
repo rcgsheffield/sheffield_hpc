@@ -12,6 +12,7 @@ On the Stanage cluster, every HPC user has access to *up to* 3 different storage
 
 * :ref:`stanage_home_dir`: per-user storage with no backups.
 * :ref:`stanage_fastdata_dir`: per-user `Lustre <https://en.wikipedia.org/wiki/Lustre_(file_system)>`__  storage with no backups.
+* :ref:`stanage_shared_dir`: per-PI shared storage areas (snapshotted and backed-up) for project data - can be accessed from non-HPC machines too
 * :ref:`stanage_scratch_dir` : per node, node-local storage with no backups.
 
 -----
@@ -79,7 +80,37 @@ these areas are **not backed up**.
 *Shared* (project) directories
 ------------------------------
 
-Shared project storage areas are not yet available on the Stanage cluster.
+.. include:: /referenceinfo/imports/filestores/shared-areas/shared-area-general-info.rst
+
+Automounting
+^^^^^^^^^^^^
+
+Subdirectories beneath ``/shared`` are **mounted on demand** on the HPC systems: 
+they may not be visible if you simply list the contents of the ``/shared`` directory but 
+will be accessible if you ``cd`` (change directory) into a subdirectory e.g. ``cd /shared/my_group_file_share1``.
+
+Specifics for Stanage
+^^^^^^^^^^^^^^^^^^^^^
+
+* Shared areas are not available on Stanage by default.
+* The Stanage cluster only provides shared areas on the login nodes.
+
+If you need to access a ``/shared`` 
+area on Stanage please contact `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`__ to arrange this.
+
+
+
+Shared area mounts on Stanage exist :underline-bold:`only` to permit data movement to and from the system. 
+Worker nodes will not have shared areas mounted so users must transfer files from their shared areas to another Stanage filestorage
+area using the login nodes prior to submitting jobs on this data.
+
+
+.. warning::
+
+        * If you access a ``/shared`` directory stored in Sheffield from Stanage then you may experience lower performance, especially for small files compared to the ShARC cluster or machines on campus.
+        * Network traffic between Stanage and Sheffield Research Filestore is not encrypted when travelling between Sheffield and Manchester.
+
+.. include:: /referenceinfo/imports/filestores/shared-areas/permissions-behaviour.rst
 
 -----
 

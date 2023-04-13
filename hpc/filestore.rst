@@ -229,24 +229,7 @@ Prior to this the lack of file locking support on the University's Lustre filesy
 *Shared* (project) directories
 ------------------------------
 
-Each PI at the University is entitled to request a `free 10 TB storage area for sharing data with their group and collaborators <https://sheffield.ac.uk/it-services/research-storage/using-research-storage>`__.
-The capacity per area can be extended and additional shared areas can be purchased (both at a cost).
-
-After one of these project storage areas has been requested/purchased it can be accessed in two ways:
-
-* as a Windows-style (SMB) file share on machines other than Bessemer/ShARC using ``\\uosfstore.shef.ac.uk\shared\``;
-* as a subdirectory of ``/shared`` on Bessemer/ShARC (you need to **explicitly request HPC access when you order storage from IT Services**).
-
-Snapshotting and mirrored backups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-+---------------------------+--------------------+----------------------------------------+
-| Frequency of snapshotting | Snapshots retained | Backed up onto separate storage system |
-+===========================+====================+========================================+
-| Every 4 hours             | 10 most recent     | Yes                                    |
-+---------------------------+--------------------+----------------------------------------+
-| Every night               | Last 7 days        | Yes                                    |
-+---------------------------+--------------------+----------------------------------------+
+.. include:: /referenceinfo/imports/filestores/shared-areas/shared-area-general-info.rst
 
 See also: :ref:`recovering_snapshots`.
   
@@ -265,51 +248,13 @@ If you need to access a ``/shared`` area on Bessemer please contact `research-it
 
 .. warning::
 
-        * If you access a ``/shared`` directory stored in Sheffield from Bessemer then you may experience slower performance, espeicially for small files.
-        * Network traffic between Bessemer and Sheffield Research Filestore is not encrypted when travelling between Sheffield and Leeds over JANET
-        * ``/shared`` areas can be created on Bessemer's filestore system if you need faster access from Bessemer
+        * If you access a ``/shared`` directory stored in Sheffield from Bessemer then you may experience slower performance, especially for small files.
+        * Network traffic between Bessemer and Sheffield Research Filestore is not encrypted when travelling between Sheffield and Leeds over the JANET network.
+        * ``/shared`` areas can be created on Bessemer's filestore system if you need faster access from Bessemer.
 
 .. _shared_dir_perms:
 
-Permissions behaviour
-^^^^^^^^^^^^^^^^^^^^^
-
-You may encounter strange permissions issues when running programs on HPC against the ``/shared`` areas 
-e.g. ``chmod +x /shared/mygroup1/myprogram.sh`` fails.
-Here we try to explain why.
-
-Behind the scenes, the file server that provides this shared storage manages permissions using 
-Windows-style `ACLs <https://en.wikipedia.org/wiki/Access_control_list>`_ 
-(which can be set by area owners via the `Research Storage management web interface <https://sheffield.ac.uk/storage/>`__.
-However, the filesystem is mounted on a Linux cluster using NFSv4 so the file server therefore requires 
-a means for mapping Windows-style permissions to Linux ones.  
-An effect of this is that the Linux `mode bits <https://en.wikipedia.org/wiki/Modes_(Unix)>`_ for files/directories under ``/shared`` on the HPC systems
-are not always to be believed: 
-the output of ``ls -l somefile.sh`` may indicate that a file is readable/writable/executable when 
-the ACLs are what really determine access permissions.  
-Most applications have robust ways of checking for properties such as executability but 
-some applications can cause problems when accessing files/directories on ``/shared`` by naively checking permissions just using Linux mode bits:
-
-* `which <http://linux.die.net/man/1/which>`_: 
-  a directory under ``/shared`` may be on your path and 
-  you may be able to run a contained executable without prefixing it with a absolute/relative directory 
-  but ``which`` may fail to find that executable.
-* Perl: scripts that check for executability of files on ``/shared`` using ``-x`` may fail 
-  unless Perl is explicitly told to test for file permissions in a more thorough way 
-  (see the mention of ``use filetest 'access'`` `here <http://perldoc.perl.org/functions/-X.html>`_).
-* git: may complain that permissions have changed if 
-  a repository is simply moved to ``/shared/someplace`` from elsewhere on Bessemer/ShARC. 
-  As a workaround you can tell git to not to track Linux permissions for a single repository using 
-  ``git config core.filemode false`` or 
-  for all repositories using ``git config --global core.filemode false``.
-
-**Changing how attempts to change permissions are handled**: each ``/shared`` area can be configured so that
-
-#. Attempts to change file/directory mode bits fail (e.g. ``chmod +x /shared/mygroup1/myprogram.sh`` fails) (**default configuration per area**) **or**
-#. Attempts to change file/directory mode bits appear to succeed (e.g. ``chmod +x /shared/mygroup1/myprogram.sh`` does not fail but also does not actually change any permissions on the underlying file server) (**alternative configuration per area**)
-
-If you would like to switch to using the second way of handling permissions for a particular ``/shared/`` area then
-the Owner of this area should make a request via the Helpdesk.
+.. include:: /referenceinfo/imports/filestores/shared-areas/permissions-behaviour.rst
 
 Further information
 ^^^^^^^^^^^^^^^^^^^
@@ -473,27 +418,4 @@ In order to avoid this situation it is strongly recommended that you:
 
 .. _recovering_snapshots:
 
-Recovering files from snapshots
--------------------------------
-
-:ref:`home_dir`, :ref:`data_dir` and :ref:`shared_dir` are regularly :term:`snapshotted <Snapshotted storage>`.
-See above for details of the snapshot schedules per area.
-A subset of snapshots can be accessed by HPC users from the HPC systems themselves
-by *explicitly* browsing to hidden directories e.g.
-
-+--------------------------------------------------+----------------------------------+
-| Storage area                                     | Parent directory of snapshots    |
-+==================================================+==================================+
-| :ref:`Home directory <home_dir>`                 | ``/home/$USER/.snapshot``        |
-+--------------------------------------------------+----------------------------------+
-| :ref:`Data directory <data_dir>`                 | ``/data/$USER/.snapshot``        |
-+--------------------------------------------------+----------------------------------+
-| A :ref:`Shared (project) directory <shared_dir>` | ``/shared/myproject1/.snapshot`` |
-+--------------------------------------------------+----------------------------------+
-
-From within per-snapshot directories you can access (read-only) copies of files/directories.
-This allows you to attempt recover any files you might have accidentally modified or deleted recently.
-
-Note that ``.snapshot`` directories are not visible when listing all hidden items within their parent directories
-(e.g. using ``ls -a /home/$USER``): 
-you need to explicitly ``cd`` into ``.snapshot`` directories to see/access them.
+.. include:: /referenceinfo/imports/filestores/shared-areas/recovering-from-snapshots.rst

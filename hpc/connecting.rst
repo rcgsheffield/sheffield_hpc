@@ -54,15 +54,6 @@ macOS and Linux come with a command-line (text-only) SSH client pre-installed.
 On Windows there are various graphical SSH clients you can use,
 including *MobaXTerm*.
 
-**Whether/how you can connect** to a University cluster using SSH (or the related protocols SCP and SFTP) **depends on**:
-
-* Where you are connecting from:
-
-  * on campus using wired ethernet;
-  * on campus using Eduroam *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
-  * off campus *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
-  * off campus without a VPN connection using the HPC SSH gateway.
-
 .. warning::
 
     The `University Connect for China (UCC) <https://www.sheffield.ac.uk/it-services/university-connect-china>`_ is not the same service as the SSL VPN service and will not grant access to the HPC clusters.
@@ -74,36 +65,81 @@ including *MobaXTerm*.
     Eduroam no longer grants direct access to the clusters. If using Eduroam, you must keep the  `VPN <https://www.sheffield.ac.uk/it-services/vpn>`_ 
     connected at all times while using the clusters.
 
-* Whether `Multifactor Authentication (MFA) <https://sites.google.com/sheffield.ac.uk/mfa/home>`__  has been enabled on your University account.
+Valid methods of connecting to the University clusters using SSH (or the related protocols SCP and SFTP) include:
 
-  MFA is :underline-bold:`now mandatory` for connecting to the clusters while using a password. 
-  
-  You will be prompted to enter a one-time code or send a push notification to your MFA device
-  after entering your username and password.
+* Connecting while in a campus building using wired ethernet;
+* Connecting while on campus using Eduroam or off campus *after* `establishing a VPN connection (required) <https://www.sheffield.ac.uk/it-services/vpn>`_;
+* Connecting while off campus without a VPN connection using the HPC SSH gateway.
 
-  In addition, if you do not have MFA enabled on your account then you will not be able to login from off campus without using the VPN.
 
-* Whether you want to use password-based authentication or 'public-key'-based authentication.
-
-**Authentication requirements per cluster**:
+Connecting using a password or SSH public key authentication will determine whether Multifactor Authentication (MFA) will be mandatory during the login process.
+The authentication requirements per cluster are summarized below: 
 
 +----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
 | Cluster  | From campus or via VPN                | From off campus and without a VPN connection                                                      |
 +==========+=======================================+===================================================================================================+
-| Bessemer | Password + MFA **or** public key      | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
+| Bessemer | Password + DUO MFA **or** public key  | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
 +----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
-| ShARC    | Password + MFA **or** public key      | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
+| ShARC    | Password + DUO MFA **or** public key  | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
++----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
+| Stanage  | Password + TOTP MFA **or** public key | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
 +----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
 
-.. note::
-   Policy on the use of SSH public key authentication:
+If connecting using your password, MFA will be mandatory. Depending on the cluster, the type of MFA
+may be standard University `DUO MFA <https://sites.google.com/sheffield.ac.uk/mfa/home>`__, or :ref:`TOTP MFA <mfa-totp-reference-info>`.
 
-   * All access to TUOS HPC systems via SSH public/private keypairs should use private keys that were encrypted with a passphrase :underline-bold:`at creation time`.
-   * Public key access should be from single-user machines (not shared machines) without good reason.
-   * SSH agent forwarding should not be used without good reason.
-   * Unencrypted private keys should not be stored on TUOS HPC systems.
+.. tabs::
 
-   To discuss exceptions to this policy please contact research-it@sheffield.ac.uk
+  .. group-tab:: ShARC
+
+    On the ShARC cluster, when you connect you will be prompted to via a push notification to your DUO device to approve access 
+    or must enter a one-time code from your University provided hardware token which is associated with your DUO account.
+
+    If you have not setup your University DUO MFA, please follow the steps published at: https://www.sheffield.ac.uk/it-services/mfa/set-mfa
+
+  .. group-tab:: Bessemer
+
+    On the ShARC cluster, when you connect you will be prompted to via a push notification to your DUO device to approve access 
+    or must enter a one-time code from your University provided hardware token which is associated with your DUO account.
+
+    If you have not setup your University DUO MFA, please follow the steps published at: https://www.sheffield.ac.uk/it-services/mfa/set-mfa
+
+  .. group-tab:: Stanage
+
+    On the Stanage cluster, when you connect you will be prompted for your password and a verification code. 
+    Enter your password and the current TOTP code for your verification code. This process should look like the following in a terminal:
+
+    .. code-block:: console
+
+        ssh test@stanage.shef.ac.uk
+        Password: 
+        Verification code: 
+        Last login: Wed Apr 12 17:09:24 2023 from r.x.y.z
+        *****************************************************************************
+        *                           Stanage HPC cluster                             *
+        *                       The University Of Sheffield                         *
+        *                       https://docs.hpc.shef.ac.uk                         *
+        *                                                                           *
+        *               Unauthorised use of this system is prohibited.              *
+        *****************************************************************************
+        [test@login1 [stanage] ~]$
+
+    If you have not setup your Stanage TOTP MFA, please follow the steps published at: INSERTLINK
+  
+  In addition, if you do not have MFA enabled on your account then you will not be able to login from off campus without using the VPN.
+
+If connecting using SSH public key we have the following policy applies around their use:
+
+    :underline-bold:`Policy on the use of SSH public key authentication:`
+    
+    |br|
+    
+    * All access to TUOS HPC systems via SSH public/private keypairs should use private keys that were encrypted with a passphrase :underline-bold:`at creation time`.
+    * Public key access should be from single-user machines (not shared machines) without good reason.
+    * SSH agent forwarding should not be used without good reason.
+    * Unencrypted private keys should not be stored on TUOS HPC systems.
+
+To discuss exceptions to this policy please contact research-it@sheffield.ac.uk
 
 .. _mobaxterm_connecting_profile_setup:
 

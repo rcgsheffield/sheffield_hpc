@@ -1,6 +1,6 @@
 To connect without VPN, you must first setup TOTP multifactor authentication on the cluster. To do so you must first connect with the VPN to run the setup steps below (see the other tab).
 
-Once logged into Stanage the setup steps for TOTP multifactor authentication are as follows: ::
+Log into Stanage and run the following setup steps for TOTP multifactor authentication :underline-bold:`on a login node`: ::
 
     flight start
     flight mfa generate

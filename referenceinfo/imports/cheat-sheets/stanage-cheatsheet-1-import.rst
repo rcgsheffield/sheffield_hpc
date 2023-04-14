@@ -4,7 +4,8 @@
 
    ===========================================================================      =========================================================================
    *ssh -X $USER@$CLUSTER_NAME.shef.ac.uk*                                          Connect - :ref:`Link<ssh>`
-   *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
+   *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_stanage>`
+   *srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash*                         Start an interactive GPU session - :ref:`Link<gpu_interactive_stanage>`       
    *scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER*             Upload  - :ref:`Link<transferring_files>`
    *scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/*            Download file  - :ref:`Link<transferring_files>`
    *scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/*       Download directory  - :ref:`Link<transferring_files>`
@@ -20,7 +21,7 @@
    :widths: auto
 
    ===============================        =======================================================================================             
-   *sbatch MY_SCRIPT.sh*                  Submit a batch job - :ref:`Link<submit_batch_bessemer>`
+   *sbatch MY_SCRIPT.sh*                  Submit a batch job - :ref:`Link<submit_batch_stanage>`
    *squeue -u $USER*                      Investigate jobs in queue (Running **R** and Pending **PD**) - :ref:`Link<squeue>`
    *sstat -j 1234567*                     Investigate running job - :ref:`Link<sstat>`
    *sacct -j 1234567*                     Investigate historical job - :ref:`Link<sacct>`
@@ -37,10 +38,11 @@
 
    ==========================    ==========================================
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
-   **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
-   **GPU nodes**                 32GB Memory/GPU, 40 cores/node 168 hrs
-   Free queues                   **Limit** 1 node per job
-   Private nodes                 May have different specifications - :ref:`Link<groupnodes_bessemer>`
+   **General CPU nodes**         256GB Memory/node, 64 cores/node 96 hrs
+   **Large Mem CPU nodes**       1TB Memory/node, 64 cores/node 96 hrs
+   **V Large Mem CPU nodes**     2TB Memory/node, 64 cores/node 96 hrs
+   **GPU nodes**                 80GB Memory/GPU
+                                 512GB/node, 24 cores/node 96 hrs ????????
    ==========================    ==========================================
 
 .. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
@@ -55,14 +57,15 @@
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
    :widths: auto
    
-   ==========================================      =======================================
-   *module avail*                                  List available modules
-   *module avail |& grep -i somename*              Find a module
-   *module load <class>/<name>/<version>*          Load a module
-   *module unload <class>/<name>/<version>*        Unload a module
-   *module list*                                   List loaded modules
-   *module purge*                                  Unload all modules
-   ==========================================      =======================================
+   ===================================================   ==========================
+   *module avail*                                        List available modules
+   *module -t --redirect avail |& grep -i somename*      Find a module
+   *module load <class>/<name>/<version>*                Load a module
+   *module unload <class>/<name>/<version>*              Unload a module
+   *module list*                                         List loaded modules
+   *module purge*                                        Unload all modules
+   *ml -\-help*                                          View shorthand options       
+   ===================================================   ==========================
 
 .. tip:: 
 

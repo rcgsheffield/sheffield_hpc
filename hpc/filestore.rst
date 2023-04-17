@@ -57,88 +57,126 @@ To make a quick assessment of what storage area is likely to best fulfil your ne
 
 Home directories
 ----------------
-All users have a home directory on each system, some of which are shared between systems:
+All users have a home directory on each system:
 
-+----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
-| System   | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
-+==========+========================+======+================+===============================================+=========================+
-| Bessemer | ``/home/yourusername`` | NFS  | 100GB          | Yes                                           | No                      |
-+----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
-| ShARC    | ``/home/yourusername`` | NFS  | 10GB           | Yes                                           | No                      |
-+----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
+.. tabs::
 
-See also: :ref:`quota_check` and * :ref:`exceed_quota`.
+   .. group-tab:: ShARC
 
-Snapshotting and mirrored backups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    :underline-bold:`Home filestore area details`
 
-+---------------------------+--------------------+
-| Frequency of snapshotting | Snapshots retained |
-+===========================+====================+
-| Every 4 hours             | 10 most recent     |
-+---------------------------+--------------------+
-| Every night               | Last 7 days        |
-+---------------------------+--------------------+
+    +------------------------+------+----------------+-----------------------------------------------+-------------------------+
+    | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
+    +========================+======+================+===============================================+=========================+
+    |``/home/$USER``         | NFS  | 10GB           | Yes                                           | No                      |
+    +------------------------+------+----------------+-----------------------------------------------+-------------------------+
 
-+-------------------------------+------------------+
-| Frequency of mirrored backups | Backups retained |
-+===============================+==================+
-| Every 4 hours                 | 6 most recent    |
-+-------------------------------+------------------+
-| Every night                   | 28 most recent   |
-+-------------------------------+------------------+
+    Where ``$USER`` is the user's username.
 
-See also: :ref:`recovering_snapshots`.
+
+    .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-snapshot-mirror-settings.rst
+
+   .. group-tab:: Bessemer
+
+    :underline-bold:`Home filestore area details`
+
+    +------------------------+------+----------------+-----------------------------------------------+-------------------------+
+    | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
+    +========================+======+================+===============================================+=========================+
+    |``/home/$USER``         | NFS  | 100GB          | Yes                                           | No                      |
+    +------------------------+------+----------------+-----------------------------------------------+-------------------------+
+
+    Where ``$USER`` is the user's username.
+
+    .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-snapshot-mirror-settings.rst
+
+   .. group-tab:: Stanage
+
+    :underline-bold:`Home filestore area details`
+
+    +------------------------+------+----------------------+-----------------------------------------------+-------------------------+
+    | Path                   | Type | Quota per user       | Shared between system login and worker nodes? | Shared between systems? |
+    +========================+======+======================+===============================================+=========================+
+    | ``/users/$USER``       | NFS  | 50 GB or 300000 files| Yes                                           | No                      |
+    +------------------------+------+----------------------+-----------------------------------------------+-------------------------+
+
+    Where ``$USER`` is the user's username.
+
+    See also: :ref:`quota_check` and * :ref:`exceed_quota`.
+
+    :underline-bold:`Home filestore backups and snapshots details`
+
+    .. warning:: 
+
+      **Snapshotting is not enabled** for home areas and these areas are **not backed up**.
+
+
+------
 
 .. _data_dir:
 
 *Data* directories
 ------------------
 
-Every user on ShARC (**not Bessemer**) has access to a larger *data* storage area:
+ShARC, (:underline-bold:`only`), has access to aan additional larger *data* storage area:
 
-+----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
-| System   | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
-+==========+========================+======+================+===============================================+=========================+
-| Bessemer | N/A                    | NFS  | N/A            | N/A                                           | N/A                     |
-+----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
-| ShARC    | ``/data/yourusername`` | NFS  | 100GB          | Yes                                           | No                      |
-+----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
+.. tabs::
 
-See also: :ref:`quota_check` and * :ref:`exceed_quota`.
+   .. group-tab:: ShARC
 
-Snapshotting and mirrored backups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    +----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
+    | System   | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
+    +==========+========================+======+================+===============================================+=========================+
+    | ShARC    | ``/data/yourusername`` | NFS  | 100GB          | Yes                                           | No                      |
+    +----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
 
-+---------------------------+--------------------+
-| Frequency of snapshotting | Snapshots retained |
-+===========================+====================+
-| Every 4 hours             | 10 most recent     |
-+---------------------------+--------------------+
-| Every night               | Last 7 days        |
-+---------------------------+--------------------+
+    See also: :ref:`quota_check` and * :ref:`exceed_quota`.
 
-+-------------------------------+------------------+
-| Frequency of mirrored backups | Backups retained |
-+===============================+==================+
-| Every 4 hours                 | 6 most recent    |
-+-------------------------------+------------------+
-| Every night                   | 28 most recent   |
-+-------------------------------+------------------+
+    :underline-bold:`Data filestore backups and snapshots details`
 
-See also: :ref:`recovering_snapshots`.
+    +---------------------------+--------------------+
+    | Frequency of snapshotting | Snapshots retained |
+    +===========================+====================+
+    | Every 4 hours             | 10 most recent     |
+    +---------------------------+--------------------+
+    | Every night               | Last 7 days        |
+    +---------------------------+--------------------+
 
-Automounting
-^^^^^^^^^^^^^
+    +-------------------------------+------------------+
+    | Frequency of mirrored backups | Backups retained |
+    +===============================+==================+
+    | Every 4 hours                 | 6 most recent    |
+    +-------------------------------+------------------+
+    | Every night                   | 28 most recent   |
+    +-------------------------------+------------------+
 
-*Data* directories are **made available to you (mounted) on demand**: 
-if you list the contents of just ``/data`` after first logging on then your ``/data/te1st`` subdirectory (where ``te1st`` is your username) might not be shown.
-However, if you list the contents of ``/data/te1st`` itself or change into that directory
-then its contents will appear.  
+    See also: :ref:`recovering_snapshots`.
 
-Later on if you list the contents of ``/data`` again 
-you may find that ``/data/te1st`` has disappeared again, as 
-it is automatically *unmounted* following a period of inactivity.  
+    :underline-bold:`Automounting`
+
+
+    *Data* directories are **made available to you (mounted) on demand**: 
+    if you list the contents of just ``/data`` after first logging on then your ``/data/te1st`` subdirectory (where ``te1st`` is your username) might not be shown.
+    However, if you list the contents of ``/data/te1st`` itself or change into that directory
+    then its contents will appear.  
+
+    Later on if you list the contents of ``/data`` again 
+    you may find that ``/data/te1st`` has disappeared again, as 
+    it is automatically *unmounted* following a period of inactivity. 
+
+   .. group-tab:: Bessemer
+
+    .. warning::
+      
+      The ``/data`` area is not available on Bessemer.
+
+   .. group-tab:: Stanage
+
+    .. warning::
+      
+      The ``/data`` area is not available on Stanage.
+
+ 
 
 -----
 
@@ -155,72 +193,70 @@ are **not performant when reading/writing lots of small files**
 (:ref:`scratch_dir` are ideal for reading/writing lots of small temporary files within jobs).
 An example of how slow it can be for large numbers of small files is detailed `here <http://www.walkingrandomly.com/?p=6167>`__.
 
-+----------+---------------+--------+----------------+---------------------+-------------------------+---------------------------+
-| System   | Path          | Type   | Quota per user | Filesystem capacity | Shared between systems? | Network bandwith per link |
-+==========+===============+========+================+=====================+=========================+===========================+
-| Bessemer | ``/fastdata`` | Lustre | No limits      | 460 TB              | No                      | 25Gb/s Ethernet           |
-+----------+---------------+--------+----------------+---------------------+-------------------------+---------------------------+
-| ShARC    | ``/fastdata`` | Lustre | No limits      | 669 TB              | No                      | 100Gb/s (*Omni-Path*)     |
-+----------+---------------+--------+----------------+---------------------+-------------------------+---------------------------+
+There are separate ``fastdata`` areas on each cluster:
 
-Snapshotting and mirrored backups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. tabs::
 
-**Snapshotting is not enabled** for fastdata areas and
-these areas are **not backed up**.
+   .. group-tab:: ShARC
 
-Managing your files in fastdata areas
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    :underline-bold:`Fastdata filestore area details`
 
-In order to avoid interference from other users' files 
-it is **important** that you store your files in a directory created and named the same as your username 
-e.g. if your username is ``te1st`` then you can a fastdata area for yourself using: ::
+    +---------------+--------+----------------+---------------------+-------------------------+---------------------------+
+    | Path          | Type   | Quota per user | Filesystem capacity | Shared between systems? | Network bandwith per link |
+    +===============+========+================+=====================+=========================+===========================+
+    | ``/fastdata`` | Lustre | No limits      | 669 TB              | No                      | 100Gb/s (*Omni-Path*)     |
+    +---------------+--------+----------------+---------------------+-------------------------+---------------------------+
 
-    mkdir /fastdata/te1st
+    .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-fastdata-managing-import.rst
 
-By default the directory you create will have world-read access.  
-If you want to restrict read access to just your account then run ::
 
-    chmod 700 /fastdata/te1st
+   .. group-tab:: Bessemer
 
-after creating the directory. 
-A more sophisticated sharing scheme would have private and public directories ::
+    :underline-bold:`Fastdata filestore area details`
 
-    mkdir /fastdata/te1st
-    mkdir /fastdata/te1st/public
-    mkdir /fastdata/te1st/private
+    +---------------+--------+----------------+---------------------+-------------------------+---------------------------+
+    | Path          | Type   | Quota per user | Filesystem capacity | Shared between systems? | Network bandwith per link |
+    +===============+========+================+=====================+=========================+===========================+
+    | ``/fastdata`` | Lustre | No limits      | 460 TB              | No                      | 25Gb/s Ethernet           |
+    +---------------+--------+----------------+---------------------+-------------------------+---------------------------+
 
-    chmod 755 /fastdata/te1st
-    chmod 755 /fastdata/te1st/public
-    chmod 700 /fastdata/te1st/private
+    .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-fastdata-managing-import.rst
+      
 
-Automatic file deletion
-^^^^^^^^^^^^^^^^^^^^^^^
+   .. group-tab:: Stanage
 
-.. warning::
+    :underline-bold:`Fastdata filestore area details`
 
-    **There are no quota controls in fastdata areas** but 
-    **older files** are **automatically deleted**: 
-    a report of files older than 60 days is regularly generated, 
-    the owners of these files are then notified by email then 
-    a week after the email(s) are sent the identified files are deleted. 
+    +---------------------------------------+--------+----------------+---------------------+-------------------------+---------------------------+
+    | Path                                  | Type   | Quota per user | Filesystem capacity | Shared between systems? | Network bandwith per link |
+    +=======================================+========+================+=====================+=========================+===========================+
+    | ``/mnt/parscratch/``                  | Lustre | No limits      | 2 PiB               | No                      | 100Gb/s (*Omni-Path*)     |
+    +---------------------------------------+--------+----------------+---------------------+-------------------------+---------------------------+
 
-    We reserve the right to change this policy without warning in order to ensure efficient running of the service.
 
-    It is important to therefore not use *fastdata* areas for long-term storage and 
-    **copy important data** from these areas to areas suitable for longer-term storage (:ref:`home_dir`, :ref:`data_dir` or :ref:`shared_dir`).
+    :underline-bold:`Managing your files in fastdata areas`
 
-You can use the ``lfs``  command to find out which files in a *fastdata* directory are older than a certain number of days and hence approaching the time of deletion. 
-For example, if your username is ``te1st`` then you can find files 50 or more days old using: ::
+    We recommend users create their own personal folder in the ``/fastdata`` area.  As this doesn't exist by default, you can create it with safe permissions by running the command: ::
 
-    lfs find -ctime +50 /fastdata/te1st
+        mkdir -m 0700 /mnt/parscratch/users/$USER
 
-File locking
-^^^^^^^^^^^^
+    By running the command above, your area will only be accessible to you. If desired, you could have a more sophisticated sharing scheme with private and public directories ::
 
-As of September 2020 POSIX file locking is enabled on all Lustre filesystems. 
-Prior to this the lack of file locking support on the University's Lustre filesystems caused problems for certain workflows/applications
-(e.g. for programs that create/use SQLite databases).
+        mkdir -m 0755 /mnt/parscratch/users/$USER
+        mkdir /parscratch/users/$USER/public
+        mkdir /parscratch/users/$USER/private
+
+        chmod 755 /parscratch/users/$USER
+        chmod 755 /parscratch/users/$USER/public
+        chmod 700 /parscratch/users/$USER/private
+
+    :underline-bold:`Fastdata filestore backups and snapshots details`
+
+    .. warning:: 
+
+      **Snapshotting is not enabled** for home areas and these areas are **not backed up**.
+
+
 
 -----
 

@@ -2,7 +2,7 @@
 ================================    ================================    ========================
 User Commands                       SGE                                 SLURM 
 ================================    ================================    ========================
-Interactive login                   qrshx                                srun -\-pty bash -i 
+Interactive login                   qrshx  *(site specific)*            srun -\-pty bash -i 
 Job submission                      qsub [script_file]                  sbatch [script_file] 
 Job deletion                        qdel [job_id]                       scancel [job_id] 
 Job status by job                   qstat [-j job_id]                   squeue [job_id] 

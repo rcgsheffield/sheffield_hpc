@@ -41,17 +41,16 @@
    **General CPU nodes**         256GB Memory/node, 64 cores/node 96 hrs
    **Large Mem CPU nodes**       1TB Memory/node, 64 cores/node 96 hrs
    **V Large Mem CPU nodes**     2TB Memory/node, 64 cores/node 96 hrs
-   **GPU nodes**                 80GB Memory/GPU
-                                 512GB/node, 24 cores/node 96 hrs ????????
+   **GPU nodes**                 512GB Memory/node, 48 cores/node 96 hrs,
+                                 80GB Memory/GPU                                 
    ==========================    ==========================================
 
-.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
+.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<stanage-filestores>`
    :widths: auto
    
    ==========================================      =======================================
-   */home/$USER/*                                  Home (backed up)
-   */mnt/fastdata/$USER/*                          Fastdata (not backed up)
-   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
+   */home/$USER/*                                  Home (not backed up)
+   */mnt/parscratch/users/$USER/*                  Fastdata (not backed up)
    ==========================================      =======================================
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`
@@ -64,7 +63,7 @@
    *module unload <class>/<name>/<version>*              Unload a module
    *module list*                                         List loaded modules
    *module purge*                                        Unload all modules
-   *ml -\-help*                                          View shorthand options       
+   *ml -\-help*                                          Shorthand options       
    ===================================================   ==========================
 
 .. tip:: 

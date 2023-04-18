@@ -22,5 +22,5 @@ This is the documentation for Stanage, the University of Sheffield's new High Pe
 
 * :ref:`stanage-software`
 * :ref:`stanage-specs`
-* :ref:`gpu_computing_stanage`
 * :ref:`slurm_info_stanage`
+* :ref:`gpu_computing_stanage`

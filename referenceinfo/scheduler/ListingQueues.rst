@@ -6,24 +6,34 @@
 Listing Queues
 -----------------
 
-ShARC
-............
+.. tabs::
+    .. group-tab:: Stanage
+        
+        On Stanage you can list the queues with: ::
+        
+            sinfo -a
+        
+        As Stanage has non-homogenous nodes you can list more information by formatting the output, e.g.: ::
+        
+            sinfo -o "%P %l %c %D "  # PARTITION TIMELIMIT CPUS NODES  
+    .. group-tab:: Bessemer
+        
+        On Bessemer you can list the queues with: ::
+        
+            sinfo -a
+        
+        As Bessemer has non-homogenous nodes you can list more information by formatting the output, e.g.: ::
+        
+            sinfo -o "%P %l %c %D "  # PARTITION TIMELIMIT CPUS NODES  
 
-On ShARC you can list the queues with: ::
+    .. group-tab:: ShARC
+        
+        On ShARC you can list the queues with: ::
+        
+            qconf -sql
+        
+        You can then list your specific queue properties with: ::
+        
+            qconf -sq queue_name
 
-    qconf -sql
 
-You can then list your specific queue properties with: ::
-
-    qconf -sq queue_name
-
-Bessemer
-..........
-
-On Bessemer you can list the queues with: ::
-
-    sinfo -a
-
-As Bessemer has non-homogenous nodes you can list more information by formatting the output, e.g.: ::
-
-    sinfo -o "%P %l %c %D "  # PARTITION TIMELIMIT CPUS NODES

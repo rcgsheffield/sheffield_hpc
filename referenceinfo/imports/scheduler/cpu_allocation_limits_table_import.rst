@@ -6,14 +6,19 @@
    * - Scheduler Type
      - No. CPU Cores Available |br| |br| Interactive Job |br| (Default/ Min / Max )
      - No. CPU Cores Available |br| |br| Batch Job |br| (Default/ Min / Max )
-     - Submission Argument
+     - Submission Argument 
 
-   * - SGE (ShARC)
-     - 1 / 1 / ~1536 (MPI), 16 (SMP)
-     - 1 / 1 / ~1536 (MPI), 16 (SMP)
-     - ``-pe <env> <nn>``
+   * - SLURM (Stanage)
+     - 1 / 1 / 64
+     - 1 / 1 / 64
+     - ``-c <nn>``     
 
    * - SLURM (Bessemer)
      - 1 / 1 / 40
      - 1 / 1 / 40
      - ``-c <nn>``
+     
+   * - SGE (ShARC)
+     - 1 / 1 / ~1536 (MPI), 16 (SMP)
+     - 1 / 1 / ~1536 (MPI), 16 (SMP)
+     - ``-pe <env> <nn>``

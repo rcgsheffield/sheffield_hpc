@@ -34,11 +34,11 @@ This does not mean that you can set extremely large values for these resource re
 Cluster choice
 ==============================
 
-It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. ShARC is for the most part a *capability* cluster designed to run larger compute jobs that will use multiple nodes. Bessemer is a *capacity* cluster designed to run smaller compute jobs which will fit on a single node. In addition, Bessemer has more modern faster CPUs but does not have a /data filestore.
+Stanage and Bessemer have newer CPUs with more modern features.
 
-With this in mind, you should prioritize putting smaller core count jobs onto Bessemer and massively parallel jobs onto ShARC (while utilizing a form of :ref:`MPI <parallel_MPI>`).
+You should prioritize putting smaller core count jobs onto Stannage or Bessemer and massively parallel jobs onto Stanage or ShARC(while utilizing a form of :ref:`MPI <parallel_MPI>`).
 
-The specifications for each cluster are detailed for  ShARC here :ref:`sharc-specs` and Bessemer here. :ref:`bessemer-specs`
+The specifications for each cluster are detailed for Stanage here :ref:`stanage-specs` , Bessemer here :ref:`bessemer-specs` and ShARC here :ref:`sharc-specs` .
 
 -----------------
 
@@ -96,11 +96,11 @@ In order to determine your CPU requirements, you should investigate if your prog
 
 If your job / program supports multiple cores, you need to assess whether it supports SMP (symmetric multiprocessing) where you can only use CPUs on 1 node or MPI (message passing interface) where you can access as many nodes, CPUs and cores as are available.
 
-For SMP only type parallel processing jobs: you can use a maximum of 16 cores on ShARC and 40 cores on Bessemer. Ideally you should use Bessemer as you can not only access more cores, you are using more modern cores.
+For SMP only type parallel processing jobs: you can use a maximum of 16 cores on ShARC and 40 cores on Bessemer. Ideally you should use Stanage or Bessemer as you can not only access more cores, you are using more modern cores.
 
 For multiple node MPI type parallel processing jobs: these can only run on ShARC and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
 
-Single node MPI type parallel jobs can run on both ShARC (when running in the SMP parallel environment) and Bessemer.
+Single node MPI type parallel jobs can run on ShARC (when running in the SMP parallel environment), Stanage and Bessemer.
 
 For both parallel processing methods you should run several test jobs using the tips from the `Time allocation <#time-allocation-limits>`_ section with various numbers of cores to assess what factor of speedup/slowdown is attained for queuing and computation / the total time for job completion.
 
@@ -130,22 +130,34 @@ Determining memory requirements:
 
 Submit your job ``qsub`` or ``sbatch`` by specifying very generous memory and time requirements to ensure that it runs to completion" and also using the ``-M`` and ``-m abe`` or  ``--mail-user=`` and ``--mail-type=ALL``   parameters to receive an email-report. The mail message will list the maximum memory usage ( maxvmem / MaxVMSize  ) as well as the wallclock time used by the job.
 
-Here is an example job script for SGE: ::
+.. tabs::
 
-      #$ -l h_rt=01:00:00
-      #$ -l rmem=8G
-      #$ -m abe
-      #$ -M joe.blogs@sheffield.ac.uk
-      myprog < mydata.txt > myresults.txt
+    .. group-tab:: Stanage
+        .. code-block::
 
+            #SBATCH --mem=8G
+            #SBATCH --time=01:00:00
+            #SBATCH --mail-user=joe.blogs@sheffield.ac.uk
+            #SBATCH --mail-type=ALL
+            myprog < mydata.txt > myresults.txt
 
-Here is an example job script for SLURM: ::
+    .. group-tab:: Bessemer
+        .. code-block::
 
-      #SBATCH --mem=8G
-      #SBATCH --time=01:00:00
-      #SBATCH --mail-user=joe.blogs@sheffield.ac.uk
-      #SBATCH --mail-type=ALL
-      myprog < mydata.txt > myresults.txt
+            #SBATCH --mem=8G
+            #SBATCH --time=01:00:00
+            #SBATCH --mail-user=joe.blogs@sheffield.ac.uk
+            #SBATCH --mail-type=ALL
+            myprog < mydata.txt > myresults.txt
+
+    .. group-tab:: ShARC
+        .. code-block::
+            
+            #$ -l h_rt=01:00:00
+            #$ -l rmem=8G
+            #$ -m abe
+            #$ -M joe.blogs@sheffield.ac.uk
+            myprog < mydata.txt > myresults.txt
 
 When the job completes, you will receive an email reporting the memory and time usage figures.
 
@@ -153,44 +165,10 @@ When the job completes, you will receive an email reporting the memory and time 
 
 **By using the qstat or sstat / sacct command:**
 
-You can detect the memory used by your job while it is running by using the **qstat** command for SGE as follows:
-
-While a job is still running find out its job id by: ::
-
-    qstat
-
-And check its current usage of memory by: ::
-
-    qstat -F -j job_id | grep mem
-
-If your job has already finished you can list the memory usage with **qacct**: ::
-
-    qacct -j job_id
-
-The reported figures will indicate:
-
-* the currently used memory ( vmem ).
-* maximum memory needed since startup ( maxvmem ).
-
-It is the **maxvmem** figure that you will need to use to determine the ``-l rmem=`` parameter for your next job.
+.. tabs::
+    .. include:: ../referenceinfo/imports/scheduler/memory_used_qstat.rst
 
 -----------------
-
-You can detect the memory used by your job while it is running by using the **sacct** command for SLURM as follows:
-
-While a job is still running find out its job id by: ::
-
-    sacct
-
-And check its current usage of memory by: ::
-
-    sstat job_id --format='JobID,MaxVMSize,MaxRSS'
-
-If your job has already finished you can list the memory usage with sacct: ::
-
-    sacct --format='JobID,Elapsed,MaxVMSize,MaxRSS'
-
-It is the **MaxVMSize** / **MaxRSS** figures that you will need to use to determine the ``--mem=`` parameter for your next job.
 
 .. _Filestore-limits:
 

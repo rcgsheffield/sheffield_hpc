@@ -34,7 +34,14 @@ This does not mean that you can set extremely large values for these resource re
 Cluster choice
 ==============================
 
-Stanage and Bessemer have newer CPUs with more modern features.
+We have three cluster choices listed below for you to choose from:
+
+* Stanage (Our newest and most powerful yet, launched in March 2023)
+* Bessemer (Launched in 2018)
+* ShARC (Launched in 2017)
+
+It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. Stanage and ShARC are for the most part a *capability* cluster designed to run larger compute jobs that will use multiple nodes. Bessemer is a *capacity* cluster designed to run smaller compute jobs which will fit on a single node. In addition, Stanage and Bessemer have newer CPUs with more modern features. Bessemer but does not have a /data filestore.
+
 
 You should prioritize putting smaller core count jobs onto Bessemer and massively parallel jobs onto Stanage or ShARC (while utilizing a form of :ref:`MPI <parallel_MPI>`).
 
@@ -96,9 +103,9 @@ In order to determine your CPU requirements, you should investigate if your prog
 
 If your job / program supports multiple cores, you need to assess whether it supports SMP (symmetric multiprocessing) where you can only use CPUs on 1 node or MPI (message passing interface) where you can access as many nodes, CPUs and cores as are available.
 
-For SMP only type parallel processing jobs: you can use a maximum of 16 cores on ShARC and 40 cores on Bessemer. Ideally you should use Stanage or Bessemer as you can not only access more cores, you are using more modern cores.
+For SMP only type parallel processing jobs: you can use a maximum of 64 0n stannage, 40 cores on Bessemer and 16 cores on ShARC. Ideally you should use Stanage or Bessemer as you can not only access more cores, you are using more modern cores.
 
-For multiple node MPI type parallel processing jobs: these can only run on ShARC and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
+For multiple node MPI type parallel processing jobs: these can run on both Stanage and ShARC and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
 
 Single node MPI type parallel jobs can run on ShARC (when running in the SMP parallel environment), Stanage and Bessemer.
 

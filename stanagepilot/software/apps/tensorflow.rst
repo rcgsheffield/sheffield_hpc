@@ -18,7 +18,7 @@ within Google's Machine Intelligence research organization
 for the purposes of conducting machine learning and deep neural networks research,
 but the system is general enough to be applicable in a wide variety of other domains as well.
 
-About TensorFlow on Bessemer
+About TensorFlow on Stanage
 ----------------------------
 
 .. note::

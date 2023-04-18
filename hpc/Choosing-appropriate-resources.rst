@@ -173,7 +173,7 @@ When the job completes, you will receive an email reporting the memory and time 
 **By using the qstat or sstat / sacct command:**
 
 .. tabs::
-    .. include:: ../referenceinfo/imports/scheduler/memory_used_qstat.rst
+    .. include:: ../referenceinfo/imports/scheduler/memory_used_commands.rst
 
 -----------------
 

@@ -17,7 +17,7 @@
      - 2TB
      - 2 GB / (256 GB/ 1TB / 2TB) 
      - 2 GB / (256 GB/ 1TB / 2TB) 
-     - **Per job basis** ``--mem=<xxG>``
+     - **Per job basis** ``--mem=<nn>``
 
    * - SLURM (Bessemer)
      - 192 GB

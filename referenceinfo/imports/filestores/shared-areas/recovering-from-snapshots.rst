@@ -57,6 +57,6 @@ Recovering files from snapshots
 
    .. group-tab:: Stanage
 
-    Recovery of files and folders on Stanage is not possible as the Stanage cluster does not current have snapshots or backups.
+    Recovery of files and folders on Stanage is not possible as the Stanage cluster does not currently have snapshots or backups.
 
     If you need help, please contact `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`__.

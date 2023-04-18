@@ -39,7 +39,7 @@ Conda is used to create a virtual python environment for installing your local v
 
 First request an interactive session, e.g. with :ref:`submit_interactive_stanage` or optionally with GPU :ref:`gpu_interactive_stanage`. 
 
-..code-block ::
+.. code-block ::
 
    # To request 8GB of CPU RAM for the session
    srun --mem=8G --pty bash

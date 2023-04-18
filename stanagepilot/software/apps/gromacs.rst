@@ -29,10 +29,6 @@ GROMACS software can be loaded using one of the following module load commands:
 
 The GROMACS executable is ``gmx`` or ``gmx_mpi`` if using an OpenMPI module. Typing ``gmx help commands`` will display a list of commands for ``gmx`` and their function.
 
-----------------
-
-.. include:: /referenceinfo/imports/software/ansys/module-load-list-stanage.rst
-
 --------------------
 
 Interactive usage
@@ -64,10 +60,11 @@ submitted to the queue by typing ``sbatch my_job.sh``.
 GROMACS can run using 2 different parallel environments, ``smp`` and ``mpi``, in addition to being able to use GPU acceleration. Examples of these 
 types of batch submission can be seen below.
 
-Using SMP
+Using GMX
 ^^^^^^^^^
 
-This script requests one CPU core using the OpenMP parallel environment ``smp`` and with 2 GB of real memory per CPU core. The requested runtime is 6 hours.
+The following is an example batch submission script, my_job.sh, to run the gromacs executable ``gmx`` with input files grompp.mdp, conf.gro and topol.top. The script requests 5 GB of real memory.
+
 The GROMACS input line beginning with ``gmx grompp`` is to make a run input file; ``gmx mdrun`` is to perform a simulation, do a normal mode analysis or an energy minimization. 
 
 The ``export`` command sets the correct number of GROMACS threads based on the requested number of cores from the scheduler (important if requesting more than a single core).
@@ -78,19 +75,22 @@ The ``export`` command sets the correct number of GROMACS threads based on the r
     # Request 5 gigabytes of real memory (mem)
     #SBATCH --mem=5G
 
-    # load the module for the program we want to run
     module load GROMACS/2021-foss-2020b
-    # Set the OPENMP_NUM_THREADS environment variable to 4
-    # This is needed to ensure efficient core usage.
+    
+    # Set the OPENMP_NUM_THREADS environment variable to the number of available cores.
+    # The line ensures that OpenMP uses all of the CPUs allocated to the task 
+    # for parallel processing. This can improve the performance of parallelized 
+    # code by fully utilizing the available resources.
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
     gmx grompp -f grompp.mdp -c conf.gro -p topol.top -o topol.tpr
     gmx mdrun -s topol.tpr
 
-Using MPI
-^^^^^^^^^
+Using GMX_MPI
+^^^^^^^^^^^^^
 
-This script requests four CPU cores using the MPI parallel environment ``mpi``. The requested runtime is 30 minutes.
-The GROMACS input line beginning with ``gmx_mpi grompp`` is to make a run input file; ``mpirun -np $NSLOTS gmx_mpi mdrun`` is to perform a simulation, do a normal mode analysis or an energy minimization 
+This script requests four CPU cores and a runtime of 30 minutes.
+The GROMACS input line beginning with ``gmx_mpi grompp`` is to make a run input file; ``srun -np $NSLOTS gmx_mpi mdrun`` is to perform a simulation, to do a normal mode analysis or an energy minimization 
 with the correct number of MPI threads. 
 
 .. note::
@@ -107,11 +107,11 @@ with the correct number of MPI threads.
     #SBATCH --mail-user=me@somedomain.com
     # Email notifications if the job fails
     #SBATCH --mail-type=FAIL
-    # load the module
+    
     module load GROMACS/2021-foss-2020b
 
     gmx_mpi grompp -f grompp.mdp -c conf.gro -p topol.top -o topol.tpr
-    mpirun -np $NSLOTS gmx_mpi mdrun -s topol.tpr
+    srun -np $SLURM_NTASKS gmx_mpi mdrun -s topol.tpr
 
 
 Using GPUs

@@ -20,7 +20,7 @@ If you then want to switch to using a different version of ``scotch`` (should an
     
 then load the other.  
 
-You may wonder why modules are necessary: why not just install packages provided by the vender of the operating system installed on the cluster?
+You may wonder why modules are necessary: why not just install packages provided by the vendor of the operating system installed on the cluster?
 In shared high-performance computing environments such as our clusters:
 
 * users typically want control over the version of applications that is used (e.g. to give greater confidence that results of numerical simulations can be reproduced);

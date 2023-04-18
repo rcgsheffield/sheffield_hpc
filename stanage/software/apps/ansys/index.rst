@@ -88,4 +88,4 @@ The following instruction should be inserted at line 2433 (tbc) in ``anssh.ini``
 
 Module files are available below:
 
-- :download:`/opt/apps/testapps/el7/modules/staging/all/ANSYS/2022R2.lua  </stanagepilot/software/modulefiles/ansys/22.2/2022R2.lua>`
+- :download:`/opt/apps/testapps/el7/modules/staging/all/ANSYS/2022R2.lua  </stanage/software/modulefiles/ansys/22.2/2022R2.lua>`

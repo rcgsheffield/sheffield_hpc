@@ -36,7 +36,7 @@ Cluster choice
 
 Stanage and Bessemer have newer CPUs with more modern features.
 
-You should prioritize putting smaller core count jobs onto Stannage or Bessemer and massively parallel jobs onto Stanage or ShARC(while utilizing a form of :ref:`MPI <parallel_MPI>`).
+You should prioritize putting smaller core count jobs onto Bessemer and massively parallel jobs onto Stanage or ShARC (while utilizing a form of :ref:`MPI <parallel_MPI>`).
 
 The specifications for each cluster are detailed for Stanage here :ref:`stanage-specs` , Bessemer here :ref:`bessemer-specs` and ShARC here :ref:`sharc-specs` .
 

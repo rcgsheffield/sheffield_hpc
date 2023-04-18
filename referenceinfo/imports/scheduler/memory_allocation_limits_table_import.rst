@@ -15,7 +15,7 @@
      - 256 GB
      - 1TB 
      - 2TB
-     - 2 GB / (256 GB/ 1TB / 2TB) 
+     - 2 GB / 256 GB
      - 2 GB / (256 GB/ 1TB / 2TB) 
      - **Per job basis** ``--mem=<nn>``
 

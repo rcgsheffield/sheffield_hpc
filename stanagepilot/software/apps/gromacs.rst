@@ -57,7 +57,7 @@ submitted to the queue by typing ``sbatch my_job.sh``.
 
     Please also ensure you consult the right version of the documentation as more modern versions of GROMACS are likely to have numerous differences.
 
-GROMACS can run using 2 different parallel environments, ``smp`` and ``mpi``, in addition to being able to use GPU acceleration. Examples of these 
+GROMACS can run using in ``smp`` parallel environment, in addition to being able to use GPU acceleration. Examples of these 
 types of batch submission can be seen below.
 
 Using GMX
@@ -74,13 +74,18 @@ The ``export`` command sets the correct number of GROMACS threads based on the r
     #!/bin/bash
     # Request 5 gigabytes of real memory (mem)
     #SBATCH --mem=5G
+    #SBATCH --time=00:30:00
+    # Email notifications to me@somedomain.com
+    #SBATCH --mail-user=me@somedomain.com
+    # Email notifications if the job fails
+    #SBATCH --mail-type=FAIL
 
     module load GROMACS/2021-foss-2020b
     
     # Set the OPENMP_NUM_THREADS environment variable to the number of available cores.
     # The line ensures that OpenMP uses all of the CPUs allocated to the task 
-    # for parallel processing. This can improve the performance of parallelized 
-    # code by fully utilizing the available resources.
+    # for parallel processing. This can improve the performance of parallelised 
+    # code by fully utilising the available resources.
     export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
     gmx grompp -f grompp.mdp -c conf.gro -p topol.top -o topol.tpr

@@ -124,7 +124,7 @@ Currently none of the gromacs installations have the CUDA modules. If you need a
 Installation notes
 ------------------
 
-Gromacs was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGROMACS/easybuild`` with the module loaded.
+GROMACS was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGROMACS/easybuild`` with the module loaded.
 GROMACS should just be installed using a batch session otherwise the installation will crash when it comes to build ``gmx_mpi``.
 
 Testing was done using the example on `Lysozyme in Water <http://www.mdtutorials.com/gmx/lysozyme/index.html>`_

@@ -146,7 +146,7 @@ This indicates that TensorFlow was expecting to find CUDA 10.0 (and an appropria
 The following table shows the which module to load for the various versions of TensorFlow,
 based on the `tested build configurations <https://www.tensorflow.org/install/source#linux>`_.
 
-.. _tensorflow_cudnn_compat_bess:
+.. _tensorflow_cudnn_compat_stanage:
 
 +------------+------+--------+-------------------------------------------------------+
 | TensorFlow | CUDA | cuDNN  | cuDNN module to load                                  |

@@ -103,7 +103,7 @@ In order to determine your CPU requirements, you should investigate if your prog
 
 If your job / program supports multiple cores, you need to assess whether it supports SMP (symmetric multiprocessing) where you can only use CPUs on 1 node or MPI (message passing interface) where you can access as many nodes, CPUs and cores as are available.
 
-For SMP only type parallel processing jobs: you can use a maximum of 64 0n stannage, 40 cores on Bessemer and 16 cores on ShARC. Ideally you should use Stanage or Bessemer as you can not only access more cores, you are using more modern cores.
+For SMP only type parallel processing jobs: you can use a maximum of 64 cores on Stanage, 40 cores on Bessemer and 16 cores on ShARC. Ideally you should use Stanage or Bessemer as you can not only access more cores, you are using more modern cores.
 
 For multiple node MPI type parallel processing jobs: these can run on both Stanage and ShARC and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
 

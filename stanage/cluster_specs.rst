@@ -1,9 +1,9 @@
-.. _stanage-specs:
-
 .. toctree::
     :hidden:
     :maxdepth: 1
     :glob:
+
+.. _stanage-specs:
 
 Cluster Specifications
 ======================

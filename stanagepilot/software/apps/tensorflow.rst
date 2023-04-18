@@ -73,7 +73,7 @@ is also dependent on CUDA and cuDNN libraries,
 making the installation procedure slightly different.
 
 .. warning::
-   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_bess>`).
+   You will need to ensure you load CUDA and cuDNN modules which are compatible with the version of TensorFlow used (see :ref:`table<tensorflow_cudnn_compat_stanage>`).
 
 First request an interactive session, e.g. see :ref:`gpu_interactive_stanage`.
 

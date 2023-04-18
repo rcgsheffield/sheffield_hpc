@@ -9,8 +9,8 @@
      - Submission Argument 
 
    * - SLURM (Stanage)
-     - 1 / 1 / 64
-     - 1 / 1 / 64
+     - 1 / 1 /  ~9728 (MPI), 64 (SMP)
+     - 1 / 1 /  ~9728 (MPI), 64 (SMP)
      - ``-c <nn>``     
 
    * - SLURM (Bessemer)

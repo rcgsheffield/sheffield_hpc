@@ -73,5 +73,5 @@ Modulefiles
 ^^^^^^^^^^^
 
 The module file is on the system at 
-:download:`/opt/apps/testapps/el7/modules/staging/all/ncdu/1.15.1-GCCcore-9.3.0.lua </stanagepilot/software/modulefiles/ncdu/1.15.1-GCCcore-9.3.0.lua>`.
+:download:`/opt/apps/testapps/el7/modules/staging/all/ncdu/1.15.1-GCCcore-9.3.0.lua </stanage/software/modulefiles/ncdu/1.15.1-GCCcore-9.3.0.lua>`.
 

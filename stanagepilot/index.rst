@@ -29,11 +29,8 @@ at `research-it@sheffield.ac.uk <mailto:research-it@sheffield.ac.uk?subject=Stan
   :caption: Contents:
 
   intro
-  stanage-specs
   stanage-filestores
   stanage-connecting-ssh
   stanage-file-transfers
   stanage-job-submission
   stanage-FAQ-gotchas
-  gpu-computing
-  software/index

@@ -731,6 +731,7 @@ all of the job's steps (srun invocations).
 
 --------
 
+.. _submit_job_stanage:
 
 Job Submission / Control on Stanage
 -----------------------------------

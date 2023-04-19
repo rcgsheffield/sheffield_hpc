@@ -5,7 +5,7 @@
 
 .. _stanage-specs:
 
-Cluster Specifications
+Stanage Specifications
 ======================
 
 

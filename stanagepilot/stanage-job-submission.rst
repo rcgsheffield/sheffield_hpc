@@ -5,7 +5,7 @@
     :maxdepth: 1
     :glob:
 
-.. _submit_job_stanage:
+.. _submit_job_stanage_pilot:
 
 Job Submission
 ==============
@@ -16,7 +16,7 @@ Job Submission
     Please see our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>` for further information.
 
 
-.. _submit_interactive_stanage:
+.. _submit_interactive_stanage_pilot:
 
 Interactive Jobs
 ^^^^^^^^^^^^^^^^
@@ -81,7 +81,7 @@ Slurm Command                        Description
                                      e.g. ``--cpus-per-task``. 
 ==================================== =======================================================================
 
-.. _submit_batch_stanage:
+.. _submit_batch_stanage_pilot:
 
 Batch Jobs
 ^^^^^^^^^^

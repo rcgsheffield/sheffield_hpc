@@ -32,5 +32,6 @@ at `research-it@sheffield.ac.uk <mailto:research-it@sheffield.ac.uk?subject=Stan
   stanage-filestores
   stanage-connecting-ssh
   stanage-file-transfers
+  stanage-software-redirect
   stanage-job-submission
   stanage-FAQ-gotchas

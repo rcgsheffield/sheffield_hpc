@@ -18,15 +18,15 @@ If you then want to switch to using a different version of ``scotch`` (should an
 
     module unload libs/scotch/6.0.4/gcc-6.2-openmpi-2.0.1
     
-then load the other.  
+Then load the other version.  
 
 You may wonder why modules are necessary: why not just install packages provided by the vendor of the operating system installed on the cluster?
 In shared high-performance computing environments such as our clusters:
 
-* users typically want control over the version of applications that is used (e.g. to give greater confidence that results of numerical simulations can be reproduced);
-* users may want to use applications built using compiler X rather than compiler Y as compiler X might generate faster code and/or more accurate numerical results in certain situations;
-* users may want a version of an application built with support for particular parallelisation mechanisms such as MPI for distributing work between machines (Stanage and ShARC only), OpenMP for distributing work between CPU cores or CUDA for parallelisation on GPUs);
-* users may want an application built with support for a particular library.
+* Users typically want control over the version of applications that is used (e.g. to give greater confidence that results of numerical simulations can be reproduced);
+* Users may want to use applications built using compiler X rather than compiler Y as compiler X might generate faster code and/or more accurate numerical results in certain situations;
+* Users may want a version of an application built with support for particular parallelisation mechanisms such as MPI for distributing work between machines (Stanage and ShARC only), OpenMP for distributing work between CPU cores or CUDA for parallelisation on GPUs);
+* Users may want an application built with support for a particular library.
 
 There is therefore a need to maintain multiple versions of the same applications on our clusters.
 Module files allow users to select and use the versions they need for their research.
@@ -38,19 +38,19 @@ Modules are not the only way of managing software on clusters: increasingly comm
 
    .. group-tab:: Stanage
 
-        * the :ref:`Conda <python_stanage>` package manager (Python-centric but can manage software written in any language);
+        * The :ref:`Conda <python_stanage>` package manager (Python-centric but can manage software written in any language);
         * Apptainer/Singularity, a means for deploying software in `containers <https://en.wikipedia.org/wiki/Operating-system-level_virtualization>`__ (similar to `Docker <https://www.docker.com/>`__; currently can only be used on Bessemer and ShARC).
 
 
    .. group-tab:: Bessemer
 
-        * the :ref:`Conda <python_conda_bessemer>` package manager (Python-centric but can manage software written in any language);
+        * The :ref:`Conda <python_conda_bessemer>` package manager (Python-centric but can manage software written in any language);
         * :ref:`Apptainer/Singularity <apptainer_bessemer>`, a means for deploying software in `containers <https://en.wikipedia.org/wiki/Operating-system-level_virtualization>`__ (similar to `Docker <https://www.docker.com/>`__).
 
 
-   .. group-tab:: Sharc
+   .. group-tab:: ShARC
 
-        * the :ref:`Conda <sharc-python-conda>` package manager (Python-centric but can manage software written in any language);
+        * The :ref:`Conda <sharc-python-conda>` package manager (Python-centric but can manage software written in any language);
         * :ref:`Apptainer/Singularity <apptainer_sharc>`, a means for deploying software in `containers <https://en.wikipedia.org/wiki/Operating-system-level_virtualization>`__ (similar to `Docker <https://www.docker.com/>`__).
 
 
@@ -66,7 +66,7 @@ You can then load a module using e.g.: ::
     module load libs/geos/3.6.1/gcc-4.9.4
 
 .. note::
-    Modules are not available on login nodes. You must start an interactive job on a worker node using ``qrshx``, ``qsh`` or ``qrsh`` (see :ref:`getting-started`) before any of the following commands will work.
+    Modules are not available on ShARC and Bessemer login nodes. You must start an interactive job on a worker node using ``qrshx``, ``qsh`` or ``qrsh`` / ``srun`` (see :ref:`job_submission_control`) before any of the following commands will work.
 
 You can then load further modules e.g.::
 
@@ -80,25 +80,28 @@ If you want to stop using a module (by undoing the changes that loading that mod
 
     module unload libs/gdal/2.2.0/gcc/gcc-4.9.4
 
-or to unload all loaded modules: ::
+Or to unload all loaded modules: ::
 
     module purge
 
 To learn more about what software is available on the system and discover the names of module files, you can view the online documentation for 
 
-* :ref:`software on Stanage <stanage-software>`
-* :ref:`software on Bessemer <bessemer-software>`
-* :ref:`software on ShARC <sharc-software>`
+* :ref:`Software on Stanage <stanage-software>`
+* :ref:`Software on Bessemer <bessemer-software>`
+* :ref:`Software on ShARC <sharc-software>`
 
 
 The name of a Module should tell you:
  
-* the type of software (application, library, development tool (e.g. compiler), parallel computing software);
-* the name and version of the software;
-* the name and version of compiler that the software was built using (if applicable; not all installed software was installed from source);
-* the name and version of used libraries that distinguish the different installs of a given piece of software (e.g. the version of OpenMPI an application was built with).
+* The type of software (application, library, development tool (e.g. compiler), parallel computing software);
+* The name and version of the software;
+* The name and version of compiler that the software was built using (if applicable; not all installed software was installed from source);
+* The name and version of used libraries that distinguish the different installs of a given piece of software (e.g. the version of OpenMPI an application was built with).
 
-Note that the module naming convention differs between ShARC and our newer clusters (Stanage and Bessemer).
+
+.. caution::
+
+    Please note that the module naming convention differs between ShARC and our newer clusters (Stanage and Bessemer).
 
 Some other things to be aware of:
 
@@ -184,7 +187,7 @@ Searching for Modules
             VASP/5.4.4-intel-2019b
 
 
-   .. group-tab:: Sharc
+   .. group-tab:: ShARC
 
         You can search for a module using: ::
 
@@ -248,7 +251,7 @@ Convenient ways to set up your environment for different projects
 If you regularly need to activate multiple modules whilst working on a given project 
 it may be tempting to add the necessary ``module load`` commands to a shell startup script 
 (e.g. the ``.bashrc`` script in your home directory).  
-However, this is a **Bad Idea** for several reasons:
+However, this is a :underline-bold:`bad idea` for several reasons:
 
 * Over time you will forget what is in your ``.bashrc`` and may forget that your workflow is dependent on modules loaded by the script;
 * Your ``.bashrc`` script may not be managed using version control (e.g. `Git <https://git-scm.com/>`__) or, 
@@ -265,7 +268,7 @@ You could create a script in that directory called ``setup_env.sh`` containing: 
     module load compilers/pgi/13.1
     module load mpi/pgi/openmpi/1.6.4
 
-then if you want to load these modules **in an interactive session or in a batch job** you could run: ::
+Then if you want to load these modules **in an interactive session or in a batch job** you could run: ::
 
     source /home/te1st/proj1/setup_env.sh
 
@@ -345,7 +348,7 @@ Here is a list of the most useful ``module`` commands. For full details, type ``
         * ``man module`` – detailed explanation of the above commands and others
 
 
-   .. group-tab:: Sharc
+   .. group-tab:: ShARC
 
         * ``module list`` – lists currently loaded modules
         * ``module avail`` – lists all available modules

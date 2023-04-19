@@ -35,20 +35,44 @@ Overview of the connection process
 Specific usage examples
 -----------------------
 
-* Access a HPC cluster via SSH: ::
+* Access a HPC cluster via SSH: 
 
-    ssh -J [username]@hpcgw.shef.ac.uk [username]@sharc.shef.ac.uk
+.. tabs::
 
-* Transfer a file using SCP: ::
+   .. group-tab:: ShARC
+
+    .. code-block:: console
+
+        ssh -J [username]@hpcgw.shef.ac.uk [username]@sharc.shef.ac.uk
+
+   .. group-tab:: Bessemer
+
+    .. code-block:: console
+
+        ssh -J [username]@hpcgw.shef.ac.uk [username]@bessemer.shef.ac.uk
+
+   .. group-tab:: Stanage
+
+    .. code-block:: console
+
+        ssh -J [username]@hpcgw.shef.ac.uk [username]@stanage.shef.ac.uk
+
+* Transfer a file using SCP: 
+
+.. code-block:: console
 
     scp -J [username]@hpcgw.shef.ac.uk [source path] [destination path]
 
-* Transfer files using Rsync: ::
+* Transfer files using Rsync: 
+
+.. code-block:: console
 
     rsync -av -e 'ssh -J [username]@hpcgw.shef.ac.uk' [source path] [destination path]
 
 
-* Using WinSCP: ::
+* Using WinSCP: 
+
+.. code-block:: console
 
     New Session -> Advanced -> Connection -> Tunnel
     Select 'Connect through SSH tunnel'

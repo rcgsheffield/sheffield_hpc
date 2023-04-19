@@ -265,6 +265,19 @@ There are separate ``fastdata`` areas on each cluster:
     Prior to this the lack of file locking support on the University's Lustre filesystems caused problems for certain workflows/applications
     (e.g. for programs that create/use SQLite databases).
 
+
+    :underline-bold:`User Quota management`
+
+    .. warning::
+
+        **There are no automated quota controls in the Stanage fastdata areas** and the Stanage fastdata area currently has no automatic file deletion process.
+
+        We reserve the right to prevent unfair use of this area by users and will manually assess user's usage and establish a dialogue
+        with users who are using unfair amounts of this area on a regular basis.
+
+        We also reserve the right to take measures to ensure the continuing functionality of this area which could include scheduled removal of user's files 
+        (after informing the user of the scheduled removal).
+
 -----
 
 .. _shared_dir:

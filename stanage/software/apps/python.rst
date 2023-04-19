@@ -4,8 +4,9 @@ Python
 ======
 
 .. sidebar:: Python
-    
-    :Support Level: Core
+
+    :Versions: 2019.7,2020.11,2021.11,2022.05,2022.10
+    :Documentation: https://www.python.org/doc/
     :URL: https://python.org
 
 
@@ -22,12 +23,15 @@ need.
 Using Conda Python
 ------------------
 
-.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
 
 Anaconda Python can be loaded with one of the following::
 
     module load Anaconda3/2019.07
-    module load Anaconda3/5.3.0 
+    module load Anaconda3/2020.11 
+    module load Anaconda3/2021.11
+    module load Anaconda3/2022.05
+    module load Anaconda3/2022.10
 
 The ``root`` conda environment (the default) provides Python 3 and no extra
 modules, it is automatically updated, and not recommended for general use, just
@@ -44,7 +48,7 @@ Creating a Conda Environment
 
 Every user can create their own environments, and packages shared with the
 system-wide environments will not be reinstalled or copied to your file store,
-they will be *symlinked*, this reduces the space you need in your ``/home``
+they will be *symlinked*, this reduces the space you need in your ``/users/$USER``
 directory to install many different Python environments.
 
 To create a clean environment with just Python 3.8 and numpy you can run::
@@ -54,7 +58,7 @@ To create a clean environment with just Python 3.8 and numpy you can run::
 This will download the latest release of Python 3.8 and numpy, and create an
 environment named ``mynumpy``.
 
-Any version of Python or list of packages can be provided::
+Any version of Python or list of packages can be installed::
 
     conda create -n myscience python=3.5 numpy=1.15.2 scipy
 
@@ -133,7 +137,7 @@ Create a batch job submission script called ``myscript.slurm`` that is similar t
    #SBATCH --mem-per-cpu=100
 
    export SLURM_EXPORT_ENV=ALL
-   module load Anaconda3/2019.07
+   module load Anaconda3/2022.10
 
    # We assume that the conda environment 'myexperiment' has already been created
    source activate myexperiment
@@ -150,3 +154,33 @@ Further Conda Python Learning Resources
 ---------------------------------------
 
 .. include:: /referenceinfo/imports/software/python/python_learning_resources_import.rst
+
+------------------
+
+Installation notes
+------------------
+
+Anaconda 2022.10 (EasyBuild install):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+
+Anaconda 2022.05 (EasyBuild install):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+
+Anaconda 2021.11 (EasyBuild install):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+
+Anaconda 2020.11 (EasyBuild install):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+
+Anaconda 2019.7 (EasyBuild install):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.

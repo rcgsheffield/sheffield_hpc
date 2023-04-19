@@ -5,6 +5,8 @@
     :maxdepth: 1
     :glob:
 
+.. _submit_job_stanage:
+
 Job Submission
 ==============
 

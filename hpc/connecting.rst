@@ -102,7 +102,7 @@ may be standard University `DUO MFA <https://sites.google.com/sheffield.ac.uk/mf
 
   .. group-tab:: Bessemer
 
-    On the ShARC cluster, when you connect you will be prompted to via a push notification to your DUO device to approve access 
+    On the Bessemer cluster, when you connect you will be prompted to via a push notification to your DUO device to approve access 
     or must enter a one-time code from your University provided hardware token which is associated with your DUO account.
 
     If you have not setup your University DUO MFA, please follow the steps published at: https://www.sheffield.ac.uk/it-services/mfa/set-mfa

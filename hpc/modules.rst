@@ -275,15 +275,16 @@ Then if you want to load these modules **in an interactive session or in a batch
 If you want to run the job on Stanage, Bessemer and ShARC (which provide different software / module files) 
 you could adapt your script to load different modules depending on which cluster you are using: ::
 
-    if [[ -n "$SGE_CLUSTER_NAME" ]]; then
-        # On ShARC:
+    if [[ "$HOSTNAME" == *"stanage"* ]]; then
+        # On Stanage:
         module load some/module
         module load another/module
-    elseif
+    elif [[ "$HOSTNAME" == *"bessemer"* ]]; then
         # On Bessemer:
+        hostname="bessemer"
         module load different/module
-    else
-        # On Stanage:
+    else [[ "$HOSTNAME" == *"sharc"* ]]; then
+        # On ShARC:
         module load someOther/module
     fi
 

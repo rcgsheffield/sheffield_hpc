@@ -40,7 +40,7 @@ We have three cluster choices listed below for you to choose from:
 * Bessemer (Launched in 2018)
 * ShARC (Launched in 2017)
 
-It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. Stanage and ShARC are for the most part *capability* clusters designed to run larger compute jobs that will use multiple nodes. Bessemer is a *capacity* cluster designed to run smaller compute jobs which will fit on a single node. In addition, Stanage and Bessemer have newer CPUs with more modern features. Bessemer but does not have a /data filestore.
+It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. Stanage and ShARC are for the most part *capability* clusters designed to run larger compute jobs that will use multiple nodes. Bessemer is a *capacity* cluster designed to run smaller compute jobs which will fit on a single node. In addition, Stanage and Bessemer have newer CPUs with more modern features. Bessemer and Stanage do not have a `/data` filestore.
 
 
 You should prioritize putting smaller core count jobs onto Bessemer and massively parallel jobs onto Stanage or ShARC (while utilizing a form of :ref:`MPI <parallel_MPI>`).

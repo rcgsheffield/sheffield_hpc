@@ -12,6 +12,9 @@ Formatting
 
 * This is a bullet point
 
+::
+
+
 -----------------------
 
 Callout boxes
@@ -151,7 +154,7 @@ The correct order for cluster tabs is newest to oldest cluster.
 
                 srun --pty bash -i
 
-        .. group-tab:: Sharc
+        .. group-tab:: ShARC
 
             .. code-block:: console
 
@@ -171,7 +174,7 @@ The correct order for cluster tabs is newest to oldest cluster.
 
         srun --pty bash -i
 
-   .. group-tab:: Sharc
+   .. group-tab:: ShARC
 
     .. code-block:: console
 

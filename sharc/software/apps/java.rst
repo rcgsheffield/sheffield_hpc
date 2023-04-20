@@ -5,7 +5,7 @@ Java
 
 .. sidebar:: Java
 
-   :Latest Version: 1.8.0_102
+   :Latest Version: 17.0.4
    :URL: https://www.java.com/en/download/
 
 Java is a programming language and computing platform first released by Sun Microsystems in 1995.
@@ -14,29 +14,27 @@ Interactive Usage
 -----------------
 After connecting to ShARC (see :ref:`ssh`), start an interactive session with the `qrsh` or `qrshx` command.
 
-The default version of Java (which is also the most recent version; currently 1.8.0_102) is made available with the command ::
+Java can be activated using one of the following module files ::
 
-        module load apps/java
-
-Alternatively, you can explicitly load this version using::
-
-       module load apps/java/jdk1.8.0_102/binary
-
-Explicitly loading a version will become more useful once multiple versions of Java are installed on this system.
+        module load apps/java/17.0.4/binary
+        module load apps/java/13.0.2/binary
+        module load apps/java/11.0.2/binary
+        module load apps/java/jdk1.8.0_102/binary 
 
 Check that you have the version you expect. First, the runtime ::
 
     $ java -version
 
-    java version "1.8.0_102"
-    Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+    openjdk version "17.0.4" 2022-07-19
+    OpenJDK Runtime Environment Temurin-17.0.4+8 (build 17.0.4+8)
+    OpenJDK 64-Bit Server VM Temurin-17.0.4+8 (build 17.0.4+8, mixed mode, sharing)
+
 
 Now, the compiler ::
 
     $ javac -version
 
-    javac 1.8.0_102
+    javac 17.0.4
 
 
 Installation notes

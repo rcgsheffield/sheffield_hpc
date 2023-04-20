@@ -75,7 +75,7 @@ Callout boxes
    
    This is an example of a hint box.
 
-    
+
 Code blocks
 ===========
 ::
@@ -122,7 +122,59 @@ Code blocks
 
     $some code
 
+::
+
+    .. code-block:: <language>
+
+        $some code
+
+Current <language> used in code-blocks in our docs are **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
+
 Tabs
 ====
+
+The correct order for cluster tabs is newest to oldest cluster.
+
+.. code-block:: rst
+    
+    .. tabs::
+
+        .. group-tab:: Stanage
+
+            .. code-block:: console
+
+                srun --pty bash -i
+
+        .. group-tab:: Bessemer
+
+            .. code-block:: console
+
+                srun --pty bash -i
+
+        .. group-tab:: Sharc
+
+            .. code-block:: console
+
+                qrshx
+
+.. tabs::
+
+   .. group-tab:: Stanage
+
+    .. code-block:: console
+
+        srun --pty bash -i
+
+   .. group-tab:: Bessemer
+
+    .. code-block:: console
+
+        srun --pty bash -i
+
+   .. group-tab:: Sharc
+
+    .. code-block:: console
+
+        qrshx
 
 

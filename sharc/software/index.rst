@@ -14,7 +14,6 @@ an omission, or wish to request new software submit a request to `research-it@sh
 .. toctree::
     :maxdepth: 2
 
-    ../../hpc/modules
     apps/index
     development/index
     libs/index

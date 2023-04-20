@@ -3,6 +3,10 @@
 Activating software using Environment Modules
 =============================================
 
+.. note:: 
+
+    Additional detailed information on the Environment Modules software can be found on the `project's site <http://modules.sourceforge.net/>`_.
+
 Overview and rationale
 ----------------------
 
@@ -53,6 +57,7 @@ Modules are not the only way of managing software on clusters: increasingly comm
         * The :ref:`Conda <sharc-python-conda>` package manager (Python-centric but can manage software written in any language);
         * :ref:`Apptainer/Singularity <apptainer_sharc>`, a means for deploying software in `containers <https://en.wikipedia.org/wiki/Operating-system-level_virtualization>`__ (similar to `Docker <https://www.docker.com/>`__).
 
+-----
 
 Basic guide
 -----------
@@ -110,6 +115,8 @@ Some other things to be aware of:
 * Available applications and application versions may differ between our clusters;
 * The order in which you load modules may be significant (e.g. if module A sets ``SOME_ENV_VAR=apple`` and module B sets ``SOME_ENV_VAR=pear``);
 * Some related module files have been set up so that they are mutually exclusive e.g. on ShARC the modules ``dev/NAG/6.0`` and ``dev/NAG/6.1`` cannot be loaded simultaneously (as users should never want to have both loaded). 
+
+-----
 
 .. _search_env_modules:
 
@@ -214,7 +221,7 @@ Searching for Modules
             VASP/5.4.1-intel-2019b
             VASP/5.4.4-intel-2019b
 
-
+-----
 
 Behind the scenes
 -----------------
@@ -244,6 +251,8 @@ Here we see:
 * An application-specific environment variable, ``NAG_KUSARI_FILE``, is set (here to ensure that the application can find a license file).
 
 If you run the '``env``' command before and after loading a module you can see the effect of these changes.
+
+-----
 
 Convenient ways to set up your environment for different projects
 -----------------------------------------------------------------
@@ -291,6 +300,8 @@ you could adapt your script to load different modules depending on which cluster
 Managing your environment this way is more likely to result in reproducible research, 
 particularly if changes to the content of ``/home/te1st/proj1`` are tracked using Git or another version control tool
 
+-----
+
 Managing your own module files
 ------------------------------
 
@@ -316,6 +327,28 @@ The next time you run ``module avail`` you will see that your modules are listed
 If you no longer want to to have access to your own module files then you can run: ::
 
     module unuse /the/path/to/my/modules
+
+-----
+
+Compiling software dependent on modules
+---------------------------------------
+
+In most cases, if you are compiling software with dependencies on modules the only actions you need to take are to load the required modules, run any ``./configure`` or **CMake** steps 
+and then run the ``make``, ``make check`` (if available) and ``make install`` commands to build, check and install the software.
+
+Once the software is installed, each time you use the software you must first load the modules used to compile it to make the required libraries and other files used during the compilation available to the program.
+
+For more detailed information on the software installation process, please see: :ref:`installing-personal-software-installations`.
+
+If there are no preconfiguration steps available to generate a suitable **makefile** based on the current shell environment after loading modules or an example **makefile** for editing is provided, 
+you will have to construct/edit your own customised **makefile** which may have to reference specific libraries and paths.
+
+In this case, you can use the ``module show modulename`` command to show how the module file for your loaded software module/s are interacting with your shell environment to populate the ``$PATH``, ``$LD_LIBRARY_PATH`` 
+and other environment variables.
+
+You can then navigate to any directories of interest or use the ``find`` or ``grep`` commands to search them as required.
+
+-----
 
 Module Command Reference
 ------------------------
@@ -361,5 +394,3 @@ Here is a list of the most useful ``module`` commands. For full details, type ``
         * ``module help modulename`` – may show longer description of the module if present in the modulefile
         * ``man module`` – detailed explanation of the above commands and others
 
-
-More information on the Environment Modules software can be found on the `project's site <http://modules.sourceforge.net/>`_.

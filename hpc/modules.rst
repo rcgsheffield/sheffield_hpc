@@ -336,7 +336,7 @@ Compiling software dependent on modules
 In most cases, if you are compiling software with dependencies on modules the only actions you need to take are to load the required modules, run any ``./configure`` or **CMake** steps 
 and then run the ``make``, ``make check`` (if available) and ``make install`` commands to build, check and install the software.
 
-Once the software is installed, each time you use the software you must first load the modules used to compile it to make the required libraries and other files used during the compilation available to the program.
+Once the software is installed, each time you use the software you must first load the modules used to compile it. This is necessary to make the required libraries and other files used during the compilation available to the program.
 
 For more detailed information on the software installation process, please see: :ref:`installing-personal-software-installations`.
 

@@ -1,3 +1,5 @@
+.. _readme:
+
 .. image:: https://github.com/rcgsheffield/sheffield_hpc/actions/workflows/static.yml/badge.svg
     :target: https://github.com/rcgsheffield/sheffield_hpc/actions/workflows/static.yml
 
@@ -23,7 +25,7 @@ see `Fork a Repo <https://help.github.com/articles/fork-a-repo/>`_ for the GitHu
 Once you have the git repository locally on your computer,
 you will need to ensure you have Python and the Tox_ build tool installed.
 
-Please see our `Documentation Reference <https://docs.hpc.shef.ac.uk/en/latest/referenceinfo/admin-docs/>` which is a valuable resource for admins of our documentation.
+Please see our `Documentation Reference <https://docs.hpc.shef.ac.uk/en/latest/referenceinfo/admin-docs/>`_ which is a valuable resource for admins of our documentation.
 
 Once you have made your changes and updated your Fork on GitHub you will need to `Open a Pull Request <https://help.github.com/articles/using-pull-requests/>`_.
 All changes to the repository should be made through Pull Requests, including those made by the people with direct push access.

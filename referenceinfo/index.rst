@@ -20,3 +20,4 @@ This section should be used to look for a quick references to very specific info
   computer-architecture/index
   connecting/index
   mfa/index
+  admins/index

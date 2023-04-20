@@ -340,13 +340,12 @@ Once the software is installed, each time you use the software you must first lo
 
 For more detailed information on the software installation process, please see: :ref:`installing-personal-software-installations`.
 
-If:
+You will have to construct/edit your own customised **makefile** which may have to reference specific libraries and paths if:
 
 * There are no preconfiguration steps available to generate a suitable **makefile** based on the current shell environment after loading modules.
 * An example **makefile** for editing is provided.
 * No **makefile** is provided.
 
-You will have to construct/edit your own customised **makefile** which may have to reference specific libraries and paths.
 
 In this case, you can use the ``module show modulename`` command to show how the module file for your loaded software module/s are interacting with your shell environment to populate the ``$PATH``, ``$LD_LIBRARY_PATH`` 
 and other environment variables.

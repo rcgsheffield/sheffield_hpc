@@ -65,7 +65,3 @@
    *module purge*                                        Unload all modules
    *ml -\-help*                                          Shorthand options       
    ===================================================   ==========================
-
-.. tip:: 
-
-    You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*

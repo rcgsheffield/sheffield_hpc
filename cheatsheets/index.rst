@@ -5,7 +5,7 @@ Cheat Sheets
 
 .. include:: /referenceinfo/imports/cheat-sheets/cheat-sheet-note.rst
     
-Stanage, Bessemer, and ShARC Cheat Sheets
+HPC Cluster Cheat Sheets
 ------------------------------------------
 
 This cheat sheet covers basic functionality for our clusters.
@@ -24,7 +24,9 @@ This cheat sheet covers basic functionality for our clusters.
 
         .. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
 
+.. tip:: 
 
+    You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*
 -----------
 
 SGE to SLURM conversions

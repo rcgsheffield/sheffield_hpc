@@ -39,7 +39,7 @@
    The interactive job max RAM and batch job SMP values are both derived from a normal compute node's total RAM.
 
    The total MPI memory available above is derived from the total CPU nodes multiplied by the standard node RAM + Large RAM nodes * Large RAM amount and so on. 
-   GPU nodes excluded as these should not be contigously available.
+   GPU nodes excluded as these should not be contiguously available.
 
    Values for Stanage are not their total available RAM on the node as a result of Alces configuration for SLURM differing / the node requiring reserved memory
    for the operating system.

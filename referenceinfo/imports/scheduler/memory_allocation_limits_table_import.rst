@@ -41,5 +41,5 @@
    The total MPI memory available above is derived from the total CPU nodes multiplied by the standard node RAM + Large RAM nodes * Large RAM amount and so on. 
    GPU nodes excluded as these should not be contiguously available.
 
-   Values for Stanage are not their total available RAM on the node as a result of Alces configuration for SLURM differing / the node requiring reserved memory
+   Note that on Stanage the amount of memory available for Slurm jobs is not a neat multiple of two; this is because Slurm has been configured to not make less memory than the total amount of RAM per node available to jobs so as to ring-fence some memory for use by the operating system.
    for the operating system.

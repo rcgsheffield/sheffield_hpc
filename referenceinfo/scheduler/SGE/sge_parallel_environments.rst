@@ -1,10 +1,10 @@
 
-ShARC Parallel Environments
----------------------------
+ShARC/SGE Parallel Environments
+-------------------------------
 
-The available :ref:`parallel environments <parallel>` for ShARC only (Stanage and Bessemer only have the SMP environment which is set by default) can be found below:
+The available :ref:`SGE parallel environments <parallel>` (for ShARC only) can be found below:
 
-.. list-table:: ShARC Parallel Environments Table
+.. list-table:: ShARC SGE Parallel Environments Table
    :widths: 20 80
    :header-rows: 1
 

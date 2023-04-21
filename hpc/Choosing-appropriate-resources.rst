@@ -39,7 +39,7 @@ We have three cluster choices listed below for you to choose from:
 
 * Stanage (Our newest and most powerful yet, launched in March 2023).
 * Bessemer (Launched in 2018).
-* ShARC (Launched in 2017).
+* ShARC (Launched in 2016).
 
 It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. Stanage and ShARC are for the most part *`capability`* clusters designed to 
 run larger compute jobs that will use multiple nodes. Bessemer is a *`capacity`* cluster designed to run smaller compute jobs which will fit on a single node. 

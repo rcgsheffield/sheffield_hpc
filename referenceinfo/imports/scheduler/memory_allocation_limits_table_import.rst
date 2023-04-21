@@ -13,8 +13,8 @@
 
    * - SLURM (Stanage)
      - 251 GB
-     - 1TB 
-     - 2TB
+     - 1007 GB 
+     - 2014 GB
      - 2 GB / 251 GB
      - 2 GB / 251 GB (SMP) ~74404 GB (MPI)
      - **Per job basis** ``--mem=<nn>``

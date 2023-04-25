@@ -563,7 +563,7 @@ you can use the ``quota`` command:
       :ref:`ncdu module on ShARC <ncdu_sharc>`. The **ncdu** utility will give you an 
       interactive display of what files/folders are taking up storage in a given directory tree.
 
-      To determine usage in a particular :ref:`stanage_shared_dir` you can use the ``df`` command like so: 
+      To determine usage in a particular :ref:`shared_dir` you can use the ``df`` command like so: 
 
       .. code-block:: console
 

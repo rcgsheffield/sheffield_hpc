@@ -11,7 +11,7 @@ Interactive use of the GPUs
 
 .. note::
 
-  See :ref:`requesting an interactive session on slurm <stanage-job-submission>` if you're not already familiar with the concept.
+  See :ref:`requesting an interactive session on slurm <submit_interactive_stanage>` if you're not already familiar with the concept.
 
 To start using the GPU enabled nodes interactively, type:
 
@@ -43,7 +43,7 @@ Submitting batch GPU jobs
 
 .. note::
 
-  See :ref:`submitting jobs on slurm <stanage-job-submission>` if you're not already familiar with the concept.
+  See :ref:`submitting jobs on slurm <submit_job_stanage>` if you're not already familiar with the concept.
 
 To run batch jobs on GPU nodes, ensure your job submission script includes a request for GPUs,
 e.g. for a single GPU use ``--gres=gpu:1``:

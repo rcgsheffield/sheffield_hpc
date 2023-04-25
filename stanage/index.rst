@@ -20,17 +20,21 @@ Stanage
 This is the documentation for Stanage, the University of Sheffield's new High Performance Computing cluster. Stanage is the logical successor to the :ref:`sharc` cluster featuring 
 more modern CPUs with significantly greater numbers of cores available.
 
+It is highly recommended that users read the :ref:`stanage-FAQ-gotchas` and :ref:`stanage-totp-setup` pages as these contain vital information for users new to the cluster.
+
 .. toctree::
     :hidden:
     :maxdepth: 1
     :glob:
 
+    stanage-FAQ-gotchas
     software/index
     cluster_specs
     slurm
     stanage-mfa-setup
     GPUComputingStanage
 
+* :ref:`stanage-FAQ-gotchas`
 * :ref:`stanage-software`
 * :ref:`stanage-specs`
 * :ref:`slurm_info_stanage`

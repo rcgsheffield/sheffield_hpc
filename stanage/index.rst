@@ -21,7 +21,9 @@ This is the documentation for Stanage, the University of Sheffield's new High Pe
 more modern CPUs with significantly greater numbers of cores available.
 
 .. caution:: 
-    It is highly recommended that users read the :ref:`stanage-FAQ-gotchas` and :ref:`stanage-totp-setup` pages as these contain vital information for users new to the cluster.
+    It is highly recommended that users read the :ref:`stanage-FAQ-gotchas` and :ref:`stanage-totp-setup` pages as these contain vital information for users new to the cluster. 
+    
+    In particular, first time connecting     users struggling to connect should ensure they fully read the :ref:`steps to setup and connect with TOTP multifactor authentication <stanage-totp-setup>`.
 
 .. toctree::
     :hidden:

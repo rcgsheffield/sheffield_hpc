@@ -1,6 +1,5 @@
 .. |softwarename| replace:: NetLogo
 .. |currentver| replace:: 6.2.0
-.. |ebtoolchain| replace:: Java
 
 .. _NetLogo_stanage:
 
@@ -11,7 +10,6 @@
 .. sidebar:: |softwarename|
 
    :Versions:  |currentver|
-   :Dependencies: |ebtoolchain| (see Easybuild for details.)
    :URL: http://ccl.northwestern.edu/netlogo
 
 |softwarename|  is a multi-agent programmable modeling environment. It is used by many hundreds of thousands 
@@ -23,6 +21,10 @@ authored by Uri Wilensky and developed at the CCL. You can also try it online th
 
 Usage
 --------------------
+
+.. warning::
+
+    At the current moment GUI usage is not possible on Stanage, meaning you will not be able to run ``netlogo-gui.sh``.
 
 The latest version of |softwarename| (currently version |currentver|) is made available with the commands below:
 
@@ -38,10 +40,6 @@ After this any of the |softwarename| commands can be run from the terminal promp
 commands are below:
 
 .. code-block:: console
-
-    $ # Run the GUI command to open the program interactively, 
-    $ # ensure X11 forwarding is enabled in your SSH client.
-    $ netlogo-gui.sh
     
     $ # Run the headless (no GUI command) for batch jobs with appropriate arguments substituting for $ARGS.
     $ netlogo-headless.sh $ARGS
@@ -82,8 +80,8 @@ Interactive usage
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
 
-To use |softwarename| interactively you must use the netlogo-gui.sh start script. To do so, run the following 
-commands and the GUI will open:
+To use |softwarename| interactively you must use the netlogo-headless.sh start script. To do so, run the following 
+commands :
 
 .. code-block:: console
 
@@ -91,7 +89,7 @@ commands and the GUI will open:
     $ module load NetLogo/6.2.0-64
     $ # Optional symlink if use of the models library is required.
     $ # [ ! -d "./models" ] && ln -s $EBROOTNETLOGO/app/models models
-    $ netlogo-gui.sh
+    $ netlogo-headless.sh $ARGS
 
 --------
 
@@ -147,5 +145,5 @@ Installation notes
 Installation method
 ^^^^^^^^^^^^^^^^^^^
 
-|softwarename| version 6.2.0 was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+|softwarename| version 6.2.0 was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTNETLOGO/easybuild`` with the module loaded.
 

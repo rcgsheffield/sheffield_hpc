@@ -10,6 +10,7 @@
 .. sidebar:: |softwarename|
 
    :Versions:  |currentver|
+   :Dependencies: Java
    :URL: http://ccl.northwestern.edu/netlogo
 
 |softwarename|  is a multi-agent programmable modeling environment. It is used by many hundreds of thousands 

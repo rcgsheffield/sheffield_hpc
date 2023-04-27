@@ -40,7 +40,7 @@ Serial (one CPU) Batch usage
 ----------------------------
 Here, we assume that you wish to run the program ``my_code.r`` on the system. 
 With batch usage it is recommended to load a specific version of R, 
-for example ``module load apps/R/4.2.1``, 
+for example ``module load apps/R/4.2.1/gcc-8.2.0``, 
 to ensure the expected output is achieved.
 
 First, you need to write a batch submission file. 

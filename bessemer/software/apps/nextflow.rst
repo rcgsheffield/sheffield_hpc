@@ -9,7 +9,7 @@ Nextflow
    :URL: https://www.nextflow.io/
    :Dependencies: Java 11
    :Documentation: https://www.nextflow.io/docs/latest/index.html
-   :Nextflow pipelines: https://nf-co.re/
+   :Nextflow pipelines: https://nf-co.re/piplines
 
 Nextflow is a free and open-source software distributed under the Apache 2.0 licence, developed by Seqera Labs. The software is used by scientists and engineers to write, deploy and share data-intensive, highly scalable, workflows on any infrastructure.
 
@@ -24,18 +24,15 @@ Its fluent DSL simplifies the implementation and the deployment of complex paral
 Interactive Usage
 -----------------
 
-After connecting to ShARC (see :ref:`ssh`),  start an interactive session with the ``srun --pty bash -i`` command.
-
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
 
 The latest version of Nextflow (currently version 22.4.0) is made available with the commands:
 
 .. code-block:: console
         
-    module use /usr/local/modulefiles/staging/eb/all
     module load Nextflow/22.04.0
 
-Note: The module file also loads Java/11.0.2/
+Note: The module file also loads ``Java/11.0.2``
 
 You can now run the ``nextflow`` command:
 
@@ -90,7 +87,7 @@ It will output something similar to the text shown below:
 
 .. code-block:: console
 
-    N E X T F L O W  ~  version 19.04.0
+    N E X T F L O W  ~  version 22.04.0
     executor >  local (3)
     [69/c8ea4a] process > splitLetters   [100%] 1 of 1 ✔
     [84/c8b7f1] process > convertToUpper [100%] 2 of 2 ✔
@@ -113,7 +110,7 @@ Ensure you have produced the above tutorial.nf script then write a file named **
     #SBATCH --time=00:01:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load apps/Nextflow/22.04.0/binary
+    module load Nextflow/22.04.0
     nextflow run tutorial.nf
      
 You can now submit this job to the SLURM scheduler with
@@ -173,6 +170,6 @@ Version 22.04.0
 ^^^^^^^^^^^^^^^
 Version 22.04.0 was installed using Easybuild in the following directory::
 
-    /usr/local/packages/staging/eb/Nextflow/22.04.0
+    /usr/local/packages/live/eb/Nextflow/22.04.0
 
-The 22.04.0 modulefile is :download:`/usr/local/modulefiles/staging/eb/all/Nextflow/22.04.0 </bessemer/software/modulefiles/Nextflow/22.04.0>`
+The 22.04.0 modulefile is :download:`/usr/local/modulefiles/live/eb/all/Nextflow/22.04.0 </bessemer/software/modulefiles/Nextflow/22.04.0>`

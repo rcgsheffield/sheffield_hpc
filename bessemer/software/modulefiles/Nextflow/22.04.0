@@ -1,10 +1,12 @@
 #%Module
+source /usr/local/etc/module_logging.tcl
+
 proc ModulesHelp { } {
     puts stderr {
 
 Description
 ===========
-Nextflow is a reactive workflow framework and a programming DSL 
+Nextflow is a reactive workflow framework and a programming DSL
  that eases writing computational pipelines with complex data
 
 
@@ -14,12 +16,12 @@ More information
     }
 }
 
-module-whatis {Description: Nextflow is a reactive workflow framework and a programming DSL 
+module-whatis {Description: Nextflow is a reactive workflow framework and a programming DSL
  that eases writing computational pipelines with complex data}
 module-whatis {Homepage: https://www.nextflow.io}
 module-whatis {URL: https://www.nextflow.io}
 
-set root /usr/local/packages/staging/eb/Nextflow/22.04.0
+set root /usr/local/packages/live/eb/Nextflow/22.04.0
 
 conflict Nextflow
 
@@ -33,4 +35,4 @@ setenv  EBROOTNEXTFLOW          "$root"
 setenv  EBVERSIONNEXTFLOW               "22.04.0"
 setenv  EBDEVELNEXTFLOW         "$root/easybuild/Nextflow-22.04.0-easybuild-devel"
 
-# Built with EasyBuild version 4.6.1
+# Built with EasyBuild version 4.4.0

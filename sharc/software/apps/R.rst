@@ -7,7 +7,7 @@ R
 
    :URL: https://www.r-project.org/
    :Documentation: https://www.r-project.org/
-   :Versions: 3.3.2, 3.3.3, 3.4.0, 3.5.1, 3.6.3, 4.0.0, 4.0.2, 4.0.3
+   :Versions: 3.3.2, 3.3.3, 3.4.0, 3.5.1, 3.6.3, 4.0.0, 4.0.2, 4.0.3, 4.2.1
 
 R is a statistical computing language.
 
@@ -21,6 +21,7 @@ The latest version of R can be loaded with: ::
 
 Alternatively, you can load a specific version of R using one of the following: ::
   
+   module load apps/R/4.2.1/gcc-8.2.0   
    module load apps/R/4.0.3/gcc-8.2.0   
    module load apps/R/4.0.2/gcc-8.2.0
    module load apps/R/4.0.0/gcc-10.1.0
@@ -39,7 +40,7 @@ Serial (one CPU) Batch usage
 ----------------------------
 Here, we assume that you wish to run the program ``my_code.r`` on the system. 
 With batch usage it is recommended to load a specific version of R, 
-for example ``module load apps/R/4.0.3``, 
+for example ``module load apps/R/4.2.1``, 
 to ensure the expected output is achieved.
 
 First, you need to write a batch submission file. 
@@ -51,7 +52,7 @@ We assume you'll call this ``my_job.sge``:
    #$ -cwd                                # Run job from current directory
    #$ -l rmem=4G                          # Request 4 gigabytes of memory
 
-   module load apps/R/4.0.3/gcc-8.2.0     # Recommended to load a specific version of R
+   module load apps/R/4.2.1/gcc-8.2.0     # Recommended to load a specific version of R
 
    R CMD BATCH my_code.r my_code.r.o$JOB_ID
 
@@ -179,7 +180,7 @@ You can compile and run this on a worker node as follows.
 After connecting to ShARC, start an :ref:`interactive session <submit_interactive_sharc>` on a worker node
 and load a version of R: ::
 
-   module load apps/R/3.5.1/gcc-4.8.5
+   module load apps/R/4.2.1/gcc-8.2.0
 
 Assuming the program is called ``test_rmath.c``, compile with ::
 

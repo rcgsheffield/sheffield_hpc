@@ -9,7 +9,7 @@ Nextflow
    :URL: https://www.nextflow.io/
    :Dependencies: Java 11
    :Documentation: https://www.nextflow.io/docs/latest/index.html
-   :Nextflow pipelines: https://nf-co.re/piplines
+   :Nextflow pipelines: https://nf-co.re/pipelines
 
 Nextflow is a free and open-source software distributed under the Apache 2.0 licence, developed by Seqera Labs. The software is used by scientists and engineers to write, deploy and share data-intensive, highly scalable, workflows on any infrastructure.
 
@@ -47,6 +47,9 @@ You can now run the ``nextflow`` command:
     http://nextflow.io
     .
 
+A Simple Script
+^^^^^^^^^^^^^^^
+
 Write a file named **tutorial.nf** (`source <https://www.nextflow.io/docs/latest/getstarted.html#your-first-script>`_) with the following content: 
 
 .. code-block:: console
@@ -80,8 +83,9 @@ Write a file named **tutorial.nf** (`source <https://www.nextflow.io/docs/latest
 Execute the script by entering the following command in your terminal:
 
 .. code-block:: console
-
-  nextflow run tutorial.nf
+  :emphasize-lines: 1
+  
+  $ nextflow run tutorial.nf
 
 It will output something similar to the text shown below:
 

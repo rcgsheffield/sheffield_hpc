@@ -120,7 +120,7 @@ Ensure you have produced the above tutorial.nf script then write a file named **
     module load Nextflow/22.04.0
     nextflow run tutorial.nf
      
-You can now submit this job to the SLURM scheduler with
+You can now submit this job to the SLURM scheduler with:
 
 .. code-block:: console
   :emphasize-lines: 1

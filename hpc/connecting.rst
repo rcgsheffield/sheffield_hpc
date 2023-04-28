@@ -26,7 +26,7 @@ computing platforms (Linux, Windows, Mac), however we recommend Chrome or Firefo
 
    * Alternatively you can select option 1 to download and install the client for your system (Windows, Mac, or Linux).
 
-   .. Hint::
+   .. hint::
     Usernames to connect with all HPC services will be the same as those you use to login to MUSE :underline-bold:`not` the prefix on your email address.
 
 #. Enter your username and password on the myApps Portal login page.
@@ -43,7 +43,7 @@ Connecting to a cluster using SSH
 =================================
 
 
-.. Hint::
+.. hint::
 
     Usernames to connect with all HPC services will be the same as those you use to login to MUSE :underline-bold:`not` the prefix on your email address.
 

@@ -1,6 +1,6 @@
 .. _readme_file:
 
-GitHub README
+Git README
 =============
 
 .. include:: /README.rst

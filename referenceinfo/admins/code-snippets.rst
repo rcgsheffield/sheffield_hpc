@@ -260,6 +260,3 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
             .. code-block:: console
 
                 qrshx
-
-
-

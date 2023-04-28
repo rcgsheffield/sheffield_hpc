@@ -33,7 +33,7 @@ like this:
     Usage: add anywhere you would like to insert a line break 
 
     |br|
-    
+
     like this:
 
 Underline bold
@@ -63,8 +63,9 @@ Extensions
     * ``sphinx_tabs_valid_builders = ['linkcheck']`` *- extension will be enabled when running the linkcheck builder* 
     * ``sphinx_tabs_disable_tab_closing = True`` *- user won't be able to close tabs in the generated documentation* 
 
-Currently used directives *28.04.2023*
+Currently used directives 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Updated 28.04.2023*
 
 .. code-block:: 
 

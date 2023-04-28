@@ -1,4 +1,8 @@
 .. _admin-code-snippets:
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+    :glob:
 
 **************
 Code snippets
@@ -6,55 +10,22 @@ Code snippets
 
 In the following examples the rendered output is followed by the markup that generated it.
 
-Formatting
-===========
-
-* This is a bullet point
-
-::
-
-    * This is a bullet point
-
---------------------
-
-*italics*
-
-:: 
-    
-    *italics*
-
---------------------
-
-**bold**
-
-::
-
-    **bold**
-
---------------------
-
+Highlighting
+-------------
 ``inline code``
 
 ::
  
     ``inline code``
 
---------------------
-
-:underline-bold:`Some important information`
-
-.. code-block:: rst
-
-    :underline-bold:`Some important information`
-
-Underline-bold has been defined in global.rst and custom.css.
+Also commonly used for highlighting files, software etc
 
 -----------------------
 
 .. _links:
 
 Links
-=====
+------
 
 **External link**
 
@@ -95,7 +66,7 @@ The following shows the placeholder for this section
 
 
 Callout boxes
-=============
+--------------
 
 .. note::
    
@@ -156,7 +127,7 @@ Callout boxes
       This is an example of a hint box.
 
 Code blocks
-===========
+------------
 
 ::
     
@@ -214,7 +185,7 @@ Code blocks
 Current <languages> used in code-blocks in our docs are **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
 
 Tabs
-====
+-----
 
 The cluster tabs should be arranged from the most recent cluster to the oldest cluster.
 

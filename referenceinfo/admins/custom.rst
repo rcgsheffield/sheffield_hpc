@@ -1,13 +1,17 @@
-.. admin_custom_config:
+.. _admin-custom-config:
 
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+    :glob:
 Custom configuration
 ====================
 
+Global.rst
+-----------
+
 Hide external link icons
 ^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-``|hide-external-link-icons|`` is defined in ``global.rst`` and can be used to hide external link icons in the Sphinx documentation. 
 
 Usage: add to any page to suppress any external link icons on that page.
 
@@ -17,13 +21,79 @@ Usage: add to any page to suppress any external link icons on that page.
 
 Insert line break
 ^^^^^^^^^^^^^^^^^^
-``|br|`` is defined in ``global.rst`` and can be used to insert a line break.
 
-Usage: add anywhere you would like to see a line break
+Usage: add anywhere you would like to insert a line break 
+
+|br|
+
+like this:
 
 .. code-block:: 
 
+    Usage: add anywhere you would like to insert a line break 
+
     |br|
+    
+    like this:
+
+Underline bold
+---------------
+
+:underline-bold:`Some important information`
+
+.. code-block:: rst
+
+    :underline-bold:`Some important information`
+
+Underline-bold has been defined in global.rst and custom.css.
+
+Conf.py
+--------
+
+Extensions 
+^^^^^^^^^^^
+* `sphinx.ext.intersphinx <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html>`_
+* `sphinx_substitution_extensions <https://pypi.org/project/Sphinx-Substitution-Extensions/#toc-entry-1>`_
+* `sphinxcontrib.jquery <https://pypi.org/project/sphinxcontrib-jquery/>`_
+* `sphinx_rtd_theme <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_
+* `sphinx_copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_
+* `sphinx.ext.todo <https://www.sphinx-doc.org/en/master/usage/extensions/todo.html>`_
+    * ``todo_include_todos = False`` *- not included in generated documentation*
+* `sphinx_tabs.tabs <https://sphinx-tabs.readthedocs.io/en/latest/>`_
+    * ``sphinx_tabs_valid_builders = ['linkcheck']`` *- extension will be enabled when running the linkcheck builder* 
+    * ``sphinx_tabs_disable_tab_closing = True`` *- user won't be able to close tabs in the generated documentation* 
+
+Currently used directives *28.04.2023*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: 
+
+    .. caution::
+    .. code-block::
+    .. contents::
+    .. cssclass::
+    .. danger::
+    .. error::
+    .. figure::
+    .. glossary::
+    .. group-tab::
+    .. highlight::
+    .. hint::
+    .. image::
+    .. important::
+    .. include::
+    .. list-table::
+    .. literalinclude::
+    .. note::
+    .. raw::
+    .. role::
+    .. sidebar::
+    .. tabs::
+    .. tip::
+    .. toctree::
+    .. todo::
+    .. warning::
+
 
 
 

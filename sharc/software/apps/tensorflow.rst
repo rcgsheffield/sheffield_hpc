@@ -122,7 +122,7 @@ CUDA and CUDNN Import Errors
 
 Tensorflow releases depend on specific versions of both CUDA and CUDNN. If the wrong CUDNN module is loaded, you may receive an :code:`ImportError` runtime errors such as: 
 
-.. code-block :: python
+.. code-block:: python
 
    ImportError: libcublas.so.10.0: cannot open shared object file: No such file or directory
 

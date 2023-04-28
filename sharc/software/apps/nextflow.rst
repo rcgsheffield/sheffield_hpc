@@ -128,7 +128,7 @@ You can now submit this job to the SLURM scheduler with
 
 Your output file content will be similar to the following:
 
-.. code-block ::
+.. code-block::
 
     N E X T F L O W  ~  version 22.04.0
     Launching `tutorial.nf` [thirsty_mahavira] DSL2 - revision: 7ed0e799f3

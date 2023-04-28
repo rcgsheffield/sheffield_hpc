@@ -35,7 +35,7 @@ Testing
 -------
 Create a ``test.c`` file containing the following (`source <https://heasarc.gsfc.nasa.gov/docs/software/fitsio/quick/node4.html>`_):
 
-.. code-block ::
+.. code-block::
 
         #include <string.h>
         #include <stdio.h>
@@ -61,7 +61,7 @@ Create a ``test.c`` file containing the following (`source <https://heasarc.gsfc
 
 Fits file downloaded from `here <https://fits.gsfc.nasa.gov/samples/IUElwp25637mxlo.fits>`_.
 
-.. code-block ::
+.. code-block::
 
         $ module load CFITSIO/3.49-GCCcore-10.2.0
         $ module load GCC/GCCcore-10.2.0
@@ -89,7 +89,7 @@ Download and unpack `threadtest.tar.gz <https://heasarc.gsfc.nasa.gov/docs/softw
 
 Navigate into unpacked directory ``threadtest/``. Next enter the following commands:
 
-.. code-block ::
+.. code-block::
         
         module load CFITSIO/3.49-GCCcore-11.2.0
         module load GCC/11.2.0

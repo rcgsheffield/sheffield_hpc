@@ -80,7 +80,7 @@ Testing has been conducted by .........
 ----------------------------------------
 
 The Markup
-===========
+-----------
 
 :underline-bold:`The above example was rendered with the following markup:`
 

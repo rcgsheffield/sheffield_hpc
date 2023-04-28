@@ -3,11 +3,13 @@
 Documentation Reference
 =======================
 
-This section contains reference information for admins of hpc.docs site.
+This section contains reference information for admins of https://docs.hpc.shef.ac.uk/ site.
 
 
 .. toctree::
   :maxdepth: 1
   :glob:
+  
 
   ./*
+  

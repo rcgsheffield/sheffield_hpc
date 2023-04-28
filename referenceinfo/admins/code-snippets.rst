@@ -211,7 +211,7 @@ Code blocks
 
         $some code
 
-Current <language> used in code-blocks in our docs are **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
+Current <languages> used in code-blocks in our docs are **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
 
 Tabs
 ====

@@ -15,10 +15,15 @@ Service description
 -------------------
 
 The HPC Gateway service is provided to give access to the Sheffield University HPC clusters from off campus where usage of the VPN is not possible.
-This access is provided by a SSH gateway server which is configured to function as a SSH ‘jump host’ only: it does not have direct access to HPC 
-filestore or Research Shared areas, and you cannot run an interactive SSH terminal session directly on the gateway server. 
+This access is provided by a SSH gateway server which is configured to function as a SSH ‘jump host’ only. :underline-bold:`It only allows SSH jump host connections to the HPC clusters.`
 
-Additionally the HPC gateway service only allows access to the HPC clusters; you cannot access any other IT Services or departmental servers using this gateway.
+:underline-bold:`It cannot:`
+
+* Access HPC filestores directly.
+* Access research shared areas directly.
+* Allow connections to other IT Services or departmental servers.
+* Run an interactive SSH terminal session on the gateway server. 
+
 
 
 

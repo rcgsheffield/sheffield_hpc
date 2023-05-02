@@ -4,24 +4,31 @@
 HPC Gateway Service
 =====================
 
-Direct SSH access to the HPC clusters from off campus is not possible without the use of VPN. However
-if you are unable to use VPN we also provide an SSH gateway service to allow off-site SSH access to our HPC clusters.
+.. caution::
 
-.. note::
+  The HPC Gateway service :underline-bold:`is not required to access the Stanage cluster, or any Sheffield University HPC clusters`. Use of a
+  `VPN connection <https://www.sheffield.ac.uk/it-services/vpn>`_ is the recommended method to use for off-site SSH access to the HPC clusters.
 
-  Use of a `VPN connection <https://www.sheffield.ac.uk/it-services/vpn>`_ is the recommended method to use for off-site SSH access to the HPC clusters.
+  Access to the HPC clusters via the HPC gateway service  will only be granted to users who are unable use the VPN with a valid reason.
+
+Service description
+-------------------
+
+The HPC Gateway service is provided to give access to the Sheffield University HPC clusters from off campus where usage of the VPN is not possible.
+This access is provided by a SSH gateway server which is configured to function as a SSH ‘jump host’ only: it does not have direct access to HPC 
+filestore or Research Shared areas, and you cannot run an interactive SSH terminal session directly on the gateway server. 
+
+Additionally the HPC gateway service only allows access to the HPC clusters; you cannot access any other IT Services or departmental servers using this gateway.
 
 
-.. note::
-  * Access to the HPC SSH gateway service requires that you have an existing :ref:`HPC account <accounts>`.
-  * You must additionally request access to the HPC SSH gateway by emailing `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_ including a justification for your request.
-  * If the cluster access can be handled via the usage of the SSL VPN without undue effort, your request will not be granted.
 
-The SSH gateway server, ``hpcgw.shef.ac.uk``, is configured to be a SSH 'jump host' only:
-it does not have direct access to HPC filestore or Research Shared areas, and
-you cannot run an interactive SSH terminal session directly on the gateway server.
-Additionally the HPC gateway server only allow access to the HPC clusters;
-you cannot access any other IT Services or departmental servers using this gateway.
+Access conditions
+-----------------
+
+* Access to the HPC SSH gateway service requires that you have an existing :ref:`HPC account <accounts>`.
+* Access requests for the HPC SSH gateway service require a **valid justification**. If usage of the SSL VPN without undue effort is possible for HPC access, your request will be denied. 
+* Access to the HPC SSH gateway service is on a case by case basis, upon request, via emailing `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_.
+
 
 Overview of the connection process
 ----------------------------------

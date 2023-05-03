@@ -27,6 +27,7 @@ This cheat sheet covers basic functionality for our clusters.
 .. tip:: 
 
     You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*
+
 -----------
 
 SGE to SLURM conversions

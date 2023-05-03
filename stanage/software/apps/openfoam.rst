@@ -3,10 +3,10 @@ OpenFOAM
 
 .. sidebar:: OpenFOAM
 
-   :Versions: 8.0, v2012
+   :Versions: 8.0, v2012, v2206
    :URL: https://openfoam.org/ or https://www.openfoam.com/
    :Documentation: https://cfd.direct/openfoam/user-guide or https://www.openfoam.com/documentation/overview
-   :Dependencies: Easybuild foss/2020a toolchain, NCurses 6.2, METIS 5.1.0, SCOTCH 6.0.9, CGAL 4.14.3 and Paraview 5.8.0
+   :Dependencies: Easybuild foss/2022a toolchain see :ref:`stanage_eb_toolchains`
 
 OpenFOAM is leading software for computational fluid dynamics (CFD). It is licensed free and open source only under the GNU General Public Licence (GPL) by the OpenFOAM Foundation. Different versions of OpenFOAM supplied from different projects exist so choose your module carefully.
 
@@ -17,15 +17,16 @@ There are two OpenFOAM modules, choose one and load it with either:
 
 .. code-block:: bash
 
+    module load OpenFOAM/v2206-foss-2022a
     module load OpenFOAM/8-foss-2020b
     module load OpenFOAM/v2012-foss-2020a
 
 
-OpenFOAM can be used in an interactive or batch job. Both OpenFOAM modules can be activated using the module file and sourcing the OpenFOAM environment script e.g.
+OpenFOAM can be used in an interactive or batch job. OpenFOAM modules can be activated using the module file and sourcing the OpenFOAM environment script e.g.
 
 .. code-block:: bash
 
-    module load OpenFOAM/v2012-foss-2020a
+    module load OpenFOAM/v2206-foss-2022a
     source $FOAM_BASH
 
 
@@ -46,7 +47,7 @@ After connecting to Stanage (see section Connecting with SSH), you can start an 
 
 .. code-block:: bash
 
-    module load OpenFOAM/v2012-foss-2020a
+    module load OpenFOAM/v2206-foss-2022a
     source $FOAM_BASH
     rm -r /users/$USER/tests/openfoam/run/
     mkdir -p /users/$USER/tests/openfoam/run
@@ -83,7 +84,7 @@ The following is an example batch job running the pitzDaily example model on 4 n
     mkdir -p /users/$USER/tests/openfoam/run
     cd /users/$USER/tests/openfoam/run
 
-    module load OpenFOAM/v2012-foss-2020a
+    module load OpenFOAM/v2206-foss-2022a
     source $FOAM_BASH
 
     cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
@@ -162,7 +163,16 @@ In the batch script example above my_custom_decomposeParDict_4 (for 4 cores) is 
 
     // ************************************************************************* //
 
-Installation notes for Administrators:
---------------------------------------
+Installation notes
+------------------
 
-Not relevant for Pilot User phase.
+Installation method
+^^^^^^^^^^^^^^^^^^^
+
+This section is primarily for administrators of the system. OpenFOAM has been installed using the default Easybuild config files.
+Build logs and test reports can be found in ``$EBDEVELOPENFOAM`` with a given module loaded.
+
+Testing method
+^^^^^^^^^^^^^^^
+
+Testing has been conducted with the above examples.

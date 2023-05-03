@@ -275,7 +275,7 @@ In the above, you can see that the quota is 10 gigabytes and all of this is curr
 Any jobs submitted by this user will likely result in an ``Eqw`` status.
 The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
 
-To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>` or the 
+To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`, the 
 :ref:`ncdu module on Bessemer <ncdu_bessemer>` or the :ref:`ncdu module on ShARC <ncdu_sharc>` . The **ncdu** utility will give you an
 interactive display of wihch files or folders are taking up storage in a given directory tree.
 

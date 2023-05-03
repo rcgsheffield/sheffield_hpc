@@ -6,7 +6,7 @@ OpenFOAM
    :Versions: 8.0, v2012, v2206
    :URL: https://openfoam.org/ or https://www.openfoam.com/
    :Documentation: https://cfd.direct/openfoam/user-guide or https://www.openfoam.com/documentation/overview
-   :Dependencies: Easybuild foss/2022a toolchain see :ref:`stanage_eb_toolchains`
+   :Dependencies: Easybuild foss/2020a, 2020b and 2022a toolchains see :ref:`stanage_eb_toolchains`
 
 OpenFOAM is leading software for computational fluid dynamics (CFD). It is licensed free and open source only under the GNU General Public Licence (GPL) by the OpenFOAM Foundation. Different versions of OpenFOAM supplied from different projects exist so choose your module carefully.
 

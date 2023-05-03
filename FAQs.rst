@@ -277,7 +277,7 @@ The recommended action is for the user to delete enough files, or move enough fi
 
 To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`, the 
 :ref:`ncdu module on Bessemer <ncdu_bessemer>` or the :ref:`ncdu module on ShARC <ncdu_sharc>` . The **ncdu** utility will give you an
-interactive display of wihch files or folders are taking up storage in a given directory tree.
+interactive display of which files or folders are taking up storage in a given directory tree.
 
 Sometimes, it is not possible to log in to the system because of a full quota. In this situation you should contact ``research-it@sheffield.ac.uk``
 to ask for assistance, providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.

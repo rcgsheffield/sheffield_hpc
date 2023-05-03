@@ -75,10 +75,10 @@ The following is an example batch job running the pitzDaily example model on 4 n
     #SBATCH --nodes=4
     #SBATCH --ntasks-per-node=1
     #SBATCH --mem=16000
-    #SBATCH --job-name=name_OpenFOAM_V2012_mpi_4
-    #SBATCH --output=output_OpenFOAM_V2012_mpi_4
+    #SBATCH --job-name=name_OpenFOAM_V2206_mpi_4
+    #SBATCH --output=output_OpenFOAM_V2206_mpi_4
     #SBATCH --time=01:00:00
-    #SBATCH --mail-user=jane.doe@sheffield.ac.uk
+    #SBATCH --mail-user=some.user@sheffield.ac.uk
     #SBATCH --mail-type=ALL
 
     mkdir -p /users/$USER/tests/openfoam/run

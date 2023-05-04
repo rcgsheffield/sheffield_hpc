@@ -13,7 +13,7 @@ Interactive use of the GPUs
 
   See :ref:`requesting an interactive session on slurm <submit_interactive_stanage>` if you're not already familiar with the concept.
 
-To start an interactive session with access to one GPU (``--gres=gpu:1``) on a GPU node:
+To start an interactive session with access to one GPU (``--gres=gpu:1``) on a GPU node (:ref:`hardware specifications <stanage-gpu-specs>`):
 
 .. code-block:: sh
 

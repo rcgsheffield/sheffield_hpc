@@ -85,8 +85,11 @@ Very large memory nodes
 
 .. _stanage-gpu-specs:
 
+GPU nodes
+---------
+
 A100 GPU node specifications
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 16 nodes are publicly available (not exclusive to research groups).
 Prior to December 2022 these were temporarily available in the Bessemer cluster.
@@ -110,7 +113,7 @@ Prior to December 2022 these were temporarily available in the Bessemer cluster.
   * 80GB memory (HBM2e).
 
 H100 GPU node specifications
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 6 nodes are publicly available (not exclusive to research groups).
 

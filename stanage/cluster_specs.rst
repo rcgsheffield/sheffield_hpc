@@ -130,7 +130,7 @@ H100 GPU node specifications
   * DDR4.
 
 * Local storage: 460 GB boot device (SSD) plus 960 GB :ref:`'/scratch' temporary storage<scratch_dir>` (SSD).
-* GPUs: 2x `NVIDIA A100 <https://www.nvidia.com/en-gb/data-center/h100/>`__, each with:
+* GPUs: 2x `NVIDIA H100 <https://www.nvidia.com/en-gb/data-center/h100/>`__, each with:
 
   * PCIe connectivity;
   * 80GB memory (HBM2e).

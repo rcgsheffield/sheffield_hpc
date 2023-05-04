@@ -13,7 +13,7 @@ Interactive use of the GPUs
 
   See :ref:`requesting an interactive session on slurm <submit_interactive_stanage>` if you're not already familiar with the concept.
 
-To start an interactive session with access to one GPU (``--gres=gpu:1``) on a GPU node (:ref:`hardware specifications <stanage-gpu-specs>`):
+To start an interactive session with access to one GPU (``--gres=gpu:1``) on a GPU node (:ref:`Stanage hardware specifications <stanage-gpu-specs>`):
 
 .. code-block:: sh
 
@@ -26,6 +26,8 @@ To explicitly request a particular type of GPU architecture use one of the follo
 * ``--gres=gpu:h100:1``
 
 Note it's not possible to request GPUs using ``--gpus=N`` on Stanage at this time (unlike on Bessemer).
+
+Be aware that some GPU nodes have more GPUs per node than others (:ref:`Stanage hardware specifications <stanage-gpu-specs>`).
 
 Interactive sessions provide you with 2 GB of CPU RAM by default,
 which is significantly less than the amount of GPU RAM available on a single GPU.
@@ -80,6 +82,7 @@ Note that
 
 * The GPUs are (unintuitively) shared between the Slurm tasks.
 * It's not possible to request ``--gpus-per-node``, ``--gpus-per-task`` or ``--gpus-per-socket`` on Stanage at this time (unlike on Bessemer).
+* Not all nodes have four GPUs (:ref:`Stanage hardware specifications <stanage-gpu-specs>`).
 
 .. _gpu_resources_stanage:
 

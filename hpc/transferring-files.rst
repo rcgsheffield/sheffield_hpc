@@ -57,7 +57,8 @@ Using SCP in the terminal
 If your local machine has a terminal and the ``scp``  (“secure copy”) command is available 
 you can use it to make transfers of files or folders.
 
-Where below substitute **$CLUSTER_NAME** with bessemer or sharc and **$USER** with your cluster username. 
+Where below substitute **$CLUSTER_NAME** with stanage, bessemer or sharc
+ and **$USER** with your cluster username. 
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or enter your passcode.
 
 To upload, you transfer from your local machine to the remote cluster:
@@ -101,7 +102,14 @@ To connect to the cluster, we’ll just need make a **new site** and enter our c
   encrypt these credentials by changing the settings 
   `as shown in these instructions <https://filezillapro.com/docs/v3/advanced/master-password/>`_.
 
-* **Host**: sftp://$CLUSTER_NAME.shef.ac.uk (replace $CLUSTER_NAME with bessemer or sharc.)
+You can create a new site by selecting *file* from top menu bar then *site manager* which will open a dialog similar to:
+
+.. figure:: ../images/filezilla_new_site.png
+
+
+After hitting the *new site* button you can enter your credentials in the general tab:
+
+* **Host**: sftp://$CLUSTER_NAME.shef.ac.uk (replace $CLUSTER_NAME with stanage, bessemer or sharc.)
 * **User**: Your cluster username
 * **Password**: Your cluster password (leave blank and fill this interactively if on a shared machine.)
 * **Port**: (leave blank to use the default port)
@@ -139,7 +147,7 @@ backup folders.
   ``rsync`` to show you the changes it will make for a given command.
 
 The ``rsync`` syntax is very similar to ``scp``. To transfer to another computer with commonly used options, 
-where below substitute **$CLUSTER_NAME** with bessemer or sharc and **$USER** with your cluster username.
+where below substitute **$CLUSTER_NAME** with stanage, bessemer or sharc and **$USER** with your cluster username.
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or 
 enter your passcode:
 

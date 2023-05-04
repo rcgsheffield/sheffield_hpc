@@ -52,7 +52,7 @@ To complement the standard nodes with 256GB of memory per node (4GB/core), there
 nodes with 1TB  (16GB/core), and a further 12 very large nodes with 2TB (32GB/core).
 
 Large memory nodes
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^
 
 12 nodes are publicly available (not exclusive to research groups).
 
@@ -68,7 +68,7 @@ Large memory nodes
 
 
 Very large memory nodes
-"""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^
 
 12 nodes are publicly available (not exclusive to research groups).
 
@@ -136,7 +136,7 @@ H100 GPU node specifications
   * 80GB memory (HBM2e).
 
 .. _Dell PowerEdge XE8545: https://www.delltechnologies.com/asset/en-id/products/servers/technical-support/dell-emc-poweredge-xe8545-spec-sheet.pdf
-.. _Dell PowerEdge 7525: https://i.dell.com/sites/csdocuments/Product_Docs/en/PowerEdge-R7525-Spec-Sheet.pdf
+.. _Dell PowerEdge R7525: https://i.dell.com/sites/csdocuments/Product_Docs/en/PowerEdge-R7525-Spec-Sheet.pdf
 .. _Hyperthreading:  https://en.wikipedia.org/wiki/Hyper-threading
 .. _AMD EPYC 7413: https://www.amd.com/en/products/cpu/amd-epyc-7413
 .. _NVIDIA A100: https://www.nvidia.com/en-gb/data-center/a100/

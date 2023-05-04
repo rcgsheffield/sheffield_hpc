@@ -13,14 +13,17 @@ Interactive use of the GPUs
 
   See :ref:`requesting an interactive session on slurm <submit_interactive_stanage>` if you're not already familiar with the concept.
 
-To start using the GPU enabled nodes interactively, type:
+To start an interactive session with access to one GPU (``--gres=gpu:1``) on a GPU node:
 
 .. code-block:: sh
 
    srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash
 
-The ``--gres=gpu:1`` parameter determines how many GPUs you are requesting
-(just one in this case).
+By default you'll be allocated resources on an A100 node, or an H100 node if no A100 nodes are free.
+To explicitly request a particular type of GPU architecture use one of the following instead:
+
+* ``--gres=gpu:a100:1``
+* ``--gres=gpu:h100:1``
 
 Note it's not possible to request GPUs using ``--gpus=N`` on Stanage at this time (unlike on Bessemer).
 
@@ -31,10 +34,10 @@ As such, it is recommended that you request enough CPU memory to communicate pro
 
 .. code-block:: sh
 
-   # NB Each NVIDIA A100 GPU in Stanage has 80GB of RAM
+   # NB Each NVIDIA A100 and H100 GPU in Stanage has 80GB of GPU RAM
    srun --partition=gpu --qos=gpu --gres=gpu:1 --mem=82G --pty bash
 
-The above will give you 2GB more CPU RAM than the 80GB of GPU RAM available on the NVIDIA A100.
+The above will give you 2GB more CPU RAM than the 80GB of GPU RAM available on an NVIDIA A100/H100.
 
 .. _gpu_jobs_stanage:
 

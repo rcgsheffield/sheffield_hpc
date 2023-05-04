@@ -59,6 +59,7 @@ you can use it to make transfers of files or folders.
 
 Where below substitute **$CLUSTER_NAME** with stanage, bessemer or sharc
  and **$USER** with your cluster username. 
+
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or enter your passcode.
 
 To upload, you transfer from your local machine to the remote cluster:

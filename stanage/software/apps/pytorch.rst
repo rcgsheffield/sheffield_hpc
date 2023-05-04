@@ -39,7 +39,7 @@ First request an interactive session, e.g. with :ref:`submit_interactive_stanage
    # To request 8GB of CPU RAM for the session
    srun --mem=8G --pty bash
 
-   # OR To request 8GB CPU RAM and a GPU (NB Each NVIDIA A100 GPU in Stanage has 80GB of RAM)
+   # OR To request 8GB CPU RAM and a GPU (NB Each NVIDIA A100 or H100 GPU in Stanage has 80GB of RAM)
    srun --partition=gpu --qos=gpu --mem=8G --gres=gpu:1 --pty bash
 
 Then PyTorch can be installed by the following ::

@@ -23,59 +23,59 @@ After connecting to ShARC (see :ref:`ssh`),  start an interactive session with t
 
 The latest version of LAMMPS (currently 22_08_2018) is made available by running:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      module load apps/lammps
+   module load apps/lammps
 
 Alternatively, you can load a specific version with the following command:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      module load apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1
+   module load apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1
 
 You can then run LAMMPS by entering ``lmp``
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      cp /usr/local/packages/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1/examples.tar.gz .
-      tar -xvzf examples.tar.gz
-      cd examples/indent # select indent example
-      lmp -in in.indent # run indent example
-      
+   cp /usr/local/packages/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1/examples.tar.gz .
+   tar -xvzf examples.tar.gz
+   cd examples/indent # select indent example
+   lmp -in in.indent # run indent example
+   
 
 Serial (one core) Batch usage
 -----------------------------
 
 Your batch script (script.sh) should contain the following commands:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      #!/bin/bash
-      ## your email address
-      #$ -M a.person@sheffield.ac.uk
-      #$ -m eba
-      ## set max runtime to 1 minute (for this test)
-      #$ -l h_rt=00:01:00
-      ## set max memory to 1Gb per core (default is 2G)
-      #$ -l rmem=1G
-      #$ -V
-      #$ -cwd
-      #$ -j y
-      module load apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1
-      lmp -in in.indent
+   #!/bin/bash
+   ## your email address
+   #$ -M a.person@sheffield.ac.uk
+   #$ -m eba
+   ## set max runtime to 1 minute (for this test)
+   #$ -l h_rt=00:01:00
+   ## set max memory to 1Gb per core (default is 2G)
+   #$ -l rmem=1G
+   #$ -V
+   #$ -cwd
+   #$ -j y
+   module load apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1
+   lmp -in in.indent
 
 Ensure your batch script (script.sh) has unix style line endings, & is executable:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      dos2unix script.sh
-      chmod +x script.sh
+   dos2unix script.sh
+   chmod +x script.sh
 
 Submit your job to the batch system:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      qsub script.sh
+   qsub script.sh
 
 The output will be written to the job ``.o`` file when the job finishes.
 
@@ -84,31 +84,31 @@ Parallel (multi core using MPI) Batch usage
 
 Your batch script (mpi_script.sh) should contain the following commands:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      #!/bin/bash
-      ## your email address
-      #$ -M a.person@sheffield.ac.uk
-      #$ -m eba
-      ## no of cores using mpi
-      #$ -pe mpi 4
-      ## set max runtime to 1 minute (for this test)
-      #$ -l h_rt=00:01:00
-      ## set max memory to 1Gb per core (default is 2G)
-      #$ -l rmem=1G
-      #$ -V
-      #$ -cwd
-      #$ -j y
-      module load apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1 
-      mpirun -np $NSLOTS lmp -in in.indent
+   #!/bin/bash
+   ## your email address
+   #$ -M a.person@sheffield.ac.uk
+   #$ -m eba
+   ## no of cores using mpi
+   #$ -pe mpi 4
+   ## set max runtime to 1 minute (for this test)
+   #$ -l h_rt=00:01:00
+   ## set max memory to 1Gb per core (default is 2G)
+   #$ -l rmem=1G
+   #$ -V
+   #$ -cwd
+   #$ -j y
+   module load apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1 
+   mpirun -np $NSLOTS lmp -in in.indent
 
 Ensure the mpi_script.sh has unix style line endings, and is executable using commands for serial batch (above).
 
 Submit your job to the batch system:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      qsub mpi_script.sh
+   qsub mpi_script.sh
 
 The output will be written to the job ``.o`` file when the job finishes.
 

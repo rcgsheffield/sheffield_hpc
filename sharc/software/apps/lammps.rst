@@ -6,10 +6,9 @@ LAMMPS
 .. sidebar:: LAMMPS
 
    :Versions:  22_08_2018
-   :Support Level: 
+   :URL: https://www.lammps.org/
+   :Documentation: https://docs.lammps.org/Manual.html
    :Dependencies: gcc/4.9.4, openmpi/2.0.1
-   :URL: https://lammps.sandia.gov/
-   :Documentation: https://lammps.sandia.gov/doc/Manual.html
 
 LAMMPS is a classical molecular dynamics code with a focus on materials modelling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator.
 

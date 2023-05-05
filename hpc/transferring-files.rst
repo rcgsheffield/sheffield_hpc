@@ -58,7 +58,7 @@ If your local machine has a terminal and the ``scp``  (“secure copy”) comman
 you can use it to make transfers of files or folders.
 
 Where below substitute **$CLUSTER_NAME** with stanage, bessemer or sharc
- and **$USER** with your cluster username. 
+and **$USER** with your cluster username. 
 
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or enter your passcode.
 
@@ -106,7 +106,11 @@ To connect to the cluster, we’ll just need make a **new site** and enter our c
 You can create a new site by selecting *file* from top menu bar then *site manager* which will open a dialog similar to:
 
 .. figure:: ../images/filezilla_new_site.png
+   :width: 60%
+   :align: center
+   :alt: Screenshot of Filezilla site manager dialog.
 
+|br|
 
 After hitting the *new site* button you can enter your credentials in the general tab:
 

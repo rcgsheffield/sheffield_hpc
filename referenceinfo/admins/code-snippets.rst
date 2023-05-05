@@ -8,7 +8,9 @@
 Code snippets
 **************
 
-In the following examples the rendered output is followed by the markup that generated it.
+.. note::
+
+    In the following examples the rendered output is followed by the markup that generated it.
 
 Highlighting
 -------------
@@ -176,16 +178,31 @@ Code blocks
 
 ------------------------------------
 
+.. code-block:: console
+   :emphasize-lines: 1
+    
+    $some highlighted code
+    some more code
 ::
 
+    .. code-block:: console
+        :emphasize-lines:1
+        
+        $some highlighted code
+        some more code
+
+------------------------------------
+
+::
+    
     .. code-block:: <language>
 
         $some code
 
 Current <languages> used in code-blocks in our docs are **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
 
-Tabs
------
+Grouped Tabs
+-------------
 
 The cluster tabs should be arranged from the most recent cluster to the oldest cluster.
 
@@ -195,19 +212,39 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
     .. code-block:: console
 
-        srun --pty bash -i
+        $ srun --pty bash -i
 
    .. group-tab:: Bessemer
 
     .. code-block:: console
 
-        srun --pty bash -i
+        $ srun --pty bash -i
 
    .. group-tab:: ShARC
 
     .. code-block:: console
 
-        qrshx
+        $ qrshx
+
+.. tabs::
+
+   .. group-tab:: Stanage
+
+    .. code-block:: console
+
+        $ srun --mem=8G --pty bash -i
+
+   .. group-tab:: Bessemer
+
+    .. code-block:: console
+
+        $ srun --mem=8G --pty bash -i
+
+   .. group-tab:: ShARC
+
+    .. code-block:: console
+
+        $ qrshx -l rmem=8G
 
 
 .. code-block:: rst
@@ -218,16 +255,38 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
             .. code-block:: console
 
-                srun --pty bash -i
+                $ srun --pty bash -i
 
         .. group-tab:: Bessemer
 
             .. code-block:: console
 
-                srun --pty bash -i
+                $ srun --pty bash -i
 
         .. group-tab:: ShARC
 
             .. code-block:: console
 
-                qrshx
+                $ qrshx
+
+.. code-block:: rst
+    
+    .. tabs::
+
+        .. group-tab:: Stanage
+
+            .. code-block:: console
+
+                $ srun --mem=8G --pty bash -i
+
+        .. group-tab:: Bessemer
+
+            .. code-block:: console
+
+                $ srun --mem=8G --pty bash -i
+
+        .. group-tab:: ShARC
+
+            .. code-block:: console
+
+                $ qrshx -l rmem=8G

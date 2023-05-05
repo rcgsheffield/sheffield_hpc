@@ -120,7 +120,7 @@ Submit your job to the SLURM scheduler:
 
    sbatch mpi_batch.sh
 
-The output will be written to the ``mpi-output-<JOB_ID>.log`` file when the job finishes. Looking at the tail the output should be similar to:
+The output will be written to the ``mpi-output-<JOB_ID>.log`` file when the job finishes. Looking at the head and tail the output should be similar to:
 
 .. code-block:: console
    :emphasize-lines: 1

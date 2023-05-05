@@ -183,6 +183,7 @@ Code blocks
     
     $some highlighted code
     some more code
+
 ::
 
     .. code-block:: console

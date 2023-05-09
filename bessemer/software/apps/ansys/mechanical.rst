@@ -19,6 +19,8 @@ Ansys Mechanical is a finite element analysis (FEA) tool that enables you to ana
 You can use Ansys Mechanical to simulate real world behavior of components and sub-systems, and customize it to test design variations quickly and accurately.
 ANSYS Mechanical has interfaces to other pre and post processing packages supplied by ANSYS and can make use of  built in :ref:`MPI <parallel_MPI>` to utilize multiple cross node CPU and can scale to hundreds of cores.
 
+.. include:: /referenceinfo/imports/software/ansys/ansys-license-restrictions.rst
+  
 ----------------
 
 .. include:: /referenceinfo/imports/software/ansys/module-load-list-bessemer.rst

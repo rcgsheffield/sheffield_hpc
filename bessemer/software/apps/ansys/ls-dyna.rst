@@ -21,6 +21,7 @@ tests, impact and penetration, smashes and crashes, occupant safety, and more.
 ANSYS LS-DYNA can make use of built in :ref:`MPI <parallel_MPI>` to utilize multiple cross node 
 CPU and can scale to hundreds of cores.
 
+.. include:: /referenceinfo/imports/software/ansys/ansys-license-restrictions.rst
 
 ----------------
 

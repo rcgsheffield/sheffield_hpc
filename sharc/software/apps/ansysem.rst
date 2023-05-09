@@ -16,6 +16,7 @@ ANSYS Electromagnetics Suite for Linux/Unix.
     * The University of Sheffield ANSYS licence servers currently only support ANSYS EM 2020 R1 or higher.
 
 
+.. include:: /referenceinfo/imports/software/ansys/ansys-license-restrictions.rst
 
 Usage
 -----

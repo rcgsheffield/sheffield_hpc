@@ -707,3 +707,18 @@ again, no extra configuration is required by the end user.
 For those more familiar with the use of ``mpirun`` and ``mpiexec``:
 ``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,
 although it takes different arguments and can also be used for starting interactive sessions on Slurm clusters.
+
+.. _ansys_license_restrictions:
+
+Are there any license restrictions for ANSYS?
+----------------------------------------------
+
+ANSYS users are subject to a limit of 400 concurrent cores, out of a total of 4500 available. There are no limitations on 
+the number of ANSYS applications users can open, but multi-core licenses are checked out per application, 
+with more than 4 cores used concurrently, equal to the number of cores in use above 4. 
+This restriction applies to individual usernames on all devices on campus, including personal machines and HPC, 
+and only for ANSYS multi-core licenses on the research license server. 
+
+As a result of the above anyone on HPC, personal PCs or managed PCs using more than 4 cores per application open will 
+require a number of ANSYS multi-core licenses equivalent to the number of cores they are using minus 4,
+but cannot use more than 400 at once.

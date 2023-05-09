@@ -17,6 +17,8 @@ ANSYS
 
 The ANSYS suite of programs can be used to numerically simulate a large variety of structural and fluid dynamics problems found in many engineering, physics, medical, aeronautics and automotive industry applications.
 
+.. include:: /referenceinfo/imports/software/ansys/ansys-license-restrictions.rst
+
 ----------------
 
 .. include:: /referenceinfo/imports/software/ansys/module-load-list-stanage.rst

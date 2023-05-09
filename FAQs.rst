@@ -722,3 +722,18 @@ and only for ANSYS multi-core licenses on the research license server.
 As a result of the above anyone on HPC, personal PCs or managed PCs using more than 4 cores per application open will 
 require a number of ANSYS multi-core licenses equivalent to the number of cores they are using minus 4,
 but cannot use more than 400 at once.
+
+.. table:: **Example of license usage by a user**
+   
+   ==============================================       ===========================             
+   User using ANSYS                                           Multi-core licenses in use
+   ==============================================       ===========================
+   On a desktop open using 4 cores                      4  - 4 = 0
+   On another desktop using 6 cores                     6  - 4 = 2
+   A job on ShARC using 12 cores                        12 - 4 = 8
+   A job on Stanage using 20 cores                      20 - 4 = 16
+   Another job on Stanage using 30 cores                30 - 4 = 26     
+   **Total**                                            **52**
+   ==============================================       =========================== 
+
+In the above scenario a user is using many ANSYS applications at once and has a total of 52 licenses checked out. 

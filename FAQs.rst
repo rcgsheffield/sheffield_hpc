@@ -726,7 +726,7 @@ but cannot use more than 400 at once.
 .. table:: **Example of license usage by a user**
    
    ==============================================       ===========================             
-   User using ANSYS                                           Multi-core licenses in use
+   User using ANSYS                                     Multi-core licenses in use
    ==============================================       ===========================
    On a desktop open using 4 cores                      4  - 4 = 0
    On another desktop using 6 cores                     6  - 4 = 2
@@ -736,4 +736,4 @@ but cannot use more than 400 at once.
    **Total**                                            **52**
    ==============================================       =========================== 
 
-In the above scenario a user is using many ANSYS applications at once and has a total of 52 licenses checked out. 
+In the above scenario a user is using many ANSYS applications at once and has a total of 52 multi-core licenses checked out. 

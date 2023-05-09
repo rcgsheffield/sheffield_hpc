@@ -704,6 +704,18 @@ that is compatible with the PMI2 or PMI-X library used by the Slurm job schedule
 This is the case for the administrator-provided versions of OpenMPI and Intel MPI on Bessemer and Stanage;
 again, no extra configuration is required by the end user.
 
+On Bessemer and Stanage in batch scripts you should use the ``--export=ALL`` option with the ``srun`` command, 
+which tells SLURM to export all of the current shell environment variables to the job environment.
+
+.. code-block::
+
+        srun --export=ALL my_program
+
+This is important because many applications and libraries rely on environment variables to locate their dependencies, such as shared libraries.
+
+
+
+
 For those more familiar with the use of ``mpirun`` and ``mpiexec``:
 ``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,
 although it takes different arguments and can also be used for starting interactive sessions on Slurm clusters.
@@ -740,3 +752,5 @@ but cannot use more than 400 at once.
    ==============================================       =========================== 
 
 |br|
+
+

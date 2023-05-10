@@ -105,7 +105,6 @@ Your batch script ``mpi_batch.sh`` should contain the following commands:
    #SBATCH --mail-type=FAIL
    #SBATCH --time=00:01:00
    #SBATCH --mem=1G
-   #SBATCH --nodes=1
    #SBATCH --ntasks-per-node=4
    #SBATCH --output=mpi-output-%j.log
    #SBATCH --error=mpi-error-%j.log
@@ -113,6 +112,13 @@ Your batch script ``mpi_batch.sh`` should contain the following commands:
    module load LAMMPS/3Mar2020-intel-2020a-Python-3.8.2-kokkos
    export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
    srun --export=ALL lmp -in in.indent
+
+.. note:: 
+
+      We haven't used the ``#SBATCH --nodes=1`` option as we aim to distribute tasks flexibly across the cluster, 
+      instead of restricting them to a single node. As it's often easier to find (in this case) 4 free cores scattered across multiple nodes. 
+      The decision between consolidating tasks on one node, spreading them across few nodes, or distributing them anywhere,
+      relies on model size, scalability, and the trade-off between computation and queue waiting times.
 
 Submit your job to the SLURM scheduler:
 

@@ -713,11 +713,14 @@ although it takes different arguments and can also be used for starting interact
 Are there any license restrictions for ANSYS?
 ----------------------------------------------
 
-ANSYS users are subject to a limit of 400 concurrent cores, out of a total of 4500 available. There are no limitations on 
-the number of ANSYS applications users can open, but multi-core licenses are checked out per application, 
-with more than 4 cores used concurrently, equal to the number of cores in use above 4. 
-This restriction applies to individual usernames on all devices on campus, including personal machines and HPC, 
-and only for ANSYS multi-core licenses on the research license server. 
+ANSYS users are subject to a per user limit of 400 concurrent cores via a maximum check out limit of 400 ANSYS multi-core licenses. There are no limitations on 
+the number of ANSYS applications users can open however:
+
+* Multi-core licenses are checked out per application;
+* when more than 4 cores are used concurrently;
+* with the number required equal to the number of cores in use greater than 4. 
+
+This restriction applies on an individual user basis across all applications and devices concurrently, including personal machines, managed desktop machines and the HPC clusters.
 
 As a result of the above anyone on HPC, personal PCs or managed PCs using more than 4 cores per application open will 
 require a number of ANSYS multi-core licenses equivalent to the number of cores they are using minus 4,

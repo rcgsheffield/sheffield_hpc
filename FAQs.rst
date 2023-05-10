@@ -707,14 +707,28 @@ again, no extra configuration is required by the end user.
 On Bessemer and Stanage in batch scripts you should use the ``--export=ALL`` option with the ``srun`` command, 
 which tells SLURM to export all of the current shell environment variables to the job environment.
 
-.. code-block::
+.. code-block:: console
 
         srun --export=ALL my_program
 
 This is important because many applications and libraries rely on environment variables to locate their dependencies, such as shared libraries.
 
+Take, for instance, if we were to submit this :ref:`VASP batch job <vasp_batch_stanage>` without the ``--export=ALL`` option:
 
+.. code-block:: console
 
+        srun vasp_std
+
+We would encounter an error message containing:
+
+.. code-block:: console
+
+        slurmstepd: error: execve(): vasp_std: No such file or directory
+        srun: error: node093: task 0: Exited with exit code 2
+
+While loading the VASP module will add ``vasp_std`` to the path, 
+when srun is initiated it creates a new environment. Since we haven't instructed it to export the environment variables to this new environment,
+it will not be able to locate ``vasp_std``, even if it's availble in the current shell environment.
 
 For those more familiar with the use of ``mpirun`` and ``mpiexec``:
 ``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,

@@ -739,4 +739,4 @@ but cannot use more than 400 at once.
    **Total**                                            **52**
    ==============================================       =========================== 
 
-In the above scenario a user is using many ANSYS applications at once and has a total of 52 multi-core licenses checked out, and still has 348 multi-core licenses available.
+|br|

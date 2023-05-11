@@ -705,7 +705,7 @@ This is the case for the administrator-provided versions of OpenMPI and Intel MP
 again, no extra configuration is required by the end user.
 
 On Bessemer and Stanage in batch scripts you should use the ``--export=ALL`` option with the ``srun`` command, 
-which tells SLURM to export all of the current shell environment variables to the job environment.
+which tells Slurm to export all of the current shell environment variables to the job environment.
 
 .. code-block:: console
 

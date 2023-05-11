@@ -716,7 +716,7 @@ This is important because many applications and libraries rely on environment va
 Take, for instance, if we were to submit this :ref:`OpenMPI non-interactive hello world job <batch_openmpi_stanage>` without the ``--export=ALL`` option, i.e:
 
 .. code-block:: console
-    :emphasize-lines: 5
+       :emphasize-lines: 5
         
         #!/bin/bash
         #SBATCH --nodes=1

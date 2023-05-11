@@ -106,6 +106,7 @@ Your output would be something like: ::
 Please note that requesting multiple cores in an interactive node depends on the availability. During peak times, it is unlikely that you can successfully request a large number of CPU cores interactively.  Therefore, it is usually sensible to run MPI workloads as batch jobs. 
 
    
+.. _batch_openmpi_stanage: 
 
 Non-interactive job submission
 ##############################

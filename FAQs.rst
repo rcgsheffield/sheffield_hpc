@@ -713,22 +713,26 @@ which tells SLURM to export all of the current shell environment variables to th
 
 This is important because many applications and libraries rely on environment variables to locate their dependencies, such as shared libraries.
 
-Take, for instance, if we were to submit this :ref:`VASP batch job <vasp_batch_stanage>` without the ``--export=ALL`` option:
+Take, for instance, if we were to submit this :ref:`OpenMPI non-interactive hello world job <batch_openmpi_stanage>` without the ``--export=ALL`` option, i.e:
 
 .. code-block:: console
-
-        srun vasp_std
+    :emphasize-lines: 5
+        
+        #!/bin/bash
+        #SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=8
+        module load OpenMPI/4.1.4-GCC-12.2.0
+        srun hello
 
 We would encounter an error message containing:
 
 .. code-block:: console
 
-        slurmstepd: error: execve(): vasp_std: No such file or directory
-        srun: error: node093: task 0: Exited with exit code 2
+        [node140.pri.stanage.alces.network:12429] PMIX ERROR: NOT-FOUND in file client/pmix_client.c at line 562
 
-While loading the VASP module will add ``vasp_std`` to the path, 
+While loading the OpenMPI module will set the variable ``SLURM_MPI_TYPE=pmix_v4``, 
 when srun is initiated it creates a new environment. Since we haven't instructed it to export the environment variables to this new environment,
-it will not be able to locate ``vasp_std``, even if it's availble in the current shell environment.
+it will not be able to locate ``SLURM_MPI_TYPE``, even if it's available in the current shell environment.
 
 For those more familiar with the use of ``mpirun`` and ``mpiexec``:
 ``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,

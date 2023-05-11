@@ -38,7 +38,7 @@ First we will copy an example to run:
 
 .. code-block:: bash
 
-   cp /opt/apps/testapps/el7/software/staging/LAMMPS/3Mar2020-intel-2020a-Python-3.8.2-kokkos/examples/indent/in.indent .
+   cp $EBROOTLAMMPS/examples/indent/in.indent .
 
 Your batch script ``batch.sh`` should contain the following commands:
 

@@ -724,7 +724,7 @@ Take, for instance, if we were to submit this :ref:`OpenMPI non-interactive hell
         module load OpenMPI/4.1.4-GCC-12.2.0
         srun hello
 
-We would encounter an error message containing:
+On the Stanage cluster, we would encounter an error message containing:
 
 .. code-block:: console
 

@@ -731,7 +731,7 @@ On the Stanage cluster, we would encounter an error message containing:
         [node140.pri.stanage.alces.network:12429] PMIX ERROR: NOT-FOUND in file client/pmix_client.c at line 562
 
 While loading the OpenMPI module will set the variable ``SLURM_MPI_TYPE=pmix_v4``, 
-when srun is initiated it creates a new environment. Since we haven't instructed it to export the environment variables to this new environment,
+when ``srun`` is initiated it creates a new environment. Since we haven't instructed it to export the environment variables to this new environment,
 it will not be able to locate ``SLURM_MPI_TYPE``, even if it's available in the current shell environment.
 
 For those more familiar with the use of ``mpirun`` and ``mpiexec``:

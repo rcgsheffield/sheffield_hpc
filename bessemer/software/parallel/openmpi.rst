@@ -98,8 +98,9 @@ Please note that requesting multiple cores in an interactive job depends on the 
 Non-interactive job submission
 ##############################
 
-Write a shell script (minimal example) We name the script as ‘test.sh’: ::
+Write a shell script (minimal example) named ``test.sh`` : 
 
+.. code-block:: console
 
     #!/bin/bash
     #SBATCH --nodes=1
@@ -113,10 +114,7 @@ Maximum 40 cores can be requested.
 
 .. note:: 
     
-    It is common practice to use ``srun`` when using SLURM as a workload manager, as it ensures that resources are allocated correctly. 
-    In this case, it also exports all environment variables to the compute node(s) where the job will be executed.  
-    ``mpirun`` launches an MPI application and could replace ``srun`` here but should be used with caution.
-     
+    Please see :ref:`srun_vs_mpirun_mpiexec`
     
 Submit your script by using the command: ::
 

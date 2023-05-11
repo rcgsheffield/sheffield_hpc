@@ -17,10 +17,9 @@ The three supported toolchains on Stanage are:
    - Parallel, distributed LAPACK implementation: :ref:`ScaLAPACK <scalapack_stanage>`
    - Fourier transforms: :ref:`FFTW <fftw_stanage>`
 
-.. sweep
-   - ``fosscuda``
-      - As per ``foss``
-      - Plus CUDA
+``fosscuda``
+ - As per ``foss``
+ - Plus CUDA
 
 - ``intel``
    - C, C++ and Fortran compilers (:ref:`icc/icpc/ifort <icc_ifort_stanage>`)
@@ -32,11 +31,10 @@ Dependency versions for toolchains
 
 See the `EasyBuild documentation for dependency versions for foss and intel <https://docs.easybuild.io/common-toolchains>`__
 
-.. sweep
-   ``fosscuda-2019a`` has the same dependencies as ``foss-2019a`` plus 
-   CUDA 10.1.
-   ``fosscuda-2019b`` has the same dependencies as ``foss-2019b`` plus 
-   CUDA 10.1 update 1.
+``fosscuda-2019a`` has the same dependencies as ``foss-2019a`` plus 
+CUDA 10.1.
+``fosscuda-2019b`` has the same dependencies as ``foss-2019b`` plus 
+CUDA 10.1 update 1.
 
 Sub-toolchains
 --------------

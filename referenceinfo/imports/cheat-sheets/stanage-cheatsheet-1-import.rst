@@ -45,7 +45,7 @@
                                  80GB Memory/GPU                                 
    ==========================    ==========================================
 
-.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<stanage-filestores>`
+.. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`
    :widths: auto
    
    ==========================================      =======================================

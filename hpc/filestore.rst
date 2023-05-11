@@ -118,7 +118,7 @@ All users have a home directory on each system:
   | Bessemer & ShARC  |``/home/$USER``         |
   +-------------------+------------------------+ 
 
-  To be cluster agnostic across all three we recommend you use ``~`` and ``$HOME``. This will resolve to the right path no matter the cluster. 
+  To ensure that your code is compatible with all three clusters, we suggest using the symbols "~" or "$HOME" to represent the home directory. This approach ensures that the correct path is used regardless of the cluster you are working on, making your code more portable and agnostic to the specific cluster environment.
 
   .. tabs::
 

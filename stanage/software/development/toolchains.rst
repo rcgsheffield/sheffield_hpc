@@ -8,7 +8,7 @@ was installed using `EasyBuild <https://easybuild.readthedocs.io/>`__,
 which is a tool for building and installing software on HPC systems.
 
 EasyBuild groups core sets of dependencies as what it calls *toolchains*.
-The three supported toolchains on Stanage are:
+The two supported toolchains on Stanage are:
 
 - ``foss``
    - C, C++ and Fortran compilers: :ref:`GCC <gcc_stanage>`
@@ -16,10 +16,6 @@ The three supported toolchains on Stanage are:
    - BLAS and LAPACK implementation: :ref:`OpenBLAS <openblas_stanage>`
    - Parallel, distributed LAPACK implementation: :ref:`ScaLAPACK <scalapack_stanage>`
    - Fourier transforms: :ref:`FFTW <fftw_stanage>`
-
-``fosscuda``
- - As per ``foss``
- - Plus CUDA
 
 - ``intel``
    - C, C++ and Fortran compilers (:ref:`icc/icpc/ifort <icc_ifort_stanage>`)
@@ -30,11 +26,6 @@ Dependency versions for toolchains
 ----------------------------------
 
 See the `EasyBuild documentation for dependency versions for foss and intel <https://docs.easybuild.io/common-toolchains>`__
-
-``fosscuda-2019a`` has the same dependencies as ``foss-2019a`` plus 
-CUDA 10.1.
-``fosscuda-2019b`` has the same dependencies as ``foss-2019b`` plus 
-CUDA 10.1 update 1.
 
 Sub-toolchains
 --------------

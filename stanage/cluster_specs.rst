@@ -109,7 +109,7 @@ Prior to December 2022 these were temporarily available in the Bessemer cluster.
 * Local storage: 460 GB boot device (SSD) plus 2.88 TB :ref:`'/scratch' temporary storage<scratch_dir>` (RAID 0 on SSDs).
 * GPUs: 4x `NVIDIA A100 <https://www.nvidia.com/en-gb/data-center/a100/>`__, each with:
 
-  * High-bandwidth, low-latency `NVLink <https://www.nvidia.com/en-gb/design-visualization/nvlink-bridges/>`__ GPU interconnects.
+  * High-bandwidth, low-latency `NVLink <https://www.nvidia.com/en-gb/design-visualization/nvlink-bridges/>`__ GPU interconnects (3-4x the bandwidth of PCIe for inter-GPU comms)
   * 80GB memory (HBM2e).
 
 H100 GPU node specifications
@@ -132,7 +132,7 @@ H100 GPU node specifications
 * Local storage: 460 GB boot device (SSD) plus 960 GB :ref:`'/scratch' temporary storage<scratch_dir>` (SSD).
 * GPUs: 2x `NVIDIA H100 <https://www.nvidia.com/en-gb/data-center/h100/>`__, each with:
 
-  * PCIe connectivity;
+  * PCIe connectivity (NB 3-4x *less* bandwidth than NVLink for inter-GPU comms)
   * 80GB memory (HBM2e).
 
 .. _Dell PowerEdge XE8545: https://www.delltechnologies.com/asset/en-id/products/servers/technical-support/dell-emc-poweredge-xe8545-spec-sheet.pdf

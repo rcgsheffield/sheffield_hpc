@@ -27,7 +27,8 @@ To explicitly request a particular type of GPU architecture use one of the follo
 
 Note it's not possible to request GPUs using ``--gpus=N`` on Stanage at this time (unlike on Bessemer).
 
-Be aware that some GPU nodes have more GPUs per node than others (:ref:`Stanage hardware specifications <stanage-gpu-specs>`).
+Be aware that some GPU nodes have more GPUs per node than others and some have more inter-GPU bandwidth than others;
+see :ref:`Stanage hardware specifications <stanage-gpu-specs>`.
 
 Interactive sessions provide you with 2 GB of CPU RAM by default,
 which is significantly less than the amount of GPU RAM available on a single GPU.
@@ -78,7 +79,7 @@ To request four separate Slurm tasks within a job, each of which has four CPU co
     #SBATCH --cpus-per-task=4
     #SBATCH --gres:gpu=4       # 4 GPUs for job
 
-Note that 
+Note that:
 
 * The GPUs are (unintuitively) shared between the Slurm tasks.
 * It's not possible to request ``--gpus-per-node``, ``--gpus-per-task`` or ``--gpus-per-socket`` on Stanage at this time (unlike on Bessemer).

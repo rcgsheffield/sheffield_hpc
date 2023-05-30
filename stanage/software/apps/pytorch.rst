@@ -18,9 +18,14 @@ About PyTorch on Stanage
    See :ref:`gpu_computing_stanage` for more information.
 
 As PyTorch and all its dependencies are written in Python, it can be installed locally in your home directory.
-The use of Anaconda (:ref:`python_stanage`) is recommended as
-it is able to create a virtual environment in your home directory,
+The use of Conda (:ref:`python_stanage`) is recommended as
+it is able to create virtual environment(s) in your home directory,
 allowing for the installation of new Python packages without needing admin permission.
+
+.. note::
+   All 'stable' releases of PyTorch to date (up to and including 2.0.1) are not compatible with Stanage nodes with H100 GPUs (see :ref`Stanage specs <stanage-gpu-specs>`).
+
+   To use PyTorch on the H100 nodes you must install and use a 'nightly' build of PyTorch (see installation instructions below).
 
 Installation in Home Directory
 ------------------------------
@@ -48,17 +53,19 @@ Then PyTorch can be installed by the following ::
    module load Anaconda3/2022.10
 
    # (Only needed if we're using GPU) Load a cuDNN module
-   # (which in this case implicitly loads CUDA 11.1.1)
-   module load cuDNN/8.0.4.30-CUDA-11.1.1
+   # (which in this case implicitly loads CUDA 12.0.0)
+   module load cuDNN/8.8.0.121-CUDA-12.0.0
 
    # Create an conda virtual environment called 'pytorch'
-   conda create -n pytorch python=3.6
+   conda create -n pytorch python=3.10
 
    # Activate the 'pytorch' environment
    source activate pytorch
 
-   # Install PyTorch
-   pip install torch torchvision
+   # Install the latest stable PyTorch release if you only want to run PyTorch using A100 GPUs
+   python -m pip install torch torchvision
+   # Or use a nightly PyTorch build instead if you want to be able to use H100 GPUs also / as well.
+   # python -m pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu118
 
 
 **Every Session Afterwards and in Your Job Scripts**
@@ -70,7 +77,7 @@ Use the following command to activate the Conda environment with PyTorch install
    # Load the conda module
    module load Anaconda3/2022.10
    # *Only needed if we're using GPU* Load the CUDA and cuDNN module
-   module load cuDNN/8.0.4.30-CUDA-11.1.1
+   module load cuDNN/8.8.0.121-CUDA-12.0.0
    # Activate the 'pytorch' environment
    source activate pytorch
 

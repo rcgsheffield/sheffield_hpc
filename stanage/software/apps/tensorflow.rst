@@ -31,6 +31,14 @@ The use of Anaconda (:ref:`python_stanage`) is recommended as
 it is able to create a virtual environment in your home directory,
 allowing the installation of new Python packages without needing admin permissions.
 
+.. 
+.. note::
+   If you are wanting to use TensorFlow with GPUs on Stanage:
+   
+   Be aware that official TensorFlow releases don't (yet) come with CUDA code compiled to target the ``sm_90`` NVIDIA Compute Capability (required by H100 GPUs - see :ref`Stanage specs <stanage-gpu-specs>`).
+   Attempts to run TensorFlow on H100 nodes will result in GPU-architecture-independent 'PTX' code that is bundled with TensorFlow being compiled on the fly to target the ``sm_90`` NVIDIA Compute Capability.
+   Be warned that this process can take up to ~30 minutes.
+
 Installation in Home Directory - CPU Version
 --------------------------------------------
 
@@ -45,7 +53,7 @@ Then TensorFlow can be installed by the following: ::
    module load Anaconda3/2022.10
 
    # Create an conda virtual environment called 'tensorflow'
-   conda create -n tensorflow python=3.6
+   conda create -n tensorflow python=3.10
 
    # Activate the 'tensorflow' environment
    source activate tensorflow
@@ -78,7 +86,7 @@ Then GPU version of TensorFlow can be installed by the following ::
    module load Anaconda3/2022.10
 
    # Load the CUDA and cuDNN module
-   module load cuDNN/8.0.4.30-CUDA-11.1.1
+   module load cuDNN/8.7.0.84-CUDA-11.8.0
 
    # Create an conda virtual environment called 'tensorflow-gpu'
    conda create -n tensorflow-gpu python=3.6
@@ -87,7 +95,7 @@ Then GPU version of TensorFlow can be installed by the following ::
    source activate tensorflow-gpu
 
    # Install GPU version of TensorFlow
-   pip install tensorflow==2.4.0
+   pip install tensorflow==2.12.0
 
 To install a different version of ``tensorflow`` other than the latest version
 you should specify a version number when running ``pip install`` i.e. ::
@@ -100,7 +108,7 @@ Every time you use a new session or within your job scripts, the modules must be
 Use the following command to activate the Conda environment with TensorFlow installed: ::
 
    module load Anaconda3/2022.10
-   module load cuDNN/8.0.4.30-CUDA-11.1.1
+   module load cuDNN/8.7.0.84-CUDA-11.8.0
    source activate tensorflow-gpu
 
 Testing your TensorFlow installation

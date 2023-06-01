@@ -1,4 +1,4 @@
-.. _apptainer_bessemer:
+.. _apptainer_stanage:
 
 Apptainer/Singularity
 =====================
@@ -9,7 +9,7 @@ Apptainer/Singularity
    :URL: https://apptainer.org/
 
 Designed around the notion of extreme mobility of compute and reproducible science,
-Apptainer (:ref:`previously known as Singularity <apptainer_vs_singularity_bessemer>`)
+Apptainer (:ref:`previously known as Singularity <apptainer_vs_singularity_stanage>`)
 enables users to have full control of their operating system environment.
 This means that a non-privileged user can "swap out" the operating system on the host for one they control.
 So if the host system is running CentOS Linux but your application runs in Ubuntu Linux,
@@ -31,7 +31,7 @@ About Apptainer Containers and Images
 Similar to Docker,
 an Apptainer container (image) is a self-contained software stack.
 As Apptainer does not require a root-level daemon to run its images
-it is compatible for use with Bessemer's scheduler inside your job scripts.
+it is compatible for use with Stanage's scheduler inside your job scripts.
 The running images also uses the credentials of the person calling it.
 
 In practice, this means that an image created on your local machine
@@ -40,12 +40,12 @@ will also run on the HPC cluster.
 
 Pre-built images have been provided on the cluster and
 can also be download for use on your local machine
-(see :ref:`use_image_apptainer_bessemer`).
+(see :ref:`use_image_apptainer_stanage`).
 Creating and modifying images however,
 requires root permission and so
-must be done on your machine (see :ref:`create_image_apptainer_bessemer`).
+must be done on your machine (see :ref:`create_image_apptainer_stanage`).
 
-.. _apptainer_vs_singularity_bessemer:
+.. _apptainer_vs_singularity_stanage:
 
 Apptainer versus Singularity
 ----------------------------
@@ -56,24 +56,22 @@ then be aware that:
 
 * Apptainer is (currently) almost identical in behaviour and usage to the latest release of Singularity:
   it understands the same image format and has very similar command-line behaviour;
-* You should run ``apptainer`` instead of ``singularity``, although ``singularity`` still exists (as a _symlink_ to (alias of) of ``apptainer``);
+* You should run ``apptainer`` instead of ``singularity``
 * Singularity behaviour could previously be modified using environment variables with prefixes ``SINGULARITY_`` and ``SINGULARITYENV_``;
   you should now use ``APPTAINER_`` and ``APPTAINERENV_`` prefixes instead (but the old prefixes will still work for now);
 * The per-user configuration directory has changed from ``~/.singularity`` to ``~/.apptainer``.
-  One impact of this is that cached OCI/Docker image layers in ``~/.singularity/cache`` will be redundant following the switch to Apptainer,
-  so you should probably manually delete that directory to free up space in your home directory.
 * If you tried pulling images from a remote repository using Singularity without specifying the repository hostname then
   this would default to pulling images from `https://cloud.sylabs.io/ <https://cloud.sylabs.io/>`__.
   With Apptainer there is no default remote repository.
 
 For more information on the differences between Apptainer and Singularity see the `Apptainer 1.0.0 release notes <https://github.com/apptainer/apptainer/releases/tag/v1.0.0>`__.
 
-.. _use_image_apptainer_bessemer:
+.. _use_image_apptainer_stanage:
 
 Interactive Usage of Apptainer Images
 ---------------------------------------
 
-**To use Apptainer interactively, an interactive session must first be requested using** :ref:`srun <submit_interactive_bessemer>` **for example.**
+**To use Apptainer interactively, an interactive session must first be requested using** :ref:`srun <submit_interactive_stanage>` **for example.**
 
 To get an interactive shell in to the image, use the following command: ::
 
@@ -84,7 +82,7 @@ Or if you prefer bash: ::
   apptainer exec path/to/imgfile.img /bin/bash
 
 Note that the ``exec`` command can also be used to execute other applications/scripts inside the image or
-from the mounted directories (See :ref:`auto_mounting_filestore_apptainer_bessemer`): ::
+from the mounted directories (See :ref:`auto_mounting_filestore_apptainer_stanage`): ::
 
     apptainer exec path/to/imgfile.img my_script.sh
 
@@ -99,7 +97,7 @@ from the mounted directories (See :ref:`auto_mounting_filestore_apptainer_bessem
     :ref:`This can be ignored <unnamed_groups>` and will not have an affect on running the image.
 
 
-.. _use_image_batch_apptainer_bessemer:
+.. _use_image_batch_apptainer_stanage:
 
 Submitting Batch Jobs That Uses Apptainer Images
 --------------------------------------------------
@@ -117,7 +115,7 @@ two approaches are shown in the following job script ``my_apptainer_job.sh``:
   #!/bin/bash
   #SBATCH --mem 8G
   # We requested 8GB of memory in the line above, change this according to your
-  # needs e.g. add --gpus-per-node=1 to request a single GPU
+  # needs e.g. add --gres=gpu:1 to request a single GPU
 
   # Calling ls directly using the exec command
   apptainer exec path/to/imgfile.img ls /
@@ -171,13 +169,13 @@ Where you will get something similar to the following:
   +-------------------------------+----------------------+----------------------+
 
 
-.. _auto_mounting_filestore_apptainer_bessemer:
+.. _auto_mounting_filestore_apptainer_stanage:
 
-Automatic Mounting of Bessemer Filestore Inside Images
-------------------------------------------------------
+Automatic Mounting of Stanage Filestore Inside Images
+-----------------------------------------------------
 
 When running Apptainer containers on the cluster,
-the paths ``/fastdata``, ``/home``, ``/scratch``, ``/shared`` are
+the paths ``/mnt/parscratch`` ``/home``, and ``/tmp`` are
 automatically *bind-mounted* (exposed) from the *host* operating system into your container,
 i.e. the cluster's ordinary filestores will be automatically visible within a container started on the cluster
 without that directory being explicitly created when the corresponding Apptainer image was built.
@@ -210,23 +208,23 @@ See the `Apptainer project's installation instructions <https://github.com/appta
 Manually mounting paths
 -----------------------
 
-When using Bessemer's pre-built images on your local machine,
+When using Stanage's pre-built images on your local machine,
 it may be useful to mount the existing directories in the image to your own path.
 This can be done with the flag ``-B local/path:image/path`` with
 the path outside of the image left of the colon and
 the path in the image on the right side, e.g. ::
 
-  apptainer shell -B local/datapath:/data,local/fastdatapath:/fastdata path/to/imgfile.img
+  apptainer shell -B local/datapath:/data,local/anotherpath3:/anotherpath3 path/to/imgfile.img
 
 The command mounts the path ``local/datapath`` on your local machine to
 the ``/data`` path in the image.
 Multiple mount points can be joined with ``,``
-as shown above where we additionally specify that ``local/fastdata`` mounts to ``/fastdata``.
+as shown above where we additionally specify that ``local/anotherpath3`` mounts to ``/anotherpath3``.
 The ``/home`` folder is automatically mounted by default.
 
 **Note: In order to mount a path, the directory must already exist within the image.**
 
-.. _create_image_apptainer_bessemer:
+.. _create_image_apptainer_stanage:
 
 Creating Your Own Apptainer Images
 ------------------------------------
@@ -287,7 +285,7 @@ You will also need to add the ``--writable`` flag to the command when going in t
 How Apptainer is installed and 'versioned' on the cluster
 -----------------------------------------------------------
 
-Apptainer, unlike much of the other key software packages on Bessemer,
+Apptainer, unlike much of the other key software packages on Stanage,
 is not activated using module files.
 This is because module files are primarily for the purpose of
 being able to install multiple version of the same software
@@ -295,6 +293,4 @@ and for security reasons only the most recent version of Apptainer is installed.
 The security risks associated with providing outdated builds of Apptainer
 are considered to outweigh the risk of upgrading to backwards incompatible versions.
 
-Apptainer has been installed on all worker nodes
-using the latest RPM package
-from the `EPEL <https://fedoraproject.org/wiki/EPEL>`_ repository.
+Apptainer has been installed on all worker and login nodes.

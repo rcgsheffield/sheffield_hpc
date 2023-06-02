@@ -78,8 +78,9 @@ Installation note for Administrators:
 
 ------------
 
-**To be confirmed** mapdl will not run without modifying the file::
+**To be confirmed** mapdl will not run without modifying the files::
 
+    $EBROOTANSYS/v231/ansys/bin/anssh.ini
     $EBROOTANSYS/v222/ansys/bin/anssh.ini
 
 The following instruction should be inserted at line 2433 (tbc) in ``anssh.ini``::
@@ -90,4 +91,5 @@ The following instruction should be inserted at line 2433 (tbc) in ``anssh.ini``
 
 Module files are available below:
 
+- :download:`/opt/apps/testapps/el7/modules/staging/all/ANSYS/2023R1.lua  </stanage/software/modulefiles/ansys/23.1/2023R1.lua>`
 - :download:`/opt/apps/testapps/el7/modules/staging/all/ANSYS/2022R2.lua  </stanage/software/modulefiles/ansys/22.2/2022R2.lua>`

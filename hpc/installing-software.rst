@@ -10,7 +10,7 @@ Installing software to the clusters
         :local:
   
 
-As :ref:`Bessemer <bessemer>` and :ref:`ShARC <sharc>`  are general purpose HPC clusters, 
+As :ref:`Stanage <stanage>`, :ref:`Bessemer <bessemer>` and :ref:`ShARC <sharc>`  are general purpose HPC clusters, 
 we provide and maintain only the most essential and most popular applications on them.
 
 We are aware of our users' need to run applications that are specific to their own subject 

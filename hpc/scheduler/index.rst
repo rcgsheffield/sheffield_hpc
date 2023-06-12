@@ -8,6 +8,8 @@ Job Submission and Control
     :maxdepth: 1
     :glob:
 
+    ./*
+
 Introduction
 ------------
 

@@ -22,7 +22,7 @@ Introduction
 
 This page details more advanced job submission and control methods that can be used 
 with the :ref:`SGE scheduler <sge_info>` on ShARC 
-and the more modern :ref:`SLURM scheduler <slurm_info>` on Bessemer.
+and the more modern :ref:`SLURM scheduler <slurm_info>` on Bessemer and Stanage.
 
 
 .. raw:: html
@@ -101,21 +101,21 @@ Here's a sensible approach to managing email notifications:
 
 1. Edit your array job submission script so you are *only* notified of aborted (``a``) tasks i.e. 
    
-.. code-block:: shell
+.. code-block:: console
 
         #$ -M me@sheffield.ac.uk
         #$ -m a
 
 2. Then submit your array job like so: 
 
-.. code-block:: shell
+.. code-block:: console
 
         [te1st@sharc-login1 ~]$ qsub my_array_job.sge
         Your job-array 2035587.1-3:1 ("my_array_job.sge") has been submitted
 
 3. Next, submit a very simple job that will only run when array job ``2035587`` has completed and emails you when it finishes:
 
-.. code-block:: shell
+.. code-block:: console
 
         [te1st@sharc-login1 ~]$ qsub -o /dev/null -e /dev/null -M me@sheffield.ac.uk -m ea -b y -l h_rt=00:00:15 -hold_jid 2035587 -N 'Array_Job_finished' true
         Your job 2035588 ("Job_array_finished") has been submitted
@@ -214,17 +214,19 @@ Or in the batch file itself:
 
 .. _array_jobs_bessemer:
 
-Task arrays on Bessemer
-"""""""""""""""""""""""
+.. _array_jobs_stanage:
+
+Task arrays on Bessemer and Stanage
+"""""""""""""""""""""""""""""""""""
 
 .. warning::
 
-  Array jobs on Bessemer can have a maximum of 1000 tasks.
+  Array jobs on Bessemer and Stanage can have a maximum of 1000 tasks.
 
 SLURM job arrays are only supported for batch jobs and the array index values are specified using 
 the ``--array`` or ``-a`` option of the sbatch command as follows: 
 
-.. code-block:: shell
+.. code-block:: console
 
   # Submit a job array with index values between 0 and 31
   $ sbatch --array=0-31
@@ -274,7 +276,7 @@ Will generate a job array containing three jobs with the environment variables s
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
-All Slurm commands and APIs recognize the ``SLURM_JOB_ID`` value. Most commands also recognize the ``SLURM_ARRAY_JOB_ID`` 
+All SLURM commands and APIs recognize the ``SLURM_JOB_ID`` value. Most commands also recognize the ``SLURM_ARRAY_JOB_ID`` 
 plus ``SLURM_ARRAY_TASK_ID`` values separated by an underscore as identifying an element of a job array. Using the 
 example above, "37" or "36_2" would be equivalent ways to identify the second array element of job 36. 
 
@@ -338,29 +340,49 @@ to build workflows with pre-processing or post-processing steps.
 Dependent jobs on ShARC
 """""""""""""""""""""""
 
+Job dependencies with the SGE scheduler on ShARC can be 
+specified with the ``-hold_jid`` (job hold) and ``-N`` (name) options to ``qsub`` in the format:
 
 .. code-block:: shell
 
-  #!/bin/bash
-  #$ -V
-  #$ -cwd
-  qsub -N sge_batch_1 sge_batch_1.sh
-  sleep 2
+  qsub -N job1 job1.sh
+  qsub -hold_jid job1 job2.sh
 
-  # multiple jobs can depend on a single job
-  qsub -hold_jid sge_batch_1 -N sge_batch_2 sge_batch_2.sh
-  sleep 2
+Where the first job is submitted with a name of "job1" and the second job is held back by a job called "job1".
 
-  qsub -hold_jid sge_batch_2 -N sge_batch_3 sge_batch_3.sh
-  echo "main script finished"
+A single job can be held back by multiple other named jobs using comma separation as below:
+
+.. code-block:: shell
+
+  qsub -hold_jid job1,job2,job3 job4.sh
+
+Or by making use of SGE pattern matching:
+
+.. code-block:: shell
+
+  qsub -hold_jid job* job4.sh
+
+It is also possible to use job IDs instead of names:
+
+.. code-block:: shell
+
+  job_ids=$(qsub -terse job1.sh)
+  job_ids=job_ids,$(qsub -terse job2.sh)
+  job_ids=job_ids,$(qsub -terse job3.sh)
+  qsub -hold_jid ${job_ids} job4.sh
+
+Where ``-terse`` ensures that ``qsub`` only outputs the job ID to correctly populate the ``job_ids`` variable and fourth job
+is held back by the previous three.
 
 .. _dependent_jobs_bessemer:
 
-Dependent jobs on Bessemer
-""""""""""""""""""""""""""
+.. _dependent_jobs_stanage:
 
-Job dependencies with the SLURM scheduler on Bessmer are 
-specified with the --dependency option to sbatch in the format:
+Dependent jobs on Bessemer and Stanage
+""""""""""""""""""""""""""""""""""""""
+
+Job dependencies with the SLURM scheduler on Bessemer and Stanage are 
+specified with the ``--dependency`` option to ``sbatch`` using job IDs only in the format:
 
 .. code-block:: console
 
@@ -424,36 +446,74 @@ Timed start jobs
 ^^^^^^^^^^^^^^^^
 
 Jobs can be submitted to the schedulers to run at a specific time. This section explains how 
-to achieve this with SGE on ShARC and SLURM on Bessemer.
+to achieve this with SGE on ShARC and SLURM on Bessemer and Stanage.
 
 .. _timed_jobs_sharc:
 
 Timed start jobs on ShARC
 """"""""""""""""""""""""""""
 
-Content goes here
+Timed start jobs in SGE scheduler are requested with the ``-a`` argument in the following formats:
+
+.. code-block:: shell
+
+  qsub -a 12241200 job1.sh # Dec 24th at 12:00.00
+  qsub -a 202312241200 job2.sh # Dec 24th 2023 at 12:00.00
+  qsub -a 202312241200.30 job2.sh # Dec 24th 2023 at 12:00.30
+
+The scheduler will submit these jobs immediately but wait until the elected time has passed to start the jobs running.
+
+The time format must match ``[[CC]]YY]MMDDhhmm[.SS]`` where:
+
+*    **CC**           denotes the century in 2 digits.
+*    **YY**           denotes the year in 2 digits.
+*    **MM**           denotes the month in 2 digits.
+*    **DD**           denotes the day in 2 digits.
+*    **hh**           denotes the hour in 2 digits.
+*    **mm**           denotes the minute in 2 digits.
+*    **ss**           denotes the seconds in 2 digits (default 00).
 
 .. _timed_jobs_bessemer:
 
-Timed start jobs on Bessemer
-""""""""""""""""""""""""""""
+.. _timed_jobs_stanage:
 
-Content goes here
+Timed start jobs on Bessemer and Stanage
+""""""""""""""""""""""""""""""""""""""""
+
+Timed start jobs using the Slurm scheduler are requested with the ``--begin`` argument in the following formats:
+
+.. code-block:: shell
+
+  sbatch --begin=16:00 job.sh
+  sbatch --begin=now+60 job.sh #(seconds by default)
+  sbatch --begin=now+1hour job.sh
+  sbatch --begin=2023-06-30T12:34:00 job.sh
+
+The scheduler will submit these jobs immediately but wait until the elected time has passed to start the jobs running.
 
 -----
 
 Preemptable jobs
 ^^^^^^^^^^^^^^^^
 
-A preemptable job is a job which has been set to run in a reserved queue's node when those nodes are idle. These reserved queues 
-are typically private (research group-owned or dept-owned) nodes :ref:`on Bessemer <groupnodes_bessemer>` or 
-:ref:`ShARC <groupnodes_sharc>`, but these resources will be reclaimed (and the associated jobs preempted) if
-members of those groups/departments submit jobs that can only start if those resources are repurposed.
+A preemptable job is a job which has been set to run in a reserved queue's node when those nodes are idle.
+
+The reserved queues are typically private (researcher, research group-owned or dept-owned) nodes :ref:`on Bessemer <groupnodes_bessemer>` or 
+:ref:`ShARC <groupnodes_sharc>`, 
+
+Usage of preemptable jobs will typically allow users to access significant amounts of resource very quickly due to poor  
+utilisation of private nodes by their owners, however these resources will be instantly reclaimed (and the associated jobs preempted) 
+if private node owners submit jobs that can only start immediately using their private node resources.
+
+Usage of preemptable jobs will typically allow users to access significant amounts of compute resource very quickly due to poor private node 
+utilisation of private nodes by their owners.
 
 .. warning::
 
   If your job is preempted by a job from the owner of the reserved queue your job will be terminated so your jobs must be tolerant 
   to being able to stop quickly and cleanly or they will be terminated uncleanly and you can lose output data.
+
+  i.e. your job must be able to make use of checkpointing and / or receive, understand and act on the scheduler signalling to stop execution. 
 
 .. _preemptable_jobs_sharc:
 
@@ -464,23 +524,25 @@ At present the ShARC cluster does not have any preemptable queues and this preem
 
 .. _preemptable_jobs_bessemer:
 
-Preemptable jobs on Bessemer
-""""""""""""""""""""""""""""
+.. _preemptable_jobs_stanage:
+
+Preemptable jobs on Bessemer and Stanage
+""""""""""""""""""""""""""""""""""""""""
 
 Under certain conditions,
-Slurm on Bessemer allows jobs running in higher-priority Partitions (sets of nodes) to
+SLURM on Bessemer and Stanage allows jobs running in higher-priority Partitions (sets of nodes) to
 *preempt* jobs in lower-priority Partitions.
 When a higher priority job *preempts* a lower priority job,
 the lower priority job is stopped (and by default cancelled) and
 the higher priority job takes its place.
 
-Specifically, Slurm allows users to run interactive sessions and batch jobs using idle resources
+Specifically, SLURM allows users to run interactive sessions and batch jobs using idle resources
 in :ref:`private (research group-owned or dept-owned) nodes <groupnodes_bessemer>`,
 but these resources will be reclaimed (and the associated jobs preempted) if
 members of those groups/departments submit jobs that can only start if those resources are repurposed.
 
 .. note::
-    Support for preemptable jobs has been enabled on a trial basis
+    Support for preemptable jobs has been enabled on Bessemer **only**, on a trial basis
     and will be disabled if it impacts on
     priority access by groups / departments to
     private nodes they have purchased.
@@ -493,7 +555,7 @@ An example of the use of preemptable jobs:
 4. The job starts running on a node which is a member of the ``preempt`` and ``research-group-X`` Partitions.
 5. Researcher B is a member of research group X and submits a job to the ``research-group-X`` Partition.  
 6. This job can only start if the resources being used by the first job are reclaimed.
-7. As a result, Slurm preempts the first job with this second job, as a result of which the first job is cancelled.
+7. As a result, SLURM preempts the first job with this second job, as a result of which the first job is cancelled.
 8. The second job runs to completion.
 
 .. tip::
@@ -511,13 +573,13 @@ Advanced workflow management tools
 
 Several advanced work flow management frameworks exist which make use of the 
 Distributed Resource Management Application API (DRMAA). This is available on both clusters which 
-can be used with advanced scripts or a Computational Pipeline manager. 
+can be used with advanced scripts or a Computational Pipeline manager.
 
 For further detail on DRMAA see our guide to the :ref:`drmaa` API.
 
-The links provided below document te usage of some of these frameworks on our clusters.
+The links provided below document some of these DRMAA enabled frameworks.
 
 * `Ruffus <http://www.ruffus.org.uk/>`_
-* Snakemake
-* Dask
+* `Snakemake <https://snakemake.github.io/>`_
+* `Dask <https://www.dask.org/>`_
 

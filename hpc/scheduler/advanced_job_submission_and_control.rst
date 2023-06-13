@@ -249,7 +249,7 @@ For example a job submission of this sort:
 .. code-block:: console
 
   $ sbatch --array=1-3
-  Submitted batch job 36
+  Submitted batch job 39319
 
 Will generate a job array containing three jobs with the environment variables set as follows:
 
@@ -263,14 +263,14 @@ Will generate a job array containing three jobs with the environment variables s
   SLURM_ARRAY_TASK_MIN=1
 
   SLURM_JOB_ID=39320
-  SLURM_ARRAY_JOB_ID=39319
+  SLURM_ARRAY_JOB_ID=39320
   SLURM_ARRAY_TASK_ID=2
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
   SLURM_JOB_ID=39321
-  SLURM_ARRAY_JOB_ID=39319
+  SLURM_ARRAY_JOB_ID=39321
   SLURM_ARRAY_TASK_ID=3
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3

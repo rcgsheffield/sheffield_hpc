@@ -257,28 +257,61 @@ Will generate a job array containing three jobs with the environment variables s
 
   SLURM_JOB_ID=39319
   SLURM_ARRAY_JOB_ID=39319
-  SLURM_ARRAY_TASK_ID=1
+  SLURM_ARRAY_TASK_ID=3
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
   SLURM_JOB_ID=39320
   SLURM_ARRAY_JOB_ID=39319
-  SLURM_ARRAY_TASK_ID=2
+  SLURM_ARRAY_TASK_ID=1
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
   SLURM_JOB_ID=39321
   SLURM_ARRAY_JOB_ID=39319
-  SLURM_ARRAY_TASK_ID=3
+  SLURM_ARRAY_TASK_ID=2
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
 All SLURM commands and APIs recognize the ``SLURM_JOB_ID`` value. Most commands also recognize the ``SLURM_ARRAY_JOB_ID`` 
 plus ``SLURM_ARRAY_TASK_ID`` values separated by an underscore as identifying an element of a job array. Using the 
-example above, "39320" or "39319_2" would be equivalent ways to identify the second array element of job 39319. 
+example above, "39320" or "39319_1" would be equivalent ways to identify the second array element of job 39319 as 
+shown in the following ``sacct`` command example. 
+
+.. code-block:: console
+  :emphasize-lines: 1,7
+   
+   $ sacct -j 39319_1
+   JobID           JobName  Partition    Account  AllocCPUS      State ExitCode
+   ------------ ---------- ---------- ---------- ---------- ---------- --------
+   39319_1      array.sh  sheffield       free          1  COMPLETED      0:0
+   39319_1.b+      array                  free          1  COMPLETED      0:0
+   
+   $ sacct -j 39320
+   JobID           JobName  Partition    Account  AllocCPUS      State ExitCode
+   ------------ ---------- ---------- ---------- ---------- ---------- --------
+   39319_1      array.sh  sheffield       free          1  COMPLETED      0:0
+   39319_1.b+      array                  free          1  COMPLETED      0:0
+
+The following example using the ``sacct`` command shows that ``SLURM_ARRAY_JOB_ID`` (the spawning job) will retrieve details of the whole task array:   
+
+.. code-block:: console
+  :emphasize-lines: 1
+   
+   $ sacct -j 39319
+   JobID           JobName  Partition    Account  AllocCPUS      State ExitCode
+   ------------ ---------- ---------- ---------- ---------- ---------- --------
+   39319_1      array.sh  sheffield       free          1  COMPLETED      0:0
+   39319_1.b+      array                  free          1  COMPLETED      0:0
+   39319_2      array.sh  sheffield       free          1  COMPLETED      0:0
+   39319_2.b+      array                  free          1  COMPLETED      0:0
+   39319_3      array.sh  sheffield       free          1  COMPLETED      0:0
+   39319_3.b+      array                  free          1  COMPLETED      0:0
+
+The same output would have been achieved here with ``sacct -j 39319_3``
 
 **Using email notifications**
 

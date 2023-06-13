@@ -256,21 +256,21 @@ Will generate a job array containing three jobs with the environment variables s
 .. code-block:: shell
 
   SLURM_JOB_ID=39319
-  SLURM_ARRAY_JOB_ID=36
+  SLURM_ARRAY_JOB_ID=39319
   SLURM_ARRAY_TASK_ID=1
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
-  SLURM_JOB_ID=37
-  SLURM_ARRAY_JOB_ID=36
+  SLURM_JOB_ID=39320
+  SLURM_ARRAY_JOB_ID=39319
   SLURM_ARRAY_TASK_ID=2
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
   SLURM_ARRAY_TASK_MIN=1
 
-  SLURM_JOB_ID=38
-  SLURM_ARRAY_JOB_ID=36
+  SLURM_JOB_ID=39321
+  SLURM_ARRAY_JOB_ID=39319
   SLURM_ARRAY_TASK_ID=3
   SLURM_ARRAY_TASK_COUNT=3
   SLURM_ARRAY_TASK_MAX=3
@@ -278,7 +278,7 @@ Will generate a job array containing three jobs with the environment variables s
 
 All SLURM commands and APIs recognize the ``SLURM_JOB_ID`` value. Most commands also recognize the ``SLURM_ARRAY_JOB_ID`` 
 plus ``SLURM_ARRAY_TASK_ID`` values separated by an underscore as identifying an element of a job array. Using the 
-example above, "37" or "36_2" would be equivalent ways to identify the second array element of job 36. 
+example above, "39320" or "39319_2" would be equivalent ways to identify the second array element of job 39319. 
 
 **Using email notifications**
 

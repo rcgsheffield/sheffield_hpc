@@ -255,7 +255,7 @@ Will generate a job array containing three jobs with the environment variables s
 
 .. code-block:: shell
 
-  SLURM_JOB_ID=36
+  SLURM_JOB_ID=39319
   SLURM_ARRAY_JOB_ID=36
   SLURM_ARRAY_TASK_ID=1
   SLURM_ARRAY_TASK_COUNT=3
@@ -461,7 +461,7 @@ Timed start jobs in SGE scheduler are requested with the ``-a`` argument in the 
   qsub -a 202312241200 job2.sh # Dec 24th 2023 at 12:00.00
   qsub -a 202312241200.30 job2.sh # Dec 24th 2023 at 12:00.30
 
-The scheduler will submit these jobs immediately but wait until the elected time has passed to start the jobs running.
+The scheduler will immediately submit these jobs but will wait until the elected date/time has passed before starting them.
 
 The time format must match ``[[CC]]YY]MMDDhhmm[.SS]`` where:
 
@@ -489,7 +489,7 @@ Timed start jobs using the Slurm scheduler are requested with the ``--begin`` ar
   sbatch --begin=now+1hour job.sh
   sbatch --begin=2023-06-30T12:34:00 job.sh
 
-The scheduler will submit these jobs immediately but wait until the elected time has passed to start the jobs running.
+The scheduler will immediately submit these jobs but will wait until the elected date/time has passed before starting them.
 
 -----
 

@@ -296,7 +296,8 @@ shown in the following ``sacct`` command example.
    39319_1      array.sh  sheffield       free          1  COMPLETED      0:0
    39319_1.b+      array                  free          1  COMPLETED      0:0
 
-The following example using the ``sacct`` command shows that ``SLURM_ARRAY_JOB_ID`` (the spawning job) will retrieve details of the whole task array:   
+Note that the parent job runs the final task. In the following ``sacct`` command example using
+``SLURM_ARRAY_JOB_ID`` (39319 i.e spawning job) will retrieve details of the whole task array:   
 
 .. code-block:: console
   :emphasize-lines: 1
@@ -311,7 +312,7 @@ The following example using the ``sacct`` command shows that ``SLURM_ARRAY_JOB_I
    39319_3      array.sh  sheffield       free          1  COMPLETED      0:0
    39319_3.b+      array                  free          1  COMPLETED      0:0
 
-The same output would have been achieved here with ``sacct -j 39319_3``
+The same output could have been achieved with ``sacct -j 39319_3`` .
 
 **Using email notifications**
 

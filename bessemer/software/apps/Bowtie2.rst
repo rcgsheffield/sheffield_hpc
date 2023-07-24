@@ -51,7 +51,7 @@ with a runtime of 10 minutes and 4 GB of real memory to build a small and a larg
 .. code-block:: bash
 
     #!/bin/bash
-    #SBATCH --comment=BOWTIE2_smp_test
+    #SBATCH --job-name=BOWTIE2_smp_test
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=1
     #SBATCH --mem=4000

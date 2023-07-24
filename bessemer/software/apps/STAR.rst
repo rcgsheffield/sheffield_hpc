@@ -51,7 +51,7 @@ generate a genome index.
 .. code-block:: bash
 
     #!/bin/bash
-    #SBATCH --comment=STAR_smp_test
+    #SBATCH --job-name=STAR_smp_test
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=4
     #SBATCH --mem=24000

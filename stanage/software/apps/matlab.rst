@@ -9,7 +9,6 @@
 .. sidebar:: MATLAB
 
    :Versions:  2022a
-   :Support Level: FULL
    :Dependencies: None
    :URL: https://uk.mathworks.com/products/matlab
    :Documentation: https://uk.mathworks.com/help/matlab
@@ -27,7 +26,7 @@ The latest version of MATLAB (currently 2022a) is made available by running:
 
    module load MATLAB/2022a
 
-You can then run MATLAB by entering ``matlab &``.
+You can then run MATLAB by entering ``matlab``. This provides a matlab terminal (Please note that graphical sessions are not yet available on Stanage, so the matlab GUI will not load).
 
 
 Serial (one CPU) batch usage

@@ -128,16 +128,10 @@ and records the maximum eigenvalue for each matrix in the array ``max_eigenvals`
 Installation method
 ^^^^^^^^^^^^^^^^^^^
 
+MATLAB 2022a was installed using Easybuild in the following directory:
 
+.. code-block:: bash
+   
+   /opt/apps/testapps/el7/software/staging/MATLAB/2022a
 
---------
-
-Testing
-^^^^^^^
-
-
---------
-
-Modulefiles
-^^^^^^^^^^^
 

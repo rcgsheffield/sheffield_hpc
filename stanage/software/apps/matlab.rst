@@ -1,6 +1,5 @@
 .. |softwarename| replace:: MATLAB
 .. |currentver| replace:: 2022a
-.. |ebtoolchain| replace:: 
 
 .. _matlab_stanage:
 

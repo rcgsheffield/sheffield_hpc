@@ -21,4 +21,7 @@ NLopt can be activated using one of: ::
    module load NLopt/2.7.1-GCCcore-11.3.0
    module load NLopt/2.7.1-GCCcore-12.2.0
 
-  
+Installation method
+^^^^^^^^^^^^^^^^^^^
+
+This was installed as an Easybuild dependancy for `R <https://docs.hpc.shef.ac.uk/en/latest/stanage/software/apps/R.html/>`_

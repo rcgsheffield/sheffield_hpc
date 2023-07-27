@@ -608,7 +608,7 @@ Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e.
   sleep 5s
   mpirun program2
 
-------  
+------
   
 .. _unnamed_groups:
 

@@ -609,7 +609,7 @@ Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e.
   mpirun program2
 
 ------
-  
+
 .. _unnamed_groups:
 
 Warning about 'groups: cannot find name for group ID xxxxx'

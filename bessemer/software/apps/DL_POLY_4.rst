@@ -41,7 +41,7 @@ submission script, ``my_job.sh``, to run ``DLPOLY.Z`` and which is submitted to 
 .. code-block:: bash
 
     #!/bin/bash
-    #SBATCH --comment=DL_POLY_4_test
+    #SBATCH --job-name=DL_POLY_4_test
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=8
     #SBATCH --mem=2000

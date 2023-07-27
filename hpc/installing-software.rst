@@ -21,9 +21,20 @@ This option should be seen as a service without support as we will expect such u
 tackle the problems encountered during installations on their own. We will however help make such 
 software available to other Bessemer and ShARC users by copying/installing scripts to shared locations.
 
-.. raw:: html
+    :underline-bold:`Policy on user-installed software on University of Sheffield HPC systems`
 
-    <hr class="hr-mid-section-separator">
+    |br|
+
+    * Users should endeavour to download source code or software binaries 
+         * produced by trusted developers/vendors and
+         * acquired from trusted repositories/locations.
+    * Users should keep software up to date where reproducibility is not a concern.
+    * Users should remove any software that is definitely no longer needed.
+
+To discuss and get support regarding these requirements 
+please contact research-it@sheffield.ac.uk
+
+---------
 
 General background prequisites
 ------------------------------

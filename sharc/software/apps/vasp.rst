@@ -26,7 +26,7 @@ The VASP executables are ``vasp_std``, ``vasp_gam`` and ``vasp_ncl``.
 
 .. important::
 
-    Only licensed users of VASP are entitled to use the code; refer to VASP's website for license details: https://www.vasp.at/registration_form/ . Access to VASP on ShARC is restricted to members of the unix group ``vasp``.
+    Only licensed users of VASP are entitled to use the code; refer to VASP's website for license details: https://www.vasp.at/sign_in/registration_form/ . Access to VASP on ShARC is restricted to members of the unix group ``vasp``.
     To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use VASP.
 
 

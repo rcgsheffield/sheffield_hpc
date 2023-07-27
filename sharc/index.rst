@@ -24,6 +24,7 @@ If greater single-threaded performance or greater numbers of cores are required 
   GPUComputingShARC
   DeepLearningShARC
   groupnodes/index
+  sharc-decommissioning
 
 * :ref:`sharc-software`
 * :ref:`sharc-specs`

@@ -24,4 +24,5 @@ NLopt can be activated using one of: ::
 Installation method
 ^^^^^^^^^^^^^^^^^^^
 
+
 This was installed as an Easybuild dependency for `R <https://docs.hpc.shef.ac.uk/en/latest/stanage/software/apps/R.html>`_

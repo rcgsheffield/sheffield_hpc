@@ -539,14 +539,14 @@ but you don't actually want to monitor that audio output.
 
 ------
 
-Login node RSA/ECDSA/ED25519 fingerprints
------------------------------------------
+Login node SSH RSA/ECDSA/ED25519 host key fingerprints
+------------------------------------------------------
 
-The RSA, ECDSA and ED25519 fingerprints for ShARC's login nodes are: ::
+The RSA, ECDSA and ED25519 fingerprints for Stanage's login nodes are: ::
 
-   SHA256:NVb+eAG6sMFQEbVXeF5a+x5ALHhTqtYqdV6g31Kn6vE (RSA)
-   SHA256:WJYHPbMKrWud4flwhIbrfTB1SR4pprGhx4Vu88LhP58 (ECDSA)
-   SHA256:l8imoZMnO+fHGle6zWi/pf4eyiVsEYYscKsl1ellrnE (ED25519)
+   SHA256:mFfJmZHH0SUogoUhTtlatoZLEacfGAlj0cTrnInO5z0 (RSA)
+   SHA256:4HdvK3C1KDm+JG1TzxQKxezMz5ojEORynHUqF9tQfoI (ECDSA)
+   SHA256:aaTv+0TEc0nj7WR2ZuBYWFDD+QqzOKJpMjEFKBx6pQU (ED25519)
 
 The RSA, ECDSA and ED25519 fingerprints for Bessemer's login nodes are: ::
 
@@ -554,11 +554,11 @@ The RSA, ECDSA and ED25519 fingerprints for Bessemer's login nodes are: ::
    SHA256:eG/eFhOXyKS77WCsMmkDwZSV4t7y/D8zBFHt1mFP280 (ECDSA)
    SHA256:TVzevzGC2uz8r1Z16MB9C9xEQpm7DAJC4tcSvYSD36k (ED25519)
 
-The RSA, ECDSA and ED25519 fingerprints for Stanage's login nodes are: ::
+The RSA, ECDSA and ED25519 fingerprints for ShARC's login nodes are: ::
 
-   SHA256:mFfJmZHH0SUogoUhTtlatoZLEacfGAlj0cTrnInO5z0 (RSA)
-   SHA256:4HdvK3C1KDm+JG1TzxQKxezMz5ojEORynHUqF9tQfoI (ECDSA)
-   SHA256:aaTv+0TEc0nj7WR2ZuBYWFDD+QqzOKJpMjEFKBx6pQU (ED25519)
+   SHA256:NVb+eAG6sMFQEbVXeF5a+x5ALHhTqtYqdV6g31Kn6vE (RSA)
+   SHA256:WJYHPbMKrWud4flwhIbrfTB1SR4pprGhx4Vu88LhP58 (ECDSA)
+   SHA256:l8imoZMnO+fHGle6zWi/pf4eyiVsEYYscKsl1ellrnE (ED25519)
 
 ------
 

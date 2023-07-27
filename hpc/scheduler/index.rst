@@ -514,7 +514,7 @@ Name your job submission:
 
 .. code-block:: sh
 
-    #SBATCH --comment=JOB_NAME
+    #SBATCH --job-name=JOB_NAME
 
 Specify a number of nodes:
 
@@ -621,7 +621,7 @@ Here is a more complex :ref:`SMP<parallel_SMP>` example that requests more resou
     # Change the name of the output log file.
     #SBATCH --output=output.%j.test.out
     # Rename the job's name
-    #SBATCH --comment=my_smp_job
+    #SBATCH --job-name=my_smp_job
 
 
     # Load the modules required by our program
@@ -817,7 +817,7 @@ Name your job submission:
 
 .. code-block:: sh
 
-    #SBATCH --comment=JOB_NAME
+    #SBATCH --job-name=JOB_NAME
 
 Specify a number of nodes:
 

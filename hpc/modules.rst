@@ -311,7 +311,8 @@ You may therefore want to use them to manage software installed in
 * your home directory
 * a directory shared by your research group
 
-If you want your own Modules, you typically need to create a hierarchy of directories and files.  Within a base directory the relative path to a given module file determines the name you need to use to load it.  See the ``/usr/local/modulefiles`` directories on Bessemer and ShARC to:
+If you want your own Modules, you typically need to create a hierarchy of directories and files.  Within a base directory the relative path to a given module file determines the name you need to use to load it.  
+See the /opt/apps/testapps/el7/modules/ directory on Stanage, or the /usr/local/modulefiles directories on Bessemer and ShARC, to:
 
 * see the files that provide all cluster-wide modules and 
 * get an understanding of the (`Tcl <https://www.tcl.tk/>`__) syntax and structure of module files.  

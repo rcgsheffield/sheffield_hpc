@@ -4,7 +4,7 @@ Getting an Account
 ==================
 
 Before you can start using the clusters you must first request HPC access. HPC access allows usage
-of all of our clusters (:ref:`Bessemer <bessemer>` and :ref:`ShARC <sharc>`).
+of all of our clusters (:ref:`Stanage <stanage>`,:ref:`Bessemer <bessemer>` and :ref:`ShARC <sharc>`).
 
 --------
 

@@ -260,12 +260,12 @@ There are separate ``fastdata`` areas on each cluster:
     By running the command above, your area will only be accessible to you. If desired, you could have a more sophisticated sharing scheme with private and public directories ::
 
         mkdir -m 0755 /mnt/parscratch/users/$USER
-        mkdir /parscratch/users/$USER/public
-        mkdir /parscratch/users/$USER/private
+        mkdir /mnt/parscratch/users/$USER/public
+        mkdir /mnt/parscratch/users/$USER/private
 
-        chmod 755 /parscratch/users/$USER
-        chmod 755 /parscratch/users/$USER/public
-        chmod 700 /parscratch/users/$USER/private
+        chmod 755 /mnt/parscratch/users/$USER
+        chmod 755 /mnt/parscratch/users/$USER/public
+        chmod 700 /mnt/parscratch/users/$USER/private
 
     :underline-bold:`Fastdata filestore backups and snapshots details`
 

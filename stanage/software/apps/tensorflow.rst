@@ -35,7 +35,7 @@ allowing the installation of new Python packages without needing admin permissio
 .. note::
    If you are wanting to use TensorFlow with GPUs on Stanage:
    
-   Be aware that official TensorFlow releases don't (yet) come with CUDA code compiled to target the ``sm_90`` NVIDIA Compute Capability (required by H100 GPUs - see :ref`Stanage specs <stanage-gpu-specs>`).
+   Be aware that official TensorFlow releases don't (yet) come with CUDA code compiled to target the ``sm_90`` NVIDIA Compute Capability (required by H100 GPUs - see :ref:`Stanage specs <stanage-gpu-specs>`).
    Attempts to run TensorFlow on H100 nodes will result in GPU-architecture-independent 'PTX' code that is bundled with TensorFlow being compiled on the fly to target the ``sm_90`` NVIDIA Compute Capability.
    Be warned that this process can take up to ~30 minutes.
 

@@ -141,13 +141,26 @@ i.e. ``-gencode=arch=compute_80,code=compute_80``.
 
 The minimum specified virtual architecture must be less than or equal to the `Compute Capability <https://developer.nvidia.com/cuda-gpus>`_ of the GPU used to execute the code.
 
-At present, all GPUs in Stanage are NVIDIA Tesla A100 GPUs, which are Compute Capability 80.
+At present, Stanage contains `NVIDIA A100 <https://www.nvidia.com/en-gb/data-center/a100/>`__ GPUs, and `NVIDIA H100 <https://www.nvidia.com/en-gb/data-center/h100/>`__ GPUs which are Compute Capability 80 and 90 respectively.
 
-CUDA 10.x is not aware of Compute Capability 80, so PTX for an older architecture (Compute Capability 70) should be embedded instead.
 
-To build a CUDA application which targets just A100 GPUs, use the following ``-gencode`` arguments:
+.. note::
+
+   CUDA 10.x is not aware of compute capability 80, and CUDA < 11.8 is not aware of compute capability 90. PTX for an older architecture should be embedded instead to avoid compilation errors.
+
+To build a CUDA application which targets both H100 and A100 GPUs, use the following ``-gencode`` arguments:
 
 .. tabs::
+
+   .. group-tab:: CUDA 11.8+
+
+        .. code-block:: sh
+
+           nvcc filename.cu \
+              -gencode=arch=compute_80,code=sm_80 \
+              -gencode=arch=compute_90,code=sm_90 \
+              -gencode=arch=compute_90,code=compute_90
+
 
    .. group-tab:: CUDA 11.0+
 
@@ -217,7 +230,7 @@ A common use-case for using Nsight Compute is to capture all available profiling
 .. note::
 
    If you want to perform CUDA kernel profiling on this cluster 
-   you need to explicitly request (via <mailto:research-it@sheffield.ac.uk>`_) for 
+   you need to explicitly request (via `research-it@sheffield.ac.uk <mailto:research-it@sheffield.ac.uk>`_) for 
    that to be enabled for you for a certain number of GPUs over a certain time period, 
    otherwise attempts to use tools like Nsight Compute will result in permissions errors (``ERR_NVGPUCTRPERM``).
 

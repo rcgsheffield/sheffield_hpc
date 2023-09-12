@@ -292,7 +292,7 @@ you could adapt your script to load different modules depending on which cluster
         # On Bessemer:
         hostname="bessemer"
         module load different/module
-    else [[ "$HOSTNAME" == *"sharc"* ]]; then
+    elif [[ "$HOSTNAME" == *"sharc"* ]]; then
         # On ShARC:
         module load someOther/module
     fi

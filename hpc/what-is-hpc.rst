@@ -173,9 +173,15 @@ When should I :underline-bold:`not` use HPC?
 Working with sensitive data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The High Performance Computing service should not be used to store or process sensitive information
-(e.g. medical records, personal information, financial data, commercially sensitive or any other form of restricted data)
-without first :ref:`discussing your requirements with IT Services <need_help>`.
+.. danger:: 
+
+  The High Performance Computing service :underline-bold:`must not be used to store or process any restricted or sensitive data.`
+
+Examples of restricted or sensitive data include medical records, personal information, financial data, commercially sensitive data etc...
+
+If you are unsure whether you are working with restricted or sensitive data, do not transfer data to the HPC clusters without first
+:ref:`discussing your requirements with IT Services <need_help>`.
+
 Due to the complexity of the multi-user High Performance Computing service,
 the service is not currently certified as being compliant with the
 Cyber Essentials, Cyber Essentials Plus or ISO 27001 schemes/standards.
@@ -184,6 +190,11 @@ This is unlikely to change in future.
 Extra care should always be taken when dealing with sensitive information; if you are in any doubt about
 the sensitivity of information, or how it should be handled, then please contact IT Services
 `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`_ for advice.
+
+.. hint::
+
+  If processing of restricted or sensitive data is required, we recommend use of the `Secure Data Service <https://students.sheffield.ac.uk/it-services/research/secure-data-service>`_ 
+  and getting in contact with the `Secure Data Service team <secure-data-service-group@sheffield.ac.uk>`_
 
 Low volume workloads
 ^^^^^^^^^^^^^^^^^^^^

@@ -28,7 +28,7 @@ sphinxcontrib-htmlhelp==2.0.1
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
-tornado==6.3.2
+tornado==6.3.3
 Sphinx-Substitution-Extensions==2022.02.16
 urllib3==2.0.4
 watchdog==3.0.0

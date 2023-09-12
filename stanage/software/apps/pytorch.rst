@@ -23,7 +23,7 @@ it is able to create virtual environment(s) in your home directory,
 allowing for the installation of new Python packages without needing admin permission.
 
 .. note::
-   All 'stable' releases of PyTorch to date (up to and including 2.0.1) are not compatible with Stanage nodes with H100 GPUs (see :ref`Stanage specs <stanage-gpu-specs>`).
+   All 'stable' releases of PyTorch to date (up to and including 2.0.1) are not compatible with Stanage nodes with H100 GPUs (see :ref:`Stanage specs <stanage-gpu-specs>`).
 
    To use PyTorch on the H100 nodes you must install and use a 'nightly' build of PyTorch (see installation instructions below).
 

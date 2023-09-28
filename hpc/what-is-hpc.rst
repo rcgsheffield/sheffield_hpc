@@ -227,7 +227,7 @@ HPC clusters, but they cannot teach you how to use your program in great detail
 nor train you on the basic usage of a program.
 
 At The University of Sheffield, research training needs should be addressed via
-`training courses provided by IT Services' Research and Innovation team <https://crs.shef.ac.uk>`_
+`training courses provided by IT Services' Research and Innovation team <https://sites.google.com/sheffield.ac.uk/research-training/>`_
 (VPN must be turned on),
 `Research Software Engineering <https://rse.shef.ac.uk/>`_
 or Departmental / research group resources. PhD students can also make use of their
@@ -257,5 +257,5 @@ How do I get started?
 ---------------------
 
 Potential users should first register and attend training courses RIT 101 to 103 on
-`IT Services' Research and Innovation course registration website <https://crs.shef.ac.uk>`_
+`IT Services' Research and Innovation course details and registration information website <https://sites.google.com/sheffield.ac.uk/research-training/>`_
 (VPN must be turned on) and should then :ref:`request an account <accounts>`.

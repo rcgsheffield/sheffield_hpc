@@ -24,8 +24,9 @@ General HPC Problems
 If you are struggling to get something working on the HPC you should first have a look through our documentation on the technology (e.g. :ref:`parallel_MPI`), 
 software (e.g. :ref:`stanage-software` ) or cluster (e.g. :ref:`Bessemer`) you are using to see if we have already installed the software / addressed your problem.
 
-You should also make sure you look through our :ref:`FAQs` section as it covers many common mistakes. If you are having issues with your jobs failing 
-please have a look through the sections for :ref:`job debugging on ShARC <job_debugging_sharc>`  and :ref:`job debugging on Stanage or Bessemer <job_debugging_bessemer>` clusters.
+You should also make sure you look through our :ref:`FAQs` section as it covers many common mistakes. If you are having issues with your jobs failing
+please have a look through the sections for :ref:`job debugging on Stanage <job_debugging_stanage>`, :ref:`job debugging on Stanage or Bessemer <job_debugging_bessemer>` 
+and :ref:`job debugging on ShARC <job_debugging_sharc>` clusters.
 
 .. note::
 
@@ -46,8 +47,7 @@ IT Services' Research and Innovation courses
 If you are new to the cluster, have never used Linux or HPC before you should attend the RIT 101 (Introduction to Linux), 
 102 (Linux Shell Scripting Tutorial) and 103 (Introduction to Running Software on the HPC) courses.
 
-These courses are very popular and run through both semesters. You can register for these courses at the course registration 
-website: https://crs.shef.ac.uk (Only accessible with the VPN turned on.)
+These courses are very popular and run through both semesters. You can find details and how to register at the website: https://sites.google.com/sheffield.ac.uk/research-training/ (Only accessible with the VPN turned on.)
 
 IT Services' Research and Innovation training index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

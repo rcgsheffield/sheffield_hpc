@@ -80,15 +80,20 @@ Valid methods of connecting to the University clusters using SSH (or the related
 Connecting using a password or SSH public key authentication will determine whether Multifactor Authentication (MFA) will be mandatory during the login process.
 The authentication requirements per cluster are summarised below: 
 
-+----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
-| Cluster  | From campus or via VPN                | From off campus and without a VPN connection                                                      |
-+==========+=======================================+===================================================================================================+
-| Bessemer | Password + DUO MFA **or** public key  | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
-+----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
-| ShARC    | Password + DUO MFA **or** public key  | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
-+----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
-| Stanage  | Password + TOTP MFA **or** public key | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
-+----------+---------------------------------------+---------------------------------------------------------------------------------------------------+
++----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| Cluster  | From campus or via VPN                               | From off campus and without a VPN connection                                                      |
++==========+======================================================+===================================================================================================+
+| Bessemer | Password + DUO MFA **or** public key                 | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
++----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| ShARC    | Password + DUO MFA **or** public key                 | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
++----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| Stanage  | Password/public key + TOTP MFA **or** VPN + password | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
++----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+
+.. hint::
+
+    On our Stanage cluster: VPN + Password is needed to setup :ref:`TOTP MFA <mfa-totp-reference-info>`.
+
 
 Connecting with a password
 --------------------------

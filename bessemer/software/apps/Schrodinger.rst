@@ -47,7 +47,7 @@ You can also run the schrodinger executables in headless mode as well. You just 
 
 In headless interactive mode, the following commands will be helpful in seeing and diagnosing the schrodinger jobs or commands you run.
 
-The first commands lists all the schrodinger tasks that are running in the background:
+The first commands lists the schrodinger tasks that are running in the background:
 
 .. code-block:: console
 

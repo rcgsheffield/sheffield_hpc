@@ -78,6 +78,7 @@ e.g. for two GPUs use ``--gres=gpu:2``:
          #SBATCH --partition=gpu
          #SBATCH --qos=gpu
          #SBATCH --gres=gpu:2
+         #SBATCH --mem=16G
 
          # Your code below...
 
@@ -89,6 +90,7 @@ e.g. for two GPUs use ``--gres=gpu:2``:
          #SBATCH --partition=gpu-h100
          #SBATCH --qos=gpu
          #SBATCH --gres=gpu:2
+         #SBATCH --mem=16G
 
          # Your code below...
 

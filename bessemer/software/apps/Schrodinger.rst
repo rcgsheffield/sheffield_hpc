@@ -34,7 +34,6 @@ To start the interactive maestro GUI you would need to also load QT:
 
 .. code-block:: console
 
-    $ module use /usr/local/modulefiles/staging/eb/all/
     $ module load Schrodinger/2023-2
     $ module load Qt5/5.14.1-GCCcore-9.3.0
     $ maestro
@@ -44,6 +43,30 @@ You can also run the schrodinger executables in headless mode as well. You just 
 .. code-block:: console
 
     $ {SCHRODINGER}/utilities/prepwizard -h
+
+
+In headless interactive mode, the following commands will be helpful in seeing and diagnosing the schrodinger jobs or commands you run.
+
+The first commands lists all the schrodinger tasks that are running in the background:
+
+.. code-block:: console
+
+    $ $SCHRODINGER/jobcontrol -list
+    $ $SCHRODINGER/jobcontrol -listall
+
+The following command kills any schrodinger task IDs you give it :
+
+.. code-block:: console
+
+    $ $SCHRODINGER/jobcontrol -kill -f <Scrodinger Task ID>
+
+
+To get more detailed information about a schrodinger task, use the following command :
+
+.. code-block:: console
+
+    $ $SCHRODINGER/jobcontrol -show <Scrodinger Task ID>
+
     
 Batch usage
 -----------------
@@ -76,13 +99,14 @@ the parent jobs dont end before the child jobs have finished running.
     $ ${SCHRODINGER}/utilities/prepwizard 2xyl.pdb 2xylprep -WAIT
 
 
-
+In the above example you will notice the ``-WAIT`` command, The command-line option -WAIT can be used to prevent the shell from continuing to the next command until after the job 
+finishes. 
       
 
 Installation notes
 ------------------
 
-You will edit the easyconfig with the license server or the license file.
+You will need to edit the easyconfig with the license server or the license file.
 
 To test that the license was loaded successful you can run:
 
@@ -92,4 +116,5 @@ To test that the license was loaded successful you can run:
     $ $SCHRODINGER/utilities/lictest -d -l MAESTRO_MAIN
     $ 
     #check the status of a job(S)
-    $ $SCHRODINGER/jobcontrol -list all
+    $ 
+    

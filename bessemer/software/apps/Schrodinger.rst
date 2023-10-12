@@ -34,6 +34,7 @@ To start the interactive maestro GUI you would need to also load QT:
 
 .. code-block:: console
 
+    $ module use /usr/local/modulefiles/staging/eb/all/
     $ module load Schrodinger/2023-2
     $ module load Qt5/5.14.1-GCCcore-9.3.0
     $ maestro
@@ -92,8 +93,8 @@ the parent jobs dont end before the child jobs have finished running.
     $ #SBATCH --job-name=my_first_job
     $ 
     $ 
-    $ module use /usr/local/modulefiles/staging/eb/all/
-    $ module load Schrodinger/2023-2
+    $ module use /usr/local/modulefiles/staging/eb/all/module use /usr/local/modulefiles/staging/eb/all/
+    $ 
     $ module load Qt5/5.14.1-GCCcore-9.3.0
     $ 
     $ ${SCHRODINGER}/utilities/prepwizard 2xyl.pdb 2xylprep -WAIT

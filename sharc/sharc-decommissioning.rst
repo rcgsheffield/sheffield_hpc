@@ -10,7 +10,7 @@ Once ShARC has been decommissioned and all data securely deleted the system is t
 
 We recommend users move to the :ref:`Stanage<stanage>` cluster which is a new, much larger system than previous TUOS clusters with drastically larger numbers of CPU cores, numbers of cores per node, memory per node (especially with Stanage's 1TB and 2TB nodes) and a large number of GPUs.
 
-Please get in touch with us if you have any concerns regarding this announcement via HPC drop-in sessions (every Friday) or `research-it@sheffield.ac.uk. <mailto:research-it@sheffield.ac.uk?subject=ShARC%20HPC%20decommissioning>`_
+Please get in touch with us if you have any concerns regarding this announcement via HPC drop-in sessions (every Friday) or ``research-it@sheffield.ac.uk``.
 
 .. hint::
 
@@ -61,6 +61,6 @@ User installed software may require recompiling
 
 If you have compiled and installed your own applications on ShARC you should recompile your applications on the newer clusters when migrating your workloads in order to ensure compatibility and potentially significant performance increases. 
 
-If you currently use IT Services-managed applications on ShARC which are not currently available on Stanage or Bessemer then you can submit a request to `research-it@sheffield.ac.uk <mailto:research-it@sheffield.ac.uk?subject=HPC%20Software%20installation%20request>`_.
+If you currently use IT Services-managed applications on ShARC which are not currently available on Stanage or Bessemer then you can submit a request to ``research-it@sheffield.ac.uk``.
 
 

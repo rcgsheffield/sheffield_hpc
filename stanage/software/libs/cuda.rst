@@ -230,7 +230,7 @@ A common use-case for using Nsight Compute is to capture all available profiling
 .. note::
 
    If you want to perform CUDA kernel profiling on this cluster 
-   you need to explicitly request (via `research-it@sheffield.ac.uk <mailto:research-it@sheffield.ac.uk>`_) for 
+   you need to explicitly request (via ``research-it@sheffield.ac.uk``) for 
    that to be enabled for you for a certain number of GPUs over a certain time period, 
    otherwise attempts to use tools like Nsight Compute will result in permissions errors (``ERR_NVGPUCTRPERM``).
 

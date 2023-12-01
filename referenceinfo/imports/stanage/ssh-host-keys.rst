@@ -10,4 +10,4 @@ Your SSH client will show one of these fingerprints by default. If any one of th
 .. warning::
 
     If none of these fingerprints matches the fingerprint shown in your terminal please 
-    contact the `IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_ .
+    contact ``research-it@sheffield.ac.uk``.

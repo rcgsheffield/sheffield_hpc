@@ -10,7 +10,7 @@ Software on Stanage
 
 These pages list the software available on the Stanage cluster. If you notice an error or
 an omission, or wish to request new software submit a request to
-`research-it@sheffield.ac.uk <mailto:research-it@sheffield.ac.uk?subject=HPC Software installation request>`_ .
+``research-it@sheffield.ac.uk``.
 
 .. toctree::
     :maxdepth: 1

@@ -32,7 +32,7 @@ please have a look through the sections for :ref:`job debugging on ShARC <job_de
     Please make sure you check through our resources prior to contacting us as we are a small team with limited resources.
 
 If you are still having issues or need specific advice e.g. how to best parallelise your workflow, please contact 
-`IT Services' Research and Innovation team <mailto:research-it@sheffield.ac.uk>`_ or if you have more specific queries about programming / coding for HPC clusters e.g. CUDA programming please contact
+IT Services' Research and Innovation team (``research-it@sheffield.ac.uk``) or if you have more specific queries about programming / coding for HPC clusters e.g. CUDA programming please contact
 the `Research Software Engineering team <https://rse.shef.ac.uk/contact/>`_.
 
 ------

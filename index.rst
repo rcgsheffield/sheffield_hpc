@@ -38,7 +38,6 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    hpc/index
    stanage/index
    bessemer/index
-   decommissioned/index
    parallel/index
    glossary
    other-uk-hpc-resources
@@ -48,6 +47,7 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    FAQs
    Latest Software / HPC changelog<http://changelog.hpc.shef.ac.uk/>
    referenceinfo/index
+   decommissioned/index
    mfa-update-21-10-2021
    citing
 

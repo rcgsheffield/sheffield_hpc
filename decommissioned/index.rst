@@ -1,7 +1,13 @@
-.. _decommissioned
+.. _decommissioned:
 
 Decommissioned Clusters
 ========================
 
 .. toctree::
-   :maxdepth: 1
+  :hidden:
+  :maxdepth: 1
+  :glob:
+
+  sharc/index
+
+* :ref:`sharc`

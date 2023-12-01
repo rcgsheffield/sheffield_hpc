@@ -66,13 +66,13 @@ Paths to the actual images and definition files are provided below for downloadi
         * Path: ``/usr/local/packages/singularity/images/caffe/1.0.0-cpu-ubuntu16.04.img``
     * rc3-CPU-Ubuntu16.04 (Python 2.7)
         * Path: ``/usr/local/packages/singularity/images/caffe/rc3-CPU-Ubuntu16.04.img``
-    * Def file: :download:`/sharc/software/apps/apptainer/caffe_cpu.def </sharc/software/apps/apptainer/caffe_cpu.def>`
+    * Def file: :download:`/sharc/software/apps/apptainer/caffe_cpu.def </decommissioned/sharc/software/apps/apptainer/caffe_cpu.def>`
 * GPU Images
     * Latest: 1.0.0-GPU-Ubuntu16.04-CUDA8-cudNN5.0 (Python 2.7)
         * Path: ``/usr/local/packages/singularity/images/caffe/1.0.0-gpu-ubuntu16.04-cuda8-cudnn6.0.img``
     * rc3-GPU-Ubuntu16.04-CUDA8-cudNN5.0 (Python 2.7)
         * Path: ``/usr/local/packages/singularity/images/caffe/rc3-GPU-Ubuntu16.04-CUDA8-cudNN5.0.img``
-    * Def file: :download:`/sharc/software/apps/apptainer/caffe_gpu.def </sharc/software/apps/apptainer/caffe_gpu.def>`
+    * Def file: :download:`/sharc/software/apps/apptainer/caffe_gpu.def </decommissioned/sharc/software/apps/apptainer/caffe_gpu.def>`
 
 Using the Caffe Module
 ----------------------

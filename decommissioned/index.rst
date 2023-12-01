@@ -11,3 +11,7 @@ Decommissioned Clusters
   sharc/index
 
 * :ref:`sharc`
+
+.. raw:: html
+
+   <link rel="stylesheet" href="/_static/css/watermark.css">

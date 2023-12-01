@@ -94,7 +94,7 @@ This section is primarily for administrators of the system.
 **Version 3.3.1**
 
 GDAL 3.3.1 was compiled with v8.2.0 of the GCC compiler suite. This was installed using the 
-:download:`install_gdal.sh </sharc/software/install_scripts/libs/gdal/install_gdal.sh>`
+:download:`install_gdal.sh </decommissioned/sharc/software/install_scripts/libs/gdal/install_gdal.sh>`
 script. This script will automatically install GDAL, generate the module file and correct the file 
 permissions as needed. Build logs are also automatically generated and copied to the base install 
 directory or src directory.
@@ -108,7 +108,7 @@ in the module top level directory. e.g. ``gdal-install.o1234567``
 **Version 3.0.1**
 
 GDAL 3.0.1 was compiled with v8.2.0 of the GCC compiler suite. This was installed using the 
-:download:`install_gdal.sh </sharc/software/install_scripts/libs/gdal/install_gdal.sh>`
+:download:`install_gdal.sh </decommissioned/sharc/software/install_scripts/libs/gdal/install_gdal.sh>`
 script. This script will automatically install GDAL, generate the module file and correct the file 
 permissions as needed. Build logs are also automatically generated and copied to the base install 
 directory or src directory.
@@ -124,9 +124,9 @@ in the module top level directory. e.g. ``gdal-install.o1234567``
 GDAL 2.2.0 was compiled with v4.9.4 of the GCC compiler suite.
 
 #. Download, configure, build and install by switching to a scratch directory and running 
-   :download:`this script </sharc/software/install_scripts/libs/gdal/2.2.0/gcc-4.9.4/install.sh>`, 
-   ensuring that all stderr and stdout is redirected to :download:`a log file </sharc/software/install_scripts/libs/gdal/2.2.0/gcc-4.9.4/install.log>`. 
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/gdal/2.2.0/gcc-4.9.4>` as 
+   :download:`this script </decommissioned/sharc/software/install_scripts/libs/gdal/2.2.0/gcc-4.9.4/install.sh>`, 
+   ensuring that all stderr and stdout is redirected to :download:`a log file </decommissioned/sharc/software/install_scripts/libs/gdal/2.2.0/gcc-4.9.4/install.log>`. 
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/gdal/2.2.0/gcc-4.9.4>` as 
    ``/usr/local/modulefiles/libs/gdal/2.2.0/gcc-4.9.4``
 
 The **file formats** supported by this build are listed in the compilation log files which can be found 

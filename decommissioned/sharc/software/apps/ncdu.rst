@@ -72,5 +72,5 @@ Modulefiles
 ^^^^^^^^^^^
 
 The module file is on the system at 
-:download:`/usr/local/modulefiles/utils/ncdu/1.15.1/binary </sharc/software/modulefiles/utils/ncdu/1.15.1/binary>`.
+:download:`/usr/local/modulefiles/utils/ncdu/1.15.1/binary </decommissioned/sharc/software/modulefiles/utils/ncdu/1.15.1/binary>`.
 

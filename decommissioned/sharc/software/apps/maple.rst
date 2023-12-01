@@ -58,5 +58,5 @@ These are primarily for administrators of the system.
 * Uncheck 'Enable periodic checking for Maple 2022 updates'
 * Check 'Check for updates now'
 
-The module file is :download:`/usr/local/modulefiles/apps/maple/2022/binary </sharc/software/modulefiles/apps/maple/2022/binary>`.
+The module file is :download:`/usr/local/modulefiles/apps/maple/2022/binary </decommissioned/sharc/software/modulefiles/apps/maple/2022/binary>`.
 

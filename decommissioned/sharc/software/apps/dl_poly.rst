@@ -41,9 +41,9 @@ Installation notes
 ------------------
 
 DL_POLY 4.08 was installed using the
-:download:`install_dl_poly.sh </sharc/software/install_scripts/apps/dl_poly/4.08/gcc-6.2-openmpi-2.1.1/install_dl_poly.sh>` script; the module
+:download:`install_dl_poly.sh </decommissioned/sharc/software/install_scripts/apps/dl_poly/4.08/gcc-6.2-openmpi-2.1.1/install_dl_poly.sh>` script; the module
 file is
-:download:`gcc-6.2-openmpi-2.1.1 </sharc/software/modulefiles/apps/dl_poly/4.08/gcc-6.2-openmpi-2.1.1>`.
+:download:`gcc-6.2-openmpi-2.1.1 </decommissioned/sharc/software/modulefiles/apps/dl_poly/4.08/gcc-6.2-openmpi-2.1.1>`.
 
 During compilation DL_POLY 4.08 was optionally interfaced with the PLUMED 2.3.2 library.
 

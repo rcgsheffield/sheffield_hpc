@@ -30,17 +30,17 @@ Installation
 Version 3.7.1
 ^^^^^^^^^^^^^
 
-1. Install using :download:`this script </sharc/software/install_scripts/dev/cmake/3.7.1/gcc-4.9.4/install.sh>`
-2. Install :download:`this modulefile </sharc/software/modulefiles/dev/cmake/3.7.1/gcc-4.9.4>` as ``/usr/local/modulefiles/dev/cmake/3.7.1/gcc-4.9.4``
+1. Install using :download:`this script </decommissioned/sharc/software/install_scripts/dev/cmake/3.7.1/gcc-4.9.4/install.sh>`
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/cmake/3.7.1/gcc-4.9.4>` as ``/usr/local/modulefiles/dev/cmake/3.7.1/gcc-4.9.4``
 
 Version 3.17.1 with gcc-8.2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install using :download:`this script </sharc/software/install_scripts/dev/cmake/3.17.1/gcc-8.2/install.sh>`
-2. Install :download:`this modulefile </sharc/software/modulefiles/dev/cmake/3.17.1/gcc-8.2>` as ``/usr/local/modulefiles/dev/cmake/3.17.1/gcc-8.2``
+1. Install using :download:`this script </decommissioned/sharc/software/install_scripts/dev/cmake/3.17.1/gcc-8.2/install.sh>`
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/cmake/3.17.1/gcc-8.2>` as ``/usr/local/modulefiles/dev/cmake/3.17.1/gcc-8.2``
 
 Version 3.17.1 with gcc-10.1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install using :download:`this script </sharc/software/install_scripts/dev/cmake/3.17.1/gcc-10.1/install.sh>`
-2. Install :download:`this modulefile </sharc/software/modulefiles/dev/cmake/3.17.1/gcc-10.1>` as ``/usr/local/modulefiles/dev/cmake/3.17.1/gcc-10.1``
+1. Install using :download:`this script </decommissioned/sharc/software/install_scripts/dev/cmake/3.17.1/gcc-10.1/install.sh>`
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/cmake/3.17.1/gcc-10.1>` as ``/usr/local/modulefiles/dev/cmake/3.17.1/gcc-10.1``

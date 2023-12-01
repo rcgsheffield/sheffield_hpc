@@ -29,7 +29,7 @@ This was compiled with GCC 4.9.4 (for compatibility with CUDA, which doesn't sup
 - Shared-library support
 - SIMD (specifically, AVX2)
 
-First, download, configure, build, test and install using :download:`this script </sharc/software/install_scripts/libs/fftw/3.3.5/gcc-4.9.4/install.sh>`.
+First, download, configure, build, test and install using :download:`this script </decommissioned/sharc/software/install_scripts/libs/fftw/3.3.5/gcc-4.9.4/install.sh>`.
 
 During the testing stage you should see lots of numerical output plus: ::
 
@@ -41,4 +41,4 @@ During the testing stage you should see lots of numerical output plus: ::
            FFTW threaded transforms passed basic tests!
   --------------------------------------------------------------
 
-Next, :download:`this modulefile </sharc/software/modulefiles/libs/fftw/3.3.5/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/fftw/3.3.5/gcc-4.9.4`` 
+Next, :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/fftw/3.3.5/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/fftw/3.3.5/gcc-4.9.4`` 

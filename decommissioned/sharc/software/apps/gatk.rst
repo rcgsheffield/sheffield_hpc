@@ -37,7 +37,7 @@ Installation notes
 ------------------
 
 GATK 4.1.4 was installed using
-:download:`install_gatk.sh </sharc/software/install_scripts/apps/gatk/4.1.4/binary/install_gatk.sh>` script, the module
+:download:`install_gatk.sh </decommissioned/sharc/software/install_scripts/apps/gatk/4.1.4/binary/install_gatk.sh>` script, the module
 file is
-:download:`/usr/local/modulefiles/apps/gatk/4.1.4/binary </sharc/software/modulefiles/apps/gatk/4.1.4/binary>`.
+:download:`/usr/local/modulefiles/apps/gatk/4.1.4/binary </decommissioned/sharc/software/modulefiles/apps/gatk/4.1.4/binary>`.
 

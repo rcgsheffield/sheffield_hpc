@@ -49,8 +49,8 @@ This section is primarily for administrators of the system.
 PROJ.4 4.9.3 was compiled with v4.9.4 of the GCC compiler suite.
 
 #. ``cd`` to a scratch directory.
-#. Download, build and install using :download:`this script </sharc/software/install_scripts/libs/proj/4.9.3/gcc-4.9.4/install.sh>`, ensuring that all stderr and stdout is redirected to :download:`a log file </sharc/software/install_scripts/libs/proj/4.9.3/gcc-4.9.4/install.log>`. 
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/proj/4.9.3/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/proj/4.9.3/gcc-4.9.4``
+#. Download, build and install using :download:`this script </decommissioned/sharc/software/install_scripts/libs/proj/4.9.3/gcc-4.9.4/install.sh>`, ensuring that all stderr and stdout is redirected to :download:`a log file </decommissioned/sharc/software/install_scripts/libs/proj/4.9.3/gcc-4.9.4/install.log>`. 
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/proj/4.9.3/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/proj/4.9.3/gcc-4.9.4``
 
 Test by running ``make check`` from the build directory.  For this build this yielded: ::
 
@@ -91,6 +91,6 @@ Test by running ``make check`` from the build directory.  For this build this yi
 
 PROJ 7.1.0 was compiled with v8.2.0 of the GCC compiler suite.
 
-#. Download, configure, build and install by switching to a scratch directory and running :download:`this script </sharc/software/install_scripts/libs/proj/7.1.0/gcc-8.2.0/install.sh>`
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/proj/7.1.0/gcc-8.2.0>` as ``/usr/local/modulefiles/libs/proj/7.1.0/gcc-8.2.0``
+#. Download, configure, build and install by switching to a scratch directory and running :download:`this script </decommissioned/sharc/software/install_scripts/libs/proj/7.1.0/gcc-8.2.0/install.sh>`
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/proj/7.1.0/gcc-8.2.0>` as ``/usr/local/modulefiles/libs/proj/7.1.0/gcc-8.2.0``
 

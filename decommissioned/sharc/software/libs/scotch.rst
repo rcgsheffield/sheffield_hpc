@@ -23,9 +23,9 @@ Installation notes
 ------------------
 
 SCOTCH was installed using the
-:download:`install_scotch.sh </sharc/software/install_scripts/libs/scotch/6.0.4/install_scotch.sh>` script; the module
+:download:`install_scotch.sh </decommissioned/sharc/software/install_scripts/libs/scotch/6.0.4/install_scotch.sh>` script; the module
 file is
-:download:`gcc-6.2-openmpi-2.0.1 </sharc/software/modulefiles/libs/scotch/6.0.4/gcc-6.2-openmpi-2.0.1>`.
+:download:`gcc-6.2-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/libs/scotch/6.0.4/gcc-6.2-openmpi-2.0.1>`.
 
 The installation was tested using the ''make check'' command as part of running the above installation script.
     

@@ -50,12 +50,12 @@ Installation notes
 SIESTA 4.0.1 is available on ShARC as a serial version and as a parallel version using Open MPI. Both compilations use the Intel MKL maths library.
 
 The serial version and the parallel version of SIESTA 4.0.1 were installed using the
-:download:`install_siesta_4.0.1.sh </sharc/software/install_scripts/apps/siesta/4.0.1/intel-17.0.0-openmpi-2.0.1/install_siesta_4.0.1.sh>` installation script.
+:download:`install_siesta_4.0.1.sh </decommissioned/sharc/software/install_scripts/apps/siesta/4.0.1/intel-17.0.0-openmpi-2.0.1/install_siesta_4.0.1.sh>` installation script.
 
 The module file for the serial version is
-:download:`/usr/local/modulefiles/apps/siesta/4.0.1/intel-17.0.0 </sharc/software/modulefiles/apps/siesta/4.0.1/intel-17.0.0>`.
+:download:`/usr/local/modulefiles/apps/siesta/4.0.1/intel-17.0.0 </decommissioned/sharc/software/modulefiles/apps/siesta/4.0.1/intel-17.0.0>`.
 
 The module file for the parallel version is
-:download:`/usr/local/modulefiles/apps/siesta/4.0.1/intel-17.0.0-openmpi-2.0.1 </sharc/software/modulefiles/apps/siesta/4.0.1/intel-17.0.0-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/siesta/4.0.1/intel-17.0.0-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/siesta/4.0.1/intel-17.0.0-openmpi-2.0.1>`.
 
 The installations of SIESTA 4.0.1 were tested by using ``make check`` to run tests as part of the installation process (see the installation script for details).

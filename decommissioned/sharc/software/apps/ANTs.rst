@@ -70,6 +70,6 @@ Installation notes
 ------------------
 
 ANTs was compiled using the
-:download:`install_ANTs.sh </sharc/software/install_scripts/apps/ANTs/2.1.0-a/gcc-4.9.4/install_ANTs.sh>` script, the module
+:download:`install_ANTs.sh </decommissioned/sharc/software/install_scripts/apps/ANTs/2.1.0-a/gcc-4.9.4/install_ANTs.sh>` script, the module
 file is
-:download:`gcc-4.9.4 </sharc/software/modulefiles/apps/ANTs/2.1.0-a/gcc-4.9.4>`.
+:download:`gcc-4.9.4 </decommissioned/sharc/software/modulefiles/apps/ANTs/2.1.0-a/gcc-4.9.4>`.

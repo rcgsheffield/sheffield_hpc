@@ -106,8 +106,8 @@ These notes are primarily for administrators of the system.
 Spark 2.3.0
 ^^^^^^^^^^^
 
-* Install script: :download:`install.sh </sharc/software/install_scripts/apps/spark/2.3.0/jdk-1.8.0_102/install.sh>`
-* Module file :download:`apps/spark/2.3.0/jdk-1.8.0_102 </sharc/software/modulefiles/apps/spark/2.3.0/jdk-1.8.0_102>`,
+* Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/apps/spark/2.3.0/jdk-1.8.0_102/install.sh>`
+* Module file :download:`apps/spark/2.3.0/jdk-1.8.0_102 </decommissioned/sharc/software/modulefiles/apps/spark/2.3.0/jdk-1.8.0_102>`,
   which 
 
   * sets ``SPARK_HOME``
@@ -140,7 +140,7 @@ The file ``log4j.properties`` was then edited so that the line beginning ``log4j
  
      log4j.rootCategory=WARN, console
      
-Module file :download:`apps/spark/2.1/gcc-4.8.5 </sharc/software/modulefiles/apps/spark/2.1/gcc-4.8.5>`,
+Module file :download:`apps/spark/2.1/gcc-4.8.5 </decommissioned/sharc/software/modulefiles/apps/spark/2.1/gcc-4.8.5>`,
 which 
 
 * sets ``SPARK_HOME``

@@ -27,6 +27,6 @@ Installation notes
 ------------------
 
 ITK-SNAP was compiled using the
-:download:`install_itksnap.sh </sharc/software/install_scripts/apps/itksnap/install_itksnap.sh>` script, the module
+:download:`install_itksnap.sh </decommissioned/sharc/software/install_scripts/apps/itksnap/install_itksnap.sh>` script, the module
 file is
-:download:`3.6 </sharc/software/modulefiles/apps/itksnap/3.6>`.
+:download:`3.6 </decommissioned/sharc/software/modulefiles/apps/itksnap/3.6>`.

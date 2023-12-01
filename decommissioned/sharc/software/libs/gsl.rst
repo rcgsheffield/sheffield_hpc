@@ -65,7 +65,7 @@ Installation notes
 
 
 * 2.4 built with GCC 8.2/6.2 (same install script):
-  :download:`install script </sharc/software/install_scripts/libs/gsl/2.4/gcc-6.2/install.sh>`;
-  :download:`install log </sharc/software/install_scripts/libs/gsl/2.4/gcc-6.2/install.log>`;
-  :download:`modulefile </sharc/software/modulefiles/libs/gsl/2.4/gcc-6.2>`.
+  :download:`install script </decommissioned/sharc/software/install_scripts/libs/gsl/2.4/gcc-6.2/install.sh>`;
+  :download:`install log </decommissioned/sharc/software/install_scripts/libs/gsl/2.4/gcc-6.2/install.log>`;
+  :download:`modulefile </decommissioned/sharc/software/modulefiles/libs/gsl/2.4/gcc-6.2>`.
   The installation was tested during the build process using ``make check``.

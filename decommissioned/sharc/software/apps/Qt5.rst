@@ -19,7 +19,7 @@ Qt5 on ShARC works in both normal ``qrshx`` sessions and accelerated ``qsh-vis``
 
 Installation Notes
 ------------------
-Qt 5.12 was installed using GCC 8.2 with the script :download:`/usr/local/packages/apps/Qt5/5.12/gcc-8.2-cmake-3.17.1/install_Qt5.sge </sharc/software/install_scripts/apps/Qt5/5.12/install_Qt5.sge>`
+Qt 5.12 was installed using GCC 8.2 with the script :download:`/usr/local/packages/apps/Qt5/5.12/gcc-8.2-cmake-3.17.1/install_Qt5.sge </decommissioned/sharc/software/install_scripts/apps/Qt5/5.12/install_Qt5.sge>`
 
 Note that this compilation will take significant resources and several hours to finish which is why this installation script uses a SGE submission.
 
@@ -31,6 +31,6 @@ Qt 5.12 was tested with the helloworld application which can be found at https:/
 
 Modulefile
 ----------
-The module file is on the system at :download:`/usr/local/modulefiles/apps/Qt5/5.12/gcc-8.2-cmake-3.17.1 </sharc/software/modulefiles/apps/Qt5/5.12/gcc-8.2-cmake-3.17.1>`.
+The module file is on the system at :download:`/usr/local/modulefiles/apps/Qt5/5.12/gcc-8.2-cmake-3.17.1 </decommissioned/sharc/software/modulefiles/apps/Qt5/5.12/gcc-8.2-cmake-3.17.1>`.
 
 This module file defines two key environment variables to configure the correct fonts via ``QT_QPA_FONTDIR`` and sets the correct temp directory for lock files with ``XDG_RUNTIME_DIR``. The correction for the ``XDG_RUNTIME_DIR`` location may become unnecessary in the future as this may be added to a scheduler `prolog script <http://www.softpanorama.org/HPC/Grid_engine/prolog_and_epilog_scripts.shtml>`_.

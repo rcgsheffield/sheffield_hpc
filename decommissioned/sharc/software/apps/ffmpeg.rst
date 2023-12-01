@@ -55,7 +55,7 @@ Once you have made ffmpeg available to the system using the `module` command abo
 Installation notes
 ------------------
 FFmpeg 4.3.2 was compiled using the
-:download:`install_ffmpeg.sge </sharc/software/install_scripts/apps/ffmpeg/4.3.2/gcc-8.2-cmake-3.17.1/install_ffmpeg.sge>` script.
+:download:`install_ffmpeg.sge </decommissioned/sharc/software/install_scripts/apps/ffmpeg/4.3.2/gcc-8.2-cmake-3.17.1/install_ffmpeg.sge>` script.
 
 This included the following additional libraries / options enabled: ::
 
@@ -72,15 +72,15 @@ This included the following additional libraries / options enabled: ::
     --enable-nonfree
 
 The module file is
-:download:`/usr/local/modulefiles/apps/ffmpeg/4.3.2/gcc-8.2-cmake-3.17.1/ </sharc/software/modulefiles/apps/ffmpeg/4.3.2/gcc-8.2-cmake-3.17.1>`.
+:download:`/usr/local/modulefiles/apps/ffmpeg/4.3.2/gcc-8.2-cmake-3.17.1/ </decommissioned/sharc/software/modulefiles/apps/ffmpeg/4.3.2/gcc-8.2-cmake-3.17.1>`.
 
 ----------
 
 FFmpeg 4.1 was compiled using the
-:download:`install_ffmpeg.sh </sharc/software/install_scripts/apps/ffmpeg/4.1/gcc-4.9.4/install_ffmpeg.sh>` script and lacks support for most common encoders.
+:download:`install_ffmpeg.sh </decommissioned/sharc/software/install_scripts/apps/ffmpeg/4.1/gcc-4.9.4/install_ffmpeg.sh>` script and lacks support for most common encoders.
 
 The module file is
-:download:`/usr/local/modulefiles/apps/ffmpeg/4.1/gcc-4.9.4 </sharc/software/modulefiles/apps/ffmpeg/4.1/gcc-4.9.4>`.
+:download:`/usr/local/modulefiles/apps/ffmpeg/4.1/gcc-4.9.4 </decommissioned/sharc/software/modulefiles/apps/ffmpeg/4.1/gcc-4.9.4>`.
 
 Testing
 -------

@@ -48,5 +48,5 @@ Version 7.950.1
 
 This was compiled with GCC 4.9.4 and the Intel MKL
 
-* Run :download:`this script </sharc/software/install_scripts/libs/armadillo/7.950.1/gcc-4.9.4/install_armadillo.sh>`
-* Next, :download:`this modulefile </sharc/software/modulefiles/libs/armadillo/7.950.1/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/armadillo/7.950.1/gcc-4.9.4`` 
+* Run :download:`this script </decommissioned/sharc/software/install_scripts/libs/armadillo/7.950.1/gcc-4.9.4/install_armadillo.sh>`
+* Next, :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/armadillo/7.950.1/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/armadillo/7.950.1/gcc-4.9.4`` 

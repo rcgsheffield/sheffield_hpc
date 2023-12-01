@@ -121,6 +121,6 @@ Installation notes
 Octeract Engine 3.1.0 was a binary installation provided from the 
 following link (https://download.octeract.com/octeract-engine-3.1.0-Linux-Centos7.tar.gz) and 
 was installed using the script
-:download:`install_octeract-engine.sh </sharc/software/install_scripts/apps/octeract-engine/install_octeract-engine.sh>`
+:download:`install_octeract-engine.sh </decommissioned/sharc/software/install_scripts/apps/octeract-engine/install_octeract-engine.sh>`
 
 The software was tested by running the example batch job supplied above.

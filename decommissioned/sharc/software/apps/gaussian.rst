@@ -84,7 +84,7 @@ Installation notes
 
 Gaussian 09 Revision E.01 and 16 Revision C.01  were installed manually 
 (from the terminal) using appropriately modified commands from the
-:download:`install_gaussian_09.sh </sharc/software/install_scripts/apps/gaussian_09/d.01/pgi-17.5/install_gaussian_09.sh>` script.
+:download:`install_gaussian_09.sh </decommissioned/sharc/software/install_scripts/apps/gaussian_09/d.01/pgi-17.5/install_gaussian_09.sh>` script.
 Vendor specified versions of PGI have been selected to maximise solver stability.
 
 Module logic and separated chemistry department specific directories have been created to facilitate 
@@ -98,7 +98,7 @@ and has no architecutral optimisations that can be utilized. The
 ``make.log`` file can be found in the ``$g09root/g09/``.
 
 The module file was manually created and can be downloaded:  
-:download:`here </sharc/software/modulefiles/apps/gaussian_09/e.01/std>`. 
+:download:`here </decommissioned/sharc/software/modulefiles/apps/gaussian_09/e.01/std>`. 
 
 Gaussian 16
 ^^^^^^^^^^^
@@ -107,7 +107,7 @@ and has architectural optimisations turned on for Haswell processors. The
 ``make.log`` file can be found in the ``$g16root/g16/``.
 
 The module file was manually created and can be downloaded:  
-:download:`here </sharc/software/modulefiles/apps/gaussian_16/c.01/haswell>`. 
+:download:`here </decommissioned/sharc/software/modulefiles/apps/gaussian_16/c.01/haswell>`. 
 
 Testing
 ^^^^^^^

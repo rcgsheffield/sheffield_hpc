@@ -54,9 +54,9 @@ Installation notes
 ------------------
 
 Polyrate 17 and Gaussrate 17-B were installed using the
-:download:`install_polyrate17.sh </sharc/software/install_scripts/apps/polyrate/17_20170808/gaussrate17-B/gcc-6.2-openmpi-2.1.1/install_polyrate17.sh>` script;
+:download:`install_polyrate17.sh </decommissioned/sharc/software/install_scripts/apps/polyrate/17_20170808/gaussrate17-B/gcc-6.2-openmpi-2.1.1/install_polyrate17.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/polyrate/17_20170808/gaussrate17-B/gcc-6.2-openmpi-2.1.1 </sharc/software/modulefiles/apps/polyrate/17_20170808/gaussrate17-B/gcc-6.2-openmpi-2.1.1>`.
+:download:`/usr/local/modulefiles/apps/polyrate/17_20170808/gaussrate17-B/gcc-6.2-openmpi-2.1.1 </decommissioned/sharc/software/modulefiles/apps/polyrate/17_20170808/gaussrate17-B/gcc-6.2-openmpi-2.1.1>`.
 Polyrate 17 and Gaussrate 17-B were compiled on ShARC to use the Reaction Path Variational Transition State Theory (RP-VTST) executables.
 
 The Polyrate 17 and Gaussrate 17-B installation was tested by running a batch job using the ``my_job.sh`` batch script, above, for the *ch5tr1* test run.

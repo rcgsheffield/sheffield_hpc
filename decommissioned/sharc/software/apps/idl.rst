@@ -25,7 +25,7 @@ Installation notes
 Installation of IDL 8.8 on Sharc was a binary installation.
 
 The module file is
-:download:`/usr/local/modulefiles/apps/idl/8.8/binary </sharc/software/modulefiles/apps/idl/8.8/binary>`.
+:download:`/usr/local/modulefiles/apps/idl/8.8/binary </decommissioned/sharc/software/modulefiles/apps/idl/8.8/binary>`.
 
 Please note that the module file has been edited to ensure folder creation and symlinks have been applied to license/flexera-sv and license/flexera module subdirectories to point into /tmp/Harris/License/flexera-sv and /tmp/Harris/License/flexera as per:
 

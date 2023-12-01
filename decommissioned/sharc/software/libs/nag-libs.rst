@@ -121,4 +121,4 @@ Module Files
 **nll6i285bl (Mark 28.5)**
 
 * The module file is on the system at ``/usr/local/modulefiles/libs/NAG/nll6i285bl``
-* The module file is :download:`on github </sharc/software/modulefiles/libs/NAG/nll6i285bl>`.
+* The module file is :download:`on github </decommissioned/sharc/software/modulefiles/libs/NAG/nll6i285bl>`.

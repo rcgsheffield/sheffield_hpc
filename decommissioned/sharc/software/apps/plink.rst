@@ -41,5 +41,5 @@ Both versions of Plink were installed like so ::
   mkdir -p /usr/local/packages/apps/plink/$ver/binary
   mv * /usr/local/packages/apps/plink/$ver/binary
 
-The modulefiles is at :download:`/usr/local/modulefiles/apps/plink/1.90b6.5/binary </sharc/software/modulefiles/apps/plink/1.90b6.5/binary>`.
+The modulefiles is at :download:`/usr/local/modulefiles/apps/plink/1.90b6.5/binary </decommissioned/sharc/software/modulefiles/apps/plink/1.90b6.5/binary>`.
 

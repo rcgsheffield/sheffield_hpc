@@ -40,7 +40,7 @@ Version 2.2.28
 
 This was compiled with GCC 8.2.0
 
-* To install Qsub :download:`this script </sharc/software/install_scripts/libs/udunits/2.2.28/gcc-8.2/install_udunits.sh>`
+* To install Qsub :download:`this script </decommissioned/sharc/software/install_scripts/libs/udunits/2.2.28/gcc-8.2/install_udunits.sh>`
 * The installer script automatically creates a module file and logs.
 
 
@@ -49,5 +49,5 @@ Version 2.2.26
 
 This was compiled with GCC 4.9.4
 
-* Run :download:`this script </sharc/software/install_scripts/libs/udunits/2.2.26/gcc-4.9.4/install_udunits.sh>`
-* Next, :download:`this modulefile </sharc/software/modulefiles/libs/udunits/2.2.26/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/udunits/2.2.26/gcc-4.9.4`` 
+* Run :download:`this script </decommissioned/sharc/software/install_scripts/libs/udunits/2.2.26/gcc-4.9.4/install_udunits.sh>`
+* Next, :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/udunits/2.2.26/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/udunits/2.2.26/gcc-4.9.4`` 

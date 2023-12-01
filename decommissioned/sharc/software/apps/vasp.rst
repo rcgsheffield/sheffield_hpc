@@ -68,13 +68,13 @@ correctly versioned Pseudopotentials folders symlinked into their ``$VASP_ROOT``
 VASP Pseudopotential files downloaded from the VASP portal and/or license holders can provide future versions as these are provided under the same license as the program.
 
 VASP 5.4.4.pl2 was installed using the
-:download:`install_vasp.sh </sharc/software/install_scripts/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1/install_vasp.sh>` script;
+:download:`install_vasp.sh </decommissioned/sharc/software/install_scripts/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1/install_vasp.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1 </sharc/software/modulefiles/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/vasp/5.4.4.pl2/intel-17.0.0-openmpi-2.0.1>`.
 
 VASP 5.4.1 (05Feb16) was installed using the
-:download:`install_vasp.sh </sharc/software/install_scripts/apps/vasp/5.4.1.05Feb16/intel-17.0.0-openmpi-2.0.1/install_vasp.sh>` script;
+:download:`install_vasp.sh </decommissioned/sharc/software/install_scripts/apps/vasp/5.4.1.05Feb16/intel-17.0.0-openmpi-2.0.1/install_vasp.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/vasp/5.4.1.05Feb16/intel-17.0.0-openmpi-2.0.1 </sharc/software/modulefiles/apps/vasp/5.4.1.05Feb16/intel-17.0.0-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/vasp/5.4.1.05Feb16/intel-17.0.0-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/vasp/5.4.1.05Feb16/intel-17.0.0-openmpi-2.0.1>`.
 
 The VASP 5.4.1 installation was tested by running a batch job using the ``my_job.sh`` batch script above with the input for the "O atom" example (https://www.vasp.at/wiki/index.php/O_atom) from the online VASP tutorials (https://www.vasp.at/wiki/index.php/Category:Tutorials).

@@ -95,74 +95,74 @@ The ``mpi-rsh`` tight-integration parallel environment is required to run ANSYS/
 SSH access to worker nodes being prohibited for most users.
 
 ANSYS 15.0 was installed using the
-:download:`install_ansys.sh </sharc/software/install_scripts/apps/ansys/15.0/install_ansys.sh>` script; the module
+:download:`install_ansys.sh </decommissioned/sharc/software/install_scripts/apps/ansys/15.0/install_ansys.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/15.0/binary </sharc/software/modulefiles/apps/ansys/15.0/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/15.0/binary </decommissioned/sharc/software/modulefiles/apps/ansys/15.0/binary>`.
 
 ANSYS 16.1 was installed using the
-:download:`install_ansys.sh </sharc/software/install_scripts/apps/ansys/16.1/install_ansys.sh>` script; the module
+:download:`install_ansys.sh </decommissioned/sharc/software/install_scripts/apps/ansys/16.1/install_ansys.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/16.1 </sharc/software/modulefiles/apps/ansys/16.1>`.
+:download:`/usr/local/modulefiles/apps/ansys/16.1 </decommissioned/sharc/software/modulefiles/apps/ansys/16.1>`.
 
 ANSYS 17.2 was installed using the
-:download:`install_ansys.sh </sharc/software/install_scripts/apps/ansys/17.2/install_ansys.sh>` script; the module
+:download:`install_ansys.sh </decommissioned/sharc/software/install_scripts/apps/ansys/17.2/install_ansys.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/17.2 </sharc/software/modulefiles/apps/ansys/17.2>`.
+:download:`/usr/local/modulefiles/apps/ansys/17.2 </decommissioned/sharc/software/modulefiles/apps/ansys/17.2>`.
 
 ANSYS 18.0 was installed using the
-:download:`install_ansys_180.sh </sharc/software/install_scripts/apps/ansys/18.0/binary/install_ansys_180.sh>` script; the module
+:download:`install_ansys_180.sh </decommissioned/sharc/software/install_scripts/apps/ansys/18.0/binary/install_ansys_180.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/18.0/binary </sharc/software/modulefiles/apps/ansys/18.0/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/18.0/binary </decommissioned/sharc/software/modulefiles/apps/ansys/18.0/binary>`.
 
 ANSYS 18.2 was installed using the
-:download:`install_ansys_182.sh </sharc/software/install_scripts/apps/ansys/18.2/binary/install_ansys_182.sh>` script; the module
+:download:`install_ansys_182.sh </decommissioned/sharc/software/install_scripts/apps/ansys/18.2/binary/install_ansys_182.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/18.2/binary </sharc/software/modulefiles/apps/ansys/18.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/18.2/binary </decommissioned/sharc/software/modulefiles/apps/ansys/18.2/binary>`.
 
 ANSYS 19.0 was installed using the
-:download:`install_ansys_190.sh </sharc/software/install_scripts/apps/ansys/19.0/binary/install_ansys_190.sh>` script; the module
+:download:`install_ansys_190.sh </decommissioned/sharc/software/install_scripts/apps/ansys/19.0/binary/install_ansys_190.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.0/binary </sharc/software/modulefiles/apps/ansys/19.0/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.0/binary </decommissioned/sharc/software/modulefiles/apps/ansys/19.0/binary>`.
 
 ANSYS 19.1 was installed using the
-:download:`install_ansys_191.sh </sharc/software/install_scripts/apps/ansys/19.1/binary/install_ansys_191.sh>` script; the module
+:download:`install_ansys_191.sh </decommissioned/sharc/software/install_scripts/apps/ansys/19.1/binary/install_ansys_191.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.1/binary </sharc/software/modulefiles/apps/ansys/19.1/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.1/binary </decommissioned/sharc/software/modulefiles/apps/ansys/19.1/binary>`.
 
 ANSYS 19.2 was installed using the
-:download:`install_ansys_192.sh </sharc/software/install_scripts/apps/ansys/19.2/binary/install_ansys_192.sh>` script; the module
+:download:`install_ansys_192.sh </decommissioned/sharc/software/install_scripts/apps/ansys/19.2/binary/install_ansys_192.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.2/binary </sharc/software/modulefiles/apps/ansys/19.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.2/binary </decommissioned/sharc/software/modulefiles/apps/ansys/19.2/binary>`.
 
 ANSYS 19.3 was installed using the
-:download:`install_ansys_193.sh </sharc/software/install_scripts/apps/ansys/19.3/binary/install_ansys_193.sh>` script; the module
+:download:`install_ansys_193.sh </decommissioned/sharc/software/install_scripts/apps/ansys/19.3/binary/install_ansys_193.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.3/binary </sharc/software/modulefiles/apps/ansys/19.3/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.3/binary </decommissioned/sharc/software/modulefiles/apps/ansys/19.3/binary>`.
 
 ANSYS 19.4 was installed using the
-:download:`install_ansys_194.sh </sharc/software/install_scripts/apps/ansys/19.4/binary/install_ansys_194.sh>` script; the module
+:download:`install_ansys_194.sh </decommissioned/sharc/software/install_scripts/apps/ansys/19.4/binary/install_ansys_194.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/19.4/binary </sharc/software/modulefiles/apps/ansys/19.4/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/19.4/binary </decommissioned/sharc/software/modulefiles/apps/ansys/19.4/binary>`.
 
 ANSYS 20.1 was installed using the GUI installer with all features and the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/20.1/binary </sharc/software/modulefiles/apps/ansys/20.1/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/20.1/binary </decommissioned/sharc/software/modulefiles/apps/ansys/20.1/binary>`.
 
 ANSYS 20.2 was installed using the GUI installer with all features and the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/20.2/binary </sharc/software/modulefiles/apps/ansys/20.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/20.2/binary </decommissioned/sharc/software/modulefiles/apps/ansys/20.2/binary>`.
 
 ANSYS 21.1 was installed using the GUI installer with all features and the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/21.1/binary </sharc/software/modulefiles/apps/ansys/21.1/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/21.1/binary </decommissioned/sharc/software/modulefiles/apps/ansys/21.1/binary>`.
 
 ANSYS 21.2 was installed using the GUI installer with all features and the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/21.2/binary </sharc/software/modulefiles/apps/ansys/21.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/21.2/binary </decommissioned/sharc/software/modulefiles/apps/ansys/21.2/binary>`.
 
 ANSYS 22.2 was installed using the GUI installer with all features and the module
 file is
-:download:`/usr/local/modulefiles/apps/ansys/22.2/binary </sharc/software/modulefiles/apps/ansys/22.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansys/22.2/binary </decommissioned/sharc/software/modulefiles/apps/ansys/22.2/binary>`.
 
 
 ----------

@@ -23,8 +23,8 @@ Installation notes
 ------------------
 
 Gnuplot 5.0.6 was installed using the
-:download:`install_gnuplot.sh </sharc/software/install_scripts/apps/gnuplot/5.0.6/gcc-4.8.5/install_gnuplot.sh>` script; the module
+:download:`install_gnuplot.sh </decommissioned/sharc/software/install_scripts/apps/gnuplot/5.0.6/gcc-4.8.5/install_gnuplot.sh>` script; the module
 file is
-:download:`gcc-4.8.5 </sharc/software/modulefiles/apps/gnuplot/5.0.6/gcc-4.8.5>`.
+:download:`gcc-4.8.5 </decommissioned/sharc/software/modulefiles/apps/gnuplot/5.0.6/gcc-4.8.5>`.
 The installation of Gnuplot 5.0.6 was compiled with GCC 4.8.5 and was tested using the ``make check`` command as part of running the above installation script.
     

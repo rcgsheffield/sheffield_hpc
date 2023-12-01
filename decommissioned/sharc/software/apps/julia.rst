@@ -30,10 +30,10 @@ These are primarily for administrators of the system.
 
 **julia version 1.8.5**
 was installed using the
-:download:`install_julia.sge </sharc/software/install_scripts/apps/julia/1.8.5/install_julia.sge>` script.
+:download:`install_julia.sge </decommissioned/sharc/software/install_scripts/apps/julia/1.8.5/install_julia.sge>` script.
 
 **julia version 1.8.2**
 was installed using the
-:download:`install_julia.sh </sharc/software/install_scripts/apps/julia/1.8.2/install_julia.sh>` script.
+:download:`install_julia.sh </decommissioned/sharc/software/install_scripts/apps/julia/1.8.2/install_julia.sh>` script.
 
-The module file is :download:`/usr/local/modulefiles/apps/julia/1.8.2/binary </sharc/software/modulefiles/apps/julia/1.8.2/binary>`.
+The module file is :download:`/usr/local/modulefiles/apps/julia/1.8.2/binary </decommissioned/sharc/software/modulefiles/apps/julia/1.8.2/binary>`.

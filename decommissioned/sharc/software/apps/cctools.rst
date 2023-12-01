@@ -55,5 +55,5 @@ These are primarily for administrators of the system.
 
 #. Download the cctools tarball (``cctools-7.0.14-x86_64-centos7.tar.gz``)  `from CCL <http://ccl.cse.nd.edu/software/downloadfiles.php>`_.
 #. Save this file to ``/usr/local/media/cctools/7.0.14/``
-#. Install cctools using :download:`this script </sharc/software/install_scripts/apps/cctools/7.0.14/binary/install.sh>`
-#. Install :download:`this modulefile </sharc/software/modulefiles/apps/cctools/7.0.14/binary>` as ``/usr/local/modulefiles/apps/cctools/7.0.14/binary``
+#. Install cctools using :download:`this script </decommissioned/sharc/software/install_scripts/apps/cctools/7.0.14/binary/install.sh>`
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/apps/cctools/7.0.14/binary>` as ``/usr/local/modulefiles/apps/cctools/7.0.14/binary``

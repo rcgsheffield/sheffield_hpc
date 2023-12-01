@@ -203,20 +203,20 @@ Serial (1 CPU core) and parallel (MPI) builds were compiled.
 Both builds were compiled with :ref:`version 17.0.0 of the Intel Fortran compiler <sharc-intel-compilers>` and the :ref:`Intel MKL 2017.1 <sharc-intel-mkl>`.
 The MPI build was compiled using :ref:`OpenMPI 2.0.1 <openmpi_intel_sharc>`.
 
-Both builds were compiled and installed using :download:`this script </sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/install.sh>` plus
+Both builds were compiled and installed using :download:`this script </decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/install.sh>` plus
 
-* :download:`this serial build configuration</sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/getmachine_serial>`
-* :download:`this MPI build configuration</sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/getmachine_mpi>`
+* :download:`this serial build configuration</decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/getmachine_serial>`
+* :download:`this MPI build configuration</decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/getmachine_mpi>`
 
 In addition:
 
-* :download:`The serial build modulefile </sharc/software/modulefiles/apps/gulp/4.4/intel-17.0.0>` was installed as ``/usr/local/modulefiles/apps/gulp/4.4/intel-17.0.0``
-* :download:`The parallel build modulefile </sharc/software/modulefiles/apps/gulp/4.4/intel-17.0.0-openmpi-2.0.1>` was installed as ``/usr/local/modulefiles/apps/gulp/4.4/intel-17.0.0-openmpi-2.0.1``
+* :download:`The serial build modulefile </decommissioned/sharc/software/modulefiles/apps/gulp/4.4/intel-17.0.0>` was installed as ``/usr/local/modulefiles/apps/gulp/4.4/intel-17.0.0``
+* :download:`The parallel build modulefile </decommissioned/sharc/software/modulefiles/apps/gulp/4.4/intel-17.0.0-openmpi-2.0.1>` was installed as ``/usr/local/modulefiles/apps/gulp/4.4/intel-17.0.0-openmpi-2.0.1``
 
 Both versions were tested using the process outlined in the Examples_ section.  The results for the serial version:
 
-* :download:`Timings and results file </sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/timings_serial.log>`
-* :download:`Diffs file </sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/diffs_serial.log>`
+* :download:`Timings and results file </decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/timings_serial.log>`
+* :download:`Diffs file </decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/diffs_serial.log>`
 
 A summary of the issues encountered during these 58 tests: ::
 
@@ -225,8 +225,8 @@ A summary of the issues encountered during these 58 tests: ::
 
 The results for the MPI version:
 
-* :download:`Timings and results file </sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/timings_mpi_16.log>`
-* :download:`Diffs file </sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/diffs_mpi_16.log>`
+* :download:`Timings and results file </decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/timings_mpi_16.log>`
+* :download:`Diffs file </decommissioned/sharc/software/install_scripts/apps/gulp/4.4/intel-17.0.0/diffs_mpi_16.log>`
 
 A summary of the issues encountered during these 58 tests: ::
 

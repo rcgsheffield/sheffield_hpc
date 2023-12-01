@@ -25,7 +25,7 @@ After this any of the bedtools commands can be run from the prompt.
 
 Installation notes
 ------------------
-Bedtools was installed using GCC 8.2 with the script :download:`/usr/local/packages/apps/bedtools/2.30.0/gcc-8.2-cmake-3.17.1/install_bedtools.sh </sharc/software/install_scripts/apps/bedtools/2.30.0/gcc-8.2-cmake-3.17.1/install_bedtools.sh>`
+Bedtools was installed using GCC 8.2 with the script :download:`/usr/local/packages/apps/bedtools/2.30.0/gcc-8.2-cmake-3.17.1/install_bedtools.sh </decommissioned/sharc/software/install_scripts/apps/bedtools/2.30.0/gcc-8.2-cmake-3.17.1/install_bedtools.sh>`
 
 Testing
 -------

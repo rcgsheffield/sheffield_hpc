@@ -29,16 +29,16 @@ The following notes are primarily for system administrators.
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2019 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-daal/2019.3/binary>` was installed as ``/usr/local/modulefiles/libs/intel-daal/2019.3/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-daal/2019.3/binary>` was installed as ``/usr/local/modulefiles/libs/intel-daal/2019.3/binary``.
 
 **Intel DAAL 2017.0**
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-daal/2017.0/binary>` was installed as ``/usr/local/modulefiles/libs/intel-daal/2017.0/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-daal/2017.0/binary>` was installed as ``/usr/local/modulefiles/libs/intel-daal/2017.0/binary``.
 
 **Intel DAAL 2016.1**
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2016.1 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-daal/2016.1/binary>` was installed as ``/usr/local/modulefiles/libs/intel-daal/2016.1/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-daal/2016.1/binary>` was installed as ``/usr/local/modulefiles/libs/intel-daal/2016.1/binary``.

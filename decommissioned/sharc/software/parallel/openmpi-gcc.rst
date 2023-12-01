@@ -73,69 +73,69 @@ These are primarily for administrators of the system.
 **Version 4.0.1, gcc 8.2**
 
 1. Enable :ref:`GCC <gcc_sharc>` 8.2.0.
-2. Download, compile and install OpenMPI 4.0.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/4.0.1/gcc-8.2/install.sh>`.
-3. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/4.0.1/gcc-8.2>` as ``/usr/local/modulefiles/mpi/openmpi/4.0.1/gcc-8.2``
+2. Download, compile and install OpenMPI 4.0.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/4.0.1/gcc-8.2/install.sh>`.
+3. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/4.0.1/gcc-8.2>` as ``/usr/local/modulefiles/mpi/openmpi/4.0.1/gcc-8.2``
 
 **Version 3.1.1, gcc 8.2**
 
 1. Enable :ref:`GCC <gcc_sharc>` 8.2.0.
-2. Download, compile and install OpenMPI 3.1.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/3.1.1/gcc-8.2/install.sh>`.
-3. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/3.1.1/gcc-8.2>` as ``/usr/local/modulefiles/mpi/openmpi/3.1.1/gcc-8.2``
+2. Download, compile and install OpenMPI 3.1.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/3.1.1/gcc-8.2/install.sh>`.
+3. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/3.1.1/gcc-8.2>` as ``/usr/local/modulefiles/mpi/openmpi/3.1.1/gcc-8.2``
 
 **Version 2.1.1, gcc 6.2**
 
 1. Enable :ref:`GCC <gcc_sharc>` 6.2.0.
-2. Download, compile and install OpenMPI 2.1.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.1.1/gcc-6.2/install.sh>`.
-3. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.1.1/gcc-6.2>` as ``/usr/local/modulefiles/mpi/openmpi/2.1.1/gcc-6.2``
+2. Download, compile and install OpenMPI 2.1.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.1.1/gcc-6.2/install.sh>`.
+3. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.1.1/gcc-6.2>` as ``/usr/local/modulefiles/mpi/openmpi/2.1.1/gcc-6.2``
 
 **Version 2.1.1, gcc 5.4**
 
 1. Enable :ref:`GCC <gcc_sharc>` 5.4.0.
-2. Download, compile and install OpenMPI 2.1.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.1.1/gcc-5.4/install.sh>`.
-3. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.1.1/gcc-5.4>` as ``/usr/local/modulefiles/mpi/openmpi/2.1.1/gcc-5.4``
+2. Download, compile and install OpenMPI 2.1.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.1.1/gcc-5.4/install.sh>`.
+3. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.1.1/gcc-5.4>` as ``/usr/local/modulefiles/mpi/openmpi/2.1.1/gcc-5.4``
 
 **Version 2.1.1, gcc 4.8.5**
 
-1. Download, compile and install OpenMPI 2.1.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.1.1/gcc-4.8.5/install.sh>`.
-2. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.1.1/gcc-4.8.5>` as ``/usr/local/modulefiles/mpi/openmpi/2.1.1/gcc-4.8.5``
+1. Download, compile and install OpenMPI 2.1.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.1.1/gcc-4.8.5/install.sh>`.
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.1.1/gcc-4.8.5>` as ``/usr/local/modulefiles/mpi/openmpi/2.1.1/gcc-4.8.5``
 
 **Version 2.0.1, gcc 6.2**
 
 1. Enable :ref:`GCC <gcc_sharc>` 6.2.0.
-2. Download, compile and install OpenMPI 2.0.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.0.1/gcc-6.2/install.sh>`.
-3. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.0.1/gcc-6.2>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/gcc-6.2``
+2. Download, compile and install OpenMPI 2.0.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.0.1/gcc-6.2/install.sh>`.
+3. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.0.1/gcc-6.2>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/gcc-6.2``
 
 **Version 2.0.1, gcc 5.4**
 
 1. Enable :ref:`GCC <gcc_sharc>` 5.4.0
-2. Download, compile and install OpenMPI 2.0.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.0.1/gcc-5.4/install.sh>`.
-3. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.0.1/gcc-5.4>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/gcc-5.4``
+2. Download, compile and install OpenMPI 2.0.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.0.1/gcc-5.4/install.sh>`.
+3. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.0.1/gcc-5.4>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/gcc-5.4``
 
 **Version 2.0.1, gcc 4.9.4**
 
-1. Download, compile and install OpenMPI 2.0.1 using the :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.0.1/gcc-4.9.4/install.sh>`.
-2. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.0.1/gcc-4.9.4>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/gcc-4.9.4``
+1. Download, compile and install OpenMPI 2.0.1 using the :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.0.1/gcc-4.9.4/install.sh>`.
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.0.1/gcc-4.9.4>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/gcc-4.9.4``
 
 **Version 1.10.4, gcc 6.2**
 
 #. Enable :ref:`GCC <gcc_sharc>` 6.2.0.
-#. Download, compile and install OpenMPI 1.10.4 using :download:`this script </sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-6.2/install.sh>`.
-#. Configure the OpenMPI *Modular Component Architecture* (MCA) by copying :download:`this script </sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-6.2/openmpi-mca-params.conf>` and save as ``/usr/local/packages/mpi/openmpi/1.10.4/gcc-6.2/openmpi-mca-params.conf``; this configures: 
+#. Download, compile and install OpenMPI 1.10.4 using :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-6.2/install.sh>`.
+#. Configure the OpenMPI *Modular Component Architecture* (MCA) by copying :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-6.2/openmpi-mca-params.conf>` and save as ``/usr/local/packages/mpi/openmpi/1.10.4/gcc-6.2/openmpi-mca-params.conf``; this configures: 
 
    * the ``mtl`` (MCA *Matching Transport Layer*) to use the ``psm2`` driver (i.e. use the high-bandwidth, low-latency Intel OmniPath fabric);
    * the ``btl`` (MCA *Byte Transport Layer*) to use Omnipath but (not not Ethernet);
    * the ``oob`` (MCA out of band messaging) to use the intra-cluster Ethernet fabric (specified using a network address in CIDR format rather than by specifying Ethernet interface name, which can vary between nodes).
 
-#. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/1.10.4/gcc-6.2>` as ``/usr/local/modulefiles/mpi/openmpi/1.10.4/gcc-6.2``
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/1.10.4/gcc-6.2>` as ``/usr/local/modulefiles/mpi/openmpi/1.10.4/gcc-6.2``
 
 **Version 1.10.4, gcc 4.9.4**
 
 #. Enable :ref:`GCC <gcc_sharc>` 4.9.4.
-#. Download, compile and install OpenMPI 1.10.4 using :download:`this script </sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-4.9.4/install.sh>`.
-#. Configure the OpenMPI *Modular Component Architecture* (MCA) by copying :download:`this script </sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-4.9.4/openmpi-mca-params.conf>` to ``/usr/local/packages/mpi/openmpi/1.10.4/gcc-4.9.4//openmpi-mca-params.conf``; this configures: 
+#. Download, compile and install OpenMPI 1.10.4 using :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-4.9.4/install.sh>`.
+#. Configure the OpenMPI *Modular Component Architecture* (MCA) by copying :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/1.10.4/gcc-4.9.4/openmpi-mca-params.conf>` to ``/usr/local/packages/mpi/openmpi/1.10.4/gcc-4.9.4//openmpi-mca-params.conf``; this configures: 
 
    * the ``mtl`` (MCA *Matching Transport Layer*) to use the ``psm2`` driver (i.e. use the high-bandwidth, low-latency Intel OmniPath fabric);
    * the ``btl`` (MCA *Byte Transport Layer*) to use Omnipath but (not not Ethernet);
    * the ``oob`` (MCA out of band messaging) to use the intra-cluster Ethernet fabric (specified using a network address in CIDR format rather than by specifying Ethernet interface name, which can vary between nodes).
 
-#. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/1.10.4/gcc-4.9.4>` as ``/usr/local/modulefiles/mpi/openmpi/1.10.4/gcc-4.9.4``
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/1.10.4/gcc-4.9.4>` as ``/usr/local/modulefiles/mpi/openmpi/1.10.4/gcc-4.9.4``

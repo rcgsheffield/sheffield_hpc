@@ -23,6 +23,6 @@ Installation notes
 ------------------
 
 FastQC was installed using the
-:download:`install_fastqc.sh </sharc/software/install_scripts/apps/FastQC/0.11.7/install_fastqc.sh>` script, the module
+:download:`install_fastqc.sh </decommissioned/sharc/software/install_scripts/apps/FastQC/0.11.7/install_fastqc.sh>` script, the module
 file is
-:download:`0.11.7 </sharc/software/modulefiles/apps/FastQC/0.11.7>`.
+:download:`0.11.7 </decommissioned/sharc/software/modulefiles/apps/FastQC/0.11.7>`.

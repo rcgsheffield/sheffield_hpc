@@ -24,6 +24,6 @@ Installation notes
 ------------------
 
 Foxit was installed using the
-:download:`install_foxit.sh </sharc/software/install_scripts/apps/foxit/2.4.0/install_foxit.sh>` script, the module
+:download:`install_foxit.sh </decommissioned/sharc/software/install_scripts/apps/foxit/2.4.0/install_foxit.sh>` script, the module
 file is
-:download:`2.4.0 </sharc/software/modulefiles/apps/foxit/2.4.0>`.
+:download:`2.4.0 </decommissioned/sharc/software/modulefiles/apps/foxit/2.4.0>`.

@@ -89,9 +89,9 @@ Installation ``.tgz`` files and ``.deb`` files containing samples are located in
 
 Version 8.2.1.32
 ^^^^^^^^^^^^^^^^
-- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
-- :download:`Module file for CUDA 11.3 </sharc/software/modulefiles/libs/cudnn/8.2.1.32/binary-cuda-11.3.0>`
-- :download:`Module file for CUDA 11.2 </sharc/software/modulefiles/libs/cudnn/8.2.1.32/binary-cuda-11.2.0>`
+- Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 11.3 </decommissioned/sharc/software/modulefiles/libs/cudnn/8.2.1.32/binary-cuda-11.3.0>`
+- :download:`Module file for CUDA 11.2 </decommissioned/sharc/software/modulefiles/libs/cudnn/8.2.1.32/binary-cuda-11.2.0>`
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 11.2 & 11.3 on a K80 GPU. 
 
 Note that FreeImage is no longer distributed with CUDA version 11.2 or higher thus the 
@@ -99,8 +99,8 @@ Note that FreeImage is no longer distributed with CUDA version 11.2 or higher th
 
 Version 8.1.1.33
 ^^^^^^^^^^^^^^^^
-- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
-- :download:`Module file for CUDA 11.2 </sharc/software/modulefiles/libs/cudnn/8.1.1.33/binary-cuda-11.2.0>`
+- Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 11.2 </decommissioned/sharc/software/modulefiles/libs/cudnn/8.1.1.33/binary-cuda-11.2.0>`
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 11.2 on a K80 GPU. Note that
 
 Note that FreeImage is no longer distributed with CUDA version 11.2 or higher thus the 
@@ -108,18 +108,18 @@ Note that FreeImage is no longer distributed with CUDA version 11.2 or higher th
 
 Version 8.0.5.39
 ^^^^^^^^^^^^^^^^
-- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
-- :download:`Module file for CUDA 11.1 </sharc/software/modulefiles/libs/cudnn/8.0.5.39/binary-cuda-11.1.1>`
+- Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 11.1 </decommissioned/sharc/software/modulefiles/libs/cudnn/8.0.5.39/binary-cuda-11.1.1>`
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 11.1 on a V100 GPU.
 
 Version 7.6.5.32
 ^^^^^^^^^^^^^^^^
 
-- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
-- :download:`Module file for CUDA 10.2 </sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-10.2.89>`
-- :download:`Module file for CUDA 10.1 </sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-10.1.243>`
-- :download:`Module file for CUDA 10.0 </sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-10.0.130>`
-- :download:`Module file for CUDA 9.0 </sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-9.0.176>`
+- Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 10.2 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-10.2.89>`
+- :download:`Module file for CUDA 10.1 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-10.1.243>`
+- :download:`Module file for CUDA 10.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-10.0.130>`
+- :download:`Module file for CUDA 9.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.6.5.32/binary-cuda-9.0.176>`
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 10.0 on a V100 GPU; results: ::
 
    [te1st mnistCUDNN]$ ./mnistCUDNN
@@ -184,9 +184,9 @@ Version 7.6.5.32
 Version 7.5.0.56
 ^^^^^^^^^^^^^^^^
 
-- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
-- :download:`Module file for CUDA 10.0 </sharc/software/modulefiles/libs/cudnn/7.5.0.56/binary-cuda-10.0.130>`
-- :download:`Module file for CUDA 9.0 </sharc/software/modulefiles/libs/cudnn/7.5.0.56/binary-cuda-9.0.176>`
+- Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 10.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.5.0.56/binary-cuda-10.0.130>`
+- :download:`Module file for CUDA 9.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.5.0.56/binary-cuda-9.0.176>`
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 10.0 on a V100 GPU; results: ::
 
    [te1st@sharc-node168 mnistCUDNN]$ ./mnistCUDNN 
@@ -252,8 +252,8 @@ Version 7.5.0.56
 Version 7.3.1.20
 ^^^^^^^^^^^^^^^^
 
-- Install script: :download:`install.sh </sharc/software/install_scripts/libs/cudnn/install.sh>`
-- :download:`Module file for CUDA 9.0 </sharc/software/modulefiles/libs/cudnn/7.3.1.20/binary-cuda-9.0.176>`
+- Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install.sh>`
+- :download:`Module file for CUDA 9.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.3.1.20/binary-cuda-9.0.176>`
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 9.0 on a V100 GPU; results: ::
 
    [te1st@sharc-node168 mnistCUDNN]$ ./mnistCUDNN 
@@ -319,28 +319,28 @@ Version 7.3.1.20
 Version 7.0
 ^^^^^^^^^^^
 
-- Install script: :download:`install_cudnn7.0_for_cuda8.0_cuda9.1.sh </sharc/software/install_scripts/libs/cudnn/install_7.0_for_cuda_8.0_cuda_9.1.sh>`
-- :download:`Module file for CUDA 9.1 </sharc/software/modulefiles/libs/cudnn/7.0/binary-cuda-9.1.85>`
-- :download:`Module file for CUDA 8.0 </sharc/software/modulefiles/libs/cudnn/7.0/binary-cuda-8.0.44>`
+- Install script: :download:`install_cudnn7.0_for_cuda8.0_cuda9.1.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install_7.0_for_cuda_8.0_cuda_9.1.sh>`
+- :download:`Module file for CUDA 9.1 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.0/binary-cuda-9.1.85>`
+- :download:`Module file for CUDA 8.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/7.0/binary-cuda-8.0.44>`
 
 Version 6.0
 ^^^^^^^^^^^
 
-- Install script: :download:`install_cudnn6.0_for_cuda8.0.sh </sharc/software/install_scripts/libs/cudnn/install_6.0_for_cuda_8.0.sh>`
-- :download:`Module file </sharc/software/modulefiles/libs/cudnn/6.0/binary-cuda-8.0.44>`
+- Install script: :download:`install_cudnn6.0_for_cuda8.0.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install_6.0_for_cuda_8.0.sh>`
+- :download:`Module file </decommissioned/sharc/software/modulefiles/libs/cudnn/6.0/binary-cuda-8.0.44>`
 
 Version 5.1
 ^^^^^^^^^^^
 
-- Install script: :download:`install_cudnn5.1_for_cuda7.5_cuda8.0.sh </sharc/software/install_scripts/libs/cudnn/install_5.1_for_cuda_7.5_cuda_8.0.sh>`
-- :download:`Module file for CUDA 8.0 </sharc/software/modulefiles/libs/cudnn/5.1/binary-cuda-8.0.44>`
-- :download:`Module file for CUDA 7.5 </sharc/software/modulefiles/libs/cudnn/5.1/binary-cuda-7.5.18>`
+- Install script: :download:`install_cudnn5.1_for_cuda7.5_cuda8.0.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install_5.1_for_cuda_7.5_cuda_8.0.sh>`
+- :download:`Module file for CUDA 8.0 </decommissioned/sharc/software/modulefiles/libs/cudnn/5.1/binary-cuda-8.0.44>`
+- :download:`Module file for CUDA 7.5 </decommissioned/sharc/software/modulefiles/libs/cudnn/5.1/binary-cuda-7.5.18>`
 
 Version 4.0
 ^^^^^^^^^^^
 
-- Install script: :download:`install_4.0_for_cuda_7.0.sh </sharc/software/install_scripts/libs/cudnn/install_4.0_for_cuda_7.0.sh>`
-- :download:`Module file for CUDA 7.5 </sharc/software/modulefiles/libs/cudnn/4.0/binary-cuda-7.5.18>` 
+- Install script: :download:`install_4.0_for_cuda_7.0.sh </decommissioned/sharc/software/install_scripts/libs/cudnn/install_4.0_for_cuda_7.0.sh>`
+- :download:`Module file for CUDA 7.5 </decommissioned/sharc/software/modulefiles/libs/cudnn/4.0/binary-cuda-7.5.18>` 
   (this cuDNN was built for CUDA 7.0 but should be compatible with CUDA 7.5)
 - Testing: ran the ``mnistCUDNN`` example (see *Examples* above) with CUDA 7.5 on a K80 GPU (NB tests failed on P100 and V100 GPUs): ::
 

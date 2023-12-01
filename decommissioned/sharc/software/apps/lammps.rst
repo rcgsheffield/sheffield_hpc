@@ -116,8 +116,8 @@ Installation notes
 ------------------
 
 LAMMPS was compiled using the
-:download:`install_lammps.sh </sharc/software/install_scripts/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1/install_lammps.sh>` script.
+:download:`install_lammps.sh </decommissioned/sharc/software/install_scripts/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1/install_lammps.sh>` script.
 
 The module file is
-:download:`/usr/local/modulefiles/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1 </sharc/software/modulefiles/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/lammps/22_08_2018/gcc-4.9.4-openmpi-2.0.1>`.
 

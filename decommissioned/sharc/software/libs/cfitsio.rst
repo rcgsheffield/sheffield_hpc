@@ -26,7 +26,7 @@ to the include directory.
 Installation notes
 ------------------
 This section is primarily for administrators of the system. CFITSIO 3.49,3.38 was compiled with GCC 8.2.
-The compilation used this :download:`script </sharc/software/install_scripts/libs/cfitsio/install_cfitsio.sh>` 
-and it is loaded with this :download:`modulefile </sharc/software/modulefiles/libs/cfitsio/3.49/gcc-8.2>`.
+The compilation used this :download:`script </decommissioned/sharc/software/install_scripts/libs/cfitsio/install_cfitsio.sh>` 
+and it is loaded with this :download:`modulefile </decommissioned/sharc/software/modulefiles/libs/cfitsio/3.49/gcc-8.2>`.
 
 The module was tested with the process described here: https://heasarc.gsfc.nasa.gov/docs/software/fitsio/c/c_user/node13.html.

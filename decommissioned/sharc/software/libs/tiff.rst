@@ -19,5 +19,5 @@ This section is primarily for administrators of the system.
 
 **Version 4.1.0 gcc-8.2.0 build**
 
-# :download:`Install script </sharc/software/install_scripts/libs/tiff/4.1.0/gcc-8.2.0/install.sh>`
-# :download:`Module File </sharc/software/modulefiles/libs/tiff/4.1.0/gcc-8.2.0>` as ``/usr/local/modulefiles/libs/tiff/4.1.0/gcc-8.2.0``
+# :download:`Install script </decommissioned/sharc/software/install_scripts/libs/tiff/4.1.0/gcc-8.2.0/install.sh>`
+# :download:`Module File </decommissioned/sharc/software/modulefiles/libs/tiff/4.1.0/gcc-8.2.0>` as ``/usr/local/modulefiles/libs/tiff/4.1.0/gcc-8.2.0``

@@ -46,19 +46,19 @@ Installation notes
 ------------------
 
 Code Saturne 4.0.7 was installed with GCC 4.9.4 and Open MPI 1.10.4 using the
-:download:`install_code_saturne.sh </sharc/software/install_scripts/apps/code_saturne/4.0.7/gcc-4.9.4-openmpi-1.10.4/install_code_saturne.sh>` script; the module
+:download:`install_code_saturne.sh </decommissioned/sharc/software/install_scripts/apps/code_saturne/4.0.7/gcc-4.9.4-openmpi-1.10.4/install_code_saturne.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/code_saturne/4.0.7/gcc-4.9.4-openmpi-1.10.4 </sharc/software/modulefiles/apps/code_saturne/4.0.7/gcc-4.9.4-openmpi-1.10.4>`.
+:download:`/usr/local/modulefiles/apps/code_saturne/4.0.7/gcc-4.9.4-openmpi-1.10.4 </decommissioned/sharc/software/modulefiles/apps/code_saturne/4.0.7/gcc-4.9.4-openmpi-1.10.4>`.
 
 Code Saturne 4.0.7 was installed with GCC 6.2.0 and Open MPI 2.0.1 using the
-:download:`install_code_saturne.sh </sharc/software/install_scripts/apps/code_saturne/4.0.7/gcc-6.2-openmpi-2.0.1/install_code_saturne.sh>` script; the module
+:download:`install_code_saturne.sh </decommissioned/sharc/software/install_scripts/apps/code_saturne/4.0.7/gcc-6.2-openmpi-2.0.1/install_code_saturne.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/code_saturne/4.0.7/gcc-6.2-openmpi-2.0.1 </sharc/software/modulefiles/apps/code_saturne/4.0.7/gcc-6.2-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/code_saturne/4.0.7/gcc-6.2-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/code_saturne/4.0.7/gcc-6.2-openmpi-2.0.1>`.
 
 Code Saturne 5.0.4 was installed with Intel 17.0.0 and Open MPI 2.0.1 using the
-:download:`install_code_saturne_5.0.4.sh </sharc/software/install_scripts/apps/code_saturne/5.0.4/intel-17.0.0-openmpi-2.0.1/install_code_saturne_5.0.4.sh>` script; the module
+:download:`install_code_saturne_5.0.4.sh </decommissioned/sharc/software/install_scripts/apps/code_saturne/5.0.4/intel-17.0.0-openmpi-2.0.1/install_code_saturne_5.0.4.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/code_saturne/5.0.4/intel-17.0.0-openmpi-2.0.1 </sharc/software/modulefiles/apps/code_saturne/5.0.4/intel-17.0.0-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/code_saturne/5.0.4/intel-17.0.0-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/code_saturne/5.0.4/intel-17.0.0-openmpi-2.0.1>`.
 
 The above installations used the libraries Scotch/PT-Scotch 6.0.4 and Libxml2 2.9.1. No additional, optional libraries were used during compilation.  
 

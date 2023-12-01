@@ -61,6 +61,6 @@ These are primarily for administrators of the system.
 
 2.24-10
 ^^^^^^^
-* Install script: :download:`install.sh </sharc/software/install_scripts/community/rse/apps/magma/2.24/install.sh>`
-* AVX build module file: :download:`/usr/local/community/rse/mods/apps/magma/2.24/binary-avx64 </sharc/software/modulefiles/community/rse/apps/magma/2.24/binary-avx64>`.
-* CUDA build module file: :download:`/usr/local/community/rse/mods/apps/magma/2.24/binary-cuda8 </sharc/software/modulefiles/community/rse/apps/magma/2.24/binary-cuda8>`.
+* Install script: :download:`install.sh </decommissioned/sharc/software/install_scripts/community/rse/apps/magma/2.24/install.sh>`
+* AVX build module file: :download:`/usr/local/community/rse/mods/apps/magma/2.24/binary-avx64 </decommissioned/sharc/software/modulefiles/community/rse/apps/magma/2.24/binary-avx64>`.
+* CUDA build module file: :download:`/usr/local/community/rse/mods/apps/magma/2.24/binary-cuda8 </decommissioned/sharc/software/modulefiles/community/rse/apps/magma/2.24/binary-cuda8>`.

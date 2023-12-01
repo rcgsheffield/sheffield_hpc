@@ -309,7 +309,7 @@ In more detail:
 
     chmod -R g+w ${USER}:app-admins /usr/local/packages/apps/matlab/R2022a /usr/local/modulefiles/apps/matlab/2022a
 
-#. The modulefile is :download:`/usr/local/modulefiles/apps/matlab/2022a/binary </sharc/software/modulefiles/apps/matlab/2022a/binary>`.
+#. The modulefile is :download:`/usr/local/modulefiles/apps/matlab/2022a/binary </decommissioned/sharc/software/modulefiles/apps/matlab/2022a/binary>`.
 
 #. Copy integration scripts to MATLAB local directory (required for MATLAB parallel (multi-node)): ::
 

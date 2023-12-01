@@ -85,7 +85,7 @@ Installed as part of :ref:`Parallel Studio Composer Edition 2019
 <sharc-intel-parallel-studio>`.
 
 :download:`This modulefile 
-</sharc/software/modulefiles/libs/intel-tbb/2019.3/binary>` was installed as
+</decommissioned/sharc/software/modulefiles/libs/intel-tbb/2019.3/binary>` was installed as
 ``/usr/local/modulefiles/libs/intel-tbb/2019.3/binary``.
 
 Intel TBB 2017.0
@@ -95,7 +95,7 @@ Installed as part of :ref:`Parallel Studio Composer Edition 2017
 <sharc-intel-parallel-studio>`.
 
 :download:`This modulefile 
-</sharc/software/modulefiles/libs/intel-tbb/2017.0/binary>` was installed as
+</decommissioned/sharc/software/modulefiles/libs/intel-tbb/2017.0/binary>` was installed as
 ``/usr/local/modulefiles/libs/intel-tbb/2017.0/binary``.
 
 Intel TBB 2016.1
@@ -105,7 +105,7 @@ Installed as part of :ref:`Parallel Studio Composer Edition 2016
 <sharc-intel-parallel-studio>`.
 
 :download:`This modulefile 
-</sharc/software/modulefiles/libs/intel-tbb/2016.1/binary>` was installed as
+</decommissioned/sharc/software/modulefiles/libs/intel-tbb/2016.1/binary>` was installed as
 ``/usr/local/modulefiles/libs/intel-tbb/2016.1/binary``.
 
 Intel TBB 2015.7
@@ -115,5 +115,5 @@ Installed as part of :ref:`Parallel Studio Composer Edition 2015.7
 <sharc-intel-parallel-studio>`.
 
 :download:`This modulefile 
-</sharc/software/modulefiles/libs/intel-tbb/2015.7/binary>` was installed as
+</decommissioned/sharc/software/modulefiles/libs/intel-tbb/2015.7/binary>` was installed as
 ``/usr/local/modulefiles/libs/intel-tbb/2015.7/binary``.

@@ -105,17 +105,17 @@ Installation notes
 OpenFOAM v2012
 ^^^^^^^^^^^^^^
 OpenFOAM v2012 was installed by Git cloning the requisite repositories from https://develop.openfoam.com/Development/openfoam/ and https://develop.openfoam.com/Development/ThirdParty-common/ followed by running the
-:download:`compileOFv2012.sge </sharc/software/install_scripts/apps/openfoam/v2012/compileOFv2012.sge>` installation script. (Third party downloads may be necessary prior to compiling.)
+:download:`compileOFv2012.sge </decommissioned/sharc/software/install_scripts/apps/openfoam/v2012/compileOFv2012.sge>` installation script. (Third party downloads may be necessary prior to compiling.)
 
 Persistent configuration settings can be found in ``/usr/local/packages/apps/openfoam/v2012/OpenFOAM-v2012/etc/prefs.sh``.
 
 All available third party dependencies were also (manually in some cases) downloaded, compiled and installed.
 
-The module file was built by observing shell environment changes / looking at the OpenFOAM documentation and can downloaded: :download:`gcc-8.2-openmpi-4.0.3 </sharc/software/modulefiles/apps/openfoam/v2012/gcc-8.2-openmpi-4.0.3>`.
+The module file was built by observing shell environment changes / looking at the OpenFOAM documentation and can downloaded: :download:`gcc-8.2-openmpi-4.0.3 </decommissioned/sharc/software/modulefiles/apps/openfoam/v2012/gcc-8.2-openmpi-4.0.3>`.
 
 The use of ``setenv  OMPI_MCA_btl_openib_allow_ib 1`` in the module file is required in order to get the correct connectivity with the Omnipath interconnect.
 
-Installation was tested as follows as above with the :download:`example batch script modified </sharc/software/modulefiles/apps/openfoam/v2012/OpenFOAMv2012-test-parallel-4.sge>`
+Installation was tested as follows as above with the :download:`example batch script modified </decommissioned/sharc/software/modulefiles/apps/openfoam/v2012/OpenFOAMv2012-test-parallel-4.sge>`
 (Getting Started example from https://openfoam.org/download/8-source/) with the below decomposeParDict:
 
 https://openfoamwiki.net/index.php/DecomposePar
@@ -128,18 +128,18 @@ OpenFOAM 8
 ^^^^^^^^^^
 
 OpenFOAM 8 was installed by Git cloning the requisite OpenFOAM-8 and ThirdParty-8 directories from https://github.com/OpenFOAM/OpenFOAM-8 followed by running the
-:download:`compileOF8pf.sge </sharc/software/install_scripts/apps/openfoam/8/compileOF8pf.sge>` and
-:download:`compileOF8pf_Third_Party.sge </sharc/software/install_scripts/apps/openfoam/8/compileOF8pf_Third_Party.sge>` installation scripts. (Third party downloads may be necessary prior to compiling.)
+:download:`compileOF8pf.sge </decommissioned/sharc/software/install_scripts/apps/openfoam/8/compileOF8pf.sge>` and
+:download:`compileOF8pf_Third_Party.sge </decommissioned/sharc/software/install_scripts/apps/openfoam/8/compileOF8pf_Third_Party.sge>` installation scripts. (Third party downloads may be necessary prior to compiling.)
 
 Persistent configuration settings can be found in ``/usr/local/packages/apps/openfoam/8/gcc-8.2-openmpi-4.0.1/site/8/prefs.sh``.
 
 All available third party dependencies were also (manually in some cases) downloaded, compiled and installed. FoamyHexMesh was enabled.
 
-The module file was built by observing shell environment changes / looking at the OpenFOAM documentation and can downloaded: :download:`gcc-8.2-openmpi-4.0.1 </sharc/software/modulefiles/apps/openfoam/8/gcc-8.2-openmpi-4.0.1>`.
+The module file was built by observing shell environment changes / looking at the OpenFOAM documentation and can downloaded: :download:`gcc-8.2-openmpi-4.0.1 </decommissioned/sharc/software/modulefiles/apps/openfoam/8/gcc-8.2-openmpi-4.0.1>`.
 
 The use of ``setenv  OMPI_MCA_btl_openib_allow_ib 1`` in the module file is required in order to get the correct connectivity with the Omnipath interconnect.
 
-Installation was tested as follows as above with the :download:`example batch script modified </sharc/software/modulefiles/apps/openfoam/8/OpenFOAM8-test-parallel-4.sge>`
+Installation was tested as follows as above with the :download:`example batch script modified </decommissioned/sharc/software/modulefiles/apps/openfoam/8/OpenFOAM8-test-parallel-4.sge>`
 (Getting Started example from https://openfoam.org/download/8-source/) with the below decomposeParDict:
 
 https://openfoamwiki.net/index.php/DecomposePar
@@ -148,9 +148,9 @@ OpenFOAM 4.1
 ^^^^^^^^^^^^
 
 OpenFOAM 4.1 was installed using the
-:download:`install_openfoam.sh </sharc/software/install_scripts/apps/openfoam/4.1/install_openfoam.sh>` script, the module
+:download:`install_openfoam.sh </decommissioned/sharc/software/install_scripts/apps/openfoam/4.1/install_openfoam.sh>` script, the module
 file is
-:download:`gcc-6.2-openmpi-2.0.1 </sharc/software/modulefiles/apps/openfoam/4.1/gcc-6.2-openmpi-2.0.1>`. The following optional dependencies were built as part of the installation process: Scotch/PT-Scotch v6.0.3 (located in /usr/local/packages/apps/openfoam/4.1/gcc-6.2-openmpi-2.0.1/ThirdParty-4.1). The following optional dependencies were not installed: ParaView and CGAL.
+:download:`gcc-6.2-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/openfoam/4.1/gcc-6.2-openmpi-2.0.1>`. The following optional dependencies were built as part of the installation process: Scotch/PT-Scotch v6.0.3 (located in /usr/local/packages/apps/openfoam/4.1/gcc-6.2-openmpi-2.0.1/ThirdParty-4.1). The following optional dependencies were not installed: ParaView and CGAL.
 
 Installation was tested as follows (Getting Started example from https://openfoam.org/download/4-1-source/)::
 

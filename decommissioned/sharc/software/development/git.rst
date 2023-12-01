@@ -33,8 +33,8 @@ Installation notes
 2.39.2
 ^^^^^^
 
-* :download:`Install script </sharc/software/install_scripts/dev/git/2.39.2/gcc-4.9.4/install_git.sh>`
-* :download:`Module file </sharc/software/modulefiles/dev/git/2.39.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.39.2/gcc-4.9.4``
+* :download:`Install script </decommissioned/sharc/software/install_scripts/dev/git/2.39.2/gcc-4.9.4/install_git.sh>`
+* :download:`Module file </decommissioned/sharc/software/modulefiles/dev/git/2.39.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.39.2/gcc-4.9.4``
 
 
 2.39.1
@@ -42,21 +42,21 @@ Installation notes
 
 Retired due to CVE.
 
-* :download:`Install script </sharc/software/install_scripts/dev/git/2.39.1/gcc-4.9.4/install_git.sh>`
-* :download:`Module file </sharc/software/modulefiles/dev/git/2.39.1/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.39.1/gcc-4.9.4``
+* :download:`Install script </decommissioned/sharc/software/install_scripts/dev/git/2.39.1/gcc-4.9.4/install_git.sh>`
+* :download:`Module file </decommissioned/sharc/software/modulefiles/dev/git/2.39.1/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.39.1/gcc-4.9.4``
 
 2.35.2
 ^^^^^^
 
 Retired due to CVE-2022-41903 and CVE-2022-23521.
 
-* :download:`Install script </sharc/software/install_scripts/dev/git/2.35.2/gcc-4.9.4/install.sh>`
-* :download:`Module file </sharc/software/modulefiles/dev/git/2.35.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.35.2/gcc-4.9.4``
+* :download:`Install script </decommissioned/sharc/software/install_scripts/dev/git/2.35.2/gcc-4.9.4/install.sh>`
+* :download:`Module file </decommissioned/sharc/software/modulefiles/dev/git/2.35.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.35.2/gcc-4.9.4``
 
 2.19.2
 ^^^^^^
 
 Retired due to CVE-2022-24765.
 
-* :download:`Install script </sharc/software/install_scripts/dev/git/2.19.2/gcc-4.9.4/install.sh>`
-* :download:`Module file </sharc/software/modulefiles/dev/git/2.19.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.19.2/gcc-4.9.4``
+* :download:`Install script </decommissioned/sharc/software/install_scripts/dev/git/2.19.2/gcc-4.9.4/install.sh>`
+* :download:`Module file </decommissioned/sharc/software/modulefiles/dev/git/2.19.2/gcc-4.9.4>`, located on the system at ``/usr/local/modulefiles/dev/git/2.19.2/gcc-4.9.4``

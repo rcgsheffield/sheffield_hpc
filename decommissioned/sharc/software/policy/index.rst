@@ -10,9 +10,9 @@ General
   unless there is a good reason to do otherwise.
 - Every install must be documented. Minimum documentation consists of:
    - An install script 
-     e.g. :download:`/sharc/software/install_scripts/apps/java/jdk1.8.0_102/binary/install.sh </sharc/software/install_scripts/apps/java/jdk1.8.0_102/binary/install.sh>`.
+     e.g. :download:`/sharc/software/install_scripts/apps/java/jdk1.8.0_102/binary/install.sh </decommissioned/sharc/software/install_scripts/apps/java/jdk1.8.0_102/binary/install.sh>`.
    - An `Environment Module <http://modules.sourceforge.net/>`__ file (if appropriate)
-     e.g. :download:`/sharc/software/modulefiles/apps/java/jdk1.8.0_102/binary </sharc/software/modulefiles/apps/java/jdk1.8.0_102/binary>` 
+     e.g. :download:`/sharc/software/modulefiles/apps/java/jdk1.8.0_102/binary </decommissioned/sharc/software/modulefiles/apps/java/jdk1.8.0_102/binary>` 
    - User documentation e.g. :ref:`Java-sharc`.
 
 Community-installed software

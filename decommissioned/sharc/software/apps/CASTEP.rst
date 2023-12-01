@@ -153,14 +153,14 @@ Serial (no MPI) and parallel (MPI) builds were compiled.
 Both builds were compiled with Intel compiler 15.0.7 (including the Intel MKL 2015.7 for BLAS and FFT routines).  
 The parallel build was compiled using OpenMPI 2.0.1.
 
-Both builds were installed using :download:`this script </sharc/software/install_scripts/apps/castep/16.11/intel-15.0.7/install.sh>`.  
+Both builds were installed using :download:`this script </decommissioned/sharc/software/install_scripts/apps/castep/16.11/intel-15.0.7/install.sh>`.  
 **Note** that this compiles both builds in ``/data/$USER`` as the build directory must be availble to all cluster nodes 
 to allow for subsequent Testing_ of the parallel build.  
 ~2.2 GB of free space is required.
 
-* :download:`The serial build modulefile </sharc/software/modulefiles/apps/castep/16.11/intel-15.0.7>` was installed as 
+* :download:`The serial build modulefile </decommissioned/sharc/software/modulefiles/apps/castep/16.11/intel-15.0.7>` was installed as 
   ``/usr/local/modulefiles/apps/castep/16.11/intel-15.0.7``
-* :download:`The parallel build modulefile </sharc/software/modulefiles/apps/castep/16.11/intel-15.0.7-openmpi-2.0.1>` was installed as 
+* :download:`The parallel build modulefile </decommissioned/sharc/software/modulefiles/apps/castep/16.11/intel-15.0.7-openmpi-2.0.1>` was installed as 
   ``/usr/local/modulefiles/apps/castep/16.11/intel-15.0.7-openmpi-2.0.1``
 
 Version 18.1
@@ -170,11 +170,11 @@ Serial (no MPI) and parallel (MPI) builds were compiled.
 Both builds were compiled with Intel compiler 17.0.0 (including the Intel MKL 2017.0 for BLAS and FFT routines).  
 The parallel build was compiled using OpenMPI 2.0.1.
 
-Both builds were installed using :download:`this script </sharc/software/install_scripts/apps/castep/18.1/intel-17.0.0-openmpi-2.0.1/install_castep_18.1.sh>`.  
+Both builds were installed using :download:`this script </decommissioned/sharc/software/install_scripts/apps/castep/18.1/intel-17.0.0-openmpi-2.0.1/install_castep_18.1.sh>`.  
 
-* :download:`The serial build modulefile </sharc/software/modulefiles/apps/castep/18.1/intel-17.0.0>` was installed as 
+* :download:`The serial build modulefile </decommissioned/sharc/software/modulefiles/apps/castep/18.1/intel-17.0.0>` was installed as 
   ``/usr/local/modulefiles/apps/castep/18.1/intel-17.0.0``
-* :download:`The parallel build modulefile </sharc/software/modulefiles/apps/castep/18.1/intel-17.0.0-openmpi-2.0.1>` was installed as 
+* :download:`The parallel build modulefile </decommissioned/sharc/software/modulefiles/apps/castep/18.1/intel-17.0.0-openmpi-2.0.1>` was installed as 
   ``/usr/local/modulefiles/apps/castep/18.1/intel-17.0.0-openmpi-2.0.1``
 
 Testing
@@ -194,7 +194,7 @@ The following script was submitted via ``qsub`` from the ``Test`` subdirectory o
    cd /scratch/$USER/castep/16.11/intel-15.0.7/serial/Test
    ../bin/testcode.py -q  --total-processors=1 -e castep.serial -c simple -v -v -v
 
-All 416 tests passed.  Results can be found in :download:`castep_16_11_serial_sharc_build_tests.log </sharc/software/install_scripts/apps/castep/16.11/intel-15.0.7/castep_16_11_serial_sharc_build_tests.log>`.  
+All 416 tests passed.  Results can be found in :download:`castep_16_11_serial_sharc_build_tests.log </decommissioned/sharc/software/install_scripts/apps/castep/16.11/intel-15.0.7/castep_16_11_serial_sharc_build_tests.log>`.  
 
 Version 16.11, parallel build
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -210,7 +210,7 @@ The following script was submitted via ``qsub`` from the ``Test`` subdirectory o
 
    ../bin/testcode.py -q  --total-processors=4 --processors=4 -e castep.parallel -c simple -v -v -v
 
-All 416 tests passed.  Results can be found in :download:`castep_16_11_mpi4_sharc_build_tests.log </sharc/software/install_scripts/apps/castep/16.11/intel-15.0.7/castep_16_11_mpi4_sharc_build_tests.log>`.  
+All 416 tests passed.  Results can be found in :download:`castep_16_11_mpi4_sharc_build_tests.log </decommissioned/sharc/software/install_scripts/apps/castep/16.11/intel-15.0.7/castep_16_11_mpi4_sharc_build_tests.log>`.  
 
 Version 18.1, serial build
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

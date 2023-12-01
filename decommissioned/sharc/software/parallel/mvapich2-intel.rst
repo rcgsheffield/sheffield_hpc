@@ -93,12 +93,12 @@ Version 2.3b, Intel 17.0.0 compiler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ensure :ref:`Intel compilers 17.0.0 <sharc-intel-compilers>` are installed and licensed.
-#. Download, compile and install MVAPICH2 2.3b using :download:`install.sh </sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/install.sh>`.
-   :download:`The console log </sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/install.log>` from running ``install.sh``.
-#. Install :download:`this modulefile </sharc/software/modulefiles/mpi/mvapich2/2.3b/intel-17.0.0>` as ``/usr/local/modulefiles/mpi/mvapich2/2.3b/intel-17.0.0``
+#. Download, compile and install MVAPICH2 2.3b using :download:`install.sh </decommissioned/sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/install.sh>`.
+   :download:`The console log </decommissioned/sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/install.log>` from running ``install.sh``.
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/mvapich2/2.3b/intel-17.0.0>` as ``/usr/local/modulefiles/mpi/mvapich2/2.3b/intel-17.0.0``
 #. Tested by running the :ref:`OSU micro benchmarks <mvapich2_benchmark_progs>` using
-   a :download:`mvapich2test.sge</sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/mvapich2test.sge>` job submission script.
-   Results: :download:`mvapich2test.sge.log</sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/mvapich2test.sge.log>`.
+   a :download:`mvapich2test.sge</decommissioned/sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/mvapich2test.sge>` job submission script.
+   Results: :download:`mvapich2test.sge.log</decommissioned/sharc/software/install_scripts/mpi/mvapich2/2.3b/intel-17.0.0/mvapich2test.sge.log>`.
 #. NB the ``MVAPICH_ENV`` environment variable is set by the module file and 
    is used to pass multiple environment variables to slaves for controlling process binding.  
    See the module file for more info.

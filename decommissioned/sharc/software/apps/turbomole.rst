@@ -51,13 +51,13 @@ Installation notes
 ------------------
 
 TURBOMOLE 7.2 was installed as a binary installation using the
-:download:`install_turbomole.sh </sharc/software/install_scripts/apps/turbomole/7.2/binary/install_turbomole.sh>` script;
+:download:`install_turbomole.sh </decommissioned/sharc/software/install_scripts/apps/turbomole/7.2/binary/install_turbomole.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/turbomole/7.2/binary </sharc/software/modulefiles/apps/turbomole/7.2/binary>`.
+:download:`/usr/local/modulefiles/apps/turbomole/7.2/binary </decommissioned/sharc/software/modulefiles/apps/turbomole/7.2/binary>`.
 
 TURBOMOLE 7.2.1 was installed as a binary installation using the
-:download:`install_turbomole_721.sh </sharc/software/install_scripts/apps/turbomole/7.2.1/binary/install_turbomole_721.sh>` script;
+:download:`install_turbomole_721.sh </decommissioned/sharc/software/install_scripts/apps/turbomole/7.2.1/binary/install_turbomole_721.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/turbomole/7.2.1/binary </sharc/software/modulefiles/apps/turbomole/7.2.1/binary>`.
+:download:`/usr/local/modulefiles/apps/turbomole/7.2.1/binary </decommissioned/sharc/software/modulefiles/apps/turbomole/7.2.1/binary>`.
 
 The TURBOMOLE 7.2 and 7.2.1 installations were tested by running the ``TTEST`` command in the ``$TURBODIR/TURBOTEST`` directory as part of the installation procedure.

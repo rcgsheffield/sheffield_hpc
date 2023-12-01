@@ -81,10 +81,10 @@ It was compiled from source with Intel Compiler 17.0.0
 and with ``--enable-R-shlib`` enabled. 
 It was run in batch mode.
 
-* :download:`intel-17.0-parallel.sh </sharc/software/install_scripts/apps/R/3.5.1/intel-17.0-parallel.sh>` Downloads, compiles, tests and installs R 3.4.0 using Intel Compilers and the parallel MKL.
-* :download:`intel-17.0-sequential.sh </sharc/software/install_scripts/apps/R/3.5.1/intel-17.0-sequential.sh>` Downloads, compiles, tests and installs R 3.5.1 using Intel Compilers and the sequential MKL.
-* :download:`intel-17.0-parallel </sharc/software/modulefiles/apps/R/3.5.1/intel-17.0-parallel>` Parallel Module File
-* :download:`intel-17.0-sequential </sharc/software/modulefiles/apps/R/3.5.1/intel-17.0-sequential>` Sequential Module File
+* :download:`intel-17.0-parallel.sh </decommissioned/sharc/software/install_scripts/apps/R/3.5.1/intel-17.0-parallel.sh>` Downloads, compiles, tests and installs R 3.4.0 using Intel Compilers and the parallel MKL.
+* :download:`intel-17.0-sequential.sh </decommissioned/sharc/software/install_scripts/apps/R/3.5.1/intel-17.0-sequential.sh>` Downloads, compiles, tests and installs R 3.5.1 using Intel Compilers and the sequential MKL.
+* :download:`intel-17.0-parallel </decommissioned/sharc/software/modulefiles/apps/R/3.5.1/intel-17.0-parallel>` Parallel Module File
+* :download:`intel-17.0-sequential </decommissioned/sharc/software/modulefiles/apps/R/3.5.1/intel-17.0-sequential>` Sequential Module File
 
 Version 3.4.0
 ^^^^^^^^^^^^^
@@ -94,10 +94,10 @@ It was compiled from source with Intel Compiler 17.0.0
 and with ``--enable-R-shlib`` enabled. 
 It was run in batch mode.
 
-* :download:`intel-17.0-parallel.sh </sharc/software/install_scripts/apps/R/3.4.0/intel-17.0-parallel.sh>` Downloads, compiles, tests and installs R 3.4.0 using Intel Compilers and the parallel MKL.
-* :download:`intel-17.0-sequential.sh </sharc/software/install_scripts/apps/R/3.4.0/intel-17.0-sequential.sh>` Downloads, compiles, tests and installs R 3.4.0 using Intel Compilers and the sequential MKL.
-* :download:`intel-17.0-parallel </sharc/software/modulefiles/apps/R/3.4.0/intel-17.0-parallel>` Parallel Module File
-* :download:`intel-17.0-sequential </sharc/software/modulefiles/apps/R/3.4.0/intel-17.0-sequential>` Sequential Module File
+* :download:`intel-17.0-parallel.sh </decommissioned/sharc/software/install_scripts/apps/R/3.4.0/intel-17.0-parallel.sh>` Downloads, compiles, tests and installs R 3.4.0 using Intel Compilers and the parallel MKL.
+* :download:`intel-17.0-sequential.sh </decommissioned/sharc/software/install_scripts/apps/R/3.4.0/intel-17.0-sequential.sh>` Downloads, compiles, tests and installs R 3.4.0 using Intel Compilers and the sequential MKL.
+* :download:`intel-17.0-parallel </decommissioned/sharc/software/modulefiles/apps/R/3.4.0/intel-17.0-parallel>` Parallel Module File
+* :download:`intel-17.0-sequential </decommissioned/sharc/software/modulefiles/apps/R/3.4.0/intel-17.0-sequential>` Sequential Module File
 
 Version 3.3.2
 ^^^^^^^^^^^^^
@@ -107,7 +107,7 @@ It was compiled from source with Intel Compiler 17.0.0
 and with ``--enable-R-shlib`` enabled. 
 It was run in batch mode.
 
-* :download:`intel-17.0-parallel.sh </sharc/software/install_scripts/apps/R/3.3.2/intel-17.0-parallel.sh>` Downloads, compiles, tests and installs R 3.3.2 using Intel Compilers and the parallel MKL.
-* :download:`intel-17.0-sequential.sh </sharc/software/install_scripts/apps/R/3.3.2/intel-17.0-sequential.sh>` Downloads, compiles, tests and installs R 3.3.2 using Intel Compilers and the sequential MKL.
-* :download:`intel-17.0-parallel </sharc/software/modulefiles/apps/R/3.3.2/intel-17.0-parallel>` Parallel Module File
-* :download:`intel-17.0-sequential </sharc/software/modulefiles/apps/R/3.3.2/intel-17.0-sequential>` Sequential Module File
+* :download:`intel-17.0-parallel.sh </decommissioned/sharc/software/install_scripts/apps/R/3.3.2/intel-17.0-parallel.sh>` Downloads, compiles, tests and installs R 3.3.2 using Intel Compilers and the parallel MKL.
+* :download:`intel-17.0-sequential.sh </decommissioned/sharc/software/install_scripts/apps/R/3.3.2/intel-17.0-sequential.sh>` Downloads, compiles, tests and installs R 3.3.2 using Intel Compilers and the sequential MKL.
+* :download:`intel-17.0-parallel </decommissioned/sharc/software/modulefiles/apps/R/3.3.2/intel-17.0-parallel>` Parallel Module File
+* :download:`intel-17.0-sequential </decommissioned/sharc/software/modulefiles/apps/R/3.3.2/intel-17.0-sequential>` Sequential Module File

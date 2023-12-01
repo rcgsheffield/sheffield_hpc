@@ -36,6 +36,6 @@ This section is primarily for administrators of the system.
 
 HDF5 1.10.4 was compiled with v8.2.0 of the GCC compiler suite.
 
-#. Download, configure, build and install by switching to a scratch directory and running :download:`this script </sharc/software/install_scripts/libs/hdf5/1.10.4/gcc-8.2.0/install.sh>`
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/hdf5/1.10.4/gcc-8.2.0>` as ``/usr/local/modulefiles/libs/hdf5/1.10.4/gcc-8.2.0``
+#. Download, configure, build and install by switching to a scratch directory and running :download:`this script </decommissioned/sharc/software/install_scripts/libs/hdf5/1.10.4/gcc-8.2.0/install.sh>`
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/hdf5/1.10.4/gcc-8.2.0>` as ``/usr/local/modulefiles/libs/hdf5/1.10.4/gcc-8.2.0``
 

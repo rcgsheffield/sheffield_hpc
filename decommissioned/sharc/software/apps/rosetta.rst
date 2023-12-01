@@ -25,8 +25,8 @@ Installation notes
 ------------------
 
 Rosetta 3.8 was installed using the
-:download:`install_rosetta.sh </sharc/software/install_scripts/apps/rosetta/3.8/binary/install_rosetta.sh>` script; the module
+:download:`install_rosetta.sh </decommissioned/sharc/software/install_scripts/apps/rosetta/3.8/binary/install_rosetta.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/rosetta/3.8/binary </sharc/software/modulefiles/apps/rosetta/3.8/binary>`.
+:download:`/usr/local/modulefiles/apps/rosetta/3.8/binary </decommissioned/sharc/software/modulefiles/apps/rosetta/3.8/binary>`.
 The installation of Rosetta 3.8 was a binary installation.
     

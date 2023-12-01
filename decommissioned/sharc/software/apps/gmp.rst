@@ -23,8 +23,8 @@ Installation notes
 ------------------
 
 GnuMP 6.2.0 was installed using the
-:download:`install_gnuMP.sh </sharc/software/install_scripts/apps/gmp/6.2.0/gcc-8.2.0/install_gnuMP.sh>` script; the module
+:download:`install_gnuMP.sh </decommissioned/sharc/software/install_scripts/apps/gmp/6.2.0/gcc-8.2.0/install_gnuMP.sh>` script; the module
 file is
-:download:`gcc-8.2.0 </sharc/software/modulefiles/apps/gmp/6.2.0/gcc-8.2.0>`.
+:download:`gcc-8.2.0 </decommissioned/sharc/software/modulefiles/apps/gmp/6.2.0/gcc-8.2.0>`.
 
     

@@ -29,6 +29,6 @@ Installation notes
 ------------------
 
 VCFtools was compiled using the
-:download:`install_vcftools.sh </sharc/software/install_scripts/apps/vcftools/0.1.14/install_vcftools.sh>` script, the module
+:download:`install_vcftools.sh </decommissioned/sharc/software/install_scripts/apps/vcftools/0.1.14/install_vcftools.sh>` script, the module
 file is
-:download:`0.1.14 </sharc/software/modulefiles/apps/vcftools/0.1.14>`.
+:download:`0.1.14 </decommissioned/sharc/software/modulefiles/apps/vcftools/0.1.14>`.

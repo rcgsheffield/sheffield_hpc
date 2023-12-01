@@ -23,8 +23,8 @@ Installation notes
 ------------------
 
 BWA 0.7.17 was installed using the
-:download:`install_bwa.sh </sharc/software/install_scripts/apps/bwa/0.7.17/gcc-6.2/install_bwa.sh>` script; the module
+:download:`install_bwa.sh </decommissioned/sharc/software/install_scripts/apps/bwa/0.7.17/gcc-6.2/install_bwa.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/bwa/0.7.17/gcc-6.2 </sharc/software/modulefiles/apps/bwa/0.7.17/gcc-6.2>`.
+:download:`/usr/local/modulefiles/apps/bwa/0.7.17/gcc-6.2 </decommissioned/sharc/software/modulefiles/apps/bwa/0.7.17/gcc-6.2>`.
 The installation of BWA 0.7.17 was compiled with GCC 6.2.0.
     

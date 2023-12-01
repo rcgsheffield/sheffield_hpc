@@ -26,6 +26,6 @@ Installation notes
 ------------------
 
 Taverna-cli was compiled using the
-:download:`install_taverna-cli.sh </sharc/software/install_scripts/apps/taverna-cli/install_taverna-cli.sh>` script, the module
+:download:`install_taverna-cli.sh </decommissioned/sharc/software/install_scripts/apps/taverna-cli/install_taverna-cli.sh>` script, the module
 file is
-:download:`2.5.0 </sharc/software/modulefiles/apps/taverna-cli/2.5.0>`.
+:download:`2.5.0 </decommissioned/sharc/software/modulefiles/apps/taverna-cli/2.5.0>`.

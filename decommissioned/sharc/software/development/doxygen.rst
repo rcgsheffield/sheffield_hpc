@@ -22,12 +22,12 @@ Installation
 Version 1.9.1 GCC v8.2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install using :download:`this script </sharc/software/install_scripts/apps/doxygen/1.9.1/gcc-8.2-cmake-3.17.1/install_doxygen.sh>`
-2. Install :download:`this modulefile </sharc/software/modulefiles/apps/doxygen/1.9.1/gcc-8.2-cmake-3.17.1>` as ``/usr/local/modulefiles/apps/doxygen/1.9.1/gcc-8.2-cmake-3.17.1``
+1. Install using :download:`this script </decommissioned/sharc/software/install_scripts/apps/doxygen/1.9.1/gcc-8.2-cmake-3.17.1/install_doxygen.sh>`
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/apps/doxygen/1.9.1/gcc-8.2-cmake-3.17.1>` as ``/usr/local/modulefiles/apps/doxygen/1.9.1/gcc-8.2-cmake-3.17.1``
 
 
 Version 1.8.13 GCC v4.9.4
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Install using :download:`this script </sharc/software/install_scripts/apps/doxygen/1.8.13/gcc-4.9.4/install.sh>`
-2. Install :download:`this modulefile </sharc/software/modulefiles/apps/doxygen/1.8.13/gcc-4.9.4>` as ``/usr/local/modulefiles/apps/doxygen/1.8.13/gcc-4.9.4``
+1. Install using :download:`this script </decommissioned/sharc/software/install_scripts/apps/doxygen/1.8.13/gcc-4.9.4/install.sh>`
+2. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/apps/doxygen/1.8.13/gcc-4.9.4>` as ``/usr/local/modulefiles/apps/doxygen/1.8.13/gcc-4.9.4``

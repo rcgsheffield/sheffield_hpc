@@ -71,13 +71,13 @@ GEOS 3.6.1 was compiled with 4.9.4 and 8.2.0 versions of the GCC compiler suite.
 
 **GCC version 8.2.0**
 
-#. Download, configure, build, test and install Qsub submitting :download:`this script </sharc/software/install_scripts/libs/geos/3.6.1/gcc-8.2/install_geos.sh>`.
+#. Download, configure, build, test and install Qsub submitting :download:`this script </decommissioned/sharc/software/install_scripts/libs/geos/3.6.1/gcc-8.2/install_geos.sh>`.
 #. The installer script automatically creates a module file and logs.
 
 **GCC version 4.9.4**
 
-#. Download, configure, build, test and install using :download:`this script </sharc/software/install_scripts/libs/geos/3.6.1/gcc-4.9.4/install.sh>`, ensuring that all stderr and stdout is redirected to :download:`a log file </sharc/software/install_scripts/libs/geos/3.6.1/gcc-4.9.4/install.log>`. 
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/geos/3.6.1/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/geos/3.6.1/gcc-4.9.4``
+#. Download, configure, build, test and install using :download:`this script </decommissioned/sharc/software/install_scripts/libs/geos/3.6.1/gcc-4.9.4/install.sh>`, ensuring that all stderr and stdout is redirected to :download:`a log file </decommissioned/sharc/software/install_scripts/libs/geos/3.6.1/gcc-4.9.4/install.log>`. 
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/geos/3.6.1/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/geos/3.6.1/gcc-4.9.4``
 
 Potentially useful output at the end of the configure run ::
 

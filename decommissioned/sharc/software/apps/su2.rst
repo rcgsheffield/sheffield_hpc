@@ -24,12 +24,12 @@ Installation notes
 ------------------
 
 SU2 5.0.0 was installed using the
-:download:`install_su2.sh </sharc/software/install_scripts/apps/su2/5.0.0/gcc-6.2-openmpi-2.1.1/install_su2.sh>` script; the module
+:download:`install_su2.sh </decommissioned/sharc/software/install_scripts/apps/su2/5.0.0/gcc-6.2-openmpi-2.1.1/install_su2.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/su2/5.0.0/gcc-6.2-openmpi-2.1.1 </sharc/software/modulefiles/apps/su2/5.0.0/gcc-6.2-openmpi-2.1.1>`.
+:download:`/usr/local/modulefiles/apps/su2/5.0.0/gcc-6.2-openmpi-2.1.1 </decommissioned/sharc/software/modulefiles/apps/su2/5.0.0/gcc-6.2-openmpi-2.1.1>`.
     
 SU2 6.0.0 was installed using the
-:download:`install_su2_6.0.0.sh </sharc/software/install_scripts/apps/su2/6.0.0/gcc-6.2-openmpi-2.1.1/install_su2_6.0.0.sh>` script; the module
+:download:`install_su2_6.0.0.sh </decommissioned/sharc/software/install_scripts/apps/su2/6.0.0/gcc-6.2-openmpi-2.1.1/install_su2_6.0.0.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/su2/6.0.0/gcc-6.2-openmpi-2.1.1 </sharc/software/modulefiles/apps/su2/6.0.0/gcc-6.2-openmpi-2.1.1>`.
+:download:`/usr/local/modulefiles/apps/su2/6.0.0/gcc-6.2-openmpi-2.1.1 </decommissioned/sharc/software/modulefiles/apps/su2/6.0.0/gcc-6.2-openmpi-2.1.1>`.
     

@@ -88,25 +88,25 @@ Intel MKL 2019.3
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2019 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-mkl/2019.3/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2019.3/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2019.3/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2019.3/binary``.
 
 Intel MKL 2017.0
 ^^^^^^^^^^^^^^^^
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-mkl/2017.0/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2017.0/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2017.0/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2017.0/binary``.
 
 Intel MKL 2016.1
 ^^^^^^^^^^^^^^^^
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2016 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-mkl/2016.1/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2016.1/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2016.1/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2016.1/binary``.
 
 Intel MKL 2015.7
 ^^^^^^^^^^^^^^^^
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2015.7 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/libs/intel-mkl/2015.7/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2015.7/binary``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2015.7/binary>` was installed as ``/usr/local/modulefiles/libs/intel-mkl/2015.7/binary``.

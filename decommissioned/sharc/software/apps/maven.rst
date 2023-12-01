@@ -36,4 +36,4 @@ Maven was installed from a binary download in ``/usr/local/packages/apps/maven/3
 Modulefile
 ----------
 
-The module file is on the system at :download:`/usr/local/modulefiles/apps/maven/3.8.4/binary </sharc/software/modulefiles/apps/maven/3.8.4/binary>`.
+The module file is on the system at :download:`/usr/local/modulefiles/apps/maven/3.8.4/binary </decommissioned/sharc/software/modulefiles/apps/maven/3.8.4/binary>`.

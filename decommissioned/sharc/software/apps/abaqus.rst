@@ -144,27 +144,27 @@ Then run Abaqus specifying both the new and old job names:  ::
 Installation notes
 ------------------
 Abaqus 2021 was installed using the Dassault StartGUI.sh interactive GUI installer. The module file is
-:download:`/usr/local/modulefiles/apps/abaqus/2021/binary </sharc/software/modulefiles/apps/abaqus/2021/binary>`.
+:download:`/usr/local/modulefiles/apps/abaqus/2021/binary </decommissioned/sharc/software/modulefiles/apps/abaqus/2021/binary>`.
 
 Abaqus 2018 was installed using the
-:download:`install_abaqus_2018.sh </sharc/software/install_scripts/apps/abaqus/2018/binary/install_abaqus_2018.sh>` script; the module
+:download:`install_abaqus_2018.sh </decommissioned/sharc/software/install_scripts/apps/abaqus/2018/binary/install_abaqus_2018.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/abaqus/2018/binary </sharc/software/modulefiles/apps/abaqus/2018/binary>`.
+:download:`/usr/local/modulefiles/apps/abaqus/2018/binary </decommissioned/sharc/software/modulefiles/apps/abaqus/2018/binary>`.
 
 Abaqus 2017-ga was installed using the
-:download:`install_abaqus_2017-ga.sh </sharc/software/install_scripts/apps/abaqus/2017-ga/binary/install_abaqus_2017-ga.sh>` script; the module
+:download:`install_abaqus_2017-ga.sh </decommissioned/sharc/software/install_scripts/apps/abaqus/2017-ga/binary/install_abaqus_2017-ga.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/abaqus/2017-ga/binary </sharc/software/modulefiles/apps/abaqus/2017-ga/binary>`.
+:download:`/usr/local/modulefiles/apps/abaqus/2017-ga/binary </decommissioned/sharc/software/modulefiles/apps/abaqus/2017-ga/binary>`.
 
 Abaqus 2017 was installed using the
-:download:`install_abaqus_2017.sh </sharc/software/install_scripts/apps/abaqus/2017/binary/install_abaqus_2017.sh>` script; the module
+:download:`install_abaqus_2017.sh </decommissioned/sharc/software/install_scripts/apps/abaqus/2017/binary/install_abaqus_2017.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/abaqus/2017/binary </sharc/software/modulefiles/apps/abaqus/2017/binary>`.
+:download:`/usr/local/modulefiles/apps/abaqus/2017/binary </decommissioned/sharc/software/modulefiles/apps/abaqus/2017/binary>`.
 
 Abaqus 6.14-2 was installed using the
-:download:`install_abaqus.sh </sharc/software/install_scripts/apps/abaqus/6.14-2/binary/install_abaqus.sh>` script; the module
+:download:`install_abaqus.sh </decommissioned/sharc/software/install_scripts/apps/abaqus/6.14-2/binary/install_abaqus.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/abaqus/6.14-2/binary </sharc/software/modulefiles/apps/abaqus/6.14-2/binary>`.
+:download:`/usr/local/modulefiles/apps/abaqus/6.14-2/binary </decommissioned/sharc/software/modulefiles/apps/abaqus/6.14-2/binary>`.
 
 The binary installations were tested by launching ``abaqus cae`` and by using the above batch submission scripts.
 Abaqus at present does not run on more than one node when using MPI due to password-less ssh being disabled across nodes on ShARC.

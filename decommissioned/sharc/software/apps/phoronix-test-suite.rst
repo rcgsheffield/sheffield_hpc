@@ -114,11 +114,11 @@ The sourcefiles for this will be located within:
 
 The module file can be found at the following location: 
 
-:download:`/usr/local/modulefiles/apps/phoronixtestsuite/pts9.8.0/binary </sharc/software/modulefiles/apps/phoronixtestsuite/pts9.8.0/binary>`
+:download:`/usr/local/modulefiles/apps/phoronixtestsuite/pts9.8.0/binary </decommissioned/sharc/software/modulefiles/apps/phoronixtestsuite/pts9.8.0/binary>`
 
 The Makefile can be found at the following location: 
 
-:download:`/usr/local/packages/apps/phoronixtestsuite/source/php/php-src-8.0.0-dev/Makefile </sharc/software/modulefiles/apps/phoronixtestsuite/pts9.8.0/Makefile>`
+:download:`/usr/local/packages/apps/phoronixtestsuite/source/php/php-src-8.0.0-dev/Makefile </decommissioned/sharc/software/modulefiles/apps/phoronixtestsuite/pts9.8.0/Makefile>`
 
 ----------
 

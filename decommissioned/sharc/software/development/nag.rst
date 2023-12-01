@@ -44,8 +44,8 @@ The NAG compiler environment modules (see below) set the environment variable ``
 Version 7.1
 ^^^^^^^^^^^
 
-#. Perform an unattended install using :download:`this script </sharc/software/install_scripts/dev/NAG/7.1/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/7.1``.
-#. Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/7.1>` as ``/usr/local/modulefiles/dev/NAG/7.1``
+#. Perform an unattended install using :download:`this script </decommissioned/sharc/software/install_scripts/dev/NAG/7.1/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/7.1``.
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/NAG/7.1>` as ``/usr/local/modulefiles/dev/NAG/7.1``
 #. Test the installation by compiling and building a sample Fortran 90 program ::
 
         module load dev/NAG/7.1
@@ -54,8 +54,8 @@ Version 7.1
 Version 6.2
 ^^^^^^^^^^^
 
-#. Perform an unattended install using :download:`this script </sharc/software/install_scripts/dev/NAG/6.2/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/6.2``.
-#. Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/6.2>` as ``/usr/local/modulefiles/dev/NAG/6.2``
+#. Perform an unattended install using :download:`this script </decommissioned/sharc/software/install_scripts/dev/NAG/6.2/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/6.2``.
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/NAG/6.2>` as ``/usr/local/modulefiles/dev/NAG/6.2``
 #. Test the installation by compiling and building a sample Fortran 90 program ::
 
         module load dev/NAG/6.2
@@ -65,8 +65,8 @@ Version 6.2
 Version 6.1
 ^^^^^^^^^^^
 
-#. Perform an unattended install using :download:`this script </sharc/software/install_scripts/dev/NAG/6.1/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/6.1``.
-#. Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/6.1>` as ``/usr/local/modulefiles/dev/NAG/6.1``
+#. Perform an unattended install using :download:`this script </decommissioned/sharc/software/install_scripts/dev/NAG/6.1/install.sh>`.  The software will be installed into ``/usr/local/packages/dev/NAG/6.1``.
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/NAG/6.1>` as ``/usr/local/modulefiles/dev/NAG/6.1``
 #. Test the installation by compiling and building a sample Fortran 90 program ::
 
         module load dev/NAG/6.1
@@ -107,7 +107,7 @@ Accept the license and answer the questions as follows:
 * **Install module man pages to which directory?** ``/usr/local/packages/dev/NAG/6.0/man/man3``
 * **Suffix for module man pages [3]?** *leave as default*
 
-Install :download:`this modulefile </sharc/software/modulefiles/dev/NAG/6.0>` as ``/usr/local/modulefiles/dev/NAG/6.0``
+Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/NAG/6.0>` as ``/usr/local/modulefiles/dev/NAG/6.0``
 
 Finally, test the installation by compiling and building a sample Fortran 90 program ::
 

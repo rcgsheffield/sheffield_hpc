@@ -47,8 +47,8 @@ Installation notes
 ------------------
 
 Molpro 2015.1.22 was installed as a binary installation using the
-:download:`install_molpro.sh </sharc/software/install_scripts/apps/molpro/2015.1.22/binary/install_molpro.sh>` script;
+:download:`install_molpro.sh </decommissioned/sharc/software/install_scripts/apps/molpro/2015.1.22/binary/install_molpro.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/molpro/2015.1.22/binary </sharc/software/modulefiles/apps/molpro/2015.1.22/binary>`.
+:download:`/usr/local/modulefiles/apps/molpro/2015.1.22/binary </decommissioned/sharc/software/modulefiles/apps/molpro/2015.1.22/binary>`.
 
 The Molpro 2015.1.22 installation was tested by running a batch job using the ``my_job.sh`` batch script, above, and an example input file from Molpro's quick-start website (http://www.molpro.net/info/2015.1/doc/quickstart/index.html).

@@ -30,15 +30,15 @@ ______________________________
 
 This Icu 58.2 build links against the GCC 4.9.4 C++ standard library and was installed as a dependency of `boost_sharc` (build using the same C++ standard library); Boost in turn was installed as a dependency of Caffe.
 
-#. Download, configure, build, test and install using :download:`this script </sharc/software/install_scripts/libs/icu/58.2/gcc-4.9.4/install.sh>`
+#. Download, configure, build, test and install using :download:`this script </decommissioned/sharc/software/install_scripts/libs/icu/58.2/gcc-4.9.4/install.sh>`
 #. Check the console output of the install process for ``All tests OK``
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/icu/58.2/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/icu/58.2/gcc-4.9.4``
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/icu/58.2/gcc-4.9.4>` as ``/usr/local/modulefiles/libs/icu/58.2/gcc-4.9.4``
 
 GCC Version 8.2.0 built using:
 ______________________________
 
 This Icu 58.2 build links against the GCC 8.2.0 C++ standard library and was installed as a dependency of `boost_sharc` (build using the same C++ standard library); Boost in turn was installed as a dependency of Caffe.
 
-#. Download, configure, build, test and install using :download:`this script </sharc/software/install_scripts/libs/icu/58.2/gcc-8.2-cmake-3.17.1/install_script.sge>`
+#. Download, configure, build, test and install using :download:`this script </decommissioned/sharc/software/install_scripts/libs/icu/58.2/gcc-8.2-cmake-3.17.1/install_script.sge>`
 #. Optional: Enable tests and check the console output of the install process for any failing tests.
-#. Install :download:`this modulefile </sharc/software/modulefiles/libs/icu/58.2/gcc-8.2-cmake-3.17.1>` as ``/usr/local/modulefiles/libs/icu/58.2/gcc-8.2-cmake-3.17.1``
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/libs/icu/58.2/gcc-8.2-cmake-3.17.1>` as ``/usr/local/modulefiles/libs/icu/58.2/gcc-8.2-cmake-3.17.1``

@@ -51,9 +51,9 @@ Installation notes
 ------------------
 
 Repast HPC 2.2.0 was installed using the
-:download:`install_repast_hpc.sh </sharc/software/install_scripts/apps/repast_hpc/2.2.0/gcc-6.2-mpich-3.1.4/install_repast_hpc.sh>` installation script.
+:download:`install_repast_hpc.sh </decommissioned/sharc/software/install_scripts/apps/repast_hpc/2.2.0/gcc-6.2-mpich-3.1.4/install_repast_hpc.sh>` installation script.
 The module file is
-:download:`/usr/local/modulefiles/apps/repast_hpc/2.2.0/gcc-6.2-mpich-3.1.4 </sharc/software/modulefiles/apps/repast_hpc/2.2.0/gcc-6.2-mpich-3.1.4>`.
+:download:`/usr/local/modulefiles/apps/repast_hpc/2.2.0/gcc-6.2-mpich-3.1.4 </decommissioned/sharc/software/modulefiles/apps/repast_hpc/2.2.0/gcc-6.2-mpich-3.1.4>`.
 
 Third-party software required by Repast HPC 2.2.0 (Curl 7.42.1, NetCDF 4.2.1.1, NetCDF-CXX 4.2 and Boost 1.61.0) were installed in ``/usr/local/packages/apps/repast_hpc/2.2.0/third-party-mpich-3.1.4`` using the GCC 6.2.0 compiler with MPICH-3.1.4.
 

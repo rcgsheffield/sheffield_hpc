@@ -81,60 +81,60 @@ Installation notes
 ------------------
 
 Ansys EM 16.1 was installed using the
-:download:`install_ansysem.sh </sharc/software/install_scripts/apps/ansysem/16.1/install_ansysem.sh>` script; the module
+:download:`install_ansysem.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/16.1/install_ansysem.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/16.1 </sharc/software/modulefiles/apps/ansysem/16.1>`.
+:download:`/usr/local/modulefiles/apps/ansysem/16.1 </decommissioned/sharc/software/modulefiles/apps/ansysem/16.1>`.
 
 Ansys EM 17.2 was installed using the
-:download:`install_ansysem.sh </sharc/software/install_scripts/apps/ansysem/17.2/install_ansysem.sh>` script; the module
+:download:`install_ansysem.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/17.2/install_ansysem.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/17.2 </sharc/software/modulefiles/apps/ansysem/17.2>`.
+:download:`/usr/local/modulefiles/apps/ansysem/17.2 </decommissioned/sharc/software/modulefiles/apps/ansysem/17.2>`.
 
 Ansys EM 18.0 was installed using the
-:download:`install_ansysem_180.sh </sharc/software/install_scripts/apps/ansysem/18.0/binary/install_ansysem_180.sh>` script; the module
+:download:`install_ansysem_180.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/18.0/binary/install_ansysem_180.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/18.0/binary </sharc/software/modulefiles/apps/ansysem/18.0/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/18.0/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/18.0/binary>`.
 
 Ansys EM 18.2 was installed using the
-:download:`install_ansysem_182.sh </sharc/software/install_scripts/apps/ansysem/18.2/binary/install_ansysem_182.sh>` script; the module
+:download:`install_ansysem_182.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/18.2/binary/install_ansysem_182.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/18.2/binary </sharc/software/modulefiles/apps/ansysem/18.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/18.2/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/18.2/binary>`.
 
 Ansys EM 19.0 was installed using the
-:download:`install_ansysem_190.sh </sharc/software/install_scripts/apps/ansysem/19.0/binary/install_ansysem_190.sh>` script; the module
+:download:`install_ansysem_190.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/19.0/binary/install_ansysem_190.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/19.0/binary </sharc/software/modulefiles/apps/ansysem/19.0/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/19.0/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/19.0/binary>`.
 
 Ansys EM 19.1 was installed using the
-:download:`install_ansysem_191.sh </sharc/software/install_scripts/apps/ansysem/19.1/binary/install_ansysem_191.sh>` script; the module
+:download:`install_ansysem_191.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/19.1/binary/install_ansysem_191.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/19.1/binary </sharc/software/modulefiles/apps/ansysem/19.1/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/19.1/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/19.1/binary>`.
 
 Ansys EM 19.2 was installed using the
-:download:`install_ansysem_192.sh </sharc/software/install_scripts/apps/ansysem/19.2/binary/install_ansysem_192.sh>` script; the module
+:download:`install_ansysem_192.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/19.2/binary/install_ansysem_192.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/19.2/binary </sharc/software/modulefiles/apps/ansysem/19.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/19.2/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/19.2/binary>`.
 
 Ansys EM 19.3 was installed using the
-:download:`install_ansysem_193.sh </sharc/software/install_scripts/apps/ansysem/19.3/binary/install_ansysem_193.sh>` script; the module
+:download:`install_ansysem_193.sh </decommissioned/sharc/software/install_scripts/apps/ansysem/19.3/binary/install_ansysem_193.sh>` script; the module
 file is
-:download:`/usr/local/modulefiles/apps/ansysem/19.3/binary </sharc/software/modulefiles/apps/ansysem/19.3/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/19.3/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/19.3/binary>`.
 
 Ansys EM 19.4: there is no install script;
 the module file is
-:download:`/usr/local/modulefiles/apps/ansysem/19.4/binary </sharc/software/modulefiles/apps/ansysem/19.4/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/19.4/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/19.4/binary>`.
 
 Ansys EM 20.2: there is no install script;
 the module file is
-:download:`/usr/local/modulefiles/apps/ansysem/20.2/binary </sharc/software/modulefiles/apps/ansysem/20.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/20.2/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/20.2/binary>`.
 
 Ansys EM 21.1: there is no install script;
 the module file is
-:download:`/usr/local/modulefiles/apps/ansysem/21.1/binary </sharc/software/modulefiles/apps/ansysem/21.1/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/21.1/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/21.1/binary>`.
 
 Ansys EM 21.1: there is no install script;
 the module file is
-:download:`/usr/local/modulefiles/apps/ansysem/22.2/binary </sharc/software/modulefiles/apps/ansysem/22.2/binary>`.
+:download:`/usr/local/modulefiles/apps/ansysem/22.2/binary </decommissioned/sharc/software/modulefiles/apps/ansysem/22.2/binary>`.
 
 
 The binary installations were tested using ``runwb2`` and the above batch submission script.

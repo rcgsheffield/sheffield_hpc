@@ -207,8 +207,8 @@ Version 4.0.3
 
 This was a scripted install. It was compiled from source with gcc 8.2.0 and with ``--with-blas --with-lapack --enable-R-shlib --with-tcltk`` enabled. It was run in batch mode.
 
-* :download:`install_r_4.0.3_gcc8.2.0.sh </sharc/software/install_scripts/apps/R/4.0.3/gcc-8.2.0/install.sh>` Downloads, compiles, tests and installs R 4.0.3 and the ``Rmath`` library.
-* :download:`R 4.0.3 Modulefile </sharc/software/modulefiles/apps/R/4.0.3/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.3/``
+* :download:`install_r_4.0.3_gcc8.2.0.sh </decommissioned/sharc/software/install_scripts/apps/R/4.0.3/gcc-8.2.0/install.sh>` Downloads, compiles, tests and installs R 4.0.3 and the ``Rmath`` library.
+* :download:`R 4.0.3 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/4.0.3/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.3/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/4.0.3/gcc-8.2.0/install_logs/``
 
 Version 4.0.2
@@ -218,8 +218,8 @@ Version 4.0.2
 
 This was a scripted install. It was compiled from source with gcc 8.2.0 and with ``--with-blas --with-lapack --enable-R-shlib --with-tcltk`` enabled. It was run in batch mode.
 
-* :download:`install_r_4.0.2_gcc8.2.0.sh </sharc/software/install_scripts/apps/R/4.0.2/gcc-8.2.0/install.sh>` Downloads, compiles, tests and installs R 4.0.3 and the ``Rmath`` library.
-* :download:`R 4.0.2 Modulefile </sharc/software/modulefiles/apps/R/4.0.2/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.2/``
+* :download:`install_r_4.0.2_gcc8.2.0.sh </decommissioned/sharc/software/install_scripts/apps/R/4.0.2/gcc-8.2.0/install.sh>` Downloads, compiles, tests and installs R 4.0.3 and the ``Rmath`` library.
+* :download:`R 4.0.2 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/4.0.2/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.2/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/4.0.2/gcc-8.2.0/install_logs/``
 
 
@@ -230,12 +230,12 @@ Version 4.0.0
 
 This was a set of scripted installs. It was compiled from source with gcc 8.2.0 / gcc 10.1.0 with ``--with-blas --with-lapack --enable-R-shlib --with-tcltk`` enabled. It was run in installed with an interactive session mode.
 
-* :download:`install-R4.0-gcc-8.2.0.sh </sharc/software/install_scripts/apps/R/4.0.0/gcc-8.2.0/install-R4.0-gcc-8.2.0.sh>` Downloads, compiles, tests and installs R 4.0.0 and the ``Rmath`` library.
+* :download:`install-R4.0-gcc-8.2.0.sh </decommissioned/sharc/software/install_scripts/apps/R/4.0.0/gcc-8.2.0/install-R4.0-gcc-8.2.0.sh>` Downloads, compiles, tests and installs R 4.0.0 and the ``Rmath`` library.
 
-* :download:`install-R4.0-gcc-10.1.0.sh </sharc/software/install_scripts/apps/R/4.0.0/gcc-10.1.0/install-R4.0-gcc-10.1.0.sh>` Downloads, compiles, tests and installs R 4.0.0 and the ``Rmath`` library.
+* :download:`install-R4.0-gcc-10.1.0.sh </decommissioned/sharc/software/install_scripts/apps/R/4.0.0/gcc-10.1.0/install-R4.0-gcc-10.1.0.sh>` Downloads, compiles, tests and installs R 4.0.0 and the ``Rmath`` library.
 
-* :download:`R 4.0.0 GCC 8.2.0 Modulefile </sharc/software/modulefiles/apps/R/4.0.0/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.0/``
-* :download:`R 4.0.0 GCC 10.1.0 Modulefile </sharc/software/modulefiles/apps/R/4.0.0/gcc-10.1.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.0/``
+* :download:`R 4.0.0 GCC 8.2.0 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/4.0.0/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.0/``
+* :download:`R 4.0.0 GCC 10.1.0 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/4.0.0/gcc-10.1.0>` located on the system at ``/usr/local/modulefiles/apps/R/4.0.0/``
 
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/4.0.0/gcc-8.2.0/install_logs/`` and ``/usr/local/packages/apps/R/4.0.0/gcc-10.1/install_logs/``
 
@@ -249,8 +249,8 @@ Version 3.6.3
 
 This was a scripted install. It was compiled from source with gcc 8.2.0 and with ``--with-blas --with-lapack --enable-R-shlib --with-tcltk`` enabled. It was run in batch mode.
 
-* :download:`install_r_3.6.3_gcc8.2.0.sh </sharc/software/install_scripts/apps/R/3.6.3/gcc-8.2.0/install.sh>` Downloads, compiles, tests and installs R 3.6.3 and the ``Rmath`` library.
-* :download:`R 3.6.3 Modulefile </sharc/software/modulefiles/apps/R/3.6.3/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/3.6.3/``
+* :download:`install_r_3.6.3_gcc8.2.0.sh </decommissioned/sharc/software/install_scripts/apps/R/3.6.3/gcc-8.2.0/install.sh>` Downloads, compiles, tests and installs R 3.6.3 and the ``Rmath`` library.
+* :download:`R 3.6.3 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/3.6.3/gcc-8.2.0>` located on the system at ``/usr/local/modulefiles/apps/R/3.6.3/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/3.6.3/gcc-8.2.0/install_logs/``
 
 Version 3.5.1
@@ -260,8 +260,8 @@ Version 3.5.1
 
 This was a scripted install. It was compiled from source with gcc 4.8.5 and with ``--enable-R-shlib`` enabled. It was run in batch mode.
 
-* :download:`install_r_3.5.1_gcc4.8.5.sh </sharc/software/install_scripts/apps/R/3.5.1/gcc-4.8.5/install_r_3.5.1_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.5.1 and the ``Rmath`` library.
-* :download:`R 3.5.1 Modulefile </sharc/software/modulefiles/apps/R/3.5.1/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.5.1/``
+* :download:`install_r_3.5.1_gcc4.8.5.sh </decommissioned/sharc/software/install_scripts/apps/R/3.5.1/gcc-4.8.5/install_r_3.5.1_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.5.1 and the ``Rmath`` library.
+* :download:`R 3.5.1 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/3.5.1/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.5.1/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/3.5.1/gcc-4.8.5/install_logs/``
 
 
@@ -272,8 +272,8 @@ Version 3.4.0
 
 This was a scripted install. It was compiled from source with gcc 4.8.5 and with ``--enable-R-shlib`` enabled. It was run in batch mode.
 
-* :download:`install_r_3.4.0_gcc4.8.5.sh </sharc/software/install_scripts/apps/R/3.4.0/gcc-4.8.5/install_r_3.4.0_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.4.0 and the ``Rmath`` library.
-* :download:`R 3.4.0 Modulefile </sharc/software/modulefiles/apps/R/3.4.0/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.4.0/``
+* :download:`install_r_3.4.0_gcc4.8.5.sh </decommissioned/sharc/software/install_scripts/apps/R/3.4.0/gcc-4.8.5/install_r_3.4.0_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.4.0 and the ``Rmath`` library.
+* :download:`R 3.4.0 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/3.4.0/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.4.0/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/3.4.0/gcc-4.8.5/install_logs/``
 
 Version 3.3.3
@@ -283,8 +283,8 @@ Version 3.3.3
 
 This was a scripted install. It was compiled from source with gcc 4.8.5 and with ``--enable-R-shlib`` enabled. It was run in batch mode.
 
-* :download:`install_r_3.3.3_gcc4.8.5.sh </sharc/software/install_scripts/apps/R/3.3.3/gcc-4.8.5/install_r_3.3.3_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.3.3 and the ``Rmath`` library.
-* :download:`R 3.3.3 Modulefile </sharc/software/modulefiles/apps/R/3.3.3/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.3.3/``
+* :download:`install_r_3.3.3_gcc4.8.5.sh </decommissioned/sharc/software/install_scripts/apps/R/3.3.3/gcc-4.8.5/install_r_3.3.3_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.3.3 and the ``Rmath`` library.
+* :download:`R 3.3.3 Modulefile </decommissioned/sharc/software/modulefiles/apps/R/3.3.3/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.3.3/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/3.3.3/gcc-4.8.5/install_logs/``
 
 Version 3.3.2
@@ -294,6 +294,6 @@ Version 3.3.2
 
 This was a scripted install. It was compiled from source with gcc 4.8.5 and with ``--enable-R-shlib`` enabled. It was run in batch mode.
 
-* :download:`install_r_3.3.2_gcc4.8.5.sh </sharc/software/install_scripts/apps/R/3.3.2/gcc-4.8.5/install_r_3.3.2_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.3.2 and the ``Rmath`` library.
-* :download:`R 3.3.2 Modulefile </sharc/software/modulefiles/apps/R//3.3.2/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.3.2/``
+* :download:`install_r_3.3.2_gcc4.8.5.sh </decommissioned/sharc/software/install_scripts/apps/R/3.3.2/gcc-4.8.5/install_r_3.3.2_gcc4.8.5.sh>` Downloads, compiles, tests and installs R 3.3.2 and the ``Rmath`` library.
+* :download:`R 3.3.2 Modulefile </decommissioned/sharc/software/modulefiles/apps/R//3.3.2/gcc-4.8.5>` located on the system at ``/usr/local/modulefiles/apps/R/3.3.2/``
 * Install log-files, including the output of the ``make check`` tests are available on the system at ``/usr/local/packages/apps/R/3.3.2/gcc-4.8.5/install_logs/``

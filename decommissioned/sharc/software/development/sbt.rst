@@ -46,4 +46,4 @@ Module files
 ------------
 
 * The module file is on the system at ``/usr/local/modulefiles/dev/sbt/0.13.13``
-* On github: :download:`0.13.13 </sharc/software/modulefiles/dev/sbt/0.13.13>`.
+* On github: :download:`0.13.13 </decommissioned/sharc/software/modulefiles/dev/sbt/0.13.13>`.

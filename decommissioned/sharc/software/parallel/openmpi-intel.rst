@@ -68,28 +68,28 @@ Version 2.0.1, Intel 17.0.0 compiler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ensure :ref:`Intel compilers 17.0.0 <sharc-intel-compilers>` are installed and licensed.
-#. Download, compile and install OpenMPI 2.0.1 using :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.0.1/intel-17.0.0/install.sh>`.
-#. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.0.1/intel-17.0.0>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/intel-17.0.0``
+#. Download, compile and install OpenMPI 2.0.1 using :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.0.1/intel-17.0.0/install.sh>`.
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.0.1/intel-17.0.0>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/intel-17.0.0``
 #. Test by running some Examples_.
 
 Version 2.0.1, Intel 15.0.7 compiler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ensure :ref:`Intel compilers 15.0.7 <sharc-intel-compilers>` are installed and licensed.
-#. Download, compile and install OpenMPI 2.0.1 using :download:`this script </sharc/software/install_scripts/mpi/openmpi/2.0.1/intel-15.0.7/install.sh>`.
-#. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/2.0.1/intel-15.0.7>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/intel-15.0.7``
+#. Download, compile and install OpenMPI 2.0.1 using :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/2.0.1/intel-15.0.7/install.sh>`.
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/2.0.1/intel-15.0.7>` as ``/usr/local/modulefiles/mpi/openmpi/2.0.1/intel-15.0.7``
 #. Test by running some Examples_.
 
 Version 1.10.4, Intel 15.0.7 compiler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ensure :ref:`Intel compilers 15.0.7 <sharc-intel-compilers>` are installed and licensed.
-#. Download, compile and install OpenMPI 1.10.4 using :download:`this script </sharc/software/install_scripts/mpi/openmpi/1.10.4/intel-15.0.7/install.sh>`.
-#. Configure the OpenMPI *Modular Component Architecture* (MCA) by copying :download:`this script </sharc/software/install_scripts/mpi/openmpi/1.10.4/intel-15.0.7/openmpi-mca-params.conf>` to ``/usr/local/packages/mpi/openmpi/1.10.4/intel-15.0.7/openmpi-mca-params.conf``; this configures: 
+#. Download, compile and install OpenMPI 1.10.4 using :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/1.10.4/intel-15.0.7/install.sh>`.
+#. Configure the OpenMPI *Modular Component Architecture* (MCA) by copying :download:`this script </decommissioned/sharc/software/install_scripts/mpi/openmpi/1.10.4/intel-15.0.7/openmpi-mca-params.conf>` to ``/usr/local/packages/mpi/openmpi/1.10.4/intel-15.0.7/openmpi-mca-params.conf``; this configures: 
 
    * the ``mtl`` (MCA *Matching Transport Layer*) to use the ``psm2`` driver (i.e. use the high-bandwidth, low-latency Intel OmniPath fabric);
    * the ``btl`` (MCA *Byte Transport Layer*) to use Omnipath but (not not Ethernet);
    * the ``oob`` (MCA out of band messaging) to use the intra-cluster Ethernet fabric (specified using a network address in CIDR format rather than by specifying Ethernet interface name, which can vary between nodes).
 
-#. Install :download:`this modulefile </sharc/software/modulefiles/mpi/openmpi/1.10.4/intel-15.0.7>` as ``/usr/local/modulefiles/mpi/openmpi/1.10.4/intel-15.0.7``
+#. Install :download:`this modulefile </decommissioned/sharc/software/modulefiles/mpi/openmpi/1.10.4/intel-15.0.7>` as ``/usr/local/modulefiles/mpi/openmpi/1.10.4/intel-15.0.7``
 #. Test by running some Examples_.

@@ -188,69 +188,69 @@ This service runs ``/usr/local/scripts/gpu-nvidia-driver.sh`` at boot time to:
 CUDA 11.3.0
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.3.0_465.19.01`` as the sole argument. 
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/11.3.0/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.3.0/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.3.0_465.19.01`` as the sole argument. 
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/11.3.0/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.3.0/binary``
 
 
 CUDA 11.2.0
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.2.0_460.27.04`` as the sole argument. 
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/11.2.0/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.2.0/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.2.0_460.27.04`` as the sole argument. 
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/11.2.0/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.2.0/binary``
 
 CUDA 11.1.1
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.1.1_455.32.00`` as the sole argument. 
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/11.1.1/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.1.1/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.1.1_455.32.00`` as the sole argument. 
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/11.1.1/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.1.1/binary``
 
 CUDA 11.0.2
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.0.2_450.51.05`` as the sole argument. 
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/11.0.2/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.0.2/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``11.0.2_450.51.05`` as the sole argument. 
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/11.0.2/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/11.0.2/binary``
 
 CUDA 10.2.89
 ^^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``10.2.89_440.33.01`` as the sole argument. 
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/10.2.89/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/10.2.89/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``10.2.89_440.33.01`` as the sole argument. 
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/10.2.89/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/10.2.89/binary``
 
 CUDA 10.1.243
 ^^^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``10.1.243_418.87.00`` as the sole argument. 
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/10.1.243/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/10.1.243/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``10.1.243_418.87.00`` as the sole argument. 
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/10.1.243/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/10.1.243/binary``
 
 CUDA 10.0.130
 ^^^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``10.0.130_410.48`` as the sole argument. 
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``10.0.130_410.48`` as the sole argument. 
    This installs the toolkit and three NVIDIA-recommended patches.
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/10.0.130/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/10.0.130/binary``
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/10.0.130/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/10.0.130/binary``
 
 CUDA 9.1.85
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``9.1.85_387.26`` as the sole argument. 
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``9.1.85_387.26`` as the sole argument. 
    This installs the toolkit and three NVIDIA-recommended patches.
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/9.1.85/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/9.1.85/binary``
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/9.1.85/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/9.1.85/binary``
 
 CUDA 9.0.176
 ^^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``9.0.176_384.81`` as the sole argument. 
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``9.0.176_384.81`` as the sole argument. 
    This installs the toolkit and four NVIDIA-recommended patches.
-#. :download:`Modulefile </sharc/software/modulefiles/libs/CUDA/9.0.176/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/9.0.176/binary``
+#. :download:`Modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/9.0.176/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/9.0.176/binary``
 
 CUDA 8.0.44
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``8.0.44`` as the sole argument.
-#. :download:`This modulefile </sharc/software/modulefiles/libs/CUDA/8.0.44/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/8.0.44/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``8.0.44`` as the sole argument.
+#. :download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/8.0.44/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/8.0.44/binary``
 
 CUDA 7.5.18
 ^^^^^^^^^^^
 
-#. Installed with :download:`install.sh </sharc/software/install_scripts/libs/CUDA/install.sh>` with ``7.5.18`` as the sole argument.
-#. :download:`This modulefile </sharc/software/modulefiles/libs/CUDA/7.5.18/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/7.5.18/binary``
+#. Installed with :download:`install.sh </decommissioned/sharc/software/install_scripts/libs/CUDA/install.sh>` with ``7.5.18`` as the sole argument.
+#. :download:`This modulefile </decommissioned/sharc/software/modulefiles/libs/CUDA/7.5.18/binary>` was installed as ``/usr/local/modulefiles/libs/CUDA/7.5.18/binary``

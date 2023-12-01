@@ -18,5 +18,5 @@ This section is primarily for administrators of the system.
 
 BLAS was extracted from the RPMs for **blas** and **blas-devel**
 
-# :download:`Install script </sharc/software/install_scripts/libs/blas/3.4.2-5/binary/install.sh>`
-# :download:`Module File </sharc/software/modulefiles/libs/blas/3.4.2-5/binary>` as ``/usr/local/modulefiles/modulefiles/libs/blas/3.4.2-5/binary``
+# :download:`Install script </decommissioned/sharc/software/install_scripts/libs/blas/3.4.2-5/binary/install.sh>`
+# :download:`Module File </decommissioned/sharc/software/modulefiles/libs/blas/3.4.2-5/binary>` as ``/usr/local/modulefiles/modulefiles/libs/blas/3.4.2-5/binary``

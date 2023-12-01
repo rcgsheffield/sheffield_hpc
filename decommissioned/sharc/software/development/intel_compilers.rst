@@ -74,18 +74,18 @@ Intel Compilers 17.0.0
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2017 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/dev/intel-compilers/17.0.0>` was installed as ``/usr/local/modulefiles/dev/intel-compilers/17.0.0``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/17.0.0>` was installed as ``/usr/local/modulefiles/dev/intel-compilers/17.0.0``.
 
 Intel Compilers 16.0.1
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2016.1 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/dev/intel-compilers/16.0.1>` was installed as ``/usr/local/modulefiles/dev/intel-compilers/16.0.1``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/16.0.1>` was installed as ``/usr/local/modulefiles/dev/intel-compilers/16.0.1``.
 
 Intel Compilers 15.0.7
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Installed as part of :ref:`Parallel Studio Composer Edition 2015.7 <sharc-intel-parallel-studio>`.
 
-:download:`This modulefile </sharc/software/modulefiles/dev/intel-compilers/15.0.7>` was installed as ``/usr/local/modulefiles/dev/intel-compilers/15.0.7``.
+:download:`This modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/15.0.7>` was installed as ``/usr/local/modulefiles/dev/intel-compilers/15.0.7``.

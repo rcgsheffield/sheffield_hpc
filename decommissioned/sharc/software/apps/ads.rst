@@ -30,5 +30,5 @@ These are primarily for administrators of the system.
 * Choose Install folder `/usr/local/packages/apps/ads/2020/binary`
 * Choose a network license, and enter the license server adslm.shef.ac.uk
 
-The module file is :download:`/usr/local/modulefiles/apps/ads/2020/binary </sharc/software/modulefiles/apps/ads/2020/binary>`.
+The module file is :download:`/usr/local/modulefiles/apps/ads/2020/binary </decommissioned/sharc/software/modulefiles/apps/ads/2020/binary>`.
 

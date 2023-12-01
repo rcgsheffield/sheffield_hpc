@@ -148,27 +148,27 @@ Four GROMACS 2016.4 & 2018.1 installations are available on ShARC; two with and 
 builds and use the GROMACS installation of the FFTW3 library. One installation supports OPENMPI parallelism (note: request -pe mpi no_of_cores in your batch script rather than -pe smp no_of_cores).
 
 GROMACS 2016.4 without GPU support was installed using the
-:download:`install_gromacs.sh </sharc/software/install_scripts/apps/gromacs/2016.4/gcc-4.9.4/install_gromacs.sh>` script;
+:download:`install_gromacs.sh </decommissioned/sharc/software/install_scripts/apps/gromacs/2016.4/gcc-4.9.4/install_gromacs.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/gromacs/2016.4/gcc-4.9.4 </sharc/software/modulefiles/apps/gromacs/2016.4/gcc-4.9.4>`.
+:download:`/usr/local/modulefiles/apps/gromacs/2016.4/gcc-4.9.4 </decommissioned/sharc/software/modulefiles/apps/gromacs/2016.4/gcc-4.9.4>`.
 
 GROMACS 2018.1 without GPU support was installed using the
-:download:`install_gromacs.sh </sharc/software/install_scripts/apps/gromacs/2018.1/gcc-4.9.4/install_gromacs.sh>` script;
+:download:`install_gromacs.sh </decommissioned/sharc/software/install_scripts/apps/gromacs/2018.1/gcc-4.9.4/install_gromacs.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/gromacs/2018.1/gcc-4.9.4 </sharc/software/modulefiles/apps/gromacs/2018.1/gcc-4.9.4>`.
+:download:`/usr/local/modulefiles/apps/gromacs/2018.1/gcc-4.9.4 </decommissioned/sharc/software/modulefiles/apps/gromacs/2018.1/gcc-4.9.4>`.
 
 GROMACS 2016.4 with GPU support was installed using the
-:download:`install_gromacs_gpu.sh </sharc/software/install_scripts/apps/gromacs/2016.4/gcc-4.9.4-cuda-8.0/install_gromacs_gpu.sh>` script;
+:download:`install_gromacs_gpu.sh </decommissioned/sharc/software/install_scripts/apps/gromacs/2016.4/gcc-4.9.4-cuda-8.0/install_gromacs_gpu.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/gromacs/2016.4/gcc-4.9.4-cuda-8.0 </sharc/software/modulefiles/apps/gromacs/2016.4/gcc-4.9.4-cuda-8.0>`.
+:download:`/usr/local/modulefiles/apps/gromacs/2016.4/gcc-4.9.4-cuda-8.0 </decommissioned/sharc/software/modulefiles/apps/gromacs/2016.4/gcc-4.9.4-cuda-8.0>`.
 
 GROMACS 2018.1 with GPU support was installed using the
-:download:`install_gromacs_gpu.sh </sharc/software/install_scripts/apps/gromacs/2018.1/gcc-4.9.4-cuda-8.0/install_gromacs_gpu.sh>` script;
+:download:`install_gromacs_gpu.sh </decommissioned/sharc/software/install_scripts/apps/gromacs/2018.1/gcc-4.9.4-cuda-8.0/install_gromacs_gpu.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-cuda-8.0 </sharc/software/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-cuda-8.0>`.
+:download:`/usr/local/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-cuda-8.0 </decommissioned/sharc/software/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-cuda-8.0>`.
 
 GROMACS 2018.1 with OPENMPI support was installed using the
-:download:`install_gromacs_mpi.sh </sharc/software/install_scripts/apps/gromacs/2018.1/gcc-4.9.4-openmpi-2.0.1/install_gromacs_mpi.sh>` script;
+:download:`install_gromacs_mpi.sh </decommissioned/sharc/software/install_scripts/apps/gromacs/2018.1/gcc-4.9.4-openmpi-2.0.1/install_gromacs_mpi.sh>` script;
 the module file is
-:download:`/usr/local/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-openmpi-2.0.1 </sharc/software/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-openmpi-2.0.1>`.
+:download:`/usr/local/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-openmpi-2.0.1 </decommissioned/sharc/software/modulefiles/apps/gromacs/2018.1/gcc-4.9.4-openmpi-2.0.1>`.
 The GROMACS 2016.4 & 2018.1 installations were tested by using ``make check`` to run regression tests as part of the installation process.

@@ -45,25 +45,25 @@ These notes are primarily for system administrators:
 
 Version 8.2
 ^^^^^^^^^^^
-* :download:`Installation script </sharc/software/install_scripts/dev/gcc/8.2/install_82.sh>`
-* :download:`gcc 8.2 modulefile </sharc/software/modulefiles/dev/gcc/8.2>` saved as ``/usr/local/modulefiles/dev/gcc/8.2``
+* :download:`Installation script </decommissioned/sharc/software/install_scripts/dev/gcc/8.2/install_82.sh>`
+* :download:`gcc 8.2 modulefile </decommissioned/sharc/software/modulefiles/dev/gcc/8.2>` saved as ``/usr/local/modulefiles/dev/gcc/8.2``
 
 Version 6.3
 ^^^^^^^^^^^
-* :download:`Installation script </sharc/software/install_scripts/dev/gcc/6.3/install_63.sh>`
-* :download:`gcc 6.3 modulefile </sharc/software/modulefiles/dev/gcc/6.3>` saved as ``/usr/local/modulefiles/dev/gcc/6.3``
+* :download:`Installation script </decommissioned/sharc/software/install_scripts/dev/gcc/6.3/install_63.sh>`
+* :download:`gcc 6.3 modulefile </decommissioned/sharc/software/modulefiles/dev/gcc/6.3>` saved as ``/usr/local/modulefiles/dev/gcc/6.3``
 
 Version 6.2
 ^^^^^^^^^^^
-* :download:`Installation script </sharc/software/install_scripts/dev/gcc/6.2/install.sh>`
-* :download:`gcc 6.2 modulefile </sharc/software/modulefiles/dev/gcc/6.2>` saved as ``/usr/local/modulefiles/dev/gcc/6.2``
+* :download:`Installation script </decommissioned/sharc/software/install_scripts/dev/gcc/6.2/install.sh>`
+* :download:`gcc 6.2 modulefile </decommissioned/sharc/software/modulefiles/dev/gcc/6.2>` saved as ``/usr/local/modulefiles/dev/gcc/6.2``
 
 Version 5.4
 ^^^^^^^^^^^
-* :download:`Installation script </sharc/software/install_scripts/dev/gcc/5.4/install.sh>`
-* :download:`this modulefile </sharc/software/modulefiles/dev/gcc/5.4>`, saved as ``/usr/local/modulefiles/dev/gcc/5.4``
+* :download:`Installation script </decommissioned/sharc/software/install_scripts/dev/gcc/5.4/install.sh>`
+* :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/gcc/5.4>`, saved as ``/usr/local/modulefiles/dev/gcc/5.4``
 
 Version 4.9.4
 ^^^^^^^^^^^^^
-* :download:`this script </sharc/software/install_scripts/dev/gcc/4.9.4/install.sh>`
-* :download:`this modulefile </sharc/software/modulefiles/dev/gcc/4.9.4>`, saved as ``/usr/local/modulefiles/dev/gcc/4.9.4``
+* :download:`this script </decommissioned/sharc/software/install_scripts/dev/gcc/4.9.4/install.sh>`
+* :download:`this modulefile </decommissioned/sharc/software/modulefiles/dev/gcc/4.9.4>`, saved as ``/usr/local/modulefiles/dev/gcc/4.9.4``

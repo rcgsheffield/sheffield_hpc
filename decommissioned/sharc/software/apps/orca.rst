@@ -43,9 +43,9 @@ Installation notes
 ------------------
 
 ORCA 4.0.1 was installed as a binary installation using the
-:download:`install_orca.sh </sharc/software/install_scripts/apps/orca/4.0.1/binary/install_orca.sh>` script;
+:download:`install_orca.sh </decommissioned/sharc/software/install_scripts/apps/orca/4.0.1/binary/install_orca.sh>` script;
 the module file is
-:download:`binary </sharc/software/modulefiles/apps/orca/4.0.1/binary>`.
+:download:`binary </decommissioned/sharc/software/modulefiles/apps/orca/4.0.1/binary>`.
 
 The ORCA 4.0.1 installation was tested by running a batch job using the ``my_job.sh`` batch script, above, with the text, below, in an ORCA input file. ::
 

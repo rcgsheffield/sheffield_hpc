@@ -42,7 +42,7 @@ Parallel Studio XE Composer Edition 2019.3
 #. Ensure details of the Intel license server are in the file
    ``/usr/local/packages/dev/intel-pe-xe-ce/license.lic``
 #. Run :download:`this script
-   </sharc/software/install_scripts/dev/intel-ps-xe-ce/2019.3/install.sh>`.
+   </decommissioned/sharc/software/install_scripts/dev/intel-ps-xe-ce/2019.3/install.sh>`.
    This installs Parallel Studio into
    ``/usr/local/packages/dev/intel-pe-xe-ce/2019.3/binary/``.  Products are
    activated using the aforementioned license file during the installation
@@ -54,11 +54,11 @@ Parallel Studio XE Composer Edition 2019.3
    modulefile for all Parallel Studio software and other modulefiles for
    specific products.  
 
-    * The :download:`Compilers modulefile </sharc/software/modulefiles/dev/intel-compilers/19.0.3>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/19.0.3``.
-    * The :download:`DAAL modulefile </sharc/software/modulefiles/libs/intel-daal/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-daal/2019.3/binary``.
-    * The :download:`IPP modulefile </sharc/software/modulefiles/libs/intel-ipp/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2019.3/binary``.
-    * The :download:`MKL modulefile </sharc/software/modulefiles/libs/intel-mkl/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2019.3/binary``.
-    * The :download:`TBB modulefile </sharc/software/modulefiles/libs/intel-tbb/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2019.3/binary``.
+    * The :download:`Compilers modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/19.0.3>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/19.0.3``.
+    * The :download:`DAAL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-daal/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-daal/2019.3/binary``.
+    * The :download:`IPP modulefile </decommissioned/sharc/software/modulefiles/libs/intel-ipp/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2019.3/binary``.
+    * The :download:`MKL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2019.3/binary``.
+    * The :download:`TBB modulefile </decommissioned/sharc/software/modulefiles/libs/intel-tbb/2019.3/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2019.3/binary``.
     * See the (TCL) modulefiles for details of how they were derived from Intel-supplied environment-manipulating shell scripts.
 
 #. Check that licensing is working by activating the Intel Compilers modulefile
@@ -75,7 +75,7 @@ Parallel Studio XE Composer Edition 2017.0
 #. Ensure details of the Intel license server are in the file
    ``/usr/local/packages/dev/intel-pe-xe-ce/license.lic``
 #. Run :download:`this script
-   </sharc/software/install_scripts/dev/intel-ps-xe-ce/2017.0/install.sh>`.
+   </decommissioned/sharc/software/install_scripts/dev/intel-ps-xe-ce/2017.0/install.sh>`.
    This installs Parallel Studio into
    ``/usr/local/packages/dev/intel-pe-xe-ce/2017.0/binary/``.  Products are
    activated using the aforementioned license file during the installation
@@ -87,11 +87,11 @@ Parallel Studio XE Composer Edition 2017.0
    modulefile for all Parallel Studio software and other modulefiles for
    specific products.  
 
-    * The :download:`Compilers modulefile </sharc/software/modulefiles/dev/intel-compilers/17.0.0>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/17.0.0``.
-    * The :download:`DAAL modulefile </sharc/software/modulefiles/libs/intel-daal/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-daal/2017.0/binary``.
-    * The :download:`IPP modulefile </sharc/software/modulefiles/libs/intel-ipp/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2017.0/binary``.
-    * The :download:`MKL modulefile </sharc/software/modulefiles/libs/intel-mkl/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2017.0/binary``.
-    * The :download:`TBB modulefile </sharc/software/modulefiles/libs/intel-tbb/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2017.0/binary``.
+    * The :download:`Compilers modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/17.0.0>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/17.0.0``.
+    * The :download:`DAAL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-daal/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-daal/2017.0/binary``.
+    * The :download:`IPP modulefile </decommissioned/sharc/software/modulefiles/libs/intel-ipp/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2017.0/binary``.
+    * The :download:`MKL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2017.0/binary``.
+    * The :download:`TBB modulefile </decommissioned/sharc/software/modulefiles/libs/intel-tbb/2017.0/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2017.0/binary``.
     * See the (TCL) modulefiles for details of how they were derived from Intel-supplied environment-manipulating shell scripts.
 
 #. Check that licensing is working by activating the Intel Compilers modulefile
@@ -108,7 +108,7 @@ Parallel Studio XE Composer Edition 2016.1
 #. Ensure details of the Intel license server are in the file
    ``/usr/local/packages/dev/intel-pe-xe-ce/license.lic``
 #. Run :download:`this script
-   </sharc/software/install_scripts/dev/intel-ps-xe-ce/2016.1/install.sh>`.
+   </decommissioned/sharc/software/install_scripts/dev/intel-ps-xe-ce/2016.1/install.sh>`.
    This installs Parallel Studio into
    ``/usr/local/packages/dev/intel-pe-xe-ce/2016.1/binary/``.  Products are
    activated using the aforementioned license file during the installation
@@ -120,11 +120,11 @@ Parallel Studio XE Composer Edition 2016.1
    modulefile for all Parallel Studio software and other modulefiles for
    specific products.  
 
-    * The :download:`Compilers modulefile </sharc/software/modulefiles/dev/intel-compilers/16.0.1>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/16.0.1``.
-    * The :download:`DAAL modulefile </sharc/software/modulefiles/libs/intel-daal/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-daal/2016.1/binary``.
-    * The :download:`IPP modulefile </sharc/software/modulefiles/libs/intel-ipp/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2016.1/binary``.
-    * The :download:`MKL modulefile </sharc/software/modulefiles/libs/intel-mkl/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2016.1/binary``.
-    * The :download:`TBB modulefile </sharc/software/modulefiles/libs/intel-tbb/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2016.1/binary``.
+    * The :download:`Compilers modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/16.0.1>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/16.0.1``.
+    * The :download:`DAAL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-daal/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-daal/2016.1/binary``.
+    * The :download:`IPP modulefile </decommissioned/sharc/software/modulefiles/libs/intel-ipp/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2016.1/binary``.
+    * The :download:`MKL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2016.1/binary``.
+    * The :download:`TBB modulefile </decommissioned/sharc/software/modulefiles/libs/intel-tbb/2016.1/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2016.1/binary``.
     * See the (TCL) modulefiles for details of how they were derived from Intel-supplied environment-manipulating shell scripts.
 
 #. Check that licensing is working by activating the Intel Compilers modulefile
@@ -141,7 +141,7 @@ Parallel Studio XE Composer Edition 2015.7
 #. Ensure details of the Intel license server are in the file
    ``/usr/local/packages/dev/intel-pe-xe-ce/license.lic``
 #. Run :download:`this script
-   </sharc/software/install_scripts/dev/intel-ps-xe-ce/2015.7/install.sh>`.
+   </decommissioned/sharc/software/install_scripts/dev/intel-ps-xe-ce/2015.7/install.sh>`.
    This installs Parallel Studio into
    ``/usr/local/packages/dev/intel-pe-xe-ce/2015.7/binary/``.  Products are
    activated using the aforementioned license file during the installation
@@ -153,10 +153,10 @@ Parallel Studio XE Composer Edition 2015.7
    modulefile for all Parallel Studio software and other modulefiles for
    specific products.  
 
-    * The :download:`Compilers modulefile </sharc/software/modulefiles/dev/intel-compilers/15.0.7>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/15.0.7``.
-    * The :download:`IPP modulefile </sharc/software/modulefiles/libs/intel-ipp/2015.7/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2015.7/binary``.
-    * The :download:`MKL modulefile </sharc/software/modulefiles/libs/intel-mkl/2015.7/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2015.7/binary``.
-    * The :download:`TBB modulefile </sharc/software/modulefiles/libs/intel-tbb/2015.7/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2015.7/binary``.
+    * The :download:`Compilers modulefile </decommissioned/sharc/software/modulefiles/dev/intel-compilers/15.0.7>` should be installed as ``/usr/local/modulefiles/dev/intel-compilers/15.0.7``.
+    * The :download:`IPP modulefile </decommissioned/sharc/software/modulefiles/libs/intel-ipp/2015.7/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-ipp/2015.7/binary``.
+    * The :download:`MKL modulefile </decommissioned/sharc/software/modulefiles/libs/intel-mkl/2015.7/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-mkl/2015.7/binary``.
+    * The :download:`TBB modulefile </decommissioned/sharc/software/modulefiles/libs/intel-tbb/2015.7/binary>` should be installed as ``/usr/local/modulefiles/libs/intel-tbb/2015.7/binary``.
     * See the (TCL) modulefiles for details of how they were derived from Intel-supplied environment-manipulating shell scripts.
 
 #. Check that licensing is working by activating the Intel Compilers modulefile

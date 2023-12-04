@@ -1,10 +1,4 @@
-.. _groupnodes_sharc:
+.. _decom_groupnodes_sharc:
 
 Research Group-Specific Nodes on ShARC
 ======================================
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    ./*

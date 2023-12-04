@@ -1,11 +1,4 @@
-.. _sharc-apps:
+.. _decom_sharc-apps:
 
 Applications on Sharc
 =====================
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    ansys/index
-    ./*

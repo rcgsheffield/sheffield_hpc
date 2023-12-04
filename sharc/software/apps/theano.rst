@@ -1,4 +1,8 @@
-.. _decom_theano_sharc:
-
+:orphan: yes
 Theano
 ======
+.. raw:: html
+
+    <meta http-equiv="refresh" content="0; URL=../../../decommissioned/sharc/software/apps/theano.html" />
+
+This page is now a stub, the page you are looking for can be found :ref:`here<theano_sharc>`

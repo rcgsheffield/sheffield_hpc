@@ -1,11 +1,8 @@
-.. _decom_ansys-sharc-ls-dyna:
-
-..
-  ######################################################################################################################################
-  Notice: Updating the sidebar or modules load list MUST be done in the linked files in the /referenceinfo/imports/software/ansys/ area.
-  ######################################################################################################################################
-  
-.. include:: /referenceinfo/imports/software/ansys/sharc-sidebar.rst
-
+:orphan: yes
 ANSYS LS-DYNA
 ========================
+.. raw:: html
+
+    <meta http-equiv="refresh" content="0; URL=../../../../decommissioned/sharc/software/apps/ansys/ls-dyna.html" />
+
+This page is now a stub, the page you are looking for can be found :ref:`here<ansys-sharc-ls-dyna>`

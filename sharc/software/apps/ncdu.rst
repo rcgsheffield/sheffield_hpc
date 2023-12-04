@@ -1,7 +1,8 @@
-.. |softwarename| replace:: ncdu
-.. |currentver| replace:: 1.15.1
+:orphan: yes
+ncdu
+====
+.. raw:: html
 
-.. _decom_ncdu_sharc:
+    <meta http-equiv="refresh" content="0; URL=../../../decommissioned/sharc/software/apps/ncdu.html" />
 
-|softwarename|
-==========================================================================================================
+This page is now a stub, the page you are looking for can be found :ref:`here<ncdu_sharc>`

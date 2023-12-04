@@ -1,11 +1,8 @@
-.. _decom_ansys-sharc-fluent:
-
-..
-  ######################################################################################################################################
-  Notice: Updating the sidebar or modules load list MUST be done in the linked files in the /referenceinfo/imports/software/ansys/ area.
-  ######################################################################################################################################
-  
-.. include:: /referenceinfo/imports/software/ansys/sharc-sidebar.rst
-
+:orphan: yes
 Fluent
 ========================
+.. raw:: html
+
+    <meta http-equiv="refresh" content="0; URL=../../../../decommissioned/sharc/software/apps/ansys/fluent.html" />
+
+This page is now a stub, the page you are looking for can be found :ref:`here<ansys-sharc-fluent>`

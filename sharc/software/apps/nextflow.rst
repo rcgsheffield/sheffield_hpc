@@ -1,4 +1,8 @@
-.. _decom_nextflow_sharc:
-
+:orphan: yes
 Nextflow
 ========
+.. raw:: html
+
+    <meta http-equiv="refresh" content="0; URL=../../../decommissioned/sharc/software/apps/nextflow.html" />
+
+This page is now a stub, the page you are looking for can be found :ref:`here<nextflow_sharc>`

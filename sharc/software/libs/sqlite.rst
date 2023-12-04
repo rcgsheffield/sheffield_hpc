@@ -1,7 +1,8 @@
-.. _decom_sqlite_sharc:
-
-   :Version: 3.32.3
-   :URL: https://www.sqlite.org/about.html
-
+:orphan: yes
 SQLITE
 ======
+.. raw:: html
+
+    <meta http-equiv="refresh" content="0; URL=../../../decommissioned/sharc/software/libs/sqlite.html" />
+
+This page is now a stub, the page you are looking for can be found :ref:`here<sqlite_sharc>`

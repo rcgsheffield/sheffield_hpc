@@ -51,4 +51,4 @@ The script requests 4 cores with a runtime of 1 hour and 8 GB of real memory. Th
 Installation notes
 ------------------
 
-The software was installed using a custom cinfig called ``Molpro-mpp-2022.3.2.linux_x86_64_sockets.eb``. Which has been submitted to the EasyConfig repo 
+The software was installed using a custom config called ``Molpro-mpp-2022.3.2.linux_x86_64_sockets.eb``. Which should soon be on the easyConfig repo.

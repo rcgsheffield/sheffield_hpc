@@ -1,0 +1,52 @@
+.. _nl20231201:
+
+HPC Newsletter 2023-12-01
+=========================
+
+ShARC Decommissioned
+---------------------
+- As of November 30th, we have officially decommissioned our oldest High-Performance Computing (HPC) cluster, ShARC. For reference, we have archived `it here <https://docs.hpc.shef.ac.uk/en/latest/decommissioned/index.html/>`_.
+- Support remains available for users needing assistance transitioning to Stanage and Bessemer. You can access support through 
+	- The `courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ we offer 
+	- Our weekly drop in session 
+	- Or by reaching out via email to ``researchcomputing@sheffield.ac.uk``  with your query. 
+- A huge thanks to the members of the team who contributed towards its creation in the early days and for the ones who saw it through to its decommissioning. We plan to ship it to Ukraine so it can have a second life supporting researchers.
+
+GPU Benchmarks:
+--------------------
+- At the beginning of the Academic year, we benchmarked the H100 on Stanage and shared our discoveries, available `here <https://notesrcg.blogspot.com/2023/08/Stanage-HPC-new-h100-gpus-available-benchmarking.html/>`_ . Our findings highlighted how different workloads benefit different GPUs. This led us to investigating the Nvidia L40s as a potential addition to our GPU offerings. Our colleague, Farhad Allian, detailed his findings in the following `blog post <https://www.blogger.com/blog/post/preview/343285122053095411/2534088968302114079/>`_. 
+
+Recent HPC documentation updates:
+---------------------------------
+- `Graphical user interface sessions on Stanage <https://docs.hpc.shef.ac.uk/en/latest/hpc/flight-desktop.html#graphical-sessions-on-stanage/>`_
+- The ShARC documentation section have been moved to the `Decommissioned Clusters <https://docs.hpc.shef.ac.uk/en/latest/decommissioned/index.html />`_ section.
+- `Displaying job status with seff <https://docs.hpc.shef.ac.uk/en/latest/referenceinfo/scheduler/SLURM/Common-commands/seff.html#seff/>`_  
+
+New Packages and software
+--------------------------
+- `Molpro <https://docs.hpc.shef.ac.uk/en/latest/stanage/software/apps/molpro.html/>`_ is now available on Stanage.
+
+Upcoming training:
+------------------
+Below are key training dates for January.
+
+- Linux training - 11/01/2024
+- Introduction to using HPC 18/01/2024
+
+You can register for the above and more courses  `on this link <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
+
+Planned Maintenance
+--------------------
+- Stanage will be closed for maintenance from the 15th to the 18th of December.
+- Abaqus license update on the 21st of December
+- Ansys license update end of December. 
+- The team will be away for the festive period from the 23/12/23 to the 2/1/24
+
+
+Useful Links
+-------------
+
+- `HPC documentation <https://docs.hpc.shef.ac.uk/en/latest/decommissioned/index.html/>`_
+- `RSE code clinic <https://rse.shef.ac.uk/support/code-clinic/>`_
+- `Citing the HPC services in publications. <https://docs.hpc.shef.ac.uk/en/latest/citing.html#citing-the-hpc-services-in-publications/>`_
+- `women in HPC. <https://womeninhpc.org/>`_ 

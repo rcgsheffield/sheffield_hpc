@@ -39,6 +39,7 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    stanage/index
    bessemer/index
    parallel/index
+   newsletter/index
    glossary
    other-uk-hpc-resources
    help

@@ -1,0 +1,18 @@
+.wy-nav-content {
+    position: relative;
+}
+
+.wy-nav-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('/en/latest/_static/watermark/watermark.png');
+    background-size: repeat;
+    opacity: 0.030;
+    pointer-events: none;
+    /* Allow interactions with content behind the overlay */
+}

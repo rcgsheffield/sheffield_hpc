@@ -44,9 +44,7 @@ MFA this may not occur. This may change in future however the current MFA in use
 Graphical applications
 ----------------------
 
-At present, we only provide very limited support for running graphical sessions on Stanage.
-At this point in time we recommend that users needing graphical access to Stanage use ShARC or Bessemer instead. 
-Mechanisms for facilitating graphical access to Stanage are in development.
+At present, we only provide very limited support for running graphical sessions on Stanage. Please see :ref:`Graphical sessions on Stanage<flight-desktop>`
 
 -----
 

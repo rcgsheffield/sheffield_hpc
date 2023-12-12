@@ -85,3 +85,8 @@
   }
 
 .boldtext { font-weight: bold; }
+
+/* Add transparency to green code blocks */
+div.highlight {
+  background-color: rgba(210, 255, 147, 0.38) !important;
+}

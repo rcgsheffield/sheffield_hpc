@@ -1,10 +1,8 @@
-.. _sge_info:
-
+:orphan: yes
 SGE Scheduler Job Submission info
 =================================
-
 .. raw:: html
 
-    <meta http-equiv="refresh" content="0; URL=../hpc/scheduler/index.html#job-submission-control-on-sharc" />
+    <meta http-equiv="refresh" content="0; URL=../decommissioned/sharc/sge.html" />
 
-This page is now a stub, the details for job submission for ShARC can now be found here: :ref:`Job Submission on ShARC<submit_job_sharc>`
+This page is now a stub, the page you are looking for can be found :ref:`here<sge_info>`

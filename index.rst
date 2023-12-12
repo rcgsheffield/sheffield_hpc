@@ -7,6 +7,9 @@ This is the documentation for The University of Sheffield's High Performance Com
 
 * :ref:`stanage`
 * :ref:`bessemer` 
+
+Recently decommissioned cluster's documentation is currently still available for reference:
+
 * :ref:`sharc` 
 
 Run by IT Services' Research and Innovation team
@@ -35,11 +38,9 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    hpc/index
    stanage/index
    bessemer/index
-   sharc/index
    parallel/index
    glossary
    other-uk-hpc-resources
-   oldsystems
    help
    Courses / Training Index<https://rcgsheffield.github.io/TUoS-RIT-training-resources/training.html>
    FAQs
@@ -47,5 +48,6 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    referenceinfo/index
    mfa-update-21-10-2021
    citing
+   decommissioned/index
 
 

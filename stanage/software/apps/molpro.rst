@@ -22,6 +22,7 @@ Molpro 2015.1.22 can be activated using the module file::
 The Molpro executable is ``molpro``.
 
 **Important note:** Only licensed users of Molpro are entitled to use the code; refer to Molpro's website for license details: https://www.molpro.net/info/products.php . Access to Molpro on Stanage is restricted to members of the unix group ``hpc_molpro``.
+
 To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use Molpro.
 
 

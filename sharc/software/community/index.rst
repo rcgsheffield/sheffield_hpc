@@ -1,18 +1,8 @@
-.. _sharc-community:
-
+:orphan: yes
 Community software
 ==================
+.. raw:: html
 
-Users may wish to install software that is accessible to many/all users on the cluster in an area that uses/respects traditional Linux permissions.
-On ShARC users can request they be given write access to directories created beneath ``/usr/local/community`` for this purpose.
+    <meta http-equiv="refresh" content="0; URL=../../../decommissioned/sharc/software/community/index.html" />
 
-See :ref:`community_dir` for more information including the policy for the management of these areas.
-
-Publicly-documented community software
---------------------------------------
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-    
-    ./*
+This page is now a stub, the page you are looking for can be found :ref:`here<sharc-community>`

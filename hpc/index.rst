@@ -25,5 +25,6 @@ This guide will get you set up using the University's clusters
    Choosing-appropriate-resources
    installing-software
    hw-accel-gfx
+   flight-desktop
    jupyterhub
    hpcgateway

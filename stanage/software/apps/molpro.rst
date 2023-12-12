@@ -31,6 +31,7 @@ Batch jobs
 Users are encouraged to write their own batch submission scripts. The following is an example batch submission script, ``my_job.sh``, to run ``molpro`` and which is submitted to the queue by typing ``sbatch my_job.sh``. 
 
 .. code-block:: bash
+    
     #!/bin/bash
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=4

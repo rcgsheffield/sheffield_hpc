@@ -1,5 +1,5 @@
 .. |softwarename| replace:: MATLAB
-.. |currentver| replace:: 2022a
+.. |currentver| replace:: 2023b
 
 .. _matlab_stanage:
 
@@ -8,7 +8,7 @@
 
 .. sidebar:: MATLAB
 
-   :Versions:  2022a
+   :Versions:  |currentver|
    :Dependencies: None
    :URL: https://uk.mathworks.com/products/matlab
    :Documentation: https://uk.mathworks.com/help/matlab
@@ -24,6 +24,7 @@ The latest version of MATLAB (currently 2022a) is made available by running:
 
 .. code-block:: bash
 
+   module load MATLAB/2023b
    module load MATLAB/2022a
 
 You can then run MATLAB by entering ``matlab``. This provides a matlab terminal (Please note that graphical sessions are not yet available on Stanage, so the matlab GUI will not load).

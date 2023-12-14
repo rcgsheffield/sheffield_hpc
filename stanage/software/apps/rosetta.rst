@@ -1,4 +1,4 @@
-.. rosetta_stanage:
+.. _rosetta_stanage:
 
 Rosetta
 =======
@@ -29,7 +29,7 @@ The above module file adds the Rosetta executables to a user's path.
 Installation notes
 ------------------
 
-Rosetta 2023.35 was installed using the :download:`install_rosetta.sh </stanage/software/install_scripts/rosetta/2023.35/install_rosetta.sh>` 
+Rosetta 2023.35 was installed using the :download:`install_rosetta.sh </stanage/software/install_scripts/rosetta/2023.35/install_rosetta.sh>`
 script; the module file is
 :download:`/opt/apps/testapps/el7/modules/staging/all/rosetta/2023.35.lua </stanage/software/modulefiles/rosetta/2023.35.lua>`.
 The installation of Rosetta weekly release 2023.35 was a binary installation.

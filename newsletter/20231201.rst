@@ -44,7 +44,7 @@ You can register for the above and more courses  `on this link <https://sites.go
 
 Planned Maintenance
 --------------------
-- Stanage will be entirely unavailable for maintenance from the 09:00am 15th December to the 19th December 5pm due to essential maintenance. 
+- Stanage will be entirely unavailable for maintenance from 09:00 on 15th December until 17:00 on 19th December due to essential maintenance. 
 - Abaqus license update on the 21st of December
 - Ansys license update end of December. 
 - The team will be away for the festive period from the 23/12/2023 to 2/1/2024 inclusive.

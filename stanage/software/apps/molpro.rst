@@ -8,7 +8,7 @@ Molpro
    :Version: 2022.3.2
    :Dependencies: No additional modules loaded.
    :URL: http://www.molpro.net/
-   :Documentation: http://www.molpro.net/info/users?portal=user
+   :Documentation: https://www.molpro.net/manual/doku.php
 
 
 Molpro is a comprehensive system of ab initio programs for advanced molecular electronic structure calculations, designed and maintained by H.-J. Werner and P. J. Knowles, and containing contributions from many other authors.
@@ -23,7 +23,8 @@ Molpro 2015.1.22 can be activated using the module file::
 
 The Molpro executable is ``molpro``.
 
-**Important note:** Only licensed users of Molpro are entitled to use the code; refer to Molpro's website for license details: http://www.molpro.net/info/products.php?portal=visitor&choice=Licence+types. Access to Molpro on Stanage is restricted to members of the unix group ``hpc_molpro``.
+**Important note:** Only licensed users of Molpro are entitled to use the code; refer to Molpro's website for license details: https://www.molpro.net/info/products.php . Access to Molpro on Stanage is restricted to members of the unix group ``hpc_molpro``.
+
 To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use Molpro.
 
 
@@ -54,4 +55,4 @@ The script requests 4 cores with a runtime of 1 hour and 8 GB of real memory. Th
 Installation notes
 ------------------
 
-The software was installed using a custom config called ``Molpro-mpp-2022.3.2.linux_x86_64_sockets.eb``. Which should soon be on the easyConfig repo.
+The software was installed using a custom config called ``Molpro-mpp-2022.3.2.linux_x86_64_sockets.eb``, which should be available in the easybuild-easyconfig repository shortly.

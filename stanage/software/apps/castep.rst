@@ -64,7 +64,7 @@ These are primarily for system administrators.
 
 Version 23.1
 ^^^^^^^^^^^^^
-The none GPU installation was done using the custom easybuild ``CASTEP-23.1-intel.eb``. This will also be submited to the official easybuild config github.
+The non-GPU installation was done using the custom easyconfig ``CASTEP-23.1-intel.eb``. This will also be submitted to the official easybuild config github.
 
 
 Testing

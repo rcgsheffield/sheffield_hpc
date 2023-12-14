@@ -19,7 +19,7 @@ GPU Benchmarks:
 Recent HPC documentation updates:
 ---------------------------------
 - :ref:`Graphical user interface sessions on Stanage <flight-desktop>`
-- The ShARC documentation section have been moved to the :ref:`Decommissioned Clusters <decommissioned>` section.
+- The ShARC documentation section has been moved to the :ref:`Decommissioned Clusters <decommissioned>` section.
 - Displaying job status with :ref:`seff  <seff>`. Job completion emails now also contain job efficiency information. Please make use of these to optimise your resource request.
 
 New Packages and software

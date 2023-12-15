@@ -40,7 +40,7 @@ Below are key training dates for January.
 - Linux training - 11/01/2024
 - Introduction to using HPC 18/01/2024
 
-You can register for the above and more courses  `on this link <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
+You can register for the above and more courses by `following this link <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
 
 Planned Maintenance
 --------------------

@@ -14,7 +14,7 @@ ShARC Decommissioned
 
 GPU Benchmarks:
 --------------------
-- At the beginning of the Academic year, we benchmarked the H100 on Stanage and shared our discoveries, available `here <https://notesrcg.blogspot.com/2023/08/Stanage-HPC-new-h100-gpus-available-benchmarking.html>`_ . Our findings highlighted how different workloads benefit different GPUs. This led us to investigating the Nvidia L40s as a potential addition to our GPU offerings. Our colleagues, Farhad Allian and Peter Heywood, detailed their findings in the following `blog post <https://notesrcg.blogspot.com/2023/12/blog-post.html>`_ in November. 
+- At the beginning of the academic year, we benchmarked the H100 on Stanage and shared our discoveries, available `here <https://notesrcg.blogspot.com/2023/08/Stanage-HPC-new-h100-gpus-available-benchmarking.html>`_ . Our findings highlighted how different workloads benefit different GPUs. This led us to investigating the Nvidia L40s as a potential addition to our GPU offerings. Our colleagues, Farhad Allian and Peter Heywood, detailed their findings in the following `blog post <https://notesrcg.blogspot.com/2023/12/blog-post.html>`_ in November. 
 
 Recent HPC documentation updates:
 ---------------------------------

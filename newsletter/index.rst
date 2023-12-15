@@ -1,6 +1,6 @@
 .. _newsletter:
 
-HPC Newsletter
+News
 ==============
 
 .. toctree::

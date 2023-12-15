@@ -20,7 +20,7 @@ Recent HPC documentation updates:
 ---------------------------------
 - :ref:`Graphical user interface sessions on Stanage <flight-desktop>`
 - The ShARC documentation section has been moved to the :ref:`Decommissioned Clusters <decommissioned>` section.
-- Displaying job status with :ref:`seff  <seff>`. Job completion emails contain limited job efficiency information. Please make use of these to optimise your resource request.
+- Job completion emails contain limited job efficiency information, displaying job status with :ref:`seff  <seff>` gives more detail. Please make use of these to optimise your resource request.
 
 New Packages and software
 --------------------------

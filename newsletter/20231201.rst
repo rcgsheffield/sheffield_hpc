@@ -1,7 +1,7 @@
 .. _nl20231201:
 
 News - 2023-12-01
-=========================
+==================
 
 ShARC Decommissioned
 ---------------------
@@ -13,7 +13,7 @@ ShARC Decommissioned
 - A huge thanks to the members of the team who contributed towards its creation in the early days and for the ones who saw it through to its decommissioning. We plan to ship it to the `Igor Sikorsky Kyiv Polytechnic Institute` in Kyiv, so that it can have a second life supporting researchers.
 
 GPU Benchmarks
---------------------
+--------------
 - At the beginning of the academic year, we benchmarked the performance of NVIDIA H100 GPUs on Stanage and shared our discoveries, available `here <https://notesrcg.blogspot.com/2023/08/Stanage-HPC-new-h100-gpus-available-benchmarking.html>`_ . Our findings highlighted how different workloads benefit from different GPUs. This led us to more recently investigating NVIDIA L40 GPUs as a potential addition to our GPU offerings. Our colleagues, Farhad Allian and Peter Heywood, detailed their findings in the following `blog post <https://notesrcg.blogspot.com/2023/12/blog-post.html>`_ in November. 
 
 Recent HPC documentation updates:
@@ -24,7 +24,6 @@ Recent HPC documentation updates:
 
 New Packages and software
 --------------------------
-
 The following software are now available on Stanage:
 
 - :ref:`CASTEP 23.1  <castep_stanage>` 
@@ -52,7 +51,6 @@ Planned Maintenance
 
 Useful Links
 -------------
-
 - :ref:`HPC documentation  <hpc-home>` 
 - `RSE code clinic <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services’ Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
 - :ref:`Citing the HPC services in publications.  <citing>`

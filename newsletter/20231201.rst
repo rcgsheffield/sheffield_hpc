@@ -1,6 +1,6 @@
 .. _nl20231201:
 
-HPC Newsletter 2023-12-01
+News - 2023-12-01
 =========================
 
 ShARC Decommissioned

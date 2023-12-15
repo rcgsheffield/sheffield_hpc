@@ -10,7 +10,7 @@ ShARC Decommissioned
 	- The `courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ we offer 
 	- Join our drop-in sessions by signing up through the Google Form included in our weekly email that advertises these sessions.
 	- Or by reaching out via email to ``researchcomputing@sheffield.ac.uk``  with your query. 
-- A huge thanks to the members of the team who contributed towards its creation in the early days and for the ones who saw it through to its decommissioning. We plan to ship it to `Igor Sikorsky Kyiv Polytechnic Institute` in kyiv, so that it can have a second life supporting researchers.
+- A huge thanks to the members of the team who contributed towards its creation in the early days and for the ones who saw it through to its decommissioning. We plan to ship it to the `Igor Sikorsky Kyiv Polytechnic Institute` in Kyiv, so that it can have a second life supporting researchers.
 
 GPU Benchmarks:
 --------------------

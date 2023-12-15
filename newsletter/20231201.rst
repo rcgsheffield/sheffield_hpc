@@ -27,7 +27,7 @@ New Packages and software
 
 The following software are now available on Stanage:
 
-- :ref:`Castep 23.1  <castep_stanage>` 
+- :ref:`CASTEP 23.1  <castep_stanage>` 
 - :ref:`Matlab 2023b  <matlab_stanage>` 
 - :ref:`Molpro 2022.3.2  <molpro>` 
 - :ref:`PETSc 3.20.1 && 3.17.4  <petsc_stanage>` 

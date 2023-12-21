@@ -21,6 +21,7 @@ Initialise and start Flight Desktop:
 
 .. code-block:: bash
 
+    flight start # Start the Flight environment to enable further Flight commands
     flight desktop verify xfce   # only do this once
     flight desktop start --geometry 1800x1000 xfce
     

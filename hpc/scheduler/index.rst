@@ -478,7 +478,7 @@ Slurm Command                        Description
 Rejoining an interactive job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If we lose connection to an interactive job, we can use the ``sattach`` command which attaches to a running Slurm job step.
-Just keep in mind that ``sattach`` doesn't work for external or batch steps, as their input and output channels aren't 
+Just keep in mind that ``sattach`` doesn't work for external or batch steps, as they aren't 
 set up for direct attachment.
 
 Example:

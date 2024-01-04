@@ -473,6 +473,27 @@ Slurm Command                        Description
                                      e.g. ``--cpus-per-task``. 
 ==================================== =======================================================================
 
+.. _sattach_interactive_bessemer:
+
+Rejoining an interactive job
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If we lose connection to an interactive job, we can use the ``sattach`` command which attaches to a running Slurm job step.
+By attaching, it makes available the IO streams of all of the tasks of a running Slurm job step. It cannot be used to attach directly to extern or 
+batch steps since the IO channels of these steps are not set or directly forwarded to a file. 
+
+Example:
+
+.. code-block:: console
+
+    [te1st@bessemer-login1 ~]$ squeue -u $USER
+            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            833300 interacti     bash   te1st  R      31:22      1 node001
+    [te1st@bessemer-login1 ~]$ sattach 833300.0 
+    [te1st@bessemer-node001 ~]$ echo $SLURM_JOB_ID
+    833300
+
+Here we attached to SLURM job 833300 step 0. For more information type ``man sattach``
+
 .. _submit_batch_bessemer:
 
 Batch Jobs
@@ -782,6 +803,27 @@ Slurm Command                        Description
                                      but note that other options can adjust the default of 1 core per task 
                                      e.g. ``--cpus-per-task``. 
 ==================================== =======================================================================
+
+.. _sattach_interactive_stanage:
+
+Rejoining an interactive job
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If we lose connection to an interactive job, we can use the ``sattach`` command which attaches to a running Slurm job step.
+By attaching, it makes available the IO streams of all of the tasks of a running Slurm job step. It cannot be used to attach directly to extern or 
+batch steps since the IO channels of these steps are not set or directly forwarded to a file. 
+
+Example:
+
+.. code-block:: console
+
+    [te1st@login1 [stanage] ~]$ squeue -u $USER
+            JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            833300 interacti     bash   te1st  R      31:22      1 node001
+    [te1st@login1 [stanage] ~]$ sattach 833300.0 
+    [te1st@node001 [stanage] ~]$ echo $SLURM_JOB_ID
+    833300
+
+Here we attached to SLURM job 833300 step 0. For more information type ``man sattach``
 
 .. _submit_batch_stanage:
 

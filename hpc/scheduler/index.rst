@@ -478,8 +478,8 @@ Slurm Command                        Description
 Rejoining an interactive job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If we lose connection to an interactive job, we can use the ``sattach`` command which attaches to a running Slurm job step.
-By attaching, it makes available the IO streams of all of the tasks of a running Slurm job step. It cannot be used to attach directly to extern or 
-batch steps since the IO channels of these steps are not set or directly forwarded to a file. 
+Just keep in mind that ``sattach`` doesn't work for external or batch steps, as their input and output channels aren't 
+set up for direct attachment.
 
 Example:
 
@@ -809,8 +809,8 @@ Slurm Command                        Description
 Rejoining an interactive job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If we lose connection to an interactive job, we can use the ``sattach`` command which attaches to a running Slurm job step.
-By attaching, it makes available the IO streams of all of the tasks of a running Slurm job step. It cannot be used to attach directly to extern or 
-batch steps since the IO channels of these steps are not set or directly forwarded to a file. 
+Just keep in mind that ``sattach`` doesn't work for external or batch steps, as their input and output channels aren't 
+set up for direct attachment.
 
 Example:
 

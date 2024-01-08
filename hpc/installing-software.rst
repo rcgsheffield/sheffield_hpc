@@ -10,7 +10,7 @@ Installing software to the clusters
         :local:
   
 
-As :ref:`Stanage <stanage>`, :ref:`Bessemer <bessemer>` and :ref:`ShARC <sharc>`  are general purpose HPC clusters, 
+As :ref:`Stanage <stanage>` and :ref:`Bessemer <bessemer>` are general purpose HPC clusters, 
 we provide and maintain only the most essential and most popular applications on them.
 
 We are aware of our users' need to run applications that are specific to their own subject 
@@ -19,7 +19,7 @@ and special shared areas on the clusters for public use.
 
 This option should be seen as a service without support as we will expect such users to be able to 
 tackle the problems encountered during installations on their own. We will however help make such 
-software available to other Bessemer and ShARC users by copying/installing scripts to shared locations.
+software available to other Stanage and Bessemer users by copying/installing scripts to shared locations.
 
     :underline-bold:`Policy on user-installed software on University of Sheffield HPC systems`
 
@@ -190,12 +190,12 @@ where it is downloading the RPM from as well as the full name of the file downlo
 .. code-block:: console
     :emphasize-lines: 1
     
-    [user@sharc-node004 yumpackages]$ yumdownloader make
+    [user@node004 [stanage] yumpackages]$ yumdownloader make
     Loaded plugins: fastestmirror, priorities
     Loading mirror speeds from cached hostfile
     * epel: ftp.nluug.nl
     make-3.82-24.el7.x86_64.rpm                                | 421 kB  00:00:00     
-    [user@sharc-node004 yumpackages]$                  
+    [user@node004 [stanage] yumpackages]$                  
 
 This method will automatically check the package integrity and check it also has valid signatures.
 
@@ -227,7 +227,7 @@ This RPM can now be downloaded using the ``wget`` command on the cluster:
 .. code-block:: console
     :emphasize-lines: 1
 
-    [user@sharc-node004 yumpackages]$ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
+    [user@node004 [stanage] yumpackages]$ wget http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
     --2021-07-15 12:19:18--  http://mirror.centos.org/centos/7/os/x86_64/Packages/make-3.82-24.el7.x86_64.rpm
     Resolving mirror.centos.org (mirror.centos.org)... 85.236.43.108, 2604:1380:2001:d00::3
     Connecting to mirror.centos.org (mirror.centos.org)|85.236.43.108|:80... connected.
@@ -248,7 +248,7 @@ package has been signed as trusted. We can do this with the ``rpm --checksig`` c
 .. code-block:: console
     :emphasize-lines: 1
 
-    [user@sharc-node004 yumpackages]$ rpm --checksig make-3.82-24.el7.x86_64.rpm 
+    [user@node004 [stanage] yumpackages]$ rpm --checksig make-3.82-24.el7.x86_64.rpm 
     make-3.82-24.el7.x86_64.rpm: rsa sha1 (md5) pgp md5 OK
 
 .. hint::
@@ -361,7 +361,7 @@ First clone the project using Git and the ``.git`` URL above as follows:
 .. code-block:: console
     :emphasize-lines: 1
 
-    [user@sharc-login4 make-git]$ git clone https://git.savannah.gnu.org/git/make.git
+    [user@login1 [stanage] make-git]$ git clone https://git.savannah.gnu.org/git/make.git
     Cloning into 'make'...
     remote: Counting objects: 16331, done.
     remote: Compressing objects: 100% (3434/3434), done.
@@ -376,8 +376,8 @@ The available tags and branches will be shown on the source code repository webp
 .. code-block:: console
     :emphasize-lines: 1,2
 
-    [user@sharc-login4 make-git]$ cd make
-    [user@sharc-login4 make]$ git checkout tags/4.3
+    [user@login1 [stanage] make-git]$ cd make
+    [user@login1 [stanage] make]$ git checkout tags/4.3
     Note: checking out 'tags/4.3'.
     
     You are in 'detached HEAD' state. You can look around, make experimental
@@ -410,7 +410,7 @@ With this in mind, the process is very similar for most packages and will requir
 load appropriate versions of GCC and / or CMake, potentially run a specific script (e.g. ./autogen.sh or 
 ./build), configure the build options and then compile the source code.
 
-e.g. compiling a more modern version of the ``make`` program on the ShARC cluster:
+e.g. compiling a more modern version of the ``make`` program on the Stanage cluster:
 
 .. note::
 
@@ -423,13 +423,13 @@ e.g. compiling a more modern version of the ``make`` program on the ShARC cluste
 
 .. code-block:: console
 
-    [user@sharc-login4 make]$ module load dev/gcc/8.2
-    [user@sharc-login4 make]$ cd make
-    [user@sharc-login4 make]$ mkdir ./build && cd ./build
-    [user@sharc-login4 make]$ ../configure --prefix=$HOME/software/installed/make
-    [user@sharc-login4 make]$ make -j $NSLOTS
-    [user@sharc-login4 make]$ make -j $NSLOTS check
-    [user@sharc-login4 make]$ make -j $NSLOTS install
+    [user@node001 [stanage] make]$ cd make
+    [user@node001 [stanage] make]$ mkdir ./build && cd ./build
+    [user@node001 [stanage] make]$ module load GCC/12.2.0
+    [user@node001 [stanage] make]$ ../configure --prefix=$HOME/software/installed/make
+    [user@node001 [stanage] make]$ make -j $NSLOTS
+    [user@node001 [stanage] make]$ make -j $NSLOTS check
+    [user@node001 [stanage] make]$ make -j $NSLOTS install
 
 * A ``build`` directory is made and then used to keep the source files unpolluted.
 * The ``../configure`` script is called from the directory above with the ``--prefix`` option set
@@ -483,7 +483,7 @@ Environment 'Modules' and their purpose
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ‘Environment Modules’ are the mechanism by which much of the software is made available to the users 
-of the Bessemer and ShARC clusters. You are able to load and unload modules which make specific 
+of the Stanage and Bessemer clusters. You are able to load and unload modules which make specific 
 configurations of software available in a structured way which can avoid conflicts between different 
 versions of the same software.
 
@@ -491,7 +491,7 @@ They do this by adding and removing software to the the ``PATH`` and ``LD_LIBRAR
 variables as well as set any additional required environment varibles, configuration or license files using 
 the ``module load`` or  ``module unload`` functionality.
 
-Module files are written in TCL, please have a look at some of our modules in ``/usr/local/modulefiles/`` 
+Module files are written in LUA on Stanage and TCL on Bessemer. To see examples, check the module paths with ``echo $MODULEPATH`` 
 to get an idea of what these should look like.
 
 Further detail on the environment modules system in use on the clusters can be found on the 

@@ -4,23 +4,23 @@ Connecting to a cluster using myApps (web browser)
 ==================================================
 
 For easier access to HPC resources,  IT Services runs an instance of Oracle Secure Global desktop called myApps to provide web based access to CLI terminals,
-text editors within interactive sessions for the ShARC, Bessemer and Training HPC clusters.
+text editors within interactive sessions for the Bessemer and Training HPC clusters.
 
 
 .. important:: 
     
-    The myApps service is only accessible on Bessmer and ShARC (:underline-bold:`not` Stanage).
+    The myApps service is only accessible on Bessemer (:underline-bold:`not` Stanage).
 
 In order to access the HPC clusters you must set up a `VPN connection and MFA <https://www.sheffield.ac.uk/it-services/vpn>`_. 
 Also see section **Whether/how you can connect** below. 
 
-The web browser method of access to ShARC and Bessemer is recommended. This method works well for most browsers on all the common 
+The web browser method of access to Bessemer is recommended. This method works well for most browsers on all the common 
 computing platforms (Linux, Windows, Mac), however we recommend Chrome or Firefox.
 
 :underline-bold:`How to login to the myApps service`
 
 
-#. To login to ShARC or Bessemer click the following link: `Connect via myAPPs Portal <https://myapps.shef.ac.uk/sgd/index.jsp?langSelected=en>`_
+#. To login to Bessemer click the following link: `Connect via myAPPs Portal <https://myapps.shef.ac.uk/sgd/index.jsp?langSelected=en>`_
 #. If you are logging in for the first time, select Client Options on the myApps Portal page (bottom right) and 
    then click the HTML5 option to run myApps entirely within your browser.
 
@@ -32,11 +32,11 @@ computing platforms (Linux, Windows, Mac), however we recommend Chrome or Firefo
 #. Enter your username and password on the myApps Portal login page.
 #. Once you have managed to login, you will see a window with applications on the left hand panel.
 
-There are icons for ShARC Applications & Bessemer Applications respectively.
+There are icons for Bessemer and ShARC Applications. However, ShARC was decommissioned hence those applications are no longer available.
 
-For each of these you can select a HPC interactive job or a HPC terminal (where HPC choices are ShARC or Bessemer).
-The interactive job is equivalent to a ``qsh``/``qrshx`` or ``srun`` session on a worker node.
-The terminal is equivalent to a login node session from which you can use ``qsh``/``qrshx``, ``qrsh``, ``qsh-vis`` or ``srun`` respectively.
+You can select a HPC interactive job or a HPC terminal.
+The interactive job is equivalent to a ``srun`` session on a worker node.
+The terminal is equivalent to a login node session from which you can use ``srun``.
 
 
 Connecting to a cluster using SSH
@@ -85,8 +85,6 @@ The authentication requirements per cluster are summarised below:
 +==========+======================================================+===================================================================================================+
 | Bessemer | Password + DUO MFA **or** public key                 | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
 +----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| ShARC    | Password + DUO MFA **or** public key                 | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
-+----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | Stanage  | Password/public key + TOTP MFA **or** VPN + password | Not permitted (unless using the :ref:`HPC SSH gateway service <hpcgw_summary>`)                   |
 +----------+------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
@@ -132,14 +130,6 @@ may be standard University `DUO MFA <https://sites.google.com/sheffield.ac.uk/mf
 
     If you have not setup your University DUO MFA, please follow the steps published at: https://www.sheffield.ac.uk/it-services/mfa/set-mfa
 
-  .. group-tab:: ShARC
-
-    On the ShARC cluster, when you connect you will be prompted to via a push notification to your DUO device to approve access 
-    or must enter a one-time code from your University provided hardware token which is associated with your DUO account.
-
-    If you have not setup your University DUO MFA, please follow the steps published at: https://www.sheffield.ac.uk/it-services/mfa/set-mfa
-
-
   
   In addition, if you do not have MFA enabled on your account then you will not be able to login from off campus without using the VPN.
 
@@ -182,7 +172,7 @@ After starting MobaXterm you should see something like this:
 
 You should create a session profile for your login for each cluster by clicking *Session* in the top left, and then *SSH*. 
 
-#. Enter the details for the cluster in the *Remote host* box, choosing ``bessemer.shef.ac.uk``, ``sharc.shef.ac.uk`` or ``stanage.shef.ac.uk``. 
+#. Enter the details for the cluster in the *Remote host* box, choosing ``stanage.shef.ac.uk`` or ``bessemer.shef.ac.uk``. 
 #. Now click the *Specify Username* checkmark and enter your username.
 #. Please ensure that the checkmark for *X11 Forwarding* is ticked or GUI applications will be unable to open.
 #. Please ensure that that *Use SCP protocol* is also ticked (or depending on MobaXterm version select *SCP (enhanced speed)* option from the *SSH-browser type* dropdown menu) .
@@ -210,7 +200,7 @@ login you should be presented with a screen like the below:
 
     When you login to a cluster you reach one of two login nodes.
     You **should not** run applications on the login nodes.
-    Running the interactive job command, ``qrshx`` (ShARC) or ``srun --pty bash -i`` (Bessemer & Stanage), gives you an interactive terminal
+    Running the interactive job command, ``srun --pty bash -i`` (Stanage & Bessemer), gives you an interactive terminal
     on one of the many worker nodes in the clusters.
     
 Running commands from a terminal (from the command-line) may initially be
@@ -246,7 +236,7 @@ log in to a cluster: ::
 Here you need to:
 
 * replace ``$USER`` with your IT Services username (e.g. ``te1st``)
-* replace ``$CLUSTER_NAME`` with ``bessemer``, ``sharc`` or ``stanage``.
+* replace ``$CLUSTER_NAME`` with ``stanage`` or ``bessemer``.
 
 .. note::
 
@@ -314,37 +304,13 @@ This should give you a prompt resembling the one below:
         [te1st@bessemer-node001 ~]$ 
 
 
-  .. group-tab:: ShARC
-
-    .. code-block:: console
-
-        [te1st@sharc-login1 ~]$
-
-    At this prompt if you would like an interactive session you can type: 
-
-    .. code-block:: console
-
-        qrshx
-
-    Like this: 
-
-    .. code-block:: console
-
-        [te1st@sharc-login1 ~]$ qrshx
-
-
-    Which will start an interactive session, which supports graphical applications resembling the below: 
-
-    .. code-block:: console
-
-        [te1st@sharc-node001 ~]$  
 
 
 .. note::
 
     When you login to a cluster you reach one of two login nodes.
     You **should not** run applications on the login nodes.
-    Running the interactive job command, ``qrshx`` (ShARC) or ``srun --pty bash -i`` (Bessemer & Stanage), gives you an interactive terminal
+    Running the interactive job command, ``srun --pty bash -i`` (Stanage & Bessemer), gives you an interactive terminal
     on one of the many worker nodes in the clusters.
 
 
@@ -373,4 +339,4 @@ What Next?
 Now you have connected to a cluster,
 you can look at how to submit jobs on the :ref:`job_submission_control` page or
 look at the software installed on
-:ref:`Bessemer <bessemer-software>`, :ref:`ShARC <sharc-software>` and :ref:`Stanage <stanage-software>`
+:ref:`Stanage <stanage-software>` and :ref:`Bessemer <bessemer-software>`. 

@@ -3,10 +3,9 @@
 Filestores
 ==========
 
-Every HPC user has access to *up to* six different storage areas:
+Every HPC user has access to *up to* five different storage areas:
 
 * :ref:`home_dir`: per-user :term:`backed-up <Mirrored backups>`, :term:`snapshotted <Snapshotted storage>` storage
-* :ref:`data_dir`: additional per-user snapshotted storage (*not on Bessemer*)
 * :ref:`fastdata_dir`: high-performance shared filesystem for temporary data - optimised for reading/writing large files from multiple nodes and threads simultaneously
 * :ref:`shared_dir`: per-PI shared storage areas (snapshotted and backed-up) for project data - can be accessed from non-HPC machines too
 * :ref:`scratch_dir`: per-node temporary storage - useful for reading/writing lots of small files within *one job*
@@ -90,21 +89,6 @@ All users have a home directory on each system:
 
     .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-snapshot-mirror-settings.rst
 
-  .. group-tab:: ShARC
-
-    :underline-bold:`Home filestore area details`
-
-    +------------------------+------+----------------+-----------------------------------------------+-------------------------+
-    | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
-    +========================+======+================+===============================================+=========================+
-    |``/home/$USER``         | NFS  | 10GB           | Yes                                           | No                      |
-    +------------------------+------+----------------+-----------------------------------------------+-------------------------+
-
-    Where ``$USER`` is the user's username.
-
-
-    .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-snapshot-mirror-settings.rst
-
 
 .. note::
 
@@ -115,10 +99,10 @@ All users have a home directory on each system:
   +===================+========================+
   | Stanage           |``/users/$USER``        |
   +-------------------+------------------------+
-  | Bessemer & ShARC  |``/home/$USER``         |
+  | Bessemer          |``/home/$USER``         |
   +-------------------+------------------------+ 
 
-  To ensure that your code is compatible with all three clusters, we suggest using the symbols "~" or "$HOME" to represent the home directory. This approach ensures that the correct path is used regardless of the cluster you are working on, making your code more portable and agnostic to the specific cluster environment.
+  To ensure that your code is compatible with both clusters, we suggest using the symbols "~" or "$HOME" to represent the home directory. This approach ensures that the correct path is used regardless of the cluster you are working on, making your code more portable and agnostic to the specific cluster environment.
 
   .. tabs::
 
@@ -142,86 +126,8 @@ All users have a home directory on each system:
         $ echo ~
         /home/te1st
 
-   .. group-tab:: ShARC
-      
-      .. code-block:: console
-        :emphasize-lines: 1,3
-
-        $ echo $HOME
-        /home/te1st
-        $ echo ~
-        /home/te1st
 
 ------
-
-.. _data_dir:
-
-*Data* directories
-------------------
-
-ShARC, (:underline-bold:`only`), has access to an additional larger *data* storage area:
-
-.. tabs::
-    
- .. group-tab:: Stanage
-
-    .. warning::
-      
-      There is no ``/data`` area on Stanage.
-
- .. group-tab:: Bessemer
-
-    .. warning::
-      
-      There is no ``/data`` area on Bessemer.
-
- .. group-tab:: ShARC
-      
-    +----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
-    | System   | Path                   | Type | Quota per user | Shared between system login and worker nodes? | Shared between systems? |
-    +==========+========================+======+================+===============================================+=========================+
-    | ShARC    | ``/data/$USER``        | NFS  | 100GB          | Yes                                           | No                      |
-    +----------+------------------------+------+----------------+-----------------------------------------------+-------------------------+
-
-    Where ``$USER`` is the user's username.
-
-    See also: :ref:`quota_check` and * :ref:`exceed_quota`.
-
-    :underline-bold:`Data filestore backups and snapshots details`
-
-    +---------------------------+--------------------+
-    | Frequency of snapshotting | Snapshots retained |
-    +===========================+====================+
-    | Every 4 hours             | 10 most recent     |
-    +---------------------------+--------------------+
-    | Every night               | Last 7 days        |
-    +---------------------------+--------------------+
-
-    +-------------------------------+------------------+
-    | Frequency of mirrored backups | Backups retained |
-    +===============================+==================+
-    | Every 4 hours                 | 6 most recent    |
-    +-------------------------------+------------------+
-    | Every night                   | 28 most recent   |
-    +-------------------------------+------------------+
-
-    See also: :ref:`recovering_snapshots`.
-
-    :underline-bold:`Automounting`
-
-
-    *Data* directories are **made available to you (mounted) on demand**: 
-    if you list the contents of just ``/data`` after first logging on then your ``/data/te1st`` subdirectory (where ``te1st`` is your username) might not be shown.
-    However, if you list the contents of ``/data/te1st`` itself or change into that directory
-    then its contents will appear.  
-
-    Later on if you list the contents of ``/data`` again 
-    you may find that ``/data/te1st`` has disappeared again, as 
-    it is automatically *unmounted* following a period of inactivity. 
-
-
-
------
 
 .. _fastdata_dir:
 
@@ -305,20 +211,6 @@ There are separate ``fastdata`` areas on each cluster:
 
     .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-fastdata-managing-import.rst
 
-   .. group-tab:: ShARC
-
-    :underline-bold:`Fastdata filestore area details`
-
-    +---------------+--------+----------------+---------------------+-------------------------+---------------------------+
-    | Path          | Type   | Quota per user | Filesystem capacity | Shared between systems? | Network bandwith per link |
-    +===============+========+================+=====================+=========================+===========================+
-    | ``/fastdata`` | Lustre | No limits      | 669 TB              | No                      | 100Gb/s (*Omni-Path*)     |
-    +---------------+--------+----------------+---------------------+-------------------------+---------------------------+
-
-    .. include:: /referenceinfo/imports/filestores/shared-areas/sharc-bessemer-fastdata-managing-import.rst
-
-
-
 
 -----
 
@@ -384,16 +276,6 @@ As our HPC cluster are each hosted in different datacentres the policy, configur
       to a Bessemer local shared research area filestore area from a Sheffield based machine will have a similar performance decrease.
 
       If you need to access a ``/shared`` area on Bessemer please contact `research-it@sheffield.ac.uk <research-it@sheffield.ac.uk>`__ to arrange this.
-
-   .. group-tab:: ShARC
-
-      :underline-bold:`Shared research area mount availability`
-
-      On the ShARC cluster shared research areas are available **on all HPC nodes**. This is because the HPC nodes are within the same local network as the shared research area filestores as to give maximum performance.
-
-      :underline-bold:`Shared research area performance`
-
-      As the HPC nodes are within the same local network, local NFS filestorage performance is provided.
 
 
 .. _shared_dir_perms:
@@ -479,30 +361,6 @@ Specifics for each Cluster
     The scheduler will then clean up (delete) ``$TMPDIR`` at the end of your job, 
     ensuring that the space can be used by other users.
 
-   .. group-tab:: ShARC
-
-    The scheduler will automatically create a per-job directory for you under ``/scratch``.
-    The name of this directory is stored in the ``$TMPDIR`` environment variable e.g. 
-    
-    .. code-block:: console
-
-      [te1st@sharc-login1 ~]$ qrshx
-      [te1st@sharc-node003 ~]$ cd $TMPDIR
-      [te1st@sharc-node003 667443.1.all.q]$ pwd
-      /scratch/667443.1.all.q
-
-    The scheduler will then clean up (delete) ``$TMPDIR`` at the end of your job, 
-    ensuring that the space can be used by other users.
-
-    .. warning::
-
-      If using ``qrsh`` on ShARC to start an interactive job then 
-      the ``TMPDIR`` environment variable will unfortunately be undefined
-      so you will need to manually create a directory under ``/scratch`` (named using your username)
-      and this will not be cleaned up when the job ends.
-
-
-
 
 -----
 
@@ -523,11 +381,9 @@ and if their request is granted they will be given write access to this area:
 +----------+--------------------------+------+-----------------------------+-------------------------------------+-----------------------------------------+
 | System   | Path                     | Type | Software install guidelines | Public index of areas               | Notes                                   |
 +==========+==========================+======+=============================+=====================================+=========================================+
-| ShARC    | ``/usr/local/community`` | NFS  | :ref:`sharc-community`      | :ref:`sharc-software-install-guide` | Also available at ``/usr/local/extras`` |
+| Stanage  | N/A                      | N/A  |                             |                                     |                                         |
 +----------+--------------------------+------+-----------------------------+-------------------------------------+-----------------------------------------+
 | Bessemer | ``/usr/local/community`` | NFS  |                             |                                     |                                         |
-+----------+--------------------------+------+-----------------------------+-------------------------------------+-----------------------------------------+
-| Stanage  | N/A                      | N/A  |                             |                                     |                                         |
 +----------+--------------------------+------+-----------------------------+-------------------------------------+-----------------------------------------+
 
 Note that:
@@ -543,7 +399,7 @@ Note that:
 How to check your quota usage
 -----------------------------
 
-To find out your storage quota usage for your :ref:`home directory <home_dir>` and :ref:`data directory <data_dir>` (if on ShARC) 
+To find out your storage quota usage for your :ref:`home directory <home_dir>` 
 you can use the ``quota`` command:
 
 .. tabs::
@@ -580,41 +436,6 @@ you can use the ``quota`` command:
       :ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
       interactive display of what files/folders are taking up storage in a given directory tree.
 
-   .. group-tab:: ShARC
-
-      .. code-block:: console
-
-            [te1st@sharc-node004 binary]$ quota
-
-            Size  Used Avail Use%  Mounted on
-            10G    10G    0G 100%  /home/te1st
-            100G     0  100G   0%  /data/te1st
-
-      In the above, you can see that the quota was set to 10 gigabytes and all of this is in use which is likely to cause jobs to fail.
-
-      To determine usage in a particular :ref:`shared_dir` you can use the ``df`` command like so: 
-
-      .. code-block:: console
-
-          [te1st@sharc-node004 binary]$ df -h /shared/myproject1
-          Filesystem                        Size  Used Avail Use% Mounted on
-          172.X.X.X:/myproject1/myproject1   10T  9.1T  985G  91% /shared/myproject1
-
-      To assess what is using up your quota within a given directory, you can make use of the 
-      :ref:`ncdu module on ShARC <ncdu_sharc>`. The **ncdu** utility will give you an 
-      interactive display of what files/folders are taking up storage in a given directory tree.
-
-      To determine usage in a particular :ref:`shared_dir` you can use the ``df`` command like so: 
-
-      .. code-block:: console
-
-          [te1st@login1 [stanage] ~]$  df -h /shared/myproject1
-          Filesystem                        Size  Used Avail Use% Mounted on
-          172.X.X.X:/myproject1/myproject1   10T  9.1T  985G  91% /shared/myproject1
-
-      To assess what is using up your quota within a given directory, you can make use of the 
-      :ref:`ncdu module on Stanage <ncdu_stanage>`. The **ncdu** utility will give you an 
-      interactive display of what files/folders are taking up storage in a given directory tree.
 
 -----
 
@@ -627,8 +448,7 @@ If you reach your quota for your :ref:`home directory <home_dir>` then
 many common programs/commands may cease to work as expected or at all and
 you may not be able to log in.
 
-In addition, jobs may fail if you exceed your quota with a job making use of your 
-:ref:`data directory <data_dir>` or a :ref:`Shared (project) directory <shared_dir>`.
+In addition, jobs may fail if you exceed your quota with a job making use of a :ref:`Shared (project) directory <shared_dir>`.
 
 In order to avoid this situation it is strongly recommended that you:
 

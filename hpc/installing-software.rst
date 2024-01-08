@@ -491,7 +491,7 @@ They do this by adding and removing software to the the ``PATH`` and ``LD_LIBRAR
 variables as well as set any additional required environment varibles, configuration or license files using 
 the ``module load`` or  ``module unload`` functionality.
 
-Module files are written in LUA on Stanage and TCL on Bessemer. To see examples, check the module paths with ``echo $MODULEPATH`` 
+Module files are written in Lua or TCL on Stanage and TCL on Bessemer. To see examples, check the module paths with ``echo $MODULEPATH`` 
 to get an idea of what these should look like.
 
 Further detail on the environment modules system in use on the clusters can be found on the 

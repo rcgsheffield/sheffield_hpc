@@ -561,7 +561,7 @@ you can use the ``quota`` command:
       In addition there is a hard limit for space and files that can never be exceeded, even temporarily (i.e. it has no grace period).
 
       In the above example we can see that the user has exceeded their soft quota for files ('*') but not their hard limit for files.  However, the grace period field reads 'none', which means the grace period for exceeding the soft quota has already expired.  The user must free some space in their home directory before they can allocate any more space.
-      Also, the user is a long way from exceeding their sapce soft quota.
+      Also, the user is a long way from exceeding their space soft quota.
 
       To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`. 
       The ncdu utility will give you an interactive display of what files/folders are taking up storage in a given directory tree.

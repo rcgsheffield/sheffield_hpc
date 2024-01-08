@@ -34,7 +34,7 @@ By running the command above, your area will only be accessible to you. If desir
     We reserve the right to change this policy without warning in order to ensure efficient running of the service.
 
     It is important to therefore not use *fastdata* areas for long-term storage and 
-    **copy important data** from these areas to areas suitable for longer-term storage (:ref:`home_dir`, :ref:`data_dir` or :ref:`shared_dir`).
+    **copy important data** from these areas to areas suitable for longer-term storage (:ref:`home_dir` or :ref:`shared_dir`).
 
 You can use the ``lfs``  command to find out which files in a *fastdata* directory are older than a certain number of days and hence approaching the time of deletion. 
 For example, if your username is ``te1st`` then you can find files 50 or more days old using: ::

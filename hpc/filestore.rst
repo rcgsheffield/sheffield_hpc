@@ -137,7 +137,7 @@ All users have a home directory on each system:
 **Fastdata** areas are **optimised for large file operations**.  
 These areas are `Lustre <https://en.wikipedia.org/wiki/Lustre_(file_system)>`__ filesystems. 
 
-They are are **faster** than :ref:`home_dir`, :ref:`data_dir` and :ref:`shared_dir` when dealing with larger files but 
+They are are **faster** than :ref:`home_dir` and :ref:`shared_dir` when dealing with larger files but 
 are **not performant when reading/writing lots of small files** 
 (:ref:`scratch_dir` are ideal for reading/writing lots of small temporary files within jobs).
 An example of how slow it can be for large numbers of small files is detailed `here <http://www.walkingrandomly.com/?p=6167>`__.
@@ -226,7 +226,7 @@ See also: :ref:`recovering_snapshots`.
 Automounting
 ^^^^^^^^^^^^
 
-Similar to :ref:`data_dir`, subdirectories beneath ``/shared`` are **mounted on demand** on the HPC systems: 
+Subdirectories beneath ``/shared`` are **mounted on demand** on the HPC systems: 
 they may not be visible if you simply list the contents of the ``/shared`` directory but 
 will be accessible if you ``cd`` (change directory) into a subdirectory e.g. ``cd /shared/my_group_file_share1``.
 
@@ -301,7 +301,7 @@ The documentation for the ``/shared`` storage service includes information on:
 For **jobs that need to read/write lots of small files** the most performant storage will be 
 the temporary storage on each node.
 
-This is because with :ref:`home_dir`, :ref:`data_dir`, :ref:`fastdata_dir` and :ref:`shared_dir`,
+This is because with :ref:`home_dir`, :ref:`fastdata_dir` and :ref:`shared_dir`,
 each time a file is accessed the filesystem needs to request ownership/permissions information from another server
 and for small files these overheads are proportionally high. 
 
@@ -312,7 +312,7 @@ As the local temporary storage areas are node-local storage and files/folders ar
 
 * any data used by the job must be **copied to** the local temporary store when the jobs starts. 
 * any output data stored in the local temporary store must also be **copied off** to another area before the job finishes.
-  (e.g. to :ref:`home_dir` or :ref:`data_dir`).
+  (e.g. to :ref:`home_dir`).
 
 Further conditions also apply:
 

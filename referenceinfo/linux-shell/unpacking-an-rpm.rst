@@ -16,7 +16,7 @@ i.e. ``./usr/bin/gmake`` rather than ``/usr/bin/gmake``
     :emphasize-lines: 1
     :caption: The output below has been truncated to save space as indicated by \*SNIP\*.
 
-    [user@sharc-node004 yumpackages]$ rpm2cpio make-3.82-24.el7.x86_64.rpm | cpio -idmv
+    [user@node004 [stanage] yumpackages]$ rpm2cpio make-3.82-24.el7.x86_64.rpm | cpio -idmv
     ./usr/bin/gmake
     ./usr/bin/make
     ./usr/share/doc/make-3.82

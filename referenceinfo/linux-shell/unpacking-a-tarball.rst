@@ -14,12 +14,12 @@ For GZip compression the format of this command is:
 
 .. code-block:: console
 
-    [user@sharc-node004 tarpackages]$ tar -xzf mytarball.tar.gz
+    [user@node004 [stanage] tarpackages]$ tar -xzf mytarball.tar.gz
 
 For BZip compression the format of this command is: 
 
 .. code-block:: console
 
-    [user@sharc-node004 tarpackages]$ tar -xjf mytarball.tar.bz2
+    [user@node004 [stanage] tarpackages]$ tar -xjf mytarball.tar.bz2
 
 No example of this process is shown as the commands do not have terminal output unless there is an error.

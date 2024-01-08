@@ -16,9 +16,9 @@ An example of checking the integrity of the Make RPM is shown below using the
 .. code-block:: console
     :emphasize-lines: 1,3
 
-    [user@sharc-node004 yumpackages]$ md5sum make-3.82-24.el7.x86_64.rpm 
+    [user@node004 [stanage] yumpackages]$ md5sum make-3.82-24.el7.x86_64.rpm 
     c678cfe499cd64bae54a09b43f600231  make-3.82-24.el7.x86_64.rpm
-    [user@sharc-node004 yumpackages]$ sha256sum make-3.82-24.el7.x86_64.rpm 
+    [user@node004 [stanage] yumpackages]$ sha256sum make-3.82-24.el7.x86_64.rpm 
     d4829aff887b450f0f3bd307f782e062d1067ca4f95fcad5511148679c14a668  make-3.82-24.el7.x86_64.rpm
 
 At this stage if being thorough you should check that any vendor or package maintainer signatures on 
@@ -31,7 +31,7 @@ demonstrated below with the GNU Make project's source tarball:
 .. code-block:: console
     :emphasize-lines: 1,7
     
-    [user@sharc-node004 make]$ gpg --verify make-4.3.tar.gz.sig make-4.3.tar.gz
+    [user@node004 [stanage] make]$ gpg --verify make-4.3.tar.gz.sig make-4.3.tar.gz
     gpg: Signature made Sun 19 Jan 2020 22:24:43 GMT using RSA key ID DB78137A
     gpg: Good signature from "Paul D. Smith <paul@mad-scientist.net>"
     gpg:                 aka "Paul D. Smith <psmith@gnu.org>"

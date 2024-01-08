@@ -36,7 +36,7 @@ variables with ``prepend-path``.
 
 
 Much like using a ``.bashrc`` file with the export command, we can add the required variables and directives 
-to a custom module file. For example, if called ``CustomModule`` and saved in ``/home/myusername/modules/`` may 
+to a custom module file. For example, if called ``CustomModule`` and saved in ``$HOME/modules/`` may 
 look something like:
 
 .. code-block:: TCL
@@ -58,8 +58,8 @@ look something like:
 
     ## Load any dependencies
     
-    module load dev/gcc/8.2
-    module load dev/cmake/3.17.1/gcc-8.2
+    module load GCC/10.2
+    module load CMake/3.18.4-GCCcore-10.2.0
 
     ## Set a program root directory TCL variable MY_PROGRAM_DIR to simplify prepend-path directives.
     ## **Reminder** setting an environment variable with setenv does not set the equivalent TCL variable!

@@ -16,8 +16,7 @@ The .bashrc file and its purpose
     
     If you find your shell environment is behaving oddly, programs are no longer available and 
     you suspect you may have corrupted your shell environment by editing the ``.bashrc`` file you 
-    can reset it with the command ``resetenv`` or ``/usr/local/scripts/resetenv`` then 
-    logging out and back in.
+    can reset it with the command ``resetenv`` then logging out and back in.
 
 
 The ``.bashrc`` file is a hidden script file located in a user's home directory which runs 

@@ -28,10 +28,10 @@ which implicitly load versions of icc, ifort (and GCC).
 .. warning::
 
    The Bessemer cluster does not have a high performance interconnect between nodes. As 
-   a result cross-node MPI performance will be sharply limited in comparison to ShARC.
+   a result cross-node MPI performance will be sharply limited in comparison to Stanage.
 
    In addition, cross-node MPI is not normally permitted as these kinds of workloads 
-   should be run on the ShARC cluster for the reason above.
+   should be run on the Stanage cluster for the reason above.
 
 
 Examples

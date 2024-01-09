@@ -29,6 +29,7 @@ If greater single-threaded performance or greater numbers of cores are required 
   groupnodes/index
   jupyterhub
   sharc-decommissioning
+  FAQ_sharc
 
 * :ref:`sharc-software`
 * :ref:`sharc-specs`
@@ -37,4 +38,6 @@ If greater single-threaded performance or greater numbers of cores are required 
 * :ref:`DeepLearning_sharc`
 * :ref:`groupnodes_sharc`
 * :ref:`jupyterhub_sge`
+* :ref:`FAQ_sharc`
+
 

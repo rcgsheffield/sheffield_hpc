@@ -2,7 +2,7 @@
 
 Frequently Asked Questions
 ==========================
-In this section, we'll discuss some tips for solving problems with Bessemer and ShARC.
+In this section, we'll discuss some tips for solving problems with Stanage and Bessemer.
 It is suggested that you work through some of the ideas here before contacting the IT Services Helpdesk for assistance.
 
 ------
@@ -24,11 +24,12 @@ If you are confident that you have no password entry issues, have already reques
 you may have inadvertently corrupted your shell environment if you have been installing software or making changes in your .bashrc file. Please attempt to resolve this first by resetting
 your environment with the following command, replacing the variables appropriately: ``ssh -t $USER@$CLUSTER.shef.ac.uk 'resetenv -f'``
 
-Alternatively, you may be having problems due to exceeding your cluster filestore quota. If you exceed your filestore quota in your ``/home`` area it is sometimes possible that crucial
+Alternatively, you may be having problems due to exceeding your cluster filestore quota. If you exceed your filestore quota in your ``$HOME`` area it is sometimes possible that crucial
 files in your home directory get truncated which effect or prevent the login process.
 
-If the ``resetenv -f`` command does not resolve your issue and you suspect your ``/home`` area is full , you should contact ``research-it@sheffield.ac.uk`` and ask to be unfrozen
-providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
+If the ``resetenv -f`` command does not resolve your issue and you suspect your ``$HOME`` area is full , you should contact 
+``research-it@sheffield.ac.uk`` and ask to be unfrozen providing your username and a list files or folders which can be removed 
+or temporarily moved to your ``/mnt/parscratch`` area on Stanage or ``/fastdata`` area on Bessemer.
 
 ------
 
@@ -97,24 +98,28 @@ To list all avaiable command man pages:
 
 
 
-I cannot see my folders in /data or /shared
+I cannot see my folders in /shared
 -------------------------------------------
 
-Some directories such as ``/data/<your username>`` or ``/shared/<your project/`` are only made available **on-demand**:.
-For example, if your username is `te1st` and you look in ``/data`` straight after logging in, you may not see ``/data/te1st`` in your terminal or MobaXterm file browser.
+Some directories such as ``/shared/<your project>/`` are only made available **on-demand**:.
+For example, if your shared area is named `my_shared_area` and you look in ``/shared`` straight after logging in, you may not see ``/shared/my_shared_area`` in your terminal or MobaXterm file browser.
 
 The directory is there, it has just not been made available (via a process called **mounting**) to you automatically yet.
 
-When you attempt to do something with the directory such as ``ls /data/te1st`` or ``cd /data/te1st`` in the terminal, the directory will be mounted automatically and will appear to you.
+When you attempt to do something with the directory such as ``ls /shared/my_shared_area`` or ``cd /shared/my_shared_area`` in the terminal, the directory will be mounted automatically and will appear to you.
 
 If you are in MobaXterm, you should attempt to navigate to the folder with using the file browser path entry / display box, then hit the refresh button.
-
 
 .. warning::
 
         Directories will be automatically unmounted after a period of inactivity.
 
-------
+.. note:: 
+
+        On **Stanage** shared areas are only accesible from a login node and not from a worker node. 
+
+---------
+
 
 I've loaded software but it isn't working
 -----------------------------------------
@@ -135,18 +140,13 @@ This usually means that you are on a `login node <https://docs.hpc.shef.ac.uk/en
 
         srun --pty bash -i
 
-   .. group-tab:: ShARC
-
-    .. code-block:: console
-
-        qrshx
 
 ------
 
 My batch job terminates without any messages or warnings
 --------------------------------------------------------
 
-When a batch job is initiated by using the ``qsub`` or ``sbatch`` commands, it gets allocated specific amount of real memory and run time that you request, or small default values.
+When a batch job is initiated by using the ``sbatch`` commands, it gets allocated specific amount of real memory and run time that you request, or small default values.
 If a job exceeds either the real memory or time limits it gets terminated immediately and usually without any warning messages.
 
 It is therefore important to estimate the amount of memory and time that is needed to run your job to completion and specify it at the time of submitting the job to the batch queue.
@@ -168,11 +168,9 @@ Occasionally parts of the system may be in a maintenance period or may be utlise
 A few things to consider which would cause your job to not run at all:
 
 * Did you request an acceptable amount of memory for a given node? (e.g. on Bessemer, 192GB or less.)
-* Did you request too much memory in the wrong parallel environment? (e.g on ShARC, OpenMP `-l rmem=16G` with 16 cores would request 16*16=256G exceeding node memory.)
-* Did you request too many cores in the wrong parallel environment? (e.g on ShARC,  `-pe openmp 40` would request 40 cores, exceeding a single node's core count.)
-* Did you request too much time? (e.g for ShARC, more than 96 hours or on Bessemer, more than 168 hrs.)
+* Did you request too much time? (e.g for Stanage, more than 96 hours or on Bessemer, more than 168 hrs.)
 
-Following are ways to fix too much time requested
+Following are ways to fix too much time requested:
 
 
 .. tabs::
@@ -223,32 +221,6 @@ Following are ways to fix too much time requested
                 squeue -j <jobid> --long
 
         Alternatively, delete the job using scancel and re-submit with the new max runtime
-
-   .. group-tab:: ShARC
-
-        The maximum run time for ShARC is 96 hours.
-
-        You can check if a job will ever run on ShARC using:
-
-        .. code-block:: console
-
-                qalter -w v <job_id>
-
-        However, please be aware this can result in false positives as noted `here <https://rse.shef.ac.uk/blog/sge-job-validation-2/>`_
-
-        You can reduce the runtime using:
-
-        .. code-block:: console
-
-                qalter <job_id> -l h_rt=96:00:00
-
-        then to verify the time change (which will be shown in seconds) type:
-
-        .. code-block:: console
-
-                qstat -r
-
-        Alternatively, delete the job using qdel and re-submit with the new max runtime.
 
 
 ------
@@ -265,22 +237,23 @@ To see if you are attempting to exceed your disk space quota, run the ``quota`` 
 
 .. code-block:: console
 
-       [te1st@sharc-node004 ~]$ quota
+          [te1st@login1 [stanage] ~]$ quota -u -s
+              Filesystem   space   quota   limit   grace   files   quota   limit   grace
+          storage:/export/users
+                           3289M  51200M  76800M            321k*   300k    350k   none 
 
-       Size  Used Avail Use%  Mounted on
-       10G    10G    0G 100%  /home/te1st
-       100G     0  100G   0%  /data/te1st
-
-In the above, you can see that the quota is 10 gigabytes and all of this is currently in use.
+In the above, you can see that the 'soft' space quota is 50 gigabytes and a small portion of this is currently in use. However, the files 'soft' quota is 300k whihc has been exceeded,
+additionally the grace period indicates the grace period for exceeding the soft quota has expired.
 Any jobs submitted by this user will likely result in an ``Eqw`` status.
 The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
 
-To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`, the 
-:ref:`ncdu module on Bessemer <ncdu_bessemer>` or the :ref:`ncdu module on ShARC <ncdu_sharc>` . The **ncdu** utility will give you an
+To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>` or the 
+:ref:`ncdu module on Bessemer <ncdu_bessemer>` . The **ncdu** utility will give you an
 interactive display of which files or folders are taking up storage in a given directory tree.
 
 Sometimes, it is not possible to log in to the system because of a full quota. In this situation you should contact ``research-it@sheffield.ac.uk``
-to ask for assistance, providing your username and a list files or folders which can be removed or temporarily moved to your ``/data`` area.
+to ask for assistance, providing your username and a list files or folders which can be removed or temporarily moved to your ``/mnt/parscratch`` 
+area on Stanage or ``/fastdata`` area on Bessemer.
 
 ------
 
@@ -289,17 +262,9 @@ I am getting warning messages and warning emails from my batch jobs about insuff
 
 If a job exceeds its real memory resource it gets terminated.
 
-These errors on ShARC will be noted in the job record or sent via email and will resemble: ::
+These errors on Stanage and Bessemer will be noted in the job record or sent via email and will resemble: 
 
-        failed qmaster enforced h_rt, h_cpu, or h_vmem limit because:
-        job 1345678.1 died through signal KILL (9)
-
-.. tip::
-
-        This error from ShARC can also indicate the job has ran out of time (**h_rt**).
-
-
-These errors on Bessemer will be noted in the job record or sent via email with a subject line resembling: ::
+.. code-block:: console
 
         Slurm Job_id=12345678 Name=job.sh Failed, Run time 00:11:06, OUT_OF_MEMORY
 
@@ -308,53 +273,13 @@ To query if your job has been killed due to insufficient memory please see the c
 
 To request more memory and for information on how to assess sensible resource amounts please refer to our :ref:`Choosing appropriate compute resources page <Choosing-appropriate-compute-resources>`.
 
-
-.. _real-vs-virt-mem:
-
-------
-
-What are the rmem (real memory) and (deprecated) mem (virtual memory) options?
-------------------------------------------------------------------------------
-
-.. warning::
-
-   The following is most likely only of interest when revisiting job submission scripts and documentation created before
-   26 June 2017 as now users only need to request real memory (``rmem``) and jobs are only killed if they exceed their ``rmem`` quota
-   (whereas prior to that date jobs could request and be policed using virtual memory ``mem`` requests).
-
-Running a program always involves loading the program instructions and also its data (i.e. all variables and arrays that it uses) into the computer's memory.
-A program's entire instructions and its entire data, along with any dynamically-linked libraries it may use, defines the **virtual storage** requirements of that program.
-If we did not have clever operating systems we would need as much physical memory (RAM) as the virtual storage requirements of that program.
-However, operating systems are clever enough to deal with situations where we have insufficient **real memory** (physical memory, typically called RAM) to
-load all the program instructions and data into the available RAM.
-This technique works because hardly any program needs to access all its instructions and its data simultaneously.
-Therefore the operating system loads into RAM only those bits (**pages**) of the instructions and data that are needed by the program at a given instance.
-This is called **paging** and it involves copying bits of the programs instructions and data to/from hard-disk to RAM as they are needed.
-
-If the real memory (i.e. RAM) allocated to a job is much smaller than the entire memory requirements of a job ( i.e. virtual memory)
-then there will be excessive need for paging that will slow the execution of the program considerably due to
-the relatively slow speeds of transferring information to/from the disk into RAM.
-
-On the other hand if the RAM allocated to a job is larger than the virtual memory requirement of that job then
-it will result in waste of RAM resources which will be idle duration of that job.
-
-* The virtual memory limit defined by the ``-l mem`` cluster scheduler parameter defines the maximum amount of virtual memory your job will be allowed to use. **This option is now deprecated** - you can continue to submit jobs requesting virtual memory, however the scheduler **no longer applies any limits to this resource**.
-* The real memory limit is defined by the ``-l rmem`` cluster scheduler parameter and defines the amount of RAM that will be allocated to your job.  The job scheduler will terminate jobs which exceed their real memory resource request.
-
-.. hint::
-
-   As mentioned above, jobs now need to just request real memory and are policed using real memory usage.  The reasons for this are:
-
-   * For best performance it is preferable to request as much real memory as the virtual memory storage requirements of a program as paging impacts on performance and memory is (relatively) cheap.
-   * Real memory is more tangible to newer users.
-
-------
+--------
 
 Insufficient memory in an interactive session
 ---------------------------------------------
 
-By default, an interactive session provides you with 2 Gigabytes of RAM (sometimes called real memory).
-You can request more than this when running your ``qrshx``, ``qsh``, ``qrsh`` or ``srun`` command.
+By default, an interactive session provides you with 4 Gigabytes of RAM (sometimes called real memory).
+You can request more than this when running your ``srun`` command.
 
 .. tabs::
 
@@ -370,11 +295,6 @@ You can request more than this when running your ``qrshx``, ``qsh``, ``qrsh`` or
 
                 $ srun --mem=8G --pty bash -i
 
-   .. group-tab:: ShARC
-
-        .. code-block:: console
-
-                $ qrshx -l rmem=8G
 
 This asks for 8 Gigabytes of RAM (real memory).
 
@@ -385,58 +305,47 @@ This asks for 8 Gigabytes of RAM (real memory).
 
 ------
 
-'Illegal Instruction' errors
-----------------------------
-
-If your program fails with an **Illegal Instruction** error then it may have been compiled using (and optimised for) one type of processor but is running on another.
-
-If you get this error **after copying compiled programs onto a cluster** then you may need to recompile them on on the cluster or recompile them elsewhere without aggressively optimising for processor architecture.
-
-If however you get this error when **running programs on the cluster that you have also compiled on the cluster** then you may have compiled on one processor type and be running on a different type.
-You may not consistently get the *illegal instruction* error here as the scheduler may allocate you a different type of processor every time you run your program.
-You can either recompile your program without optimisations for processor architecture or force your job to run on the type of processor it was compiled on using the ``-l arch=`` ``qsub``/``qrsh``/``qsh`` parameter e.g.
-
-* ``-l arch=intel*`` to avoid being allocated one of the few AMD-powered nodes
-* ``-l arch=intel-x5650`` to use the Intel Westmere CPU architecture
-* ``-l arch=intel-e5-26[567]0`` to use the Intel Sandy Bridge CPU architecture
-
-If you know the node that a program was compiled on but do not know the CPU architecture of that node then you can discover it using the following command (substituting in the relevant node name): ::
-
-        qhost | egrep '(ARCH|node116)'
 
 .. _windows_eol_issues:
 
 ------
 
-"failed: No such file or directory" or "failed searching requested shell" errors
---------------------------------------------------------------------------------
+sbatch: error: Batch script contains DOS line breaks (\r\n) errors
+-------------------------------------------------------------------
 
 If you prepare text files such as your job submission script on a Windows machine, you may find that they do not work as intended on the HPC systems.
-A very common example is when a job immediately goes into ``Eqw`` status after you have submitted it and when you query the job with ``qacct`` you
-are presented with an error message containing: ::
-
-        failed searching requested shell because:
-
-Or if you query the ``Eqw`` job with ``qstat`` ::
-
-        failed: No such file or directory
 
 The reason for this behaviour is that Windows and Unix machines have different conventions for specifying 'end of line' in text files. Windows uses the
 control characters for 'carriage return' followed by 'linefeed', ``\r\n``, whereas Unix uses just 'linefeed' ``\n``.
 
-This means a script prepared in Windows using Notepad whichs looks like this: ::
+This means a script prepared in Windows using Notepad which looks like this:
+
+.. code-block:: bash
 
         #!/bin/bash
         echo 'hello world'
 
-will look like the following to programs on a Unix system: ::
+will look like the following to programs on a Unix system:
+
+.. code-block:: bash
 
         #!/bin/bash\r\n
         echo 'hello world'\r\n
 
-If you suspect that this is affecting your jobs, run the following command on the system: ::
+For example, if you uploaded a submission script (test.sh) with windows line endings to the cluster, then tried to submit the script using ``sbatch``, you
+would see the following:
 
-        dos2unix your_files_filename
+.. code-block:: console
+        
+        [te1st@bessemer-login1 ~]$ sbatch test.sh
+        sbatch: error: Batch script contains DOS line breaks (\r\n)
+        sbatch: error: instead of expected UNIX line breaks (\n).
+
+If you have seen this error or suspect that this is affecting your jobs, run the following command on the file at the terminal
+
+.. code-block:: console
+
+        $ dos2unix your_files_filename
 
 You should set your text editor to use Linux endings to avoid this issue.
 
@@ -528,16 +437,6 @@ so this solution will continue to work following a reboot of your machine: ::
 
 ------
 
-Can I run programs that need to be able to talk to an audio device?
--------------------------------------------------------------------
-
-On ShARC all worker nodes have a dummy sound device installed
-(which is provided by a kernel module called `snd_dummy <https://www.alsa-project.org/main/index.php/Matrix:Module-dummy>`__).
-
-This may be useful if you wish to run a program that expects to be able to output audio (and crashes if no sound device is found)
-but you don't actually want to monitor that audio output.
-
-------
 
 Login node SSH RSA/ECDSA/ED25519 host key fingerprints
 ------------------------------------------------------
@@ -554,11 +453,6 @@ The RSA, ECDSA and ED25519 fingerprints for Bessemer's login nodes are: ::
    SHA256:eG/eFhOXyKS77WCsMmkDwZSV4t7y/D8zBFHt1mFP280 (ECDSA)
    SHA256:TVzevzGC2uz8r1Z16MB9C9xEQpm7DAJC4tcSvYSD36k (ED25519)
 
-The RSA, ECDSA and ED25519 fingerprints for ShARC's login nodes are: ::
-
-   SHA256:NVb+eAG6sMFQEbVXeF5a+x5ALHhTqtYqdV6g31Kn6vE (RSA)
-   SHA256:WJYHPbMKrWud4flwhIbrfTB1SR4pprGhx4Vu88LhP58 (ECDSA)
-   SHA256:l8imoZMnO+fHGle6zWi/pf4eyiVsEYYscKsl1ellrnE (ED25519)
 
 ------
 
@@ -583,7 +477,7 @@ To transfer data between your old account and your new account you could make us
 
         rsync -avP /Path/To/File_Or_Directory $Your_New_UserName@$HOSTNAME:/home/$Your_New_UserName/OldUserAccount
 
-2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on ShARC/Stanage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
+2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on Stanage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
 
 .. code-block:: bash
 
@@ -610,29 +504,14 @@ Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e.
 
 ------
 
-.. _unnamed_groups:
-
-Warning about 'groups: cannot find name for group ID xxxxx'
------------------------------------------------------------
-
-You may occasionally see warnings like the above e.g. when running an :ref:`Apptainer/Singularity <apptainer_sharc>` container or when running the standard ``groups`` Linux utility.
-These warnings can be ignored.
-
-The scheduler, Son of Grid Engine, dynamically creates a Unix group per job to
-keep track of resources (files and process) associated with that job.
-These groups have numeric IDs but no names, which can result in harmless warning messages in certain circumstances.
-
-See ``man 8 pam_sge-qrsh-setup`` for the details of how and why Grid Engine creates these groups.
-
-------
 
 Using 'sudo' to install software on the clusters
 ------------------------------------------------
 
 HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators.
-Users can however install applications in their ``/home`` or ``/data`` directories.
+Users can however install applications in their ``/home`` directory, ``/mnt/parscratch`` area on Stanage or ``/fastdata`` area on Bessemer.
 
-The webpage `Installing Applications on Bessemer and ShARC <https://docs.hpc.shef.ac.uk/en/latest/hpc/installing-software.html>`_ provides guidance on how to do this.
+The webpage :ref:`Installing Applications on Stanage and Bessemer  <installing-personal-software-installations>` provides guidance on how to do this.
 
 Is data encrypted at rest on HPC storage areas?
 -----------------------------------------------
@@ -695,12 +574,8 @@ as if they were normal local machine files.
 Launching MPI tasks with srun versus mpirun or mpiexec
 ------------------------------------------------------
 
-On ShARC we recommend launching MPI tasks from batch jobs
+Documentation found elsewhere may recommend launching MPI tasks from batch jobs
 using the ``mpirun`` (or ``mpiexec``) program that comes with the MPI implementation you are using.
-These MPI implementations *should* able to launch tasks on the primary node of the job and on remote nodes allocated to the job
-in such a way that all consumed resources are tracked by the SGE job scheduler on ShARC;
-this is the case for the :ref:`administrator-provided versions of OpenMPI and Intel MPI on ShARC <sharc-parallel>`;
-no extra configuration is required by the end user.
 
 On Bessemer and Stanage we recommend launching MPI tasks from batch jobs
 using Slurm's ``srun`` command.
@@ -708,7 +583,7 @@ This only works if the MPI implmentation you are using is
 built against a version of the PMI2 or PMI-X library
 that is compatible with the PMI2 or PMI-X library used by the Slurm job scheduler.
 This is the case for the administrator-provided versions of OpenMPI and Intel MPI on Bessemer and Stanage;
-again, no extra configuration is required by the end user.
+no extra configuration is required by the end user.
 
 On Bessemer and Stanage in batch scripts you should use the ``--export=ALL`` option with the ``srun`` command, 
 which tells Slurm to export all of the current shell environment variables to the job environment.
@@ -769,7 +644,7 @@ but cannot use more than 400 at once.
    ==============================================       ===========================
    On a desktop open using 4 cores                      4  - 4 = 0
    On another desktop using 6 cores                     6  - 4 = 2
-   A job on ShARC using 12 cores                        12 - 4 = 8
+   A job on Bessemer using 12 cores                     12 - 4 = 8
    A job on Stanage using 20 cores                      20 - 4 = 16
    Another job on Stanage using 30 cores                30 - 4 = 26     
    **Total**                                            **52**

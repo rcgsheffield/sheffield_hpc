@@ -557,8 +557,8 @@ you can use the ``quota`` command:
           storage:/export/users
                            3289M  51200M  76800M            321k*   300k    350k   none 
       
-      A * after your space or files usage indicates that you've exceeded a 'soft quota', which then must be brought down below that limit over a grace period (several days), otherwise you won't be able to use more space or create more files.  
-      In addition there is a hard limit for space and files that can never be exceeded, even temporarily (i.e. it has no grace period).
+      An asterisk (*) after your space or files usage indicates that you've exceeded a 'soft quota'. You're then given a grace period of several days to reduce your usage below this limit.
+      Failing to do so will prevent you from using additional space or creating new files. Additionally, there is a hard limit for space and files that can never be exceeded, even temporarily (i.e. it has no grace period).
 
       In the above example we can see that the user has exceeded their soft quota for files ('*') but not their hard limit for files.  However, the grace period field reads 'none', 
       which means the grace period for exceeding the soft quota has already expired.  The user must remove/move some files from their home directory before they can create/add any more files.

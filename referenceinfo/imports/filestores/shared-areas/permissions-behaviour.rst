@@ -25,7 +25,7 @@ some applications can cause problems when accessing files/directories on ``/shar
   unless Perl is explicitly told to test for file permissions in a more thorough way 
   (see the mention of ``use filetest 'access'`` `here <http://perldoc.perl.org/functions/-X.html>`_).
 * git: may complain that permissions have changed if 
-  a repository is simply moved to ``/shared/someplace`` from elsewhere on Bessemer/ShARC. 
+  a repository is simply moved to ``/shared/someplace`` from elsewhere on Stanage/Bessemer. 
   As a workaround you can tell git to not to track Linux permissions for a single repository using 
   ``git config core.filemode false`` or 
   for all repositories using ``git config --global core.filemode false``.

@@ -67,32 +67,15 @@ Determining time requirements using timing commands in your script
 A way of deducing the "wall clock" time used by a job is to use the ``date`` command within the batch script file. The ``date`` command is part of the Linux operating 
 system. Here is an example:
 
+.. code-block:: shell
 
-.. tabs::
+    #SBATCH --time=00:10:00
+    date
+    my_program < my_input
+    date        
 
-   .. group-tab:: Stanage
-
-    .. code-block:: shell
-
-        #SBATCH --time=00:10:00
-        date
-        my_program < my_input
-        date        
-
-    When the above script is submitted (via ``sbatch``), the job output file will contain the date and time at each invocation of the date command. You can then calculate the 
-    difference between these date/times to determine the actual time taken.
-
-   .. group-tab:: Bessemer
-
-    .. code-block:: shell
-
-        #SBATCH --time=00:10:00
-        date
-        my_program < my_input
-        date
-
-    When the above script is submitted (via ``sbatch``), the job output file will contain the date and time at each invocation of the date command. You can then calculate the 
-    difference between these date/times to determine the actual time taken.
+When the above script is submitted (via ``sbatch``), the job output file will contain the date and time at each invocation of the date command. You can then calculate the 
+difference between these date/times to determine the actual time taken.
 
 
 Determining time used by your jobs
@@ -105,53 +88,26 @@ The time used by a job is typical quantified into 2 values by the scheduler:
 
 How to determine these values can be seen below using the :ref:`seff` command as below:
 
-.. tabs::
+The ``seff`` script can be used as follows with the job's ID to give summary of important job info including the wallclock time:
 
-    .. group-tab:: Stanage
+.. code-block:: console
+    :emphasize-lines: 8,9,10
 
-        The ``seff`` script can be used as follows with the job's ID to give summary of important job info including the wallclock time:
+    $ seff 64626
+    Job ID: 64626
+    Cluster: a_cluster
+    User/Group: a_user/a_group
+    State: COMPLETED (exit code 0)
+    Nodes: 1
+    Cores per node: 2
+    CPU Utilized: 00:02:37
+    CPU Efficiency: 35.68% of 00:07:20 core-walltime
+    Job Wall-clock time: 00:03:40
+    Memory Utilized: 137.64 MB (estimated maximum)
+    Memory Efficiency: 1.71% of 7.84 GB (3.92 GB/core)
 
-        .. code-block:: console
-            :emphasize-lines: 8,9,10
-
-            $ seff 64626
-            Job ID: 64626
-            Cluster: stanage.alces.network
-            User/Group: a_user/clusterusers
-            State: COMPLETED (exit code 0)
-            Nodes: 2
-            Cores per node: 1
-            CPU Utilized: 00:02:37
-            CPU Efficiency: 35.68% of 00:07:20 core-walltime
-            Job Wall-clock time: 00:03:40
-            Memory Utilized: 137.64 MB (estimated maximum)
-            Memory Efficiency: 1.71% of 7.84 GB (3.92 GB/core)
-
-        Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (2 nodes * 1 core), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
-        The CPU Efficiency follows as ``(157/440)*100=35.68%``.
-
-    .. group-tab:: Bessemer
-
-        The ``seff`` script can be used as follows with the job's ID to give summary of important job info including the wallclock time:
-
-        .. code-block:: console
-            :emphasize-lines: 8,9,10
-
-            $ seff 64626
-            Job ID: 64626
-            Cluster: bessemer
-            User/Group: a_user/a_group
-            State: COMPLETED (exit code 0)
-            Nodes: 1
-            Cores per node: 2
-            CPU Utilized: 00:02:37
-            CPU Efficiency: 35.68% of 00:07:20 core-walltime
-            Job Wall-clock time: 00:03:40
-            Memory Utilized: 137.64 MB (estimated maximum)
-            Memory Efficiency: 1.71% of 7.84 GB (3.92 GB/core)
-
-        Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (1 node * 2 cores), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
-        The CPU Efficiency follows as ``(157/440)*100=35.68%``.
+Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (1 node * 2 cores), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
+The CPU Efficiency follows as ``(157/440)*100=35.68%``.
 
 
 -----------------

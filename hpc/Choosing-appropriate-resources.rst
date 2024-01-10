@@ -177,7 +177,7 @@ For single-node jobs: you can use a maximum of 64 cores on Stanage and 40 cores 
 
 For multiple-node MPI-type parallel processing jobs: these can run on Stanage and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
 
-Single node MPI type parallel jobs can run on Stanage and Bessemer.
+Single-node MPI-type parallel jobs can run on Stanage and Bessemer.
 
 For both parallel processing methods you should run several test jobs using the tips from the `Time allocation <#time-allocation-limits>`_ section with various numbers of cores to assess what factor of speedup/slowdown is attained for queuing and computation / the total time for job completion.
 

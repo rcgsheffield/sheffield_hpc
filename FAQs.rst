@@ -492,7 +492,7 @@ To transfer data between your old account and your new account you could make us
 
         rsync -avP /Path/To/File_Or_Directory $Your_New_UserName@$HOSTNAME:/home/$Your_New_UserName/OldUserAccount
 
-2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on Stanage), here we are going to use the option "avzP" as we are going to transfer data over the JANET link (Bessemer) and private leased link (Stanage), and it will be faster if it is compressed.
+2. You want to copy your files to the new account on a different cluster node (e.g old account on Bessemer to new account on Stanage), here we are going to use the option `avzP` as we are going to transfer data over the JANET link (Bessemer) and private leased link (Stanage), and it will be faster if it is compressed.
 
 .. code-block:: bash
 

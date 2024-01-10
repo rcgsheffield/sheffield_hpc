@@ -27,11 +27,8 @@ which implicitly load versions of icc, ifort (and GCC).
 
 .. warning::
 
-   The Bessemer cluster does not have a high performance interconnect between nodes. As 
-   a result cross-node MPI performance will be sharply limited in comparison to Stanage.
-
-   In addition, cross-node MPI is not normally permitted as these kinds of workloads 
-   should be run on the Stanage cluster for the reason above.
+    Multi-node jobs are (for the most part) not permitted by Slurm on Bessemer; the system has been configured this way as Bessemer,
+    unlike Stanage, doesn't have a very high-bandwidth, low-latency network connecting all worker nodes.
 
 
 Examples

@@ -3,7 +3,7 @@
 Tips for working with MFA
 =========================
 
-Here are some techniques you can use to reduce the number of times that you need to re-authenticate to our HPC systems.  
+Here are some techniques you can use to reduce the number of times that you need to reauthenticate to our HPC systems.  
 
 Reuse SSH connections
 ---------------------
@@ -36,18 +36,10 @@ to your `~/.ssh/config` file on your local PC:
         ControlPath ~/.ssh/sockets/%r@%h-%p
         ControlPersist 600
 
-   .. group-tab:: ShARC
-      .. code-block:: bash
-
-        Host sharc.shef.ac.uk
-        ControlMaster auto
-        ControlPath ~/.ssh/sockets/%r@%h-%p
-        ControlPersist 600
-
-   
+ 
 
 You will need to create the directory ``~/.ssh/sockets`` before running ssh.  The ``ControlPersist`` option allows you to specify how long (in seconds) your SSH connection
-should perist after you have closed all your existing sessions.  During this time you can start a new session without reauthenticating.
+should persist after you have closed all your existing sessions.  During this time you can start a new session without re-authenticating.
 
 .. danger::
 
@@ -63,9 +55,9 @@ should perist after you have closed all your existing sessions.  During this tim
 
 Putty
 ^^^^^
-You can configure Putty to ``Share SSH connections if possible`` via the ``SSH`` option in the ``Connection Catagory`` when configuring a new connection.
+You can configure Putty to ``Share SSH connections if possible`` via the ``SSH`` option in the ``Connection Category`` when configuring a new connection.
 
-As long as your existing connection remains active you can start new sessions without reautenticating by using ``Duplicate Session`` command to start new sessions.
+As long as your existing connection remains active you can start new sessions without re-authenticating by using ``Duplicate Session`` command to start new sessions.
 
 Other applications which use Putty for SSH connections can also re-use your existing connection without needing to reauthenticate.
 
@@ -81,7 +73,7 @@ TMUX/screen
 `TMUX <https://github.com/tmux/tmux/wiki>`_ and `screen <https://www.gnu.org/software/screen/manual/screen.html>`_ are available on the HPC login nodes and 
 can be used to run multiple shell sessions within a single SSH session. 
 
-For examples of using TMUX to manage mutiple sessions see the following RSE blog post: `tmux: remote terminal management and multiplexing <https://rse.shef.ac.uk/blog/tmux-intro/>`_ 
+For examples of using TMUX to manage multiple sessions see the following RSE blog post: `tmux: remote terminal management and multiplexing <https://rse.shef.ac.uk/blog/tmux-intro/>`_ 
  
 
 Transferring files

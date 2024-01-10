@@ -246,7 +246,7 @@ To see if you are attempting to exceed your disk space quota, run the ``quota`` 
                   storage:/export/users
                                    3289M  51200M  76800M            321k*   300k    350k   none 
 
-        In the above, you can see that the 'soft' space quota is 50 gigabytes and a small portion of this is currently in use. However, the files 'soft' quota is 300k whihc has been exceeded,
+        In the above, you can see that the 'soft' space quota is 50 gigabytes and a small portion of this is currently in use. However, the files 'soft' quota is 300k which has been exceeded,
         additionally the grace period indicates the grace period for exceeding the soft quota has expired.
         Any jobs submitted by this user will likely result in an ``Eqw`` status.
         The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.

@@ -10,7 +10,7 @@ Bessemer
 
 This is the documentation for Bessemer, one of the University of Sheffield's High Performance Computing clusters. Bessemer is a 'capacity' cluster designed 
 to run compute jobs which will fit on a single node.
-Bessemer can support jobs requiring up to 40 cores per job - for larger jobs please use :ref:`stanage`.
+Bessemer can support jobs requiring up to 40 cores per job; for larger jobs please use :ref:`stanage`, which has 64 cores in standard non-GPU nodes and supports multi-node jobs
 
 .. toctree::
   :hidden:

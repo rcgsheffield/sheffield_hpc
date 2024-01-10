@@ -94,10 +94,6 @@ To list all avaiable command man pages:
 
 ------
 
-
-
-
-
 I cannot see my folders in /shared
 -------------------------------------------
 
@@ -320,6 +316,25 @@ This asks for 8 Gigabytes of RAM (real memory).
 
 ------
 
+'Illegal Instruction' errors
+----------------------------
+
+If your program fails with an **Illegal Instruction** error then it may have been compiled using (and optimised for) one type of processor but is running on another. 
+
+If you get this error **after copying compiled programs onto a cluster** then you may need to recompile them on the cluster or recompile them elsewhere without aggressively optimising for processor architecture.
+
+If however you get this error when **running programs on the cluster that you have also compiled on the cluster** then you may have compiled on one processor type and be running on a different type.
+
+Since Stanage has distinct GPU and CPU node architectures, you have several options:
+  
+ - Recompile your program without optimisations for processor architecture. 
+ - Recompile on the node type (CPU or GPU) you intend to run your job.
+ - Run your job on the type of architecture it was compiled for (CPU or GPU node).
+
+Bessemer has the same architecture on all nodes.
+
+
+---------
 
 .. _windows_eol_issues:
 

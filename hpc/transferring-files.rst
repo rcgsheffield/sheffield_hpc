@@ -15,7 +15,7 @@ To transfer files to/from the clusters you can:
 * Use a `Research Storage fileshare <https://www.sheffield.ac.uk/it-services/research-storage/>`_ as common storage directly 
   accessible from your own machine and from the clusters.
 * Use a program like ``curl`` or ``wget`` to download files directly to the clusters.
-* Use a :ref:`flight session <flight-desktop>` on Stanage or   to open firefox and interactively download directly to clusters.
+* Open a Firefox browser and interactively download directly to clusters. Using a :ref:`flight session <flight-desktop>` on Stanage or interactive session on Bessemer 
 
 .. hint::
 

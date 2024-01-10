@@ -235,17 +235,31 @@ If you attempt to exceed this quota, various problems can emerge such as an inab
 as programs or executables are now unable to write to your ``/home`` folder.
 To see if you are attempting to exceed your disk space quota, run the ``quota`` command:
 
-.. code-block:: console
+.. tabs::
 
-          [te1st@login1 [stanage] ~]$ quota -u -s
-              Filesystem   space   quota   limit   grace   files   quota   limit   grace
-          storage:/export/users
-                           3289M  51200M  76800M            321k*   300k    350k   none 
+   .. group-tab:: Stanage
+        
+        .. code-block:: console
 
-In the above, you can see that the 'soft' space quota is 50 gigabytes and a small portion of this is currently in use. However, the files 'soft' quota is 300k whihc has been exceeded,
-additionally the grace period indicates the grace period for exceeding the soft quota has expired.
-Any jobs submitted by this user will likely result in an ``Eqw`` status.
-The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
+                  [te1st@login1 [stanage] ~]$ quota -u -s
+                      Filesystem   space   quota   limit   grace   files   quota   limit   grace
+                  storage:/export/users
+                                   3289M  51200M  76800M            321k*   300k    350k   none 
+
+        In the above, you can see that the 'soft' space quota is 50 gigabytes and a small portion of this is currently in use. However, the files 'soft' quota is 300k whihc has been exceeded,
+        additionally the grace period indicates the grace period for exceeding the soft quota has expired.
+        Any jobs submitted by this user will likely result in an ``Eqw`` status.
+        The recommended action is for the user to delete enough files, or move enough files to another filestore to allow normal work to continue.
+
+   .. group-tab:: Bessemer
+
+        .. code-block:: console
+
+                [te1st@bessemer-login1 ~]$ quota
+                        Size  Used Avail Use% Mounted on
+                te1st   100G  100G    0G 100% /home/te1st
+
+        In the above, you can see that the quota is 100 gigabytes and all of this is currently in use.        
 
 To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>` or the 
 :ref:`ncdu module on Bessemer <ncdu_bessemer>` . The **ncdu** utility will give you an
@@ -278,7 +292,8 @@ To request more memory and for information on how to assess sensible resource am
 Insufficient memory in an interactive session
 ---------------------------------------------
 
-By default, an interactive session provides you with 4 Gigabytes of RAM (sometimes called real memory).
+By default, an interactive session on Stanage provides you with 4016MB of RAM (sometimes called real memory) or on Bessemer with 2 Gigabytes of RAM.
+
 You can request more than this when running your ``srun`` command.
 
 .. tabs::
@@ -477,7 +492,7 @@ To transfer data between your old account and your new account you could make us
 
         rsync -avP /Path/To/File_Or_Directory $Your_New_UserName@$HOSTNAME:/home/$Your_New_UserName/OldUserAccount
 
-2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on Stanage), here we are going to use the option "avzP" as we are going to transfer data over the internet, and it will be faster if it is compressed.
+2. You want to copy your files to the new account on a different cluster node(e.g old account on Bessemer to new account on Stanage), here we are going to use the option "avzP" as we are going to transfer data over the JANET link (Bessemer) and private leased link (Stanage), and it will be faster if it is compressed.
 
 .. code-block:: bash
 

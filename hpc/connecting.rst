@@ -3,7 +3,7 @@
 Connecting to a cluster using myApps (web browser)
 ==================================================
 
-For easier access to HPC resources,  IT Services runs an instance of Oracle Secure Global desktop called myApps to provide web based access to CLI terminals,
+For easier access to HPC resources,  IT Services runs an instance of Oracle Secure Global desktop called myApps to provide web-based access to CLI terminals and
 text editors within interactive sessions for the Bessemer and Training HPC clusters.
 
 

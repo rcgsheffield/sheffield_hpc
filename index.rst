@@ -47,7 +47,6 @@ Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ we
    FAQs
    Latest Software / HPC changelog<http://changelog.hpc.shef.ac.uk/>
    referenceinfo/index
-   mfa-update-21-10-2021
    citing
    decommissioned/index
 

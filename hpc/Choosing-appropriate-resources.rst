@@ -200,63 +200,31 @@ When quantifying the CPU usage efficiency two values are important:
 To optimise your CPU requests you can investigate how efficiently your job is making use of your requested cores with the :ref:`seff` command:
 
 
-.. tabs::
+The ``seff`` script can be used as follows with the job's ID to give summary of important job info including the wallclock time:
 
-    .. group-tab:: Stanage
+.. code-block:: console
+    :emphasize-lines: 8,9,10
 
-        The ``seff`` script can be used as follows with the job's ID to give summary of important job info including the wallclock time:
+    $ seff 64626
+    Job ID: 64626
+    Cluster: a_cluster
+    User/Group: a_user/a_group
+    State: COMPLETED (exit code 0)
+    Nodes: 1
+    Cores per node: 2
+    CPU Utilized: 00:02:37
+    CPU Efficiency: 35.68% of 00:07:20 core-walltime
+    Job Wall-clock time: 00:03:40
+    Memory Utilized: 137.64 MB (estimated maximum)
+    Memory Efficiency: 1.71% of 7.84 GB (3.92 GB/core)
 
-        .. code-block:: console
-            :emphasize-lines: 8,9,10
+Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (1 node * 2 cores), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
+The CPU Efficiency follows as ``(157/440)*100=35.68%``.
 
-            $ seff 64626
-            Job ID: 64626
-            Cluster: stanage.alces.network
-            User/Group: a_user/clusterusers
-            State: COMPLETED (exit code 0)
-            Nodes: 2
-            Cores per node: 1
-            CPU Utilized: 00:02:37
-            CPU Efficiency: 35.68% of 00:07:20 core-walltime
-            Job Wall-clock time: 00:03:40
-            Memory Utilized: 137.64 MB (estimated maximum)
-            Memory Efficiency: 1.71% of 7.84 GB (3.92 GB/core)
+The ideal value for CPU efficiency is 100%.
 
-        Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (2 nodes * 1 core), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
-        The CPU Efficiency follows as ``(157/440)*100=35.68%``.
-
-        The ideal value for CPU efficiency is 100%.
-
-        If a value of **100/n requested cores** is observed, you are likely to be using a single threaded program (which cannot benefit from multiple cores) or a multithreaded program incorrectly configured to use the multiple cores requested.
-        In general, you should request a single core for single threaded programs and ensure multicore programs are correctly configured with as few cores as possible requested to shorten your queue time.
-
-    .. group-tab:: Bessemer
-
-        The ``seff`` script can be used as follows with the job's ID to give summary of important job info including the wallclock time:
-
-        .. code-block:: console
-            :emphasize-lines: 8,9,10
-
-            $ seff 64626
-            Job ID: 64626
-            Cluster: bessemer
-            User/Group: a_user/a_group
-            State: COMPLETED (exit code 0)
-            Nodes: 1
-            Cores per node: 2
-            CPU Utilized: 00:02:37
-            CPU Efficiency: 35.68% of 00:07:20 core-walltime
-            Job Wall-clock time: 00:03:40
-            Memory Utilized: 137.64 MB (estimated maximum)
-            Memory Efficiency: 1.71% of 7.84 GB (3.92 GB/core)
-
-        Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (1 node * 2 cores), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
-        The CPU Efficiency follows as ``(157/440)*100=35.68%``.
-
-        The ideal value for CPU efficiency is 100%.
-
-        If a value of **100/n requested cores** is observed, you are likely to be using a single threaded program (which cannot benefit from multiple cores) or a multithreaded program incorrectly configured to use the multiple cores requested.
-        In general, you should request a single core for single threaded programs and ensure multicore programs are correctly configured with as few cores as possible requested to shorten your queue time.
+If a value of **100/n requested cores** is observed, you are likely to be using a single threaded program (which cannot benefit from multiple cores) or a multithreaded program incorrectly configured to use the multiple cores requested.
+In general, you should request a single core for single threaded programs and ensure multicore programs are correctly configured with as few cores as possible requested to shorten your queue time.
 
 
 -----------------
@@ -274,28 +242,15 @@ Determining memory requirements:
 **By using the emailing parameters of the sbatch command:**
 
 
-Submit your job with ``sbatch`` by specifying very generous memory and time requirements to ensure that it runs to completion" and also using the ``-M`` and ``-m abe`` or  ``--mail-user=`` and ``--mail-type=ALL``   parameters to receive an email-report. The mail message will list the maximum memory usage ( maxvmem / MaxVMSize  ) as well as the wallclock time used by the job.
+Submit your job with ``sbatch`` by specifying very generous memory and time requirements to ensure that it runs to completion" and also using the ``--mail-user=`` and ``--mail-type=ALL``  parameters to receive an email-report. The mail message will list the maximum memory usage ( maxvmem / MaxVMSize  ) as well as the wallclock time used by the job.
 
-.. tabs::
+.. code-block::
 
-    .. group-tab:: Stanage
-        .. code-block::
-
-            #SBATCH --mem=8G
-            #SBATCH --time=01:00:00
-            #SBATCH --mail-user=joe.blogs@sheffield.ac.uk
-            #SBATCH --mail-type=ALL
-            myprog < mydata.txt > myresults.txt
-
-    .. group-tab:: Bessemer
-        .. code-block::
-
-            #SBATCH --mem=8G
-            #SBATCH --time=01:00:00
-            #SBATCH --mail-user=joe.blogs@sheffield.ac.uk
-            #SBATCH --mail-type=ALL
-            myprog < mydata.txt > myresults.txt
-
+    #SBATCH --mem=8G
+    #SBATCH --time=01:00:00
+    #SBATCH --mail-user=joe.blogs@sheffield.ac.uk
+    #SBATCH --mail-type=ALL
+    myprog < mydata.txt > myresults.txt
 
 When the job completes, you will receive an email reporting the memory and time usage figures.
 

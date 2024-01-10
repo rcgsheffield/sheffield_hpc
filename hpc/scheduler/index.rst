@@ -211,7 +211,7 @@ Example:
 
 .. code-block:: console
 
-    [te1st@bessemer-login1 ~]$ squeue -u $USER
+    [te1st@bessemer-login1 ~]$ squeue --me
             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
             833300 interacti     bash   te1st  R      31:22      1 node001
     [te1st@bessemer-login1 ~]$ sattach 833300.0 
@@ -542,7 +542,7 @@ Example:
 
 .. code-block:: console
 
-    [te1st@login1 [stanage] ~]$ squeue -u $USER
+    [te1st@login1 [stanage] ~]$ squeue --me
             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
             833300 interacti     bash   te1st  R      31:22      1 node001
     [te1st@login1 [stanage] ~]$ sattach 833300.0 

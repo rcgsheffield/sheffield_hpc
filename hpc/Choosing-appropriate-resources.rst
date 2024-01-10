@@ -35,21 +35,19 @@ This does not mean that you can set extremely large values for these resource re
 Cluster choice
 ==============================
 
-We have three cluster choices listed below for you to choose from:
+We have two cluster choices listed below for you to choose from:
 
 * Stanage (Our newest and most powerful yet, launched in March 2023).
 * Bessemer (Launched in 2018).
-* ShARC (Launched in 2016).
 
-It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. Stanage and ShARC are for the most part *`capability`* clusters designed to 
+It is also important to note that the Sheffield HPC clusters have been designed to fulfil different purposes. Stanage is for the most part a *`capability`* cluster designed to 
 run larger compute jobs that will use multiple nodes. Bessemer is a *`capacity`* cluster designed to run smaller compute jobs which will fit on a single node. 
 
-You should prioritize putting smaller core count jobs onto Bessemer and massively parallel jobs onto Stanage or ShARC (while utilizing a form of :ref:`MPI <parallel_MPI>`).
+You should prioritize putting smaller core count jobs onto Bessemer and massively parallel jobs onto Stanage (while utilizing a form of :ref:`MPI <parallel_MPI>`).
 
-In addition, Stanage and Bessemer have newer CPUs with more modern features. All of the clusters share similar file storage areas, each which are tuned for certain workloads
-although the Bessemer and Stanage clusters do not have a `/data` filestore.
+In addition, Stanage has newer CPUs and GPUs with more modern features. Both clusters share similar file storage areas, each which are tuned for certain workloads.
 
-The specifications for each cluster are detailed for Stanage here :ref:`stanage-specs` , Bessemer here :ref:`bessemer-specs` and ShARC here :ref:`sharc-specs` .
+More cluster specific information: :ref:`stanage-specs` and :ref:`bessemer-specs` .
 
 -----------------
 
@@ -58,7 +56,7 @@ The specifications for each cluster are detailed for Stanage here :ref:`stanage-
 .. include:: ../referenceinfo/scheduler/TimeAllocationLimits.rst
 
 
-The time allocation limits will differ between job types and by cluster - a summary of these differences can be seen above. Time requirements are highly dependent on 
+The time allocation limits will differ between job types and by cluster. A summary of these differences can be seen above. Time requirements are highly dependent on 
 how many CPU cores your job is using - using more cores may significantly decrease the amount of time the job spends running, depending on how optimally the software 
 you are using supports parallelisation. Further details on CPU cores selection can be found in the `CPU cores allocation <#cpu-allocation-limits>`_ section.
 
@@ -96,18 +94,6 @@ system. Here is an example:
     When the above script is submitted (via ``sbatch``), the job output file will contain the date and time at each invocation of the date command. You can then calculate the 
     difference between these date/times to determine the actual time taken.
 
-   .. group-tab:: ShARC
-
-    .. code-block:: shell
-
-        #$ -l h_rt=10:00:00
-        date
-        my_program < my_input
-        date
-
-    When the above script is submitted (via qsub), the job output file will contain the date and time at each invocation of the date command. You can then calculate the 
-    difference between these date/times to determine the actual time taken.
-
 
 Determining time used by your jobs
 ----------------------------------
@@ -117,7 +103,7 @@ The time used by a job is typical quantified into 2 values by the scheduler:
 * the **"wallclock"** (the time your job took if measured by a clock on your wall)
 * the consumed **"CPU time"** (a number of seconds of compute, derived directly from the amount of CPU time used on all cores of a job).
 
-How to determine these values can be seen below using the :ref:`seff` or :ref:`qacct` commands as below:
+How to determine these values can be seen below using the :ref:`seff` command as below:
 
 .. tabs::
 
@@ -166,19 +152,6 @@ How to determine these values can be seen below using the :ref:`seff` or :ref:`q
 
         Here we can see the wallclock was ``03:40`` (220s) and the consumed CPU time was ``02:37`` (157s). As this job requested 2 cores (1 node * 2 cores), we can also see there was a maximum core-walltime of ``07:20`` (440s) available.
         The CPU Efficiency follows as ``(157/440)*100=35.68%``.
-
-    .. group-tab:: ShARC
-
-        The ``qstat`` can be used as follows to display the CPU time as well as the wallclock:
-
-        .. code-block:: console
-            :emphasize-lines: 2,3
-
-            $ qacct -j 628 | grep -E "ru_wallclock|cpu" 
-            ru_wallclock 13s
-            cpu          4.187s
-
-        Here we can see the wallclock time is 13s and the consumed CPU time was 4.187s.
 
 
 -----------------
@@ -200,11 +173,11 @@ In order to determine your CPU requirements, you should investigate if your prog
 
 If your job / program supports multiple cores, you need to assess whether it supports SMP (symmetric multiprocessing) where you can only use CPUs on 1 node or MPI (message passing interface) where you can access as many nodes, CPUs and cores as are available.
 
-For SMP only type parallel processing jobs: you can use a maximum of 64 cores on Stanage, 40 cores on Bessemer and 16 cores on ShARC. Ideally you should use Stanage or Bessemer as you can not only access more cores, you are using more modern cores.
+For SMP only type parallel processing jobs: you can use a maximum of 64 cores on Stanage and 40 cores on Bessemer. 
 
-For multiple node MPI type parallel processing jobs: these can run on both Stanage and ShARC and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
+For multiple node MPI type parallel processing jobs: these can run on Stanage and although you can access as many cores as are available you must consider how long a job will take to queue waiting for resources compared the the decrease in time for the job to complete computation.
 
-Single node MPI type parallel jobs can run on ShARC (when running in the SMP parallel environment), Stanage and Bessemer.
+Single node MPI type parallel jobs can run on Stanage and Bessemer.
 
 For both parallel processing methods you should run several test jobs using the tips from the `Time allocation <#time-allocation-limits>`_ section with various numbers of cores to assess what factor of speedup/slowdown is attained for queuing and computation / the total time for job completion.
 
@@ -224,7 +197,7 @@ When quantifying the CPU usage efficiency two values are important:
 * the **"wallclock"** (the time your job took if measured by a clock on your wall)
 * the consumed **"CPU time"** (a number of seconds of compute, derived directly from the amount of CPU time used on all cores of a job).
 
-To optimise your CPU requests you can investigate how efficiently your job is making use of your requested cores with the :ref:`seff` or :ref:`qacct` command:
+To optimise your CPU requests you can investigate how efficiently your job is making use of your requested cores with the :ref:`seff` command:
 
 
 .. tabs::
@@ -285,42 +258,6 @@ To optimise your CPU requests you can investigate how efficiently your job is ma
         If a value of **100/n requested cores** is observed, you are likely to be using a single threaded program (which cannot benefit from multiple cores) or a multithreaded program incorrectly configured to use the multiple cores requested.
         In general, you should request a single core for single threaded programs and ensure multicore programs are correctly configured with as few cores as possible requested to shorten your queue time.
 
-    .. group-tab:: ShARC
-
-        CPU efficiency on ShARC can be computed using the qacct command to show the job info and then be computer as ``cpuefficiency = cpu / (ru_wallclock*slots)``. 
-
-        For example:
-
-        .. code-block:: console
-
-            $ qacct -j 628 | grep -E 'slots|ru_wallclock|cpu'
-            slots        1                   
-            ru_wallclock 13s
-            cpu          4.187s
-
-        Where efficiency is ``4.187/(13*1)=0.3221`` or 32.21%.
-
-        This can be calculated on the command line with: 
-
-        .. code-block:: console
-
-            $  qacct -j 628 | grep -E "slots|ru_wallclock|cpu" | sed "s/[^0-9.]//g" | awk "{num[NR] = \$1} END {result = (num[1] * num[3]) / num[2] * 100; printf \"%.2f%%\\n\", result}"
-            32.21%
-
-        You may wish to add this as an alias in your ``.bashrc`` file:
-
-        .. code-block:: shell
-
-            alias qcpueff='grep -E "slots|ru_wallclock|cpu" | sed "s/[^0-9.]//g" | awk "{num[NR] = \$1} END {result = (num[1] * num[3]) / num[2] * 100; printf \"%.2f%%\\n\", result}"'
-
-        You could then call this as:
-
-        .. code-block:: console
-
-            $ qacct -j 628 | qcpueff
-            32.21%
-
-
 
 -----------------
 
@@ -334,10 +271,10 @@ Determining memory requirements:
 ----------------------------------
 
 
-**By using the emailing parameters of the qsub or sbatch command:**
+**By using the emailing parameters of the sbatch command:**
 
 
-Submit your job ``qsub`` or ``sbatch`` by specifying very generous memory and time requirements to ensure that it runs to completion" and also using the ``-M`` and ``-m abe`` or  ``--mail-user=`` and ``--mail-type=ALL``   parameters to receive an email-report. The mail message will list the maximum memory usage ( maxvmem / MaxVMSize  ) as well as the wallclock time used by the job.
+Submit your job with ``sbatch`` by specifying very generous memory and time requirements to ensure that it runs to completion" and also using the ``-M`` and ``-m abe`` or  ``--mail-user=`` and ``--mail-type=ALL``   parameters to receive an email-report. The mail message will list the maximum memory usage ( maxvmem / MaxVMSize  ) as well as the wallclock time used by the job.
 
 .. tabs::
 
@@ -359,20 +296,12 @@ Submit your job ``qsub`` or ``sbatch`` by specifying very generous memory and ti
             #SBATCH --mail-type=ALL
             myprog < mydata.txt > myresults.txt
 
-    .. group-tab:: ShARC
-        .. code-block::
-            
-            #$ -l h_rt=01:00:00
-            #$ -l rmem=8G
-            #$ -m abe
-            #$ -M joe.blogs@sheffield.ac.uk
-            myprog < mydata.txt > myresults.txt
 
 When the job completes, you will receive an email reporting the memory and time usage figures.
 
 -----------------
 
-**By using the qstat/qacct or seff/sstat/sacct command:**
+**By using the seff/sstat/sacct command:**
 
 .. tabs::
     .. include:: ../referenceinfo/imports/scheduler/memory_used_commands.rst
@@ -391,7 +320,9 @@ Determining how much storage space your jobs will need:
 
 One method to determine how much space your jobs are likely to consume is to run an example job within a specific directory saving the output within.
 
-Once the run has completed you can determine the amount of storage taken by the job by running: ::
+Once the run has completed you can determine the amount of storage taken by the job by running:
+
+.. code-block:: console
 
     du -sh my_directory_name
 
@@ -403,7 +334,6 @@ Special limits and alternative queues
 
 If you have paid for a reservation, your research group or department has purchased additional resources there may be other accounts and partitions you can specify which will override normal limits imposed on the cluster jobs.
 
-* :ref:`Specific group nodes on ShARC<groupnodes_sharc>`
 * :ref:`Specific group nodes on Bessemer<groupnodes_bessemer>`
 
 If you have access to additional queues / partitions and want to know their limitations you can using the following commands to explore this.

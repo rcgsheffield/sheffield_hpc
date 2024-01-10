@@ -195,20 +195,28 @@ way of getting files onto the clusters. Using your home connection will be a sig
 speed bottleneck compared to large amounts of download bandwidth available on the clusters.
 Directly downloading to the cluster avoids this bottleneck!
 
-Using a qsh-vis session
-^^^^^^^^^^^^^^^^^^^^^^^
+Using Firefox Browser
+^^^^^^^^^^^^^^^^^^^^^
 
-Users can request a ``qsh-vis`` session on ShARC and connect to a GUI session in order to open 
-a ``firefox`` browser window on the ShARC cluster. This will allow you to interactively navigate 
-the web, login to websites and download files as you would do locally.
+Firefox browser can be used on both Stanage and Bessemer. This will allow you to interactively navigate the web,
+login to websites and download files as you would do locally.
 
-The details for starting a ``qsh-vis`` session can be found on the :ref:`qsh-vis page <hw-accel-gfx>`. 
-Note that a GPU accelerated session is only possible on the ShARC cluster.
+.. tabs::
 
-A similar less graphically performant session can be started on Bessemer by starting an interactive 
-session with the :code:`srun --pty bash -i` command and then opening ``firefox`` by running the same 
-named command. For this to function correctly you must ensure that X11/GUI forwarding is enabled 
-when connecting with SSH.
+  .. group-tab:: Stanage
+
+        Graphical desktop access to an interactive session can be achieved using 
+        :ref:`Flight Desktop and TigerVNC<flight-desktop>` .
+        Once you have loaded the GUI desktop, open a terminal at the bottom of the screen
+        and enter the command ``firefox``, which will launch a browser.
+
+  .. group-tab:: Bessemer
+
+        On Bessemer a Firefox GUI can be loaded directly.  This can be achieved 
+        by starting an interactive session with the :code:`srun --pty bash -i` command and then 
+        opening ``firefox`` by running the same named command. For this to function correctly you 
+        must ensure that X11/GUI forwarding is enabled when connecting with SSH.
+
 
 .. raw:: html
 

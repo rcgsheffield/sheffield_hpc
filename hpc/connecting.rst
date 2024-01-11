@@ -30,9 +30,7 @@ computing platforms (Linux, Windows, Mac), however we recommend Chrome or Firefo
     Usernames to connect with all HPC services will be the same as those you use to login to MUSE :underline-bold:`not` the prefix on your email address.
 
 #. Enter your username and password on the myApps Portal login page.
-#. Once you have managed to login, you will see a window with applications on the left hand panel.
-
-There are icons for Bessemer and ShARC Applications. However, ShARC was decommissioned hence those applications are no longer available.
+#. Once you have managed to login, you will see a window with Bessemer applications on the left hand panel.
 
 You can select a HPC interactive job or a HPC terminal.
 The interactive job is equivalent to a ``srun`` session on a worker node.

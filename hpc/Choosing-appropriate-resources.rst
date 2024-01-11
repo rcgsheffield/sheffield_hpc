@@ -120,7 +120,7 @@ The CPU allocation limits will differ between job types and by cluster - a summa
 
 
 
-.. include:: ../referenceinfo/scheduler/SGE/sge_parallel_environments.rst
+
 
 Determining CPU requirements:
 ----------------------------------
@@ -214,8 +214,7 @@ When the job completes, you will receive an email reporting the memory and time 
 
 **By using the seff/sstat/sacct command:**
 
-.. tabs::
-    .. include:: ../referenceinfo/imports/scheduler/memory_used_commands.rst
+.. include:: ../referenceinfo/imports/scheduler/memory_used_commands.rst
 
 -----------------
 

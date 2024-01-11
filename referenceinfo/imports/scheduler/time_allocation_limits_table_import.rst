@@ -17,8 +17,3 @@
      - 8 / 8 hrs
      - 8 / 168 hrs
      - ``--time=<days-hh:mm:ss>``
-
-   * - SGE (ShARC)
-     - 8 / 8 hrs
-     - 8 / 96 hrs
-     - ``-l h_rt=<hh:mm:ss>``

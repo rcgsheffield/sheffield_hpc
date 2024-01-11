@@ -27,13 +27,7 @@
      - 2 GB / 192 GB
      - **Per node (job) basis** ``--mem=<nn>``
 
-   * - SGE (ShARC)
-     - 64 GB
-     - 256 GB
-     - N/A
-     - 2 GB / 64 GB
-     - 2 GB / 64 GB (SMP) ~6144 GB (MPI)
-     - **Per core basis** ``-l rmem=<nn>``
+
 
 ..
    The interactive job max RAM and batch job SMP values are both derived from a normal compute node's total RAM.

@@ -24,6 +24,5 @@ This guide will get you set up using the University's clusters
    modules
    Choosing-appropriate-resources
    installing-software
-   hw-accel-gfx
    flight-desktop
    hpcgateway

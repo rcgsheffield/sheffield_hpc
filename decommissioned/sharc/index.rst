@@ -29,6 +29,7 @@ If greater single-threaded performance or greater numbers of cores are required 
   groupnodes/index
   jupyterhub
   sharc-decommissioning
+  hw-accel-gfx
   FAQ_sharc
 
 * :ref:`sharc-software`

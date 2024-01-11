@@ -139,7 +139,9 @@ In this case, virtual architecture refers to the virtual components, concepts or
     <hr class="hr-mid-section-separator-dashed">
 
 .. include:: ../imports/computer-architecture/virtual-memory.rst
-    
+
+.. _instruction_sets:
+
 .. raw:: html
 
     <hr class="hr-mid-section-separator-dashed">

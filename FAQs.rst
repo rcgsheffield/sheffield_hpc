@@ -319,16 +319,25 @@ This asks for 8 Gigabytes of RAM (real memory).
 'Illegal Instruction' errors
 ----------------------------
 
-If your program fails with an **Illegal Instruction** error then it may have been compiled using (and optimised for) one type of processor but is running on another (see :ref:`Instruction sets <instruction_sets>`). 
+If attempts to run a binary executable program fail with an ``Illegal Instruction`` error then 
+your executable program (or a dynamically-linked library) may have been compiled so as to 
+make more optimal use of the :ref:`instruction set <instruction_sets>` of a particular CPU architecture (an *optimised binary*), 
+but you're running the executable on CPU(s) that use a slightly different instruction set.
 
-If you get this error **after copying compiled programs onto a cluster** then you may need to recompile them on the specific architecture you wish to run your program/library.
+For example, you may have a executable program optimised for the Intel Icelake CPU instruction set but
+you find it fails to run on AMD Milan CPUs, or
+you might be trying to run a binary optimised for a very new Intel CPU architecture on an older model of Intel CPU.
 
-If however you get this error when **running programs on the cluster that you have also compiled on the cluster** then you may have compiled on one processor type and be running on a different type.
+.. important::
 
-Examples:
+        For the above reasons we recommend that you avoid copying binary executables on to the HPC systems
+        and instead (re)compile programs and libraries on the HPC systems instead where possible.
 
- - Compiled on one generation of Intel CPU but run on an older or newer generation
- - Compiled on an AMD CPU but run on Intel CPU
+This has the added benefits of ensuring that:
+
+* Programs/libraries are compiled against the versions of dependencies provided on the HPC systems.
+* Programs/libraries are more likely to make use of the more advanced features of the CPU models in the HPC systems, 
+  which could result in better performance/efficiency.
 
 ---------
 

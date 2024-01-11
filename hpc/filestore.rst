@@ -411,7 +411,17 @@ you can use the ``quota`` command:
           [te1st@login1 [stanage] ~]$ quota -u -s
               Filesystem   space   quota   limit   grace   files   quota   limit   grace
           storage:/export/users
-                           3289M  51200M  76800M            154k    300k    350k 
+                           3289M  51200M  76800M            321k*   300k    350k   none 
+      
+      An asterisk (*) after your space or files usage indicates that you've exceeded a 'soft quota'. You're then given a grace period of several days to reduce your usage below this limit.
+      Failing to do so will prevent you from using additional space or creating new files. Additionally, there is a hard limit for space and files that can never be exceeded, even temporarily (i.e. it has no grace period).
+
+      In the above example we can see that the user has exceeded their soft quota for files ('*') but not their hard limit for files.  However, the grace period field reads 'none', 
+      which means the grace period for exceeding the soft quota has already expired.  The user must remove/move some files from their home directory before they can create/add any more files.
+      Also, the user is a long way from exceeding their space soft quota.
+
+      To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`. 
+      The ncdu utility will give you an interactive display of what files/folders are taking up storage in a given directory tree.
 
    .. group-tab:: Bessemer
 

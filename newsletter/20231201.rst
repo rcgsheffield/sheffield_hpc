@@ -1,7 +1,7 @@
 .. _nl20231201:
 
-News - 2023-12-22
-=================
+2023-12-22 - Newsletter
+========================
 
 Welcome to the first edition of our monthly newsletter where we plan to update you on upcoming news and also showcase the great work happening on our HPC. As we break for the end year holidays we can only reflect on the challenges we came across here at Research Innovation IT. We launched Stanage, said goodbye to our old friend ShARC and supported our HPC users. Thank you for a great 2023 and we look forward to supporting you all innovate in 2024. The team will be away for the festive period from the 23/12/2023 to 2/1/2024 inclusive. Happy holidays everyone.  
 

@@ -63,8 +63,8 @@ SGE Command             Description
                         e.g. SMP jobs ``-pe smp 4`` or MPI jobs ``-pe mpi 4``.    
 ======================  =========================================================================================
 
-Note that ShARC has multiple :ref:`parallel environments <parallel>`, the current parallel environments can 
-be found on the `ShARC Parallel Environments <../../referenceinfo/scheduler/SGE/sge_parallel_environments.html>`_ page.
+Note that ShARC has multiple :ref:`parallel environments <parallel_sharc>`, the current parallel environments can 
+be found on the :ref:`ShARC Parallel Environments <sge_parrallel_envs>` page.
 
 .. _submit_batch_sharc:
 

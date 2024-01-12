@@ -1,3 +1,6 @@
+.. include:: /referenceinfo/imports/decommissioned/decom_watermark.rst
+.. include:: /referenceinfo/imports/decommissioned/sharc_decom.rst
+
 .. _parallel_hybrid_sharc:
 
 Hybrid SMP / MPI
@@ -8,11 +11,11 @@ Overview
 
 If you want to distribute work between a large number of cores (e.g. >16) on ShARC
 then the most common approach is MPI,
-as :ref:`described here <parallel_mpi>`.
+as :ref:`described here <parallel_MPI_sharc>`.
 The default MPI setup on ShARC does not ensure that your MPI job is assigned the same number of CPU cores per node.
 However in certain cases you may want a symmetric distribution of of cores:
 you may want eight MPI processes,
-each of which internally parallelises work using four :ref:`OpenMP threads <parallel_smp>`,
+each of which internally parallelises work using four :ref:`OpenMP threads <parallel_SMP_sharc>`,
 which would run optimally if each process were assigned four cores on a node
 (possibly running multiple processes on a node).
 

@@ -1,4 +1,7 @@
-.. _parallel:
+.. include:: /referenceinfo/imports/decommissioned/decom_watermark.rst
+.. include:: /referenceinfo/imports/decommissioned/sharc_decom.rst
+
+.. _parallel_sharc:
 
 =========================
 Parallel Computing ShARC
@@ -12,7 +15,6 @@ Parallel Computing ShARC
    SMP
    MPI
    Hybrid
-   GPUComputing
 
 Parallel Computing uses more than one core.
 A *core* (also called *processor*) is capable of executing one
@@ -57,7 +59,7 @@ run on HPC, for example :ref:`CASTEP <castep_sharc>` or
 with its own opinions about the best parallel setup to use.
 Consult the :ref:`software documentation <sharc-apps>`.
 
-.. include:: ../referenceinfo/scheduler/SGE/sge_parallel_environments.rst
+.. include:: /referenceinfo/scheduler/SGE/sge_parallel_environments.rst
 
 -------------
 

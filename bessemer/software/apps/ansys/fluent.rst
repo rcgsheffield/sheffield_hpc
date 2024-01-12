@@ -57,16 +57,18 @@ A more thorough explanation and tutorial on how to make a Fluent journal file ca
 Batch Submission Script
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Fluent is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP>` parallel environments but will use its in-build MPI communications for both.
-On Bessemer, cross node jobs are not permitted and there is no ``mpi-rsh`` parallel environment.
-This necessitates the use of the default :ref:`SMP <parallel_SMP>` OpenMP parallel environment  (up to 40 cores on a single node only).
-The lack of other options compared to :ref:`Fluent on ShARC<ansys-sharc-fluent>` is as a result of execution on a single node not requiring these options.
+Fluent is capable of running in both :ref:`MPI <parallel_MPI>` and symmetric multiprocessing parallel environments but will use its in-build MPI communications for both. 
+On Bessemer, cross node jobs are not permitted. This necessitates the use of the fluent's default OpenMP parallel environment (up to 40 cores on a single node only).
+
+.. parallel_bits
+    ref:`SMP <parallel_SMP>` parallel environments but will use its in-build MPI communications for both.
+    On Bessemer, cross node jobs are not permitted. This necessitates the use of the default :ref:`SMP <parallel_SMP>` OpenMP parallel environment (up to 40 cores on a single node only).
 
 
 The following is an example batch submission script, ``cfd_job.sh``, to run the executable ``fluent`` with input journal file ``subjou.jou``, and carry out a 2D double precision CFD simulation.
 The script requests 4 cores using the OpenMP parallel environment with a runtime of 60 mins and 2 GB of real memory per core.
 
-Sample SMP Fluent Scheduler Job Script
+Sample MPI Fluent Scheduler Job Script
 """""""""""""""""""""""""""""""""""""""""""
 
 .. hint::

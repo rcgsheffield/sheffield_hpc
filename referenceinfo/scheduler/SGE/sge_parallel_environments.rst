@@ -1,8 +1,10 @@
 
+.. _sge_parallel_envs:
+
 ShARC/SGE Parallel Environments
 -------------------------------
 
-The available :ref:`SGE parallel environments <parallel>` (for ShARC only) can be found below:
+The available :ref:`SGE parallel environments <parallel_sharc>` (for ShARC only) can be found below:
 
 .. list-table:: ShARC SGE Parallel Environments Table
    :widths: 20 80

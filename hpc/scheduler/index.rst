@@ -347,12 +347,21 @@ Some things to note:
   using distributed parallelism (:ref:`MPI<parallel_MPI>`). Note that the Bessemer free queues do not 
   permit the use of more than 1 node per job.
 * You should use the SLURM option ``--cpus-per-task=nn`` Number of "cores per task", for programs using 
-  shared memory parallelism (:ref:`SMP<parallel_SMP>` or :ref:`openmp<parallel_SMP>`).
+  shared memory parallelism (`openmp<parallel_MPI>`).
 * You will often require one or more ``module`` commands in your submission file to make programs and 
   libraries available to your scripts. Many applications and libraries are available as modules on 
   :ref:`Bessemer <bessemer-software>`.
 
-Here is a more complex :ref:`SMP<parallel_SMP>` example that requests more resources:
+.. parallel_bits  
+    * You should use the SLURM option ``--cpus-per-task=nn`` Number of "cores per task", for programs using 
+    shared memory parallelism (:ref:`SMP<parallel_SMP_sharc>` or :ref:`openmp<parallel_SMP>`).
+    * You will often require one or more ``module`` commands in your submission file to make programs and 
+    libraries available to your scripts. Many applications and libraries are available as modules on 
+    :ref:`Bessemer <bessemer-software>`.
+
+    Here is a more complex :ref:`SMP<parallel_SMP_sharc>` example that requests more resources:
+
+Here is a more complex example that requests more resources:
 
 .. code-block:: bash
 
@@ -368,7 +377,7 @@ Here is a more complex :ref:`SMP<parallel_SMP>` example that requests more resou
     # Change the name of the output log file.
     #SBATCH --output=output.%j.test.out
     # Rename the job's name
-    #SBATCH --job-name=my_smp_job
+    #SBATCH --job-name=my_job
 
 
     # Load the modules required by our program
@@ -679,10 +688,14 @@ Some things to note:
 * You should use the SLURM option ``--ntasks-per-node=nn`` Number of "tasks per node", for programs 
   using distributed parallelism (:ref:`MPI<parallel_MPI>`).
 * You should use the SLURM option ``--cpus-per-task=nn`` Number of "cores per task", for programs using 
-  shared memory parallelism (:ref:`SMP<parallel_SMP>` or :ref:`openmp<parallel_SMP>`).
+  shared memory parallelism.
 * You will often require one or more ``module`` commands in your submission file to make programs and 
   libraries available to your scripts. 
 
+.. parallel_bits
+    shared memory parallelism (:ref:`SMP<parallel_SMP>` or :ref:`openmp<parallel_SMP>`).
+    * You will often require one or more ``module`` commands in your submission file to make programs and 
+    libraries available to your scripts. 
 
 -----
 

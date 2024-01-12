@@ -1,4 +1,4 @@
-.. _parallel_MPI:
+.. _parallel_MPI_sharc:
 
 Message Passing Interface (MPI)
 ===============================

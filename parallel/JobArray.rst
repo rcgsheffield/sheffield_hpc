@@ -1,4 +1,4 @@
-.. _parallel_jobarray:
+.. _parallel_jobarray_sharc:
 
 SGE Array Jobs
 ==============

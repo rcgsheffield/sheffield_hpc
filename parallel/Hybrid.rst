@@ -1,4 +1,4 @@
-.. _parallel_hybrid:
+.. _parallel_hybrid_sharc:
 
 Hybrid SMP / MPI
 ================

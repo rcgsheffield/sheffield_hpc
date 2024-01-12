@@ -1,4 +1,4 @@
-.. _parallel_SMP:
+.. _parallel_SMP_sharc:
 
 Shared Memory Parallelism (SMP)
 ===============================
@@ -7,7 +7,7 @@ Shared-Memory Parallelism (SMP) is when work is divided between multiple `thread
 
 SMP is most performant when each thread / process has its own CPU core, which limits you to 16 processor cores on ShARC's public nodes.
 If you wish to scale to more parallel strands of execution or want more memory per strand than SMP can facilitate, 
-you should consider more complex parallelisation schemes such as :ref:`MPI <parallel_MPI>` or :ref:`Hybrid OpenMP/MPI <parallel_hybrid>`.
+you should consider more complex parallelisation schemes such as :ref:`MPI <parallel_MPI_sharc>` or :ref:`Hybrid OpenMP/MPI <parallel_hybrid_sharc>`.
 
 OpenMP
 ------

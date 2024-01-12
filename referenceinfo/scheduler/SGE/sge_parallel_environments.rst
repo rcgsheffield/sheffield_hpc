@@ -1,6 +1,3 @@
-
-.. _sge_parallel_envs:
-
 ShARC/SGE Parallel Environments
 -------------------------------
 

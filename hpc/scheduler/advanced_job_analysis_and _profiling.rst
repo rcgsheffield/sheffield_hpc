@@ -40,7 +40,7 @@ Once you are in the interactive session you can see the process IDs associated w
 
     ps -u $USER
 
-start profiling and analysing the perfomance of the node and the job by using commands such as:
+Start profiling and analysing the perfomance of the node and the job by using commands such as:
 
 .. code-block:: shell
 

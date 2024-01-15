@@ -76,7 +76,7 @@ To actually submit the job: ::
 
 You can submit multiple jobs iteratively, reusing your DRMAA job template for efficiency.
 
-If you want to submit a :ref:`job array <parallel_jobarray>` rather than a single job then you can call the `runBulkJob method instead of runJob <http://drmaa-python.readthedocs.io/en/latest/tutorials.html#running-a-job>`_.
+If you want to submit a :ref:`job array <parallel_jobarray_sharc>` rather than a single job then you can call the `runBulkJob method instead of runJob <http://drmaa-python.readthedocs.io/en/latest/tutorials.html#running-a-job>`_.
 
 .. warning::
     Starting a single DRMAA session then attempting to submit jobs from different Python threads `currently does not work <https://github.com/pygridtools/drmaa-python/issues/44>`_.

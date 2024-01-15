@@ -70,12 +70,16 @@ The following code can be used in an interactive session to launch a single core
 Batch jobs
 ----------
 
-ANSYS LS-DYNA is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP>` 
-parallel environments.
+ANSYS LS-DYNA is capable of running in both :ref:`MPI <parallel_MPI>` environments and shared memory parallel processing (OpenMP) environments.
 
-On Bessemer, cross node jobs are not permitted and there is no ``mpi`` parallel environment.
-This necessitates the use of the default :ref:`SMP <parallel_SMP>` OpenMP parallel environment 
-(up to 40 cores on a single node only). 
+.. parallel_bits 
+  :ref:`SMP <parallel_SMP>` parallel environments.
+
+On Bessemer, cross node jobs are not permitted, this necessitates the use of the default OpenMP parallel environment (up to 40 cores on a single node only).
+
+.. parallel_bits
+  :ref:`SMP <parallel_SMP>` OpenMP parallel environment 
+  (up to 40 cores on a single node only). 
 
 The adjusted options compared to :ref:`ANSYS LS-DYNA on ShARC<ansys-sharc-ls-dyna>` is as a result 
 of execution on a single node not requiring these options.

@@ -59,6 +59,8 @@ run on HPC, for example :ref:`CASTEP <castep_sharc>` or
 with its own opinions about the best parallel setup to use.
 Consult the :ref:`software documentation <sharc-apps>`.
 
+.. _sge_parallel_envs:
+
 .. include:: /referenceinfo/scheduler/SGE/sge_parallel_environments.rst
 
 -------------

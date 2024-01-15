@@ -116,9 +116,13 @@ Large memory nodes
 ^^^^^^^^^^^^^^^^^^
 
 Large memory nodes are identical to normal compute nodes but have additional
-memory available to ensure they are capable of running more memory intensive
-:ref:`SMP / OpenMP <parallel_SMP>` jobs. Jobs requiring sufficiently large
+memory capacity. Thus, they have the capability to run more memory-intensive
+shared memory parallel processing (OpenMP) jobs. Jobs requiring sufficiently large
 amounts of RAM will automatically be dispatched to these nodes.
+
+.. parallel_bits:
+  :ref:`SMP / OpenMP <parallel_SMP>` jobs. Jobs requiring sufficiently large
+  amounts of RAM will automatically be dispatched to these nodes.
 
 GPU nodes
 ^^^^^^^^^
@@ -159,8 +163,11 @@ access to a HPC cluster:
 * The same program needs to be run many times
   (usually on different input data).
 * The program that you use takes too long to run, but it can be run faster
-  in parallel with multiple cores (usually using :ref:`MPI <parallel_MPI>`
-  or :ref:`SMP / OpenMP <parallel_SMP>`).
+  in parallel with multiple cores, typically utilising :ref:`MPI <parallel_MPI>`
+  or shared memory parallel processing (OpenMP).
+  
+  .. parallel_bits :ref:`SMP / OpenMP <parallel_SMP>`).
+
 * You need access to a GPU (your program needs to be written in a way
   that allows it to use your GPU or it uses GPU acceleration).
 

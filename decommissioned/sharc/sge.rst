@@ -64,7 +64,7 @@ SGE Command             Description
 ======================  =========================================================================================
 
 Note that ShARC has multiple :ref:`parallel environments <parallel_sharc>`, the current parallel environments can 
-be found on the :ref:`ShARC Parallel Environments <sge_parrallel_envs>` page.
+be found on the :ref:`ShARC Parallel Environments <sge_parallel_envs>` page.
 
 .. _submit_batch_sharc:
 

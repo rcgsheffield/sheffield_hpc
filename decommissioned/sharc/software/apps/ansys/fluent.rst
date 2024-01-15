@@ -71,7 +71,7 @@ A more thorough explanation and tutorial on how to make a Fluent journal file ca
 Batch Submission Script
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Fluent is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP>` parallel environments but will use its in-built MPI communications for both.
+Fluent is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP_sharc>` parallel environments but will use its in-built MPI communications for both.
 On ShARC, cross process communication must use the RSH protocol instead of SSH.
 This necessitates the use of either the ``smp`` (up to 16 cores on a single node only) or ``mpi-rsh`` (as many cores as desired across many nodes) parallel processing environments.
 

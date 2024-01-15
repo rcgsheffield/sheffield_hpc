@@ -46,8 +46,12 @@ and then issuing the commands:
 Batch jobs
 ----------
 
-Octeract Engine can be used in both :ref:`SMP<parallel_SMP>` (single node only) and 
-:ref:`MPI<parallel_MPI>` parallel environments - on Bessemer no parallel environment needs specifiying.
+Octeract Engine can be used in both shared memory parallel processing (OpenMP) environments (single node only) and 
+:ref:`MPI<parallel_MPI>` parallel environments.
+
+.. parallel_bits
+    :ref:`SMP<parallel_SMP>` (single node only) and 
+    :ref:`MPI<parallel_MPI>` parallel environments - on Bessemer no parallel environment needs specifying.
 
 .. important::
 

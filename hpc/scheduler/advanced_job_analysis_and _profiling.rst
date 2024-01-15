@@ -16,7 +16,7 @@ Advanced Job Profiling and Analysis
 Accessing A Running Single-Node Slurm Batch job
 ===============================================
 
-In some cases, you might want to access the resources of an existing scheduler allocation, for example a single node batch job that is in the running state. After allocating resources with ``sbatch`` you can access the resources (node) of this allocation with:
+In some cases, you might want to interact with a batch job in the ``RUNNING``  state (e.g. for fault-finding, debugging or profiling purposes).  You can start an interactive session within the resource allocation (memory and CPU cores on particular nodes) associated with the job with:
 
 .. code-block:: shell
 

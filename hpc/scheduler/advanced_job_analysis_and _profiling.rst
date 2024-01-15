@@ -66,7 +66,7 @@ In the scenario you are running a multi-node Slurm job you can use ``squeue`` to
 
 .. code-block:: shell
 
-    squeue --user=$USER
+    squeue --me
 
         JOBID   PARTITION   NAME      USER  ST       TIME NODES NODELIST(REASON)
         860638 sheffield job.sh    user123  R    1:28:01      1 node301

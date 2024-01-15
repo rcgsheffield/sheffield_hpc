@@ -13,7 +13,7 @@ Advanced Job Profiling and Analysis
 
     Abuse of this feature to carry out tasks that are not profiling and perfomance analysis of your running batch job might lead to your account being suspended.
 
-Accessing A Running Single Node Slurm Batch job
+Accessing A Running Single-Node Slurm Batch job
 ===============================================
 
 In some cases, you might want to access the resources of an existing scheduler allocation, for example a single node batch job that is in the running state. After allocating resources with ``sbatch`` you can access the resources (node) of this allocation with:

@@ -24,7 +24,7 @@ In some cases, you might want to interact with a batch job in the ``RUNNING``  s
 
 The command creates a new Job Step in the batch job with ID ``<JOBID>`` and starts interactive bash shell session within a that Job Step, allowing you to interact with the resources allocated to that job.
 
-If all the allocated CPU resources are already used, srun will prohibit the new job step the access to the resources. However, the argument ``--overlap`` can be passed to srun to allow job steps to overlap on the resources.
+If all the allocated CPU resources are already used, ``srun`` will prohibit the new Job Step the access to the resources. However, the argument ``--overlap`` can be passed to ``srun`` to allow Job Steps to overlap on the resources.
 
 .. code-block:: shell
 

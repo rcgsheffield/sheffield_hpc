@@ -60,7 +60,7 @@ In the scenario you are running a multi-node Slurm job you can use ``squeue`` to
 
 .. code-block:: shell
 
-    squeue --user=$USER
+    squeue --me
 
 **Example output:**
 

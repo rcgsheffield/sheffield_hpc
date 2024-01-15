@@ -53,7 +53,7 @@ Start profiling and analysing the perfomance of the node and the job by using co
     lsof
 
 
-Accessing A Running Multi-Node Slurm Batch job
+Accessing a Running Multi-Node Slurm Batch job
 ==============================================
 
 In the scenario you are running a multi-node Slurm job you can use ``squeue`` to see the nodes your job is using:

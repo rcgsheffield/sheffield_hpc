@@ -13,7 +13,7 @@ Advanced Job Profiling and Analysis
 
     Abuse of this feature to carry out tasks that are not profiling and perfomance analysis of your running batch job might lead to your account being suspended.
 
-Accessing A Running Single-Node Slurm Batch job
+Accessing a Running Single-Node Slurm Batch job
 ===============================================
 
 In some cases, you might want to interact with a batch job in the ``RUNNING``  state (e.g. for fault-finding, debugging or profiling purposes).  You can start an interactive session within the resource allocation (memory and CPU cores on particular nodes) associated with the job with:

@@ -49,13 +49,15 @@ The following code can be used in an interactive session to launch a single core
     export LSTC_LICENSE_SERVER=ansyslm.shef.ac.uk
     export LSTC_LICENSE=ANSYS
 
+
     # Add the LS-DYNA executables to the PATH
-    export PATH=$EBROOTANSYS/ansys/bin/linx64/:$PATH
+    ANSYSPATH=${EBROOTANSYS}/v${EBVERSIONANSYS//./}
+    export PATH=$ANSYSPATH/ansys/bin/linx64/:$PATH
 
     # Add the MPI executables and libs to the PATH / LD_LIBRARY_PATH
     # Depending on ANSYS version the MPI paths may require changing.
-    export PATH=$EBROOTANSYS/commonfiles/MPI/Intel/2018.3.222/linx64/bin/:$PATH
-    export LD_LIBRARY_PATH=$EBROOTANSYS/commonfiles/MPI/Intel/2018.3.222/linx64/lib/:$LD_LIBRARY_PATH
+    export PATH=$ANSYSPATH/commonfiles/MPI/Intel/2018.3.222/linx64/bin/:$PATH
+    export LD_LIBRARY_PATH=$ANSYSPATH/commonfiles/MPI/Intel/2018.3.222/linx64/lib/:$LD_LIBRARY_PATH
 
     # Setup my variables
     #
@@ -106,12 +108,13 @@ Sample SMP LS-DYNA Batch Job Script
     export LSTC_LICENSE=ANSYS
 
     # Add the LS-DYNA executables to the PATH
-    export PATH=$EBROOTANSYS/ansys/bin/linx64/:$PATH
+    ANSYSPATH=${EBROOTANSYS}/v${EBVERSIONANSYS//./}
+    export PATH=$ANSYSPATH/ansys/bin/linx64/:$PATH
 
     # Add the MPI executables and libs to the PATH / LD_LIBRARY_PATH
     # Depending on ANSYS version the MPI paths may require changing.
-    export PATH=$EBROOTANSYS/commonfiles/MPI/Intel/2018.3.222/linx64/bin/:$PATH
-    export LD_LIBRARY_PATH=$EBROOTANSYS/commonfiles/MPI/Intel/2018.3.222/linx64/lib/:$LD_LIBRARY_PATH
+    export PATH=$ANSYSPATH/commonfiles/MPI/Intel/2018.3.222/linx64/bin/:$PATH
+    export LD_LIBRARY_PATH=$ANSYSPATH/commonfiles/MPI/Intel/2018.3.222/linx64/lib/:$LD_LIBRARY_PATH
 
     # Setup my variables
     #

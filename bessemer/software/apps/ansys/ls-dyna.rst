@@ -51,7 +51,6 @@ The following code can be used in an interactive session to launch a single core
 
 
     # Add the LS-DYNA executables to the PATH
-    ANSYSPATH=${EBROOTANSYS}/v${EBVERSIONANSYS//./}
     export PATH=$ANSYSPATH/ansys/bin/linx64/:$PATH
 
     # Add the MPI executables and libs to the PATH / LD_LIBRARY_PATH
@@ -108,7 +107,6 @@ Sample SMP LS-DYNA Batch Job Script
     export LSTC_LICENSE=ANSYS
 
     # Add the LS-DYNA executables to the PATH
-    ANSYSPATH=${EBROOTANSYS}/v${EBVERSIONANSYS//./}
     export PATH=$ANSYSPATH/ansys/bin/linx64/:$PATH
 
     # Add the MPI executables and libs to the PATH / LD_LIBRARY_PATH

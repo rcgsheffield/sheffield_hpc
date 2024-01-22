@@ -72,7 +72,7 @@ Batch jobs
 
 ANSYS LS-DYNA is capable of running in both :ref:`MPI <parallel_MPI>` and shared memory parallel processing (OpenMP) environments.
 
-.. parallel_bits: in line with PR
+.. parallel_bits: in line with PR #1956
 
 Batch Submission Script
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -82,7 +82,7 @@ Sample LS-DYNA Batch Job Script
 
 .. code-block:: bash
 
-
+    #!/bin/bash
     #SBATCH --ntasks-per-node=4
     #SBATCH --mem=4000
     #SBATCH --job-name=ANSYS-LSDYNA-Example

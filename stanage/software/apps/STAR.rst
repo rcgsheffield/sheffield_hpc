@@ -90,6 +90,7 @@ The job is submitted to the queue by typing:
    $ sbatch my_job.sh
 
 The output file will be written in the subdirectory ``STAR``.
+
 --------
 
 Installation notes

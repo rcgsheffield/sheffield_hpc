@@ -27,6 +27,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
+    'sphinxcontrib.googleanalytics',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -147,3 +148,7 @@ rst_prolog = open('global.rst', 'r').read()
 
 sphinx_tabs_valid_builders = ['linkcheck']
 sphinx_tabs_disable_tab_closing = True
+
+## Options for googleanalytics
+googleanalytics_id = 'G-HTK1JMDS73'
+googleanalytics_enabled = True

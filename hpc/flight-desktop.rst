@@ -111,6 +111,11 @@ entering the *ssh -L* command, including cluster address, for example:
 
 This step will set up local port forwarding to the remote host (Stanage). 
 
+.. note:: 
+
+  If asked for your password at this step,
+  please enter your university credentials password (not the flight generated password).
+
 On your local machine start the 'VNC Viewer' program that comes with TigerVNC (this is called ``vncviewer`` on Linux).  You should then see a dialog box like this:
 
 .. image:: /images/vncviewer_dialog.png

@@ -100,21 +100,16 @@ The following is example output:
 .. tip::
     
     Take note of the lines which have been highlighted above: port number,
-    ``ssh -L`` command, and password.
+    ``ssh -L`` command, and (VNC) password.
 
 Leave that terminal running. And, open another local terminal (ex. Windows PowerShell) 
-entering the *ssh -L* command, including cluster address, for example:
+entering the *ssh -L* command including cluster address. If prompted for password, enter your university credentials password (not the flight generated password which will be used for VNC). For example:
 
 .. code-block:: bash
 
     ssh -L 5911:10.10.1.1:5911 te1st@stanage.shef.ac.uk
 
 This step will set up local port forwarding to the remote host (Stanage). 
-
-.. note:: 
-
-  If asked for your password at this step,
-  please enter your university credentials password (not the flight generated password).
 
 On your local machine start the 'VNC Viewer' program that comes with TigerVNC (this is called ``vncviewer`` on Linux).  You should then see a dialog box like this:
 

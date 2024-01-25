@@ -19,7 +19,7 @@ Interactive Usage
 -----------------
 After connecting to Stanage,  start an interactive session with the ``srun --pty bash –i`` command.
 
-The latest version of MATLAB (currently 2022a) is made available by running:
+Load a particular version of Julia with:
 
 .. code-block:: bash
 

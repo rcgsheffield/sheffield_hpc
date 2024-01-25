@@ -56,7 +56,7 @@ First, you need to write a batch submission file. We assume you’ll call this `
     #!/bin/bash
     #SBATCH --ntasks=1
     #SBATCH --time=10:00
-    #SBATCH --mem-per-cpu=100
+    #SBATCH --mem=100
     
     #load the julia module
     module load Julia/1.9.0-linux-x86_64

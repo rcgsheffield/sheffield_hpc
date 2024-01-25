@@ -149,7 +149,40 @@ backup folders.
 
   It is easy to make mistakes with ``rsync`` and accidentally transfer files to the wrong location, sync in the wrong 
   direction or otherwise accidentally overwrite files. To help you avoid this, you can first use the ``--dry-run`` flag for 
-  ``rsync`` to show you the changes it will make for a given command.
+  ``rsync`` to show you the changes it will make for a given command. 
+  
+.. _rsync_behaviour:
+
+.. dropdown:: :underline-bold:`rsync Behaviour with Trailing Slashes`
+
+        Be cautious when specifying paths with or without trailing slashes. 
+        Ensure that you understand how ``rsync`` interprets these slashes to prevent unintended outcomes. 
+
+
+        **With Trailing Slash on Source Directory**:
+        ::
+               rsync -av /source/directory/ /destination/directory
+
+        - When you use a trailing slash on the source directory it tells ``rsync`` to copy the **contents** of the source directory into the destination directory.
+
+        **Without Trailing Slash on Source Directory**:
+        ::
+               rsync -av /source/directory /destination/directory
+
+        - When you don't use a trailing slash on the source directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
+
+        **Trailing Slash on Destination Directory**:
+        ::
+               rsync -av /source/directory/ /destination/directory
+
+        - When you use a trailing slash on the destination directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
+
+        **Without Trailing Slash on Destination Directory**:
+        ::
+               rsync -av /source/directory/ /destination/directory
+
+        - When you don't use a trailing slash on the destination directory it tells ``rsync`` to copy the **contents** of the source directory into the destination directory.
+
 
 The ``rsync`` syntax is very similar to ``scp``. To transfer to another computer with commonly used options, 
 where below substitute **$CLUSTER_NAME** with stanage or bessemer and **$USER** with your cluster username.
@@ -172,7 +205,7 @@ To recursively copy a directory, we can use the same options:
 
   rsync -avzP /home/user/isos/ $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
 
-This will copy the local directory and its contents under the specified directory on the remote system. 
+This will copy the local directory and its contents under the specified directory on the remote system.
 If the trailing slash is omitted on the destination path, a new directory corresponding to the transferred 
 directory (isos in the example) will not be created, and the contents of the source directory will be copied 
 directly into the destination directory.

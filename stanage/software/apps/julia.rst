@@ -72,7 +72,7 @@ Ensure that ``example.jl`` and ``my_job.slurm`` are both in your current working
 Installation notes
 ------------------
 
-|softwarename| version 1.9.0 was installed using Easybuild 4.7.0, build details can be found 
+|softwarename| version 1.9.0 was installed using Easybuild 4.8.1, build details can be found 
 in ``$EBROOTNCDU/easybuild`` with the module loaded.
 
 

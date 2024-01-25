@@ -73,7 +73,7 @@ Installation notes
 ------------------
 
 |softwarename| version 1.9.0 was installed using Easybuild 4.8.1, build details can be found 
-in ``$EBROOTNCDU/easybuild`` with the module loaded.
+in ``$EBROOTJULIA/easybuild`` with the module loaded.
 
 
 --------

@@ -26,7 +26,7 @@ Interactive usage
 After connecting to Stanage (see :ref:`ssh`),  start an interactive session with the 
 :code:`srun --pty bash -i` command.
 
-The latest version of STAR (currently version 2.7.10b) is made available with the command:
+STAR can be loaded with the command:
 
 .. code-block:: console
 
@@ -63,18 +63,17 @@ annotation (regions: PRI), for the purpose for this example we use only the data
 
 
 The following is an example batch submission script, ``my_job.sh``, to run the executable ``STAR``.
-The script requests 4 cores using the OpenMP parallel environment with a runtime of 30 minutes and 
-6 GB of real memory per core to generate a genome index using the above data/annotations.
+The script requests 4 cores using the OpenMP library and multi-threading with a runtime of 5 minutes and 
+1 GB of real memory per core to generate a genome index using the above data/annotations.
 
 .. code-block:: bash
 
          #!/bin/bash
          #SBATCH --job-name=STAR_test
-         #SBATCH --nodes=1
-         #SBATCH --ntasks-per-node=4
-         #SBATCH --mem=24000
+         #SBATCH --cpus-per-task=4
+         #SBATCH --mem=1000
          #SBATCH --output=output_STAR_4.%j.out
-         #SBATCH --time=00:60:00
+         #SBATCH --time=00:05:00
          #SBATCH --mail-user=a.person@sheffield.ac.uk
          #SBATCH --mail-type=ALL
 

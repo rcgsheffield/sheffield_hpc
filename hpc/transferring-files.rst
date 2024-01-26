@@ -155,33 +155,41 @@ backup folders.
 
 .. dropdown:: :underline-bold:`rsync Behaviour with Trailing Slashes`
 
-        Be cautious when specifying paths with or without trailing slashes. 
-        Ensure that you understand how ``rsync`` interprets these slashes to prevent unintended outcomes. 
+      Be cautious when specifying paths with or without trailing slashes. 
+      Ensure that you understand how ``rsync`` interprets these slashes to prevent unintended outcomes. 
 
 
-        **With Trailing Slash on Source Directory**:
-        ::
-               rsync -av /source/directory/ /destination/directory
+      **With Trailing Slash on Source Directory**:
 
-        - When you use a trailing slash on the source directory it tells ``rsync`` to copy the **contents** of the source directory into the destination directory.
+      .. code-block::
 
-        **Without Trailing Slash on Source Directory**:
-        ::
-               rsync -av /source/directory /destination/directory
+          rsync -av /source/directory/ /destination/directory
 
-        - When you don't use a trailing slash on the source directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
+      - When you use a trailing slash on the source directory it tells ``rsync`` to copy the **contents** of the source directory into the destination directory.
 
-        **Trailing Slash on Destination Directory**:
-        ::
-               rsync -av /source/directory/ /destination/directory
+      **Without Trailing Slash on Source Directory**:
 
-        - When you use a trailing slash on the destination directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
+      .. code-block::
 
-        **Without Trailing Slash on Destination Directory**:
-        ::
-               rsync -av /source/directory/ /destination/directory
+              rsync -av /source/directory /destination/directory
 
-        - When you don't use a trailing slash on the destination directory it tells ``rsync`` to copy the **contents** of the source directory into the destination directory.
+      - When you don't use a trailing slash on the source directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
+
+      **Trailing Slash on Destination Directory**:
+
+      .. code-block::
+
+              rsync -av /source/directory/ /destination/directory
+
+      - When you use a trailing slash on the destination directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
+
+      **Without Trailing Slash on Destination Directory**:
+
+      .. code-block::
+        
+              rsync -av /source/directory/ /destination/directory
+
+      - When you don't use a trailing slash on the destination directory it tells ``rsync`` to copy the **contents** of the source directory into the destination directory.
 
 
 The ``rsync`` syntax is very similar to ``scp``. To transfer to another computer with commonly used options, 

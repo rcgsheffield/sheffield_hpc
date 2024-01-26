@@ -18,7 +18,7 @@ Interactive Usage
 -----------------
 After connecting to Stanage,  start an interactive session with the ``srun --pty bash –i`` command.
 
-The latest version of MATLAB (currently 2022a) is made available by running:
+Load a particular version of Julia with:
 
 .. code-block:: bash
 
@@ -55,7 +55,7 @@ First, you need to write a batch submission file. We assume you’ll call this `
     #!/bin/bash
     #SBATCH --ntasks=1
     #SBATCH --time=10:00
-    #SBATCH --mem-per-cpu=100
+    #SBATCH --mem=100
     
     #load the julia module
     module load Julia/1.9.0-linux-x86_64
@@ -71,8 +71,8 @@ Ensure that ``example.jl`` and ``my_job.slurm`` are both in your current working
 Installation notes
 ------------------
 
-|softwarename| version 1.9.0 was installed using Easybuild 4.7.0, build details can be found 
-in ``$EBROOTNCDU/easybuild`` with the module loaded.
+|softwarename| version 1.9.0 was installed using Easybuild 4.8.1, build details can be found 
+in ``$EBROOTJULIA/easybuild`` with the module loaded.
 
 
 --------

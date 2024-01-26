@@ -11,7 +11,6 @@
    :Versions:   |currentver|
    :URL: https://julialang.org/
    :Documentation:  https://docs.julialang.org/en/v1/
-   :Dependencies: EasyBuild (see :ref:`stanage_eb_toolchains`).
 
 The Julia programming language is a flexible dynamic language, appropriate for scientific and numerical computing, with performance comparable to traditional statically-typed languages. For more information visit: https://docs.julialang.org/en/v1/  
 
@@ -23,7 +22,7 @@ The latest version of MATLAB (currently 2022a) is made available by running:
 
 .. code-block:: bash
 
-   module Julia/1.9.0-linux-x86_64
+   module load Julia/1.9.0-linux-x86_64
 
 You can then start Julia with ``julia``.
 
@@ -63,10 +62,10 @@ First, you need to write a batch submission file. We assume you’ll call this `
 
     julia example.jl
 
-Ensure that ``example.jl`` and ``my_job.slurm`` are both in your current working directory, then submit your job to the batch system:
+Ensure that ``example.jl`` and ``my_job.slurm`` are both in your current working directory, then submit your job to the SLURM scheduler:
 
 .. code-block:: bash
-    
+
     sbatch my_job.slurm
 
 Installation notes

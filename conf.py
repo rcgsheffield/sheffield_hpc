@@ -27,7 +27,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
-    'sphinx_panels',
+    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

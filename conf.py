@@ -27,11 +27,10 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
-    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-# templates_path = ['_templates']
+templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -109,7 +108,7 @@ html_theme_options = {
 #                 'using-iceberg/**': ['softwaretoc.html'],
 #                 'index': []}
 
-#html_sidebars = {'**': ['softwaretoc.html']}
+html_sidebars = {'**': ['searchbox.html']}
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".

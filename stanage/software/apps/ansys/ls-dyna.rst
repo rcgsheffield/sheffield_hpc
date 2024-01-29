@@ -64,6 +64,28 @@ The following code can be used in an interactive session to launch a single core
 
     lsdyna_dp.e i=i.k memory=50m ncpu=$SLURM_NTASKS
 
+.. _lsdyna_mem_spec:
+
+**Memory Specification**
+
+The LS-DYNA command line option ``memory`` specifies memory per node with a base unit words.
+For single precision LS-DYNA, a word is 4 bytes; for double precision, a word is 8 bytes.
+
+
+- Single Precision Example:
+
+  .. code-block:: bash
+  
+      memory=300m     #300 megawords = 300 M * 4 B = 1200 MB (~1.2GB)
+      memory=600      #600 words = 600 * 4 B = 2400 KB
+
+- Double Precision Example:
+
+  .. code-block:: bash
+
+      memory=300m     #300 megawords = 300 M * 8 B = 2400 MB (~2.4GB)
+      memory=600      #600 words = 600 * 8 B = 4800 KB
+
 
 --------------------
 
@@ -118,6 +140,8 @@ Sample LS-DYNA Batch Job Script
 
     #Run your LS-DYNA work below:
     $SOLVER i=$INPUT memory=$MEMORY ncpu=$SLURM_NTASKS
+
+See :ref:`Memory Specification<lsdyna_mem_spec>` above.
 
 Further details about how to construct batch jobs can be found on the 
 :ref:`batch submission guide <submit_batch_bessemer>` page

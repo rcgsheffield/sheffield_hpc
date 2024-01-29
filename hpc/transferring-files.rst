@@ -180,7 +180,7 @@ backup folders.
       
             .. code-block::
             
-                    rsync -av /source/directory/ /destination/directory
+                    rsync -av /source/directory/ /destination/directory/
       
             - When you use a trailing slash on the destination directory it tells ``rsync`` to copy the **source directory itself** and its contents into the destination directory.
       

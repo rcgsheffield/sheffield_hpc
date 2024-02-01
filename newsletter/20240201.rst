@@ -36,7 +36,7 @@ The following software are now available on Stanage:
 Upcoming training
 ------------------
 
-Research computing key training dates for February. You can register for the courses below and more courses by `following this link <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
+Research computing key training dates for February. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
 - Deap learning - 22/02/2024 to 23/02/2024 (2 day course)
 - Python Programming 1 - 20/02/2024
 - Python Programming 2 - 27/02/2024

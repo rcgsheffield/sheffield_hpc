@@ -5,9 +5,9 @@ News - 2024-02-01
 
 Welcome back! We hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalized department visits upon request. Feel free to reach out to us via our email ``researchcomputing@sheffield.ac.uk``.
 
-For those wanting to learn new skills (such as source control with git), we encourage you to explore our upcoming training sessions. The training team will run courses in data science, machine learning, high-performance computing, and programming, all organized by IT Services and the RSE team.
+For those wanting to learn new skills (such as source control with git), we encourage you to explore our :ref:`upcoming training sessions <training>` . The training team will run courses in data science, machine learning, high-performance computing, and programming, all organized by IT Services and the RSE team.
 
-We also have 2 part time vacancies on the horizon. Once the recruitment period is live, we will send an email to notify potential candidates.
+We also have 2 part time :ref:`vacancies <vacancies_20240201>` on the horizon. Once the recruitment period is live, we will send an email to notify potential candidates.
 
 GPU News
 --------
@@ -21,17 +21,20 @@ Recent HPC documentation updates:
 - References to ShARC will be removed from the documentation and only the:ref:`Decommissioned Clusters <decommissioned>` section should have any reference to it.
 - The parallel computing section will also be updated this month.
 
-We work very hard on the documentation and any feedback or criticism helps us make them clearer and easy to read 
-- For example the search engine change was based on user feedback, so please feel free to get intouch.
+We work very hard on the documentation and any feedback or criticism helps us make them clearer and easy to read.
 
+- For example the search engine change was based on user feedback, so please feel free to get intouch.
 
 New Packages and software
 --------------------------
+
 The following software are now available on Stanage:
 
 - :ref:`Julia 1.9.0 <julia_stanage>` 
 - :ref:`MATLAB 2023b is now available on the GPU nodes  <matlab_stanage>` 
 - RStudio 2023 (Documentation pending) 
+
+.. _training:
 
 Upcoming training
 ------------------
@@ -54,6 +57,8 @@ The RSE team will run the following course(s) in February.
 Planned maintenance
 -------------------
 - Currently no planned down time for February.
+
+.. _vacancies_20240201:
 
 vacancies
 ---------

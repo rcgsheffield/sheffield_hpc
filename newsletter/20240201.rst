@@ -60,7 +60,7 @@ Planned maintenance
 
 .. _vacancies_20240201:
 
-vacancies
+Vacancies
 ---------
 - we are intending to hire 2 casual workers to come join our Research computing support team. We will be looking for 2 post graduates, with linux/HPC experience (all skill levels are welcome) to support our research computing community. 
 - The successful candidates will be offered a three-month contract, working two hours per day, four days per week, preferably with at least one day per week in the Brunswick Street office with the Research Computing Support team.

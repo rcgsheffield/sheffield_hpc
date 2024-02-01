@@ -5,7 +5,7 @@ News - 2024-02-01
 
 Welcome back! We hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalised department visits upon request. Feel free to reach out to us via our email ``researchcomputing@sheffield.ac.uk``.
 
-For those wanting to learn new skills (such as source control with git), we encourage you to explore our :ref:`upcoming training sessions <training>` . The training team will run courses in data science, machine learning, high-performance computing, and programming, all organised by IT Services and the RSE team.
+For those wanting to learn new skills (such as source control with git), we encourage you to explore our :ref:`upcoming training sessions <training_20240201>` . The training team will run courses in data science, machine learning, high-performance computing, and programming, all organised by IT Services and the RSE team.
 
 We also have 2 part time :ref:`vacancies <vacancies_20240201>` on the horizon. Once the recruitment period is live, we will send an email to notify potential candidates.
 
@@ -23,7 +23,7 @@ Recent HPC documentation updates:
 
 We work very hard on the documentation and any feedback or criticism helps us make them clearer and easy to read.
 
-- For example the search engine change was based on user feedback, so please feel free to get intouch.
+- For example, the search engine change was based on user feedback, so please feel free to get in touch.
 
 New Packages and software
 --------------------------
@@ -34,7 +34,7 @@ The following software are now available on Stanage:
 - :ref:`MATLAB 2023b is now available on the GPU nodes  <matlab_stanage>` 
 - RStudio 2023 (Documentation pending) 
 
-.. _training:
+.. _training_20240201:
 
 Upcoming training
 ------------------
@@ -62,7 +62,7 @@ Planned maintenance
 
 Vacancies
 ---------
-- we are intending to hire 2 casual workers to come join our Research computing support team. We will be looking for 2 post graduates, with linux/HPC experience (all skill levels are welcome) to support our research computing community. 
+- We are intending to hire 2 casual workers to come join our Research computing support team. We will be looking for 2 post graduates, with linux/HPC experience (all skill levels are welcome) to support our research computing community. 
 - The successful candidates will be offered a three-month contract, working two hours per day, four days per week, preferably with at least one day per week in the Brunswick Street office with the Research Computing Support team.
 
 

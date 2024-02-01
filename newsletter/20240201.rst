@@ -7,7 +7,7 @@ Welcome back! We're delighted to have you back with us and hope everyone enjoyed
 
 For those wanting to learn new skills like using source control with git, we encourage you to explore our upcoming training sessions below. The training team will run courses in data science, machine learning, high-performance computing, and programming, all organized by IT Services.
 
-We also have 2 part time vacancies on the horizon. The details for these are listed in the vacancies section and once the recruitment period is live, we will send an email to notify potential candidates.
+We also have 2 part time vacancies on the horizon. Once the recruitment period is live, we will send an email to notify potential candidates.
 
 GPU News
 --------

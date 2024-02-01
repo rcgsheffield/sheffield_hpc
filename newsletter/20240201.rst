@@ -3,7 +3,7 @@
 News - 2024-02-01
 =================
 
-Welcome back! We're delighted to have you back with us and hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalized department visits upon request. Feel free to reach out to us via our email email ``researchcomputing@sheffield.ac.uk``.
+Welcome back! We hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalized department visits upon request. Feel free to reach out to us via our email ``researchcomputing@sheffield.ac.uk``.
 
 For those wanting to learn new skills (such as source control with git), we encourage you to explore our upcoming training sessions. The training team will run courses in data science, machine learning, high-performance computing, and programming, all organized by IT Services.
 

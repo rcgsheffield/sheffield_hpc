@@ -18,7 +18,7 @@ GPU News
 
 Recent HPC documentation updates:
 ---------------------------------
-- We have taken the first steps into making the search function on the HPC documentation more accurate. Going into the documentation site , you will notice the new search engine and over time we are going to be working in further optimising the search function to make it more accurate.
+- We are working to improve the search functionality within our HPC documentation. You will notice the new search box which is powered by google search engine. Further work aims to optimise search results.
 - References to ShARC will be removed from the documentation and only the:ref:`Decommissioned Clusters <decommissioned>` section should have any reference to it.
 - The parallel computing section will also be updated this month.
 

@@ -3,15 +3,15 @@
 News - 2024-02-01
 =================
 
-Welcome back! We hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalized department visits upon request. Feel free to reach out to us via our email ``researchcomputing@sheffield.ac.uk``.
+Welcome back! We hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalised department visits upon request. Feel free to reach out to us via our email ``researchcomputing@sheffield.ac.uk``.
 
-For those wanting to learn new skills (such as source control with git), we encourage you to explore our :ref:`upcoming training sessions <training>` . The training team will run courses in data science, machine learning, high-performance computing, and programming, all organized by IT Services and the RSE team.
+For those wanting to learn new skills (such as source control with git), we encourage you to explore our :ref:`upcoming training sessions <training>` . The training team will run courses in data science, machine learning, high-performance computing, and programming, all organised by IT Services and the RSE team.
 
 We also have 2 part time :ref:`vacancies <vacancies_20240201>` on the horizon. Once the recruitment period is live, we will send an email to notify potential candidates.
 
 GPU News
 --------
-- The Stanage H100 GPU drivers have been updated resolving a numerical inaccuracy issue reported in `September <https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-86-10/index.html>`_ , where certain operations put the GPU in an invalid state that allowed some GPU instructions to operate at unsupported frequency that could result in incorrect computation results and faster than expected performance.
+- The Stanage H100 GPU drivers have been updated resolving a numerical inaccuracy `issue <https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-86-10/index.html>`_ reported in September  , where certain operations put the GPU in an invalid state that allowed some GPU instructions to operate at unsupported frequency that could result in incorrect computation results and faster than expected performance.
 - The GPU drivers in Bessemer were also updated.
 - We're looking to introduce CUDA 12.2 support in the near future.
 

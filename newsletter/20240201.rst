@@ -11,7 +11,7 @@ We also have 2 part time vacancies on the horizon. Once the recruitment period i
 
 GPU News
 --------
-- The Stanage H100 GPU drivers have been updated, addressing a numerical inaccuracy bug that was reported back in september.
+- The Stanage H100 GPU drivers have been updated resolving a numerical inaccuracy issue reported in September.
 - The GPU drivers in Bessemer were also updated.
 - With the new drivers in place, we will soon start supporting CUDA 12.2. You will be notified once this is done in an email and should also feature in next months newsletter.
 

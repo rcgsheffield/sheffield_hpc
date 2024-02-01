@@ -45,7 +45,7 @@ Research computing key training dates for February. You can register for the cou
 - Introduction to using HPC - TBC
 - Basics of Supervised Machine Learning - TBC
 
-As you can see above, some of the dates are yet to be confirmed, stay tuned for the release of the upcoming timetable, scheduled in the next few weeks on myDevelopment.
+As you can see above, some of the dates are yet to be confirmed, stay tuned for the release of the upcoming timetable, scheduled in the next few weeks on `myDevelopment<https://www.sheffield.ac.uk/nap/service/redirect/mydev>`_.
 
 The RSE team will run the following course(s) in February. You can register for it `here <https://rse.shef.ac.uk/training/workshop/workshop-2024-02-05-git-zero-hero>`_ .
 - Git & GitHub through GitKraken! - 05/02/2024 to 06/02/2024 (2 day course)

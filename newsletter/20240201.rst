@@ -15,7 +15,7 @@ GPU News
 - The GPU drivers in Bessemer were also updated.
 - We're looking to introduce CUDA 12.2 support in the near future.
 
-Recent HPC documentation updates:
+Recent HPC Documentation Updates:
 ---------------------------------
 - We are working to improve the search functionality within our HPC documentation. You will notice the new search box which is powered by google search engine. Further work aims to optimise search results.
 - References to ShARC will be removed from the documentation and only the :ref:`Decommissioned Clusters <decommissioned>` section should have any reference to it.
@@ -25,7 +25,7 @@ We work very hard on the documentation and any feedback or criticism helps us ma
 
 - For example, the search engine change was based on user feedback, so please feel free to get in touch.
 
-New Packages and software
+New Packages and Software
 --------------------------
 
 The following software are now available on Stanage:
@@ -36,7 +36,7 @@ The following software are now available on Stanage:
 
 .. _training_20240201:
 
-Upcoming training
+Upcoming Training
 ------------------
 Research computing key training dates for February. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
 
@@ -54,7 +54,7 @@ The RSE team will run the following course(s) in February.
 
 - `Git & GitHub through GitKraken! - 05/02/2024 to 06/02/2024 (2 day course) <https://rse.shef.ac.uk/training/workshop/workshop-2024-02-05-git-zero-hero>`_ 
 
-Planned maintenance
+Planned Maintenance
 -------------------
 - Currently no planned down time for February.
 

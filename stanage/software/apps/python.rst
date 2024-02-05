@@ -23,6 +23,13 @@ need.
 Using Conda Python
 ------------------
 
+.. attention::
+         
+        **We recommend that you use the following 2022 (sub)version of Anaconda3:** ``Anaconda3/2022.05``
+        
+        *The latest module,* ``Anaconda3/2022.10`` *, is under investigation as this has demonstrated odd 
+        behaviour on conda environment exit (for some users). We will investigate this, and advise in due course.*
+
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
 
 Anaconda Python can be loaded with one of the following::

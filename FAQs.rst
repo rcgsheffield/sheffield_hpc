@@ -5,6 +5,10 @@ Frequently Asked Questions
 In this section, we'll discuss some tips for solving problems with Stanage and Bessemer.
 It is suggested that you work through some of the ideas here before contacting the IT Services Helpdesk for assistance.
 
+.. contents::
+   :local:
+   :depth: 1
+
 ------
 
 Strange things are happening with my terminal or my terminal seems broken

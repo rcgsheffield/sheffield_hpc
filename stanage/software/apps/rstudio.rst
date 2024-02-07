@@ -31,7 +31,7 @@ Once you have loaded the modules you can launch the RStudio IDE by running the f
     rstudio --no-sandbox
 
 
-Installation notes
+Installation Notes
 ------------------
 
 |softwarename| version 2023.12.0-369 

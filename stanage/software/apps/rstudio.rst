@@ -15,7 +15,7 @@ The RStudio integrated development environment (IDE) is a set of tools built to 
 
 Interactive Usage
 -----------------
-To use RStudio you will need to be in a :ref:`flight graphical sessions on Stanage <flight-desktop>`.
+To use RStudio you will need to be in a :ref:`flight graphical session on Stanage <flight-desktop>`.
 
 In your flight session open a terminal and load the R and Rstudio modules
 

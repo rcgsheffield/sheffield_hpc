@@ -1,7 +1,7 @@
 .. _flight-desktop:
 
-Graphical sessions on Stanage
-=============================
+Graphical Sessions (With Flight) on Stanage 
+===========================================
 
 Graphical desktop access to an interactive session can be achieved using Flight Desktop and TigerVNC. See below for simple usage instructions.
 

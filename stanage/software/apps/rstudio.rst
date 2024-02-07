@@ -40,7 +40,7 @@ Installation Notes
 Was installed using Easybuild 4.8.1, build details can be found 
 in ``$EBROOTRSTUDIO/easybuild`` with the module loaded.
 
-I created the following easy config. (Hasnt been pushed to the EB community yet)
+I created the following easy config. (Hasn't been pushed to the EB community yet)
 
 .. code-block:: bash
 

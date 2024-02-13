@@ -45,15 +45,25 @@ General CPU node specifications
 GPU node specifications
 -----------------------
 
-One node is publicly available (not exclusive to research groups):
+One node is permanently publicly available (not exclusive to research groups):
 
 * Machine: `Dell PowerEdge C4140`_.
-* CPUs: 2 x Intel Xeon Gold 6138 (2.00GHz).
+* CPUs: 2 x Intel Xeon Gold 6138 (2.00GHz) (2x 20 cores)
 * RAM: 384 GB (i.e. 9.6 GiB / core); 2666 MHz; DDR4.
 * Local storage: 220 GiB SATA SSD.
 * GPUs: 4 x `NVIDIA Tesla V100`_:
 
   * 32 GiB of GDDR5 memory.
+
+From June to approx August 2023 three additional GPU nodes are available to all users:
+
+* Machine: Dell PowerEdge R740XD
+* CPUs: 2x Intel Xeon(R) Gold 5120 CPU @ 2.20GHz (2x 14 cores)
+* RAM: 192 GB (i.e. 6.8 GiB / core); 2666 MHz; DDR4.
+* Local storage: 3.4 TiB RAID 1 using 2x SATA SSDs
+* GPUs: 1 x `NVIDIA Tesla V100`_:
+
+  * 16 GiB of GDDR5 memory.
 
 Networking
 ----------

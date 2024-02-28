@@ -72,7 +72,7 @@ Connecting with a Password or SSH keys
 
                 .. code-block:: console
 
-                    ssh test@stanage.shef.ac.uk
+                    ssh te1st@stanage.shef.ac.uk
                     Password: 
                     Verification code: 
                     Last login: Wed Apr 12 17:09:24 2023 from r.x.y.z
@@ -83,7 +83,7 @@ Connecting with a Password or SSH keys
                     *                                                                           *
                     *               Unauthorised use of this system is prohibited.              *
                     *****************************************************************************
-                    [test@login1 [stanage] ~]$
+                    [te1st@login1 [stanage] ~]$
 
                 If you have not setup your Stanage TOTP MFA, please follow the steps published at: :ref:`stanage-totp-setup`
             
@@ -92,6 +92,21 @@ Connecting with a Password or SSH keys
                 On the Bessemer cluster, when you connect you will be prompted to via a push notification to your DUO device to approve access 
                 or must enter a one-time code from your University provided hardware token which is associated with your DUO account.
 
+                .. code-block:: console
+
+                    ssh te1st@bessemer.shef.ac.uk
+                    Password: 
+                    Verification code: 
+                    Last login: Wed Apr 12 17:09:24 2023 from r.x.y.z
+                    *****************************************************************************
+                    *                           Bessemer HPC cluster                             *
+                    *                       The University Of Sheffield                         *
+                    *                       https://docs.hpc.shef.ac.uk                         *
+                    *                                                                           *
+                    *               Unauthorised use of this system is prohibited.              *
+                    *****************************************************************************
+                    [te1st@bessemer-login1 ~]$
+                
                 If you have not setup your University DUO MFA, please follow the steps published at: https://www.sheffield.ac.uk/it-services/mfa/set-mfa
 
             

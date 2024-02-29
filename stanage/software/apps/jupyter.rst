@@ -122,17 +122,3 @@ For example step 7  of the ``Installing and Running Jupyter Notebooks`` section 
 .. code-block:: bash
     
     http://localhost:8889/tree
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-

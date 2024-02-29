@@ -94,11 +94,3 @@ This should produce a similarout put to below showing where the keys are to be s
         .. code-block:: console
         
             ssh -i /path/to/private_key/<private_key_filename> $YourUsername@$CLUSTER_NAME.shef.ac.uk
-
-
-
-
-
-
-
-

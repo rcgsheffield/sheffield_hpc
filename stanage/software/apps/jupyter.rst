@@ -71,7 +71,7 @@ The above command will produce output similar to the following example:
 Accessing Jupyter with a Web Browser
 =====================================
 
-Once you have completed the above steps, you are ready to access jupyter on a web browser. There are two ways to do this:
+Once you have completed the above steps, you are ready to access Jupyter with a web browser. There are two ways to do this:
 
 #. Using flight-desktop (Recommended)
 #. Using Tunneling/port forwading (Advanced users)

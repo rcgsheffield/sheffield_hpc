@@ -11,7 +11,7 @@
    :Documentation: https://jupyter-notebook.readthedocs.io/en/5.6.0/index.html
 
 
-Jupyter Notebook is an open source web application that you can use to create and share documents that contain live code, equations, visualizations, and text. 
+Jupyter Notebook is an open source web application that you can use to create and share documents that contain live code, equations, visualisations, and text. 
 
 Installing and Running Jupyter Notebooks
 ========================================
@@ -64,8 +64,12 @@ The above command will produce output similar to the following example:
     ...
     ...
 
-Accessing Jupyter On A Web Browser
-==================================
+.. note:: 
+
+    Please take note of the two addresses in the output. You will need them later. In this example it will be ``http://localhost:8889/tree`` and ``http://127.0.0.1:8889/tree`` . 
+
+Accessing Jupyter with a Web Browser
+=====================================
 
 Once you have completed the above steps, you are ready to access jupyter on a web browser. There are two ways to do this:
 
@@ -78,7 +82,7 @@ Using flight-desktop
 1. Start a :ref:`flight <flight-desktop>`  desktop session.
 2. Click on the web browser icon 
 
-.. image:: /images/flight_desktop_session.png
+.. image:: /images/browser_button.png
 
 3. Once the web browser is up and running, use the web adress with ``127.0.0.1`` from step 7  of the ``Installing and Running Jupyter Notebooks`` section. In our example, this would be 
 
@@ -100,24 +104,27 @@ This is mostly recommended for advanced users.
 
     ssh -J $YourUsername@stanage.sheffield.ac.uk -L 8888:127.0.0.1:8888 $YourUsername@<IP Address>
 
-Please note the above command is heavily dependant on the node you launched  jupyter notebook.
+.. note:: 
 
-+------------------------------------------------------+------------------------------------------------------+
-| Interactive Node                                     | IP Address                                           |
-+======================================================+======================================================+
-| node001                                              | 10.10.1.1                                            |
-+------------------------------------------------------+------------------------------------------------------+
-| node002                                              | 10.10.1.2                                            |
-+------------------------------------------------------+------------------------------------------------------+
-
-For example step 7  of the ``Installing and Running Jupyter Notebooks`` section was launched in worker nodeoo2, the command would be :
-
-.. code-block:: bash
-
-    ssh -J $YourUsername@stanage.sheffield.ac.uk -L 8888:127.0.0.1:8888 $YourUsername@10.10.1.2
+    The above command is heavily dependant on the node you launched  jupyter notebook.
 
 
-3. Once step 2 has run and succesful, you just need to open a browser (Chrome/Edge/Mozilla etc) on your machine and enter the address containing  ``localhost`` from step 7  of the ``Installing and Running Jupyter Notebooks`` section. In our example this would be 
+    +------------------------------------------------------+------------------------------------------------------+
+    | Interactive Node                                     | IP Address                                           |
+    +======================================================+======================================================+
+    | node001                                              | 10.10.1.1                                            |
+    +------------------------------------------------------+------------------------------------------------------+
+    | node002                                              | 10.10.1.2                                            |
+    +------------------------------------------------------+------------------------------------------------------+
+
+    For if we launched Jupyter on interactive node002 then the command would be : 
+
+    .. code-block:: bash
+
+        ssh -J $YourUsername@stanage.sheffield.ac.uk -L 8888:127.0.0.1:8888 $YourUsername@10.10.1.2
+
+
+3.  Open a browser (Chrome/Edge/Mozilla etc) on your machine and enter the address we noted earlier containing  ``localhost`` . 
 
 .. code-block:: bash
     

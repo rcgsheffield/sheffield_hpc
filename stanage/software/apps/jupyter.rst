@@ -40,7 +40,7 @@ The HPC clusters are only able to host a jupyter notebook work space in an inter
     
     jupyter notebook --generate-config
 
-6. Set up a password for your Jupyter notebook (This is only done once). To do this, use the command:
+6. Set up a password for your Jupyter notebook (this only needs doing once), with the following command:
 
 .. code-block:: bash
     

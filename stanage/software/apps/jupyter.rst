@@ -110,7 +110,7 @@ Please note the above command is heavily dependant on the node you launched  jup
 | node002                                              | 10.10.1.2                                            |
 +------------------------------------------------------+------------------------------------------------------+
 
-For example step 7  of the ``Installing and Running Jupyter Notebooks`` section was launched in worker nodeoo2, the command would be :
+For example, if we launched Jupyter on interactive node002 then the command would be :
 
 .. code-block:: bash
 

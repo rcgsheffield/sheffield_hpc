@@ -16,7 +16,7 @@ Jupyter Notebook is an open source web application that you can use to create an
 Installing and Running Jupyter Notebooks
 ========================================
 
-The HPC clusters are only able to host a jupyter notebook work space in an interactve session. To install and run Jupyter please follow these steps.
+The HPC clusters are only able to host a jupyter notebook work space in an interactive session. To install and run Jupyter please follow these steps.
 
 1. start an interactive session  with the following command:
 

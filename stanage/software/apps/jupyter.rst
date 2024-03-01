@@ -52,7 +52,7 @@ The HPC clusters are only able to host a jupyter notebook work space in an inter
     
     jupyter notebook 
 
-The above command will produce output similar to the following example:
+This will produce output similar to the following:
 
 .. code-block:: bash
     

@@ -3,19 +3,29 @@
 News - 2024-03-01
 =================
 
-Hello everyone, we have made it to spring, atleast for those who count seasons meteorologiacally, and for those who count seasons astronomically, stay strong just 20 more days of winter.
+Hello everyone! We have made it to spring, at least for those who count seasons meteorologiacally. For those who count seasons astronomically, stay strong; just 20 more days of winter.
+
+- This month we are are excited to invite you all to our **Research IT Forum**. More details are in the :ref:`Upcoming Events <upcoming_events>` section. 
+- We also have an exciting new course in the :ref:`Upcoming training  <upcoming_training>`  section.
 
 New Packages and Software
---------------------------
+=========================
 
-- Over the last 2 weeks you would have notice a warning when you loaded ``Anaconda 2022.10``. This is due to a bug that affected some users. We have re-installed ``Anaconda 2022.10`` and are doing our finals tests before the message is be removed.
+- Over the last 2, weeks you would have notice a warning when you loaded ``Anaconda 2022.10``. This is due to a bug that affected some users. We have re-installed ``Anaconda 2022.10`` and are doing our finals tests before removing the message.
 
+.. _upcoming_events:
 
 Upcoming Events
-----------------
-- Our annual Research IT Forum will be held on the 04/03/2024. This will be an afternoon filled with talks, interesting case studies for and from our HPC community and snacks.
-- The sheffieldR user group will be hosting their monthly meet up on the 21/03/2024. These are held once a month to suppport our R users here at sheffield university by offering interesting talks and code clinics for those struggling with R code or data. It also provide a forum for you to ask questions or share ideas with your peers who are using R. All are welcome so please join their `meet up group <https://www.meetup.com/sheffieldr-sheffield-r-users-group/>`_ or fill in the `google form <https://docs.google.com/forms/d/e/1FAIpQLSffiI7o68QcFngrirJ7YrjGgJfduwtv0UWJDQeNQLLKUDQmzA/viewform>`_ , if you need any help with your code or data.
+===============
 
+.. note:: 
+
+    Please use your **university email address** when you register for events.
+
+- **Research IT Forum:** Join us on the 7th of March from 2:30 pm to 4:00 pm. The theme for this Research IT Forum is to present Research & Innovation IT Services for Researchers. We will describe our 6 services and how they can enhance your research. For more information and registration, please visit the `event page <https://www.eventbrite.co.uk/e/research-it-forum-research-innovation-services-for-researchers-tickets-852097987017>`_. We look forward to seeing you all. 
+- **sheffieldR User Group Meetup:** The sheffieldR user group will be hosting their monthly meetup on the 21st March 2024. These meetups are held once a month to support our R users here at Sheffield University by offering interesting talks and code clinics for those struggling with R code or data. It also provides a forum for you to ask questions or share ideas with your peers who are using R. All are welcome, so please join their  `meet up group <https://www.meetup.com/sheffieldr-sheffield-r-users-group/>`_ or fill in the `google form <https://docs.google.com/forms/d/e/1FAIpQLSffiI7o68QcFngrirJ7YrjGgJfduwtv0UWJDQeNQLLKUDQmzA/viewform>`_ if you need any help with your code or data. You are also welcome to attend and be part of our Sheffield R community.
+
+.. _upcoming_training:
 
 Upcoming Training
 =================
@@ -41,7 +51,8 @@ Research computing key training dates for March. You can register for these cour
 - Deap learning - 04/04/2024 to 05/04/2024 (2 day course)
 
 Useful Links
--------------
+============
+
 - :ref:`HPC documentation  <hpc-home>` 
 - `RSE code clinic <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services’ Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
 - :ref:`Citing the HPC services in publications.  <citing>`

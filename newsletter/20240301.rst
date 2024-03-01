@@ -50,10 +50,12 @@ Research computing key training dates for March. You can register for these cour
 - Introduction to R - 26/03/2024
 - Deap learning - 04/04/2024 to 05/04/2024 (2 day course)
 
+Wolfram are also holding free online Mathematica courses on their `portal <https://events.wolfram.com/>`_.
+
 Useful Links
 ============
 
-- :ref:`HPC documentation  <hpc-home>` 
+- :ref:`HPC documentation  <hpc-home>`
 - `RSE code clinic <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services’ Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
 - :ref:`Citing the HPC services in publications.  <citing>`
-- `Training and courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
+- `Training and courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_.

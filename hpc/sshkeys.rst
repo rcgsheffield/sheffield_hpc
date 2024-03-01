@@ -52,7 +52,7 @@ This should produce a similar output to that shown below. You will be asked wher
 
     .. tab:: MobaXTerm
 
-        For users on windows using mobaxterm you can simply add your private key to any of the profiles you have setted up as shown in the image below. This will open a file explorer window that will allow you to select your private key.
+        For users on windows using mobaxterm you can simply add your private key to any of the profiles you have set up as shown in the image below. This will open a file explorer window that will allow you to select your private key.
 
         .. image:: /images/mobaxterm-PrivateSSHKey-setup.png
 

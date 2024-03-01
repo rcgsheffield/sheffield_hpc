@@ -18,7 +18,7 @@ Installing and Running Jupyter Notebooks
 
 The HPC clusters are only able to host a jupyter notebook work space in an interactive session. To install and run Jupyter please follow these steps.
 
-1. start an interactive session  with the following command:
+1. Start an interactive session  with the following command:
 
 .. code-block:: bash
     

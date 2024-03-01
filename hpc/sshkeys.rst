@@ -32,7 +32,7 @@ This should produce a similar output to that shown below. You will be asked wher
 
 .. code-block:: bash
 
-    scp Path/To/File/id_rsa.pub <your user name>@<ClusterName>.sheffiled.ac.uk:~/.ssh/authorized_keys
+    scp Path/To/File/id_rsa.pub <UserName>@<ClusterName>.sheffiled.ac.uk:~/.ssh/authorized_keys
 
 3. Add SSH private Key to mobaXterm or SSH-Agent on your local machine. This will vary based on your operating system and whether you are using a GUI ssh client like mobaxterm or ssh on a terminal.
 

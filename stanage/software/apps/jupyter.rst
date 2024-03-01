@@ -46,7 +46,7 @@ The HPC clusters are only able to host a jupyter notebook work space in an inter
     
     jupyter notebook password
 
-7. Now you are ready to start jupyter
+7. Now you are ready to start Jupyter:
 
 .. code-block:: bash
     

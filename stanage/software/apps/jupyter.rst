@@ -82,7 +82,7 @@ Using flight-desktop
 1. Start a :ref:`flight <flight-desktop>`  desktop session.
 2. Click on the web browser icon 
 
-.. image:: /images/browser_button.png
+.. image:: /images/browser_button.PNG
 
 3. Once the web browser is up and running, use the web adress with ``127.0.0.1`` from step 7  of the ``Installing and Running Jupyter Notebooks`` section. In our example, this would be 
 

@@ -117,7 +117,7 @@ For example step 7  of the ``Installing and Running Jupyter Notebooks`` section 
     ssh -J $YourUsername@stanage.sheffield.ac.uk -L 8888:127.0.0.1:8888 $YourUsername@10.10.1.2
 
 
-3. Once step 2 has run and succesful, you just need to open a browser (Chrome/Edge/Mozilla etc) on your machine and enter the address containing  ``localhost`` from step 7  of the ``Installing and Running Jupyter Notebooks`` section. In our example this would be 
+3. Open a browser (Chrome/Edge/Mozilla etc) on your machine and enter the address we noted earlier containing  ``localhost``  
 
 .. code-block:: bash
     

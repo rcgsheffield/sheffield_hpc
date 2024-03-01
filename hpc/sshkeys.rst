@@ -6,7 +6,7 @@ SSH keys
 .. warning::
 
     Please note this is recommended for advanced users only. It is important to **store your SSH keys securely and use passphrases** for added protection. 
-    Failure to do so could compromise the security of your account and data. It is because of this why we recommend SSH keys only be used by advanced users,
+    Failure to do so could compromise the security of your account and data. This is why we recommend SSH keys only be used by advanced users,
     who understand the risks and take appropriate measures to secure your SSH keys, such as using **strong passphrases** and secure storage of their keys. 
 
 Generating SSH keys

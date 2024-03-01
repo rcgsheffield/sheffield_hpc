@@ -16,7 +16,7 @@ Jupyter Notebook is an open source web application that you can use to create an
 Installing and Running Jupyter Notebooks
 ========================================
 
-The HPC clusters are only able to host a jupyter notebook work space in an interactive session. To install and run Jupyter please follow these steps.
+The HPC clusters are only able to host a Jupyter notebook work space in an interactive session. To install and run Jupyter please follow these steps.
 
 1. Start an interactive session  with the following command:
 
@@ -66,7 +66,7 @@ This will produce output similar to the following:
 
 .. note:: 
 
-    Please take note of the two addresses in the output. You will need them later. In this example it will be ``http://localhost:8889/tree`` and ``http://127.0.0.1:8889/tree`` . 
+    Please take note of the two addresses in the output. You will need them later. In this example it will be ``http://127.0.0.1:8889/tree`` and ``http://localhost:8889/tree`` . And also the name of the node your interactive session is running on. 
 
 Accessing Jupyter with a Web Browser
 =====================================
@@ -97,7 +97,7 @@ Using Tunneling/Port Forwarding
 
 This is mostly recommended for advanced users.
 
-1. You must have :ref::`ssh keys<ssh_keys>` in place to use this method.
+1. You must have :ref:`ssh keys<ssh_keys>` in place to use this method.
 2. Open a new terminal  and enter the following command. (Please note , without SSH keys, this step will fail)
 
 .. code-block:: bash
@@ -106,7 +106,7 @@ This is mostly recommended for advanced users.
 
 .. note:: 
 
-    The above command is heavily dependant on the node you launched  jupyter notebook.
+    The above command is heavily dependant on the node you launched  Jupyter notebook. S
 
 
     +------------------------------------------------------+------------------------------------------------------+

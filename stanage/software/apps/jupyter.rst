@@ -28,7 +28,7 @@ The HPC clusters are only able to host a jupyter notebook work space in an inter
 
 3. Activate an Anaconda environment (This can be an existing one or the one you created in step 2).
 
-4. Install Jupyter using ``pip``.
+4. Install Jupyter using ``pip`` :
 
 .. code-block:: bash
     

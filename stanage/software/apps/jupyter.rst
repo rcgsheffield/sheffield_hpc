@@ -34,7 +34,7 @@ The HPC clusters are only able to host a jupyter notebook work space in an inter
     
     pip install jupyter
 
-5. If it's your first time using Jupyter, you will need to create a notebook configuration file. The following command will create ``jupyter_notebook_config.py`` in your home folder ``~/.jupyter/jupyter_notebook_config.py``.
+5. If it's your first time using Jupyter, you will need to create a notebook configuration file. The following command will create ``jupyter_notebook_config.py`` in your home directory ``~/.jupyter/jupyter_notebook_config.py``.
 
 .. code-block:: bash
     

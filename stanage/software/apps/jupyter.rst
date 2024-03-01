@@ -74,7 +74,7 @@ Accessing Jupyter with a Web Browser
 Once you have completed the above steps, you are ready to access Jupyter with a web browser. There are two ways to do this:
 
 #. Using flight-desktop (Recommended)
-#. Using Tunneling/port forwading (Advanced users)
+#. Using Tunneling/port forwarding (Advanced users)
 
 Using flight-desktop
 ====================
@@ -84,7 +84,7 @@ Using flight-desktop
 
 .. image:: /images/browser_button.PNG
 
-3. Once the web browser is up and running, use the web adress with ``127.0.0.1`` from step 7  of the ``Installing and Running Jupyter Notebooks`` section. In our example, this would be 
+3. Once the web browser is up and running, use the web address with ``127.0.0.1`` that we noted earlier. In our example, this would be 
 
 
 
@@ -92,12 +92,12 @@ Using flight-desktop
     
     http://127.0.0.1:8889/tree
 
-Using Tunneling/Port Forwading
+Using Tunneling/Port Forwarding
 ==============================
 
 This is mostly recommended for advanced users.
 
-1. You must have `ssh keys<ssh_keys>` in place to use this method.
+1. You must have :ref::`ssh keys<ssh_keys>` in place to use this method.
 2. Open a new terminal  and enter the following command. (Please note , without SSH keys, this step will fail)
 
 .. code-block:: bash
@@ -119,12 +119,12 @@ This is mostly recommended for advanced users.
 
 For example, if we launched Jupyter on interactive node002 then the command would be :
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        ssh -J $YourUsername@stanage.sheffield.ac.uk -L 8888:127.0.0.1:8888 $YourUsername@10.10.1.2
+    ssh -J $YourUsername@stanage.sheffield.ac.uk -L 8888:127.0.0.1:8888 $YourUsername@10.10.1.2
 
 
-3.  Open a browser (Chrome/Edge/Mozilla etc) on your machine and enter the address we noted earlier containing  ``localhost`` . 
+3.  Open a browser (Chrome/Edge/Mozilla etc) on your machine and enter the address we noted earlier containing  ``localhost`` : 
 
 .. code-block:: bash
     

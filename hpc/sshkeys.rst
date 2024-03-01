@@ -16,7 +16,7 @@ Generating SSH keys
 
 .. code-block:: bash
     
-    ssh-keygen -t rsa -b 4096 -C "<your_email>@<Something>.com"
+    ssh-keygen -t rsa -b 4096 -C "<your_email_address>."
 
 
 This should produce a similar output to that shown below. You will be asked where the keys are to be stored and to enter a passphrase for your keys. **Do not create keys with out a passphrase**. If we detect a key without a passphrase a penalty may be added to your account.

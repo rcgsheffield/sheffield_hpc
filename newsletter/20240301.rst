@@ -5,7 +5,7 @@ News - 2024-03-01
 
 Hello everyone! We have made it to spring, at least for those who count seasons meteorologically. For those who count seasons astronomically, stay strong; there's just 20 more days of winter.
 
-- This month we are are excited to invite you all to our **Research IT Forum**. More details are in the :ref:`Upcoming Events <upcoming_events>` section. 
+- This month we are are excited to invite you all to our **Research IT Forum**, details are in the :ref:`Upcoming Events <upcoming_events>` section. 
 - We also have an exciting new course in the :ref:`Upcoming training  <upcoming_training>`  section.
 
 New Packages and Software

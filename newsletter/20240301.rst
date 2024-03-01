@@ -9,14 +9,14 @@ Hello everyone! We have made it to spring, at least for those who count seasons 
 - We also have an exciting new course in the :ref:`Upcoming training  <upcoming_training>`  section.
 
 New Packages and Software
-=========================
+-------------------------
 
 - Over the last 2, weeks you would have notice a warning when you loaded ``Anaconda 2022.10``. This is due to a bug that affected some users. We have re-installed ``Anaconda 2022.10`` and are doing our finals tests before removing the message.
 
 .. _upcoming_events:
 
 Upcoming Events
-===============
+---------------
 
 .. note:: 
 
@@ -28,7 +28,7 @@ Upcoming Events
 .. _upcoming_training:
 
 Upcoming Training
-=================
+-----------------
 
 Research computing key training dates for March. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ . 
 
@@ -51,7 +51,7 @@ Research computing key training dates for March. You can register for these cour
 - Deap learning - 04/04/2024 to 05/04/2024 (2 day course)
 
 Useful Links
-============
+------------
 
 - :ref:`HPC documentation  <hpc-home>` 
 - `RSE code clinic <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services’ Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.

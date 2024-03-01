@@ -6,8 +6,8 @@ SSH keys
 .. warning::
 
     Please note this is recommended for advanced users only. It is important to **store your SSH keys securely and use passphrases** for added protection. 
-    Failure to do so could compromise the security of your account and data. It is because of this why we recommend SSH keys only be used by advanced users,
-    who understand the risks and take appropriate measures to secure your SSH keys, such as using **strong passphrases** and secure storage of their keys. 
+    Failure to do so could compromise the security of your account and data. This is why we recommend SSH keys only be used by advanced users,
+    who understand the risks and take appropriate measures to secure their SSH keys, such as using **strong passphrases** and secure storage of their keys. 
 
 Generating SSH keys
 ===================
@@ -19,7 +19,7 @@ Generating SSH keys
     ssh-keygen -t rsa -b 4096 -C "<your_email>@<Something>.com"
 
 
-This should produce a similarout put to below showing where the keys are to be stored and also asking you to enter a passphrase for your keys. **Do not create keys with out a passhphrase**. We can detect this on the HPC and a penalty to your account will be administered
+This should produce a similar output to that shown below. You will be asked where the keys are to be stored and to enter a passphrase for your keys. **Do not create keys with out a passphrase**. If we detect a key without a passphrase a penalty may be added to your account.
 
 .. code-block:: bash
 
@@ -32,7 +32,7 @@ This should produce a similarout put to below showing where the keys are to be s
 
 .. code-block:: bash
 
-    scp Path/To/File/id_rsa.pub <your user name>@<ClusterName>.sheffiled.ac.uk:~/.ssh/authorized_keys
+    scp Path/To/File/id_rsa.pub <UserName>@<ClusterName>.sheffiled.ac.uk:~/.ssh/authorized_keys
 
 3. Add SSH private Key to mobaXterm or SSH-Agent on your local machine. This will vary based on your operating system and whether you are using a GUI ssh client like mobaxterm or ssh on a terminal.
 
@@ -52,7 +52,7 @@ This should produce a similarout put to below showing where the keys are to be s
 
     .. tab:: MobaXTerm
 
-        For users on windows using mobaxterm you can simply add your private key to any of the profiles you have setted up as shown in the image below. This will open a file explorer window that will allow you to select your private key.
+        For users on windows using mobaxterm you can simply add your private key to any of the profiles you have set up as shown in the image below. This will open a file explorer window that will allow you to select your private key.
 
         .. image:: /images/mobaxterm-PrivateSSHKey-setup.png
 

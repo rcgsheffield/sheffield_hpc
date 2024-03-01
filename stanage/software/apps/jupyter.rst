@@ -117,7 +117,7 @@ This is mostly recommended for advanced users.
     | node002                                              | 10.10.1.2                                            |
     +------------------------------------------------------+------------------------------------------------------+
 
-    For if we launched Jupyter on interactive node002 then the command would be : 
+For example, if we launched Jupyter on interactive node002 then the command would be :
 
     .. code-block:: bash
 

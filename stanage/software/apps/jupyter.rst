@@ -14,7 +14,7 @@
 Jupyter Notebook is an open source web application that you can use to create and share documents that contain live code, equations, visualisations, and text. 
 
 Installing and Running Jupyter Notebooks
-========================================
+-----------------------------------------
 
 The HPC clusters are only able to host a Jupyter notebook work space in an interactive session. To install and run Jupyter please follow these steps.
 
@@ -69,7 +69,7 @@ This will produce output similar to the following:
     Please take note of the two addresses in the output. You will need them later. In this example it will be ``http://127.0.0.1:8889/tree`` and ``http://localhost:8889/tree`` . And also the name of the node your interactive session is running on. 
 
 Accessing Jupyter with a Web Browser
-=====================================
+-------------------------------------
 
 Once you have completed the above steps, you are ready to access Jupyter with a web browser. There are two ways to do this:
 
@@ -77,7 +77,7 @@ Once you have completed the above steps, you are ready to access Jupyter with a 
 #. Using Tunneling/port forwarding (Advanced users)
 
 Using flight-desktop
-====================
+--------------------
 
 1. Start a :ref:`flight <flight-desktop>`  desktop session.
 2. Click on the web browser icon 
@@ -93,7 +93,7 @@ Using flight-desktop
     http://127.0.0.1:8889/tree
 
 Using Tunneling/Port Forwarding
-==============================
+--------------------------------
 
 This is mostly recommended for advanced users.
 

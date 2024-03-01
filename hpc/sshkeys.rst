@@ -19,7 +19,7 @@ Generating SSH keys
     ssh-keygen -t rsa -b 4096 -C "<your_email>@<Something>.com"
 
 
-This should produce a similarout put to below showing where the keys are to be stored and also asking you to enter a passphrase for your keys. **Do not create keys with out a passhphrase**. We can detect this on the HPC and a penalty to your account will be administered
+This should produce a similar output to that shown below. You will be asked where the keys are to be stored and to enter a passphrase for your keys. **Do not create keys with out a passphrase**. If we detect a key without a passphrase a penalty may be added to your account.
 
 .. code-block:: bash
 

@@ -94,4 +94,4 @@ This should produce a similar output to that shown below. You will be asked wher
 
         .. code-block:: console
         
-            ssh -i /path/to/private_key/<private_key_filename> $YourUsername@$CLUSTER_NAME.shef.ac.uk
+            ssh -i /path/to/private_key/<private_key_filename> $Username@$CLUSTER_NAME.shef.ac.uk

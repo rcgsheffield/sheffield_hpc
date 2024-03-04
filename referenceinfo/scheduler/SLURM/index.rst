@@ -1,9 +1,9 @@
 .. _slurm_referenceinfo:
 
-SLURM Scheduler (Bessemer) Reference Info
+SLURM Scheduler (Stanage & Bessemer) Reference Info
 =========================================
 
-This page provides links to reference information about the SLURM scheduler used on Bessemer which 
+This page provides links to reference information about the SLURM scheduler used on Stanage and Bessemer which 
 is included in other pages.
 
 

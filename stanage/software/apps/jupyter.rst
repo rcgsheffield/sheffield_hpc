@@ -24,7 +24,7 @@ The HPC clusters are only able to host a Jupyter notebook work space in an inter
     
     srun --pty bash -i
 
-2. Create  an :ref:`anaconda <python_stanage>` environment. (If you already have an existing environment skip to step 3)
+2. Load an :ref:`anaconda module and create a conda environment <python_stanage>`. (If you already have an existing environment skip to step 3)
 
 3. Activate an Anaconda environment (This can be an existing one or the one you created in step 2).
 
@@ -106,7 +106,7 @@ This is mostly recommended for advanced users.
 
 .. note:: 
 
-    The above command is heavily dependant on the node you launched  Jupyter notebook. S
+    The above command is heavily dependant on the node you launched  Jupyter notebook.
 
 
     +------------------------------------------------------+------------------------------------------------------+

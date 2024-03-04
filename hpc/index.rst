@@ -27,4 +27,3 @@ This guide will get you set up using the University's clusters
    installing-software
    flight-desktop
    hpcgateway
-   sshkeys

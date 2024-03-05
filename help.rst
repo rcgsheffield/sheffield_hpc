@@ -43,8 +43,8 @@ HPC training?
 IT Services' Research and Innovation courses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you are new to the cluster, have never used Linux or HPC before you should attend the RIT 101 (Introduction to Linux), 
-102 (Linux Shell Scripting Tutorial) and 103 (Introduction to Running Software on the HPC) courses.
+If you are new to the cluster, have never used Linux or HPC before you should attend the RIT 101 (Introduction to Linux)
+and RIT 102 (High-Performance Computing) courses.
 
 These courses are very popular and run through both semesters. You can find details and how to register at the website: https://sites.google.com/sheffield.ac.uk/research-training/ (Only accessible with the VPN turned on.)
 

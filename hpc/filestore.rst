@@ -431,8 +431,11 @@ you can use the ``quota`` command:
       which means the grace period for exceeding the soft quota has already expired.  The user must remove/move some files from their home directory before they can create/add any more files.
       Also, the user is a long way from exceeding their space soft quota.
 
-      To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`. 
-      The ncdu utility will give you an interactive display of what files/folders are taking up storage in a given directory tree.
+      .. tip::
+      
+              To assess what is using up your quota within a given directory, you can make use of the :ref:`ncdu module on Stanage <ncdu_stanage>`. 
+              The ncdu utility will give you an interactive display of what files/folders are taking up storage in a given directory tree.
+
 
    .. group-tab:: Bessemer
 
@@ -453,9 +456,11 @@ you can use the ``quota`` command:
           Filesystem                        Size  Used Avail Use% Mounted on
           172.X.X.X:/myproject1/myproject1   10T  9.1T  985G  91% /shared/myproject1
 
-      To assess what is using up your quota within a given directory, you can make use of the 
-      :ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
-      interactive display of what files/folders are taking up storage in a given directory tree.
+      .. tip::
+      
+              To assess what is using up your quota within a given directory, you can make use of the 
+              :ref:`ncdu module on Bessemer <ncdu_bessemer>`. The **ncdu** utility will give you an 
+              interactive display of what files/folders are taking up storage in a given directory tree.
 
 
 -----

@@ -29,7 +29,7 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.7
 sphinxcontrib-serializinghtml==1.1.10
 tornado==6.4
-Sphinx-Substitution-Extensions==2022.02.16
+Sphinx-Substitution-Extensions==2024.2.25
 urllib3==2.2.1
 watchdog==4.0.0
 sphinxcontrib-jquery==4.1

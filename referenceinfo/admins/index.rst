@@ -7,9 +7,11 @@ This section contains reference information for admins of https://docs.hpc.shef.
 
 
 .. toctree::
-  :maxdepth: 1
-  :glob:
-  
+  :maxdepth: 1  
 
-  ./*
+  Contributing
+  code-snippets
+  software
+  custom
+  readme
   

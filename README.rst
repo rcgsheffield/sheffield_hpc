@@ -12,7 +12,7 @@ For a guide on the rst file format see `this <http://thomas-cokelaer.info/tutori
 
 Rendered Documentation
 ----------------------
-`This website <https://docs.hpc.shef.ac.uk/en/latest/>`_  is currently automatically built from this repository:
+`This website <https://docs.hpc.shef.ac.uk/en/latest/>`_  is currently automatically built from `this repository <https://github.com/rcgsheffield/sheffield_hpc>`_:
 each push to the ``master`` branch causes a `GitHub Actions <https://github.com/rcgsheffield/sheffield_hpc/actions/>`__ workflow to build and serve the documentation via GitHub Pages.
 
 How to Contribute

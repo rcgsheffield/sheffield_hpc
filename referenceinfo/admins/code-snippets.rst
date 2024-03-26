@@ -82,6 +82,18 @@ Callout boxes
 
 -----------------------------
 
+.. attention::
+   
+   This is an example of a attention box.
+
+::
+
+    .. attention::
+       
+       This is an example of a attention box.
+
+-----------------------------
+
 .. warning::
     
     This is an example of a warning box.
@@ -91,6 +103,18 @@ Callout boxes
     .. warning::
        
        This is an example of a warning box.
+
+-----------------------------
+
+.. caution::
+    
+    This is an example of a caution box.
+
+::
+
+    .. caution::
+       
+       This is an example of a caution box.
 
 --------------------------------
 
@@ -127,6 +151,95 @@ Callout boxes
    .. hint::
 
       This is an example of a hint box.
+
+------------------------------------
+
+.. error::
+   
+   This is an example of a error box.
+
+::
+
+   .. error::
+
+      This is an example of a error box.
+
+------------------------------------
+
+.. danger::
+   
+   This is an example of a danger box.
+
+::
+
+   .. danger::
+
+      This is an example of a danger box.
+
+------------------------------------
+
+.. seealso::
+   
+   This is an example of a see also box.
+
+::
+
+   .. seealso::
+
+      This is an example of a see also box.
+
+------------------------------------
+
+.. admonition:: This is an example of a general admonition.
+
+   You can make up your own admonitions too.
+
+::
+
+    .. admonition:: This is an example of a general admonition.
+
+        You can make up your own admonitions too.
+
+
+------------------------------------
+
+.. raw:: html
+
+   <style>
+   .admonition.definition {
+       background: lightgreen;
+   }
+
+   .admonition.definition > .admonition-title {
+       background-color: green;
+   }
+   </style>
+
+.. admonition::  This is an example of a general admonition with a custom colour.
+   :class: definition
+   
+   You can make up your own admonitions with a custom colour scheme using defining a class and the CSS code to apply to it.
+
+   Here we use the class name "defintion" to target and override the CSS via a raw HTML injection.
+
+:: 
+
+    .. raw:: html
+
+    <style>
+    .admonition.definition {
+        background: lightgreen;
+    }
+
+    .admonition.definition > .admonition-title {
+        background-color: green;
+    }
+    </style>
+
+    .. admonition::  This is an example of a general admonition with a custom colour.
+    :class: definition
+    
+    You can make up your own admonitions with a custom colour scheme using defining a class and the CSS code to apply to it.
 
 Code blocks
 ------------
@@ -200,7 +313,7 @@ Code blocks
 
         $some code
 
-Current <languages> used in code-blocks in our docs are **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
+Current **<languages>** used in code-blocks in our docs are: **bash, c++, console, html+jinja, jinja, matlab, none, pycon, python, rst, shell, TCL, text**.
 
 Grouped Tabs
 -------------

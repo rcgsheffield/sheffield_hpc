@@ -1,5 +1,3 @@
-.. _readme:
-
 .. image:: https://github.com/rcgsheffield/sheffield_hpc/actions/workflows/static.yml/badge.svg
     :target: https://github.com/rcgsheffield/sheffield_hpc/actions/workflows/static.yml
 

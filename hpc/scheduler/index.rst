@@ -347,7 +347,7 @@ Some things to note:
   using distributed parallelism (:ref:`MPI<parallel_MPI>`). Note that the Bessemer free queues do not 
   permit the use of more than 1 node per job.
 * You should use the SLURM option ``--cpus-per-task=nn`` Number of "cores per task", for programs using 
-  shared memory parallelism (`openmp<parallel_MPI>`).
+  shared memory parallelism (:ref:`openmp<parallel_SMP>`).
 * You will often require one or more ``module`` commands in your submission file to make programs and 
   libraries available to your scripts. Many applications and libraries are available as modules on 
   :ref:`Bessemer <bessemer-software>`.

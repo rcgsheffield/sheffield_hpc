@@ -41,21 +41,16 @@ To use more than a single core, you should write a batch job script and ANSYS me
 Batch jobs
 ----------
 
-MAPDL is capable of running in both :ref:`MPI <parallel_MPI>` environments and shared memory parallel processing (OpenMP) environments.
-
-.. parallel_bits :ref:`SMP <parallel_SMP>` parallel environments but will use its in-build MPI communications for both.
-
-On Bessemer, cross node jobs are not permitted, this necessitates the use of the default OpenMP parallel environment  (up to 40 cores on a single node only).
+MAPDL is capable of running in parallel on a single node or across multiple nodes and this is facilitated by :ref:`MPI <parallel_MPI>`. 
+However, on Bessemer cross node jobs are not permitted (up to 40 cores on a single node only).
 
 .. parallel_bits :ref:`SMP <parallel_SMP>` OpenMP parallel environment  (up to 40 cores on a single node only).
-
-.. parallel_bits [[Ref Stanage instead of ShARC]] The lack of other options compared to :ref:`ANSYS Mechanical on ShARC<ansys-sharc-mechanical>` is as a result of execution on a single node not requiring these options. 
 
 Sample SMP MAPDL Scheduler Job Script
 """""""""""""""""""""""""""""""""""""""""""""
 
 ``Mapdl mechanical``: the following is an example batch submission script, ``mech_job.sh``, to run the mechanical executable ``mapdl`` with input file ``CrankSlot_Flexible.inp``, and carry out a mechanical simulation.
-The script requests 2 cores using the SMP parallel environment with a runtime of 60 mins and 2 GB of real memory per core.
+The script requests 2 single-core tasks on a single node with a runtime of 60 mins and 2 GB of real memory per core.
 
 .. hint::
 

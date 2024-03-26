@@ -81,8 +81,6 @@ On Bessemer, cross node jobs are not permitted, this necessitates the use of the
   :ref:`SMP <parallel_SMP>` OpenMP parallel environment 
   (up to 40 cores on a single node only). 
 
-The adjusted options compared to :ref:`ANSYS LS-DYNA on ShARC<ansys-sharc-ls-dyna>` is as a result 
-of execution on a single node not requiring these options.
 
 Batch Submission Script
 ^^^^^^^^^^^^^^^^^^^^^^^

@@ -46,7 +46,7 @@ Underline bold
 
     :underline-bold:`Some important information`
 
-Underline-bold has been defined in global.rst and custom.css.
+Underline-bold has been defined in **global.rst** and **custom.css**.
 
 Conf.py
 --------

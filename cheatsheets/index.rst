@@ -20,22 +20,11 @@ This cheat sheet covers basic functionality for our clusters.
 
         .. include:: /referenceinfo/imports/cheat-sheets/bessemer-cheatsheet-1-import.rst
 
-    .. group-tab:: ShARC
-
-        .. include:: /referenceinfo/imports/cheat-sheets/sharc-cheatsheet-1-import.rst
-
 .. tip:: 
 
     You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*
 
 -----------
-
-SGE to SLURM conversions
-------------------------
-
-.. include:: /referenceinfo/imports/cheat-sheets/sge_slurm_convert.rst
-
-----------
 
 Linux Cheat Sheet
 -----------------
@@ -43,6 +32,13 @@ Linux Cheat Sheet
 .. include:: /referenceinfo/imports/cheat-sheets/linux-cheatsheet-import.rst
   
 ---------
+
+SGE to SLURM conversions
+------------------------
+
+.. include:: /referenceinfo/imports/cheat-sheets/sge_slurm_convert.rst
+
+----------
 
 .. toctree::
     :hidden:

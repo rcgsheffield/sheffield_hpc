@@ -46,8 +46,8 @@ However, on Bessemer cross node jobs are not permitted (up to 40 cores on a sing
 
 .. parallel_bits :ref:`SMP <parallel_SMP>` OpenMP parallel environment  (up to 40 cores on a single node only).
 
-Sample SMP MAPDL Scheduler Job Script
-"""""""""""""""""""""""""""""""""""""""""""""
+Sample Single-node MPI MAPDL Scheduler Job Script
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
 ``Mapdl mechanical``: the following is an example batch submission script, ``mech_job.sh``, to run the mechanical executable ``mapdl`` with input file ``CrankSlot_Flexible.inp``, and carry out a mechanical simulation.
 The script requests 2 single-core tasks on a single node with a runtime of 60 mins and 2 GB of real memory per core.

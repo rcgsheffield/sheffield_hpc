@@ -220,7 +220,7 @@ Callout boxes
    
    You can make up your own admonitions with a custom colour scheme using defining a class and the CSS code to apply to it.
 
-   Here we use the class name "defintion" to target and override the CSS via a raw HTML injection.
+   Here we use the class name "definition" to target and override the CSS via a raw HTML injection.
 
 :: 
 

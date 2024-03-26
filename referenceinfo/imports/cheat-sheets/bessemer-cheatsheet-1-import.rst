@@ -49,7 +49,7 @@
    ==========================================      =======================================
    */home/$USER/*                                  Home (backed up)
    */mnt/fastdata/$USER/*                          Fastdata (not backed up)
-   *cd /home/$USER/.snapshot*                      Home snapshot (every 4hrs*10, 24hrs*7)
+   */home/$USER/.snapshot*                         Home snapshot (every 4hrs*10, 24hrs*7)
    ==========================================      =======================================
 
 .. table:: **MODULES (ACTIVATING SOFTWARE)** - :ref:`Link<env_modules>`

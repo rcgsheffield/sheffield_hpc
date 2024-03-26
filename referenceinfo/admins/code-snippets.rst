@@ -221,11 +221,6 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
         $ srun --pty bash -i
 
-   .. group-tab:: ShARC
-
-    .. code-block:: console
-
-        $ qrshx
 
 .. tabs::
 
@@ -241,12 +236,6 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
         $ srun --mem=8G --pty bash -i
 
-   .. group-tab:: ShARC
-
-    .. code-block:: console
-
-        $ qrshx -l rmem=8G
-
 
 .. code-block:: rst
     
@@ -264,11 +253,6 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
                 $ srun --pty bash -i
 
-        .. group-tab:: ShARC
-
-            .. code-block:: console
-
-                $ qrshx
 
 .. code-block:: rst
     
@@ -286,8 +270,3 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
                 $ srun --mem=8G --pty bash -i
 
-        .. group-tab:: ShARC
-
-            .. code-block:: console
-
-                $ qrshx -l rmem=8G

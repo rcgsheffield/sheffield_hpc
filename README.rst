@@ -129,7 +129,7 @@ This is implemented with the following steps:
 2. Copy HTML snippet for Google custom search
 3. Paste it into `_templates/searchbox.html`.
 4. Configure `html_sidebars` to use `searchbox.html` in your document.
-5. Ensure your `templates_path ` is set to correctly source the templates directory.
+5. Ensure your `templates_path` is set to correctly source the templates directory.
 6. Customise the theming, search domain and other settings at https://cse.google.com/cse/all if not done already.
 7. Test the search is configured and functioning as desired.
 

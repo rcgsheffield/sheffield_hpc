@@ -322,33 +322,32 @@ The cluster tabs should be arranged from the most recent cluster to the oldest c
 
 .. tabs::
 
-   .. group-tab:: Stanage
+    .. group-tab:: Stanage
 
-    .. code-block:: console
+        .. code-block:: console
 
-        $ srun --pty bash -i
+            $ srun --pty bash -i
 
-   .. group-tab:: Bessemer
+    .. group-tab:: Bessemer
 
-    .. code-block:: console
+        .. code-block:: console
 
-        $ srun --pty bash -i
+            $ srun --pty bash -i
 
 
 .. tabs::
 
-   .. group-tab:: Stanage
+    .. group-tab:: Stanage
 
-    .. code-block:: console
+        .. code-block:: console
 
-        $ srun --mem=8G --pty bash -i
+            $ srun --mem=8G --pty bash -i
 
-   .. group-tab:: Bessemer
+    .. group-tab:: Bessemer
 
-    .. code-block:: console
+        .. code-block:: console
 
-        $ srun --mem=8G --pty bash -i
-
+            $ srun --mem=8G --pty bash -i
 
 .. code-block:: rst
     

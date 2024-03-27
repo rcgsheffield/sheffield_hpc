@@ -16,7 +16,7 @@ If you are working on contributing to the documentation, here is a possible chec
 * Write the documentation in a clear, concise, and consistent style. 
     * Use headings, lists, and other formatting tools to make the information easy to read and understand. 
     * Consider including screenshots or diagrams to illustrate complex concepts.
-    * Follow any existing conventions such as placeholder usernames or implementing tab order from the newest to oldest HPC cluster.
+    * Follow existing conventions such as placeholder usernames or implementing tab order from the newest to oldest HPC cluster.
 
 * Add the documentation to the appropriate location in the codebase. 
     * Make sure to use the correct file format (e.g., Markdown, reStructuredText).

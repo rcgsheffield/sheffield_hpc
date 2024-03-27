@@ -1,7 +1,7 @@
 .. _cheatsheets:
 
-Cheat Sheets
-============
+Quick Reference (Cheat Sheets)
+==============================
 
 .. include:: /referenceinfo/imports/cheat-sheets/cheat-sheet-note.rst
     

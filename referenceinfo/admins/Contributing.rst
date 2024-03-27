@@ -20,7 +20,7 @@ If you are working on contributing to the documentation, here is a possible chec
 
 * Add the documentation to the appropriate location in the codebase. 
     * Make sure to use the correct file format (e.g., Markdown, reStructuredText).
-    * Make sure follow any existing conventions for organizing documentation.
+    * Follow existing conventions for organizing documentation.
     * Make sure to use import files to deduplicate content where possible.
 
 * Add links to the documentation from relevant parts of the site, such as the admin dashboard or help pages. 

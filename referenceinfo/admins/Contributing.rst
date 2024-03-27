@@ -11,7 +11,17 @@ If you are working on contributing to the documentation, here is a possible chec
     * Consider consulting with other contributors or users to gather feedback and ensure that the documentation meets their needs.
 
 * Create a new branch or fork of the codebase to make your changes. 
-    * Make sure to name the branch or fork appropriately to reflect the purpose of the changes.
+    * Make sure to name the branch or fork appropriately to reflect the purpose of the changes
+    * Naming convention is author initials (*xyz* in examples below), category, issue number (if relevant), descriptive name:
+    *   +-----------------+-------------------------------+
+        | Category        | Example                       |
+        +=================+===============================+
+        | Enchancement    | xyz-en-1752-descriptive-name  |
+        +-----------------+-------------------------------+
+        | Fix             | xyz-fx-1752-descriptive-name  |
+        +-----------------+-------------------------------+
+        | Bug             | xyz-bg-1752-descriptive-name  |
+        +-----------------+-------------------------------+
 
 * Write the documentation in a clear, concise, and consistent style. 
     * Use headings, lists, and other formatting tools to make the information easy to read and understand. 
@@ -20,7 +30,7 @@ If you are working on contributing to the documentation, here is a possible chec
 
 * Add the documentation to the appropriate location in the codebase. 
     * Make sure to use the correct file format (e.g., Markdown, reStructuredText).
-    * Follow existing conventions for organizing documentation.
+    * Follow existing conventions for organising documentation.
     * Make sure to use import files to deduplicate content where possible.
 
 * Add links to the documentation from relevant parts of the site, such as the admin dashboard or help pages. 

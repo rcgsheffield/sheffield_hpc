@@ -65,16 +65,20 @@ Extensions
     * ``sphinx_tabs_disable_tab_closing = True`` *- user won't be able to close tabs in the generated documentation* 
 
 Currently used directives 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-*Updated 28.04.2023*
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Last updated 27.03.2024
 
 .. code-block:: 
 
+    .. ::
+    .. admonition::
+    .. attention::
     .. caution::
     .. code-block::
     .. contents::
     .. cssclass::
     .. danger::
+    .. dropdown::
     .. error::
     .. figure::
     .. glossary::
@@ -89,14 +93,15 @@ Currently used directives
     .. note::
     .. raw::
     .. role::
+    .. seealso::
     .. sidebar::
+    .. tab::
+    .. table::
     .. tabs::
     .. tip::
     .. toctree::
     .. todo::
     .. warning::
-
-
 
 
 

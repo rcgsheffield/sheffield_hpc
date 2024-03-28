@@ -24,7 +24,7 @@ Interactive usage
 After connecting to Bessemer (see :ref:`ssh`),  start an interactive session with the 
 :code:`srun --pty bash -i` command.
 
-The latest version of STAR (currently version 2.7.6a) is made available with the command:
+STAR can be loaded with the command:
 
 .. code-block:: console
 
@@ -45,17 +45,16 @@ Batch usage
 
 The following is an example batch submission script, ``my_job.sh``, to run the executable ``STAR`` with input 
 files from https://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STARgenomes/Human/GRCh38_Ensembl99_sparseD3_sjdbOverhang99/. 
-The script requests 4 cores using the OpenMP parallel environment ``smp`` with a runtime of 30 minutes and 6 GB of real memory per core to 
+The script requests 4 cores using the OpenMP library and multi-threading with a runtime of 30 minutes and 6 GB of real memory per core to 
 generate a genome index. 
 
 .. code-block:: bash
 
     #!/bin/bash
-    #SBATCH --job-name=STAR_smp_test
-    #SBATCH --nodes=1
-    #SBATCH --ntasks-per-node=4
+    #SBATCH --job-name=STAR_test
+    #SBATCH --cpus-per-task=4
     #SBATCH --mem=24000
-    #SBATCH --output=output_STAR_smp_4
+    #SBATCH --output=output_STAR_4
     #SBATCH --time=00:30:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL

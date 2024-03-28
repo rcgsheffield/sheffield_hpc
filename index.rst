@@ -31,6 +31,14 @@ that collaborates closely with IT Services.
 They can assist with code optimisation, training and all aspects of High Performance Computing including GPU computing along with local, national, regional and cloud computing services.
 Take a look at the `Research Software Engineering <https://rse.shef.ac.uk/>`_ website or email `rse@sheffield.ac.uk <rse@sheffield.ac.uk>`_
 
+Acknowledging in publications
+-----------------------------
+
+Should you want to acknowledge the use of these facilities in your publications we suggest the following wording:
+
+*We acknowledge IT Services at The University of Sheffield for the provision of the High Performance Computing Service.*
+
+
 .. toctree::
    :maxdepth: 1
    :hidden:

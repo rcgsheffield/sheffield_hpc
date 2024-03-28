@@ -1,7 +1,6 @@
 :orphan: yes
-
-**Singularity/Apptainer**
-
+Singularity/Apptainer
+======================
 .. raw:: html
 
     <meta http-equiv="refresh" content="0; URL=../apps/apptainer.html" />

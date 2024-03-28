@@ -2,18 +2,16 @@
    :align: left
    :widths: auto
 
-   ===========================================================================      =========================================================================
-   *ssh -X $USER@$CLUSTER_NAME.shef.ac.uk*                                          Connect - :ref:`Link<ssh>`
-   *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
-   *scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER*             Upload  - :ref:`Link<transferring_files>`
-   *scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/*            Download file  - :ref:`Link<transferring_files>`
-   *scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/*       Download directory  - :ref:`Link<transferring_files>`
-   *rsync -avzP /home/user/ $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/*            Sync/transfer directory `Link<rsync>` 
-   *wget https://software.github.io/program/files/myprogram.tar.gz*                 Download direct from website  - :ref:`Link<transferring_files>`
-   *curl -O https://software.github.io/program/files/myprogram.tar.gz*              Download direct from website  - :ref:`Link<transferring_files>`                                            
-   ===========================================================================      =========================================================================
-
-
+   ==========================================================================    =========================================================================
+   *ssh -X $USER@bessemer.shef.ac.uk*                                            Connect - :ref:`Link<ssh>`
+   *srun --pty bash -i*                                                          Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
+   *scp /home/user/file.txt $USER@bessemer.shef.ac.uk:/path/to/directory*        Upload  - :ref:`Link<transferring_files>`
+   *scp $USER@bessemer.shef.ac.uk:/path/to/file.txt /path/to/directory/*         Download file  - :ref:`Link<transferring_files>`
+   *scp -r $USER@bessemer.shef.ac.uk:/path/to/my_results /path/to/directory/*    Download directory  - :ref:`Link<transferring_files>`
+   *rsync -avzP /home/user/ $USER@bessemer.shef.ac.uk:/path/to/directory*        Sync/transfer directory `Link<rsync>` 
+   *wget https://software.github.io/program/files/myprogram.tar.gz*              Download direct from website  - :ref:`Link<transferring_files>`
+   *curl -O https://software.github.io/program/files/myprogram.tar.gz*           Download direct from website  - :ref:`Link<transferring_files>`                                            
+   ==========================================================================    =========================================================================
 
 .. table:: **BATCH JOB SUBMISSION, MONITORING AND CONTROL**
    :align: left
@@ -30,15 +28,14 @@
    *srun*                                 Start a task inside a job  - :ref:`Link<srun>`
    ===============================        =======================================================================================           
 
-
 .. table:: **PARTITION INFORMATION**
    :align: left
    :widths: auto
 
    ==========================    ==========================================
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
-   **CPU nodes**                 192GB Memory/node, 40 cores/node 168 hrs
-   **GPU nodes**                 32GB Memory/GPU, 40 cores/node 168 hrs
+   **CPU nodes**                 192GB Memory/node; 40 cores/node; 168 hrs
+   **GPU nodes**                 32GB Memory/GPU; 40 cores/node; 168 hrs
    Free queues                   **Limit** 1 node per job
    Private nodes                 May have different specifications - :ref:`Link<groupnodes_bessemer>`
    ==========================    ==========================================

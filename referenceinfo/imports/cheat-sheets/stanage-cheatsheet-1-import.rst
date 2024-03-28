@@ -2,19 +2,17 @@
    :align: left
    :widths: auto
 
-   ===========================================================================      =========================================================================
-   *ssh -X $USER@$CLUSTER_NAME.shef.ac.uk*                                          Connect - :ref:`Link<ssh>`
-   *srun --pty bash -i*                                                             Start an interactive session - :ref:`Link<submit_interactive_stanage>`
-   *srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash*                         Start an interactive GPU session - :ref:`Link<gpu_interactive_stanage>`       
-   *scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER*             Upload  - :ref:`Link<transferring_files>`
-   *scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/*            Download file  - :ref:`Link<transferring_files>`
-   *scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/*       Download directory  - :ref:`Link<transferring_files>`
-   *rsync -avzP /home/user/ $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/*            Sync/transfer directory `Link<rsync>` 
-   *wget https://software.github.io/program/files/myprogram.tar.gz*                 Download direct from website  - :ref:`Link<transferring_files>`
-   *curl -O https://software.github.io/program/files/myprogram.tar.gz*              Download direct from website  - :ref:`Link<transferring_files>`                                            
-   ===========================================================================      =========================================================================
-
-
+   ===============================================================================   =========================================================================
+   *ssh -X $USER@stanage.shef.ac.uk*                                                 Connect - :ref:`Link<ssh>`
+   *srun --pty bash -i*                                                              Start an interactive session - :ref:`Link<submit_interactive_stanage>`
+   *srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash*                          Start an interactive GPU session - :ref:`Link<gpu_interactive_stanage>`       
+   *scp /path/to/file.txt $USER@stanage.shef.ac.uk:/path/to/directory/*              Upload  - :ref:`Link<transferring_files>`
+   *scp $USER@stanage.shef.ac.uk:/path/to/file.txt /path/to/directory/*              Download file  - :ref:`Link<transferring_files>`
+   *scp -r $USER@stanage.shef.ac.uk:/path/to/my_results /path/to/directory/*         Download directory  - :ref:`Link<transferring_files>`
+   *rsync -avzP /path/to/directory/ $USER@stanage.shef.ac.uk:/path/to/directory/*    Sync/transfer directory `Link<rsync>` 
+   *wget https://software.github.io/program/files/myprogram.tar.gz*                  Download direct from website  - :ref:`Link<transferring_files>`
+   *curl -O https://software.github.io/program/files/myprogram.tar.gz*               Download direct from website  - :ref:`Link<transferring_files>`                                            
+   ===============================================================================   =========================================================================
 
 .. table:: **BATCH JOB SUBMISSION, MONITORING AND CONTROL**
    :align: left
@@ -31,18 +29,16 @@
    *srun*                                 Start a task inside a job  - :ref:`Link<srun>`
    ===============================        =======================================================================================           
 
-
 .. table:: **PARTITION INFORMATION**
    :align: left
    :widths: auto
 
    ==========================    ==========================================
    *sinfo*                       Node and partition information  - :ref:`Link<sinfo>`
-   **General CPU nodes**         256GB Memory/node, 64 cores/node 96 hrs
-   **Large Mem CPU nodes**       1TB Memory/node, 64 cores/node 96 hrs
-   **V Large Mem CPU nodes**     2TB Memory/node, 64 cores/node 96 hrs
-   **GPU nodes**                 512GB Memory/node, 48 cores/node 96 hrs,
-                                 80GB Memory/GPU                                 
+   **General CPU nodes**         256GB Memory/node; 64 cores/node; 96 hrs
+   **Large Mem CPU nodes**       1TB Memory/node; 64 cores/node; 96 hrs
+   **V Large Mem CPU nodes**     2TB Memory/node; 64 cores/node; 96 hrs
+   **GPU nodes**                 512GB Memory/node; 48 cores/node; 80GB Memory/GPU; 96 hrs                                                    
    ==========================    ==========================================
 
 .. table:: **WHERE'S MY DATA AND BACKUPS?** - :ref:`Link<filestore>`

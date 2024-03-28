@@ -15,14 +15,20 @@ This cheat sheet covers basic functionality for our clusters.
     .. group-tab:: Stanage
     
         .. include:: /referenceinfo/imports/cheat-sheets/stanage-cheatsheet-1-import.rst
+        
+        .. tip:: 
+
+            You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*
 
     .. group-tab:: Bessemer
 
         .. include:: /referenceinfo/imports/cheat-sheets/bessemer-cheatsheet-1-import.rst
+        
+        .. tip:: 
 
-.. tip:: 
+            You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*
 
-    You can find more information about each command with the :ref:`man<man_pages>` command. i.e *man <command>*
+
 
 -----------
 

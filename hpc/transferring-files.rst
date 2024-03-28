@@ -66,19 +66,19 @@ To upload, you transfer from your local machine to the remote cluster:
 
 .. code-block:: shell
 
-  scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+  scp /path/to/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/path/to/directory/
 
 To download, you transfer from the remote cluster to your local machine:
 
 .. code-block:: shell
 
-  scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/
+  scp $USER@$CLUSTER_NAME.shef.ac.uk:/path/to/file.txt /path/to/directory/
 
 To copy a whole directory, we add the ``-r`` flag, for “recursive”
 
 .. code-block:: shell
 
-  scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/
+  scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/path/to/my_results /path/to/directory/
 
 
 .. raw:: html
@@ -200,7 +200,7 @@ enter your passcode:
 
 .. code-block:: shell
 
-  rsync -avzP /home/user/file.iso $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+  rsync -avzP /path/to/file.iso $USER@$CLUSTER_NAME.shef.ac.uk:/path/to/directory/
 
 The ``a`` (archive) option preserves file timestamps and permissions among other things; 
 the ``v`` (verbose) option gives verbose output to help monitor the transfer; 
@@ -212,7 +212,7 @@ To recursively copy a directory, we can use the same options:
 
 .. code-block:: shell
 
-  rsync -avzP /home/user/isos/ $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+  rsync -avzP /path/to/isos/ $USER@$CLUSTER_NAME.shef.ac.uk:/path/to/directory/
 
 This will copy the local directory and its contents under the specified directory on the remote system.
 If the trailing slash is omitted on the destination path, a new directory corresponding to the transferred 
@@ -223,7 +223,7 @@ As before with ``scp``, to download from the cluster rather than upload simply r
 
 .. code-block:: shell
 
-  rsync -avzP $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/isos /home/user/ 
+  rsync -avzP $USER@$CLUSTER_NAME.shef.ac.uk:/path/to/isos /path/to/directory/ 
 
 ---------
 

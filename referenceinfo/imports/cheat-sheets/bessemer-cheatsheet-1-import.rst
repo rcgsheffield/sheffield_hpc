@@ -8,7 +8,7 @@
    *scp /path/to/file.txt YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/directory*              Upload  - :ref:`Link<transferring_files>`
    *scp YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/file.txt /path/to/directory/*             Download file  - :ref:`Link<transferring_files>`
    *scp -r YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/my_results /path/to/directory/*        Download directory  - :ref:`Link<transferring_files>`
-   *rsync -avzP /path/to/directory/ YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/directory*    Sync/transfer directory `Link<rsync>` 
+   *rsync -avzP /path/to/directory/ YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/directory*    Sync/transfer directory - :ref:`Link<rsync>` 
    *wget https://software.github.io/program/files/myprogram.tar.gz*                          Download direct from website  - :ref:`Link<transferring_files>`
    *curl -O https://software.github.io/program/files/myprogram.tar.gz*                       Download direct from website  - :ref:`Link<transferring_files>`                                            
    ======================================================================================    =======================================================================

@@ -2,17 +2,17 @@
    :align: left
    :widths: auto
 
-   ===============================================================================   =========================================================================
-   *ssh -X $USER@stanage.shef.ac.uk*                                                 Connect - :ref:`Link<ssh>`
-   *srun --pty bash -i*                                                              Start an interactive session - :ref:`Link<submit_interactive_stanage>`
-   *srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash*                          Start an interactive GPU session - :ref:`Link<gpu_interactive_stanage>`       
-   *scp /path/to/file.txt $USER@stanage.shef.ac.uk:/path/to/directory/*              Upload  - :ref:`Link<transferring_files>`
-   *scp $USER@stanage.shef.ac.uk:/path/to/file.txt /path/to/directory/*              Download file  - :ref:`Link<transferring_files>`
-   *scp -r $USER@stanage.shef.ac.uk:/path/to/my_results /path/to/directory/*         Download directory  - :ref:`Link<transferring_files>`
-   *rsync -avzP /path/to/directory/ $USER@stanage.shef.ac.uk:/path/to/directory/*    Sync/transfer directory `Link<rsync>` 
-   *wget https://software.github.io/program/files/myprogram.tar.gz*                  Download direct from website  - :ref:`Link<transferring_files>`
-   *curl -O https://software.github.io/program/files/myprogram.tar.gz*               Download direct from website  - :ref:`Link<transferring_files>`                                            
-   ===============================================================================   =========================================================================
+   ======================================================================================    =========================================================================
+   *ssh -X YOUR_USERNAME@stanage.shef.ac.uk*                                                 Connect - :ref:`Link<ssh>`
+   *srun --pty bash -i*                                                                      Start an interactive session - :ref:`Link<submit_interactive_stanage>`
+   *srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash*                                  Start an interactive GPU session - :ref:`Link<gpu_interactive_stanage>`       
+   *scp /path/to/file.txt YOUR_USERNAME@stanage.shef.ac.uk:/path/to/directory/*              Upload  - :ref:`Link<transferring_files>`
+   *scp YOUR_USERNAME@stanage.shef.ac.uk:/path/to/file.txt /path/to/directory/*              Download file  - :ref:`Link<transferring_files>`
+   *scp -r YOUR_USERNAME@stanage.shef.ac.uk:/path/to/my_results /path/to/directory/*         Download directory  - :ref:`Link<transferring_files>`
+   *rsync -avzP /path/to/directory/ YOUR_USERNAME@stanage.shef.ac.uk:/path/to/directory/*    Sync/transfer directory - :ref:`Link<rsync>` 
+   *wget https://software.github.io/program/files/myprogram.tar.gz*                          Download direct from website  - :ref:`Link<transferring_files>`
+   *curl -O https://software.github.io/program/files/myprogram.tar.gz*                       Download direct from website  - :ref:`Link<transferring_files>`                                            
+   ======================================================================================    =========================================================================
 
 .. table:: **BATCH JOB SUBMISSION, MONITORING AND CONTROL**
    :align: left

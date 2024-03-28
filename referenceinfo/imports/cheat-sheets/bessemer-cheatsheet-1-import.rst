@@ -2,16 +2,16 @@
    :align: left
    :widths: auto
 
-   ==========================================================================    =========================================================================
-   *ssh -X $USER@bessemer.shef.ac.uk*                                            Connect - :ref:`Link<ssh>`
-   *srun --pty bash -i*                                                          Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
-   *scp /home/user/file.txt $USER@bessemer.shef.ac.uk:/path/to/directory*        Upload  - :ref:`Link<transferring_files>`
-   *scp $USER@bessemer.shef.ac.uk:/path/to/file.txt /path/to/directory/*         Download file  - :ref:`Link<transferring_files>`
-   *scp -r $USER@bessemer.shef.ac.uk:/path/to/my_results /path/to/directory/*    Download directory  - :ref:`Link<transferring_files>`
-   *rsync -avzP /home/user/ $USER@bessemer.shef.ac.uk:/path/to/directory*        Sync/transfer directory `Link<rsync>` 
-   *wget https://software.github.io/program/files/myprogram.tar.gz*              Download direct from website  - :ref:`Link<transferring_files>`
-   *curl -O https://software.github.io/program/files/myprogram.tar.gz*           Download direct from website  - :ref:`Link<transferring_files>`                                            
-   ==========================================================================    =========================================================================
+   ======================================================================================    =======================================================================
+   *ssh -X YOUR_USERNAME@bessemer.shef.ac.uk*                                                Connect - :ref:`Link<ssh>`
+   *srun --pty bash -i*                                                                      Start an interactive session - :ref:`Link<submit_interactive_bessemer>`
+   *scp /path/to/file.txt YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/directory*              Upload  - :ref:`Link<transferring_files>`
+   *scp YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/file.txt /path/to/directory/*             Download file  - :ref:`Link<transferring_files>`
+   *scp -r YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/my_results /path/to/directory/*        Download directory  - :ref:`Link<transferring_files>`
+   *rsync -avzP /path/to/directory/ YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/directory*    Sync/transfer directory `Link<rsync>` 
+   *wget https://software.github.io/program/files/myprogram.tar.gz*                          Download direct from website  - :ref:`Link<transferring_files>`
+   *curl -O https://software.github.io/program/files/myprogram.tar.gz*                       Download direct from website  - :ref:`Link<transferring_files>`                                            
+=========================================================================================    =======================================================================
 
 .. table:: **BATCH JOB SUBMISSION, MONITORING AND CONTROL**
    :align: left

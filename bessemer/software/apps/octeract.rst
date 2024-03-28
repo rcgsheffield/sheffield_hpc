@@ -45,9 +45,10 @@ and then issuing the commands:
 
 Batch jobs
 ----------
+Octeract is capable of running in parallel on a single node or across multiple nodes and this is facilitated by :ref:`MPI <parallel_MPI>`. 
+However, on Bessemer cross node jobs are not permitted (up to 40 cores on a single node only).
 
-Octeract Engine can be used in both :ref:`SMP<parallel_SMP>` (single node only) and 
-:ref:`MPI<parallel_MPI>` parallel environments - on Bessemer no parallel environment needs specifiying.
+.. parallel_bits
 
 .. important::
 

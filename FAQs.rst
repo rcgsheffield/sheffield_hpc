@@ -710,4 +710,45 @@ but cannot use more than 400 at once.
 
 |br|
 
+How to change ownership of files/folders not as root?
+-----------------------------------------------------
 
+Normal users will not have the permission to **chown** since they are not being root or in sudoers. Therefore, the only valid method for transferring ownership of files/folders is to make
+the documents readable to the person who is taking ownership, reset the ownership, copy, delete and finally move the documents.
+
+This process will also be useful for users who end up with an older account and a newer account. It allows user to transfer data across local filesystems from older account to the newer.
+Please note that the below guide assumes that both accounts are still be active. If you have lost access to the old account in the last few weeks then get in touch with us via research-it@sheffield.ac.uk and we may be able to help transfer files across.
+
+The following assumes user1 is the current owner and user2 is going to be the new owner. Please change the ownership of the files/folders using the following instructions:
+
+1. user1 makes the files/folders to be changed ownership available to read by user2, most likely with Linux ACLs:
+
+.. code-block:: bash
+
+        setfacl --recursive --modify u:user2:r-x /the/directory/changing/ownership
+
+2. user2 copies file from there:
+
+.. code-block:: bash
+
+        cp -R /the/directory/changing/ownership my/tmp/directory
+
+3. user2 checks if they have the copy of the file with the correct ownership:
+
+.. code-block:: bash
+
+        ls -l
+
+4. user1 deletes the existing folder recursively:
+
+.. code-block:: bash
+
+        rm -rf /the/directory/changing/ownership
+
+5. user2 moves the folder back where it was before:
+
+.. code-block:: bash
+
+        mv /my/tmp/directory /the/directory/changing/ownerhsip
+
+------

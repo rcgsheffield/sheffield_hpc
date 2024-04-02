@@ -11,7 +11,7 @@
    *rsync -avzP /path/to/directory/ YOUR_USERNAME@bessemer.shef.ac.uk:/path/to/directory*    Sync/transfer directory `Link<rsync>` 
    *wget https://software.github.io/program/files/myprogram.tar.gz*                          Download direct from website  - :ref:`Link<transferring_files>`
    *curl -O https://software.github.io/program/files/myprogram.tar.gz*                       Download direct from website  - :ref:`Link<transferring_files>`                                            
-=========================================================================================    =======================================================================
+   ======================================================================================    =======================================================================
 
 .. table:: **BATCH JOB SUBMISSION, MONITORING AND CONTROL**
    :align: left

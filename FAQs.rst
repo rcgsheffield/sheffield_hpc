@@ -726,8 +726,6 @@ but cannot use more than 400 at once.
    **Total**                                            **52**
    ==============================================       =========================== 
 
-|br|
-
 How to change ownership of files/folders not as root?
 -----------------------------------------------------
 
@@ -769,4 +767,4 @@ The following assumes user1 is the current owner and user2 is going to be the ne
 
         mv /my/tmp/directory /the/directory/changing/ownerhsip
 
-------
+|br|

@@ -729,42 +729,48 @@ but cannot use more than 400 at once.
 How to change ownership of files/folders not as root?
 -----------------------------------------------------
 
-Normal users will not have the permission to **chown** since they are not being root or in sudoers. Therefore, the only valid method for transferring ownership of files/folders is to make
-the documents readable to the person who is taking ownership, reset the ownership, copy, delete and finally move the documents.
+Cluster users cannot use **chown** for transferring ownership of files/folders. However, it is possible using Access Control Lists (ACLs).
 
-This process will also be useful for users who end up with an older account and a newer account. It allows user to transfer data across local filesystems from older account to the newer.
-Please note that the below guide assumes that both accounts are still be active. If you have lost access to the old account in the last few weeks then get in touch with us via research-it@sheffield.ac.uk and we may be able to help transfer files across.
+The files/folders have to be stored in public Fastdata areas, detailed instructions are contained in the :ref:`fastdata_dir`.
 
-The following assumes user1 is the current owner and user2 is going to be the new owner. Please change the ownership of the files/folders using the following instructions:
+The following assumes user1 is the current owner and user2 is going to be the new owner:
 
-1. user1 makes the files/folders to be changed ownership available to read by user2, most likely with Linux ACLs:
+1. user1 checks the original permissions of the files/folders:
 
-.. code-block:: bash
+.. code-block:: console
 
-        setfacl --recursive --modify u:user2:r-x /the/directory/changing/ownership
+        [user1@login1 [stanage] public]$ getfacl the/directory/changing/ownership/
+        # file: the/directory/changing/ownership/
+        # owner: user1
+        # group: clusterusers
+        user::rwx
+        group::r-x
+        other::r-x
 
-2. user2 copies file from there:
+2. user1 makes the files/folders available to read by user2 with Linux ACLs:
 
-.. code-block:: bash
+.. code-block:: console
 
-        cp -R /the/directory/changing/ownership my/tmp/directory
+        setfacl --recursive --modify u:user2:r-x the/directory/changing/ownership/
 
-3. user2 checks if they have the copy of the file with the correct ownership:
+3. user2 copies file from there:
 
-.. code-block:: bash
+.. code-block:: console
 
-        ls -l
+        cp -R /mnt/parscratch/users/user1/public/the/directory/changing/ownership/ my/tmp/directory
 
-4. user1 deletes the existing folder recursively:
+4. user2 checks if they have the copy of the file/folder with the correct ownership:
 
-.. code-block:: bash
+.. code-block:: console
+
+        [user2@login1 [stanage] public]$ ls -l
+        total 4
+        drwxr-xr-x 2 user2 clusterusers 4.0K Apr  3 14:00 the/directory/changing/ownership
+
+5. user1 deletes the existing folder recursively:
+
+.. code-block:: console
 
         rm -rf /the/directory/changing/ownership
-
-5. user2 moves the folder back where it was before:
-
-.. code-block:: bash
-
-        mv /my/tmp/directory /the/directory/changing/ownerhsip
 
 |br|

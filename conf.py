@@ -153,3 +153,10 @@ rst_prolog = open('global.rst', 'r').read()
 
 sphinx_tabs_valid_builders = ['linkcheck']
 sphinx_tabs_disable_tab_closing = True
+
+# html_context us used in concert with tox passenv, GitHub actions environment variables
+# and the theme footer to add the current repo ref and commit.
+html_context = {
+    'commit': os.environ.get('GITHUB_SHA')[:7],
+    'git_ref': os.environ.get('GITHUB_REF'),
+    }

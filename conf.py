@@ -153,3 +153,12 @@ rst_prolog = open('global.rst', 'r').read()
 
 sphinx_tabs_valid_builders = ['linkcheck']
 sphinx_tabs_disable_tab_closing = True
+
+# We use the additional pages to implement some redirects from old pages
+# we want a redirect for, but not available in the toctree.
+#
+# Adding via this method avoids the toctree globbing adding duplicate redirect
+# pages.
+html_additional_pages = {
+    'stanage/software/apps/singularity': 'singularity-stanage-redirect.html',
+}

@@ -729,16 +729,18 @@ but cannot use more than 400 at once.
 How to change the ownership of files and folders when not the root user?
 ------------------------------------------------------------------------
 
-Cluster users are not allowed to use the root account for system administrators to control and ensure the security of all users.
-Thus, they cannot use **chown** for transferring ownership of files/folders due to the possibility of leading to security vulnerabilities.
-However, it is possible using Access Control Lists (ACLs).
-
-The files/folders have to be stored in public Fastdata areas, detailed instructions are contained in the :ref:`fastdata_dir`.
+Only system administrators are granted access to the root account (`superuser privileges <https://en.wikipedia.org/wiki/Superuser>`_) for security reasons.
+As using the **chown** command requires owning the file or being root for `security reasons <https://unix.stackexchange.com/a/27374>`_, it is not possible for a non-root user to reassign ownership.
+However, it is achievable using Access Control Lists (ACLs).
 
 In the following instructions, we will bypass these limitations by giving the second user read permissions on the data so that they can make a copy of their own, then the original user can delete the original data.
 It assumes **user1** is the current owner and **user2** is going to be the new owner:
 
-1. **user1** checks the original permissions of the files/folders:
+1. **user1** makes sure **user2** has the access to the files/folders:
+
+The files/folders have to be stored in public Fastdata areas, detailed instructions are contained in the :ref:`fastdata_dir`.
+
+2. **user1** checks the original permissions of the files/folders:
 
 .. code-block:: console
 
@@ -750,13 +752,13 @@ It assumes **user1** is the current owner and **user2** is going to be the new o
         group::r-x
         other::r-x
 
-2. **user1** makes the files/folders available to read by **user2** with Linux ACLs:
+3. **user1** makes the files/folders available to read by **user2** with Linux ACLs:
 
 .. code-block:: console
 
         setfacl --recursive --modify u:user2:r-x the/directory/changing/ownership/
 
-3. **user1** ensures **user2** has the access to the files/folders:
+4. **user1** ensures **user2** has the access to the files/folders:
 
 .. code-block:: console
         :emphasize-lines: 3, 9
@@ -774,13 +776,19 @@ It assumes **user1** is the current owner and **user2** is going to be the new o
         mask::r-x
         other::r-x
 
-4. **user2** copies the files from **user1**:
+5. **user2** creates a temporary directory to store the files:
+
+.. code-block:: console
+
+        mkdir my/tmp/directory
+
+6. **user2** copies the files from **user1**:
 
 .. code-block:: console
 
         cp -R /mnt/parscratch/users/user1/public/the/directory/changing/ownership/ my/tmp/directory
 
-5. **user2** checks if they have the copy of the files/folders with the correct ownership:
+7. **user2** checks if they have the copy of the files/folders with the correct ownership:
 
 .. code-block:: console
 
@@ -788,7 +796,7 @@ It assumes **user1** is the current owner and **user2** is going to be the new o
         total 4
         drwxr-xr-x 2 user2 clusterusers 4096 Apr  3 14:00 the/directory/changing/ownership
 
-6. **user1** deletes the existing folder recursively:
+8. **user1** deletes the existing folder recursively:
 
 .. code-block:: console
 

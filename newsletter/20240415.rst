@@ -67,8 +67,12 @@ JADE2 has now been upgraded from RHEL 7.x to RHEL 8.9. Its NVIDIA libraries and 
 
 For users using Pytorch and the GPUs to carry out experiments, using a newer Pytorch container (24.02 rather than 23.07) should fix a bug which made the H100 PCIE slower than the A100. You should see an almost 50% performance boost between the two Pytorch versions as discovered by the benchmarks Peter Haywood ran. Performance on the A100 stays the same.
 
-.. image:: /images/newsletter/pytorch2402_benchmarks.png
-  :alt: Pytorch 24.02 vs 23.07
+.. figure:: /images/newsletter/pytorch2402_benchmarks.png
+    :width: 90%
+    :align: center
+    :alt: Pytorch 24.02 vs 23.07
+
+    Pytorch 24.02 vs 23.07
 
 
 

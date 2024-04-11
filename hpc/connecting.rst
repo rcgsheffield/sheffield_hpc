@@ -146,13 +146,13 @@ log in to a cluster:
 
         .. code-block:: console
 
-            ssh -X $USER@$CLUSTER_NAME.shef.ac.uk
+            ssh -X YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk
 
     .. tab:: macOS
 
         .. code-block:: console
         
-            ssh -X $USER@$CLUSTER_NAME.shef.ac.uk
+            ssh -X YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk
 
         .. note::
 
@@ -163,8 +163,8 @@ log in to a cluster:
 
 Here you need to:
 
-* replace ``$USER`` with your IT Services username (e.g. ``te1st``)
-* replace ``$CLUSTER_NAME`` with ``stanage`` or ``bessemer``.
+* replace ``YOUR_USERNAME`` with your IT Services username (e.g. ``te1st``)
+* replace ``CLUSTER_NAME`` with ``stanage`` or ``bessemer``.
 
 
 After typing in this command hit enter to start connecting at which point you will be prompted 

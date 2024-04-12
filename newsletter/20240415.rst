@@ -8,15 +8,16 @@ Hello everyone! We are publishing this month's newsletter a bit later than usual
 **In this issue:**
 
 - We share some of the highlights from our recent :ref:`**Research IT Forum** <research_it_forum>` event. 
-- Storage Options Update: Learn about `available storage solutions <storage_options>` in light of new Google Drive policies. 
-- **Expansion of the HPC Team:** Meet our newest team members, Angie and Becki who will be with us for the spring season.
+- Storage Options Update: Learn about :ref:`available storage solutions <storage_options>` in light of new Google Drive policies. 
+- **Expansion of the HPC Team:** Keep an eye out for our newest team members, Angie and Becki who will be with us for the spring season.
 
 .. _research_it_forum:
 
-Research IT Forum
------------------
+Research Computing @ Sheffield conference
+-----------------------------------------
 
-Our annual Research IT Forum, held on April 9th. It provided an excellent opportunity to celebrate and showcase the groundbreaking research projects taking place on HPC. A huge thank you to all the speakers and attendees who contributed to making this year's forum a success. For those who missed it, you can find all the `presentation slides here <https://drive.google.com/drive/folders/1YPctycoYDaxZX4aqAqdCiQYQD9lgAtq_?usp=sharing>`_ . 
+Our annual Research Computing at Sheffield conference, was held on April 9th. It provided an excellent opportunity to celebrate and showcase the groundbreaking research projects taking place on HPC. A huge thank you to all the speakers and attendees who contributed to making this year's forum a success. For those who missed it, you can find all the `presentation slides here <https://drive.google.com/drive/folders/1YPctycoYDaxZX4aqAqdCiQYQD9lgAtq_?usp=sharing>`_ . 
+
 Also, a special thank you to Desmond Ryan and Carl Kennedy who were the key organisers this year.
 
 .. _storage_options:
@@ -27,45 +28,55 @@ Storage Options
 Research Storage
 ++++++++++++++++
 
-Recently, many of you received emails regarding Google Drive's new `15GB data cap <https://staff.sheffield.ac.uk/it-services/storage/google-data-cap-project>`_, resulting from Google's 1PB limit on university data (we currently hold 2.97PB). To address this, we encourage users to :
+Recently,  you may have been contacted about the introduction of 15 GB quotas for personal Google Drives and 30 GB quotas for Google Shared Drives. These quotas have been introduced at the University of Sheffield following changes to Google's pricing for Google Drive. `More information on these changes <https://staff.sheffield.ac.uk/it-services/storage/google-data-cap-project>`_ .
+
+To reduce Google personal and shared Drive usage to below the quota limits users may want/need to:
 
 - Delete any data that is no longer needed from their google drive.
-- Migrate to our research storage solution (X-Drive), which offers up to 10TB of storage for research groups. This offers a secure, encrypted and backed up option to meet any Data storage and GDPR needs.  With access control it also facilitates collaboration and file-sharing among teams and accessible from any device that is connected to the university's VPN. Additionally, research storage can be made available on both Stanage and Bessemer upon request. It should also offer a performance boost over google drives, for users on campus or geographically close to Sheffield. Learn more about requesting or using research storage `here <https://students.sheffield.ac.uk/it-services/research/storage>`_ (You will need to be logged in, to access the page).
+- Migrate to our research storage solution (X-Drive), which offers up to 10TB of storage for research groups. This offers a secure, encrypted and backed up option to meet any Data storage and GDPR needs.  With access control it also facilitates collaboration and file-sharing among teams and accessible from any device that is connected to the university's VPN. Additionally, research storage can be made available on both Stanage and Bessemer upon request. It should also offer a performance boost over google drives, for users on campus or geographically close to Sheffield.
+- Learn more about requesting or using research storage `here <https://students.sheffield.ac.uk/it-services/research/storage>`_ (You will need to be logged in, to access the page).
 
-FastData Storage
-++++++++++++++++
+Lustre filesystems
+++++++++++++++++++
 
-This month we `Fastdata <https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#fastdata-areas>`_ on the HPC clusters. Fast data uses a parallel, distributed file system known as lustre. Its distributed nature allows us the following benefits:
+You are likely aware that the :ref:`Stanage and Bessemer systems <fastdata_dir>` contain a large Lustre parallel filesystem.
 
-- Scalability: It allows us to have large amount of storage and increase it overtime without affecting the pre-existing storage.
-- Allows us to achieve parallel read and writes over the multiple CPUs and nodes your jobs are running on without taking a hit to latency or throughput.
-- Reliability: Allows us fault tolerance and ensures data integrity and availability.
+- /mnt/parscratch on Stanage
+- /fastdata on Bessemer
 
-In our case it also allows us huge amounts of storage as **currently** there are no quotas compared to the home directory.
+We would like to draw your attention to several characteristics of these Lustre filesystems
 
-** All this benefit come at the price of fastdata being optimised for large file operations. They are faster than Home directories and Shared (project) directories when dealing with larger files but are not performant when reading/writing lots of small files as shown on the benchmarks shown `here <https://walkingrandomly.com/?p=6167>_` **
+- They provide lots of temporary storage with no quotas;
+- They are not backed up;
+- They offer good performance when working with larger files than e.g. home directories - Lustre performance scales well with the number of filesystem clients, plus on Stanage connections to
+- Lustre are via high-bandwidth (100 Gbps), low-latency network links;
+- They perform poorly when working with lots of small files (e.g. files only a few kB in size) (see this `blog post <https://walkingrandomly.com/?p=6167>`_ ). Even just enumerating or deleting millions of files from a Lustre filesystem can take days;
+- They perform poorly when you have a large number (>1000) of files or directories within a directory.
+ 
+Recommendations:
 
-** The platform team also added the command ``show-fastdata-consumption`` which shows the total usage storage by all our users on fast data. For most users this can be a proactive way of checking if its time to do some housekeeping on the fast data directories. **
+- Do not use these Lustre filesystems for long-term storage
+- Prefer to work with larger files where possible. For example can you combine output data within one large HDF5 file instead of creating lots of small text files?
+- Try to limit the number of files or directories within a directory.
+- If using interative workflows e.g. machine learning or fluid dynamics software then consider outputting data to Lustre less frequently than every time/simulation step e.g. every 1000 steps.
+- If you have concerns about how many files your workflow might create on Lustre then consider running some short tests before launching big jobs.
 
-Licences
---------
 
-For users of licensed software such as MATLAB and Ansys, please be mindful of license availability when submitting multiple jobs that will take huge fraction of licences from the pool. Please notify us in advance if you require a significant number of licenses or consider using `job dependency <https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/advanced_job_submission_and_control.html#dependent-jobs-on-bessemer-and-stanage>`_ to manage license usage effectively.
 
 
 New Packages and software
 --------------------------
 
-Check out the latest additions to Stanage:
+Check out the latest additions:
 
-- Apptainer version 1.3.0. This shouldn't result in any significant user-facing changes but please let us know if you notice any behaviour or significant performance changes, particularly relating to filesystem performance.
-- Nextflow version 23.10.0
+- :ref:`Apptainer  <apptainer_bessemer>` version 1.3.0 on Bessemer. This shouldn't result in any significant user-facing changes but please let us know if you notice any behaviour or significant performance changes, particularly relating to filesystem performance.
+- :ref:`Nextflow  <nextflow_stanage>` version 23.10.0 on Stanage
 
 
 JADE2 has now been upgraded from RHEL 7.x to RHEL 8.9. Its NVIDIA libraries and tools have also been upgraded too. 
 
 
-For users using Pytorch and the GPUs to carry out experiments, using a newer Pytorch container (24.02 rather than 23.07) should fix a bug which made the H100 PCIE slower than the A100. You should see an almost 50% performance boost between the two Pytorch versions as discovered by the benchmarks Peter Haywood ran. Performance on the A100 stays the same.
+For users using Pytorch with the GPUs in Stanage, using a newer Pytorch container (24.02 rather than 23.07) should fix a bug which made the H100 GPUs  slower than the A100 GPUs. You should see an almost 50% performance boost between the two Pytorch versions as discovered by the benchmarks Peter Heywood in the `RSE team <https://rse.shef.ac.uk/>`_ ran. Performance on the A100 stays the same.
 
 .. figure:: /images/newsletter/pytorch2402_benchmarks.png
     :width: 90%
@@ -81,15 +92,13 @@ For users using Pytorch and the GPUs to carry out experiments, using a newer Pyt
 Upcoming Training
 -----------------
 
-Below are our research computing key training dates for March. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ . 
+Below are our research computing key training dates for April. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ . 
 
 .. warning::
     For our taught postgraduate users who don't have access to MyDevelopment, please email us at ``researchcomputing@sheffield.ac.uk`` with the course you want to register for, and we should be able to help you.
 
 
 
-- High Performance Computing - 11/04/2024 
-- Temporal Analysis in Python - 12/04/2024
 - Linux - 16/04/2024
 - Python Programming 1 - 16/04/2024
 - Python Profiling & Optimalisation - 18/04/2024
@@ -99,6 +108,9 @@ Below are our research computing key training dates for March. You can register 
 - Introduction to R - 25/04/2024
 - Deep learning - 25/04/2024 to 26/04/2024 (2 day course)
 - Python Programming 3 - 30/04/2024
+- Unsupervised Machine Learning 07/05/2024
+- Python Profiling & Optimalisation - 09/05/2024
+- Temporal Analysis in Python - 10/05/2024
 
 
 Useful Links
@@ -106,5 +118,5 @@ Useful Links
 
 - :ref:`HPC documentation  <hpc-home>`
 - :ref:`Citing the HPC services in publications.  <citing>`
-- `RSE code clinics <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services' Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
+- `RSE code clinics <https://rse.shef.ac.uk/support/code-clinic/>`_ . These are fortnightly support sessions run by the RSE team and IT Services' Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
 - `Training and courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ (You must be logged into the main university website to view).

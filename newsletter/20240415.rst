@@ -84,7 +84,7 @@ Three Grace Hopper that were added to the :ref:`Bede <bede>` HPC system are no l
 Grace Hopper usage documentation will be added to the Bede documentation site soon, but for now please see the `Bede Grade Hopper Pilot docs <https://bede-documentation.readthedocs.io/en/latest/usage/index.html#grace-hopper-pilot>`_ for a guide to getting started with them.
 
 New Packages and Software
---------------------------
+------------------------- -
 
 Check out the latest additions:
 
@@ -118,18 +118,18 @@ Below are our research computing key training dates for April. You can register 
 
 
 
-- Linux - 16/04/2024
-- Python Programming 1 - 16/04/2024
-- Python Profiling & Optimalisation - 18/04/2024
-- Supervised Machine Learning 1 - 19/04/2024
-- Introduction to MATLAB 2 - 21/03/2024
-- Python Programming 2 - 23/04/2024
-- Introduction to R - 25/04/2024
-- Deep learning - 25/04/2024 to 26/04/2024 (2 day course)
-- Python Programming 3 - 30/04/2024
-- Unsupervised Machine Learning 07/05/2024
-- Python Profiling & Optimalisation - 09/05/2024
-- Temporal Analysis in Python - 10/05/2024
+- 16/04/2024 - Linux 
+- 16/04/2024 - Python Programming 1 
+- 18/04/2024 - Python Profiling & Optimalisation 
+- 19/04/2024 - Supervised Machine Learning 1 
+- 21/03/2024 - Introduction to MATLAB 2 
+- 23/04/2024 - Python Programming 2 
+- 25/04/2024 - Introduction to R 
+- 25/04/2024 - Deep learning (2 day course) 
+- 30/04/2024 - Python Programming 3 
+- 07/05/2024 - Unsupervised Machine Learning 
+- 09/05/2024 - Python Profiling & Optimalisation 
+- 10/05/2024 - Temporal Analysis in Python 
 
 
 Useful Links

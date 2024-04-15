@@ -7,24 +7,32 @@ Hello everyone! We are publishing this month's newsletter a bit later than usual
 
 **In this issue:**
 
-- We share some of the highlights from our recent :ref:`**Research IT Forum** <research_it_forum>` event. 
+- We share thoughts and materials from our recent :ref:`Research Computing @ Sheffield and Research IT Forum <recent_events_20240415>` events. 
 - Storage Options Update: Learn about :ref:`available storage solutions <storage_options>` in light of new Google Drive policies. 
 - **Expansion of the HPC Team:** Keep an eye out for our newest team members, Angie and Becki who will be with us for the spring season.
+- :ref:`Grace Hopper GPU nodes <grace_hopper_bede>` available in the Bede HPC system.
 
-.. _research_it_forum:
 
-Research Computing @ Sheffield conference
------------------------------------------
+.. _recent_events_20240415:
 
-Our annual Research Computing at Sheffield conference, was held on April 9th. It provided an excellent opportunity to celebrate and showcase the groundbreaking research projects taking place on HPC. A huge thank you to all the speakers and attendees who contributed to making this year's forum a success. For those who missed it, you can find all the `presentation slides here <https://drive.google.com/drive/folders/1YPctycoYDaxZX4aqAqdCiQYQD9lgAtq_?usp=sharing>`_ . 
+Recent Events
+-------------
+Research Computing @ Sheffield Conference
++++++++++++++++++++++++++++++++++++++++++
 
-Also, a special thank you to Desmond Ryan and Carl Kennedy who were the key organisers this year.
+Our annual Research Computing at Sheffield conference, was held on April 9th. It provided an excellent opportunity to celebrate and showcase the groundbreaking research projects taking place on HPC. A huge thank you to all the speakers and attendees who contributed to making this year's forum a success. For those who missed it, the `presentation slides <https://drive.google.com/drive/folders/1YPctycoYDaxZX4aqAqdCiQYQD9lgAtq_?usp=sharing>`_ are now available. 
+
+Also, a special thank you to Desmond Ryan for all his hard work organising this year's event.
+
+Research IT Forum 
+++++++++++++++++++
+
+The theme for this Research IT Forum held on March 7th was to present Research & Innovation IT Services for Researchers. We described our 6 services and describe how they can enhance your research. If you missed this excellent event or you would like to revisit the material the `recording <https://drive.google.com/file/d/1bMb5ytQBD7jJThbCgg3OWs0P8ljWGO7Y/view?usp=sharing>`_ and `slides <https://docs.google.com/presentation/d/1b6co_8sRy596Ad6IMVoR5zdxk9YmxwP4Em9hW7j6EoA/edit#slide=id.g1b616b922c8_1_0>`_ are now available.
 
 .. _storage_options:
 
 Storage Options
 ---------------
-
 Research Storage
 ++++++++++++++++
 
@@ -61,10 +69,16 @@ Recommendations:
 - If using interative workflows e.g. machine learning or fluid dynamics software then consider outputting data to Lustre less frequently than every time/simulation step e.g. every 1000 steps.
 - If you have concerns about how many files your workflow might create on Lustre then consider running some short tests before launching big jobs.
 
+.. _grace_hopper_bede:
+ 
+Grace Hopper GPU nodes available in the Bede HPC system
+-------------------------------------------------------
 
+Three Grace Hopper that were added to the :ref:`Bede <bede>` HPC system are no longer in pilot and are available for general users. Each of these nodes (two worker nodes and an interactive/login node) contains a tightly-coupled pairing of an NVIDIA H100 GPU ('Hopper') and an ARM ('Grace') CPU and should be very well suited to GPU compute problems that require lots of data sharing between CPU and GPU. We'll cover benefits and performance in a future newsletter.
 
+Grace Hopper usage documentation will be added to the Bede documentation site soon, but for now please see the `Bede Grade Hopper Pilot docs <https://bede-documentation.readthedocs.io/en/latest/usage/index.html#grace-hopper-pilot>`_ for a guide to getting started with them.
 
-New Packages and software
+New Packages and Software
 --------------------------
 
 Check out the latest additions:

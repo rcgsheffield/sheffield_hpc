@@ -46,7 +46,7 @@ Recently,  you may have been contacted about the introduction of 15 GB quotas fo
 To reduce Google personal and shared Drive usage to below the quota limits users may want/need to:
 
 - Delete any data that is no longer needed from their google drive.
-- Migrate to our research storage solution (X-Drive), which offers up to 10TB of storage for research groups. This offers a secure, encrypted and backed up option to meet any Data storage and GDPR needs.  With access control it also facilitates collaboration and file-sharing among teams and accessible from any device that is connected to the university's VPN. Additionally, research storage can be made available on both Stanage and Bessemer upon request. It should also offer a performance boost over google drives, for users on campus or geographically close to Sheffield.
+- Migrate to our research storage solution (X-Drive), which offers 10TB of free storage per PI, more can be purchased. This offers a secure, encrypted (at rest, and also in transit if not accessed over NFS) and backed up option to meet your data storage needs.  With access control it also facilitates collaboration and file-sharing among teams and accessible from any device that is connected to the university's VPN. Additionally, research storage can be made available on both Stanage and Bessemer upon request. It should also offer a performance boost over google drives, for users on campus or geographically close to Sheffield.
 - Learn more about requesting or using research storage `here <https://students.sheffield.ac.uk/it-services/research/storage>`_ (You will need to be logged in, to access the page).
 
 Lustre filesystems
@@ -54,8 +54,8 @@ Lustre filesystems
 
 You are likely aware that the :ref:`Stanage and Bessemer systems <fastdata_dir>` contain a large Lustre parallel filesystem.
 
-- /mnt/parscratch on Stanage
-- /fastdata on Bessemer
+- ``/mnt/parscratch`` on Stanage
+- ``/fastdata`` on Bessemer
 
 We would like to draw your attention to several characteristics of these Lustre filesystems
 

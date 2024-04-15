@@ -16,7 +16,7 @@ Hello everyone! We are publishing this month's newsletter a bit later than usual
 Pending Operating System Upgrade on our HPC clusters
 ----------------------------------------------------
 
-The operating system on Stanage and Bessemer will be upgraded before the end of July. This upgrade ensures the security, stability and performance of our HPC infrastructure. Certain software packages and applications may not be compatible with the new OS (Rocky 9). We encourage you to start thinking about utilising newer versions of software and libraries. We will provide further updates regarding the OS upgrade as the date approaches. 
+The operating system on Stanage and Bessemer will be upgraded in the next few months. This upgrade ensures the security, stability and performance of our HPC infrastructure. Certain software packages and applications may not be compatible with the new OS (Rocky 9). We encourage you to start thinking about utilising newer versions of software and libraries. We will provide further updates regarding the OS upgrade shortly, including timelines. 
 
 .. _recent_events_20240415:
 

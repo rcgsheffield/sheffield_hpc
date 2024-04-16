@@ -1,13 +1,13 @@
-.. _nl20240415:
+.. _nl20240416:
 
-News - 2024-04-15
+News - 2024-04-16
 =================
 
 Hello everyone! We are publishing this month's newsletter a bit later than usual due to the recent festivities. We hope you all enjoyed a lovely Easter break and a happy Eid Mubarak.
 
 **In this issue:**
 
-- We share thoughts and materials from our recent :ref:`Research Computing @ Sheffield and Research IT Forum <recent_events_20240415>` events. 
+- We share thoughts and materials from our recent :ref:`Research Computing @ Sheffield and Research IT Forum <recent_events_20240416>` events. 
 - Storage Options Update: Learn about :ref:`available storage solutions <storage_options>` in light of new Google Drive policies. 
 - **Expansion of the HPC Team:** Keep an eye out for our newest team members, Angie and Becki who will be with us for the spring season.
 - :ref:`Grace Hopper GPU nodes <grace_hopper_bede>` available in the Bede HPC system.
@@ -18,7 +18,7 @@ Pending Operating System Upgrade on our HPC clusters
 
 The operating system on Stanage and Bessemer will be upgraded in the next few months. This upgrade ensures the security, stability and performance of our HPC infrastructure. Certain software packages and applications may not be compatible with the new OS (Rocky 9). We encourage you to start thinking about utilising newer versions of software and libraries. We will provide further updates regarding the OS upgrade shortly, including timelines. 
 
-.. _recent_events_20240415:
+.. _recent_events_20240416:
 
 Recent Events
 -------------
@@ -84,7 +84,7 @@ Three Grace Hopper that were added to the :ref:`Bede <bede>` HPC system are no l
 Grace Hopper usage documentation will be added to the Bede documentation site soon, but for now please see the `Bede Grade Hopper Pilot docs <https://bede-documentation.readthedocs.io/en/latest/usage/index.html#grace-hopper-pilot>`_ for a guide to getting started with them.
 
 New Packages and Software
-------------------------- -
+-------------------------
 
 Check out the latest additions:
 
@@ -106,7 +106,7 @@ For users using Pytorch with the GPUs in Stanage, using a newer Pytorch containe
 
 
 
-.. _upcoming_training2:
+.. _upcoming_training_20240416:
 
 Upcoming Training
 -----------------
@@ -116,10 +116,6 @@ Below are our research computing key training dates for April. You can register 
 .. warning::
     For our taught postgraduate users who don't have access to MyDevelopment, please email us at ``researchcomputing@sheffield.ac.uk`` with the course you want to register for, and we should be able to help you.
 
-
-
-- 16/04/2024 - Linux 
-- 16/04/2024 - Python Programming 1 
 - 18/04/2024 - Python Profiling & Optimalisation 
 - 19/04/2024 - Supervised Machine Learning 1 
 - 21/03/2024 - Introduction to MATLAB 2 

@@ -17,8 +17,8 @@ running the Linux operating system.
 To connect to another machine using SSH you need to
 have a SSH *client* program installed on your machine.
 macOS and Linux come with a command-line (text-only) SSH client pre-installed.
-On Windows there are various graphical SSH clients you can use,
-including *MobaXTerm*.
+On Windows there are various SSH clients you can use,
+including *Windows Terminal*.
 
 .. warning::
 
@@ -244,7 +244,10 @@ Suggested SSH clients
 SSH client software on Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We recommend the use of MobaXterm on Windows systems and users will find MobaXterm available on the University's managed desktops by default.
+We recommend the use of Windows Terminal on Windows systems and users will find Windows Terminal available on the University's managed desktops by default.
+
+- :ref:`Setting up Profiles in Windows Terminal <terminal_connecting_profile_setup>`.
+
 For personal systems you can download and install the *Installer edition* of `MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_.
 
 - :ref:`Setting up Profiles in MobaXterm <mobaxterm_connecting_profile_setup>`.

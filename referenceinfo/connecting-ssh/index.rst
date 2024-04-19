@@ -1,6 +1,6 @@
 
 **********************************
-Connecting Reference Info
+Connecting via SSH Reference Info
 **********************************
 
 This sub-tree contains reference information about connecting to our clusters.
@@ -10,4 +10,5 @@ This sub-tree contains reference information about connecting to our clusters.
   :maxdepth: 1
   :glob:
 
+  windows_terminal
   mobaxterm

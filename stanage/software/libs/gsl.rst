@@ -16,12 +16,12 @@ The GNU Scientific Library (GSL) is a collection of routines for numerical compu
 The routines have been written from scratch in C.  
 See `here <https://www.gnu.org/software/gsl/doc/html/intro.html>`__ for the types of routines that the GSL provides.
 
-Usage
------
-
 .. note::
    
    Currently, we only have builds which are compatible with our CPU nodes.
+
+Usage
+-----
 
 The GSL library can be loaded by running one of: 
 

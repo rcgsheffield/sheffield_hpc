@@ -16,7 +16,7 @@ If you are working on contributing to the documentation, here is a possible chec
     *   +-----------------+-------------------------------+
         | Category        | Example                       |
         +=================+===============================+
-        | Enchancement    | xyz-en-1752-descriptive-name  |
+        | Enhancement     | xyz-en-1752-descriptive-name  |
         +-----------------+-------------------------------+
         | Fix             | xyz-fx-1752-descriptive-name  |
         +-----------------+-------------------------------+

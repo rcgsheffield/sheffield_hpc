@@ -3,7 +3,6 @@
 Setting up Profiles in MobaXterm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We recommend the use of MobaXterm on Windows systems and users will find MobaXterm available on the University's managed desktops by default.
 For personal systems you can download and install the *Installer edition* of `MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_.
 
 
@@ -13,6 +12,9 @@ After starting MobaXterm you should see something like this:
    :width: 100%
    :align: center
 
+.. tip::
+
+    Usernames to connect with all HPC services will be the same as those you use to login to MUSE :underline-bold:`not` the prefix on your email address.
 
 You should create a session profile for your login for each cluster by clicking *Session* in the top left, and then *SSH*. 
 
@@ -24,7 +26,7 @@ You should create a session profile for your login for each cluster by clicking 
 
 You should add a session for each cluster.
 
-.. hint::
+.. caution::
    Alternatively you can use a terminal within MobaXterm for SSHing to remote machines but
    be warned that this may cause authentication issues when trying to connect to Stanage using MFA.
 

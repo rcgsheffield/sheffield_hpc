@@ -362,11 +362,9 @@ This has the added benefits of ensuring that:
 * Programs/libraries are more likely to make use of the more advanced features of the CPU models in the HPC systems, 
   which could result in better performance/efficiency.
 
----------
+------
 
 .. _windows_eol_issues:
-
-------
 
 sbatch: error: Batch script contains DOS line breaks (\r\n) errors
 -------------------------------------------------------------------
@@ -563,18 +561,34 @@ Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e.
 ------
 
 
-Using 'sudo' to install software on the clusters
-------------------------------------------------
+Using 'sudo' or package managers to install software on the clusters
+--------------------------------------------------------------------
 
-HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators.
-Users can however install applications in their ``/home`` directory, ``/mnt/parscratch`` area on Stanage or ``/fastdata`` area on Bessemer.
+Users do not have sufficient access privileges to use sudo for **any** purpose. Users are not permitted to install software to the base environment 
+with package managers on any HPC cluster i.e. with ``apt-get``, ``aptitude`` , ``zypper``, ``emerge``, ``pacman``, ``yum``, ``dnf`` etc...
 
-The webpage :ref:`Installing Applications on Stanage and Bessemer  <installing-personal-software-installations>` provides guidance on how to do this.
+The ability to do so will never be granted to non-system administrators because:
+
+* We need to protect the integrity of the HPC systems, e.g. the operating systems, user data and user accounts etc... Permitting the usage of sudo 
+  would allow any user to arbitrarily perform any action on the HPC system.
+* We need to protect the integrity of user shell environments by keeping the base HPC shell environment as bare as possible. Users cannot be permitted 
+  to install software to the base environment of the clusters as this would override and potentially pollute other user's shell environments, 
+  break other user's jobs and/or functionality of the entire cluster.
+
+Users are permitted to install applications in their ``/home`` directory, ``/mnt/parscratch`` area on Stanage or ``/fastdata`` area on Bessemer 
+and can make these available to themselves via their ``.bashrc`` file or to others using the modules system if desired. The webpage 
+:ref:`Installing Applications on Stanage and Bessemer  <installing-personal-software-installations>` provides guidance on how to do this 
+without the use of sudo or package managers.
+
+------
+
 
 Is data encrypted at rest on HPC storage areas?
 -----------------------------------------------
 
 At present, no HPC storage areas on any of our clusters encrypt data at rest.
+
+------
 
 Are the HPC clusters certified to standards such as Cyber Essentials, Cyber Essentials Plus or ISO 27001?
 ---------------------------------------------------------------------------------------------------------
@@ -583,6 +597,8 @@ Due to the complexity of the multi-user High Performance Computing service,
 the service is not currently certified as being compliant with the
 Cyber Essentials, Cyber Essentials Plus or ISO 27001 schemes/standards.
 This is unlikely to change in future.
+
+------
 
 
 Can I use VSCode on the HPC clusters?
@@ -676,6 +692,8 @@ it will not be able to locate ``SLURM_MPI_TYPE``, even if it's available in the 
 For those more familiar with the use of ``mpirun`` and ``mpiexec``:
 ``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,
 although it takes different arguments and can also be used for starting interactive sessions on Slurm clusters.
+
+-----
 
 .. _ansys_license_restrictions:
 

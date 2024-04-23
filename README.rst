@@ -23,7 +23,7 @@ see `Fork a Repo <https://help.github.com/articles/fork-a-repo/>`_ for the GitHu
 Once you have the git repository locally on your computer,
 you will need to ensure you have Python and the Tox_ build tool installed.
 
-Please see our `Documentation Reference <https://docs.hpc.shef.ac.uk/en/latest/referenceinfo/admin-docs/>`_ which is a valuable resource for admins of our documentation.
+Please see our `Documentation Reference <https://docs.hpc.shef.ac.uk/en/latest/referenceinfo/admins/>`_ which is a valuable resource for admins of our documentation.
 
 Once you have made your changes and updated your Fork on GitHub you will need to `Open a Pull Request <https://help.github.com/articles/using-pull-requests/>`_.
 All changes to the repository should be made through Pull Requests, including those made by the people with direct push access.
@@ -116,6 +116,7 @@ Important files / folders
 * ``global.rst`` - A globally included file (goes into all pages) which is excluded from direct building using exclude_patterns in ``conf.py``.
 * ``referenceinfo/imports`` - sub-folder tree of files to be included by not directly built. This is excluded from direct building using exclude_patterns in ``conf.py``.
 * ``_static/css/custom.css`` - custom CSS overrides for the theme.
+* ``themes/sheffieldhpc`` - Sheffield HPC custom theme components (Sphinx HTML templates, media files, CSS etc...). This functions as an overlay to the default Sphinx RTD theme.
 * ``.github/workflows`` - GitHub Actions workflows for pull requests, pushes to ``master`` and link checking.
 
 Custom Google Search Engine

@@ -19,7 +19,13 @@ See `here <https://www.gnu.org/software/gsl/doc/html/intro.html>`__ for the type
 Usage
 -----
 
-The GSL library can be loaded by running one of: ::
+.. note::
+   
+   We only have Icelake builds at present. 
+
+The GSL library can be loaded by running one of: 
+
+.. code-block::
 
 	module load GSL/2.5-GCC-7.3.0-2.30
 	module load GSL/2.6-GCC-9.3.0
@@ -30,7 +36,9 @@ The GSL library can be loaded by running one of: ::
 	module load GSL/2.7-GCC-12.2.0
 
 which will also load a particular :ref:`GCC <gcc_stanage>`,
-*or*: ::
+*or*: 
+
+.. code-block::
 
 	module load GSL/2.6-iccifort-2020.1.217
 
@@ -71,7 +79,7 @@ Then run using:
 
 which should print the following (correct to double-precision accuracy): ::
 
-    J0(5) = -1.775967713143382642e-01
+    J0(5) = -1.775967713143383198e-01
 
 NB generally, you may not need to compile using ``-lgslcblas`` depending on which GSL routines you are using.
 

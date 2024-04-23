@@ -21,7 +21,7 @@ Usage
 
 .. note::
    
-   We only have Icelake builds at present. 
+   Currently, we only have builds which are compatible with our CPU nodes.
 
 The GSL library can be loaded by running one of: 
 

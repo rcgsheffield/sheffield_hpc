@@ -27,6 +27,23 @@ To transfer files to/from the clusters you can:
 
 ---------
 
+Choosing the most suitable files transferring method
+----------------------------------------------------
+To make a quick assessment of what file transferring method is likely to fulfil your needs best, please take a look at the provided decision tree below:
+
+.. warning::
+
+  This decision tree only provides a quick assessment, please check the full details of each transferring method before committing to using them for your work.
+
+.. image:: ../images/hpc-file-transfer-selection-decicsion-tree.png
+  :alt: Decision Tree for transferring files
+  :align: center
+
+..
+  This flow diagram can be updated by:
+  1. Opening and editing 'images/hpc-file-transfer-selection-decision-tree.mmd' in your preferred code editing environment
+  3. Regenerating the PNG above in this file using 'yarn add @mermaid-js/mermaid-cli' and './node_modules/.bin/mmdc -i images/hpc-file-transfer-selection-decision-tree.mmd -o images/hpc-file-transfer-selection-decicsion-tree.png'
+---------
 
 Transfers with SCP/SFTP
 -----------------------

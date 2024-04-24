@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2024-04-23T16:04:08.112Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="gm2PUWYrcoQbQZ8wR-6p" version="24.2.8" type="google">
+<mxfile host="app.diagrams.net" modified="2024-04-24T16:09:47.098Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="gBM4Cc72X31T9-tyBd_7" version="24.3.0" type="google">
   <diagram name="Page-1" id="9c096ad6-e400-ecc8-3e38-643d2caac077">
     <mxGraphModel dx="2074" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -49,7 +49,7 @@
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-43" value="Does your job read or write lots of small files?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1000" y="280" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-44" value="&lt;b&gt;/scratch&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="XzLxbcLt9xksHgqJ0xbW-44" value="&lt;b&gt;&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#scratch-directories&quot;&gt;Scratch&lt;/a&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="820" y="280" width="116.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Verdana;fontSize=16;" parent="1" source="XzLxbcLt9xksHgqJ0xbW-48" target="XzLxbcLt9xksHgqJ0xbW-53" edge="1">
@@ -58,7 +58,7 @@
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Verdana;fontSize=14;startArrow=none;" parent="1" source="XzLxbcLt9xksHgqJ0xbW-88" target="XzLxbcLt9xksHgqJ0xbW-84" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-48" value="Does your job read or write large or small files?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="XzLxbcLt9xksHgqJ0xbW-48" value="What size files does your job read or write?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="600" y="420" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Verdana;fontSize=16;" parent="1" source="XzLxbcLt9xksHgqJ0xbW-52" target="XzLxbcLt9xksHgqJ0xbW-53" edge="1">
@@ -67,10 +67,10 @@
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Verdana;fontSize=14;startArrow=none;" parent="1" source="XzLxbcLt9xksHgqJ0xbW-76" target="XzLxbcLt9xksHgqJ0xbW-85" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-52" value="Does your job read or write large or small files?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="XzLxbcLt9xksHgqJ0xbW-52" value="What size files does your job read or write?" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1000" y="420" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-53" value="&lt;b&gt;/fastdata&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="XzLxbcLt9xksHgqJ0xbW-53" value="&lt;b&gt;&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#fastdata-areas&quot;&gt;Fastdata&lt;/a&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="816.5" y="420" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-54" value="&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#scratch-directories&quot;&gt;Warning: no backups, separate area &lt;br&gt;&lt;/a&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontFamily=Verdana;" parent="1" vertex="1">
@@ -142,10 +142,10 @@
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-83" value="Storing data" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontFamily=Verdana;" parent="1" vertex="1">
           <mxGeometry x="240" y="190" width="100" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-84" value="&lt;b&gt;/home&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="XzLxbcLt9xksHgqJ0xbW-84" value="&lt;b&gt;&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#home-directories&quot;&gt;Home&lt;/a&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="620" y="560" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-85" value="&lt;b&gt;/home&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="XzLxbcLt9xksHgqJ0xbW-85" value="&lt;b&gt;&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#home-directories&quot;&gt;Home&lt;/a&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1020" y="560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-88" value="Small" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontFamily=Verdana;" parent="1" vertex="1">
@@ -169,9 +169,11 @@
         <mxCell id="XzLxbcLt9xksHgqJ0xbW-93" value="Research shared storage area" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="381.75" y="280" width="116.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="XzLxbcLt9xksHgqJ0xbW-99" value="&lt;b&gt;/home&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1500" y="560" width="120" height="60" as="geometry" />
-        </mxCell>
+        <UserObject label="&lt;b&gt;&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#home-directories&quot;&gt;Home&lt;/a&gt;&lt;/b&gt;" id="XzLxbcLt9xksHgqJ0xbW-99">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+            <mxGeometry x="1500" y="560" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="Vf45G0hu34pnWBJpz1_1-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="XzLxbcLt9xksHgqJ0xbW-101" target="Vf45G0hu34pnWBJpz1_1-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -273,7 +275,7 @@
         <mxCell id="Vf45G0hu34pnWBJpz1_1-12" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontFamily=Verdana;" parent="1" vertex="1">
           <mxGeometry x="1545" y="510" width="30" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="EU4slpYqFT_y6DnQEr02-1" value="&lt;b&gt;/home&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EU4slpYqFT_y6DnQEr02-1" value="&lt;b&gt;&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#home-directories&quot;&gt;Home&lt;/a&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="140" y="557.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EU4slpYqFT_y6DnQEr02-2" value="&lt;a href=&quot;https://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html#home-directories&quot;&gt;Quota: 100GB&lt;/a&gt;&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontFamily=Verdana;" parent="1" vertex="1">

@@ -24,10 +24,10 @@ Also commonly used for highlighting files, software etc
 
 -----------------------
 
-.. _placeholder-links-section:
+.. _links:
 
 Links
------
+------
 
 **External link**
 
@@ -45,20 +45,16 @@ The following shows the placeholder for this section
 
 .. code-block:: rst
     
-    .. _placeholder-links-section:   
-
+    .. _links:   #This is the placeholder for the Links section
+    
     Links
     =====
 
-:ref:`placeholder-links-section` this link renders as the section title immediately below the placeholder.
-
-:ref:`Link to the Links section<placeholder-links-section>` here we defined the link text. 
+:ref:`links`
 
 .. code-block:: rst
-    
-    :ref:`placeholder-links-section`
 
-    :ref:`Link to the Links section <placeholder-links-section>`
+    :ref:`links`
 
 **Internal download link**
 

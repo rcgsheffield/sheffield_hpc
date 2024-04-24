@@ -31,13 +31,13 @@ To start an interactive session with access to one GPU on a GPU node (:ref:`Stan
 
       .. code-block:: sh
 
-         srun --partition=gpu --qos=gpu --gres=gpu:1 --pty bash
+         srun --partition=gpu --qos=gpu --gres=gpu:a100:1 --pty bash
 
    .. group-tab:: H100 GPU node(s)
 
       .. code-block:: sh
 
-         srun --partition=gpu-h100 --qos=gpu --gres=gpu:1 --pty bash
+         srun --partition=gpu-h100 --qos=gpu --gres=gpu:h100:1 --pty bash
 
 
 Note it's not possible to request GPUs using ``--gpus=N`` on Stanage at this time (unlike on Bessemer).

@@ -31,7 +31,7 @@ Noteworthy features of the system
 
   * 2x IBM POWER9_ CPUs 
   * 2x `NVIDIA V100`_ GPUs per CPU
-  * Each CPU is connected to its two GPUs via high-bandwidth (150GB/s), low-latency interconnects (NVLink), which helps if you need to move lots of data to/from GPU memory
+  * Each CPU is connected to its two GPUs via high-bandwidth, low-latency interconnects (NVLink), which helps if you need to move lots of data to/from GPU memory
   * 512 GB RAM
 
 * 4x 'inference' nodes (`IBM IC922`_ nodes) each with
@@ -40,23 +40,31 @@ Noteworthy features of the system
   * 4x `NVIDIA T4`_ GPUs
   * 256 GB RAM
 
-* 3x `NVIDIA Grace Hopper Superchip (GH200 480GB)`_ nodes each with
-
-  * 1x `NVIDIA Grace CPU`_ (72 Arm Neoverse V2 cores)
-  * 1x `NVIDIA H100`_ 96GB GPU
-  * The CPU and GPU are connected via 900 GB/s NVLink-C2C interconnect, which helps if you need to move lots of data to/from GPU memory or over-subscribe the GPU
-  * 480 GB LPDDR5X RAM
-
 * High-bandwidth, low-latency networking between nodes (100 Gb/s EDR Infiniband)
 * High-performance parallel file system (Lustre)
 * Slurm job scheduler
+* Installed software
+
+  * IBM Watson Machine Learning Community Edition
+
+    * Includes Conda packages for helping transparently distribute Deep Learning training and inference tasks 
+      over multiple GPUs and/or nodes 
+      when using e.g. TensorFlow, IBM Caffe and Pytorch.
+    * Includes conda packages for accelerating the training of generalized linear models 
+      (e.g. in scikit-learn and Apache Spark) using GPUs and multiple nodes
+
+  * Standard GNU toolkit via the IBM Advanced Toolchain for Linux
+
+    * Inc. IBM-optimised GNU compilers, BLAS/LAPACK, glibc, gdb, valgrind, itrace, Boost, Python, Go and more
+
+  * NVIDIA profilers and debuggers
 
 Further information
 -------------------
 
 See the `N8 CIR's Bede site <https://n8cir.org.uk/supporting-research/facilities/bede/>`__ for:
 
-* `Documentation <https://bede-documentation.readthedocs.io/en/latest/>`__ on how to use the system
+* Documentation on how to use the system
 * Information on per-institution RSE support (including the contact for Sheffield)
 * How to register a project
 * Hardware specifications
@@ -73,6 +81,3 @@ Please contact ``tier-2-hpc-support-group@sheffield.ac.uk`` if you have any ques
 .. _NVIDIA T4: https://www.nvidia.com/en-gb/data-center/tesla-t4/
 .. _NVIDIA V100: https://www.nvidia.com/en-us/data-center/v100/
 .. _POWER9: https://www.ibm.com/uk-en/it-infrastructure/power/power9
-.. _NVIDIA Grace Hopper Superchip (GH200 480GB): https://www.nvidia.com/en-gb/data-center/grace-hopper-superchip/
-.. _NVIDIA Grace CPU: https://www.nvidia.com/en-gb/data-center/grace-cpu/
-.. _NVIDIA H100: https://resources.nvidia.com/en-us-tensor-core/gtc22-whitepaper-hopper

@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Sheffield HPC Documentation'
-copyright = '2024, The University of Sheffield'
+copyright = '2023, The University of Sheffield'
 author = 'The University of Sheffield'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -114,8 +114,6 @@ html_theme_options = {
 #                 'using-iceberg/**': ['softwaretoc.html'],
 #                 'index': []}
 
-# This template override file can be found in _templates/searchbox.html
-# The sidebar is currently being overridden with the Google Custom Search engine.
 html_sidebars = {'**': ['searchbox.html']}
 
 # The name for this set of Sphinx documents.  If None, it defaults to

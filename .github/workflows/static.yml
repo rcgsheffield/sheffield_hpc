@@ -64,7 +64,7 @@ jobs:
         run: |
           cp robots-txt/robots.txt _build/html/robots.txt
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v4
       # Make the artifact which is used to deploy.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -726,6 +726,8 @@ but cannot use more than 400 at once.
    **Total**                                            **52**
    ==============================================       =========================== 
 
+-----
+
 How to change the ownership of files and folders when not the root user?
 ------------------------------------------------------------------------
 

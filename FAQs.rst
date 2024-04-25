@@ -729,9 +729,8 @@ but cannot use more than 400 at once.
 How to change the ownership of files and folders when not the root user?
 ------------------------------------------------------------------------
 
-Only system administrators are granted access to the root account (`superuser privileges <https://en.wikipedia.org/wiki/Superuser>`_) for security reasons.
-As using the **chown** command requires owning the file or being root for `security reasons <https://unix.stackexchange.com/a/27374>`_, it is not possible for a non-root user to reassign ownership.
-However, it is achievable using Access Control Lists (ACLs).
+For security reasons only system administrators are granted access to the root account (`superuser privileges <https://en.wikipedia.org/wiki/Superuser>`_) and as successfully using the **chown** command `requires root account permissions <https://unix.stackexchange.com/a/27374>`_ it is not possible for a non-root user to directly reassign ownership.
+However, it is possible to do so indirectly by using Access Control Lists (ACLs).
 
 In the following instructions, we will bypass these limitations by giving the second user read permissions on the data so that they can make a copy of their own, then the original user can delete the original data.
 It assumes **user1** is the current owner and **user2** is going to be the new owner:
@@ -795,6 +794,10 @@ The files/folders have to be stored in public Fastdata areas, detailed instructi
         [user2@login1 [stanage] public]$ ls -l
         total 4
         drwxr-xr-x 2 user2 clusterusers 4096 Apr  3 14:00 the/directory/changing/ownership
+
+.. warning::
+
+   **user1** should check with **user2** and ensure the files have been transferred prior to deletion since the fastdata areas do not have backups.
 
 8. **user1** deletes the existing folder recursively:
 

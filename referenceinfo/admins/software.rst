@@ -13,7 +13,7 @@
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
    :URL: http://sox.sourceforge.net/
-   :Node availability: CPU; GPU 
+   :Arch availability: icelake(CPU); znver3(GPU) 
 
 |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
 formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -33,13 +33,13 @@ The latest version of |softwarename| (currently version |currentver|) is made av
 
 .. tabs::
 
-	.. group-tab:: CPU Nodes
+	.. group-tab:: Icelake CPU Nodes
 		
 		.. code-block:: console
 			
 			$ module load SoX/14.4.2-GCC-8.3.0
 	
-	.. group-tab:: GPU Nodes
+	.. group-tab:: znver3 GPU Nodes
 		
 		.. code-block:: console
 			

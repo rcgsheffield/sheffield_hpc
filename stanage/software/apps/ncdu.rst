@@ -36,7 +36,7 @@ The latest version of |softwarename| (currently version |currentver|) is made av
                         $ module load ncdu/1.17-GCC-11.3.0
                         $ module load ncdu/1.18-GCC-12.3.0
                         
-            .. group-tab:: znver3 GPU Nodes
+           .. group-tab:: znver3 GPU Nodes
 
                 .. code-block:: console
 

@@ -128,9 +128,22 @@ The Markup
         
         The latest version of |softwarename| (currently version |currentver|) is made available with the command:
 
-        .. code-block:: console
-        	
-            $ module load SoX/14.4.2-GCC-8.3.0
+        .. tabs::
+
+                .. group-tab:: icelake CPU Nodes
+                        
+                        .. code-block:: console
+                                
+                                $ module load SoX/14.4.2-GCC-8.3.0
+                
+                .. group-tab:: znver3 GPU Nodes
+                        
+                        .. code-block:: console
+                                
+                                $ module load SoX/14.4.2-GCC-8.3.0
+                        
+                    $ module load SoX/14.4.2-GCC-8.3.0
+
 
         After this the |softwarename| command can be run from the terminal prompt with the ``sox`` command.
 

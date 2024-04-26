@@ -22,7 +22,7 @@ You can then load a version of of Java using one of the following:
 
 .. tabs::
 
-   .. group-tab:: icelake
+   .. group-tab:: icelake CPU nodes
 
         .. code-block:: console
 
@@ -31,7 +31,7 @@ You can then load a version of of Java using one of the following:
            module load Java/11.0.20
            module load Java/17.0.4
 
-   .. group-tab:: znver3
+   .. group-tab:: znver3 GPU nodes
 
         .. code-block:: console
 

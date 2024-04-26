@@ -16,7 +16,7 @@ by running *one* of the following lines:
 
 .. tabs::
 
-   .. group-tab:: icelake
+   .. group-tab:: icelake CPU nodes
 
         .. code-block:: console
 
@@ -33,7 +33,7 @@ by running *one* of the following lines:
            module load GCC/11.3.0        # part of the foss-2022a toolchain
            module load GCC/12.2.0        # part of the foss-2022b toolchain
 
-   .. group-tab:: znver3
+   .. group-tab:: znver3 GPU nodes
 
         .. code-block:: console
 

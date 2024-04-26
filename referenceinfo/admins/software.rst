@@ -33,7 +33,7 @@ The latest version of |softwarename| (currently version |currentver|) is made av
 
 .. tabs::
 
-	.. group-tab:: Icelake CPU Nodes
+	.. group-tab:: icelake CPU Nodes
 		
 		.. code-block:: console
 			

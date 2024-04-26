@@ -12,7 +12,7 @@ CMake can be loaded with one of:
 
 .. tabs::
 
-   .. group-tab:: icelake
+   .. group-tab:: icelake CPU nodes
 
         .. code-block:: console
 
@@ -24,7 +24,7 @@ CMake can be loaded with one of:
            module load CMake/3.23.1-GCCcore-11.3.0  # compatible with foss-2022b toolchain
            module load CMake/3.24.3-GCCcore-12.2.0  # compatible with foss-2022b toolchain
 
-   .. group-tab:: znver3
+   .. group-tab:: znver3 GPU nodes
 
         .. code-block:: console
 

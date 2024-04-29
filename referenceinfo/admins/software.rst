@@ -13,7 +13,7 @@
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
    :URL: http://sox.sourceforge.net/
-   :CPU Arch availibility: icelake; znver3 
+   :CPU Arch availability: icelake; znver3 
 
 |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
 formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 

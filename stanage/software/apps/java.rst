@@ -7,6 +7,7 @@ Java (Temurin/OpenJDK)
 
    :Latest Version: 17.0.4
    :URL: https://adoptium.net/en-GB/temurin/releases/
+   :CPU Arch availibility: icelake; znver3
 
 Java is a programming language and computing platform first released by Sun Microsystems in 1995.
 
@@ -22,7 +23,7 @@ You can then load a version of of Java using one of the following:
 
 .. tabs::
 
-   .. group-tab:: icelake CPU nodes
+   .. group-tab:: icelake
 
         .. code-block:: console
 
@@ -31,7 +32,7 @@ You can then load a version of of Java using one of the following:
            module load Java/11.0.20
            module load Java/17.0.4
 
-   .. group-tab:: znver3 GPU nodes
+   .. group-tab:: znver3
 
         .. code-block:: console
 

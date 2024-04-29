@@ -7,7 +7,7 @@ Java (Temurin/OpenJDK)
 
    :Latest Version: 17.0.4
    :URL: https://adoptium.net/en-GB/temurin/releases/
-   :CPU Arch availibility: icelake; znver3
+   :CPU Arch availability: icelake; znver3
 
 Java is a programming language and computing platform first released by Sun Microsystems in 1995.
 

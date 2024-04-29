@@ -13,7 +13,7 @@
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
    :URL: http://sox.sourceforge.net/
-   :Arch availability: icelake(CPU); znver3(GPU) 
+   :CPU Arch availibility: icelake; znver3 
 
 |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
 formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -33,13 +33,13 @@ The latest version of |softwarename| (currently version |currentver|) is made av
 
 .. tabs::
 
-	.. group-tab:: icelake CPU Nodes
+	.. group-tab:: icelake 
 		
 		.. code-block:: console
 			
 			$ module load SoX/14.4.2-GCC-8.3.0
 	
-	.. group-tab:: znver3 GPU Nodes
+	.. group-tab:: znver3
 		
 		.. code-block:: console
 			
@@ -111,6 +111,8 @@ The Markup
            :Versions:  |currentver|
            :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
            :URL: http://sox.sourceforge.net/
+           :CPU Arch availibility: icelake; znver3 
+
 
         |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
         formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -130,13 +132,13 @@ The Markup
 
         .. tabs::
 
-                .. group-tab:: icelake CPU Nodes
+                .. group-tab:: icelake
                         
                         .. code-block:: console
                                 
                                 $ module load SoX/14.4.2-GCC-8.3.0
                 
-                .. group-tab:: znver3 GPU Nodes
+                .. group-tab:: znver3
                         
                         .. code-block:: console
                                 

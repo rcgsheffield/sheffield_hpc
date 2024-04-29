@@ -111,7 +111,7 @@ The Markup
            :Versions:  |currentver|
            :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
            :URL: http://sox.sourceforge.net/
-           :CPU Arch availibility: icelake; znver3 
+           :CPU Arch availability: :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>`; :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>`
 
 
         |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 

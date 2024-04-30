@@ -1,9 +1,24 @@
 .. _cmake_stanage:
 
-CMake
-=====
+.. |softwarename| replace:: CMake
+.. |currentver| replace:: 3.24.3 
+.. |ebtoolchain| replace:: Compatible with foss-2022b
+   
+|softwarename| 
+==============================================================================================================================================================
+
+.. sidebar:: |softwarename| 
+
+   :Versions:  |currentver|
+   :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
+   :URL: https://cmake.org/
+   :CPU Arch availability: :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>`; :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>` 
 
 CMake is a build tool commonly used when compiling other libraries.
+
+CMake has a run-time dependency on ``libstdc++`` so
+the cmake module files depend on and load particular versions of the :ref:`GCC compiler <gcc_stanage>`,
+plus versions of the ncurses, zlib, bzip2 and cURL libraries.
 
 Usage
 -----
@@ -31,9 +46,6 @@ CMake can be loaded with one of:
            module load CMake/3.24.3-GCCcore-11.3.0
            module load CMake/3.24.3-GCCcore-12.2.0
   
-CMake has a run-time dependency on ``libstdc++`` so
-the cmake module files depend on and load particular versions of the :ref:`GCC compiler <gcc_stanage>`,
-plus versions of the ncurses, zlib, bzip2 and cURL libraries.
 
 Usage of CMake often involves: 
 

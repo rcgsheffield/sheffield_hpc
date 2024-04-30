@@ -1,13 +1,17 @@
 .. _java-stanage:
 
-Java (Temurin/OpenJDK)
-======================
+.. |softwarename| replace:: Java (Temurin/OpenJDK)
+.. |currentver| replace:: 17.0.4 
 
-.. sidebar:: Java
+|softwarename|
+==========================================================================================================
 
-   :Latest Version: 17.0.4
+.. sidebar:: |softwarename|
+
+   :Versions:  |currentver|
    :URL: https://adoptium.net/en-GB/temurin/releases/
-   :CPU Arch availability: icelake; znver3
+   :CPU Arch availability: :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>`; :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>` 
+
 
 Java is a programming language and computing platform first released by Sun Microsystems in 1995.
 

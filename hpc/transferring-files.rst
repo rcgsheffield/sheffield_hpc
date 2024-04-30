@@ -72,35 +72,69 @@ FTP protocol with included SSH security components.
 
 ---------
 
-Using SCP in the terminal
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Using SCP/SFTP in the terminal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If your local machine has a terminal and the ``scp``  (“secure copy”) command is available 
-you can use it to make transfers of files or folders.
+SCP and SFTP are both protocols for transferring files via a Secure Shell (SSH) connection.
+If your local machine has a terminal and the ``scp`` (“secure copy”) command is available you can use SCP to make transfers of files or folders.
+Otherwise, check if the ``sftp``  (“secure file transfer protocol”) command is available and use SFTP instead.
 
-Where below substitute **$CLUSTER_NAME** with stanage or bessemer
-and **$USER** with your cluster username. 
+Where below substitute **CLUSTER_NAME** with stanage or bessemer, **CLUSTER_USERNAME** with your cluster username and **LOCAL_USERNAME** with your local username.
 
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or enter your passcode.
 
-To upload, you transfer from your local machine to the remote cluster:
+.. tabs::
+  .. group-tab:: SCP
 
-.. code-block:: shell
+    To upload, you transfer from your local machine to the remote cluster:
 
-  scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+    .. code-block:: shell
 
-To download, you transfer from the remote cluster to your local machine:
+      scp /Users/LOCAL_USERNAME/file-to-upload.txt CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/
 
-.. code-block:: shell
+    To download, you transfer from the remote cluster to your local machine:
 
-  scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/
+    .. code-block:: shell
 
-To copy a whole directory, we add the ``-r`` flag, for “recursive”
+      scp CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/file-to-download.txt /Users/LOCAL_USERNAME/
 
-.. code-block:: shell
+    To copy a whole directory from the remote cluster to your local machine, we add the ``-r`` flag, for “recursive”
 
-  scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/
+    .. code-block:: shell
 
+      scp -r CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/directory-to-download /Users/LOCAL_USERNAME/
+
+    To copy a whole directory from your local machine to the remote cluster, we add the ``-r`` flag, for “recursive”
+
+    .. code-block:: shell
+
+      scp -r /Users/LOCAL_USERNAME/directory-to-upload CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/ 
+
+  .. group-tab:: SFTP
+
+    To upload, you transfer from your local machine to the remote cluster:
+
+    .. code-block:: shell
+
+      sftp CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/ <<< '$put /Users/LOCAL_USERNAME/file-to-upload.txt'
+
+    To download, you transfer from the remote cluster to your local machine:
+
+    .. code-block:: shell
+
+      sftp CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/files-to-download.txt /Users/LOCAL_USERNAME/
+
+    To copy a whole directory from the remote cluster to your local machine, we add the ``-r`` flag, for “recursive”
+
+    .. code-block:: shell
+
+      sftp -r CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/directory-to-download /Users/LOCAL_USERNAME/
+
+    To copy a whole directory from your local machine to the remote cluster, we add the ``-r`` flag, for “recursive”
+
+    .. code-block:: shell
+
+      sftp CLUSTER_USERNAME@CLUSTER_NAME.shef.ac.uk:/users/CLUSTER_USERNAME/ <<< '$put -r /Users/LOCAL_USERNAME/directory-to-upload'
 
 .. raw:: html
 

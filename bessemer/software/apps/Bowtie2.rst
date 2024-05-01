@@ -10,7 +10,7 @@
 
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
-   :URL: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+   :URL: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
 
 |softwarename| is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
 It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and particularly 

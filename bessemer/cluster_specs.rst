@@ -77,11 +77,11 @@ Non-worker nodes
   * Slurm scheduler 'head' nodes.
 
 .. _AVX-512: https://en.wikipedia.org/wiki/AVX-512
-.. _Dell PowerEdge C4140: http://www.dell.com/uk/business/p/poweredge-c4140/pd
-.. _Dell PowerEdge C6420: http://www.dell.com/uk/business/p/poweredge-c6420/pd
+.. _Dell PowerEdge C4140: https://www.dell.com/support/home/en-uk/product-support/product/poweredge-c4140/overview 
+.. _Dell PowerEdge C6420: https://www.dell.com/support/home/en-uk/product-support/product/poweredge-c6420/overview 
 .. _Fused Multiply-Add: https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation#Fused_multiply.E2.80.93add
 .. _Hyperthreading:  https://en.wikipedia.org/wiki/Hyper-threading
 .. _Intel Xeon Gold 6138: https://ark.intel.com/content/www/us/en/ark/products/120476/intel-xeon-gold-6138-processor-27-5m-cache-2-00-ghz.html
-.. _Lustre:  http://lustre.org/
+.. _Lustre:  https://lustre.org/
 .. _NVIDIA Tesla V100: https://www.nvidia.com/en-gb/data-center/tesla-v100/
 .. _Skylake: https://en.wikipedia.org/wiki/Skylake_(microarchitecture)

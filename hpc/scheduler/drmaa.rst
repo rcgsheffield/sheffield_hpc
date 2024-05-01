@@ -25,7 +25,7 @@ Using DRMAA from Python
 Install DRMAA bindings
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The `Python bindings for DRMAA <http://drmaa-python.readthedocs.io/en/latest/>`_ are compatible with Python 2 and Python 3.
+The `Python bindings for DRMAA <https://drmaa-python.readthedocs.io/en/latest/>`_ are compatible with Python 2 and Python 3.
 The simplest way to install them is to use a :ref:`conda environment <sharc-python-conda>` e.g. 
 
 .. code-block:: bash
@@ -76,7 +76,7 @@ To actually submit the job: ::
 
 You can submit multiple jobs iteratively, reusing your DRMAA job template for efficiency.
 
-If you want to submit a :ref:`job array <parallel_jobarray>` rather than a single job then you can call the `runBulkJob method instead of runJob <http://drmaa-python.readthedocs.io/en/latest/tutorials.html#running-a-job>`_.
+If you want to submit a :ref:`job array <parallel_jobarray>` rather than a single job then you can call the `runBulkJob method instead of runJob <https://drmaa-python.readthedocs.io/en/latest/tutorials.html#running-a-job>`_.
 
 .. warning::
     Starting a single DRMAA session then attempting to submit jobs from different Python threads `currently does not work <https://github.com/pygridtools/drmaa-python/issues/44>`_.
@@ -131,22 +131,22 @@ Other useful job template attributes
 Waiting on jobs
 ^^^^^^^^^^^^^^^
 
-Within a DRMAA Session you can wait indefinitely or forever for one, several or all submitted jobs to complete.  See the `documentation <http://drmaa-python.readthedocs.io/en/latest/tutorials.html#waiting-for-a-job>`__ for more information including an example.  Jobs are identified by (Grid Engine) job ID, so they do not need to have been submitted by DRMAA.
+Within a DRMAA Session you can wait indefinitely or forever for one, several or all submitted jobs to complete.  See the `documentation <https://drmaa-python.readthedocs.io/en/latest/tutorials.html#waiting-for-a-job>`__ for more information including an example.  Jobs are identified by (Grid Engine) job ID, so they do not need to have been submitted by DRMAA.
 
 Controlling jobs
 ^^^^^^^^^^^^^^^^
 
-Within a DRMAA Session you can also terminate, suspend, resume, hold and release a job.  See the `documentation <http://drmaa-python.readthedocs.io/en/latest/tutorials.html#controlling-a-job>`__ for more information including an example.  Again, jobs are identified by (Grid Engine) job ID, so they do not need to have been submitted by DRMAA.
+Within a DRMAA Session you can also terminate, suspend, resume, hold and release a job.  See the `documentation <https://drmaa-python.readthedocs.io/en/latest/tutorials.html#controlling-a-job>`__ for more information including an example.  Again, jobs are identified by (Grid Engine) job ID, so they do not need to have been submitted by DRMAA.
 
 Checking the status of a job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Within a DRMAA Session you can check to see if any job is queuing, running, has completed successfully, has failed or is in some other state.  See the `documentation <http://drmaa-python.readthedocs.io/en/latest/tutorials.html#getting-job-status>`__ for more information including an example.  
+Within a DRMAA Session you can check to see if any job is queuing, running, has completed successfully, has failed or is in some other state.  See the `documentation <https://drmaa-python.readthedocs.io/en/latest/tutorials.html#getting-job-status>`__ for more information including an example.  
 
 Futher information
 ^^^^^^^^^^^^^^^^^^
 
-See the `documentation <http://drmaa-python.readthedocs.io/en/latest/>`__ for the DRMAA Python bindings; you may find the enclosed `reference information <http://drmaa-python.readthedocs.io/en/latest/drmaa.html>`_ useful.  Note that not all features of these bindings are described in this documentation!
+See the `documentation <https://drmaa-python.readthedocs.io/en/latest/>`__ for the DRMAA Python bindings; you may find the enclosed `reference information <https://drmaa-python.readthedocs.io/en/latest/drmaa.html>`_ useful.  Note that not all features of these bindings are described in this documentation!
 
 Java bindings
 -------------

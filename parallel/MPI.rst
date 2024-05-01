@@ -9,7 +9,7 @@ It is commonly used on computer clusters as a means by which a set of related pr
 Unlike the :ref:`SMP / OpenMP <parallel_SMP>` approaches to parallelism, the parallel strands of execution in a MPI environment do not share any memory: 
 these strands (processes) must therefore communicate data and other information by passing messages between each other.
 
-MPI is used on systems ranging from a few interconnected `Raspberry Pi's <http://thenewstack.io/installing-mpi-python-raspberry-pi-cluster-runs-docker/>`_ through to 
+MPI is used on systems ranging from a few interconnected `Raspberry Pi's <https://thenewstack.io/installing-mpi-python-raspberry-pi-cluster-runs-docker/>`_ through to 
 the UK's national supercomputer, `Archer <http://www.archer.ac.uk/>`_.  
 
 .. _mpi_impl:

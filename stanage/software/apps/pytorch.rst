@@ -55,8 +55,8 @@ Then PyTorch can be installed by the following ::
    module load Anaconda3/2022.05
 
    # (Only needed if we're using GPU) Load a cuDNN module
-   # (which in this case implicitly loads CUDA 12.0.0)
-   module load cuDNN/8.8.0.121-CUDA-12.0.0
+   # (which in this case implicitly loads CUDA 12.1.1)
+   module load cuDNN/8.9.2.26-CUDA-12.1.1
 
    # Create an conda virtual environment called 'pytorch'
    conda create -n pytorch python=3.10
@@ -79,7 +79,7 @@ Use the following command to activate the Conda environment with PyTorch install
    # Load the conda module
    module load Anaconda3/2022.10
    # *Only needed if we're using GPU* Load the CUDA and cuDNN module
-   module load cuDNN/8.8.0.121-CUDA-12.0.0
+   module load cuDNN/8.9.2.26-CUDA-12.1.1
    # Activate the 'pytorch' environment
    source activate pytorch
 

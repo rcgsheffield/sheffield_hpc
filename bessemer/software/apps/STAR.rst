@@ -13,9 +13,6 @@ suffix arrays.  The latest STAR manual can be found at:
 https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf which will detail the 
 many available command arguments.
 
-A limited collection of STAR genomes
-is available from http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STARgenomes/
-
 --------
 
 Interactive usage

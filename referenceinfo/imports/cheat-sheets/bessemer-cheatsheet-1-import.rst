@@ -55,8 +55,8 @@
    ==========================================      =======================================
    *module avail*                                  List available modules
    *module avail |& grep -i somename*              Find a module
-   *module load <class>/<name>/<version>*          Load a module
-   *module unload <class>/<name>/<version>*        Unload a module
+   *module load <name>/<version>*                  Load a module
+   *module unload <name>/<version>*                Unload a module
    *module list*                                   List loaded modules
    *module purge*                                  Unload all modules
    ==========================================      =======================================

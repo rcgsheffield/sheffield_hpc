@@ -55,9 +55,9 @@
    ===================================================   ============================
    *module avail*                                        List available modules
    *module -t --redirect avail |& grep -i somename*      Find a module
-   *module spider <class>/<name>/<version>*              Detailed module information
-   *module load <class>/<name>/<version>*                Load a module
-   *module unload <class>/<name>/<version>*              Unload a module
+   *module spider <name>/<version>*                      Detailed module information
+   *module load <name>/<version>*                        Load a module
+   *module unload <name>/<version>*                      Unload a module
    *module list*                                         List loaded modules
    *module purge*                                        Unload all modules
    *ml -\-help*                                          Shorthand options       

@@ -16,7 +16,7 @@ the UK's national supercomputer, `Archer <http://www.archer.ac.uk/>`_.
 
 MPI Implementations
 -------------------
-The `Message Passing Interface (MPI) <http://mpi-forum.org/>`_ itself is just a *specification* for a message passing library.  
+The `Message Passing Interface (MPI) <https://mpi-forum.org/>`_ itself is just a *specification* for a message passing library.  
 
 There are multiple implementations of this specification, each produced by a different organisation, 
 including `OpenMPI <https://www.open-mpi.org/>`_ and `MVAPICH <http://mvapich.cse.ohio-state.edu/>`_.

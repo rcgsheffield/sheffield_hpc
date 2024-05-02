@@ -15,7 +15,7 @@ Total capacity
 * CPU cores: 2024.
 * Total memory: 12160 GiB.
 * GPUs: 40.
-* Fast network filesystem (`Lustre <http://lustre.org/>`_): 669 TiB.
+* Fast network filesystem (`Lustre <https://lustre.org/>`_): 669 TiB.
 
 Note that some of these resources have been purchased by research groups who have exclusive access to them.
 
@@ -114,13 +114,13 @@ Non-worker nodes
   * Directory services.
 
 .. _AVX2: https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#Advanced_Vector_Extensions_2
-.. _Dell PowerEdge C4130: http://www.dell.com/uk/business/p/poweredge-c4130/pd
-.. _Dell PowerEdge C6320: http://www.dell.com/uk/business/p/poweredge-c6320/pd
-.. _Dell Precision Rack 7910: http://www.dell.com/uk/business/p/precision-r7910-workstation/pd?oc=cu000pr7910mufws_
+.. _Dell PowerEdge C4130: https://www.dell.com/uk/business/p/poweredge-c4130/pd
+.. _Dell PowerEdge C6320: https://www.dell.com/uk/business/p/poweredge-c6320/pd
+.. _Dell Precision Rack 7910: https://www.dell.com/uk/business/p/precision-r7910-workstation/pd?oc=cu000pr7910mufws_
 .. _Fused Multiply-Add: https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation#Fused_multiply.E2.80.93add
 .. _Haswell: https://en.wikipedia.org/wiki/Haswell_(microarchitecture)
-.. _Intel Xeon E5-2630 v3: http://ark.intel.com/products/83356/Intel-Xeon-Processor-E5-2630-v3-20M-Cache-2_40-GHz
-.. _NVIDIA Tesla K80: http://www.nvidia.com/object/tesla-servers.html
+.. _Intel Xeon E5-2630 v3: https://ark.intel.com/products/83356/Intel-Xeon-Processor-E5-2630-v3-20M-Cache-2_40-GHz
+.. _NVIDIA Tesla K80: https://www.nvidia.com/object/tesla-servers.html
 
 .. nnodes ``qhost | grep -c 'sharc-'``
 .. ncores ``qhost | awk 'FNR > 3 {sum += $3} END {print sum}'``

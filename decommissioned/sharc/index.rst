@@ -8,7 +8,7 @@ ShARC
 
 .. note::
 
-    The latest changes and newly installed software on our clusters can be found at the `HPC Changelog <http://changelog.hpc.shef.ac.uk/>`_ microsite.
+    The latest changes and newly installed software on our clusters can be found at the `HPC Changelog <https://changelog.hpc.shef.ac.uk/>`_ microsite.
 
 
 This is the documentation for ShARC (Sheffield Advanced Research Computer), one of the University of Sheffield's High Performance Computing clusters and the successor to the decommissioned Iceberg cluster. 

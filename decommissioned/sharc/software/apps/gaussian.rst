@@ -10,8 +10,8 @@ Gaussian
 
    :Version: 09 E.01, 16 C.01
    :Dependencies: Vendor specified Portland Group Fortran compiler and GCC compiler.
-   :URL: http://gaussian.com
-   :Documentation: http://gaussian.com/techsupport/
+   :URL: https://gaussian.com
+   :Documentation: https://gaussian.com/techsupport/
 
 
 Gaussian is a general purpose computational chemistry software package initially released in 1970.
@@ -43,7 +43,7 @@ Gaussian utilities
 ---------------------
 
 The Gaussian utilities can be accessed by loading the Gaussian module file (see above).
-The utilities are executed by typing their name, e.g., ``formchk`` and ``cubegen``. The full list of utilities is described at http://gaussian.com/utils.
+The utilities are executed by typing their name, e.g., ``formchk`` and ``cubegen``. The full list of utilities is described at https://gaussian.com/utils.
 
 .. hint::
 

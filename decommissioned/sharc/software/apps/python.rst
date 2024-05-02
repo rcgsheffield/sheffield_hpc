@@ -68,7 +68,7 @@ Using a Conda Environment
 
 Once the conda module is loaded you have to load or create the desired
 conda environments. For the documentation on conda environments see
-`the conda documentation <http://conda.pydata.org/docs/using/envs.html>`_.
+`the conda documentation <https://conda.pydata.org/docs/using/envs.html>`_.
 
 You can load a conda environment with::
 
@@ -214,7 +214,7 @@ Installation Notes
 These are primarily for administrators of the system.
 
 The conda package manager is installed in ``/usr/share/packages/apps/conda``, it
-was installed using the `miniconda <http://conda.pydata.org/miniconda.html>`_
+was installed using the `miniconda <https://conda.pydata.org/miniconda.html>`_
 installer.
 
 It is important to regularly update the ``root`` environment to keep the conda

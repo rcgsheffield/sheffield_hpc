@@ -124,7 +124,7 @@ Ensure ``lib.loc`` folder is specified, or R will attempt to update the wrong li
 
 .. warning::
     Notice that the personal package library path includes the version of R:
-    if after installing some packages you switch to using a different `major or minor version <http://semver.org/>`_ of R
+    if after installing some packages you switch to using a different `major or minor version <https://semver.org/>`_ of R
     then you will need then to install those package *for this new version*.
 
 R Packages that require external libraries

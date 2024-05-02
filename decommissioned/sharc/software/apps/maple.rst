@@ -9,7 +9,7 @@ Maple
 .. sidebar:: Maple
 
    :Latest Version:  2022
-   :URL: http://www.maplesoft.com/products/maple/
+   :URL: https://www.maplesoft.com/products/maple/
 
 Scientific Computing and Visualisation
 

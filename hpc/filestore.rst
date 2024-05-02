@@ -140,7 +140,7 @@ These areas are `Lustre <https://en.wikipedia.org/wiki/Lustre_(file_system)>`__ 
 They are **faster** than :ref:`home_dir` and :ref:`shared_dir` when dealing with larger files but 
 are **not performant when reading/writing lots of small files** 
 (:ref:`scratch_dir` are ideal for reading/writing lots of small temporary files within jobs).
-An example of how slow it can be for large numbers of small files is detailed `here <http://www.walkingrandomly.com/?p=6167>`__.
+An example of how slow it can be for large numbers of small files is detailed `here <https://www.walkingrandomly.com/?p=6167>`__.
 
 There are separate ``fastdata`` areas on each cluster:
 

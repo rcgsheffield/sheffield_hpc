@@ -5,7 +5,7 @@ Activating software using Environment Modules
 
 .. note:: 
 
-    Additional detailed information on the Environment Modules software can be found on the `project's site <http://modules.sourceforge.net/>`_.
+    Additional detailed information on the Environment Modules software can be found on the `project's site <https://modules.sourceforge.net/>`_.
 
 Overview and rationale
 ----------------------

@@ -19,7 +19,7 @@ MPI Implementations
 The `Message Passing Interface (MPI) <https://mpi-forum.org/>`_ itself is just a *specification* for a message passing library.  
 
 There are multiple implementations of this specification, each produced by a different organisation, 
-including `OpenMPI <https://www.open-mpi.org/>`_ and `MVAPICH <http://mvapich.cse.ohio-state.edu/>`_.
+including `OpenMPI <https://www.open-mpi.org/>`_ and `MVAPICH <https://mvapich.cse.ohio-state.edu/>`_.
 This documentation includes information on the MPI implementations available on :ref:`ShARC <sharc-parallel>`.  
 These implementations have been compiled in a way that allows them to make optimal use of the cluster's high-speed network infrastructure (*OmniPath* on ShARC).
 If you are not sure which implementation to use then try the latest available version of OpenMPI.

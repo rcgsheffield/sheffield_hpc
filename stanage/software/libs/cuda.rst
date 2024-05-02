@@ -187,7 +187,7 @@ Documentation
 -------------
 
 * `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html#axzz3uLoSltnh>`_
-* `The power of C++11 in CUDA 7 <http://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/>`_
+* `The power of C++11 in CUDA 7 <https://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/>`_
 
 ---------
 

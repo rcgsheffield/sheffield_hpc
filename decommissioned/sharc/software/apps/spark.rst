@@ -9,7 +9,7 @@ spark
 .. sidebar:: Spark
 
    :Version: 2.3.0, 2.1
-   :URL: http://spark.apache.org/
+   :URL: https://spark.apache.org/
 
 Apache Spark is a fast and general engine for large-scale data processing.
 

@@ -8,9 +8,9 @@ GROMACS
 
    :Version: 2016.4, 2018.1
    :Dependencies: GCC 4.9.4, CUDA 8.0.44 (GPU support), and OpenMPI 2.0.1 (MPI support).
-   :URL: http://www.gromacs.org/
-   :Documentation: http://manual.gromacs.org/documentation/
-   :Tutorials: http://www.gromacs.org/Documentation/Tutorials
+   :URL: https://www.gromacs.org/
+   :Documentation: https://manual.gromacs.org/documentation/
+   :Tutorials: https://www.gromacs.org/Documentation/Tutorials
 
 
 GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.

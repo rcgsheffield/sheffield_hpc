@@ -14,7 +14,7 @@ Stanage
 
 .. note::
 
-    The latest changes and newly installed software on our clusters can be found on the `HPC Changelog <http://changelog.hpc.shef.ac.uk/>`_ microsite.
+    The latest changes and newly installed software on our clusters can be found on the `HPC Changelog <https://changelog.hpc.shef.ac.uk/>`_ microsite.
 
 
 This is the documentation for Stanage, the University of Sheffield's new High Performance Computing cluster. Stanage is the logical successor to the :ref:`sharc` cluster featuring 

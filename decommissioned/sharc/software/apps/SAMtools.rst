@@ -10,7 +10,7 @@ SAMtools
    :Version: 1.7
    :Dependencies: gcc/4.9.4
    :URL: https://github.com/samtools/samtools/releases/download/1.7/samtools-1.7.tar.bz2
-   :Documentation: http://www.htslib.org/doc/samtools.html
+   :Documentation: https://www.htslib.org/doc/samtools.html
 
 
 SAM (Sequence Alignment/Map) format is a generic format for storing large nucleotide sequence alignments. SAM aims to be a format that is

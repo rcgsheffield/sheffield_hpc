@@ -8,7 +8,7 @@ PLUMED
    
    :Version: 2.3.2
    :Dependencies: GCC compiler and Open MPI. Modules loaded for GCC 6.2.0 and Open MPI 2.1.1.
-   :URL: http://www.plumed.org  
+   :URL: https://www.plumed.org  
    :Documentation: https://plumed.github.io/doc-v2.3/user-doc/html/index.html
 
 PLUMED is an open source library for free energy calculations in molecular systems which works together with some of the most popular molecular dynamics engines. Free energy calculations can be performed as a function of many order parameters with a particular focus on biological problems, using state of the art methods such as metadynamics, umbrella sampling and Jarzynski-equation based steered MD. The software, written in C++, can be easily interfaced with both fortran and C/C++ codes.

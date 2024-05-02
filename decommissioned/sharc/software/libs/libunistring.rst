@@ -7,7 +7,7 @@ libunistring
 .. sidebar:: libunistring
 
    :Versions: 0.9.10, 0.9.7
-   :URL: http://www.gnu.org/software/libunistring/
+   :URL: https://www.gnu.org/software/libunistring/
 
 Text files are nowadays usually encoded in Unicode, and may consist of very
 different scripts - from Latin letters to Chinese Hanzi, with many kinds of

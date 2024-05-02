@@ -8,7 +8,7 @@ SAMtools
    :Version: 1.9
    :Dependencies: Easybuild foss-2018b toolchain
    :URL: https://github.com/samtools/samtools/releases/
-   :Documentation: http://www.htslib.org/doc/samtools.html
+   :Documentation: https://www.htslib.org/doc/samtools.html
 
 
 SAM (Sequence Alignment/Map) format is a generic format for storing large nucleotide sequence alignments. SAM aims to be a format that is

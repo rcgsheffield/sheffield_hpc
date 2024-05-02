@@ -243,7 +243,7 @@ Profiling using nvprof
 
 Prior to September 2020 ``nvprof``, NVIDIA's CUDA profiler, could not write its `SQLite <https://www.sqlite.org/>`__ database outputs to the ``/fastdata`` filesystem.
 This was because SQLite requires a filesystem that supports file locking
-but file locking was not previously enabled on the (`Lustre <http://lustre.org/>`__) filesystem mounted on ``/fastdata``.
+but file locking was not previously enabled on the (`Lustre <https://lustre.org/>`__) filesystem mounted on ``/fastdata``.
 
 ``nvprof`` can now write output data to any user-accessible filesystem including ``/fastdata``.
 

@@ -8,8 +8,8 @@ R (Intel Build)
 
 .. sidebar:: R
 
-   :URL: http://www.r-project.org/
-   :Documentation: http://www.r-project.org/
+   :URL: https://www.r-project.org/
+   :Documentation: https://www.r-project.org/
 
 R is a statistical computing language. 
 This version of R is built using the :ref:`Intel compilers <sharc-intel-compilers>` and 

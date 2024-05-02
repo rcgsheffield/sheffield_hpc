@@ -110,7 +110,7 @@ Using conda Environments
 
 Once the conda module is loaded you have to load or create the desired
 conda environments. For the documentation on conda environments see
-`the conda documentation <http://conda.pydata.org/docs/using/envs.html>`_.
+`the conda documentation <https://conda.pydata.org/docs/using/envs.html>`_.
 
 You can load a conda environment with::
 

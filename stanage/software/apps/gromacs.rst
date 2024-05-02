@@ -5,9 +5,9 @@ GROMACS
 
    :Version: 2021, 2019.3 
    :Dependencies: GCC 10.2 and OpenMPI 4.0.5 (MPI support).
-   :URL: http://www.gromacs.org/
-   :Documentation: http://manual.gromacs.org/documentation/
-   :Tutorials: http://www.gromacs.org/Documentation/Tutorials
+   :URL: https://www.gromacs.org/
+   :Documentation: https://manual.gromacs.org/documentation/
+   :Tutorials: https://www.gromacs.org/Documentation/Tutorials
 
 
 GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.

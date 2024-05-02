@@ -6,7 +6,7 @@ libunistring
 .. sidebar:: libunistring
     
     :Versions: 0.9.10, 1.0
-    :Documentation:  http://www.gnu.org/software/libunistring/
+    :Documentation:  https://www.gnu.org/software/libunistring/
 
 
 Text files are nowadays usually encoded in Unicode, and may consist of very

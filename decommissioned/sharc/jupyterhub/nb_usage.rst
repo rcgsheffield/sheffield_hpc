@@ -61,4 +61,4 @@ Pyspark
 ^^^^^^^
 if you want to use `Pyspark <https://spark.apache.org/docs/latest/api/python/index.html>`__ with conda and :ref:`Jupyter on ShARC <jupyterhub_sge>` then some extra configuration is required: see :ref:`pyspark_sharc_jupyterhub`.
 
-.. _Jupyter Notebook official documentation: http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html
+.. _Jupyter Notebook official documentation: https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html

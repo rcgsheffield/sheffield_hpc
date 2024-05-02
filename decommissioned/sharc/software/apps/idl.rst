@@ -8,7 +8,7 @@ IDL
 
    :Version: 8.8
    :Dependencies: Java for GUI. Module loaded for Java 1.8.0_102.
-   :URL: http://www.exelisvis.co.uk/ProductsServices/IDL.aspx
+   :URL: https://www.exelisvis.co.uk/ProductsServices/IDL.aspx
    :Documentation: http://www.exelisvis.com/docs/using_idl_home.html
 
 IDL is a data analysis language that first appeared in 1977.

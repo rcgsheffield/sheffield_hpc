@@ -10,7 +10,7 @@ MVAPICH2 (Intel version)
 
    :Latest Version: 2.3b
    :Dependencies: Intel compilers
-   :URL: http://mvapich.cse.ohio-state.edu/
+   :URL: https://mvapich.cse.ohio-state.edu/
 
 MVAPICH, also known as MVAPICH2, is, like OpenMPI, an implementation of the MPI standard for passing messages between machines in parallel computing environments.
 
@@ -23,7 +23,7 @@ You can load MVAPICH2 using ::
 
 This version was build with the Intel compiler suite version 17.0.0.
 
-See `here <http://mvapich.cse.ohio-state.edu/overview/>`__ for an overview of the features offered per MVAPICH2 release.
+See `here <https://mvapich.cse.ohio-state.edu/overview/>`__ for an overview of the features offered per MVAPICH2 release.
 
 .. _mvapich2_benchmark_progs:
 
@@ -34,7 +34,7 @@ A set of benchmarking programs programs, the *OSU Micro Benchmarks*, are availab
 
     ${MPI_HOME}/libexec/osu-micro-benchmarks/mpi/
 
-Documentation and source code for these benchmarks can be found `online <http://mvapich.cse.ohio-state.edu/benchmarks/>`__.
+Documentation and source code for these benchmarks can be found `online <https://mvapich.cse.ohio-state.edu/benchmarks/>`__.
 
 To run one of these programs or another program built with this particular MPI software 
 you want to submit an MPI-aware batch job (or interactive session) in which you load the MVAPICH2 module file then run the program.  

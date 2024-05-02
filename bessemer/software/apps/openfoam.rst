@@ -42,7 +42,8 @@ Interactive Usage
 
 The following is an example single core interactive session running the pitzDaily example model.
 
-After connecting to Bessemer (see :ref:`ssh`), you can start an `interactive graphical session <https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/submit.html#interactive-sessions>`_.
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
+
 
 .. code-block:: bash
 

@@ -32,7 +32,7 @@ The latest version of |softwarename| (currently version |currentver|) is made av
 After this the |softwarename| command can be run from the terminal prompt with the ``sox`` command.
 
 Further documentation on the usage of |softwarename| can be found at the following link: 
-http://sox.sourceforge.net/Docs/Documentation
+https://linux.die.net/man/1/sox
 
 ========
 

@@ -101,7 +101,7 @@ managed and available without polluting your base environment. This process, fol
 
 
 The above instructions have been adjusted from the following documentation provided by Octeract 
-at: https://docs.octeract.com/htg1005-how_to_use_pyomo_with_octeract_engine
+at: https://octeract.gg/docs/tutorials/pyomo-tutorial/pyomo-on-linux/
 
 -----------
 

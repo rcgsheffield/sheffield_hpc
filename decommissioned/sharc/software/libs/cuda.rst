@@ -143,7 +143,7 @@ along with details of the supported `virtual architectures <https://docs.nvidia.
 Documentation
 -------------
 
-* `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html#axzz3uLoSltnh>`_
+* `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html>`_
 * `The power of C++11 in CUDA 7 <https://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/>`_
 
 Profiling using nvprof

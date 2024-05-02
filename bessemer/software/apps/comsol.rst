@@ -85,7 +85,7 @@ Interfacing Products
 Interactive usage
 -----------------
 
-After connecting to Bessemer (see :ref:`ssh`),  start an `interactive graphical session <https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/submit.html#interactive-sessions>`_.
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
 
 Next, run the following to make COMSOL Multiphysics available in your current session: ::
 

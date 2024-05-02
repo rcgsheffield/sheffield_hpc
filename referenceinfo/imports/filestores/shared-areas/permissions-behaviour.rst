@@ -17,7 +17,7 @@ the ACLs are what really determine access permissions.
 Most applications have robust ways of checking for properties such as executability but 
 some applications can cause problems when accessing files/directories on ``/shared`` by naively checking permissions just using Linux mode bits:
 
-* `which <http://linux.die.net/man/1/which>`_: 
+* `which <https://linux.die.net/man/1/which>`_: 
   a directory under ``/shared`` may be on your path and 
   you may be able to run a contained executable without prefixing it with a absolute/relative directory 
   but ``which`` may fail to find that executable.

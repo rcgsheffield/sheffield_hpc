@@ -4,7 +4,7 @@ Development toolchains
 ======================
 
 Much of the software available on Stanage
-was installed using `EasyBuild <https://easybuild.readthedocs.io/>`__,
+was installed using `EasyBuild <https://docs.easybuild.io/>`__,
 which is a tool for building and installing software on HPC systems.
 
 EasyBuild groups core sets of dependencies as what it calls *toolchains*.

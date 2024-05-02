@@ -6,8 +6,8 @@ Octeract Engine
 
    :Version: 3.1.0
    :Dependencies: 
-   :URL: https://octeract.co.uk/octeract-engine/
-   :Documentation: https://docs.octeract.com/
+   :URL: https://octeract.gg/octeract-engine/
+   :Documentation: https://octeract.gg/docs/
 
 Octeract Engine is a massively parallel MINLP solver. It is written in ORL (Octeract Reformulation Language).
 

@@ -157,5 +157,5 @@ How to install mermaid-cli and regenerate one of these diagrams: ::
 
 .. _Sphinx: https://www.sphinx-doc.org/en/master/
 .. _reStructuredText: https://docutils.sourceforge.io/rst.html
-.. _Miniconda: https://conda.io/miniconda.html
+.. _Miniconda: https://docs.anaconda.com/free/miniconda/
 .. _Tox: https://tox.readthedocs.io/en/latest/

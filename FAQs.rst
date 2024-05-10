@@ -86,11 +86,11 @@ To view the man page (official manual) for a command, you can use the command:
 
 You can navigate man pages using (the same keyboard shorcuts as **less**):
 
-        * **Space** to advance one page
-        * **d** to advance half a page
-        * **b** to go back one page
-        * **u** to go back half a page
-        * **/** starts search mode, after which you enter a search term
+* **Space** to advance one page
+* **d** to advance half a page
+* **b** to go back one page
+* **u** to go back half a page
+* **/** starts search mode, after which you enter a search term
 
 Whilst in search mode press **n** for next occurrence and **N** for previous occurrence.
 

@@ -42,6 +42,7 @@ one of the following commands:
 
 .. code-block:: bash
 
+   module load CUDA/12.1.1 
    module load CUDA/12.0.0  
    module load CUDA/11.8.0
    module load CUDA/11.7.0

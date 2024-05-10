@@ -728,6 +728,34 @@ but cannot use more than 400 at once.
 
 -----
 
+How do I avoid large Conda environments filling up my home directory?
+---------------------------------------------------------------------
+
+.. include:: referenceinfo/imports/software/python/conda_in_fastdata.rst
+
+How do I remove conda enviroments from my home directory?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you are rebuilding conda environments in your fastdata area and want to remove current conda enviroments from your home directory follow the instructions below:
+
+.. hint::
+
+        Deactivate your conda environments before removing them using ``source deactivate``
+
+1. To list your enviroments run:
+xs
+.. code-block:: console
+
+        conda info --envs
+
+2. Remove environemnts using the following command. Replace 'environment_name' with the name of the environemtn you want to remove.
+
+.. code-block:: console
+
+        conda remove -n <enviroment_name> --all
+
+
+-----
+
 How to change the ownership of files and folders when not the root user?
 ------------------------------------------------------------------------
 

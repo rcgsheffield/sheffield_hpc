@@ -67,6 +67,11 @@ installations, you can ``clone`` that environment::
 This will create an environment called ``myexperiment`` which has all the
 same conda packages as the ``myscience`` environment.
 
+How to avoid large Conda environments filling up your home directory
+--------------------------------------------------------------------
+
+.. include:: ../../../referenceinfo/imports/software/python/conda_in_fastdata.rst
+
 
 Installing Packages Inside a Conda Environment
 ----------------------------------------------

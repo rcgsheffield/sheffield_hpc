@@ -3,7 +3,7 @@ Home directories have limited space and can often reach their quota limit. If yo
 (e.g. containing bulky Deep Learning packages such as TensorFlow or PyTorch)
 then there's a risk you'll quickly use up your home directory's :ref:`storage quota <home_dir>`.
 
-To avoid this, build your conda enviroments in a :ref:`fastdata area <fastdata_dir>`
+To avoid this, build your conda environments in a :ref:`fastdata area <fastdata_dir>`
 
 1. Create a ``.condarc`` file in your home directory if it does not already exist.
 2. Add an ``envs_dirs:`` and ``pkgs_dirs:`` section to your ``.condarc`` file as shown below:

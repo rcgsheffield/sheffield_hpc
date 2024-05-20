@@ -195,9 +195,9 @@ Following are ways to fix too much time requested:
 .. tabs::
 
    .. group-tab:: Stanage
-        The maximum run time for Bessemer is 168 hours.
+        The maximum run time for Stanage is 96 hours.
 
-        You can get an estimate for when your job will run on Bessemer using:
+        You can get an estimate for when your job will run on Stanage using:
 
         .. code-block:: console
 
@@ -215,7 +215,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
    .. group-tab:: Bessemer
 
@@ -239,7 +239,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
 
 ------

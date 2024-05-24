@@ -33,6 +33,7 @@ with one of the following commands:
 
 .. code-block:: bash
 
+   module load cuDNN/8.9.2.26-CUDA-12.1.1
    module load cuDNN/8.8.0.121-CUDA-12.0.0
    module load cuDNN/8.7.0.84-CUDA-11.8.0
    module load cuDNN/8.6.0.163-CUDA-11.8.0

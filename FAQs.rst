@@ -86,11 +86,11 @@ To view the man page (official manual) for a command, you can use the command:
 
 You can navigate man pages using (the same keyboard shorcuts as **less**):
 
-        * **Space** to advance one page
-        * **d** to advance half a page
-        * **b** to go back one page
-        * **u** to go back half a page
-        * **/** starts search mode, after which you enter a search term
+* **Space** to advance one page
+* **d** to advance half a page
+* **b** to go back one page
+* **u** to go back half a page
+* **/** starts search mode, after which you enter a search term
 
 Whilst in search mode press **n** for next occurrence and **N** for previous occurrence.
 
@@ -195,9 +195,9 @@ Following are ways to fix too much time requested:
 .. tabs::
 
    .. group-tab:: Stanage
-        The maximum run time for Bessemer is 168 hours.
+        The maximum run time for Stanage is 96 hours.
 
-        You can get an estimate for when your job will run on Bessemer using:
+        You can get an estimate for when your job will run on Stanage using:
 
         .. code-block:: console
 
@@ -215,7 +215,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
    .. group-tab:: Bessemer
 
@@ -239,7 +239,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
 
 ------
@@ -726,6 +726,107 @@ but cannot use more than 400 at once.
    **Total**                                            **52**
    ==============================================       =========================== 
 
+-----
+
+How can I stay connected to the cluster for longer?
+---------------------------------------------------
+
+.. include:: /referenceinfo/imports/staying_connected.rst
+
+-----
+
+"Out of Memory", "OOM" errors and job prematurely stopping
+----------------------------------------------------------
+
+When "Out of Memory" (OOM) errors occur in an interactive or batch session, it indicates insufficient memory has been allocated for the job to run to completion.
+
+See :ref:`seff` and :ref:`sacct` commands for details on memory usage/efficiency for historical or currently running jobs.
+
+.. note::
+    When an Out-of-Memory (OOM) error occurs in a system, the metrics shown by Slurm may not be truly accurate due to the metric polling interval for Slurm being slower than the CGroup limit enforcement.
+    This means not enough memory was given despite memory allocated being higher than the reported memory peak for the job.
+
+Requesting higher memory normally fixes this error. See :ref:`Memory Allocation <Memory-allocation>` for details.
+
+-----
+
+How to change the ownership of files and folders when not the root user?
+------------------------------------------------------------------------
+
+For security reasons only system administrators are granted access to the root account (`superuser privileges <https://en.wikipedia.org/wiki/Superuser>`_) and as successfully using the **chown** command `requires root account permissions <https://unix.stackexchange.com/a/27374>`_ it is not possible for a non-root user to directly reassign ownership.
+However, it is possible to do so indirectly by using Access Control Lists (ACLs).
+
+In the following instructions, we will bypass these limitations by giving the second user read permissions on the data so that they can make a copy of their own, then the original user can delete the original data.
+It assumes **user1** is the current owner and **user2** is going to be the new owner:
+
+1. **user1** makes sure **user2** has the access to the files/folders:
+
+The files/folders have to be stored in public Fastdata areas, detailed instructions are contained in the :ref:`fastdata_dir`.
+
+2. **user1** checks the original permissions of the files/folders:
+
+.. code-block:: console
+
+        [user1@login1 [stanage] public]$ getfacl the/directory/changing/ownership/
+        # file: the/directory/changing/ownership/
+        # owner: user1
+        # group: clusterusers
+        user::rwx
+        group::r-x
+        other::r-x
+
+3. **user1** makes the files/folders available to read by **user2** with Linux ACLs:
+
+.. code-block:: console
+
+        setfacl --recursive --modify u:user2:r-x the/directory/changing/ownership/
+
+4. **user1** ensures **user2** has the access to the files/folders:
+
+.. code-block:: console
+        :emphasize-lines: 3, 9
+
+        [user1@login1 [stanage] public]$ ls -l
+        total 4
+        drwxrwxr-x+ 2 user1 clusterusers 4096 Apr  3 13:52 the/directory/changing/ownership/
+        [user1@login1 [stanage] public]$ getfacl  the/directory/changing/ownership/
+        # file: the/directory/changing/ownership/
+        # owner: user1
+        # group: clusterusers
+        user::rwx
+        user:user2:r-x
+        group::r-x
+        mask::r-x
+        other::r-x
+
+5. **user2** creates a temporary directory to store the files:
+
+.. code-block:: console
+
+        mkdir my/tmp/directory
+
+6. **user2** copies the files from **user1**:
+
+.. code-block:: console
+
+        cp -R /mnt/parscratch/users/user1/public/the/directory/changing/ownership/ my/tmp/directory
+
+7. **user2** checks if they have the copy of the files/folders with the correct ownership:
+
+.. code-block:: console
+
+        [user2@login1 [stanage] public]$ ls -l
+        total 4
+        drwxr-xr-x 2 user2 clusterusers 4096 Apr  3 14:00 the/directory/changing/ownership
+
+.. warning::
+
+   **user1** should check with **user2** and ensure the files have been transferred prior to deletion since the fastdata areas do not have backups.
+
+8. **user1** deletes the existing folder recursively:
+
+.. code-block:: console
+
+        rm -rf /the/directory/changing/ownership
+
 |br|
-
-

@@ -44,20 +44,19 @@ First request an interactive session, e.g. with :ref:`submit_interactive_stanage
    # To request 8GB of CPU RAM for the session
    srun --mem=8G --pty bash
 
-   # OR To request 8GB CPU RAM and a GPU (NB Each NVIDIA A100 or H100 GPU in Stanage has 80GB of RAM)
-   srun --partition=gpu --qos=gpu --mem=8G --gres=gpu:1 --pty bash
-
+   # NB Each NVIDIA A100 (and H100) GPU in Stanage has 80GB of GPU RAM
+   srun --partition=gpu --qos=gpu --gres=gpu:1 --mem=82G --pty bash
 
 .. include:: /referenceinfo/imports/stanage/h100-gpu-opt-in-warning.rst
 
 Then PyTorch can be installed by the following ::
 
    # Load the conda module
-   module load Anaconda3/2022.10
+   module load Anaconda3/2022.05
 
    # (Only needed if we're using GPU) Load a cuDNN module
-   # (which in this case implicitly loads CUDA 12.0.0)
-   module load cuDNN/8.8.0.121-CUDA-12.0.0
+   # (which in this case implicitly loads CUDA 12.1.1)
+   module load cuDNN/8.9.2.26-CUDA-12.1.1
 
    # Create an conda virtual environment called 'pytorch'
    conda create -n pytorch python=3.10
@@ -80,7 +79,7 @@ Use the following command to activate the Conda environment with PyTorch install
    # Load the conda module
    module load Anaconda3/2022.10
    # *Only needed if we're using GPU* Load the CUDA and cuDNN module
-   module load cuDNN/8.8.0.121-CUDA-12.0.0
+   module load cuDNN/8.9.2.26-CUDA-12.1.1
    # Activate the 'pytorch' environment
    source activate pytorch
 

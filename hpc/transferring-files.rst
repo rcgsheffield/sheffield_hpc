@@ -57,8 +57,8 @@ Using SCP in the terminal
 If your local machine has a terminal and the ``scp``  (“secure copy”) command is available 
 you can use it to make transfers of files or folders.
 
-Where below substitute **$CLUSTER_NAME** with stanage or bessemer
-and **$USER** with your cluster username. 
+Where below substitute **CLUSTER_NAME** with stanage or bessemer
+and **YOUR_USERNAME** with your cluster username. 
 
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or enter your passcode.
 
@@ -66,19 +66,19 @@ To upload, you transfer from your local machine to the remote cluster:
 
 .. code-block:: shell
 
-  scp /home/user/file.txt $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+  scp /path/to/file.txt YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk:/path/to/directory/
 
 To download, you transfer from the remote cluster to your local machine:
 
 .. code-block:: shell
 
-  scp $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/file.txt /home/user/
+  scp YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk:/path/to/file.txt /path/to/directory/
 
 To copy a whole directory, we add the ``-r`` flag, for “recursive”
 
 .. code-block:: shell
 
-  scp -r $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/my_results /home/user/
+  scp -r YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk:/path/to/my_results /path/to/directory/
 
 
 .. raw:: html
@@ -114,7 +114,7 @@ You can create a new site by selecting *file* from top menu bar then *site manag
 
 After hitting the *new site* button you can enter your credentials in the general tab:
 
-* **Host**: sftp://$CLUSTER_NAME.shef.ac.uk (replace $CLUSTER_NAME with stanage or bessemer)
+* **Host**: sftp://CLUSTER_NAME.shef.ac.uk (replace CLUSTER_NAME with stanage or bessemer)
 * **User**: Your cluster username
 * **Password**: Your cluster password (leave blank and fill this interactively if on a shared machine.)
 * **Port**: (leave blank to use the default port)
@@ -132,6 +132,8 @@ You can drag-and-drop files between the left (local) and right (remote) sides of
 .. raw:: html
 
     <hr class="hr-mid-section-separator">
+
+.. _rsync:
 
 Using rsync
 ^^^^^^^^^^^^^^^^^^^^
@@ -194,13 +196,13 @@ backup folders.
       
 
 The ``rsync`` syntax is very similar to ``scp``. To transfer to another computer with commonly used options, 
-where below substitute **$CLUSTER_NAME** with stanage or bessemer and **$USER** with your cluster username.
+where below substitute **CLUSTER_NAME** with stanage or bessemer and **YOUR_USERNAME** with your cluster username.
 You should be prompted for your Duo MFA credentials after entering your password. Request a push notification or 
 enter your passcode:
 
 .. code-block:: shell
 
-  rsync -avzP /home/user/file.iso $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+  rsync -avzP /path/to/file.iso YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk:/path/to/directory/
 
 The ``a`` (archive) option preserves file timestamps and permissions among other things; 
 the ``v`` (verbose) option gives verbose output to help monitor the transfer; 
@@ -212,7 +214,7 @@ To recursively copy a directory, we can use the same options:
 
 .. code-block:: shell
 
-  rsync -avzP /home/user/isos/ $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/
+  rsync -avzP /path/to/isos/ YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk:/path/to/directory/
 
 This will copy the local directory and its contents under the specified directory on the remote system.
 If the trailing slash is omitted on the destination path, a new directory corresponding to the transferred 
@@ -223,7 +225,7 @@ As before with ``scp``, to download from the cluster rather than upload simply r
 
 .. code-block:: shell
 
-  rsync -avzP $USER@$CLUSTER_NAME.shef.ac.uk:/home/$USER/isos /home/user/ 
+  rsync -avzP YOUR_USERNAME@CLUSTER_NAME.shef.ac.uk:/path/to/isos /path/to/directory/ 
 
 ---------
 

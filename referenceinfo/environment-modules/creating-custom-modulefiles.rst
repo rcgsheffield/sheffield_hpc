@@ -108,11 +108,11 @@ command to your ``.bashrc`` file.
             (the software's installation directory). The **TCL** ``MY_PROGRAM_DIR`` variable is then used to add the program's 
             ``bin`` directory to your **shell environment** ``PATH`` variable with the ``prepend-path`` directive.
 
-                .. code-block:: TCL
+            .. code-block:: TCL
 
-                    set             HOME                $::env(HOME)
-                    set             MY_PROGRAM_DIR      $HOME/software/installs/my_new_program
-                    prepend-path    PATH                $MY_PROGRAM_DIR/bin
+                set             HOME                $::env(HOME)
+                set             MY_PROGRAM_DIR      $HOME/software/installs/my_new_program
+                prepend-path    PATH                $MY_PROGRAM_DIR/bin
 
         Much like using a ``.bashrc`` file with the export command, we can add the required variables and directives 
         to a custom module file. For example, if called ``CustomModule`` and saved in ``$HOME/modules/`` may 

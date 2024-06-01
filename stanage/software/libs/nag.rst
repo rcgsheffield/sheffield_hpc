@@ -99,7 +99,9 @@ If you have loaded the ``module`` for nll6i30dbl this will give the following ou
 Installation notes
 ------------------
 
-This section is primarily for administrators of the system. 
+This section is primarily for administrators of the system:
+
+.. code-block:: bash
 
     PRODUCT='nll6i30dbl'
     pushd "${TMPDIR-/tmp}"

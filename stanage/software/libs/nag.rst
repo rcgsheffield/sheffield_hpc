@@ -49,9 +49,11 @@ which is linked against a reference version of BLAS and LAPACK.
 
 If you are in any doubt as to which to choose, we suggest that you use ``-lnag_mkl``
 
+--------
 
 Running NAG's example programs
 ------------------------------
+
 Most of NAG's routines come with example programs that show how to use them. 
 When you use the ``module`` command to load a version of the NAG library, 
 the script ``nag_example`` for that version becomes available. 
@@ -92,8 +94,11 @@ If you have loaded the ``module`` for nll6i30dbl this will give the following ou
     
     *** End of NAG Library implementation details ***
 
+--------
+
 Installation notes
 ------------------
+
 This section is primarily for administrators of the system. 
 
     PRODUCT='nll6i30dbl'
@@ -101,10 +106,9 @@ This section is primarily for administrators of the system.
     wget "https://www.nag.co.uk/downloads/impl/${PRODUCT}.tgz"
     tar -xvzf "${PRODUCT}.tgz"
     cd "$PRODUCT"
-    ./install.sh \
-        -silent \
-        -accept \
-        -installdir=/opt/apps/testapps/el7/software/staging/NAG
+    ./install.sh -silent -accept-installdir=/opt/apps/testapps/el7/software/staging/NAG
+
+--------
 
 Testing
 -------

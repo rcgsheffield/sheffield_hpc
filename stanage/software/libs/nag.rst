@@ -66,7 +66,7 @@ the output you get will vary according to which version of the NAG library you a
 
    /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/scripts/nag_example a00aaf
 
-If you have loaded the ``module`` for nll6i30dbl this will give the following output ::
+If you have loaded the ``module`` for nll6i30dbl this will give the following output: ::
 
 Use nagvars script to set NAG compile and link environment
 variables within nag_example script
@@ -92,7 +92,6 @@ Running a00aafe.exe
   This is a 64-bit library using 32-bit integers.
  
  *** End of NAG Library implementation details ***
-
 
 Installation notes
 ------------------

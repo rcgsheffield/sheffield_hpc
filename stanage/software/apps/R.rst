@@ -5,7 +5,7 @@ R
 
 .. sidebar:: R
    
-   :Versions: 4.0.0,4.0.5
+   :Versions: 4.0.0,4.0.5,4.2.1,4.2.2
    :URL: https://www.r-project.org/
    :Documentation: https://www.r-project.org/
 
@@ -28,6 +28,8 @@ You can then load a specific version of R using: ::
         
    module load R/4.0.0-foss-2020a
    module load R/4.0.5-foss-2020b
+   module load R/4.2.1-foss-2022a
+   module load R/4.2.2-foss-2022b
 
 R can then be run with: ::
 
@@ -186,4 +188,6 @@ R/4.0.5-foss-2020b
 R was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTR/easyconfig``.
 Note: installed minus any of the configuration to install 700+ packages from CRAN
 (i.e. just base R was installed).
+
+NOTE: all R versions patched to address the CVE vulnerability using R-4.x_fix-CVE-2024-27322.patch
 

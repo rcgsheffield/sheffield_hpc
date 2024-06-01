@@ -61,37 +61,36 @@ in your current working directory.
 
 For example, here is an example output for the NAG routine ``a00aaf`` 
 which identifies the version of the NAG library you are using. 
-If you try this yourself, 
-the output you get will vary according to which version of the NAG library you are using: ::
+If you try this yourself, the output you get will vary according to which version of the NAG library you are using: ::
 
    /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/scripts/nag_example a00aaf
 
 If you have loaded the ``module`` for nll6i30dbl this will give the following output: ::
 
-Use nagvars script to set NAG compile and link environment
-variables within nag_example script
-. /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/scripts/nagvars.sh -quiet  int32 static nag
-
-Copying a00aafe.f90 to current directory
-cp /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/f_examples/source/a00aafe.f90 .
-
-Compiling and linking a00aafe.f90 to produce executable a00aafe.exe
-ifort  -I/opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/lp64/nag_interface_blocks a00aafe.f90 /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/lp64/lib/libnag_nag.a -lm -ldl -lstdc++ -o a00aafe.exe
-
-Running a00aafe.exe
-./a00aafe.exe > a00aafe.r
- A00AAF Example Program Results
- 
- *** Start of NAG Library implementation details ***
- 
- Implementation title: Linux, 64-bit, Intel Classic C/C++ or Intel Classic Fortran
-            Precision: double precision
-         Product Code: NLL6I30DBL
-                 Mark: 30.0.0 (self-contained)
- 
-  This is a 64-bit library using 32-bit integers.
- 
- *** End of NAG Library implementation details ***
+   Use nagvars script to set NAG compile and link environment
+   variables within nag_example script
+   . /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/scripts/nagvars.sh -quiet  int32 static nag
+   
+   Copying a00aafe.f90 to current directory
+   cp /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/f_examples/source/a00aafe.f90 .
+   
+   Compiling and linking a00aafe.f90 to produce executable a00aafe.exe
+   ifort  -I/opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/lp64/nag_interface_blocks a00aafe.f90 /opt/apps/testapps/el7/software/staging/NAG/nll6i30dbl/lp64/lib/libnag_nag.a -lm -ldl -lstdc++ -o a00aafe.exe
+   
+   Running a00aafe.exe
+   ./a00aafe.exe > a00aafe.r
+    A00AAF Example Program Results
+    
+    *** Start of NAG Library implementation details ***
+    
+    Implementation title: Linux, 64-bit, Intel Classic C/C++ or Intel Classic Fortran
+               Precision: double precision
+            Product Code: NLL6I30DBL
+                    Mark: 30.0.0 (self-contained)
+    
+     This is a 64-bit library using 32-bit integers.
+    
+    *** End of NAG Library implementation details ***
 
 Installation notes
 ------------------

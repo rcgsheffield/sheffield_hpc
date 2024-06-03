@@ -115,4 +115,4 @@ This section is primarily for administrators of the system:
 Testing
 -------
 
-Run an example program (as detailed above). The run_example copies the relevant Fortran code file & associated data, compiles & executes the test. Note: the example code contains a function call the relevant pre-built NAG library function.
+Run an example program (as detailed above). The run_example copies the relevant Fortran code file & associated data, compiles & executes the test. Note: the example code contains a function call to the relevant pre-built NAG library function.

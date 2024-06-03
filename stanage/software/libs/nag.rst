@@ -110,6 +110,8 @@ This section is primarily for administrators of the system:
     cd "$PRODUCT"
     ./install.sh -silent -accept-installdir=/opt/apps/testapps/el7/software/staging/NAG
 
+The module file is :download:`/opt/apps/testapps/el7/modules/staging/all/NAG/nll6i30dbl.lua </stanage/software/modulefiles/nag/nll6i30dbl.lua>`.
+
 --------
 
 Testing

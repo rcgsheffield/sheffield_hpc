@@ -4,7 +4,7 @@ libunistring
 ============
 
 .. sidebar:: libunistring
-    
+
     :Versions: 0.9.10, 1.0
     :Documentation:  http://www.gnu.org/software/libunistring/
 
@@ -22,13 +22,14 @@ manipulating C strings according to the Unicode standard.
 
 Usage
 -----
-To make the library available, run one of the following: 
+To make the library available, run one of the following:
 
-.. code-block:: 
-         
+.. code-block::
+
       module load libunistring/0.9.10-foss-2019b
-      module load libunistring/0.9.10-GCCcore-10.3.0                     
-      module load libunistring/1.0-GCCcore-11.3.0  
+      module load libunistring/0.9.10-GCCcore-10.2.0
+      module load libunistring/0.9.10-GCCcore-10.3.0
+      module load libunistring/1.0-GCCcore-11.3.0
 
 This correctly populates the environment variables ``LD_LIBRARY_PATH``, ``LIBRARY_PATH`` and ``CPATH``.
 
@@ -45,7 +46,7 @@ Testing
 Test done through importing the headers to a c file and compiling
 
 .. code-block:: c++
-    
+
     #include <unistr.h>
     #include <unictype.h>
     #include <uninorm.h>

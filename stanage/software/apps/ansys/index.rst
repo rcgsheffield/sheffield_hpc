@@ -41,6 +41,7 @@ As the ANSYS suite contains a large number of packages, links to each dedicated 
   :glob:
 
   fluent
+  ls-dyna
 
 --------------------
 
@@ -65,7 +66,7 @@ ANSYS example models
 --------------------
 
 ANSYS contains a large number of example models which can be used to become familiar with the software.
-With a module loaded, the example models can be found in::
+With for example ANSYS/2022R2 module loaded, the example models can be found in::
 
    $EBROOTANSYS/v222/ansys/data/
 

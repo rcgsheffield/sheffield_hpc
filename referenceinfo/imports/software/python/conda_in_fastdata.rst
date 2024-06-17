@@ -39,7 +39,7 @@ To avoid this, build your conda environments in a :ref:`fastdata area <fastdata_
 
         ::
 
-            mkdir -p /mnt/parscratch/users/$USER/anaconda/.pkg-cache/  /mnt/parscratch/$USER/anaconda/.envs
+            mkdir -p /mnt/parscratch/users/$USER/anaconda/.pkg-cache/  /mnt/parscratch/users/$USER/anaconda/.envs
 
 
     .. group-tab:: Bessemer

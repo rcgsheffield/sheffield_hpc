@@ -61,4 +61,4 @@ Using the command :
 
 .. code-block:: 
 
-    gcc list_formats.c pkg-config --libs sndfile -o output
+    gcc list_formats.c `pkg-config --libs sndfile` -o output

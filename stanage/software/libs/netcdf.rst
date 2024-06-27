@@ -51,7 +51,7 @@ run *one* of the following: ::
    module load netCDF-C++4/4.3.1-gompi-2022a
 
 Testing
-^^^^^^^
+-------
 
 To verify the installation of the NetCDF components, you can use the following commands to check the general information and confirm the presence of specific bindings.
 For more details, you can refer to the `NetCDF installation guide <https://jules.jchmr.org/check-netcdf>`_.

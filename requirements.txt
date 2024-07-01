@@ -7,7 +7,7 @@ docutils==0.18.1
 idna==3.7
 imagesize==1.4.1
 Jinja2==3.1.4
-livereload==2.6.3
+livereload==2.7.0
 MarkupSafe==2.1.5
 packaging==21.3
 pathtools==0.1.2

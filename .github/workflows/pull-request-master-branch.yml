@@ -1,5 +1,5 @@
 ---
-name: test_docs_build
+name: test_docs_build_master_branch
 on:
   # Trigger on pull requests against the master branch
   pull_request:

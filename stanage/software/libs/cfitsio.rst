@@ -5,7 +5,7 @@ cfitsio
 
 .. sidebar:: cfitsio
 
-   :Versions: 3.48, 3.49
+   :Latest version: 4.2.0
    :URL: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
 
 CFITSIO is a library of C and Fortran subroutines for reading and writing data
@@ -17,10 +17,11 @@ Usage
 -----
 To make this library available, run one of the following module commands ::
 
-        module load CFITSIO/3.48-GCCcore-9.3.0
-        module load CFITSIO/3.49-GCCcore-10.2.0
-        module load CFITSIO/3.49-GCCcore-10.3.0
+        module load CFITSIO/4.2.0-GCCcore-12.2.0
         module load CFITSIO/3.49-GCCcore-11.2.0
+        module load CFITSIO/3.49-GCCcore-10.3.0
+        module load CFITSIO/3.49-GCCcore-10.2.0
+        module load CFITSIO/3.48-GCCcore-9.3.0
         
 The modulefile creates a variable ``$CPATH`` which is the path
 to the include directory.

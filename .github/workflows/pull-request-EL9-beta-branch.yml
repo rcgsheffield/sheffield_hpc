@@ -1,10 +1,10 @@
 ---
-name: test_docs_build
+name: test_docs_build_EL9_beta_branch
 on:
-  # Trigger on pull requests against the master branch
+  # Trigger on pull requests against the EL9-beta branch
   pull_request:
     branches:
-      - master
+      - EL9-beta
 jobs:
   test_docs_build:
     runs-on: ubuntu-latest

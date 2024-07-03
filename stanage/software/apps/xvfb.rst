@@ -31,8 +31,8 @@ Usage
 
 xvfb can be loaded with one of the following::
 
-    module load Xvfb-1.20.9-GCCcore-9.3.0
-    module load Xvfb-1.20.9-GCCcore-10.2.0
+    module load Xvfb/1.20.9-GCCcore-9.3.0
+    module load Xvfb/1.20.9-GCCcore-10.2.0
 
 For example, to 
 

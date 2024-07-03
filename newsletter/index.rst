@@ -13,6 +13,7 @@ News
     20240201
     20231201
     mfa-update-21-10-2021
+    bessemer-maintenance-27-06-2024
     
 * :ref:`nl20240416`
 * :ref:`nl20240301`

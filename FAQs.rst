@@ -195,9 +195,9 @@ Following are ways to fix too much time requested:
 .. tabs::
 
    .. group-tab:: Stanage
-        The maximum run time for Bessemer is 168 hours.
+        The maximum run time for Stanage is 96 hours.
 
-        You can get an estimate for when your job will run on Bessemer using:
+        You can get an estimate for when your job will run on Stanage using:
 
         .. code-block:: console
 
@@ -215,7 +215,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
    .. group-tab:: Bessemer
 
@@ -239,7 +239,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
 
 ------
@@ -728,6 +728,28 @@ but cannot use more than 400 at once.
 
 -----
 
+How can I stay connected to the cluster for longer?
+---------------------------------------------------
+
+.. include:: /referenceinfo/imports/staying_connected.rst
+
+-----
+
+"Out of Memory", "OOM" errors and job prematurely stopping
+----------------------------------------------------------
+
+When "Out of Memory" (OOM) errors occur in an interactive or batch session, it indicates insufficient memory has been allocated for the job to run to completion.
+
+See :ref:`seff` and :ref:`sacct` commands for details on memory usage/efficiency for historical or currently running jobs.
+
+.. note::
+    When an Out-of-Memory (OOM) error occurs in a system, the metrics shown by Slurm may not be truly accurate due to the metric polling interval for Slurm being slower than the CGroup limit enforcement.
+    This means not enough memory was given despite memory allocated being higher than the reported memory peak for the job.
+
+Requesting higher memory normally fixes this error. See :ref:`Memory Allocation <Memory-allocation>` for details.
+
+-----
+
 How to change the ownership of files and folders when not the root user?
 ------------------------------------------------------------------------
 
@@ -806,5 +828,34 @@ The files/folders have to be stored in public Fastdata areas, detailed instructi
 .. code-block:: console
 
         rm -rf /the/directory/changing/ownership
+
+
+-----
+
+How do I avoid large Conda environments filling up my home directory?
+---------------------------------------------------------------------
+
+.. include:: referenceinfo/imports/software/python/conda_in_fastdata.rst
+
+How do I remove conda environments from my home directory?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are rebuilding conda environments in your fastdata area and want to remove current conda environments from your home directory follow the instructions below:
+
+.. hint::
+        
+        Deactivate your conda environments before removing them using ``source deactivate``
+
+1. To list your environments run:
+
+.. code-block:: console
+        
+        conda info --envs
+        
+2. Remove environments using the following command. Replace ``<environment_name>`` with the name of the environment you want to remove.
+
+.. code-block:: console
+        
+        conda remove -n <environment_name> --all
 
 |br|

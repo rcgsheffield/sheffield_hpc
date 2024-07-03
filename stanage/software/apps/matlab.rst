@@ -86,7 +86,7 @@ Create a Slurm submission script called ``parallel_example.slurm`` containing:
    #SBATCH --time=00:05:00
    #SBATCH --job-name=matlab_par_test
    
-   module load MATLAB/2022a
+   module load MATLAB/2023b
    
    matlab -nodisplay -nosplash -r "parallel_example($SLURM_NTASKS)"
 

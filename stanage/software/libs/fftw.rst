@@ -5,7 +5,7 @@ fftw
 
 .. sidebar:: fftw
 
-   :Latest version: 3.3.8
+   :Latest version: 3.3.10
    :URL: https://www.fftw.org/
 
 FFTW is a C subroutine library for
@@ -20,13 +20,20 @@ Usage
 -----
 To make this library available, run one the following: ::
 
-      module load FFTW/3.3.8-gompi-2019b
-      module load FFTW/3.3.8-gompi-2020a
-      module load FFTW/3.3.8-gompi-2020b
-      module load FFTW/3.3.10-GCC-11.3.0
+      module load FFTW/3.3.10-GCC-13.2.0
+      module load FFTW/3.3.10-GCC-12.3.0
       module load FFTW/3.3.10-GCC-12.2.0
+      module load FFTW/3.3.10-GCC-11.3.0
+      module load FFTW/3.3.10-gompi-2021b
       module load FFTW.MPI/3.3.10-gompi-2022a
       module load FFTW.MPI/3.3.10-gompi-2022b
+      module load FFTW.MPI/3.3.10-gompi-2023a
+      module load FFTW.MPI/3.3.10-gompi-2023b
+      module load FFTW/3.3.9-gompi-2021a
+      module load FFTW/3.3.8-gompi-2020a
+      module load FFTW/3.3.8-gompi-2020b
+      module load FFTW/3.3.8-intel-2020a
+      
 
 
 - `gompi` versions are a subset of the :ref:`foss toolchain <stanage_eb_toolchains>`

@@ -28,7 +28,7 @@ ANSYSEM software can be loaded using the following module command:
 
     $ module load ANSYSEM/23.2/binary
 
-If desired, the ANSYSEM GUI executable can be launched with the  ``ansysedt`` command.
+If desired, the ANSYSEM GUI executable can be launched with the  ``ansysedt`` command. Note that to use the ANSYSEM GUI you will need to be in a :ref:`flight graphical session on Stanage <flight-desktop>`.
 
 -------
 

@@ -32,8 +32,7 @@ Interactive jobs
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
 
-If desired, the ANSYS Workbench GUI executable can be launched with the  ``runwb2`` command.
-To use more than a single core, you should write a batch job script and fluent journal file for submission to the batch queues.
+If desired, the ANSYS Workbench GUI executable can be launched with the  ``runwb2`` command. Note that to use the ANSYSEM GUI you will need to be in a :ref:`flight graphical session on Stanage <flight-desktop>`. To use more than a single core, you should write a batch job script and fluent journal file for submission to the batch queues.
 
 --------------------
 

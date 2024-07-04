@@ -4,12 +4,12 @@
 ANSYS Packages File Paths
 -------------------------
 
-This page contains a copy of the typical file paths for major ANSYS packages where ``$VERSION`` refers to an ANSYS version, e.g. 202, 190 etc... and ``$DOT_VER`` refers to the same version but with the dot structure e.g. 20.2 19.0 .
+This page contains a copy of the typical file paths for major ANSYS packages where ``$VERSION`` refers to an ANSYS version, e.g. 2023R2, 2023R1 190 etc... and ``$DOT_VER`` refers to the same version but with the dot structure e.g. 232, 231, etc .
 
 The ANSYS directories on the clusters are as follows:
 
   * Bessemer: ``/usr/local/packages/live/noeb/ANSYS/``
-  * Stanage: ``/opt/apps/testapps/el7/software/staging/ANSYS/``
+  * Stanage: ``/opt/apps/tuos/common/software/live/ANSYS/``
 
 
 .. list-table:: Common ANSYS Executable Paths

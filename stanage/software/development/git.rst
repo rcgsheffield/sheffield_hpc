@@ -1,11 +1,13 @@
 .. _git_stanage:
 
+.. |softwarename| replace:: Git
+
 git
 ===
 
 .. sidebar:: git
 
-   :Latest version: 2.39.2
+   :Latest version: 2.41.0
    :Dependencies: None
    :URL: https://git-scm.com/
 
@@ -13,17 +15,37 @@ Git is a free and open source distributed version control system designed to han
 
 Usage
 -----
-Two version of git are available - an older version that is provided by the operating system: ::
+The following version is provided by the operating system: 
 
+.. code-block:: console
+        
     $ git --version
-    git version 1.8.3.1
+    git version 2.43.0
 
-And a much newer version that can be activated by loading a module file: ::
+Other versions can be activated by loading a module file: 
 
-   $ module load git    # OR
-   $ module load git/2.39.2-GCCcore-12.2.0-nodocs
-   $ git --version
-   git version 2.39.2
+.. tabs::
+
+   .. group-tab:: CPU NODES
+
+      .. code-block:: console 
+        
+         module load 2.41.0-GCCcore-12.3.0-nodocs
+         module load 2.39.2-GCCcore-12.2.0-nodocs
+         module load 2.38.1-GCCcore-12.2.0-nodocs
+         module load 2.36.0-GCCcore-11.3.0-nodocs
+         module load 2.33.1-GCCcore-11.2.0-nodocs
+         module load 2.32.0-GCCcore-10.3.0-nodocs
+         module load 2.28.0-GCCcore-10.2.0-nodocs
+         module load 2.23.0-GCCcore-9.3.0-nodocs
+
+   .. group-tab:: GPU NODES
+      
+      .. code-block:: console
+            
+         module load 2.41.0-GCCcore-12.3.0-nodocs
+         module load 2.36.0-GCCcore-11.3.0-nodocs
+         module load 2.33.1-GCCcore-11.2.0-nodocs
 
 
 .. include:: /referenceinfo/imports/software/git/git-training-help-resources.rst
@@ -32,5 +54,4 @@ And a much newer version that can be activated by loading a module file: ::
 Installation notes
 ------------------
 
-The git module has been installed using Easybuild and a custom ``git-2.39.2-GCCcore-12.2.0-nodocs.eb`` which can be found on system in the installation 
-directory: ``/opt/apps/testapps/common/easybuild/easyconfigs/stanage/easyconfigs/g/git``
+This section is primarily for administrators of the system. |softwarename| has been installed using the default Easybuild config files.

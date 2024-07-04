@@ -20,11 +20,13 @@ Interactive Usage
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
 
-The latest version of |softwarename| is made available with the command:
+The latest versions of |softwarename| is made available with the command:
 
 .. code-block:: console
         
-    module load git-lfs
+    module load git-lfs/3.4.0
+    module load git-lfs/3.2.0
+        
 
 You can now run the ``git lfs`` command:
 

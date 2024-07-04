@@ -11,3 +11,5 @@ After connecting to Stanage (see :ref:`ssh`),  you can start an :ref:`interactiv
    module load ANSYS/2022R2
    module load ANSYS/2023R1
    module load ANSYS/2023R2
+
+Note that to use the ANSYS GUI you will need to be in a :ref:`flight graphical session on Stanage <flight-desktop>`.

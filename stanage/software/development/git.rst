@@ -26,7 +26,7 @@ Other versions can be activated by loading a module file:
 
 .. tabs::
 
-   .. group-tab:: CPU NODES
+   .. group-tab:: icelake
 
       .. code-block:: console 
         
@@ -39,7 +39,7 @@ Other versions can be activated by loading a module file:
          module load 2.28.0-GCCcore-10.2.0-nodocs
          module load 2.23.0-GCCcore-9.3.0-nodocs
 
-   .. group-tab:: GPU NODES
+   .. group-tab:: znver3
       
       .. code-block:: console
             

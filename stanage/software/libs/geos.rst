@@ -5,7 +5,7 @@ geos
 
 .. sidebar:: geos
 
-   :Version: 3.9.1
+   :Version: 3.11.1
    :URL: http://trac.osgeo.org/geos/
 
 GEOS (Geometry Engine, Open Source) is a C/C++ port of a subset of 
@@ -20,7 +20,7 @@ which in turn is a library that:
 .. caution::
 
     GEOS is typically loaded as an external dependency for R. Please ensure you select the matching 
-    GCC compiler versions of your version of R and the GEOS libraries.
+    GCC compiler versions for your version of R and the GEOS libraries.
 
 --------
 
@@ -29,8 +29,10 @@ Usage
 
 To make this library available, run one of the following: ::
 
+    module load GEOS/3.11.1-GCC-12.2.0
+    module load GEOS/3.10.3-GCC-11.3.0
+    module load GEOS/3.9.1-GCC-11.2.0
     module load GEOS/3.9.1-GCC-10.2.0
-    module load GEOS/3.9.1-GCC-11.2.0    
 
 This also activates the matching version of the GCC compiler suite (as its C++ standard library is required by GEOS.)
 
@@ -43,7 +45,7 @@ rgeos is a CRAN package that provides an R interface to geos. It is not installe
 After connecting to Stanage (see :ref:`ssh`), start an interactive session (e.g. using the :code:`srun --pty bash -i` command). Run the following module commands ::
 
     module load R/4.0.5-foss-2020b
-    module load GEOS/3.9.1-GCC-10.2.0
+    module load GEOS/3.11.1-GCC-12.2.0
     
 Launch R and run the command ::
 
@@ -61,7 +63,7 @@ Once you have performed the installation, you will only need to run the ``module
 
 Installation notes
 ------------------
-This section is primarily for administrators of the system. GEOS has been installed using the default Easybuild config files.
+This section is primarily for system administrators. GEOS has been installed using the default Easybuild config files.
 
 Build logs and test reports can be found in ``$EBROOTGEOS/easybuild`` with a given module loaded.
 

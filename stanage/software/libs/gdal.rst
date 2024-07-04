@@ -5,12 +5,12 @@ Geospatial Data Abstraction Library (GDAL)
 
 .. sidebar:: GDAL
 
-   :Latest version: 3.2.1,3.3.2
+   :Latest version: 3.6.2
    :URL: http://www.gdal.org/
 
 GDAL is a library used by many Geographic Information Systems (GIS) packages for converting 
 between many different raster and vector GIS data formats.  It also includes command-line 
-utilities for data translation and processing.  It is released under an an X/MIT style Open 
+utilities for data translation and processing.  It is released under an X/MIT style Open 
 Source license by the `Open Source Geospatial Foundation <http://www.osgeo.org/>`_.
 
 -------
@@ -20,7 +20,9 @@ Usage
 
 Load by running ::
 
-    module load GDAL/3.2.1-foss-2020b
+    module load GDAL/3.6.2-foss-2022b
+    module load GDAL/3.5.0-foss-2022a
+    module load GDAL/3.3.2-foss-2021b
     
 This will:
 
@@ -31,7 +33,7 @@ This will:
 You can run ``gdal-config --version`` to test that you are running the required version ::
 
     $ gdal-config --version
-    3.3.2
+    3.6.2
 
 Some commonly used command-line programs that GDAL provides are:
 

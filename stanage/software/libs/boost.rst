@@ -5,7 +5,7 @@ Boost C++ Library
 
 .. sidebar:: Boost C++ Library
 
-   :Latest version: 1.79.0
+   :Latest version: 1.81.0
    :URL: www.boost.org
 
 Boost provides free, peer-reviewed and portable C++ source libraries.
@@ -15,14 +15,16 @@ Usage
 
 To activate the library run one of the following: ::
         
-        module load Boost/1.72.0-gompi-2020a
-        module load Boost/1.74.0-GCC-10.2.0
-        module load Boost/1.74.0-iccifort-2020.4.304
+        module load Boost/1.81.0-GCC-12.2.0
+        module load Boost/1.79.0-GCC-11.3.0
         module load Boost/1.79.0-GCC-11.2.0
+        module load Boost/1.77.0-GCC-11.2.0
+        module load Boost/1.76.0-GCC-10.3.0
+        module load Boost/1.74.0-iccifort-2020.4.304
+        module load Boost/1.74.0-GCC-10.2.0
         
 Note that this **also activates a particular version of the GCC compiler** (as Boost depends on the C++ standard library, which is provided by the compiler).  You must use this version of the compiler to build your code if you want to use this build of the Boost library.  If you want to use a different compiler / compiler version then you need to request that a new build of Boost be compiled or compile a new build yourself.
 
-Boost has been built *without* Python support: use :ref:`conda <sharc-python-conda>` and install the ``boost`` conda package if you want to use Boost with Python.
 
 Build a simple program using Boost
 ----------------------------------

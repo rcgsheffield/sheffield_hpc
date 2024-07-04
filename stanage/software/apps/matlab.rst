@@ -1,5 +1,5 @@
 .. |softwarename| replace:: MATLAB
-.. |currentver| replace:: 2023b
+.. |currentver| replace:: 2022a, 2023b
 
 .. _matlab_stanage:
 
@@ -15,19 +15,21 @@
 
 Scientific computing and visualisation.
 
+--------------------
 
-Interactive usage
------------------
-After connecting to Stanage,  start an interactive session with the ``srun --pty bash –i`` command.
+Interactive jobs
+----------------
 
-The latest version of MATLAB (currently 2022a) is made available by running:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+MATLAB is loaded by running:
 
 .. code-block:: bash
 
    module load MATLAB/2023b
    module load MATLAB/2022a
 
-You can then run MATLAB by entering ``matlab``. This provides a matlab terminal (Please note that graphical sessions are not yet available on Stanage, so the matlab GUI will not load).
+You can then run MATLAB by entering ``matlab``. This provides a matlab terminal. To use the MATLAB gui you will need to be in a :ref:`flight graphical session on Stanage <flight-desktop>`.
 
 
 Serial (one CPU) batch usage
@@ -49,7 +51,7 @@ We assume you'll call this ``my_job.slurm``:
    #SBATCH --mem=8G                # Request  8 GB of real memory
    
    # Load the MATLAB module 
-   module load MATLAB/2022a
+   module load MATLAB/2023b
 
    matlab -nodesktop -nosplash -r "helloworld"
 
@@ -84,7 +86,7 @@ Create a Slurm submission script called ``parallel_example.slurm`` containing:
    #SBATCH --time=00:05:00
    #SBATCH --job-name=matlab_par_test
    
-   module load MATLAB/2022a
+   module load MATLAB/2023b
    
    matlab -nodisplay -nosplash -r "parallel_example($SLURM_NTASKS)"
 

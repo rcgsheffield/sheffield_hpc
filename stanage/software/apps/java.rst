@@ -25,18 +25,19 @@ You can then load a version of of Java using one of the following:
    .. group-tab:: icelake
 
         .. code-block:: console
-
-           module load Java/11.0.2
-           module load Java/11.0.16
-           module load Java/11.0.20
+           
            module load Java/17.0.4
+           module load Java/11.0.20
+           module load Java/11.0.16
+           module load Java/11.0.2
+           module load Java/8.362
 
    .. group-tab:: znver3
 
         .. code-block:: console
 
-           module load Java/11.0.18
            module load Java/11.0.20
+           module load Java/11.0.18
 
 NB ``Java/11.0.2`` is `OpenJDK <https://openjdk.org/>`__;
 ``Java/11.0.16`` and newer are `Eclipse Temurin <https://adoptium.net/en-GB/temurin/releases/>`__, which is based on OpenJDK.

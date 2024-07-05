@@ -59,6 +59,6 @@ Testing
 Testing has been conducted by running an interactive session and  compiling the example `list_formats <https://github.com/libsndfile/libsndfile/blob/master/examples/list_formats.c>`_.
 Using the command:
 
-.. code-block:: 
+.. code-block:: bash
 
     gcc list_formats.c $(pkg-config --libs sndfile) -o output

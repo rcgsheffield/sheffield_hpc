@@ -4,6 +4,7 @@ GnuMP
 =====
 
 .. sidebar:: GMP
+    
     :Latest version: 6.2.1
     :Dependencies: GCC compiler
     :Documentation: https://gmplib.org/manual/ 

@@ -4,7 +4,7 @@ GnuMP
 =====
 
 .. sidebar:: GMP
-
+    :Latest version: 6.2.1
     :Dependencies: GCC compiler
     :Documentation: https://gmplib.org/manual/ 
 
@@ -17,19 +17,29 @@ Usage
 
 GnuMP can be activated as follows:
 
-.. code-block::
-         
-    module load GMP/6.2.1-GCCcore-11.3.0
-    module load GMP/6.2.1-GCCcore-11.2.0                      
-    module load GMP/6.2.1-GCCcore-10.3.0                       
-    module load GMP/6.2.0-GCCcore-10.2.0                       
-    module load GMP/6.2.0-GCCcore-9.3.0                       
-    module load GMP/6.1.2-GCCcore-8.3.0
-    module load GMP/6.1.2-GCCcore-7.3.0   
+.. tabs::
+
+   .. group-tab:: icelake
+
+        .. code-block:: console
+
+            module load GMP/6.2.1-GCCcore-12.2.0
+            module load GMP/6.2.1-GCCcore-11.3.0
+            module load GMP/6.2.1-GCCcore-11.2.0                      
+            module load GMP/6.2.1-GCCcore-10.3.0                       
+            module load GMP/6.2.0-GCCcore-10.2.0                       
+            module load GMP/6.2.0-GCCcore-9.3.0 
+
+   .. group-tab:: znver3
+
+        .. code-block:: console
+
+            module load GMP/6.2.1-GCCcore-12.2.0
+            module load GMP/6.2.1-GCCcore-11.3.0 
 
 
 Installation notes
 ------------------
 
-GnuMP was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
+GnuMP was installed using Easybuild 4.9.1, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 

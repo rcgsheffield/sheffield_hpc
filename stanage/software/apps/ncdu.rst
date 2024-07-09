@@ -1,6 +1,6 @@
 .. |softwarename| replace:: ncdu
-.. |currentver| replace:: 1.15.1
-.. |ebtoolchain| replace:: GCCcore-9.3.0
+.. |currentver| replace:: 1.18
+.. |ebtoolchain| replace:: GCCcore-12.3.0
 
 .. _ncdu_stanage:
 
@@ -10,7 +10,7 @@
 
 .. sidebar:: |softwarename|
 
-   :Versions:  |currentver|
+   :Latest Version:  |currentver|
    :Dependencies: |ebtoolchain| (see Easybuild for details.)
    :URL: https://dev.yorhel.nl/ncdu
 
@@ -24,12 +24,13 @@ Interactive usage
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
 
-The latest version of |softwarename| (currently version |currentver|) is made available with the command:
+A version of |softwarename| is made available with one of the following commands:
 
 .. code-block:: console
 
-	$ module load ncdu/1.15.1-GCCcore-9.3.0
-
+        module load ncdu/1.18-GCC-12.3.0
+        module load ncdu/1.17-GCC-11.3.0
+        module load ncdu/1.15.1-GCCcore-9.3.0
 
 After this any of the |softwarename| commands can be run from the terminal prompt. The available 
 commands can be obtained using:
@@ -56,22 +57,15 @@ Installation notes
 Installation method
 ^^^^^^^^^^^^^^^^^^^
 
-|softwarename| version 1.15.1 was installed using Easybuild 4.7.0, build details can be found 
-in ``$EBROOTNCDU/easybuild`` with the module loaded.
+This section is primarily for administrators of the system. |softwarename| has been installed using the default Easybuild config files.
 
+Build logs and test reports can be found in ``$EBDEVELNCDU`` with a given module loaded.
 
---------
-
-Testing
-^^^^^^^
+Testing method
+^^^^^^^^^^^^^^^
 
 Testing has been conducted by running an interactive session and scanning a directory with success.
 
 --------
 
-Modulefiles
-^^^^^^^^^^^
-
-The module file is on the system at 
-:download:`/opt/apps/testapps/el7/modules/staging/all/ncdu/1.15.1-GCCcore-9.3.0.lua </stanage/software/modulefiles/ncdu/1.15.1-GCCcore-9.3.0.lua>`.
 

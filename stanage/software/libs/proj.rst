@@ -43,9 +43,18 @@ These can be viewed using e.g. ::
 
     $ man proj
 
+================
+
 Installation notes
 ------------------
 
+Installation method
+^^^^^^^^^^^^^^^^^^^
+
 This section is primarily for administrators of the system. PROJ has been installed using the default Easybuild config files.
 
-Build logs and test reports can be found in ``$EBROOTPROJ/easybuild`` with a given module loaded.
+Build logs and test reports can be found in ``$EBDEVELPROJ`` with a given module loaded.
+
+Testing method
+^^^^^^^^^^^^^^^
+Testing has been conducted by following this `quickstart example <https://proj.org/en/9.3/usage/quickstart.html>`_

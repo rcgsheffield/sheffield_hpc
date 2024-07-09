@@ -5,7 +5,7 @@ Xvfb
 
 .. sidebar:: Xvfb
 
-    :Versions: 1.20.9
+    :Versions: 21.1.6, 21.1.3, 1.20.13 
     :Documentation: https://linux.die.net/man/1/xvfb
     :URL: https://linux.die.net/  
 
@@ -31,8 +31,9 @@ Usage
 
 xvfb can be loaded with one of the following::
 
-    module load Xvfb/1.20.9-GCCcore-9.3.0
-    module load Xvfb/1.20.9-GCCcore-10.2.0
+        module load Xvfb/21.1.6-GCCcore-12.2.0
+        module load Xvfb/21.1.3-GCCcore-11.3.0
+        module load Xvfb/1.20.13-GCCcore-11.2.0
 
 For example, to 
 
@@ -66,4 +67,4 @@ you could add something similar to the following to your batch job submission sc
 Installation notes
 ------------------
 
-xvfb was installed using Easybuild 4.7.0, build details can be found in folder $EBROOTXVFB/easybuild with the module loaded.
+xvfb was installed using Easybuild 4.9.1, build details can be found in folder $EBROOTXVFB/easybuild with the module loaded.

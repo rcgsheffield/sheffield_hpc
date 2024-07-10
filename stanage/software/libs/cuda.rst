@@ -1,7 +1,15 @@
 .. _cuda_stanage:
 
-CUDA
-====
+.. |softwarename| replace:: CUDA
+.. |currentver| replace:: 12.1.1
+
+|softwarename|
+==========================================================================================================
+
+.. sidebar:: |softwarename|
+
+   :Latest Version:  |currentver|
+   :URL: https://developer.nvidia.com/cuda-toolkit
 
 CUDA (*Compute Unified Device Architecture*)
 is a parallel computing platform and application programming interface (API) model
@@ -42,28 +50,28 @@ one of the following commands:
 
 .. code-block:: bash
 
-   module load CUDA/12.1.1 
-   module load CUDA/12.0.0  
-   module load CUDA/11.8.0
-   module load CUDA/11.7.0
-   module load CUDA/11.1.1-GCC-10.2.0
-   module load CUDA/10.2.89-GCC-8.3.0
-   module load CUDA/10.1.243-GCC-8.3.0
-   module load CUDA/10.1.243
-   module load CUDA/10.1.105-GCC-8.2.0-2.31.1
-   module load CUDA/10.0.130
+        module load CUDA/12.1.1
+        module load CUDA/12.0.0
+        module load CUDA/11.8.0
+        module load CUDA/11.7.0
+        module load CUDA/11.4.1
+        module load CUDA/11.1.1-GCC-10.2.0
+        module load CUDA/10.1.243           # Not recommended
+        module load CUDA/10.0.130           # Not recommended
 
 Note that the older versions of CUDA may implicitly load the GCC compiler.
 For newer versions you will also need to explicitly load a compiler e.g. :ref:`GCC <gcc_stanage>`.
 
-Confirm which version of CUDA you are using via ``nvcc --version`` e.g.: ::
+Confirm which version of CUDA you are using via ``nvcc --version`` e.g.:
 
-   $ nvcc --version
-   nvcc: NVIDIA (R) Cuda compiler driver
-   Copyright (c) 2005-2022 NVIDIA Corporation
-   Built on Mon_Oct_24_19:12:58_PDT_2022
-   Cuda compilation tools, release 12.0, V12.0.76
-   Build cuda_12.0.r12.0/compiler.31968024_0
+.. code-block:: console
+
+        $ nvcc --version
+        nvcc: NVIDIA (R) Cuda compiler driver
+        Copyright (c) 2005-2023 NVIDIA Corporation
+        Built on Mon_Apr__3_17:16:06_PDT_2023
+        Cuda compilation tools, release 12.1, V12.1.105
+        Build cuda_12.1.r12.1/compiler.32688072_0
 
 ---------
 
@@ -268,16 +276,13 @@ The Research Software Engineering team have developed an undergraduate teaching 
 Determining the NVIDIA Driver version
 -------------------------------------
 
-Run the command:
+Run the command ``cat /proc/driver/nvidia/version`` e.g:
 
-.. code-block:: sh
+.. code-block:: console
 
-   cat /proc/driver/nvidia/version
-
-Example output is: ::
-
-   NVRM version: NVIDIA UNIX x86_64 Kernel Module  525.105.17  Tue Mar 28 18:02:59 UTC 2023
-   GCC version:  gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC)
+        $ cat /proc/driver/nvidia/version
+        NVRM version: NVIDIA UNIX x86_64 Kernel Module  550.90.07  Fri May 31 09:35:42 UTC 2024
+        GCC version:  gcc version 11.4.1 20231218 (Red Hat 11.4.1-3) (GCC)
 
 ---------
 

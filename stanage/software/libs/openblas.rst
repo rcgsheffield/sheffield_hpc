@@ -1,5 +1,4 @@
 .. _openblas_stanage:
-
 .. |softwarename| replace:: OpenBLAS
 .. |currentver| replace:: 0.3.24 
 .. |ebtoolchain| replace:: foss-2023b

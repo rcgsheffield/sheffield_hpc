@@ -27,11 +27,22 @@ Interactive usage
 
 A version of |softwarename| is made available with one of the following commands:
 
-.. code-block:: console
+.. tabs::
 
-        module load ncdu/1.18-GCC-12.3.0
-        module load ncdu/1.17-GCC-11.3.0
-        module load ncdu/1.15.1-GCCcore-9.3.0
+   .. group-tab:: icelake
+
+        .. code-block:: console
+
+                module load ncdu/1.18-GCC-12.3.0
+                module load ncdu/1.17-GCC-11.3.0
+                module load ncdu/1.15.1-GCCcore-9.3.0
+
+   .. group-tab:: znver3
+
+        .. code-block:: console
+
+                module load ncdu/1.18-GCC-12.3.0
+
 
 After this any of the |softwarename| commands can be run from the terminal prompt. The available 
 commands can be obtained using:

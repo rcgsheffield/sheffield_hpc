@@ -3,8 +3,8 @@ GROMACS
 
 .. sidebar:: GROMACS
 
-   :Version: 2021, 2019.3 
-   :Dependencies: GCC 10.2 and OpenMPI 4.0.5 (MPI support).
+   :Version: 2021.5
+   :Dependencies: GCC 11.2 and OpenMPI 4.1.1 (MPI support).
    :URL: http://www.gromacs.org/
    :Documentation: http://manual.gromacs.org/documentation/
    :Tutorials: http://www.gromacs.org/Documentation/Tutorials
@@ -19,12 +19,11 @@ is extremely fast at calculating the nonbonded interactions (that usually domina
 Usage
 -----
 
-GROMACS software can be loaded using one of the following module load commands:
+GROMACS software can be loaded with the following module load command:
 
 .. code-block:: 
 
-    $ module load GROMACS/2021-foss-2020b
-    $ module load GROMACS/2019.3-foss-2019b
+    module load GROMACS/2021.5-foss-2021b
 
 
 The GROMACS executable is ``gmx`` or ``gmx_mpi`` if using an OpenMPI module. Typing ``gmx help commands`` will display a list of commands for ``gmx`` and their function.
@@ -34,12 +33,12 @@ The GROMACS executable is ``gmx`` or ``gmx_mpi`` if using an OpenMPI module. Typ
 Interactive usage
 -----------------
 
-For interactive usage during testing etc... we recommend using a non-GPU, non-MPI module e.g. ``GROMACS/2021-foss-2020b``. You can load this and run ``gmx`` commands as follows:
+For interactive usage during testing etc... we recommend using a non-GPU, non-MPI module e.g. ``GROMACS/2021.5-foss-2021b``. You can load this and run ``gmx`` commands as follows:
 
 .. code-block:: console
 
-    $ module load GROMACS/2021-foss-2020b
-    $ gmx help commands
+    module load GROMACS/2021.5-foss-2021b
+    gmx help commands
 
 -------
 
@@ -80,7 +79,7 @@ The ``export`` command sets the correct number of GROMACS threads based on the r
     # Email notifications if the job fails
     #SBATCH --mail-type=FAIL
 
-    module load GROMACS/2021-foss-2020b
+    module load GROMACS/2021.5-foss-2021b
     
     # Set the OPENMP_NUM_THREADS environment variable to the number of available cores.
     # The line ensures that OpenMP uses all of the CPUs allocated to the task 
@@ -113,7 +112,7 @@ with the correct number of MPI threads.
     # Email notifications if the job fails
     #SBATCH --mail-type=FAIL
     
-    module load GROMACS/2021-foss-2020b
+    module load GROMACS/2021.5-foss-2021b
 
     gmx_mpi grompp -f grompp.mdp -c conf.gro -p topol.top -o topol.tpr
     srun -np $SLURM_NTASKS gmx_mpi mdrun -s topol.tpr
@@ -129,7 +128,13 @@ Currently none of the gromacs installations have the CUDA modules. If you need a
 Installation notes
 ------------------
 
-GROMACS was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGROMACS/easybuild`` with the module loaded.
-GROMACS should just be installed using a batch session otherwise the installation will crash when it comes to build ``gmx_mpi``.
+Installation method
+^^^^^^^^^^^^^^^^^^^
 
-Testing was done using the example on `Lysozyme in Water <http://www.mdtutorials.com/gmx/lysozyme/index.html>`_
+This section is primarily for administrators of the system. GROMACS has been installed using the default Easybuild config files.
+
+Build logs and test reports can be found in ``$EBDEVELGROMACS`` with a given module loaded.
+
+Testing method
+^^^^^^^^^^^^^^^
+Testing has been conducted by following the example `Lysozyme in Water <http://www.mdtutorials.com/gmx/lysozyme/index.html>`_

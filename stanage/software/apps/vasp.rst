@@ -3,7 +3,7 @@ VASP
 
 .. sidebar:: VASP
 
-   :Version: 5.4.4
+   :Version: 6.4.2, 5.4.4
    :Dependencies: Fortran and C compilers, an implementation of MPI, numerical libraries BLAS, LAPACK, ScaLAPACK, FFTW. Modules for Intel compiler 2022.2.1, Intel MPI 2021.7.1 and Intel MKL 2022.2.1 loaded.
    :URL: https://www.vasp.at/
    :Documentation: https://www.vasp.at/documentation
@@ -19,7 +19,9 @@ After connecting to Stanage (see section Connecting with SSH), you can start an 
 
 VASP 5.4.4 can be activated using one of the module load command below: ::
 
-    module load VASP/5.4.4-intel-2022b
+        module load VASP/6.4.2-intel-2022b
+        module load VASP/5.4.4-intel-2022b
+        module load VASP/5.4.4-intel-2020b
 
 The VASP executables are ``vasp_std``, ``vasp_gam`` and ``vasp_ncl``.
 
@@ -52,7 +54,7 @@ Users are encouraged to write their own batch submission scripts. The following 
     #SBATCH --time 00:30:00
     #SBATCH --mail-user=jane.doe@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load VASP/5.4.4-intel-2022b
+    module load VASP/6.4.2-intel-2022
 
     rm results.dat
     drct=$(pwd)
@@ -70,7 +72,14 @@ Users are encouraged to write their own batch submission scripts. The following 
 The script requests 16 cores (one core per node) using Intel MPI with a runtime of 30 mins and 16 GB of real memory. The batch script above with the input for the "Adsorption of H2O on TiO2" example (https://www.vasp.at/wiki/index.php/Adsorption_of_H2O_on_TiO2) from the online VASP tutorials (https://www.vasp.at/wiki/index.php/Category:Tutorials).
 
 
-Installation notes
-------------------
+Installation method
+^^^^^^^^^^^^^^^^^^^
 
-Not relevant for Pilot User phase.
+This section is primarily for administrators of the system. VASP has been installed using the default Easybuild config files.
+
+Build logs and test reports can be found in ``$EBDEVELSOFTWARENAME`` with a given module loaded.
+
+Testing method
+^^^^^^^^^^^^^^^
+Testing has been conducted by following the above example.
+

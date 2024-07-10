@@ -42,6 +42,11 @@ CMake has a run-time dependency on ``libstdc++`` so
 the cmake module files depend on and load particular versions of the :ref:`GCC compiler <gcc_stanage>`,
 plus versions of the ncurses, zlib, bzip2 and cURL libraries.
 
+.. note::
+
+   CMake versions bundled with GCCcore <= 10.3.0 will require you to additionally load the matching GCC module. 
+   This is due to the new EL9 linker intentionally not linking older versions. Please consider using a later version where possible.
+
 Usage of CMake often involves: 
 
 1. Creating and ``cd``-ing into a dedicated build directory within a source tree then

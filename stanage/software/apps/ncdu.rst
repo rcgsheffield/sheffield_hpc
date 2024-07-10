@@ -66,7 +66,3 @@ Testing method
 ^^^^^^^^^^^^^^^
 
 Testing has been conducted by running an interactive session and scanning a directory with success.
-
---------
-
-

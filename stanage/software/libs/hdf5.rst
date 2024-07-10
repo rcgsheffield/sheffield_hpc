@@ -37,7 +37,7 @@ run *one* of the following:
 
          .. code-block:: console   
             
-            module load 1.12.2-gompi-2022a
+            module load HDF5/1.12.2-gompi-2022a
 
 
 Installation notes

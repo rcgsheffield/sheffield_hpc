@@ -117,8 +117,9 @@ In this demonstration, we create a batch job that
    if ! [[ -f cuda-samples/.git ]]; then
        git clone https://github.com/NVIDIA/cuda-samples.git cuda-samples
    fi
-   cd cuda-samples
+   git fetch --tags
    git checkout tags/v12.0  # use sample programs compatible with CUDA 12.0
+   cd cuda-samples
    cd Samples/0_Introduction/matrixMul/
    make SMS="80"
    ./matrixMul

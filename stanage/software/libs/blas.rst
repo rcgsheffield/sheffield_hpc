@@ -14,5 +14,5 @@ LAPACK for example.
 
 Two BLAS and LAPACK implementations are available on Stanage:
 
-* :ref:`openblas_stanage`
+* :ref:`OpenBLAS <openblas_stanage>`
 * :ref:`imkl_stanage`

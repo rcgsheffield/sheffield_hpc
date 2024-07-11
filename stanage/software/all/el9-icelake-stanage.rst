@@ -6736,5 +6736,3 @@ Xvfb
     Xvfb/21.1.6-GCCcore-12.2.0
     Xvfb/21.1.3-GCCcore-11.3.0
     Xvfb/1.20.13-GCCcore-11.2.0
-------------------
-  

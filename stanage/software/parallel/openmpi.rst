@@ -1,38 +1,58 @@
 .. _openmpi_stanage:
+.. |softwarename| replace:: OpenMPI
+.. |I_currentver| replace:: **4.1.6**
+.. |Z_currentver| replace:: **4.1.4**
+.. |ebtoolchain| replace:: **gcc**
+.. |url| replace::  https://www.open-mpi.org/
 
-OpenMPI
-=======
+|softwarename|
+==========================================================================================================
 
-.. sidebar:: OpenMPI
+.. sidebar:: |softwarename|
 
-   :Latest Version: 4.1.4
-   :Dependencies: gcc
-   :URL: https://www.open-mpi.org/
+   :Latest Version:  :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>` |I_currentver|;  :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>` |Z_currentver|
+   :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
+   :URL: |url|
 
 The OpenMPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. OpenMPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. OpenMPI offers advantages for system and software vendors, application developers and computer science researchers.
 
 Versions
 --------
 
-You can load a specific version using one of the following: ::
+You can load a specific version using one of the following: 
 
-    module load OpenMPI/3.1.4-GCC-8.3.0   # part of the foss-2019b toolchain
-    module load OpenMPI/4.0.3-GCC-9.3.0   # part of the foss-2020a toolchain
-    module load OpenMPI/4.0.5-GCC-9.3.0   # part of the foss-2020a toolchain
-    module load OpenMPI/4.0.5-GCC-10.2.0  # part of the foss-2020b toolchain
-    module load OpenMPI/4.1.4-GCC-11.3.0  # part of the foss-2022a toolchain
-    module load OpenMPI/4.1.4-GCC-12.2.0  # part of the foss-2022b toolchain
+.. tabs::
 
+    .. group-tab:: Icelake
+
+        .. code-block:: console
+
+                module load OpenMPI/4.0.3-GCC-9.3.0   # part of the foss-2020a toolchain
+                module load OpenMPI/4.0.5-GCC-9.3.0   # part of the foss-2020a toolchain
+                module load OpenMPI/4.0.5-GCC-10.2.0  # part of the foss-2020b toolchain
+                module load OpenMPI/4.1.1-GCC-10.3.0  # part of the foss-2021a toolchain
+                module load OpenMPI/4.1.1-GCC-11.2.0  # part of the foss-2021b toolchain
+                module load OpenMPI/4.1.4-GCC-11.3.0  # part of the foss-2022a toolchain
+                module load OpenMPI/4.1.4-GCC-12.2.0  # part of the foss-2022b toolchain
+                module load OpenMPI/4.1.5-GCC-12.3.0  # part of the foss-2023a toolchain
+                module load OpenMPI/4.1.6-GCC-13.2.0  # part of the foss-2023b toolchain
+            
+    .. group-tab:: Znver3
+
+        .. code-block:: console
+
+                module load OpenMPI/4.1.4-GCC-11.3.0  # part of the foss-2022a toolchain
+
+    
 .. warning:: 
 
     The current installation of OpenMPI 4.1.1 has poor performance over Omnipath which is still under investigation.
 
 
-See `here <https://www.open-mpi.org/software/ompi/major-changes.php>`__ for a brief guide to the new features in OpenMPI 4.x and `here <https://docs.open-mpi.org/en/v5.0.x/news/news-v4.1.x.html>`__ for a detailed view of the changes between OpenMPI versions.
+See `here <https://www.open-mpi.org/software/ompi/major-changes.php>`__ for a brief guide to the new features in OpenMPI 4.x and `here <https://docs.open-mpi.org/en/v5.0.x/release-notes/changelog/v4.1.x.html>`__ for a detailed view of the changes between OpenMPI versions.
 
 Example
 -------
-
 
 Consider the following source code ``hello.c``:
 
@@ -118,7 +138,7 @@ Write a shell script (minimal example). We name the script as ``test.sh``: ::
     #SBATCH --nodes=1
     #SBATCH --ntasks-per-node=8
 
-    module load OpenMPI/4.1.4-GCC-12.2.0
+    module load OpenMPI/4.1.6-GCC-13.2.0
 
     srun --export=ALL hello
 

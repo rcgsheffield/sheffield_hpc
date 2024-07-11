@@ -167,4 +167,6 @@ Further Conda Python Learning Resources
 Installation notes
 ------------------
 
-All anaconda versions on EL9 upto Anaconda3/2024.02-1 were installed using Easybuild 4.9.2, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+This section is primarily for administrators of the system. Anaconda3 has been installed using the default Easybuild config files.
+
+Build logs and test reports can be found in ``$EBDEVELANACONDA3`` with a given module loaded.

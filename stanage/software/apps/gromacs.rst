@@ -1,10 +1,15 @@
-GROMACS
-=======
+.. _gromacs_stanage:
+.. |softwarename| replace:: GROMACS
+.. |currentver| replace:: 2021.5
+.. |ebtoolchain| replace:: GCC 11.2 and OpenMPI 4.1.1 (MPI support).
 
-.. sidebar:: GROMACS
+|softwarename|
+==========================================================================================================
 
-   :Version: 2021.5
-   :Dependencies: GCC 11.2 and OpenMPI 4.1.1 (MPI support).
+.. sidebar:: |softwarename|
+
+   :Latest Version:  |currentver|
+   :Dependencies: |ebtoolchain|
    :URL: http://www.gromacs.org/
    :Documentation: http://manual.gromacs.org/documentation/
    :Tutorials: http://www.gromacs.org/Documentation/Tutorials

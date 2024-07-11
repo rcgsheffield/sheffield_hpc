@@ -18,7 +18,7 @@ for investigating units and converting values.
 .. caution::
 
         UDUNITS is typically loaded as an external dependency for R. Please ensure you select the matching 
-        GCC compiler versions of your version of R and the UDUNITS libraries.
+        GCC compiler versions for your version of R and the UDUNITS libraries.
 
 --------
 
@@ -27,19 +27,19 @@ Usage
 
 To make this library available, run one of the following: 
 
-.. code-block:: 
+.. code-block:: sh
      
-  module load UDUNITS/2.2.26-foss-2020a
-  module load UDUNITS/2.2.26-GCCcore-8.3.0                    
-  module load UDUNITS/2.2.26-GCCcore-10.2.0                
-  module load UDUNITS/2.2.28-GCCcore-11.2.0                
+  module load UDUNITS/2.2.28-GCCcore-12.2.0
   module load UDUNITS/2.2.28-GCCcore-11.3.0
+  module load UDUNITS/2.2.28-GCCcore-11.2.0
+  module load UDUNITS/2.2.26-GCCcore-10.2.0
+  module load UDUNITS/2.2.26-foss-2020a
   
 --------
 
 Installation notes
 ------------------
-This section is primarily for administrators of the system. 
+This section is primarily for system administrators. 
 
 udunits was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 
@@ -50,7 +50,7 @@ Testing
 
 1. Load module.
 2. Run “udunits2“.
-3. For this test we convert 5km into miles, which produces the following results:
+3. For this test, we convert 5km into miles, which produces the following results:
 
 .. code-block::
 

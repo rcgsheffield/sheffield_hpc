@@ -68,6 +68,9 @@ Build this using:
 .. code-block:: sh
 
    gcc -Wall -lgsl -lgslcblas -o test test.c  # OR
+   # For versions GSL/2.6-GCC-9.3.0, GSL/2.6-GCC-10.2.0 and GSL/2.6-iccifort-2020.1.217
+   icc -Wall -lgsl -lgslcblas -o test test.c
+   # For version GSL/2.7-GCC-10.3.0 onwards
    icx -Wall -lgsl -lgslcblas -o test test.c
 
 Then run using:

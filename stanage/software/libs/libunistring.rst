@@ -26,9 +26,10 @@ To make the library available, run one of the following:
 
 .. code-block:: 
          
-      module load libunistring/0.9.10-foss-2019b
-      module load libunistring/0.9.10-GCCcore-10.3.0                     
-      module load libunistring/1.0-GCCcore-11.3.0  
+    module load libunistring/1.0-GCCcore-11.3.0
+    module load libunistring/0.9.10-GCCcore-10.3.0
+    module load libunistring/0.9.10-GCCcore-10.2.0
+    module load libunistring/0.9.10-GCCcore-9.3.0
 
 This correctly populates the environment variables ``LD_LIBRARY_PATH``, ``LIBRARY_PATH`` and ``CPATH``.
 
@@ -36,7 +37,7 @@ Installation Notes
 ------------------
 This section is primarily for administrators of the system.
 
-Libunistring was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
+Build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
 
 
 Testing

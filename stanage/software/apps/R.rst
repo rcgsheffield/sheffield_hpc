@@ -5,7 +5,7 @@ R
 
 .. sidebar:: R
    
-   :Versions: 4.0.0,4.0.5,4.2.1,4.2.2
+   :Versions: 4.2.1, 4.2.2
    :URL: https://www.r-project.org/
    :Documentation: https://www.r-project.org/
 
@@ -26,8 +26,6 @@ Interactive Usage
 
 You can then load a specific version of R using: ::
         
-   module load R/4.0.0-foss-2020a
-   module load R/4.0.5-foss-2020b
    module load R/4.2.1-foss-2022a
    module load R/4.2.2-foss-2022b
 
@@ -39,7 +37,7 @@ Serial (one CPU) Batch usage
 ----------------------------
 Here, we assume that you wish to run the program ``my_code.r`` on the system. 
 With batch usage it is recommended to load a specific version of R, 
-for example ``module load R/4.0.5-foss-2020b``, 
+for example ``module load R/4.2.2-foss-2022b``, 
 to ensure the expected output is achieved.
 
 First, you need to write a batch submission file. 
@@ -51,7 +49,7 @@ We assume you'll call this ``my_job.slurm``:
    #SBATCH --mem=4G              # Request 4GB of memory
    #SBATCH --mail-user=username@sheffield.ac.uk  # Replace with your email address
 
-   module load R/4.0.5-foss-2020b  # Recommended to load a specific version of R
+   module load R/4.2.2-foss-2022b  # Recommended to load a specific version of R
 
    R CMD BATCH my_code.r my_code.r.o$JOB_ID
 
@@ -138,7 +136,7 @@ Since there are so many, we only install those libraries that have been explicit
 The associated R packages are not included in the central installation of R.
 
 To load external libraries you should  :ref:`search for a module <search_env_modules>` which matches the 
-build chain of the R version you are using to avoid load conflicts e.g. for R 4.0.5, foss-2020b.
+build chain of the R version you are using to avoid load conflicts e.g. for R 4.2.2, foss-2022b.
 
 To request the installation of dependencies for R packages that depend on non-R libraries
 please contact ``research-it@sheffield.ac.uk``.
@@ -169,7 +167,7 @@ You can compile and run this on a worker node as follows.
 
 Start a session on a worker node with ``srun --pty bash -i`` and load a version of R: ::
 
-   module load R/4.0.5-foss-2020b
+   module load R/4.2.2-foss-2022b
 
 Assuming the program is called ``test_rmath.c``, compile with: ::
 
@@ -182,12 +180,13 @@ Installation Notes
 ------------------
 These notes are primarily for administrators of the system.
 
-R/4.0.5-foss-2020b
-^^^^^^^^^^^^^^^^^^
-
-R was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTR/easyconfig``.
+R was installed using Easybuild 4.9.1, build details can be found in ``$EBROOTR/easyconfig``.
 Note: installed minus any of the configuration to install 700+ packages from CRAN
 (i.e. just base R was installed).
 
 NOTE: all R versions patched to address the CVE vulnerability using R-4.x_fix-CVE-2024-27322.patch
 
+Testing
+-------
+
+Testing was carried out on all installed base packages.

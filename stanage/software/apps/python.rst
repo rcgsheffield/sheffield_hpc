@@ -5,7 +5,7 @@ Python
 
 .. sidebar:: Python
 
-    :latest Versions: 2024.02-1
+    :Latest Version: 2024.02-1
     :Documentation: https://www.python.org/doc/
     :URL: https://python.org
 

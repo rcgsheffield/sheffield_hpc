@@ -48,10 +48,10 @@ Batch jobs
 Users are encouraged to write their own batch submission scripts. The following is an example batch submission script, ``run.sh``, to run ``vasp_std`` and which is submitted to the queue with the command ``sbatch run.sh``. ::
 
     #!/bin/bash
-    #SBATCH --nodes 16
-    #SBATCH --ntasks-per-node 1
+    #SBATCH --nodes=16
+    #SBATCH --ntasks-per-node=1
     #SBATCH --mem=16000
-    #SBATCH --time 00:30:00
+    #SBATCH --time=00:30:00
     #SBATCH --mail-user=jane.doe@sheffield.ac.uk
     #SBATCH --mail-type=ALL
     module load VASP/6.4.2-intel-2022

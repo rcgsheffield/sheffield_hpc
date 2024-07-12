@@ -1,14 +1,14 @@
 .. _gsl_stanage:
 
 .. |softwarename| replace:: GSL 
-.. |currentver| replace:: 2.7
+.. |currentver| replace:: 2.7, 2.6
 
 GSL
 ===
 
 .. sidebar:: |softwarename|
    
-   :Version: |currentver|
+   :Versions: |currentver|
    :URL: https://www.gnu.org/software/gsl/
    :Documentation: https://www.gnu.org/software/gsl/doc/html/index.html
 
@@ -25,22 +25,21 @@ Usage
 
 The GSL library can be loaded by running one of: 
 
-.. code-block::
+.. code-block:: sh
 
-	module load GSL/2.5-GCC-7.3.0-2.30
-	module load GSL/2.6-GCC-9.3.0
-	module load GSL/2.6-GCC-10.2.0
-	module load GSL/2.7-GCC-10.3.0
-	module load GSL/2.7-GCC-11.2.0
-	module load GSL/2.7-GCC-11.3.0
-	module load GSL/2.7-GCC-12.2.0
+   module load GSL/2.7-GCC-12.2.0
+   module load GSL/2.7-GCC-11.3.0
+   module load GSL/2.7-GCC-11.2.0
+   module load GSL/2.7-GCC-10.3.0
+   module load GSL/2.6-GCC-10.2.0
+   module load GSL/2.6-GCC-9.3.0
 
 which will also load a particular :ref:`GCC <gcc_stanage>`,
 *or*: 
 
 .. code-block::
 
-	module load GSL/2.6-iccifort-2020.1.217
+   module load GSL/2.6-iccifort-2020.1.217
 
 if you also want to activate or have already activated :ref:`icc/icpc/ifort <icc_ifort_stanage>` 2020.1.217.
 
@@ -66,10 +65,32 @@ A example program that uses the GSL (taken from the GSL `documentation <https://
 
 Build this using:
 
-.. code-block:: sh
+.. tabs::
 
-   gcc -Wall -lgsl -lgslcblas -o test test.c  # OR
-   icc -Wall -lgsl -lgslcblas -o test test.c 
+   .. group-tab:: gcc
+
+      Compile using GCC (GNU Compiler Collection), this is compatible with all GSL versions.
+
+      .. code-block:: console
+
+         gcc -Wall -lgsl -lgslcblas -o test test.c 
+
+   .. group-tab:: icc
+
+      Compile using ICC (Intel C Compiler), this is suitable for GSL version 2.6.
+
+      .. code-block:: console
+
+         icc -Wall -lgsl -lgslcblas -o test test.c 
+   
+   .. group-tab:: icx
+
+      Compile using ICX (Intel oneAPI DPC++/C++ Compiler), this is suitable for GSL versions 2.7 onwards.
+      
+      .. code-block:: console
+
+         icx -Wall -lgsl -lgslcblas -o test test.c
+
 
 Then run using:
 

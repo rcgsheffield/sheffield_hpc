@@ -65,13 +65,32 @@ A example program that uses the GSL (taken from the GSL `documentation <https://
 
 Build this using:
 
-.. code-block:: sh
+.. tabs::
 
-   gcc -Wall -lgsl -lgslcblas -o test test.c  # OR
-   # For versions GSL/2.6-GCC-9.3.0, GSL/2.6-GCC-10.2.0 and GSL/2.6-iccifort-2020.1.217
-   icc -Wall -lgsl -lgslcblas -o test test.c
-   # For version GSL/2.7-GCC-10.3.0 onwards
-   icx -Wall -lgsl -lgslcblas -o test test.c
+   .. group-tab:: gcc
+
+      Compile using GCC (GNU Compiler Collection), this is compatible with all GSL versions.
+
+      .. code-block:: console
+
+         gcc -Wall -lgsl -lgslcblas -o test test.c 
+
+   .. group-tab:: icc
+
+      Compile using ICC (Intel C Compiler), this is suitable for GSL version 2.6.
+
+      .. code-block:: console
+
+         icc -Wall -lgsl -lgslcblas -o test test.c 
+   
+   .. group-tab:: icx
+
+      Compile using ICX (Intel oneAPI DPC++/C++ Compiler), this is suitable for GSL versions 2.7 onwards.
+      
+      .. code-block:: console
+
+         icx -Wall -lgsl -lgslcblas -o test test.c
+
 
 Then run using:
 

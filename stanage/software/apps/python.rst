@@ -5,7 +5,7 @@ Python
 
 .. sidebar:: Python
 
-    :Versions: 2019.7,2020.11,2021.11,2022.05,2022.10
+    :Latest Version: 2024.02-1
     :Documentation: https://www.python.org/doc/
     :URL: https://python.org
 
@@ -23,22 +23,18 @@ need.
 Using Conda Python
 ------------------
 
-.. attention::
-         
-        **We recommend that you use the following 2022 (sub)version of Anaconda3:** ``Anaconda3/2022.05``
-        
-        *The latest module,* ``Anaconda3/2022.10`` *, is under investigation as this has demonstrated odd 
-        behaviour on conda environment exit (for some users). We will investigate this, and advise in due course.*
-
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
 
 Anaconda Python can be loaded with one of the following::
 
-    module load Anaconda3/2019.07
-    module load Anaconda3/2020.11 
-    module load Anaconda3/2021.11
-    module load Anaconda3/2022.05
-    module load Anaconda3/2022.10
+.. code-block:: bash
+
+   module load Anaconda3/2024.02-1
+   module load Anaconda3/2023.07-2
+   module load Anaconda3/2022.10
+   module load Anaconda3/2022.05
+   module load Anaconda3/2021.11
+   module load Anaconda3/2019.07
 
 The ``root`` conda environment (the default) provides Python 3 and no extra
 modules, it is automatically updated, and not recommended for general use, just
@@ -148,7 +144,7 @@ Create a batch job submission script called ``myscript.slurm`` that is similar t
    #SBATCH --mem-per-cpu=100
 
    export SLURM_EXPORT_ENV=ALL
-   module load Anaconda3/2022.10
+   module load Anaconda3/2024.02-1
 
    # We assume that the conda environment 'myexperiment' has already been created
    source activate myexperiment
@@ -171,27 +167,6 @@ Further Conda Python Learning Resources
 Installation notes
 ------------------
 
-Anaconda 2022.10 (EasyBuild install):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This section is primarily for administrators of the system. Anaconda3 has been installed using the default Easybuild config files.
 
-Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
-
-Anaconda 2022.05 (EasyBuild install):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
-
-Anaconda 2021.11 (EasyBuild install):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
-
-Anaconda 2020.11 (EasyBuild install):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
-
-Anaconda 2019.7 (EasyBuild install):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Anaconda was installed using Easybuild 4.7.1, build details can be found in folder ``$EBROOTANACONDA3/easybuild`` with the module loaded.
+Build logs and test reports can be found in ``$EBDEVELANACONDA3`` with a given module loaded.

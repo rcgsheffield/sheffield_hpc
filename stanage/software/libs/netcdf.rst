@@ -5,6 +5,7 @@ netCDF
 
 .. sidebar:: netCDF
 
+   :Versions: 4.9.0, 4.8.1, 4.8.0, 4.7.4
    :URL: https://www.unidata.ucar.edu/software/netcdf/
 
 "NetCDF (Network Common Data Form) is a set of interfaces for array-oriented data access and a freely distributed collection of data access libraries for C, Fortran, C++, Java, and other languages. The netCDF libraries support a machine-independent format for representing scientific data. Together, the interfaces, libraries, and format support the creation, access, and sharing of scientific data."
@@ -20,11 +21,11 @@ To **load this library** plus
 
 run *one* of the following: ::
 
-   module load netCDF/4.7.4-gompi-2020b
-   module load netCDF/4.8.0-gompi-2021a
-   module load netCDF/4.8.1-gompi-2021b
-   module load netCDF/4.9.0-gompi-2022a
    module load netCDF/4.9.0-gompi-2022b
+   module load netCDF/4.9.0-gompi-2022a
+   module load netCDF/4.8.1-gompi-2021b
+   module load netCDF/4.8.0-gompi-2021a
+   module load netCDF/4.7.4-gompi-2020b
 
 To load the **Fortran bindings** for netCDF plus
 

@@ -1,10 +1,13 @@
 .. _impi_stanage:
 
+.. |currentver| replace:: 2021.10.0
+
 Intel MPI
 =========
 
 .. sidebar:: Intel MPI
 
+   :Latest Version:  |currentver|
    :URL: https://software.intel.com/en-us/mpi-library
 
 "Intel MPI Library is a multifabric message-passing library

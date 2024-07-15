@@ -3,8 +3,8 @@ Abaqus
 
 .. sidebar:: Abaqus
 
-   :Versions: 2021
-   :Dependencies: User subroutines need the Intel FORTRAN compiler 2019
+   :Versions: 2023
+   :Dependencies: User subroutines need the Intel FORTRAN compiler 2020
    :URL: http://www.3ds.com/products-services/simulia/products/abaqus/
    :Documentation: https://help.3ds.com/ (note: register for an account to access.)
 
@@ -15,7 +15,7 @@ Interactive usage
 
 Abaqus can be activated using one of the following module files::
 
-    module load ABAQUS/2021
+    module load ABAQUS/2023
 
 and launched using::
 
@@ -24,7 +24,7 @@ and launched using::
 
 .. note::
 
-  Users must unset the SLURM environment variable SLURM_GTIDS. Failure to do so will cause Abaqus to get stuck due to the MPI that Abaqus ships with not supporting the SLURM scheduler. SLURM_GTIDS should be unset for both interactive/GUI and batch jobs:
+  To use the ABAQUS GUI you will need to be in a :ref:`flight graphical session on Stanage <flight-desktop>`. Users must unset the SLURM environment variable SLURM_GTIDS. Failure to do so will cause Abaqus to get stuck due to the MPI that Abaqus ships with not supporting the SLURM scheduler. SLURM_GTIDS should be unset for both interactive/GUI and batch jobs:
 
   ``unset SLURM_GTIDS``
 
@@ -57,7 +57,7 @@ The following is an example batch submission script, ``my_job.sh``, to run the e
     #SBATCH --time=00:30:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load ABAQUS/2018
+    module load ABAQUS/2023
     unset SLURM_GTIDS
     abaqus job=my_job input=s4d.inp mp_mode=threads cpus=$SLURM_NTASKS scratch=$TMPDIR memory="8gb" interactive
 
@@ -80,24 +80,12 @@ The script below is an example of a batch submission script for a single core jo
     #SBATCH --time=00:30:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load ABAQUS/2018
-    module load iccifort/2019.5.281
+    module load ABAQUS/2023
+    module load iccifort/2020.1.217
     unset SLURM_GTIDS
     abaqus job=my_job input=umatmst3.inp user=umatmst3.f scratch=$TMPDIR memory="8gb" interactive
 
-Note that the module ``iccifort/2019.5.281``, required for compiling the user subroutines, is not automatically loaded when the module for Abaqus is loaded.
-
-------------
-
-Licensed options
-----------------
-
-All available Abaqus licenses can be viewed using ``abaqus licensing r`` e.g. ::
-
-   $ module load ABAQUS/2021
-   $ abaqus licensing r
-
-Run ``abaqus licensing`` for usage info for the Abaqus licensing sub-command. Run ``abaqus licensing ru`` to see current licence usage.
+Note that the module ``iccifort/2020.1.217``, required for compiling the user subroutines, is not automatically loaded when the module for Abaqus is loaded.
 
 ------------
 
@@ -130,4 +118,4 @@ Installation notes
 Abaqus 2021 (EasyBuild install):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Abaqus was installed using Easybuild 4.7.0, build details can be found in folder $EBROOTABAQUS/easybuild with the module loaded.
+Abaqus was installed using Easybuild 4.9.2, build details can be found in folder $EBROOTABAQUS/easybuild with the module loaded.

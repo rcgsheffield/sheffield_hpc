@@ -39,7 +39,7 @@ To make this library available, run one of the following module commands:
 
 .. tabs::
 
-    .. group-tab:: CPU
+    .. group-tab:: icelake
 
         .. code-block:: console
 
@@ -49,7 +49,7 @@ To make this library available, run one of the following module commands:
             module load libsndfile/1.0.28-GCCcore-10.2.0
             module load libsndfile/1.0.28-GCCcore-9.3.0
 
-    .. group-tab:: icelake/znver3
+    .. group-tab:: znver3
 
         .. code-block:: console
 

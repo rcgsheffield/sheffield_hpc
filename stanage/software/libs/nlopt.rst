@@ -28,6 +28,7 @@ An example program that uses NLopt (taken from the NLopt `documentation <https:/
 Save the file as ``example.c``:
 
 .. code-block:: c
+
    #include <stdio.h>
    #include <math.h>
    #include <nlopt.h>

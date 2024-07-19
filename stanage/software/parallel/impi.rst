@@ -5,6 +5,7 @@ Intel MPI
 
 .. sidebar:: Intel MPI
 
+   :Latest Version: 2021.10.0
    :URL: https://software.intel.com/en-us/mpi-library
 
 "Intel MPI Library is a multifabric message-passing library

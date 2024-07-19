@@ -5,6 +5,7 @@ Intel MPI
 
 .. sidebar:: Intel MPI
 
+   :Latest Version: 2021.10.0
    :URL: https://software.intel.com/en-us/mpi-library
 
 "Intel MPI Library is a multifabric message-passing library
@@ -15,15 +16,18 @@ perform better on HPC clusters based on Intel® processors."
 Versions
 --------
 
-You can load a specific version using one of the following: ::
+You can load a specific version using one of the following:
 
-    module load impi/2019.7.217-iccifort-2020.1.217     # subset of the intel 2020a toolchain
-    module load impi/2019.9.304-iccifort-2020.4.304     # subset of the intel 2020b toolchain
-    module load impi/2021.2.0-intel-compilers-2021.2.0  # subset of the intel 2021a toolchain
-    module load impi/2021.4.0-intel-compilers-2021.4.0  # subset of the intel 2021b toolchain
-    module load impi/2021.6.0-intel-compilers-2022.1.0  # subset of the intel 2022a toolchain
-    module load impi/2021.7.1-intel-compilers-2022.2.1  # subset of the intel 2022b toolchain
+.. code-block:: console
 
+    module load impi/2021.10.0-intel-compilers-2023.2.1 # subset of the Intel 2023b toolchain
+    module load impi/2021.9.0-intel-compilers-2023.1.0  # subset of the Intel 2023a toolchain
+    module load impi/2021.7.1-intel-compilers-2022.2.1  # subset of the Intel 2022b toolchain
+    module load impi/2021.6.0-intel-compilers-2022.1.0  # subset of the Intel 2022a toolchain
+    module load impi/2021.4.0-intel-compilers-2021.4.0  # subset of the Intel 2021b toolchain
+    module load impi/2021.2.0-intel-compilers-2021.2.0  # subset of the Intel 2021a toolchain
+    module load impi/2019.9.304-iccifort-2020.4.304     # subset of the Intel 2020b toolchain
+    module load impi/2019.7.217-iccifort-2020.1.217     # subset of the Intel 2020a toolchain
 
 which implicitly load versions of icc, ifort (and GCC).
 
@@ -116,7 +120,7 @@ provided by Intel. An example of this using 2 cores is given below:
     cp -R $I_MPI_ROOT/test ./ && chmod 700 -R test && cd test/
     # Compiling the C example
     mpicc test.c
-    # Alternatively you can compile the fortran example instead
+    # Alternatively you can compile the Fortran example instead
     #mpif90 test.f90
 
     echo -e "\nBegin running application:\n"

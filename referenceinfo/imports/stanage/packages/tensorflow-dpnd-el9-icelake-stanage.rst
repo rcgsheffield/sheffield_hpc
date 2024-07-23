@@ -4,7 +4,7 @@
    - :ref:`h5py-3.7.0 <el9-icelake-stanage-all-h5py>`
    - :ref:`cURL-7.83.0 <el9-icelake-stanage-all-curl>`
    - :ref:`dill-0.3.6 <el9-icelake-stanage-all-dill>`
-   - :ref:`double-con2.11.0-3.2.0 <el9-icelake-stanage-all-double-con2.11.0>`
+   - :ref:`double-conversion-3.2.0 <el9-icelake-stanage-all-double-conversion>`
    - :ref:`flatbuffers-2.0.7 <el9-icelake-stanage-all-flatbuffers>`
    - :ref:`giflib-5.2.1 <el9-icelake-stanage-all-giflib>`
    - :ref:`hwloc-2.7.1 <el9-icelake-stanage-all-hwloc>`

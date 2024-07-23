@@ -1,6 +1,6 @@
 .. dropdown:: Dependencies for latest version of Qt5
 
-   - :ref:`double-con5.15.7-3.2.1 <el9-icelake-stanage-all-double-con5.15.7>`
+   - :ref:`double-conversion-3.2.1 <el9-icelake-stanage-all-double-conversion>`
    - :ref:`GLib-2.75.0 <el9-icelake-stanage-all-glib>`
    - :ref:`PCRE2-10.40 <el9-icelake-stanage-all-pcre2>`
    - :ref:`libpng-1.6.38 <el9-icelake-stanage-all-libpng>`

@@ -1,0 +1,22 @@
+.. dropdown:: Dependencies for latest version of LAMMPS
+
+   - :ref:`Python-3.8.2 <el7-icelake-stanage-all-python>`
+   - :ref:`libpng-1.6.37 <el7-icelake-stanage-all-libpng>`
+   - :ref:`libjpeg-turbo-2.0.4 <el7-icelake-stanage-all-libjpeg-turbo>`
+   - :ref:`netCDF-4.7.4 <el7-icelake-stanage-all-netcdf>`
+   - :ref:`GSL-2.6 <el7-icelake-stanage-all-gsl>`
+   - :ref:`zlib-1.2.11 <el7-icelake-stanage-all-zlib>`
+   - :ref:`gzip-1.10 <el7-icelake-stanage-all-gzip>`
+   - :ref:`cURL-7.69.1 <el7-icelake-stanage-all-curl>`
+   - :ref:`HDF5-1.10.6 <el7-icelake-stanage-all-hdf5>`
+   - :ref:`tbb-2020.1 <el7-icelake-stanage-all-tbb>`
+   - :ref:`PCRE-8.44 <el7-icelake-stanage-all-pcre>`
+   - :ref:`libxml2-2.9.10 <el7-icelake-stanage-all-libxml2>`
+   - :ref:`FFmpeg-4.2.2 <el7-icelake-stanage-all-ffmpeg>`
+   - :ref:`Voro++-0.4.6 <el7-icelake-stanage-all-voro++>`
+   - :ref:`kim-api-2.1.3 <el7-icelake-stanage-all-kim-api>`
+   - :ref:`Eigen-3.3.7 <el7-icelake-stanage-all-eigen>`
+   - :ref:`yaff-1.6.0 <el7-icelake-stanage-all-yaff>`
+   - :ref:`PLUMED-2.6.0 <el7-icelake-stanage-all-plumed>`
+   - :ref:`ScaFaCoS-1.0.1 <el7-icelake-stanage-all-scafacos>`
+   - :ref:`VTK-8.2.0 <el7-icelake-stanage-all-vtk>`

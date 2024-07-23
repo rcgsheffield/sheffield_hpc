@@ -1,0 +1,21 @@
+.. _el9-icelake-stanage-all-m4:
+
+M4
+==
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-sdbr-el9-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-dscr-el9-icelake-stanage.rst
+
+A version of M4 can be made available with *one* of the following:
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-ml-el9-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
+
+.. include:: /referenceinfo/imports/stanage/packages/custom//m4-cust-el9-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-inst-el9-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-dpnd-el9-icelake-stanage.rst
+

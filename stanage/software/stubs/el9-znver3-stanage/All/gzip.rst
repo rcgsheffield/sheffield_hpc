@@ -1,0 +1,21 @@
+.. _el9-znver3-stanage-all-gzip:
+
+gzip
+====
+
+.. include:: /referenceinfo/imports/stanage/packages//gzip-sdbr-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//gzip-dscr-el9-znver3-stanage.rst
+
+A version of gzip can be made available with *one* of the following:
+
+.. include:: /referenceinfo/imports/stanage/packages//gzip-ml-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
+
+.. include:: /referenceinfo/imports/stanage/packages/custom//gzip-cust-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//gzip-inst-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//gzip-dpnd-el9-znver3-stanage.rst
+

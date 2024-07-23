@@ -1,0 +1,4 @@
+.. dropdown:: Dependencies for latest version of eSpeak-NG
+
+   - :ref:`sonic-20180202 <el9-icelake-stanage-all-sonic>`
+   - :ref:`MBROLA-3.3 <el9-icelake-stanage-all-mbrola>`

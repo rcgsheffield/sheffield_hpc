@@ -1,0 +1,21 @@
+.. _el9-znver3-stanage-all-libsndfile:
+
+libsndfile
+==========
+
+.. include:: /referenceinfo/imports/stanage/packages//libsndfile-sdbr-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//libsndfile-dscr-el9-znver3-stanage.rst
+
+A version of libsndfile can be made available with *one* of the following:
+
+.. include:: /referenceinfo/imports/stanage/packages//libsndfile-ml-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
+
+.. include:: /referenceinfo/imports/stanage/packages/custom//libsndfile-cust-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//libsndfile-inst-el9-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//libsndfile-dpnd-el9-znver3-stanage.rst
+

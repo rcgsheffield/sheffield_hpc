@@ -1,0 +1,21 @@
+.. dropdown:: Dependencies for latest version of Qt5
+
+   - :ref:`double-con5.15.7-3.2.1 <el7-icelake-stanage-all-double-con5.15.7>`
+   - :ref:`GLib-2.75.0 <el7-icelake-stanage-all-glib>`
+   - :ref:`PCRE2-10.40 <el7-icelake-stanage-all-pcre2>`
+   - :ref:`libpng-1.6.38 <el7-icelake-stanage-all-libpng>`
+   - :ref:`HarfBuzz-5.3.1 <el7-icelake-stanage-all-harfbuzz>`
+   - :ref:`graphite2-1.3.14 <el7-icelake-stanage-all-graphite2>`
+   - :ref:`X11-20221110 <el7-icelake-stanage-all-x11>`
+   - :ref:`fontconfig-2.14.1 <el7-icelake-stanage-all-fontconfig>`
+   - :ref:`DBus-1.15.2 <el7-icelake-stanage-all-dbus>`
+   - :ref:`libevent-2.1.12 <el7-icelake-stanage-all-libevent>`
+   - :ref:`libGLU-9.0.2 <el7-icelake-stanage-all-libglu>`
+   - :ref:`libjpeg-turbo-2.1.4 <el7-icelake-stanage-all-libjpeg-turbo>`
+   - :ref:`NSS-3.85 <el7-icelake-stanage-all-nss>`
+   - :ref:`snappy-1.1.9 <el7-icelake-stanage-all-snappy>`
+   - :ref:`JasPer-4.0.0 <el7-icelake-stanage-all-jasper>`
+   - :ref:`bzip2-1.0.8 <el7-icelake-stanage-all-bzip2>`
+   - :ref:`OpenSSL-1.1 <el7-icelake-stanage-all-openssl>`
+   - :ref:`ICU-72.1 <el7-icelake-stanage-all-icu>`
+   - :ref:`nodejs-18.12.1 <el7-icelake-stanage-all-nodejs>`

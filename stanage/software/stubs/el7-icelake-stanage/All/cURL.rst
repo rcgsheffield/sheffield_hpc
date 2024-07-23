@@ -1,0 +1,21 @@
+.. _el7-icelake-stanage-all-curl:
+
+cURL
+====
+
+.. include:: /referenceinfo/imports/stanage/packages//curl-sdbr-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//curl-dscr-el7-icelake-stanage.rst
+
+A version of cURL can be made available with *one* of the following:
+
+.. include:: /referenceinfo/imports/stanage/packages//curl-ml-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
+
+.. include:: /referenceinfo/imports/stanage/packages/custom//curl-cust-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//curl-inst-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//curl-dpnd-el7-icelake-stanage.rst
+

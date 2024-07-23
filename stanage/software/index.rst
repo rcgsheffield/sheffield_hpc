@@ -21,3 +21,4 @@ an omission, or wish to request new software submit a request to
     parallel/index
     all/index
     documented/index
+    stubs/index

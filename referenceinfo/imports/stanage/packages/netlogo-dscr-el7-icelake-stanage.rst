@@ -1,0 +1,5 @@
+NetLogo is a multi-agent programmable modeling environment. It
+is used by tens of thousands of students, teachers and researchers worldwide.
+It also powers HubNet participatory simulations. It is authored by Uri Wilensky
+and developed at the CCL.
+

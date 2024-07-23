@@ -1,0 +1,21 @@
+.. _el7-znver3-stanage-all-m4:
+
+M4
+==
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-sdbr-el7-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-dscr-el7-znver3-stanage.rst
+
+A version of M4 can be made available with *one* of the following:
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-ml-el7-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
+
+.. include:: /referenceinfo/imports/stanage/packages/custom//m4-cust-el7-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-inst-el7-znver3-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//m4-dpnd-el7-znver3-stanage.rst
+

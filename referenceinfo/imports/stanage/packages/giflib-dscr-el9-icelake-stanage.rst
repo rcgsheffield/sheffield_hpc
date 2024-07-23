@@ -1,0 +1,4 @@
+giflib is a library for reading and writing gif images.
+It is API and ABI compatible with libungif which was in wide use while
+the LZW compression algorithm was patented.
+

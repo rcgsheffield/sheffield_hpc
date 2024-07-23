@@ -1,0 +1,2 @@
+This is a Perl extension interface to James Clark's XML parser, expat.
+

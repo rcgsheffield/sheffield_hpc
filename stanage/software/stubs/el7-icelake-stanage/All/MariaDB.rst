@@ -1,0 +1,21 @@
+.. _el7-icelake-stanage-all-mariadb:
+
+MariaDB
+=======
+
+.. include:: /referenceinfo/imports/stanage/packages//mariadb-sdbr-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//mariadb-dscr-el7-icelake-stanage.rst
+
+A version of MariaDB can be made available with *one* of the following:
+
+.. include:: /referenceinfo/imports/stanage/packages//mariadb-ml-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
+
+.. include:: /referenceinfo/imports/stanage/packages/custom//mariadb-cust-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//mariadb-inst-el7-icelake-stanage.rst
+
+.. include:: /referenceinfo/imports/stanage/packages//mariadb-dpnd-el7-icelake-stanage.rst
+

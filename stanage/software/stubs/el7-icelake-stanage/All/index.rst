@@ -1,0 +1,11 @@
+.. _el7-icelake-stanage-all:
+
+All
+^^^
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    ./*
+

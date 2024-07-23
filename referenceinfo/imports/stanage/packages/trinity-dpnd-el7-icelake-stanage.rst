@@ -1,0 +1,24 @@
+.. dropdown:: Dependencies for latest version of Trinity
+
+   - :ref:`Java-11 <el7-icelake-stanage-all-java>`
+   - :ref:`ant-1.10.12 <el7-icelake-stanage-all-ant>`
+   - :ref:`picard-2.25.1 <el7-icelake-stanage-all-picard>`
+   - :ref:`GATK-4.3.0.0 <el7-icelake-stanage-all-gatk>`
+   - :ref:`Perl-5.34.1 <el7-icelake-stanage-all-perl>`
+   - :ref:`Python-3.10.4 <el7-icelake-stanage-all-python>`
+   - :ref:`SciPy-bundle-2022.05 <el7-icelake-stanage-all-scipy-bundle>`
+   - :ref:`BLAST+-2.13.0 <el7-icelake-stanage-all-blast+>`
+   - :ref:`BLAT-3.7 <el7-icelake-stanage-all-blat>`
+   - :ref:`Bowtie-1.3.1 <el7-icelake-stanage-all-bowtie>`
+   - :ref:`Bowtie2-2.4.5 <el7-icelake-stanage-all-bowtie2>`
+   - :ref:`GMAP-GSNAP-2023-02-17 <el7-icelake-stanage-all-gmap-gsnap>`
+   - :ref:`HISAT2-2.2.1 <el7-icelake-stanage-all-hisat2>`
+   - :ref:`HTSlib-1.15.1 <el7-icelake-stanage-all-htslib>`
+   - :ref:`Jellyfish-2.3.0 <el7-icelake-stanage-all-jellyfish>`
+   - :ref:`kallisto-0.48.0 <el7-icelake-stanage-all-kallisto>`
+   - :ref:`ncurses-6.3 <el7-icelake-stanage-all-ncurses>`
+   - :ref:`RSEM-1.3.3 <el7-icelake-stanage-all-rsem>`
+   - :ref:`Salmon-1.9.0 <el7-icelake-stanage-all-salmon>`
+   - :ref:`SAMtools-1.16.1 <el7-icelake-stanage-all-samtools>`
+   - :ref:`STAR-2.7.10b <el7-icelake-stanage-all-star>`
+   - :ref:`zlib-1.2.12 <el7-icelake-stanage-all-zlib>`

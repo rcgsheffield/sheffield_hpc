@@ -7,8 +7,6 @@ Znver3 (OS: CentOS 7) Package Versions
     :maxdepth: 1
     :glob:
 
-    ./*
-
     All/index.rst
     Bio/index.rst
     Compiler/index.rst

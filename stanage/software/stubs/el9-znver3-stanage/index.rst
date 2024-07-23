@@ -7,8 +7,6 @@ Znver3 (OS: Rocky 9) Package Versions
     :maxdepth: 1
     :glob:
 
-    ./*
-
     All/index.rst
     Bio/index.rst
     Cae/index.rst

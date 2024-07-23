@@ -7,8 +7,6 @@ Icelake (OS: CentOS 7) Package Versions
     :maxdepth: 1
     :glob:
 
-    ./*
-
     All/index.rst
     Base/index.rst
     Bio/index.rst

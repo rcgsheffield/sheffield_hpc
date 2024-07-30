@@ -1,0 +1,145 @@
+.. _nl20240416:
+
+News - 2024-04-16
+=================
+
+Hello everyone! We are publishing this month's newsletter a bit later than usual due to the recent festivities. We hope you all enjoyed a lovely Easter break and a happy Eid Mubarak.
+
+**In this issue:**
+
+- We share thoughts and materials from our recent :ref:`Research Computing @ Sheffield and Research IT Forum <recent_events_20240416>` events. 
+- Storage Options Update: Learn about :ref:`available storage solutions <storage_options>` in light of new Google Drive policies. 
+- **Expansion of the HPC Team:** Keep an eye out for our newest team members, Angie and Becki who will be with us for the spring season.
+- :ref:`Grace Hopper GPU nodes <grace_hopper_bede>` available in the Bede HPC system.
+- **Important:** Please be aware of pending OS upgrade on both Stanage and Bessemer.
+
+Pending Operating System Upgrade on our HPC clusters
+----------------------------------------------------
+
+The operating system on Stanage and Bessemer will be upgraded in the next few months. This upgrade ensures the security, stability and performance of our HPC infrastructure. Certain software packages and applications may not be compatible with the new OS (Rocky 9). We encourage you to start thinking about utilising newer versions of software and libraries. We will provide further updates regarding the OS upgrade shortly, including timelines. 
+
+.. _recent_events_20240416:
+
+Recent Events
+-------------
+Research Computing @ Sheffield Conference
++++++++++++++++++++++++++++++++++++++++++
+
+Our annual Research Computing at Sheffield conference, was held on April 9th. It provided an excellent opportunity to celebrate and showcase the groundbreaking research projects taking place on HPC. A huge thank you to all the speakers and attendees who contributed to making this year's forum a success. For those who missed it, the `presentation slides <https://drive.google.com/drive/folders/1YPctycoYDaxZX4aqAqdCiQYQD9lgAtq_?usp=sharing>`_ are now available. 
+
+Also, a special thank you to Desmond Ryan for all his hard work organising this year's event.
+
+Research IT Forum 
+++++++++++++++++++
+
+The theme for this Research IT Forum held on March 7th was to present Research & Innovation IT Services for Researchers. We described our 6 services and describe how they can enhance your research. If you missed this excellent event or you would like to revisit the material the `recording <https://drive.google.com/file/d/1bMb5ytQBD7jJThbCgg3OWs0P8ljWGO7Y/view?usp=sharing>`_ and `slides <https://docs.google.com/presentation/d/1b6co_8sRy596Ad6IMVoR5zdxk9YmxwP4Em9hW7j6EoA/edit#slide=id.g1b616b922c8_1_0>`_ are now available.
+
+.. _storage_options:
+
+Storage Options
+---------------
+Research Storage
+++++++++++++++++
+
+Recently,  you may have been contacted about the introduction of 15 GB quotas for personal Google Drives and 30 GB quotas for Google Shared Drives. These quotas have been introduced at the University of Sheffield following changes to Google's pricing for Google Drive. `More information on these changes <https://staff.sheffield.ac.uk/it-services/storage/google-data-cap-project>`_ .
+
+To reduce Google personal and shared Drive usage to below the quota limits users may want/need to:
+
+- Delete any data that is no longer needed from their google drive.
+- Migrate to our research storage solution (X-Drive),
+  which offers 10TB of free storage per PI and more can be purchased.
+  This offers a resilient and backed-up option to meet your data storage needs
+  (with encryption at rest but by default no encryption in transit).
+  Research storage can be made available on both Stanage and Bessemer upon request.
+  It should also offer better performance than over Google Drive for users on campus or geographically close to Sheffield.
+- Learn more about requesting or using research storage `here <https://students.sheffield.ac.uk/it-services/research/storage>`_
+  (you will need to be logged in to access the page).
+  
+(**EDITED 2024-04-18: correction regarding encryption in transit**)
+
+Lustre filesystems
+++++++++++++++++++
+
+You are likely aware that the :ref:`Stanage and Bessemer systems <fastdata_dir>` contain a large Lustre parallel filesystem.
+
+- ``/mnt/parscratch`` on Stanage
+- ``/fastdata`` on Bessemer
+
+We would like to draw your attention to several characteristics of these Lustre filesystems
+
+- They provide lots of temporary storage with no quotas;
+- They are not backed up;
+- They offer good performance when working with larger files than e.g. home directories - Lustre performance scales well with the number of filesystem clients, plus on Stanage connections to
+- Lustre are via high-bandwidth (100 Gbps), low-latency network links;
+- They perform poorly when working with lots of small files (e.g. files only a few kB in size) (see this `blog post <https://walkingrandomly.com/?p=6167>`_ ). Even just enumerating or deleting millions of files from a Lustre filesystem can take days;
+- They perform poorly when you have a large number (>1000) of files or directories within a directory.
+ 
+Recommendations:
+
+- Do not use these Lustre filesystems for long-term storage
+- Prefer to work with larger files where possible. For example can you combine output data within one large HDF5 file instead of creating lots of small text files?
+- Try to limit the number of files or directories within a directory.
+- If using interative workflows e.g. machine learning or fluid dynamics software then consider outputting data to Lustre less frequently than every time/simulation step e.g. every 1000 steps.
+- If you have concerns about how many files your workflow might create on Lustre then consider running some short tests before launching big jobs.
+
+.. _grace_hopper_bede:
+ 
+Grace Hopper GPU nodes available in the Bede HPC system
+-------------------------------------------------------
+
+Three Grace Hopper that were added to the :ref:`Bede <bede>` HPC system are no longer in pilot and are available for general users. Each of these nodes (two worker nodes and an interactive/login node) contains a tightly-coupled pairing of an NVIDIA H100 GPU ('Hopper') and an ARM ('Grace') CPU and should be very well suited to GPU compute problems that require lots of data sharing between CPU and GPU. We'll cover benefits and performance in a future newsletter.
+
+Grace Hopper usage documentation will be added to the Bede documentation site soon, but for now please see the `Bede Grade Hopper Pilot docs <https://bede-documentation.readthedocs.io/en/latest/usage/index.html#grace-hopper-pilot>`_ for a guide to getting started with them.
+
+New Packages and Software
+-------------------------
+
+Check out the latest additions:
+
+- :ref:`Apptainer  <apptainer_bessemer>` version 1.3.0 on Bessemer. This shouldn't result in any significant user-facing changes but please let us know if you notice any behaviour or significant performance changes, particularly relating to filesystem performance.
+- :ref:`Nextflow  <nextflow_stanage>` version 23.10.0 on Stanage
+
+
+JADE2 has now been upgraded from RHEL 7.x to RHEL 8.9. Its NVIDIA libraries and tools have also been upgraded too. 
+
+
+For users using Pytorch with the GPUs in Stanage, using a newer Pytorch container (24.02 rather than 23.07) should fix a bug which made the H100 GPUs  slower than the A100 GPUs. You should see an almost 50% performance boost between the two Pytorch versions as discovered by the benchmarks Peter Heywood in the `RSE team <https://rse.shef.ac.uk/>`_ ran. Performance on the A100 stays the same.
+
+.. figure:: /images/newsletter/pytorch2402_benchmarks.png
+    :width: 90%
+    :align: center
+    :alt: Pytorch 24.02 vs 23.07
+
+    Pytorch 24.02 vs 23.07
+
+
+
+.. _upcoming_training_20240416:
+
+Upcoming Training
+-----------------
+
+Below are our research computing key training dates for April. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ . 
+
+.. warning::
+    For our taught postgraduate users who don't have access to MyDevelopment, please email us at ``researchcomputing@sheffield.ac.uk`` with the course you want to register for, and we should be able to help you.
+
+- 18/04/2024 - Python Profiling & Optimalisation 
+- 19/04/2024 - Supervised Machine Learning 1 
+- 21/03/2024 - Introduction to MATLAB 2 
+- 23/04/2024 - Python Programming 2 
+- 25/04/2024 - Introduction to R 
+- 25/04/2024 - Deep learning (2 day course) 
+- 30/04/2024 - Python Programming 3 
+- 07/05/2024 - Unsupervised Machine Learning 
+- 09/05/2024 - Python Profiling & Optimalisation 
+- 10/05/2024 - Temporal Analysis in Python 
+
+
+Useful Links
+------------
+
+- :ref:`HPC documentation  <hpc-home>`
+- :ref:`Citing the HPC services in publications.  <citing>`
+- `RSE code clinics <https://rse.shef.ac.uk/support/code-clinic/>`_ . These are fortnightly support sessions run by the RSE team and IT Services' Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
+- `Training and courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ (You must be logged into the main university website to view).

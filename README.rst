@@ -12,7 +12,7 @@ For a guide on the rst file format see `this <http://thomas-cokelaer.info/tutori
 
 Rendered Documentation
 ----------------------
-`This website <https://docs.hpc.shef.ac.uk/en/latest/>`_  is currently automatically built from this repository:
+`This website <https://docs.hpc.shef.ac.uk/en/latest/>`_  is currently automatically built from `this repository <https://github.com/rcgsheffield/sheffield_hpc>`_:
 each push to the ``master`` branch causes a `GitHub Actions <https://github.com/rcgsheffield/sheffield_hpc/actions/>`__ workflow to build and serve the documentation via GitHub Pages.
 
 How to Contribute
@@ -22,6 +22,8 @@ see `Fork a Repo <https://help.github.com/articles/fork-a-repo/>`_ for the GitHu
 
 Once you have the git repository locally on your computer,
 you will need to ensure you have Python and the Tox_ build tool installed.
+
+Please see our `Documentation Reference <https://docs.hpc.shef.ac.uk/en/latest/referenceinfo/admins/>`_ which is a valuable resource for admins of our documentation.
 
 Once you have made your changes and updated your Fork on GitHub you will need to `Open a Pull Request <https://help.github.com/articles/using-pull-requests/>`_.
 All changes to the repository should be made through Pull Requests, including those made by the people with direct push access.
@@ -114,7 +116,23 @@ Important files / folders
 * ``global.rst`` - A globally included file (goes into all pages) which is excluded from direct building using exclude_patterns in ``conf.py``.
 * ``referenceinfo/imports`` - sub-folder tree of files to be included by not directly built. This is excluded from direct building using exclude_patterns in ``conf.py``.
 * ``_static/css/custom.css`` - custom CSS overrides for the theme.
+* ``themes/sheffieldhpc`` - Sheffield HPC custom theme components (Sphinx HTML templates, media files, CSS etc...). This functions as an overlay to the default Sphinx RTD theme.
 * ``.github/workflows`` - GitHub Actions workflows for pull requests, pushes to ``master`` and link checking.
+
+Custom Google Search Engine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As the built in Sphinx search is naive / poor, a custom Google CSE has been added (currently implemented as per https://github.com/rcgsheffield/sheffield_hpc/pull/1971).
+
+This is implemented with the following steps:
+
+1. Create Google custom search on console: https://cse.google.com/cse/all
+2. Copy HTML snippet for Google custom search
+3. Paste it into `_templates/searchbox.html`.
+4. Configure `html_sidebars` to use `searchbox.html` in your document.
+5. Ensure your `templates_path` is set to correctly source the templates directory.
+6. Customise the theming, search domain and other settings at https://cse.google.com/cse/all if not done already.
+7. Test the search is configured and functioning as desired.
 
 Making or using imported files from the ``referenceinfo/imports`` area
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

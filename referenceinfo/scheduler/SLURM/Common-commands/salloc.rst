@@ -3,12 +3,22 @@
 salloc
 ======
 
+.. important::
+
+    Contrary to the description on this page and defaults, the ``salloc`` command on the **Bessemer cluster (only)** has been reconfigured to 
+    provide an alternative method to spawn an interactive session.
+
+    If no command is specified when invoking ``salloc``, then after the resources are allocated **a new shell starts inside the requested resources** 
+    rather than starting a new user shell on the same machine.
+
+
 ``salloc``  is a SLURM scheduler command  used  to allocate a Slurm job allocation, which is a set of 
 resources (nodes), possibly with some set of constraints  (e.g.  number of  processors  per  node). 
+
 When  ``salloc``  successfully  obtains  the requested allocation, it then runs the command specified 
 by  the  user on the current machine and then revokes the allocation.
 
-If no command is specified, then ``salloc`` runs the user's default shell. 
+If no command is specified, then by default ``salloc`` starts the user's default shell on the same machine.
 
 While in an ``sbatch`` job or interactive session, ``salloc`` can also be used to allocate 
 part of the jobs resources to specific ``srun`` sub-tasks.

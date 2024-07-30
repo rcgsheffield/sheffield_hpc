@@ -86,7 +86,7 @@ The script requests 4 cores with a runtime of 60 mins and 8 GB of real memory pe
     #SBATCH --time=01:00:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load ANSYS/2022R2
+    module load ANSYS/2023R2
 
     fluent 2ddp -t$SLURM_CPUS_PER_TASK -gu -driver null -sifile=./"$SLURM_JOBID"_fluent_server_info.txt -i test.jou
 
@@ -140,7 +140,7 @@ The script requests 4 cores, 1 core per task (the default) with 4 tasks, with a 
     #SBATCH --time=01:00:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load ANSYS/2022R2
+    module load ANSYS/2023R2
 
     srun hostname -s > hosts.$SLURM_JOB_ID
 
@@ -171,7 +171,7 @@ The script requests 4 cores (1 core per task, 1 task per node on 4 nodes) with a
     #SBATCH --time=01:00:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load ANSYS/2022R2
+    module load ANSYS/2023R2
 
     srun hostname -s > hosts.$SLURM_JOB_ID
 

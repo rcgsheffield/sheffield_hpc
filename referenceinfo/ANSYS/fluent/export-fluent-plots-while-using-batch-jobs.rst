@@ -14,6 +14,8 @@ While in a batch job you cannot call a display of a window / figure / animation 
 To avoid this issue while attempting to export images from a batch job you should ensure the fluent command in your submission script has the ``-gu`` and  ``-driver null`` arguments.
 
 For a batch job:
+for a **Bessemer** batch job:
+
 
 .. code-block:: bash
 

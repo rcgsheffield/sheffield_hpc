@@ -91,7 +91,7 @@ GPU nodes
 A100 GPU node specifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-16 nodes are publicly available (not exclusive to research groups).
+15 nodes are publicly available (not exclusive to research groups).
 Prior to December 2022 these were temporarily available in the Bessemer cluster.
 
 * Machine: `Dell PowerEdge XE8545`_.

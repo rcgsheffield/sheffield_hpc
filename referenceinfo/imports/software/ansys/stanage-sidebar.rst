@@ -7,6 +7,6 @@
 
 .. sidebar:: ANSYS
 
-   :Versions: 22.2
+   :Versions: 19.2, 2022R2, 2023R1, 2023R2
    :Dependencies: UDFs / User subroutines will also need either the GCC or Intel C compiler with correct versions.
    :URL: http://www.ansys.com

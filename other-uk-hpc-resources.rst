@@ -9,9 +9,9 @@ Access to External UK HPC Facilities
 
 The United Kingdom has a number of HPC facilities external to the University of Sheffield 
 which will grant researchers HPC resources. These include National facilities (Tier 1) such 
-as Archer 2 and regional systems (Tier 2) such as :ref:`JADE <JADE>`, :ref:`JADE2 <JADE2>` and :ref:`BEDE <bede>`.
+as Archer 2 and regional systems (Tier 2) such as :ref:`JADE2 <JADE2>` and :ref:`BEDE <bede>`.
 
-The University of Sheffield is a member of the :ref:`JADE <JADE>`, :ref:`JADE2 <JADE2>` and :ref:`BEDE <bede>` regional systems thus 
+The University of Sheffield is a member of the :ref:`JADE2 <JADE2>` and :ref:`BEDE <bede>` regional systems thus 
 registration for using resources on these systems is straightforward with dedicated pages 
 describing these systems and their application processes listed below.
 
@@ -23,12 +23,21 @@ purpose along with links for further details.
 ======================================================
 University of Sheffield Directly Affliated HPC Systems
 ======================================================
+
+Current:
+
+.. toctree::
+   :maxdepth: 1
+
+   other-uk-hpc-resources/jade2
+   other-uk-hpc-resources/bede
+
+Retired:
+
 .. toctree::
    :maxdepth: 1
 
    other-uk-hpc-resources/jade
-   other-uk-hpc-resources/jade2
-   other-uk-hpc-resources/bede
 
 -------
 

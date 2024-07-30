@@ -1,0 +1,64 @@
+.. _nl20240301:
+
+News - 2024-03-01
+=================
+
+Hello everyone! We have made it to spring, at least for those who count seasons meteorologically. For those who count seasons astronomically, stay strong; there's just 20 more days of winter.
+
+- This month we are excited to invite you all to our **Research IT Forum**, details are in the :ref:`Upcoming Events <upcoming_events>` section. 
+- We also have an exciting new course in the :ref:`Upcoming training  <upcoming_training>`  section.
+
+New Packages and Software
+-------------------------
+
+- Over the last 2 weeks, you would have noticed a warning when you loaded ``Anaconda 2022.10``. This is due to a bug that affected some users. We have re-installed ``Anaconda 2022.10`` and are doing our final tests before removing the message.
+
+.. _upcoming_events:
+
+Upcoming Events
+---------------
+
+.. note:: 
+
+    Please use your **university email address** when you register for events.
+
+- **Research IT Forum:** Join us on the 7th of March from 2:30 pm to 4:00 pm. The theme for this Research IT Forum is to present Research & Innovation IT Services for Researchers. 
+  We will describe our 6 services and how they can enhance your research. For more information and registration, please visit the `event page <https://www.eventbrite.co.uk/e/research-it-forum-research-innovation-services-for-researchers-tickets-852097987017>`_. 
+  We look forward to seeing you all. 
+- **SheffieldR User Group Meetup:** The SheffieldR user group will be hosting their monthly meetup on the 21st March 2024. These meetups are held once a month to support our R users here at Sheffield University by offering interesting talks and code clinics 
+  for those struggling with R code or data. It also provides a forum for you to ask questions or share ideas with your peers who are using R. All are welcome, so please join their  `meet up group <https://www.meetup.com/sheffieldr-sheffield-r-users-group/>`_ or fill in the `google form <https://docs.google.com/forms/d/e/1FAIpQLSffiI7o68QcFngrirJ7YrjGgJfduwtv0UWJDQeNQLLKUDQmzA/viewform>`_ if you need any help with your code or data. You are also welcome to attend and be part of our Sheffield R community.
+
+.. _upcoming_training:
+
+Upcoming Training
+-----------------
+
+Below are our research computing key training dates for March. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ . 
+
+.. warning::
+    For our taught postgraduate users who don't have access to MyDevelopment, please email us at ``researchcomputing@sheffield.ac.uk`` with the course you want to register for, and we should be able to help you.
+
+.. note:: 
+    
+    **New course alert**: After a successful closed test run last month, we are now making our new course, **Python Profiling and Optimisation**, open to all. This course delves into the tools and methodologies used to analyse and 
+    enhance the performance of Python programs. As much as we aim to make our courses accessible to all, this one requires a foundational understanding of Python, so it is advisable to take our other Python 
+    courses first before attempting this one. We look forward to seeing you on ``07/03/2024`` and ``28/03/2024``.
+ 
+- Python Programming 2 - 05/03/2024
+- Python Programming 3 - 12/03/2024
+- High Performance Computing - 05/03/2024
+- Basics of Supervised Machine Learning - 08/03/2024
+- Introduction to Matlab 1 - 14/03/2024
+- Introduction to Matlab 2 - 21/03/2024
+- Introduction to R - 26/03/2024
+- Deep learning - 04/04/2024 to 05/04/2024 (2 day course)
+
+Wolfram are also holding free online Mathematica courses on their `portal <https://events.wolfram.com/>`_.
+
+Useful Links
+------------
+
+- :ref:`HPC documentation  <hpc-home>` 
+- `RSE code clinics <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services’ Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
+- :ref:`Citing the HPC services in publications.  <citing>`
+- `Training and courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ (You must be logged into the main university website to view).

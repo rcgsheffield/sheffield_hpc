@@ -12,7 +12,7 @@
     z-index: 0;
     background-image: url('/en/latest/_static/watermark/watermark.png');
     background-size: repeat;
-    opacity: 0.030;
+    opacity: 0.050;
     pointer-events: none;
     /* Allow interactions with content behind the overlay */
 }

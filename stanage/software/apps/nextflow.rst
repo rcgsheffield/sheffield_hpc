@@ -1,7 +1,7 @@
 .. _nextflow_stanage:
 
 .. |softwarename| replace:: Nextflow
-.. |currentver| replace:: 22.04.0
+.. |currentver| replace:: 23.10.0
 
 |softwarename|
 ================================================================================
@@ -33,9 +33,9 @@ The latest version of Nextflow (currently version |currentver|) is made availabl
 
 .. code-block:: console
         
-    module load Nextflow/22.04.0
+    module load Nextflow/23.10.0
 
-Note: The module file also loads ``Java/11.0.2``
+Note: The module file also loads ``Java/11.0.16``
 
 You can now run the ``nextflow`` command:
 
@@ -43,12 +43,11 @@ You can now run the ``nextflow`` command:
   :emphasize-lines: 1
 
     $ nextflow -version
-    N E X T F L O W
-    version 22.04.0 build 5697
-    created 23-04-2022 18:00 UTC (19:00 BST)
-    cite doi:10.1038/nbt.3820
-    http://nextflow.io
-    .
+      N E X T F L O W
+      version 23.10.0 build 5891
+      created 15-10-2023 15:14 UTC (16:14 BST)
+      cite doi:10.1038/nbt.3820
+      http://nextflow.io
 
 A Simple Script
 ^^^^^^^^^^^^^^^
@@ -94,7 +93,7 @@ It will output something similar to the text shown below:
 
 .. code-block:: console
 
-    N E X T F L O W  ~  version 22.04.0
+    N E X T F L O W  ~  version 23.10.0
     executor >  local (3)
     [69/c8ea4a] process > splitLetters   [100%] 1 of 1 ✔
     [84/c8b7f1] process > convertToUpper [100%] 2 of 2 ✔
@@ -117,7 +116,7 @@ Ensure you have produced the above tutorial.nf script then write a file named **
     #SBATCH --time=00:01:00
     #SBATCH --mail-user=a.person@sheffield.ac.uk
     #SBATCH --mail-type=ALL
-    module load Nextflow/22.04.0
+    module load Nextflow/23.10.0
     nextflow run tutorial.nf
      
 You can now submit this job to the SLURM scheduler with:
@@ -131,7 +130,7 @@ Your output file content will be similar to the following:
 
 .. code-block ::
 
-    N E X T F L O W  ~  version 22.04.0
+    N E X T F L O W  ~  version 23.10.0
     Launching `tutorial.nf` [peaceful_lamarr] DSL2 - revision: e61bd183fe
     [-        ] process > splitLetters -
 

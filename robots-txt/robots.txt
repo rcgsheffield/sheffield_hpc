@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.hpc.shef.ac.uk/en/latest/sitemap.xml

@@ -1,0 +1,74 @@
+.. _nl20240201:
+
+News - 2024-02-01
+=================
+
+Welcome back! We hope everyone enjoyed a wonderful break. As we step into the new year, some of us may encounter new technical challenges or wish to explore new options to enhance your existing workflows, remember, our team is here to support you. Whether it's through code clinics, drop-in sessions, our ticketing system, seminars, or even personalised department visits upon request. Feel free to reach out to us via our email ``researchcomputing@sheffield.ac.uk``.
+
+For those wanting to learn new skills (such as source control with git), we encourage you to explore our :ref:`upcoming training sessions <training_20240201>` . The training team will run courses in data science, machine learning, high-performance computing, and programming, all organised by IT Services and the RSE team.
+
+We also have 2 part time :ref:`vacancies <vacancies_20240201>` on the horizon. Once the recruitment period is live, we will send an email to notify potential candidates.
+
+GPU News
+--------
+- The Stanage H100 GPU drivers have been updated resolving a numerical inaccuracy `issue <https://docs.nvidia.com/datacenter/tesla/tesla-release-notes-535-86-10/index.html>`_ reported in September  , where certain operations put the GPU in an invalid state that allowed some GPU instructions to operate at unsupported frequency that could result in incorrect computation results and faster than expected performance.
+- The GPU drivers in Bessemer were also updated.
+- We're looking to introduce CUDA 12.2 support in the near future.
+
+Recent HPC Documentation Updates:
+---------------------------------
+- We are working to improve the search functionality within our HPC documentation. You will notice the new search box which is powered by google search engine. Further work aims to optimise search results.
+- References to ShARC will be removed from the documentation and only the :ref:`Decommissioned Clusters <decommissioned>` section should have any reference to it.
+- The parallel computing section will also be updated this month.
+
+We work very hard on the documentation and any feedback or criticism helps us make them clearer and easy to read.
+
+- For example, the search engine change was based on user feedback, so please feel free to get in touch.
+
+New Packages and Software
+--------------------------
+
+The following software are now available on Stanage:
+
+- :ref:`Julia 1.9.0 <julia_stanage>` 
+- :ref:`MATLAB 2023b is now available on the GPU nodes  <matlab_stanage>` 
+- RStudio 2023 (Documentation pending) 
+
+.. _training_20240201:
+
+Upcoming Training
+------------------
+Research computing key training dates for February. You can register for these courses and more at  `Research Computing Training <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .
+
+- Deap learning - 22/02/2024 to 23/02/2024 (2 day course)
+- Python Programming 1 - 20/02/2024
+- Python Programming 2 - 27/02/2024
+- Statistics and Data Visualisation - TBC
+- Linux training - TBC
+- Introduction to using HPC - TBC
+- Basics of Supervised Machine Learning - TBC
+
+As you can see above, some of the dates are yet to be confirmed, stay tuned for the release of the upcoming timetable, scheduled in the next few weeks on `myDevelopment <https://www.sheffield.ac.uk/nap/service/redirect/mydev>`_.
+
+The RSE team will run the following course(s) in February. 
+
+- `Git & GitHub through GitKraken! - 05/02/2024 to 06/02/2024 (2 day course) <https://rse.shef.ac.uk/training/workshop/workshop-2024-02-05-git-zero-hero>`_ 
+
+Planned Maintenance
+-------------------
+- Currently no planned down time for February.
+
+.. _vacancies_20240201:
+
+Vacancies
+---------
+- We are intending to hire 2 casual workers to come join our Research computing support team. We will be looking for 2 post graduates, with linux/HPC experience (all skill levels are welcome) to support our research computing community. 
+- The successful candidates will be offered a three-month contract, working two hours per day, four days per week, preferably with at least one day per week in the Brunswick Street office with the Research Computing Support team.
+
+
+Useful Links
+-------------
+- :ref:`HPC documentation  <hpc-home>` 
+- `RSE code clinic <https://rse.shef.ac.uk/support/code-clinic/>`_. These are fortnightly support sessions run by the RSE team and IT Services’ Research IT and support team. They are open to anyone at TUOS writing code for research to get help with programming problems and general advice on best practice.
+- :ref:`Citing the HPC services in publications.  <citing>`
+- `Training and courses <https://sites.google.com/sheffield.ac.uk/research-training/>`_ .

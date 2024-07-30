@@ -1,7 +1,7 @@
 .. _flight-desktop:
 
-Graphical sessions on Stanage
-=============================
+Graphical Sessions (With Flight) on Stanage 
+===========================================
 
 Graphical desktop access to an interactive session can be achieved using Flight Desktop and TigerVNC. See below for simple usage instructions.
 
@@ -24,8 +24,14 @@ Initialise and start Flight Desktop:
     flight start # Start the Flight environment to enable further Flight commands
     flight desktop verify xfce   # only do this once
     flight desktop start --geometry 1800x1000 xfce
-    
-The following is example output, in case of error please see :ref:`trouble shooting<trouble_flight>`:
+
+.. warning::
+
+  If you get a warning about "missing prerequisites", please ensure you have requested an interactive session and your terminal shows ``node001`` or ``node002``. 
+
+  In the case of "missing prerequisites" warnings while in an interactive session, please see :ref:`troubleshooting<trouble_flight>`:
+
+The following is example output:
 
 .. code-block:: console
   :emphasize-lines: 22
@@ -99,11 +105,15 @@ The following is example output:
 
 .. tip::
     
-    Take note of the lines which have been highlighted above: port number,
-    ``ssh -L`` command, and password.
+    Take note of the lines which have been highlighted above: 
+      * a port number, (**5911**), 
+      * an ``ssh`` command you run on your **local machine** which connects the VNC session to your local machine,
+      * a temporary VNC password (**l7IdD9I0**) which is valid only for your current VNC session.
 
 Leave that terminal running. And, open another local terminal (ex. Windows PowerShell) 
-entering the *ssh -L* command, including cluster address, for example:
+entering the provided ``ssh`` command including cluster hostname after the @ sign. If prompted for password, enter your university account password (**not** the flight generated temporary VNC password which is valid only for the current VNC session). 
+
+For example:
 
 .. code-block:: bash
 
@@ -113,6 +123,10 @@ This step will set up local port forwarding to the remote host (Stanage).
 
 On your local machine start the 'VNC Viewer' program that comes with TigerVNC (this is called ``vncviewer`` on Linux).  You should then see a dialog box like this:
 
+.. caution:: 
+    
+    Do not enter your normal university account password, use the temporary VNC password which was given in the ``flight desktop show`` command output.
+
 .. image:: /images/vncviewer_dialog.png
 
 Using the previously given port number, enter the connection details into the TigerVNC dialog, for example: 
@@ -121,11 +135,8 @@ Using the previously given port number, enter the connection details into the Ti
 
     localhost:5911
 
-Click *Connect*, you will then be prompted for the VNC session password.
+Click *Connect*, you will then be prompted for the temporary VNC password.
 
-.. caution:: 
-    
-    Do not enter your normal university account password, use the password which was given in the previous output.
 
 You should now see a desktop within a window, as below. This desktop is running within the interactive session
 we requested on Stanage.

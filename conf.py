@@ -27,10 +27,16 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
+    'sphinx_design',
+    'sphinx_sitemap',
 ]
 
+# Sphinx Sitemap
+html_baseurl = "https://docs.hpc.shef.ac.uk/"
+sitemap_url_scheme = "{lang}latest/{link}"
+
 # Add any paths that contain templates here, relative to this directory.
-# templates_path = ['_templates']
+templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -42,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Sheffield HPC Documentation'
-copyright = '2023, The University of Sheffield'
+copyright = '2024, The University of Sheffield'
 author = 'The University of Sheffield'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -108,7 +114,9 @@ html_theme_options = {
 #                 'using-iceberg/**': ['softwaretoc.html'],
 #                 'index': []}
 
-#html_sidebars = {'**': ['softwaretoc.html']}
+# This template override file can be found in _templates/searchbox.html
+# The sidebar is currently being overridden with the Google Custom Search engine.
+html_sidebars = {'**': ['searchbox.html']}
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -147,3 +155,12 @@ rst_prolog = open('global.rst', 'r').read()
 
 sphinx_tabs_valid_builders = ['linkcheck']
 sphinx_tabs_disable_tab_closing = True
+
+# We use the additional pages to implement some redirects from old pages
+# we want a redirect for, but not available in the toctree.
+#
+# Adding via this method avoids the toctree globbing adding duplicate redirect
+# pages.
+html_additional_pages = {
+    'stanage/software/apps/singularity': 'singularity-stanage-redirect.html',
+}

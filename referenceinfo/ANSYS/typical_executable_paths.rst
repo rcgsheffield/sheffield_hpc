@@ -8,8 +8,8 @@ This page contains a copy of the typical file paths for major ANSYS packages whe
 
 The ANSYS directories on the clusters are as follows:
 
-  * ShARC: ``/usr/local/packages/apps/ansys/``
   * Bessemer: ``/usr/local/packages/live/noeb/ANSYS/``
+  * Stanage: ``/opt/apps/testapps/el7/software/staging/ANSYS/``
 
 
 .. list-table:: Common ANSYS Executable Paths

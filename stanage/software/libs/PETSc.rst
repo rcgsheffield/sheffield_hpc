@@ -18,7 +18,7 @@ The Portable, Extensible Toolkit for Scientific Computation (PETSc, pronounced P
 Usage
 -----
 
-PETSc can be activated using one of: ::
+PETSc can be activated using one of:
 
 .. code-block:: bash
 

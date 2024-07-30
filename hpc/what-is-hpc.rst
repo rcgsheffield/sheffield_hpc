@@ -262,6 +262,6 @@ https://www.sheffield.ac.uk/it-services/codeofpractice/core
 How do I get started?
 ---------------------
 
-Potential users should first register and attend training courses RIT 101 to 103 on
+Potential users should first register and attend training courses RIT 101 and RIT 102 on
 `IT Services' Research and Innovation course details and registration information website <https://sites.google.com/sheffield.ac.uk/research-training/>`_
 (VPN must be turned on) and should then :ref:`request an account <accounts>`.

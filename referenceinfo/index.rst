@@ -18,4 +18,6 @@ This section should be used to look for a quick references to very specific info
   linux-shell/index
   scheduler/index
   computer-architecture/index
+  connecting-ssh/index
   mfa/index
+  admins/index

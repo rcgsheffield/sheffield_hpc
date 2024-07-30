@@ -213,25 +213,6 @@ You would fork this script into the background by using the & symbol at the end 
 
   /home/username/fluent_wait_then_save_and_exit.sh 1h 55m &
 
-You would use this like so in an example batch submission script for ShARC with a 2 hour time limit: ::
-
-  #!/bin/bash
-  #$ -V
-  #$ -cwd
-  #$ -M a.person@sheffield.ac.uk
-  #$ -m abe
-  #$ -l h_rt=02:00:00
-  #$ -l rmem=2G
-  #$ -pe mpi-rsh 8
-  #$ -N JobName
-
-  /home/username/fluent_wait_then_save_and_exit.sh 1h 55m &
-  module load apps/ansys/20.2/binary
-  fluent 2ddp -i my_journal.jou -g -t$NSLOTS -mpi=intel -rsh -sgepe mpi-rsh -sge -driver null
-
-You should ensure that the timer script is the first thing to execute to ensure the time keeping is accurate!
-
-
 ==============
 
 Example: Simple journal file - load case, initialise, run, save data and exit

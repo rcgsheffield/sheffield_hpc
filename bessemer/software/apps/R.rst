@@ -191,3 +191,5 @@ Installed using an eponymous easyconfig,
 which is the easyconfig that shipped with EasyBuild 4.2.2
 minus any of the configuration to install 765 packages from CRAN
 (i.e. just base R was installed).
+
+NOTE: all R versions patched to address the CVE vulnerability using R-4.x_fix-CVE-2024-27322.patch

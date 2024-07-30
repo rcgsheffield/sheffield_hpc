@@ -5,6 +5,10 @@ Frequently Asked Questions
 In this section, we'll discuss some tips for solving problems with Stanage and Bessemer.
 It is suggested that you work through some of the ideas here before contacting the IT Services Helpdesk for assistance.
 
+.. contents::
+   :local:
+   :depth: 1
+
 ------
 
 Strange things are happening with my terminal or my terminal seems broken
@@ -14,6 +18,25 @@ Symptoms include many of the commands not working and just ``bash-4.1$`` or ``sh
 
 This may be because you've deleted your ``.bashrc`` and ``.bash_profile`` files - these are 'hidden' files which live in your home directory and are used to correctly set up your shell environment.
 If you hit this problem you can run the command ``resetenv`` which will restore the default files, then you should logout and log back in.
+
+.. note:: 
+
+        If the command ``restenv`` is not working (possibly removed from $PATH), you can run the resetenv command directly:
+
+        .. tabs::
+
+                .. group-tab:: Stanage
+
+                        .. code-block:: console
+
+                                /opt/site/bin/resetenv
+
+
+                .. group-tab:: Bessemer
+
+                        .. code-block:: console
+
+                                /usr/local/scripts/resetenv
 
 ------
 
@@ -63,11 +86,11 @@ To view the man page (official manual) for a command, you can use the command:
 
 You can navigate man pages using (the same keyboard shorcuts as **less**):
 
-        * **Space** to advance one page
-        * **d** to advance half a page
-        * **b** to go back one page
-        * **u** to go back half a page
-        * **/** starts search mode, after which you enter a search term
+* **Space** to advance one page
+* **d** to advance half a page
+* **b** to go back one page
+* **u** to go back half a page
+* **/** starts search mode, after which you enter a search term
 
 Whilst in search mode press **n** for next occurrence and **N** for previous occurrence.
 
@@ -112,7 +135,7 @@ If you are in MobaXterm, you should attempt to navigate to the folder with using
 
 .. note:: 
 
-        On **Stanage** shared areas are only accesible from a login node and not from a worker node. 
+        On **Stanage** shared areas are only accessible from a login node and not from a worker node. 
 
 ---------
 
@@ -172,9 +195,9 @@ Following are ways to fix too much time requested:
 .. tabs::
 
    .. group-tab:: Stanage
-        The maximum run time for Bessemer is 168 hours.
+        The maximum run time for Stanage is 96 hours.
 
-        You can get an estimate for when your job will run on Bessemer using:
+        You can get an estimate for when your job will run on Stanage using:
 
         .. code-block:: console
 
@@ -192,7 +215,7 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
    .. group-tab:: Bessemer
 
@@ -216,16 +239,16 @@ Following are ways to fix too much time requested:
 
                 squeue -j <jobid> --long
 
-        Alternatively, delete the job using scancel and re-submit with the new max runtime
+        Alternatively, delete the job using ``scancel`` and re-submit with the new max runtime.
 
 
 ------
 
-"No space left on device" errors and jobs prematurely stopping
---------------------------------------------------------------
+"No space left on device", "Disk quota exceeded" errors and jobs prematurely stopping
+-------------------------------------------------------------------------------------
 
 Each user of the system has a fixed amount of disk space available in their home directory. If you see an error in your job's logs indicating "No space left on device"
-it is likely that your quota has ran out.
+or "Disk quota exceeded" it is likely that your quota has ran out.
 
 If you attempt to exceed this quota, various problems can emerge such as an inability to launch applications or run jobs, the inability to login or abruptly terminated jobs
 as programs or executables are now unable to write to your ``/home`` folder.
@@ -339,11 +362,9 @@ This has the added benefits of ensuring that:
 * Programs/libraries are more likely to make use of the more advanced features of the CPU models in the HPC systems, 
   which could result in better performance/efficiency.
 
----------
+------
 
 .. _windows_eol_issues:
-
-------
 
 sbatch: error: Batch script contains DOS line breaks (\r\n) errors
 -------------------------------------------------------------------
@@ -540,18 +561,34 @@ Putting a sleep of e.g. 5s between ``mpirun`` commands seems to help here. i.e.
 ------
 
 
-Using 'sudo' to install software on the clusters
-------------------------------------------------
+Using 'sudo' or package managers to install software on the clusters
+--------------------------------------------------------------------
 
-HPC users do not have sufficient access privileges to use sudo to install software (in ``/usr/local``) and permission to use sudo will not be granted to non-system administrators.
-Users can however install applications in their ``/home`` directory, ``/mnt/parscratch`` area on Stanage or ``/fastdata`` area on Bessemer.
+Users do not have sufficient access privileges to use sudo for **any** purpose. Users are not permitted to install software to the base environment 
+with package managers on any HPC cluster i.e. with ``apt-get``, ``aptitude`` , ``zypper``, ``emerge``, ``pacman``, ``yum``, ``dnf`` etc...
 
-The webpage :ref:`Installing Applications on Stanage and Bessemer  <installing-personal-software-installations>` provides guidance on how to do this.
+The ability to do so will never be granted to non-system administrators because:
+
+* We need to protect the integrity of the HPC systems, e.g. the operating systems, user data and user accounts etc... Permitting the usage of sudo 
+  would allow any user to arbitrarily perform any action on the HPC system.
+* We need to protect the integrity of user shell environments by keeping the base HPC shell environment as bare as possible. Users cannot be permitted 
+  to install software to the base environment of the clusters as this would override and potentially pollute other user's shell environments, 
+  break other user's jobs and/or functionality of the entire cluster.
+
+Users are permitted to install applications in their ``/home`` directory, ``/mnt/parscratch`` area on Stanage or ``/fastdata`` area on Bessemer 
+and can make these available to themselves via their ``.bashrc`` file or to others using the modules system if desired. The webpage 
+:ref:`Installing Applications on Stanage and Bessemer  <installing-personal-software-installations>` provides guidance on how to do this 
+without the use of sudo or package managers.
+
+------
+
 
 Is data encrypted at rest on HPC storage areas?
 -----------------------------------------------
 
 At present, no HPC storage areas on any of our clusters encrypt data at rest.
+
+------
 
 Are the HPC clusters certified to standards such as Cyber Essentials, Cyber Essentials Plus or ISO 27001?
 ---------------------------------------------------------------------------------------------------------
@@ -560,6 +597,8 @@ Due to the complexity of the multi-user High Performance Computing service,
 the service is not currently certified as being compliant with the
 Cyber Essentials, Cyber Essentials Plus or ISO 27001 schemes/standards.
 This is unlikely to change in future.
+
+------
 
 
 Can I use VSCode on the HPC clusters?
@@ -654,6 +693,8 @@ For those more familiar with the use of ``mpirun`` and ``mpiexec``:
 ``srun`` can here be thought to be functionally equivalent to ``mpirun`` and ``mpiexec``,
 although it takes different arguments and can also be used for starting interactive sessions on Slurm clusters.
 
+-----
+
 .. _ansys_license_restrictions:
 
 Are there any license restrictions for ANSYS?
@@ -685,6 +726,136 @@ but cannot use more than 400 at once.
    **Total**                                            **52**
    ==============================================       =========================== 
 
+-----
+
+How can I stay connected to the cluster for longer?
+---------------------------------------------------
+
+.. include:: /referenceinfo/imports/staying_connected.rst
+
+-----
+
+"Out of Memory", "OOM" errors and job prematurely stopping
+----------------------------------------------------------
+
+When "Out of Memory" (OOM) errors occur in an interactive or batch session, it indicates insufficient memory has been allocated for the job to run to completion.
+
+See :ref:`seff` and :ref:`sacct` commands for details on memory usage/efficiency for historical or currently running jobs.
+
+.. note::
+    When an Out-of-Memory (OOM) error occurs in a system, the metrics shown by Slurm may not be truly accurate due to the metric polling interval for Slurm being slower than the CGroup limit enforcement.
+    This means not enough memory was given despite memory allocated being higher than the reported memory peak for the job.
+
+Requesting higher memory normally fixes this error. See :ref:`Memory Allocation <Memory-allocation>` for details.
+
+-----
+
+How to change the ownership of files and folders when not the root user?
+------------------------------------------------------------------------
+
+For security reasons only system administrators are granted access to the root account (`superuser privileges <https://en.wikipedia.org/wiki/Superuser>`_) and as successfully using the **chown** command `requires root account permissions <https://unix.stackexchange.com/a/27374>`_ it is not possible for a non-root user to directly reassign ownership.
+However, it is possible to do so indirectly by using Access Control Lists (ACLs).
+
+In the following instructions, we will bypass these limitations by giving the second user read permissions on the data so that they can make a copy of their own, then the original user can delete the original data.
+It assumes **user1** is the current owner and **user2** is going to be the new owner:
+
+1. **user1** makes sure **user2** has the access to the files/folders:
+
+The files/folders have to be stored in public Fastdata areas, detailed instructions are contained in the :ref:`fastdata_dir`.
+
+2. **user1** checks the original permissions of the files/folders:
+
+.. code-block:: console
+
+        [user1@login1 [stanage] public]$ getfacl the/directory/changing/ownership/
+        # file: the/directory/changing/ownership/
+        # owner: user1
+        # group: clusterusers
+        user::rwx
+        group::r-x
+        other::r-x
+
+3. **user1** makes the files/folders available to read by **user2** with Linux ACLs:
+
+.. code-block:: console
+
+        setfacl --recursive --modify u:user2:r-x the/directory/changing/ownership/
+
+4. **user1** ensures **user2** has the access to the files/folders:
+
+.. code-block:: console
+        :emphasize-lines: 3, 9
+
+        [user1@login1 [stanage] public]$ ls -l
+        total 4
+        drwxrwxr-x+ 2 user1 clusterusers 4096 Apr  3 13:52 the/directory/changing/ownership/
+        [user1@login1 [stanage] public]$ getfacl  the/directory/changing/ownership/
+        # file: the/directory/changing/ownership/
+        # owner: user1
+        # group: clusterusers
+        user::rwx
+        user:user2:r-x
+        group::r-x
+        mask::r-x
+        other::r-x
+
+5. **user2** creates a temporary directory to store the files:
+
+.. code-block:: console
+
+        mkdir my/tmp/directory
+
+6. **user2** copies the files from **user1**:
+
+.. code-block:: console
+
+        cp -R /mnt/parscratch/users/user1/public/the/directory/changing/ownership/ my/tmp/directory
+
+7. **user2** checks if they have the copy of the files/folders with the correct ownership:
+
+.. code-block:: console
+
+        [user2@login1 [stanage] public]$ ls -l
+        total 4
+        drwxr-xr-x 2 user2 clusterusers 4096 Apr  3 14:00 the/directory/changing/ownership
+
+.. warning::
+
+   **user1** should check with **user2** and ensure the files have been transferred prior to deletion since the fastdata areas do not have backups.
+
+8. **user1** deletes the existing folder recursively:
+
+.. code-block:: console
+
+        rm -rf /the/directory/changing/ownership
+
+
+-----
+
+How do I avoid large Conda environments filling up my home directory?
+---------------------------------------------------------------------
+
+.. include:: referenceinfo/imports/software/python/conda_in_fastdata.rst
+
+How do I remove conda environments from my home directory?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are rebuilding conda environments in your fastdata area and want to remove current conda environments from your home directory follow the instructions below:
+
+.. hint::
+        
+        Deactivate your conda environments before removing them using ``source deactivate``
+
+1. To list your environments run:
+
+.. code-block:: console
+        
+        conda info --envs
+        
+2. Remove environments using the following command. Replace ``<environment_name>`` with the name of the environment you want to remove.
+
+.. code-block:: console
+        
+        conda remove -n <environment_name> --all
+
 |br|
-
-

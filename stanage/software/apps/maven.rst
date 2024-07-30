@@ -23,4 +23,4 @@ Maven can be activated as follows:
 Installation notes
 ------------------
 
-GnuMP was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTGMP/easybuild`` with the module loaded.
+Maven was installed using Easybuild 4.7.0, build details can be found in ``$EBROOTMAVEN/easybuild`` with the module loaded.

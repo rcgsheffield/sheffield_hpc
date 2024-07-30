@@ -4,8 +4,7 @@ Maven
 =====
 
 .. sidebar:: Maven 
-
-    :Dependencies: GCC compiler
+    
     :Documentation: https://maven.apache.org
 
 

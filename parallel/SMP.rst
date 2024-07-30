@@ -11,7 +11,7 @@ you should consider more complex parallelisation schemes such as :ref:`MPI <para
 
 OpenMP
 ------
-`OpenMP <http://openmp.org/wp/>`_ (Open Multi-Processing) is one of the most common programming frameworks used to implement shared-memory parallelism.
+`OpenMP <https://www.openmp.org/>`_ (Open Multi-Processing) is one of the most common programming frameworks used to implement shared-memory parallelism.
 It greatly simplifies the tasks of distributing work and coordination in a multi-threaded C, C++ or Fortran program.
 Many research applications make use of the OpenMP library: 
 you can often enable OpenMP support at compile-time and/or run-time using compiler flags, command-line options and/or configuration files.

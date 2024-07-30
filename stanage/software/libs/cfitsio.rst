@@ -6,7 +6,7 @@ cfitsio
 .. sidebar:: cfitsio
 
    :Versions: 3.48, 3.49
-   :URL: http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
+   :URL: https://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
 
 CFITSIO is a library of C and Fortran subroutines for reading and writing data
 files in FITS (Flexible Image Transport System) data format. CFITSIO provides

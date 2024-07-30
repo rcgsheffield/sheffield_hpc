@@ -9,17 +9,17 @@ It is commonly used on computer clusters as a means by which a set of related pr
 Unlike the :ref:`SMP / OpenMP <parallel_SMP>` approaches to parallelism, the parallel strands of execution in a MPI environment do not share any memory: 
 these strands (processes) must therefore communicate data and other information by passing messages between each other.
 
-MPI is used on systems ranging from a few interconnected `Raspberry Pi's <http://thenewstack.io/installing-mpi-python-raspberry-pi-cluster-runs-docker/>`_ through to 
+MPI is used on systems ranging from a few interconnected `Raspberry Pi's <https://thenewstack.io/installing-mpi-python-raspberry-pi-cluster-runs-docker/>`_ through to 
 the UK's national supercomputer, `Archer <http://www.archer.ac.uk/>`_.  
 
 .. _mpi_impl:
 
 MPI Implementations
 -------------------
-The `Message Passing Interface (MPI) <http://mpi-forum.org/>`_ itself is just a *specification* for a message passing library.  
+The `Message Passing Interface (MPI) <https://mpi-forum.org/>`_ itself is just a *specification* for a message passing library.  
 
 There are multiple implementations of this specification, each produced by a different organisation, 
-including `OpenMPI <https://www.open-mpi.org/>`_ and `MVAPICH <http://mvapich.cse.ohio-state.edu/>`_.
+including `OpenMPI <https://www.open-mpi.org/>`_ and `MVAPICH <https://mvapich.cse.ohio-state.edu/>`_.
 This documentation includes information on the MPI implementations available on :ref:`ShARC <sharc-parallel>`.  
 These implementations have been compiled in a way that allows them to make optimal use of the cluster's high-speed network infrastructure (*OmniPath* on ShARC).
 If you are not sure which implementation to use then try the latest available version of OpenMPI.

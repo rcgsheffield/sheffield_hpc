@@ -11,7 +11,7 @@
 
    :Versions:  |currentver|
    :Dependencies: Java
-   :URL: http://ccl.northwestern.edu/netlogo
+   :URL: https://ccl.northwestern.edu/netlogo
 
 |softwarename|  is a multi-agent programmable modeling environment. It is used by many hundreds of thousands 
 of students, teachers, and researchers worldwide. It also powers HubNet participatory simulations. It is 
@@ -100,7 +100,7 @@ Batch usage
 
 The following ``batch_smp_4_core.sh`` example is derived from the BehaviorSpace command line instructions 
 provided in the NetLogo documentation: 
-http://ccl.northwestern.edu/netlogo/docs/behaviorspace.html#running-from-the-command-line
+https://ccl.northwestern.edu/netlogo/docs/behaviorspace.html#running-from-the-command-line
 
 This uses the BehaviorSpace tool from NetLogo to perform a parameter 
 sweep using 4 cores and 8GB of memory with the Wolf Sheep Simple 5 example model.

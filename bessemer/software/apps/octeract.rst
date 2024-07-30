@@ -6,8 +6,8 @@ Octeract Engine
 
    :Version: 3.1.0
    :Dependencies: 
-   :URL: https://octeract.co.uk/octeract-engine/
-   :Documentation: https://docs.octeract.com/
+   :URL: https://octeract.gg/octeract-engine/
+   :Documentation: https://octeract.gg/docs/
 
 Octeract Engine is a massively parallel MINLP solver. It is written in ORL (Octeract Reformulation Language).
 
@@ -101,7 +101,7 @@ managed and available without polluting your base environment. This process, fol
 
 
 The above instructions have been adjusted from the following documentation provided by Octeract 
-at: https://docs.octeract.com/htg1005-how_to_use_pyomo_with_octeract_engine
+at: https://octeract.gg/docs/tutorials/pyomo-tutorial/pyomo-on-linux/
 
 -----------
 

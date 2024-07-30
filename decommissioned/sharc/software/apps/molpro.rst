@@ -8,8 +8,8 @@ Molpro
 
    :Version: 2015.1.22
    :Dependencies: No additional modules loaded.
-   :URL: http://www.molpro.net/
-   :Documentation: http://www.molpro.net/info/users?portal=user
+   :URL: https://www.molpro.net/
+   :Documentation: https://www.molpro.net/info/users?portal=user
 
 
 Molpro is a comprehensive system of ab initio programs for advanced molecular electronic structure calculations, designed and maintained by H.-J. Werner and P. J. Knowles, and containing contributions from many other authors.
@@ -24,7 +24,7 @@ Molpro 2015.1.22 can be activated using the module file::
 
 The Molpro executable is ``molpro``.
 
-**Important note:** Only licensed users of Molpro are entitled to use the code; refer to Molpro's website for license details: http://www.molpro.net/info/products.php?portal=visitor&choice=Licence+types. Access to Molpro on ShARC is restricted to members of the unix group ``molpro``.
+**Important note:** Only licensed users of Molpro are entitled to use the code; refer to Molpro's website for license details: https://www.molpro.net/info/products.php?portal=visitor&choice=Licence+types. Access to Molpro on ShARC is restricted to members of the unix group ``molpro``.
 To be added to this group, please contact ``research-it@sheffield.ac.uk`` and provide evidence of your eligibility to use Molpro.
 
 
@@ -54,4 +54,4 @@ Molpro 2015.1.22 was installed as a binary installation using the
 the module file is
 :download:`/usr/local/modulefiles/apps/molpro/2015.1.22/binary </decommissioned/sharc/software/modulefiles/apps/molpro/2015.1.22/binary>`.
 
-The Molpro 2015.1.22 installation was tested by running a batch job using the ``my_job.sh`` batch script, above, and an example input file from Molpro's quick-start website (http://www.molpro.net/info/2015.1/doc/quickstart/index.html).
+The Molpro 2015.1.22 installation was tested by running a batch job using the ``my_job.sh`` batch script, above, and an example input file from Molpro's quick-start website (https://www.molpro.net/info/2015.1/doc/quickstart/index.html).

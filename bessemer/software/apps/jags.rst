@@ -10,7 +10,7 @@
 
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
-   :URL: http://mcmc-jags.sourceforge.net/
+   :URL: https://mcmc-jags.sourceforge.net/
 
 |softwarename| is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical 
 models using Markov Chain Monte Carlo (MCMC) simulation not wholly unlike BUGS.  JAGS was written with three aims in mind:

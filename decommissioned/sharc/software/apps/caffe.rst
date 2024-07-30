@@ -8,9 +8,9 @@ Caffe
 
 .. sidebar:: Caffe
 
-   :URL: http://caffe.berkeleyvision.org/
+   :URL: https://caffe.berkeleyvision.org/
 
-`Caffe <http://caffe.berkeleyvision.org/>`_ is a Deep Learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (`BVLC <http://bvlc.eecs.berkeley.edu/>`_) and by community contributors.
+`Caffe <https://caffe.berkeleyvision.org/>`_ is a Deep Learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (`BVLC <http://bvlc.eecs.berkeley.edu/>`_) and by community contributors.
 
 About Caffe on ShARC
 --------------------

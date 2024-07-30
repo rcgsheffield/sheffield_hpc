@@ -17,13 +17,13 @@ the ACLs are what really determine access permissions.
 Most applications have robust ways of checking for properties such as executability but 
 some applications can cause problems when accessing files/directories on ``/shared`` by naively checking permissions just using Linux mode bits:
 
-* `which <http://linux.die.net/man/1/which>`_: 
+* `which <https://linux.die.net/man/1/which>`_: 
   a directory under ``/shared`` may be on your path and 
   you may be able to run a contained executable without prefixing it with a absolute/relative directory 
   but ``which`` may fail to find that executable.
 * Perl: scripts that check for executability of files on ``/shared`` using ``-x`` may fail 
   unless Perl is explicitly told to test for file permissions in a more thorough way 
-  (see the mention of ``use filetest 'access'`` `here <http://perldoc.perl.org/functions/-X.html>`_).
+  (see the mention of ``use filetest 'access'`` `here <https://perldoc.perl.org/functions/-X.html>`_).
 * git: may complain that permissions have changed if 
   a repository is simply moved to ``/shared/someplace`` from elsewhere on Stanage/Bessemer. 
   As a workaround you can tell git to not to track Linux permissions for a single repository using 

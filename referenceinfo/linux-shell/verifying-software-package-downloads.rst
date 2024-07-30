@@ -41,7 +41,7 @@ demonstrated below with the GNU Make project's source tarball:
     Subkey fingerprint: B250 8A90 102F 8AE3 B12A  0090 DEAC CAAE DB78 137A
 
 The GNU Make project documentation shows Paul D. Smith as the project maintainer and 
-navigating to this personal site, http://make.mad-scientist.net/switching-gpg-keys/, shows 
+navigating to this personal site, https://make.mad-scientist.net/switching-gpg-keys/ shows 
 the matching primary key fingerprint as expected and you can proceed with installing from 
 the package.
 

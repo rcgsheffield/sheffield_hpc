@@ -7,7 +7,7 @@ Mathematica
 .. sidebar:: Wolfram Mathematica
 
    :Dependencies: None
-   :URL: http://www.wolfram.com/mathematica/
+   :URL: https://www.wolfram.com/mathematica/
    :Latest version: 12.0.0
 
 Mathematica is a technical computing environment and programming language with strong symbolic and numerical abilities.

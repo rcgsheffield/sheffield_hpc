@@ -166,4 +166,4 @@ With all workers including GPU and large memory nodes:
 * GPUs: 76.
 * Fast network filesystem (`Lustre`_):  2 PiB.
 
-.. _Lustre:  http://lustre.org/
+.. _Lustre:  https://lustre.org/

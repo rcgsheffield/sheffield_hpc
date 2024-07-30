@@ -5,7 +5,7 @@ Bedtools
 
    :Versions:  2.29.2
    :Dependencies: GCC/9.3.0, XZ/5.2.5-GCCcore-9.3.0, zlib/1.2.11-GCCcore-9.3.0, bzip2/1.0.8-GCCcore-9.3.0, BamTools/2.5.1-GCC-9.3.0
-   :URL: https://bedtools.readthedocs.org/en/latest/
+   :URL: https://bedtools.readthedocs.io/en/latest/
 
 Collectively, the bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks.
 

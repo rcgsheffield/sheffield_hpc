@@ -75,7 +75,7 @@ The following is an example batch job running the pitzDaily example model:
 
 .. important::
 
-    You will need to supply a `decomposeParDict <https://cfd.direct/openfoam/user-guide/v8-running-applications-parallel/>`_ in the system subdirectory of the case if using parallel processing - check the installation script for an example using the EOF method to add it :
+    You will need to supply a `decomposeParDict <https://doc.cfd.direct/openfoam/user-guide-v8/running-applications-parallel/>`_ in the system subdirectory of the case if using parallel processing - check the installation script for an example using the EOF method to add it :
 
 .. code-block:: bash
 

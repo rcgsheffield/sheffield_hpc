@@ -7,7 +7,7 @@ Molpro
 
    :Version: 2022.3.2
    :Dependencies: No additional modules loaded.
-   :URL: http://www.molpro.net/
+   :URL: https://www.molpro.net/
    :Documentation: https://www.molpro.net/manual/doku.php
 
 

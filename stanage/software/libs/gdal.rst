@@ -6,12 +6,12 @@ Geospatial Data Abstraction Library (GDAL)
 .. sidebar:: GDAL
 
    :Latest version: 3.2.1,3.3.2
-   :URL: http://www.gdal.org/
+   :URL: https://www.gdal.org/
 
 GDAL is a library used by many Geographic Information Systems (GIS) packages for converting 
 between many different raster and vector GIS data formats.  It also includes command-line 
 utilities for data translation and processing.  It is released under an an X/MIT style Open 
-Source license by the `Open Source Geospatial Foundation <http://www.osgeo.org/>`_.
+Source license by the `Open Source Geospatial Foundation <https://www.osgeo.org/>`_.
 
 -------
 
@@ -74,9 +74,9 @@ Documentation
 
         $ man gdal_contour
 
-    Much more information is available on the `project site <http://www.gdal.org/>`_.
+    Much more information is available on the `project site <https://www.gdal.org/>`_.
 
-Documentation is available on the `project site <http://www.gdal.org/>`_.
+Documentation is available on the `project site <https://www.gdal.org/>`_.
 
 -------
 

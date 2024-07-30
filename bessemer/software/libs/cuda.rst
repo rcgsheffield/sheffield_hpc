@@ -184,8 +184,8 @@ along with details of the supported `virtual architectures <https://docs.nvidia.
 Documentation
 -------------
 
-* `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html#axzz3uLoSltnh>`_
-* `The power of C++11 in CUDA 7 <http://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/>`_
+* `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html>`_
+* `The power of C++11 in CUDA 7 <https://developer.nvidia.com/blog/power-cpp11-cuda-7/>`_
 
 ---------
 
@@ -207,7 +207,7 @@ To generate an application timeline with Nsight Systems CLI (nsys): ::
 
     nsys profile -o timeline ./myapplication <arguments>
 
-Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The ``--trace`` argument to specify which APIs should be traced. See the `nsys profiling command switch options <https://docs.nvidia.com/nsight-systems/profiling/index.html#cli-profile-command-switch-options>`_ for further information. ::
+Nsight systems can trace mulitple APIs, such as CUDA and OpenACC. The ``--trace`` argument to specify which APIs should be traced. See the `nsys profiling command switch options <https://docs.nvidia.com/nsight-systems/UserGuide/index.html#cli-profile-command-switch-options>`_ for further information. ::
 
     nsys profile -o timeline --trace cuda,nvtx,osrt,openacc ./myapplication <arguments>
 
@@ -243,7 +243,7 @@ Profiling using nvprof
 
 Prior to September 2020 ``nvprof``, NVIDIA's CUDA profiler, could not write its `SQLite <https://www.sqlite.org/>`__ database outputs to the ``/fastdata`` filesystem.
 This was because SQLite requires a filesystem that supports file locking
-but file locking was not previously enabled on the (`Lustre <http://lustre.org/>`__) filesystem mounted on ``/fastdata``.
+but file locking was not previously enabled on the (`Lustre <https://lustre.org/>`__) filesystem mounted on ``/fastdata``.
 
 ``nvprof`` can now write output data to any user-accessible filesystem including ``/fastdata``.
 

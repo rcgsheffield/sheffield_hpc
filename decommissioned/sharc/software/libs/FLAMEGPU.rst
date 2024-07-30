@@ -10,12 +10,12 @@ FLAMEGPU
 
 .. sidebar:: FLAME GPU
 
-   :URL: http://www.flamegpu.com/
-   :Docs: http://docs.flamegpu.com/
+   :URL: https://www.flamegpu.com/
+   :Docs: https://docs.flamegpu.com/
    :GitHub: https://github.com/FLAMEGPU/FLAMEGPU
 
 
-`FLAMEGPU <http://www.flamegpu.com>`_ is a multi agent simulation framework developed at the University of Sheffield.
+`FLAMEGPU <https://www.flamegpu.com>`_ is a multi agent simulation framework developed at the University of Sheffield.
 It uses GPUs to accelerate the simulation of multiagent systems but abstracts the GPU architecture away from users so that they can write models using a high level of abstraction (without having to write GPU code).
 
 
@@ -61,7 +61,7 @@ FLAME GPU will run the example for one iteration and output the model state to a
 Visualisation currently does not work with X forwarding as FLAME GPU uses complex rendering techniques which are not supported.
 
 
-For more information please see the `FLAME GPU Documentation <http://docs.flamegpu.com>`_. 
+For more information please see the `FLAME GPU Documentation <https://docs.flamegpu.com>`_. 
 Additional information on compiling FLAME GPU examples can be found via :: 
     
     make help

@@ -121,14 +121,14 @@ Credits
 
 The JupyterHub service on ShARC was originally developed and maintained by the University's `Research Software Engineering team`_, funded by OpenDreamKit_, a Horizon2020_ European `Research Infrastructure`_ project (676541_) that aimed to advance the open source computational mathematics ecosystem.
 
-.. _676541: http://cordis.europa.eu/project/rcn/198334_en.html
+.. _676541: https://cordis.europa.eu/project/rcn/198334_en.html
 .. _Horizon2020: https://ec.europa.eu/programmes/horizon2020/
 .. _Jupyter: https://jupyter.org/
 .. _JupyterHub: https://jupyterhub.readthedocs.io/
-.. _OpenDreamKit: http://opendreamkit.org/
+.. _OpenDreamKit: https://opendreamkit.org/
 .. _Research Infrastructure: https://ec.europa.eu/programmes/horizon2020/en/h2020-section/european-research-infrastructures-including-e-infrastructures
 .. _Research Software Engineering team: https://rse.shef.ac.uk
 .. _BAD days: http://bitsandchips.me/BAD_days/
 .. _NetworkX examples: https://networkx.github.io/documentation/stable/auto_examples/index.html
 .. _runnable journal papers: http://nbviewer.jupyter.org/github/cossatot/lanf_earthquake_likelihood/blob/master/notebooks/lanf_manuscript_notebook.ipynb
-.. _present linear workflows: http://nbviewer.jupyter.org/github/machinalis/satimg/blob/master/Searching%20for%20aliens.ipynb
+.. _present linear workflows: https://nbviewer.jupyter.org/github/machinalis/satimg/blob/master/Searching%20for%20aliens.ipynb

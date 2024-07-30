@@ -8,7 +8,7 @@ TURBOMOLE
 
    :Versions: 7.2, 7.2.1
    :Dependencies: No additional modules loaded.
-   :URL: http://www.turbomole.com/
+   :URL: https://www.turbomole.com/
    :Documentation: http://www.turbomole-gmbh.com/turbomole-manuals.html
 
 

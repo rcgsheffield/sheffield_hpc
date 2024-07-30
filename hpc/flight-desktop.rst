@@ -8,7 +8,7 @@ Graphical desktop access to an interactive session can be achieved using Flight 
 Usage instructions
 ------------------
 
-Download and install `TigerVNC <http://sourceforge.net/projects/tigervnc/>`_ on your machine.  TigerVNC is a program that allows you to efficiently view graphical programs on one computer that are actually running on another computer.
+Download and install `TigerVNC <https://sourceforge.net/projects/tigervnc/>`_ on your machine.  TigerVNC is a program that allows you to efficiently view graphical programs on one computer that are actually running on another computer.
 
 
 .. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst

@@ -124,7 +124,7 @@ libmboard
 * 0.3.1 built with GCC 6.2 (and no MPI): 
   same install script and install log as serial build; 
   :download:`module file </decommissioned/sharc/software/modulefiles/libs/libmboard/0.3.1/gcc-6.2>`
-  **NOTE** libmboard can in theory be tested by building test utilities using the `CUnit <http://cunit.sourceforge.net/>`__ unit testing framework.  However, attempts to run the compiled test utilities resulted in segfaults.  GDB backtraces suggested the issue lay with CUnit and not libmboard.  It was possible to run example FLAME simulations using libmboard and xparser so the segfault issue has been ignored.
+  **NOTE** libmboard can in theory be tested by building test utilities using the `CUnit <https://cunit.sourceforge.net/>`__ unit testing framework.  However, attempts to run the compiled test utilities resulted in segfaults.  GDB backtraces suggested the issue lay with CUnit and not libmboard.  It was possible to run example FLAME simulations using libmboard and xparser so the segfault issue has been ignored.
 
 xparser
 ^^^^^^^
@@ -132,5 +132,5 @@ xparser
 * 0.17.1 built with GCC 6.2: :download:`install script </decommissioned/sharc/software/install_scripts/apps/xparser/0.17.1/gcc-6.2/install.sh>` script; 
   :download:`install log </decommissioned/sharc/software/install_scripts/apps/xparser/0.17.1/gcc-6.2/install.log>` script; 
   :download:`module file </decommissioned/sharc/software/modulefiles/apps/xparser/0.17.1/gcc-6.2>`
-  **NOTE** xparser can in theory be tested by building test utilities using the `CUnit <http://cunit.sourceforge.net/>`__ unit testing framework.  However, attempts to run the compiled test utilities resulted in segfaults.  GDB backtraces suggested the issue lay with CUnit and not libmboard.  It was possible to run example FLAME simulations using libmboard and xparser so the segfault issue has been ignored.
+  **NOTE** xparser can in theory be tested by building test utilities using the `CUnit <https://cunit.sourceforge.net/>`__ unit testing framework.  However, attempts to run the compiled test utilities resulted in segfaults.  GDB backtraces suggested the issue lay with CUnit and not libmboard.  It was possible to run example FLAME simulations using libmboard and xparser so the segfault issue has been ignored.
 

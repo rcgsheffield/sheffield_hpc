@@ -146,7 +146,7 @@ Request email notifications on start, end and abort:
     #$ -M me@somedomain.com
     #$ -m abe
 
-For the full list of the available options please visit the SGE manual webpage for qsub here: http://gridscheduler.sourceforge.net/htmlman/htmlman1/qsub.html
+For the full list of the available options please visit the SGE manual webpage for qsub here: https://gridscheduler.sourceforge.net/htmlman/htmlman1/qsub.html
 
 Here is an example SGE batch submission script that runs a fictitious program called ``foo``:
 

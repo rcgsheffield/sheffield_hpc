@@ -12,7 +12,7 @@
 
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
-   :URL: http://sox.sourceforge.net/
+   :URL: https://sox.sourceforge.net/
 
 |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
 formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -37,7 +37,7 @@ The latest version of |softwarename| (currently version |currentver|) is made av
 After this the |softwarename| command can be run from the terminal prompt with the ``sox`` command.
 
 Further documentation on the usage of |softwarename| can be found at the following link: 
-http://sox.sourceforge.net/Docs/Documentation
+https://sox.sourceforge.net/Docs/Documentation
 
 --------------------------
 
@@ -98,7 +98,7 @@ The Markup
         
            :Versions:  |currentver|
            :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
-           :URL: http://sox.sourceforge.net/
+           :URL: https://sox.sourceforge.net/
 
         |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
         formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -123,7 +123,7 @@ The Markup
         After this the |softwarename| command can be run from the terminal prompt with the ``sox`` command.
 
         Further documentation on the usage of |softwarename| can be found at the following link: 
-        http://sox.sourceforge.net/Docs/Documentation
+        https://sox.sourceforge.net/Docs/Documentation
         --------------------------
 
         Batch Usage

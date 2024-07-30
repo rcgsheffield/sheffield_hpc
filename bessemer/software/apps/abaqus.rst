@@ -5,7 +5,7 @@ Abaqus
 
    :Versions: 6.14.2 (see Addendum section), 2018, 2021
    :Dependencies: User subroutines need the Intel FORTRAN compiler 2019 (auto loaded via Abaqus modules).
-   :URL: http://www.3ds.com/products-services/simulia/products/abaqus/
+   :URL: https://www.3ds.com/products-services/simulia/products/abaqus/
    :Documentation: https://help.3ds.com/ (note: register for an account to access.)
 
 Abaqus is a software suite for Finite Element Analysis (FEA) developed by Dassault Systèmes.
@@ -13,7 +13,7 @@ Abaqus is a software suite for Finite Element Analysis (FEA) developed by Dassau
 Interactive usage
 -----------------
 
-After connecting to Bessemer (see :ref:`ssh`),  start an `interactive graphical session <https://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/submit.html#interactive-sessions>`_.
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import.rst
 
 Abaqus can be activated using one of the following module files::
 

@@ -9,7 +9,7 @@ JAGS
 .. sidebar:: JAGS
 
    :Latest version: 4.2
-   :URL: http://mcmc-jags.sourceforge.net/
+   :URL: https://mcmc-jags.sourceforge.net/
    :dependencies: GCC-4.9.4, Blas & Lapack libraries
 
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis of Bayesian hierarchical 

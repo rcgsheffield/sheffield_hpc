@@ -5,7 +5,7 @@ Abaqus
 
    :Versions: 2021
    :Dependencies: User subroutines need the Intel FORTRAN compiler 2019
-   :URL: http://www.3ds.com/products-services/simulia/products/abaqus/
+   :URL: https://www.3ds.com/products-services/simulia/abaqus/
    :Documentation: https://help.3ds.com/ (note: register for an account to access.)
 
 Abaqus is a software suite for Finite Element Analysis (FEA) developed by Dassault Systèmes.

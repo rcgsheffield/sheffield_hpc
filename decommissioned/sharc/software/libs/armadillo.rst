@@ -9,7 +9,7 @@ armadillo
 .. sidebar:: armadillo
 
    :Latest version: 7.950.1
-   :URL: http://arma.sourceforge.net/
+   :URL: https://arma.sourceforge.net/
 
 Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use.
 
@@ -19,7 +19,7 @@ To make this library available, run the following: ::
 
         module load libs/armadillo/7.950.1/gcc-4.9.4
 
-To compile this `example program <http://arma.sourceforge.net/docs.html#example_prog>`_ ::
+To compile this `example program <https://arma.sourceforge.net/docs.html#example_prog>`_ ::
 
         #include <iostream>
         #include <armadillo>

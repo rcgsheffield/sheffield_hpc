@@ -47,7 +47,7 @@ You can now run the ``nextflow`` command:
     version 22.04.0 build 5697
     created 23-04-2022 18:00 UTC (19:00 BST)
     cite doi:10.1038/nbt.3820
-    http://nextflow.io
+    https://nextflow.io
     .
 
 A Simple Script

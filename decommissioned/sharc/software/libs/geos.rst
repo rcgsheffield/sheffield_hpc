@@ -9,10 +9,10 @@ geos
 .. sidebar:: geos
 
    :Version: 3.6.1
-   :URL: http://trac.osgeo.org/geos/
+   :URL: https://trac.osgeo.org/geos/
 
 GEOS (Geometry Engine, Open Source) is a C/C++ port of a subset of 
-the `Java Topology Suite <http://locationtech.github.io/jts/>`_ (JTS), 
+the `Java Topology Suite <https://locationtech.github.io/jts/>`_ (JTS), 
 which in turn is a library that:
 
 * Provides an object model for planar geometry together with a set of fundamental geometric functions. 

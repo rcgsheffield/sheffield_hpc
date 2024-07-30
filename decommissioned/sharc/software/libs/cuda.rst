@@ -143,15 +143,15 @@ along with details of the supported `virtual architectures <https://docs.nvidia.
 Documentation
 -------------
 
-* `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html#axzz3uLoSltnh>`_
-* `The power of C++11 in CUDA 7 <http://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/>`_
+* `CUDA Toolkit Documentation <https://docs.nvidia.com/cuda/index.html>`_
+* `The power of C++11 in CUDA 7 <https://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/>`_
 
 Profiling using nvprof
 ----------------------
 
 Prior to September 2020 ``nvprof``, NVIDIA's CUDA profiler, could write its `SQLite <https://www.sqlite.org/>`__ database outputs to the ``/fastdata`` filesystem.
 This was because SQLite requires a filesystem that supports file locking
-but file locking was not previously enabled on the (`Lustre <http://lustre.org/>`__) filesystem mounted on ``/fastdata``.
+but file locking was not previously enabled on the (`Lustre <https://lustre.org/>`__) filesystem mounted on ``/fastdata``.
 
 ``nvprof`` can now write output data to any user-accessible filesystem including ``/fastdata``.
 

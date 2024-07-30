@@ -6,7 +6,7 @@ Software on Stanage
 .. note::
 
     The latest changes and newly installed software on our clusters can be found at
-    the `HPC Changelog <http://changelog.hpc.shef.ac.uk/>`_ microsite.
+    the `HPC Changelog <https://changelog.hpc.shef.ac.uk/>`_ microsite.
 
 These pages list the software available on the Stanage cluster. If you notice an error or
 an omission, or wish to request new software submit a request to

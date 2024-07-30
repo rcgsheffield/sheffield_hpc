@@ -5,8 +5,8 @@ ScaLAPACK
 
 .. sidebar:: ScaLAPACK
    
-   :URL: http://www.netlib.org/scalapack/
-   :Documentation: http://www.netlib.org/scalapack/#_documentation
+   :URL: https://www.netlib.org/scalapack/
+   :Documentation: https://www.netlib.org/scalapack/#_documentation
 
 ScaLAPACK is a library of high-performance linear algebra routines
 for parallel distributed memory machines.

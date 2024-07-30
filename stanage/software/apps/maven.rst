@@ -5,7 +5,8 @@ Maven
 
 .. sidebar:: Maven 
     
-    :Documentation: https://maven.apache.org
+    :Latest Version:  3.9.7
+    :URL: https://maven.apache.org
 
 
 Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.

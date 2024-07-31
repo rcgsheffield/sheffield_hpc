@@ -1,0 +1,31 @@
+---
+title: "Sheffield HPC File Transfer Selection decision tree:"
+---
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#FFFFFF',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#000000',
+      'lineColor': '#000000'
+    },
+    'flowchart': {
+      'curve' : 'linear'
+    }
+  }
+}%%
+
+flowchart TD
+  gui["`Do you prefer a graphical user interface (GUI)?`"] -->|Yes| direct_download_y["`Are you transferring from your local machine or an online resource?`"]
+  gui --> |No| direct_download_n["`Are you transferring from your local machine or an online resource?`"]
+  direct_download_y -->|Online resources| browser["Firefox Browser"]
+  direct_download_y -->|Local PC/Laptop| FileZilla
+  direct_download_n -->|Online resources| online_cmd["wget/curl/git"]
+  direct_download_n -->|Local PC/Laptop| file_size["`Transferring large files or requiring advanced features?`"]
+  file_size --> |Yes| Rsync
+  file_size --> |No| local["SCP/SFTP"]
+
+classDef question_block width:210px, align:center;
+class gui,direct_download_y,direct_download_n,file_size question_block

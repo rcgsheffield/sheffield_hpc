@@ -49,7 +49,7 @@ and then issuing the commands:
 Batch jobs
 ----------
 
-Octeract Engine can be used in both :ref:`SMP<parallel_SMP>` (single node only) and 
+Octeract Engine can be used in both :ref:`SMP<parallel_SMP_sharc>` (single node only) and 
 :ref:`MPI<parallel_MPI>` parallel environments.
 
 Example SMP job:

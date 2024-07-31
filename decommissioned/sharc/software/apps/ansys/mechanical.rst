@@ -44,7 +44,7 @@ To use more than a single core, you should write a batch job script and ANSYS me
 Batch jobs
 ----------
 
-MAPDL is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP>` parallel environments but will use its in-build MPI communications for both.
+MAPDL is capable of running in both :ref:`MPI <parallel_MPI>` and :ref:`SMP <parallel_SMP_sharc>` parallel environments but will use its in-build MPI communications for both.
 This necessitates the use of either the ``smp`` (up to 16 cores on a single node only) or ``mpi`` (as many cores as desired across many nodes) parallel processing environments.
 
 

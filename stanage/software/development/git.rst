@@ -7,7 +7,7 @@ git
 
 .. sidebar:: git
 
-   :Latest version: 2.41.0
+   :Latest version: System 2.43.0; Modules 2.41.0
    :Dependencies: None
    :URL: https://git-scm.com/
 

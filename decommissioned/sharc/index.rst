@@ -30,6 +30,7 @@ If greater single-threaded performance or greater numbers of cores are required 
   jupyterhub
   sharc-decommissioning
   hw-accel-gfx
+  advanced_job_submission_control_sharc
   FAQ_sharc
 
 * :ref:`sharc-software`
@@ -39,6 +40,7 @@ If greater single-threaded performance or greater numbers of cores are required 
 * :ref:`DeepLearning_sharc`
 * :ref:`groupnodes_sharc`
 * :ref:`jupyterhub_sge`
+* :ref:`advanced_job_submission_control_sharc`
 * :ref:`FAQ_sharc`
 
 

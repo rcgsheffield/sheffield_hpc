@@ -23,7 +23,7 @@ Sphinx<7.4.0
 sphinx-autobuild==2024.4.16
 sphinx_rtd_theme==2.0.0
 sphinxcontrib-devhelp==1.0.6
-sphinxcontrib-htmlhelp==2.0.5
+sphinxcontrib-htmlhelp==2.1.0
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.7
 sphinxcontrib-serializinghtml==1.1.10

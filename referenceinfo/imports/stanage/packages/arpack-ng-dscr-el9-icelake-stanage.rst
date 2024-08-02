@@ -1,2 +1,0 @@
-ARPACK is a collection of Fortran77 subroutines designed to solve large scale eigenvalue problems.
-

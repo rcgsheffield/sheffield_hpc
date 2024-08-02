@@ -1,6 +1,0 @@
-FreeType 2 is a software font engine that is designed to be small, efficient,
-highly customizable, and portable while capable of producing high-quality
-output (glyph images). It can be used in graphics libraries, display servers,
-font conversion tools, text image generation tools, and many other products
-as well.
-

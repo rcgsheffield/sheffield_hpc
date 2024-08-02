@@ -1,0 +1,25 @@
+.. dropdown:: Dependencies for latest version of Trinity
+
+   - :ref:`HTSlib/1.15.1-GCC-11.3.0 <htslib-bio-el9-icelake-znver-stanage>`
+   - :ref:`ant/1.10.12-Java-11 <ant-devel-el9-icelake-znver-stanage>`
+   - :ref:`STAR/2.7.10b-GCC-11.3.0 <star-bio-el9-icelake-znver-stanage>`
+   - :ref:`RSEM/1.3.3-foss-2022a <rsem-bio-el9-icelake-znver-stanage>`
+   - :ref:`ncurses/6.3-GCCcore-11.3.0 <ncurses-devel-el9-icelake-znver-stanage>`
+   - :ref:`BLAST+/2.13.0-gompi-2022a <blast+-bio-el9-icelake-znver-stanage>`
+   - :ref:`foss/2022a <foss-toolchain-el9-icelake-znver-stanage>`
+   - :ref:`Perl/5.34.1-GCCcore-11.3.0 <perl-lang-el9-icelake-znver-stanage>`
+   - :ref:`SciPy-bundle/2022.05-foss-2022a <scipy-bundle-lang-el9-icelake-znver-stanage>`
+   - :ref:`Bowtie2/2.4.5-GCC-11.3.0 <bowtie2-bio-el9-icelake-znver-stanage>`
+   - :ref:`kallisto/0.48.0-gompi-2022a <kallisto-bio-el9-icelake-znver-stanage>`
+   - :ref:`BLAT/3.7-GCC-11.3.0 <blat-bio-el9-icelake-znver-stanage>`
+   - :ref:`SAMtools/1.16.1-GCC-11.3.0 <samtools-bio-el9-icelake-znver-stanage>`
+   - :ref:`Java/11 <java-lang-el9-icelake-znver-stanage>`
+   - :ref:`Bowtie/1.3.1-GCC-11.3.0 <bowtie-bio-el9-icelake-znver-stanage>`
+   - :ref:`GMAP-GSNAP/2023-02-17-GCC-11.3.0 <gmap-gsnap-bio-el9-icelake-znver-stanage>`
+   - :ref:`picard/2.25.1-Java-11 <picard-bio-el9-icelake-znver-stanage>`
+   - :ref:`Python/3.10.4-GCCcore-11.3.0 <python-lang-el9-icelake-znver-stanage>`
+   - :ref:`HISAT2/2.2.1-gompi-2022a <hisat2-bio-el9-icelake-znver-stanage>`
+   - :ref:`GATK/4.3.0.0-GCCcore-11.3.0-Java-11 <gatk-bio-el9-icelake-znver-stanage>`
+   - :ref:`Jellyfish/2.3.0-GCC-11.3.0 <jellyfish-bio-el9-icelake-znver-stanage>`
+   - :ref:`Salmon/1.9.0-GCC-11.3.0 <salmon-bio-el9-icelake-znver-stanage>`
+   - :ref:`zlib/1.2.12-GCCcore-11.3.0 <zlib-lib-el9-icelake-znver-stanage>`

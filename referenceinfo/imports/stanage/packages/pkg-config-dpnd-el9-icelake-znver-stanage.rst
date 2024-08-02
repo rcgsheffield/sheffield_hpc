@@ -1,0 +1,4 @@
+.. dropdown:: Dependencies for latest version of pkg-config
+
+   - :ref:`GCCcore/11.3.0 <gcccore-compiler-el9-icelake-znver-stanage>`
+   - :ref:`GCCcore/11.2.0 <gcccore-compiler-el9-icelake-znver-stanage>`

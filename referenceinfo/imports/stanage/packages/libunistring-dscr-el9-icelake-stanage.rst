@@ -1,3 +1,0 @@
-This library provides functions for manipulating Unicode strings and for
-manipulating C strings according to the Unicode standard.
-

@@ -1,2 +1,0 @@
-Generic PCI access library.
-

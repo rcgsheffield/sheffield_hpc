@@ -1,4 +1,0 @@
-Hypothesis is an advanced testing library for Python. It lets you write tests which are parametrized
-by a source of examples, and then generates simple and comprehensible examples that make your tests fail. This lets
-you find more bugs in your code with less work.
-

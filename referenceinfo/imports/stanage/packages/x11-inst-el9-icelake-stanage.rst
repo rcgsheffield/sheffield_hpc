@@ -1,4 +1,0 @@
-Installation notes
-------------------
-
-This section is primarily for administrators of the system. X11 was installed using Easybuild, build details can be found in ``$EBROOTX11/easybuild`` with a given module loaded.

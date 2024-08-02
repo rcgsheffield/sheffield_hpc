@@ -1,2 +1,0 @@
-PatchELF is a small utility to modify the dynamic linker and RPATH of ELF executables.
-

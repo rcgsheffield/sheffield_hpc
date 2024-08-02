@@ -1,4 +1,0 @@
-.. dropdown:: Dependencies for latest version of cURL
-
-   - :ref:`zlib-1.2.13 <el7-icelake-stanage-all-zlib>`
-   - :ref:`OpenSSL-1.1 <el7-icelake-stanage-all-openssl>`

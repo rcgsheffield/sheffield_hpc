@@ -1,0 +1,23 @@
+.. dropdown:: Dependencies for latest version of TensorFlow
+
+   - :ref:`double-conversion/3.2.0-GCCcore-11.3.0 <double-conversion-lib-el9-icelake-znver-stanage>`
+   - :ref:`SQLite/3.38.3-GCCcore-11.3.0 <sqlite-devel-el9-icelake-znver-stanage>`
+   - :ref:`dill/0.3.6-GCCcore-11.3.0 <dill-data-el9-icelake-znver-stanage>`
+   - :ref:`flatbuffers/2.0.7-GCCcore-11.3.0 <flatbuffers-devel-el9-icelake-znver-stanage>`
+   - :ref:`snappy/1.1.9-GCCcore-11.3.0 <snappy-lib-el9-icelake-znver-stanage>`
+   - :ref:`foss/2022a <foss-toolchain-el9-icelake-znver-stanage>`
+   - :ref:`LMDB/0.9.29-GCCcore-11.3.0 <lmdb-lib-el9-icelake-znver-stanage>`
+   - :ref:`nsync/1.25.0-GCCcore-11.3.0 <nsync-devel-el9-icelake-znver-stanage>`
+   - :ref:`h5py/3.7.0-foss-2022a <h5py-data-el9-icelake-znver-stanage>`
+   - :ref:`JsonCpp/1.9.5-GCCcore-11.3.0 <jsoncpp-lib-el9-icelake-znver-stanage>`
+   - :ref:`networkx/2.8.4-foss-2022a <networkx-tools-el9-icelake-znver-stanage>`
+   - :ref:`giflib/5.2.1-GCCcore-11.3.0 <giflib-lib-el9-icelake-znver-stanage>`
+   - :ref:`NASM/2.15.05-GCCcore-11.3.0 <nasm-lang-el9-icelake-znver-stanage>`
+   - :ref:`libpng/1.6.37-GCCcore-11.3.0 <libpng-lib-el9-icelake-znver-stanage>`
+   - :ref:`libjpeg-turbo/2.1.3-GCCcore-11.3.0 <libjpeg-turbo-lib-el9-icelake-znver-stanage>`
+   - :ref:`Python/3.10.4-GCCcore-11.3.0 <python-lang-el9-icelake-znver-stanage>`
+   - :ref:`hwloc/2.7.1-GCCcore-11.3.0 <hwloc-system-el9-icelake-znver-stanage>`
+   - :ref:`ICU/71.1-GCCcore-11.3.0 <icu-lib-el9-icelake-znver-stanage>`
+   - :ref:`cURL/7.83.0-GCCcore-11.3.0 <curl-tools-el9-icelake-znver-stanage>`
+   - :ref:`protobuf-python/3.19.4-GCCcore-11.3.0 <protobuf-python-devel-el9-icelake-znver-stanage>`
+   - :ref:`zlib/1.2.12-GCCcore-11.3.0 <zlib-lib-el9-icelake-znver-stanage>`

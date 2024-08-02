@@ -1,6 +1,0 @@
-The primary goal of libunwind is to define a portable and efficient C programming interface
-(API) to determine the call-chain of a program. The API additionally provides the means to manipulate the
-preserved (callee-saved) state of each call-frame and to resume execution at any point in the call-chain
-(non-local goto). The API supports both local (same-process) and remote (across-process) operation.
-As such, the API is useful in a number of applications
-

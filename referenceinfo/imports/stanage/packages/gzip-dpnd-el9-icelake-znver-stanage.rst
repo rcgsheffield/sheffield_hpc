@@ -1,0 +1,4 @@
+.. dropdown:: Dependencies for latest version of gzip
+
+   - :ref:`GCCcore/11.3.0 <gcccore-compiler-el9-icelake-znver-stanage>`
+   - :ref:`GCCcore/12.2.0 <gcccore-compiler-el9-icelake-znver-stanage>`

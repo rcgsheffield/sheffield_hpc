@@ -1,0 +1,6 @@
+.. dropdown:: Dependencies for latest version of intltool
+
+   - :ref:`Perl/5.34.1-GCCcore-11.3.0 <perl-lang-el9-icelake-znver-stanage>`
+   - :ref:`GCCcore/11.3.0 <gcccore-compiler-el9-icelake-znver-stanage>`
+   - :ref:`GCCcore/12.2.0 <gcccore-compiler-el9-icelake-znver-stanage>`
+   - :ref:`Perl/5.36.0-GCCcore-12.2.0 <perl-lang-el9-icelake-znver-stanage>`

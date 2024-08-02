@@ -1,2 +1,0 @@
-Epoxy is a library for handling OpenGL function pointer management for you
-

@@ -1,6 +1,6 @@
 .. |softwarename| replace:: ncdu
-.. |currentver| replace:: 1.15.1
-.. |ebtoolchain| replace:: GCCcore-9.3.0
+.. |currentver| replace:: 1.18
+.. |ebtoolchain| replace:: GCCcore-12.3.0
 
 .. _ncdu_stanage:
 
@@ -13,6 +13,7 @@
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| (see Easybuild for details.)
    :URL: https://dev.yorhel.nl/ncdu
+   :CPU Arch availability: icelake; znver3
 
 |softwarename| is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don’t have an entire graphical setup available.
 Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.
@@ -26,9 +27,21 @@ Interactive usage
 
 The latest version of |softwarename| (currently version |currentver|) is made available with the command:
 
-.. code-block:: console
+.. tabs::
 
-	$ module load ncdu/1.15.1-GCCcore-9.3.0
+           .. group-tab:: icelake
+
+                .. code-block:: console
+
+                        $ module load ncdu/1.15.1-GCCcore-9.3.0
+                        $ module load ncdu/1.17-GCC-11.3.0
+                        $ module load ncdu/1.18-GCC-12.3.0
+                        
+           .. group-tab:: znver3
+
+                .. code-block:: console
+
+                        $ module load ncdu/1.18-GCC-12.3.0 
 
 
 After this any of the |softwarename| commands can be run from the terminal prompt. The available 

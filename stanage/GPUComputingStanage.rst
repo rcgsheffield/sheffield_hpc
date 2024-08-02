@@ -129,7 +129,7 @@ GPU-enabled Software
 
 * Libraries
 
-  * :ref:`cuda_stanage`
+  * :ref:`CUDA <cuda_stanage>`
   * :ref:`cudnn_stanage`
 
 * Development Tools

@@ -1,6 +1,19 @@
 .. _gcc_stanage:
 
-GNU Compiler Collection (gcc)
+.. |softwarename| replace:: GNU Compiler Collection (gcc)
+.. |currentver| replace:: 12.2.0
+.. |ebtoolchain| replace:: part of foss-2022b
+
+|softwarename|
+==========================================================================================================
+
+.. sidebar:: |softwarename|
+
+   :Versions:  |currentver|
+   :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
+   :URL: https://gcc.gnu.org/ 
+   :CPU Arch availability: :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>`; :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>` 
+
 =============================
 
 The GNU Compiler Collection (gcc) is a widely used, free collection of compilers

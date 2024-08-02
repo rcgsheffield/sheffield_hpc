@@ -13,6 +13,7 @@
    :Versions:  |currentver|
    :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
    :URL: http://sox.sourceforge.net/
+   :CPU Arch availability: :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>`; :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>` 
 
 |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
 formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -30,9 +31,20 @@ Interactive Usage
 
 The latest version of |softwarename| (currently version |currentver|) is made available with the command:
 
-.. code-block:: console
+.. tabs::
+
+	.. group-tab:: icelake 
+		
+		.. code-block:: console
+			
+			$ module load SoX/14.4.2-GCC-8.3.0
 	
-    $ module load SoX/14.4.2-GCC-8.3.0
+	.. group-tab:: znver3
+		
+		.. code-block:: console
+			
+			$ module load SoX/14.4.2-GCC-8.3.0
+
 
 After this the |softwarename| command can be run from the terminal prompt with the ``sox`` command.
 
@@ -99,6 +111,8 @@ The Markup
            :Versions:  |currentver|
            :Dependencies: |ebtoolchain| toolchain (see Easybuild for details.)
            :URL: http://sox.sourceforge.net/
+           :CPU Arch availability: :bdg-link-primary:`icelake <https://en.wikipedia.org/wiki/Ice_Lake_(microprocessor)>`; :bdg-link-secondary:`znver3 <https://en.wikipedia.org/wiki/Zen_3>`
+
 
         |softwarename| is a cross-platform (Windows, Linux, MacOS X, etc.) command line utility that can convert various 
         formats of computer audio files in to other formats. It can also apply various effects to these sound files, and, 
@@ -116,9 +130,22 @@ The Markup
         
         The latest version of |softwarename| (currently version |currentver|) is made available with the command:
 
-        .. code-block:: console
-        	
-            $ module load SoX/14.4.2-GCC-8.3.0
+        .. tabs::
+
+                .. group-tab:: icelake
+                        
+                        .. code-block:: console
+                                
+                                $ module load SoX/14.4.2-GCC-8.3.0
+                
+                .. group-tab:: znver3
+                        
+                        .. code-block:: console
+                                
+                                $ module load SoX/14.4.2-GCC-8.3.0
+                        
+                    $ module load SoX/14.4.2-GCC-8.3.0
+
 
         After this the |softwarename| command can be run from the terminal prompt with the ``sox`` command.
 

@@ -19,6 +19,6 @@ an omission, or wish to request new software submit a request to
     development/index
     libs/index
     parallel/index
-    all/index
     documented/index
+    all/index
     stubs/index

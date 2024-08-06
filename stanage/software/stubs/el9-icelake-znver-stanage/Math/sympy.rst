@@ -9,7 +9,9 @@ sympy
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of sympy can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of sympy can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//sympy-ml-el9-icelake-znver-stanage.rst
 

@@ -1,38 +1,38 @@
 .. dropdown:: Dependencies for latest version of R
 
+   - :ref:`FFTW/3.3.10-GCC-12.2.0 <fftw-numlib-el9-icelake-znver-stanage>`
+   - :ref:`GDAL/3.6.2-foss-2022b <gdal-data-el9-icelake-znver-stanage>`
+   - :ref:`GLPK/5.0-GCCcore-12.2.0 <glpk-tools-el9-icelake-znver-stanage>`
    - :ref:`GMP/6.2.1-GCCcore-12.2.0 <gmp-math-el9-icelake-znver-stanage>`
-   - :ref:`protobuf/23.0-GCCcore-12.2.0 <protobuf-devel-el9-icelake-znver-stanage>`
-   - :ref:`X11/20221110-GCCcore-12.2.0 <x11-vis-el9-icelake-znver-stanage>`
-   - :ref:`libxml2/2.10.3-GCCcore-12.2.0 <libxml2-lib-el9-icelake-znver-stanage>`
+   - :ref:`GSL/2.7-GCC-12.2.0 <gsl-numlib-el9-icelake-znver-stanage>`
    - :ref:`HDF5/1.14.0-gompi-2022b <hdf5-data-el9-icelake-znver-stanage>`
-   - :ref:`SQLite/3.39.4-GCCcore-12.2.0 <sqlite-devel-el9-icelake-znver-stanage>`
-   - :ref:`libgit2/1.5.0-GCCcore-12.2.0 <libgit2-devel-el9-icelake-znver-stanage>`
    - :ref:`ICU/72.1-GCCcore-12.2.0 <icu-lib-el9-icelake-znver-stanage>`
-   - :ref:`ncurses/6.3-GCCcore-12.2.0 <ncurses-devel-el9-icelake-znver-stanage>`
-   - :ref:`PCRE2/10.40-GCCcore-12.2.0 <pcre2-devel-el9-icelake-znver-stanage>`
-   - :ref:`bzip2/1.0.8-GCCcore-12.2.0 <bzip2-tools-el9-icelake-znver-stanage>`
-   - :ref:`UDUNITS/2.2.28-GCCcore-12.2.0 <udunits-phys-el9-icelake-znver-stanage>`
    - :ref:`ImageMagick/7.1.0-53-GCCcore-12.2.0 <imagemagick-vis-el9-icelake-znver-stanage>`
+   - :ref:`Java/11 <java-lang-el9-icelake-znver-stanage>`
    - :ref:`LibTIFF/4.4.0-GCCcore-12.2.0 <libtiff-lib-el9-icelake-znver-stanage>`
    - :ref:`MPFR/4.2.0-GCCcore-12.2.0 <mpfr-math-el9-icelake-znver-stanage>`
-   - :ref:`foss/2022b <foss-toolchain-el9-icelake-znver-stanage>`
-   - :ref:`GLPK/5.0-GCCcore-12.2.0 <glpk-tools-el9-icelake-znver-stanage>`
-   - :ref:`OpenSSL/1.1 <openssl-system-el9-icelake-znver-stanage>`
-   - :ref:`Java/11 <java-lang-el9-icelake-znver-stanage>`
-   - :ref:`libreadline/8.2-GCCcore-12.2.0 <libreadline-lib-el9-icelake-znver-stanage>`
-   - :ref:`cairo/1.17.4-GCCcore-12.2.0 <cairo-vis-el9-icelake-znver-stanage>`
-   - :ref:`zlib/1.2.12-GCCcore-12.2.0 <zlib-lib-el9-icelake-znver-stanage>`
-   - :ref:`jq/1.6-GCCcore-12.2.0 <jq-tools-el9-icelake-znver-stanage>`
-   - :ref:`GSL/2.7-GCC-12.2.0 <gsl-numlib-el9-icelake-znver-stanage>`
    - :ref:`Mesa/22.2.4-GCCcore-12.2.0 <mesa-vis-el9-icelake-znver-stanage>`
    - :ref:`NLopt/2.7.1-GCCcore-12.2.0 <nlopt-numlib-el9-icelake-znver-stanage>`
+   - :ref:`OpenSSL/1.1 <openssl-system-el9-icelake-znver-stanage>`
+   - :ref:`PCRE2/10.40-GCCcore-12.2.0 <pcre2-devel-el9-icelake-znver-stanage>`
+   - :ref:`SQLite/3.39.4-GCCcore-12.2.0 <sqlite-devel-el9-icelake-znver-stanage>`
+   - :ref:`Tk/8.6.12-GCCcore-12.2.0 <tk-vis-el9-icelake-znver-stanage>`
+   - :ref:`UDUNITS/2.2.28-GCCcore-12.2.0 <udunits-phys-el9-icelake-znver-stanage>`
+   - :ref:`X11/20221110-GCCcore-12.2.0 <x11-vis-el9-icelake-znver-stanage>`
+   - :ref:`XZ/5.2.7-GCCcore-12.2.0 <xz-tools-el9-icelake-znver-stanage>`
+   - :ref:`bzip2/1.0.8-GCCcore-12.2.0 <bzip2-tools-el9-icelake-znver-stanage>`
+   - :ref:`cURL/7.86.0-GCCcore-12.2.0 <curl-tools-el9-icelake-znver-stanage>`
+   - :ref:`cairo/1.17.4-GCCcore-12.2.0 <cairo-vis-el9-icelake-znver-stanage>`
+   - :ref:`foss/2022b <foss-toolchain-el9-icelake-znver-stanage>`
+   - :ref:`jq/1.6-GCCcore-12.2.0 <jq-tools-el9-icelake-znver-stanage>`
+   - :ref:`libGLU/9.0.2-GCCcore-12.2.0 <libglu-vis-el9-icelake-znver-stanage>`
+   - :ref:`libgit2/1.5.0-GCCcore-12.2.0 <libgit2-devel-el9-icelake-znver-stanage>`
    - :ref:`libjpeg-turbo/2.1.4-GCCcore-12.2.0 <libjpeg-turbo-lib-el9-icelake-znver-stanage>`
    - :ref:`libpng/1.6.38-GCCcore-12.2.0 <libpng-lib-el9-icelake-znver-stanage>`
-   - :ref:`libGLU/9.0.2-GCCcore-12.2.0 <libglu-vis-el9-icelake-znver-stanage>`
-   - :ref:`FFTW/3.3.10-GCC-12.2.0 <fftw-numlib-el9-icelake-znver-stanage>`
-   - :ref:`nodejs/18.12.1-GCCcore-12.2.0 <nodejs-lang-el9-icelake-znver-stanage>`
-   - :ref:`Tk/8.6.12-GCCcore-12.2.0 <tk-vis-el9-icelake-znver-stanage>`
+   - :ref:`libreadline/8.2-GCCcore-12.2.0 <libreadline-lib-el9-icelake-znver-stanage>`
    - :ref:`libsndfile/1.2.0-GCCcore-12.2.0 <libsndfile-lib-el9-icelake-znver-stanage>`
-   - :ref:`XZ/5.2.7-GCCcore-12.2.0 <xz-tools-el9-icelake-znver-stanage>`
-   - :ref:`cURL/7.86.0-GCCcore-12.2.0 <curl-tools-el9-icelake-znver-stanage>`
-   - :ref:`GDAL/3.6.2-foss-2022b <gdal-data-el9-icelake-znver-stanage>`
+   - :ref:`libxml2/2.10.3-GCCcore-12.2.0 <libxml2-lib-el9-icelake-znver-stanage>`
+   - :ref:`ncurses/6.3-GCCcore-12.2.0 <ncurses-devel-el9-icelake-znver-stanage>`
+   - :ref:`nodejs/18.12.1-GCCcore-12.2.0 <nodejs-lang-el9-icelake-znver-stanage>`
+   - :ref:`protobuf/23.0-GCCcore-12.2.0 <protobuf-devel-el9-icelake-znver-stanage>`
+   - :ref:`zlib/1.2.12-GCCcore-12.2.0 <zlib-lib-el9-icelake-znver-stanage>`

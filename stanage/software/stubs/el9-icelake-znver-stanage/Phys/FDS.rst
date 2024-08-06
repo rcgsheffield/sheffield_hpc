@@ -9,7 +9,9 @@ FDS
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of FDS can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of FDS can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//fds-ml-el9-icelake-znver-stanage.rst
 

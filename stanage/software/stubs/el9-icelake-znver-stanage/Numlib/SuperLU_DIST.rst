@@ -9,7 +9,9 @@ SuperLU_DIST
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of SuperLU_DIST can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of SuperLU_DIST can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//superlu_dist-ml-el9-icelake-znver-stanage.rst
 

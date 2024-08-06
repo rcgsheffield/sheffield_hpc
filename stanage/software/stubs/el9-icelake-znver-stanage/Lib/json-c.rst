@@ -9,7 +9,9 @@ json-c
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of json-c can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of json-c can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//json-c-ml-el9-icelake-znver-stanage.rst
 

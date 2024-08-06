@@ -9,7 +9,9 @@ Gdk-Pixbuf
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of Gdk-Pixbuf can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of Gdk-Pixbuf can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//gdk-pixbuf-ml-el9-icelake-znver-stanage.rst
 

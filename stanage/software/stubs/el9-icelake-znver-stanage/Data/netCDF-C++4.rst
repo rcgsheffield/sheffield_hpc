@@ -9,7 +9,9 @@ netCDF-C++4
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of netCDF-C++4 can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of netCDF-C++4 can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//netcdf-c++4-ml-el9-icelake-znver-stanage.rst
 

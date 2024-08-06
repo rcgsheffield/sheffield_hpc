@@ -9,7 +9,9 @@ GATK
 
 .. include:: /referenceinfo/imports/stanage/packages//packages_note.rst
 
-A version of GATK can be made available with *one* of the following:
+.. include:: /referenceinfo/imports/scheduler/SLURM/common_commands/srun_start_interactive_session_import_stanage.rst
+
+A version of GATK can then be made available with *one* of the following:
 
 .. include:: /referenceinfo/imports/stanage/packages//gatk-ml-el9-icelake-znver-stanage.rst
 

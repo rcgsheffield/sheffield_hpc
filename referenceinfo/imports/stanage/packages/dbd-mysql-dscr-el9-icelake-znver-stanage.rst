@@ -1,0 +1,2 @@
+Perl binding for MySQL
+

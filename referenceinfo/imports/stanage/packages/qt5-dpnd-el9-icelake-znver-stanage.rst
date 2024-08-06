@@ -1,0 +1,22 @@
+.. dropdown:: Dependencies for latest version of Qt5
+
+   - :ref:`DBus/1.15.2-GCCcore-12.2.0 <dbus-devel-el9-icelake-znver-stanage>`
+   - :ref:`GCCcore/12.2.0 <gcccore-compiler-el9-icelake-znver-stanage>`
+   - :ref:`GLib/2.75.0-GCCcore-12.2.0 <glib-vis-el9-icelake-znver-stanage>`
+   - :ref:`HarfBuzz/5.3.1-GCCcore-12.2.0 <harfbuzz-vis-el9-icelake-znver-stanage>`
+   - :ref:`ICU/72.1-GCCcore-12.2.0 <icu-lib-el9-icelake-znver-stanage>`
+   - :ref:`JasPer/4.0.0-GCCcore-12.2.0 <jasper-vis-el9-icelake-znver-stanage>`
+   - :ref:`NSS/3.85-GCCcore-12.2.0 <nss-lib-el9-icelake-znver-stanage>`
+   - :ref:`OpenSSL/1.1 <openssl-system-el9-icelake-znver-stanage>`
+   - :ref:`PCRE2/10.40-GCCcore-12.2.0 <pcre2-devel-el9-icelake-znver-stanage>`
+   - :ref:`X11/20221110-GCCcore-12.2.0 <x11-vis-el9-icelake-znver-stanage>`
+   - :ref:`bzip2/1.0.8-GCCcore-12.2.0 <bzip2-tools-el9-icelake-znver-stanage>`
+   - :ref:`double-conversion/3.2.1-GCCcore-12.2.0 <double-conversion-lib-el9-icelake-znver-stanage>`
+   - :ref:`fontconfig/2.14.1-GCCcore-12.2.0 <fontconfig-vis-el9-icelake-znver-stanage>`
+   - :ref:`graphite2/1.3.14-GCCcore-12.2.0 <graphite2-lib-el9-icelake-znver-stanage>`
+   - :ref:`libGLU/9.0.2-GCCcore-12.2.0 <libglu-vis-el9-icelake-znver-stanage>`
+   - :ref:`libevent/2.1.12-GCCcore-12.2.0 <libevent-lib-el9-icelake-znver-stanage>`
+   - :ref:`libjpeg-turbo/2.1.4-GCCcore-12.2.0 <libjpeg-turbo-lib-el9-icelake-znver-stanage>`
+   - :ref:`libpng/1.6.38-GCCcore-12.2.0 <libpng-lib-el9-icelake-znver-stanage>`
+   - :ref:`nodejs/18.12.1-GCCcore-12.2.0 <nodejs-lang-el9-icelake-znver-stanage>`
+   - :ref:`snappy/1.1.9-GCCcore-12.2.0 <snappy-lib-el9-icelake-znver-stanage>`
